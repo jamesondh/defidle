@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DeFidle
 
-## Getting Started
+[DeFidle](https://defidle.fun) is a daily DeFi quiz web app powered by DefiLlama data. Each day features a single topic—primarily a DeFi protocol or a blockchain—and presents a short, Worldle-style sequence of questions that moves from broad recognition (a "metric fingerprint" reveal) to progressively more specific follow-ups (cross-chain dominance, rankings, milestones, and trend/insight checks). The game focuses on DeFi fundamentals and usage metrics rather than price: TVL and its history, per-chain breakdowns, fees vs revenue, DEX volumes, net inflows/outflows, and (where available) activity signals like active users.
 
-First, run the development server:
+Question generation is data-driven but curated to stay interesting and fair. Episodes are built from top protocols/chains and notable movers, with difficulty balanced using measurable separation signals (e.g., gaps between #1 and #2 in leaderboards, A/B comparison margins) and volatility checks to avoid overly noisy or arbitrary prompts. Lightweight LLM assistance is used for phrasing and distractor generation, but all answers are computed and verified directly from DefiLlama's API, with clear post-answer explanations backed by the underlying metrics.
+
+See `docs/SPEC.md` for an up-to-date specification.
+
+See `docs/implementation-plan.md` for implementation status of the specification.
+
+## Tech Stack
+
+- Bun (not npm)
+- Next.js 16 (App Router)
+- shadcn/ui components (see `docs/shadcn-ui.md` for list of components)
+- react-icons (fa6)
+- DeFiLlama API (see `docs/defillama-api.md` for usage)
+
+## Quick Start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+bun install
 bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
