@@ -101,16 +101,16 @@ The implementation is divided into **5 phases**, ordered by dependency and risk.
 
 ### 2.1 Core Types & Interfaces
 
-- [ ] Define `lib/types/episode.ts`:
+- [x] Define `lib/types/episode.ts`:
   - `Episode`, `Question`, `QuestionFormat`
   - `DifficultyTarget`, `DifficultySignals`
   - `TemplateContext`, `QuestionDraft`
-- [ ] Define `lib/types/template.ts`:
+- [x] Define `lib/types/template.ts`:
   - `Template` interface with `checkPrereqs`, `proposeFormats`, `instantiate`
 
 ### 2.2 Difficulty Scoring System
 
-- [ ] Implement `lib/generation/difficulty.ts`:
+- [x] Implement `lib/generation/difficulty.ts`:
   - `computeDifficulty(signals: DifficultySignals): number`
   - Format factors: tf=0.15, ab=0.30, mc4=0.45, mc6=0.55, rank4=0.70
   - Familiarity factors based on TVL rank bucket
@@ -121,7 +121,7 @@ The implementation is divided into **5 phases**, ordered by dependency and risk.
 
 ### 2.3 Data Helpers
 
-- [ ] Implement `lib/generation/metrics.ts`:
+- [x] Implement `lib/generation/metrics.ts`:
   - `percentChange(series, days): number | null`
   - `abMargin(a, b): number | null`
   - `top2Margin(sortedDesc): number | null`
@@ -133,70 +133,70 @@ The implementation is divided into **5 phases**, ordered by dependency and risk.
 
 Implement each template as a class implementing `Template` interface:
 
-- [ ] **P1: Protocol Fingerprint Guess**
+- [x] **P1: Protocol Fingerprint Guess**
   - Prereqs: has category, chains, tvl
   - Formats: mc6 → mc4
   - Clue generation: category, chain count bucket, TVL band, 7d change
   
-- [ ] **P2: Cross-Chain Dominance**
+- [x] **P2: Cross-Chain Dominance**
   - Prereqs: currentChainTvls with ≥2 chains
   - Formats: ab → tf
   - Chain pair selection with margin threshold
   
-- [ ] **P3: Top Chain Concentration**
+- [x] **P3: Top Chain Concentration**
   - Prereqs: currentChainTvls
   - Formats: mc4 (buckets) → tf
   - Bucket selection: <25%, 25-50%, 50-75%, >75%
   
-- [ ] **P4: ATH Timing**
+- [x] **P4: ATH Timing**
   - Prereqs: tvl[] series ≥6 months, ATH not current month
   - Formats: mc4 (months) → tf
   - Month distractor generation (adjacent months)
   
-- [ ] **P5: Fees vs Revenue**
+- [x] **P5: Fees vs Revenue**
   - Prereqs: fees data available
   - Formats: ab → mc4 (ratio buckets) → tf
   - Ratio buckets: <10%, 10-30%, 30-60%, >60%
   
-- [ ] **P6: TVL Trend**
+- [x] **P6: TVL Trend**
   - Prereqs: tvl series or change_7d available
   - Formats: tf → mc4 (buckets) → ab
   - Change buckets: down >10%, down 1-10%, flat, up 1-10%, up >10%
 
 ### 2.5 Chain Templates (C1-C6)
 
-- [ ] **C1: Chain Fingerprint Guess**
+- [x] **C1: Chain Fingerprint Guess**
   - Prereqs: chain in /api/v2/chains
   - Formats: mc6 → mc4
   - Clues: TVL rank, TVL band, token symbol, 30d trend
   
-- [ ] **C2: Chain TVL Comparison**
+- [x] **C2: Chain TVL Comparison**
   - Prereqs: comparison chain with margin ≥25%
   - Formats: ab → bucketed
   
-- [ ] **C3: Chain ATH Timing**
+- [x] **C3: Chain ATH Timing**
   - Prereqs: historical series ≥6 months
   - Formats: mc4 (months) → tf
   
-- [ ] **C4: Chain Growth Ranking**
+- [x] **C4: Chain Growth Ranking**
   - Prereqs: change30d for 4+ chains
   - Formats: rank4 → mc4 → ab
   
-- [ ] **C5: Top Protocol by Fees**
+- [x] **C5: Top Protocol by Fees**
   - Prereqs: ≥4 protocols in fees leaderboard
   - Formats: mc4 → ab
   
-- [ ] **C6: Top DEX by Volume**
+- [x] **C6: Top DEX by Volume**
   - Prereqs: ≥4 DEXes in volume leaderboard
   - Formats: mc4 → ab
 
 ### 2.6 Distractor Selection
 
-- [ ] Implement `lib/generation/distractors.ts`:
+- [x] Implement `lib/generation/distractors.ts`:
   - `pickEntityDistractors(correctId, pool, constraints, seed): Entity[] | null`
   - `makeNumericChoices(correctValue, nearbyValues, mode, seed): string[] | null`
   - `makeTimingDistractors(correctMonth, count, seed): string[]`
-- [ ] Ensure diversity constraints (not all same category, etc.)
+- [x] Ensure diversity constraints (not all same category, etc.)
 
 **Phase 2 Deliverables**:
 - All 12 templates implemented and individually testable
