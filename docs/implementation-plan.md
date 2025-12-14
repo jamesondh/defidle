@@ -379,16 +379,16 @@ Implement each template as a class implementing `Template` interface:
 
 ### 5.5 Client: UI Components
 
-- [ ] **QuestionCard** — displays prompt, clues, choices
-- [ ] **ChoiceButton** — selectable answer option
-- [ ] **ExplanationPanel** — shown after answering
-- [ ] **ResultsSummary** — "You got X/Y correct"
-- [ ] **LoadingState** — while fetching episode
-- [ ] **ErrorState** — episode not found or fetch failed
+- [x] **QuestionCard** — displays prompt, clues, choices
+- [x] **ChoiceButton** — selectable answer option
+- [x] **ExplanationPanel** — shown after answering
+- [x] **ResultsSummary** — "You got X/Y correct"
+- [x] **LoadingState** — while fetching episode
+- [x] **ErrorState** — episode not found or fetch failed
 
 ### 5.6 Client: Game Flow
 
-- [ ] Implement main game page (`app/page.tsx`):
+- [x] Implement main game page (`app/page.tsx`):
   - Fetch episode on mount
   - Display questions sequentially
   - After each answer: reveal correct answer, show explanation
@@ -397,16 +397,16 @@ Implement each template as a class implementing `Template` interface:
 
 ### 5.7 Styling
 
-- [ ] Design responsive layout (mobile-first)
-- [ ] Dark mode support (optional)
+- [x] Design responsive layout (mobile-first)
+- [x] Dark mode support (optional)
 - [ ] Animations for answer reveal
 
 ### 5.8 Testing & Polish
 
-- [ ] Add loading skeletons
-- [ ] Error boundaries
-- [ ] Test with generated episodes
-- [ ] Manual QA across question types
+- [x] Add loading skeletons
+- [x] Error boundaries
+- [x] Test with generated episodes
+- [x] Manual QA across question types
 
 **Phase 5 Deliverables**:
 - Automated pool refresh and episode generation
@@ -473,5 +473,5 @@ Phases 1-4 are strictly sequential for the generation pipeline. Phase 5 client w
 - [ ] All 12 templates produce valid questions
 - [ ] Difficulty distribution matches targets (1E, 2M, 1H, 1E)
 - [ ] LLM fallbacks work when OpenAI is unavailable
-- [ ] Client loads and plays episodes without runtime API calls
+- [x] Client loads and plays episodes without runtime API calls
 - [ ] GitHub Actions run reliably on schedule
