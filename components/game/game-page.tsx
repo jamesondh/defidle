@@ -43,7 +43,7 @@ export function GamePage({ date }: GamePageProps) {
   const loadEpisode = useCallback(async () => {
     setAppState({ status: "loading" })
     const result = await fetchEpisode(date)
-    
+
     if (result.success) {
       const initialState = createGameState(result.episode)
       const startedState = startGame(initialState)
@@ -69,11 +69,11 @@ export function GamePage({ date }: GamePageProps) {
 
   const handleSubmitAnswer = () => {
     if (appState.status !== "ready" || selectedIndex === null) return
-    
+
     const newState = submitAnswer(appState.gameState, {
       selectedIndex,
     })
-    
+
     setAppState({
       ...appState,
       gameState: newState,
@@ -82,7 +82,7 @@ export function GamePage({ date }: GamePageProps) {
 
   const handleContinue = () => {
     if (appState.status !== "ready") return
-    
+
     const newState = nextQuestion(appState.gameState)
     setSelectedIndex(null)
     setAppState({
@@ -93,7 +93,7 @@ export function GamePage({ date }: GamePageProps) {
 
   const handlePlayAgain = () => {
     if (appState.status !== "ready") return
-    
+
     const initialState = createGameState(appState.episode)
     const startedState = startGame(initialState)
     setSelectedIndex(null)
@@ -119,7 +119,7 @@ export function GamePage({ date }: GamePageProps) {
 
   if (appState.status === "loading") {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen">
         <main className="mx-auto max-w-lg px-4 py-8">
           <Header />
           <LoadingState />
@@ -130,7 +130,7 @@ export function GamePage({ date }: GamePageProps) {
 
   if (appState.status === "error") {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen">
         <main className="mx-auto max-w-lg px-4 py-8">
           <Header />
           <ErrorState error={appState.error} onRetry={loadEpisode} />
@@ -148,7 +148,7 @@ export function GamePage({ date }: GamePageProps) {
   // Show results if game is complete
   if (isGameComplete(gameState)) {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen">
         <main className="mx-auto max-w-lg px-4 py-8">
           <Header />
           <ResultsSummary
@@ -167,7 +167,7 @@ export function GamePage({ date }: GamePageProps) {
   // Show current question
   if (!currentQuestion) {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen">
         <main className="mx-auto max-w-lg px-4 py-8">
           <Header />
           <ErrorState
@@ -183,10 +183,10 @@ export function GamePage({ date }: GamePageProps) {
   const isCorrect = currentAnswer?.isCorrect ?? false
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <main className="mx-auto max-w-lg px-4 py-8">
         <Header />
-        
+
         <div className="mb-6">
           <Progress value={progress.percentage} className="h-2" />
         </div>

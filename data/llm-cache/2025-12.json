@@ -1,52 +1,52 @@
 {
   "2025-12-13|chain|Stellar|A|C1_FINGERPRINT|explanation|53f130c70c1dd8c8": {
-    "text": "Stellar is a DeFi platform with a total value locked (TVL) between $100M and $500M, ranking 30th in the DeFi space. It has 24 protocols and uses the token symbol XLM.",
+    "text": "Stellar is a DeFi platform ranked 30th in total value locked (TVL), with a TVL ranging between $100M and $500M. It utilizes the XLM token and supports 24 different protocols.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-14T18:24:17.365Z"
+    "generatedAt": "2025-12-14T21:27:18.651Z"
   },
-  "2025-12-13|chain|Stellar|B|C2_CHAIN_COMPARISON|explanation|df099f375f9f3786": {
-    "text": "Stellar has a total value locked (TVL) of $173M, which is 3% higher than Rootstock's TVL of $168M, making Stellar the leading chain in this comparison.",
+  "2025-12-13|chain|Stellar|B|C2_CHAIN_COMPARISON|explanation|ff11788f2317b815": {
+    "text": "Stellar has a total value locked (TVL) of $173M, which is 4% higher than Rootstock's TVL of $167M, making Stellar the leading chain in this comparison.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-14T18:24:18.745Z"
+    "generatedAt": "2025-12-14T21:27:20.045Z"
   },
-  "2025-12-13|chain|Stellar|C|C4_GROWTH_RANKING|explanation|366ed57303560414": {
-    "text": "Stellar's top growth ranking is 43.3%, significantly higher than other chains like Plasma at +11.3%, Base at +22.7%, and Mantle at +2.6%. This indicates Stellar's strong performance in terms of growth compared to its peers.",
+  "2025-12-13|chain|Stellar|C|FALLBACK|explanation|1a234c3869766209": {
+    "text": "Stellar is ranked 30th in total value locked (TVL) among DeFi projects, placing it within the top 50. This indicates its significant presence in the DeFi ecosystem.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-14T18:24:21.596Z"
+    "generatedAt": "2025-12-14T21:27:21.428Z"
   },
-  "2025-12-13|chain|Stellar|D|FALLBACK|explanation|43909c959514d321": {
-    "text": "Stellar is a blockchain platform that supports decentralized finance (DeFi) applications, enabling users to create and manage financial services without intermediaries.",
+  "2025-12-13|chain|Stellar|D|FALLBACK|explanation|a9801fe473419fd9": {
+    "text": "Stellar is a blockchain platform designed for facilitating cross-border payments and enabling the transfer of digital assets. It aims to provide fast and low-cost transactions, making it accessible for various financial applications.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-14T18:24:23.407Z"
+    "generatedAt": "2025-12-14T21:27:22.937Z"
   },
-  "2025-12-13|chain|Stellar|E|FALLBACK|explanation|477a968df0f363e0": {
-    "text": "Stellar is a tracked blockchain platform designed to facilitate cross-border transactions and improve financial access. Its tracking status indicates that it is actively monitored for performance and developments in the DeFi space.",
+  "2025-12-13|chain|Stellar|E|FALLBACK|explanation|343e44b32cc49019": {
+    "text": "Stellar has a Total Value Locked (TVL) feature, indicating that it holds assets within its ecosystem for various financial activities. This functionality is essential for enabling liquidity and supporting decentralized finance applications.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-14T18:24:24.327Z"
+    "generatedAt": "2025-12-14T21:27:23.985Z"
   },
   "2025-12-14|protocol|justcryptos|A|P1_FINGERPRINT|explanation|010b3c3c9948d70a": {
-    "text": "JustCryptos is a bridge in the DeFi space that operates on the Tron blockchain, with a total value locked (TVL) estimated between $1B and $5B. It facilitates the transfer of assets across different platforms within its single chain environment.",
+    "text": "JustCryptos is a bridge protocol operating on the Tron blockchain, with a total value locked (TVL) estimated between $1B and $5B. It facilitates the transfer of assets across different networks.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-14T18:24:30.677Z"
+    "generatedAt": "2025-12-14T21:27:28.821Z"
   },
   "2025-12-14|protocol|justcryptos|B|P3_CONCENTRATION|explanation|757302d208fd0ab0": {
-    "text": "JustCryptos operates entirely on the Tron blockchain, holding a total value locked (TVL) of $3.1B, which represents 100% of its total TVL.",
+    "text": "JustCryptos operates entirely on the Tron blockchain, holding a total TVL of $3.1B, which represents 100% of its assets on this chain.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-14T18:24:31.707Z"
+    "generatedAt": "2025-12-14T21:27:30.957Z"
   },
-  "2025-12-14|protocol|justcryptos|C|P4_ATH_TIMING|explanation|9484435334054f4c": {
-    "text": "JustCryptos reached its all-time high (ATH) of $8.3B in March 2024, which is distinct from the values in other months like June 2024, December 2023, and February 2024.",
+  "2025-12-14|protocol|justcryptos|C|P4_ATH_TIMING|explanation|a87fd447eea28abd": {
+    "text": "JustCryptos reached an all-time high (ATH) market capitalization of $8.3B in March 2024.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-14T18:24:34.318Z"
+    "generatedAt": "2025-12-14T21:27:32.781Z"
   },
   "2025-12-14|protocol|justcryptos|D|FALLBACK|explanation|a4f1b34bd61346df": {
-    "text": "JustCryptos is a protocol in the decentralized finance (DeFi) space, designed to facilitate various financial services using blockchain technology.",
+    "text": "JustCryptos is a protocol in the decentralized finance (DeFi) space, designed to facilitate various financial transactions and services without intermediaries.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-14T18:24:35.095Z"
+    "generatedAt": "2025-12-14T21:27:33.560Z"
   },
-  "2025-12-14|protocol|justcryptos|E|P6_TVL_TREND|explanation|d3b0d9381e54dcdb": {
-    "text": "JustCryptos has experienced an increased total value locked (TVL) of $3.1B over the past 7 days, with no percentage change during this period.",
+  "2025-12-14|protocol|justcryptos|E|P6_TVL_TREND|explanation|152bcfc426a7989e": {
+    "text": "JustCryptos has seen an increase in its total value locked (TVL) by 0.5% over the past 7 days, bringing its current TVL to $3.1B.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-14T18:24:36.713Z"
+    "generatedAt": "2025-12-14T21:27:34.870Z"
   }
 }

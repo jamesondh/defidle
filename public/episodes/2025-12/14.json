@@ -22,23 +22,23 @@
       ],
       "choices": [
         "JustCryptos",
-        "Demodyfi",
-        "SwanSwap",
-        "AvoLend",
-        "MortgageFi",
-        "SynthEx"
+        "Kyrios Finance",
+        "SPICE Protocol",
+        "1Pulse",
+        "SiloStake",
+        "Sanctuary"
       ],
       "answerIndex": 0,
-      "explanation": "JustCryptos is a bridge in the DeFi space that operates on the Tron blockchain, with a total value locked (TVL) estimated between $1B and $5B. It facilitates the transfer of assets across different platforms within its single chain environment.",
+      "explanation": "JustCryptos is a bridge protocol operating on the Tron blockchain, with a total value locked (TVL) estimated between $1B and $5B. It facilitates the transfer of assets across different networks.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc6",
         "familiarityRankBucket": "top_100",
         "margin": null,
-        "volatility": 0.1903787008411077
+        "volatility": 0.19043390422324374
       },
-      "difficultyScore": 0.35855680512616617
+      "difficultyScore": 0.35856508563348655
     },
     {
       "qid": "q2",
@@ -52,16 +52,16 @@
       ],
       "answerIndex": 0,
       "answerValue": true,
-      "explanation": "JustCryptos operates entirely on the Tron blockchain, holding a total value locked (TVL) of $3.1B, which represents 100% of its total TVL.",
+      "explanation": "JustCryptos operates entirely on the Tron blockchain, holding a total TVL of $3.1B, which represents 100% of its assets on this chain.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "tf",
         "familiarityRankBucket": "top_100",
         "margin": 0.25,
-        "volatility": 0.1903787008411077
+        "volatility": 0.19043390422324374
       },
-      "difficultyScore": 0.1977234717928328
+      "difficultyScore": 0.19773175230015322
     },
     {
       "qid": "q3",
@@ -76,16 +76,16 @@
         "Dec 2023"
       ],
       "answerIndex": 0,
-      "explanation": "JustCryptos reached its all-time high (ATH) of $8.3B in March 2024, which is distinct from the values in other months like June 2024, December 2023, and February 2024.",
+      "explanation": "JustCryptos reached an all-time high (ATH) market capitalization of $8.3B in March 2024.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_100",
         "margin": 0.15,
-        "volatility": 0.1903787008411077
+        "volatility": 0.19043390422324374
       },
-      "difficultyScore": 0.38605680512616614
+      "difficultyScore": 0.3860650856334865
     },
     {
       "qid": "q4",
@@ -99,7 +99,7 @@
       ],
       "answerIndex": 0,
       "answerValue": true,
-      "explanation": "JustCryptos is a protocol in the decentralized finance (DeFi) space, designed to facilitate various financial services using blockchain technology.",
+      "explanation": "JustCryptos is a protocol in the decentralized finance (DeFi) space, designed to facilitate various financial transactions and services without intermediaries.",
       "difficulty": "hard",
       "llmFallback": false,
       "signals": {
@@ -122,26 +122,26 @@
       ],
       "answerIndex": 0,
       "answerValue": true,
-      "explanation": "JustCryptos has experienced an increased total value locked (TVL) of $3.1B over the past 7 days, with no percentage change during this period.",
+      "explanation": "JustCryptos has seen an increase in its total value locked (TVL) by 0.5% over the past 7 days, bringing its current TVL to $3.1B.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "tf",
         "familiarityRankBucket": "top_100",
-        "margin": 0.004931144631059346,
-        "volatility": 0.1903787008411077
+        "margin": 0.004604037613259731,
+        "volatility": 0.19043390422324374
       },
-      "difficultyScore": 0.40194751793361666
+      "difficultyScore": 0.40222838762243684
     }
   ],
-  "generatedAt": "2025-12-14T18:24:36.713Z",
+  "generatedAt": "2025-12-14T21:27:34.871Z",
   "buildLog": [
     {
       "slot": "A",
       "template": "P1_FINGERPRINT",
       "format": "mc6",
       "decision": "selected",
-      "score": 0.35855680512616617,
+      "score": 0.35856508563348655,
       "target": "medium"
     },
     {
@@ -155,7 +155,7 @@
       "template": "P3_CONCENTRATION",
       "format": "tf",
       "decision": "selected",
-      "score": 0.1977234717928328,
+      "score": 0.19773175230015322,
       "target": "easy"
     },
     {
@@ -169,7 +169,7 @@
       "template": "P4_ATH_TIMING",
       "format": "mc4",
       "decision": "selected",
-      "score": 0.38605680512616614,
+      "score": 0.3860650856334865,
       "target": "medium"
     },
     {
@@ -201,7 +201,7 @@
       "format": "tf",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.40194751793361666,
+      "score": 0.40222838762243684,
       "target": "easy"
     },
     {
@@ -222,7 +222,7 @@
       "format": "tf",
       "decision": "selected",
       "reason": "close_enough",
-      "score": 0.40194751793361666,
+      "score": 0.40222838762243684,
       "target": "easy"
     },
     {

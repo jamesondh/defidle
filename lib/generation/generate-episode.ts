@@ -80,8 +80,8 @@ async function fetchProtocolData(
     if (topic.hasFeesData) {
       try {
         const [feesData, revenueData] = await Promise.all([
-          getProtocolFees(topic.slug),
-          getProtocolFees(topic.slug), // Same endpoint provides both
+          getProtocolFees(topic.slug, "dailyFees"),
+          getProtocolFees(topic.slug, "dailyRevenue"),
         ])
         data.protocolFees = feesData
         data.protocolRevenue = revenueData

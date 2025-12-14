@@ -170,6 +170,14 @@ export async function getChainTVLHistory(
 // =============================================================================
 
 /**
+ * Data type for fees/revenue endpoints
+ * - dailyFees: Protocol fees (default)
+ * - dailyRevenue: Protocol revenue (portion of fees going to protocol)
+ * - dailyHoldersRevenue: Revenue going to token holders
+ */
+export type FeesDataType = "dailyFees" | "dailyRevenue" | "dailyHoldersRevenue"
+
+/**
  * GET /api/overview/fees - All protocols fees overview
  */
 export async function getAllFees(
@@ -196,15 +204,20 @@ export async function getChainFees(
 
 /**
  * GET /api/summary/fees/{protocol} - Protocol fees/revenue data
+ * 
+ * @param slug - Protocol slug
+ * @param dataType - Type of data to fetch: "dailyFees" (default), "dailyRevenue", or "dailyHoldersRevenue"
+ * @param options - Fetch options (timeout, retries)
  */
 export async function getProtocolFees(
   slug: string,
+  dataType?: FeesDataType,
   options?: FetchOptions
 ): Promise<ProtocolFeesData> {
-  return fetchWithRetry<ProtocolFeesData>(
-    `${BASE_URL}/summary/fees/${encodeURIComponent(slug)}`,
-    options
-  )
+  const url = dataType
+    ? `${BASE_URL}/summary/fees/${encodeURIComponent(slug)}?dataType=${dataType}`
+    : `${BASE_URL}/summary/fees/${encodeURIComponent(slug)}`
+  return fetchWithRetry<ProtocolFeesData>(url, options)
 }
 
 // =============================================================================
@@ -258,7 +271,7 @@ export async function getProtocolDEXVolume(
  */
 export async function checkProtocolHasFeesData(slug: string): Promise<boolean> {
   try {
-    const data = await getProtocolFees(slug, { retries: 1 })
+    const data = await getProtocolFees(slug, undefined, { retries: 1 })
     return data.latestFetchIsOk === true && (data.total24h ?? 0) > 0
   } catch {
     return false
