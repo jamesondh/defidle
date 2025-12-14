@@ -23,13 +23,16 @@ export class C4ChainGrowthRanking extends ChainTemplate {
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isChainContext(ctx)) return false
 
-    // Need chain list with enough chains that have 30d data
-    // This would require pre-computed change30d values
-    // For now, check we have enough chains
-    const chainList = ctx.data.chainList
-    if (!chainList || chainList.length < 4) return false
-
-    return true
+    // This template requires actual 30d growth data for multiple chains.
+    // Currently we don't fetch historical TVL for chains other than the topic,
+    // so we cannot accurately compute growth rankings.
+    // 
+    // TODO: To enable this template, we would need to either:
+    // 1. Pre-compute chain growth data in the pools refresh script
+    // 2. Fetch historical data for top N chains during episode generation
+    //
+    // For now, fail prereqs to prevent generating questions with fake data.
+    return false
   }
 
   proposeFormats(_ctx: TemplateContext): QuestionFormat[] {
@@ -90,6 +93,18 @@ export class C4ChainGrowthRanking extends ChainTemplate {
         ? Math.abs(sorted[0].change30d - sorted[1].change30d)
         : 0.1
 
+      // Build comparison data for all choices
+      const choiceData = allChoices.map((c) => ({
+        name: c.name,
+        change: `${c.change30d > 0 ? "+" : ""}${(c.change30d * 100).toFixed(1)}%`,
+      }))
+      
+      // Find the distractors' data in order
+      const distractorData = distractors.map((d) => ({
+        name: d.name,
+        change: `${d.change30d > 0 ? "+" : ""}${(d.change30d * 100).toFixed(1)}%`,
+      }))
+
       return {
         templateId: this.id,
         format,
@@ -104,10 +119,15 @@ export class C4ChainGrowthRanking extends ChainTemplate {
         },
         explainData: {
           topChain: topGrower.name,
+          topGrowth: `${(topGrower.change30d * 100).toFixed(1)}`,
           topChange: `${topGrower.change30d > 0 ? "+" : ""}${(topGrower.change30d * 100).toFixed(1)}%`,
+          // Include comparison data for wrong choices
+          otherChains: distractorData,
+          comparison: distractorData.map((d) => `${d.name} (${d.change})`).join(", "),
         },
         buildNotes: [
           `Top grower: ${topGrower.name} with ${(topGrower.change30d * 100).toFixed(1)}%`,
+          `Other choices: ${distractorData.map((d) => `${d.name}: ${d.change}`).join(", ")}`,
         ],
       }
     }
@@ -123,6 +143,10 @@ export class C4ChainGrowthRanking extends ChainTemplate {
     const answerIndex = swapped ? 1 : 0
 
     const margin = Math.abs(chainA.change30d - chainB.change30d)
+    
+    // Winner is chainA (higher growth), loser is chainB
+    const winner = chainA
+    const loser = chainB
 
     return {
       templateId: this.id,
@@ -141,6 +165,12 @@ export class C4ChainGrowthRanking extends ChainTemplate {
         chainB: chainB.name,
         changeA: `${chainA.change30d > 0 ? "+" : ""}${(chainA.change30d * 100).toFixed(1)}%`,
         changeB: `${chainB.change30d > 0 ? "+" : ""}${(chainB.change30d * 100).toFixed(1)}%`,
+        // Include comparison context
+        winnerChain: winner.name,
+        winnerChange: `${winner.change30d > 0 ? "+" : ""}${(winner.change30d * 100).toFixed(1)}%`,
+        loserChain: loser.name,
+        loserChange: `${loser.change30d > 0 ? "+" : ""}${(loser.change30d * 100).toFixed(1)}%`,
+        comparison: `${winner.name} grew ${(winner.change30d * 100).toFixed(1)}% vs ${loser.name}'s ${(loser.change30d * 100).toFixed(1)}%`,
       },
       buildNotes: [
         `${chainA.name}: ${(chainA.change30d * 100).toFixed(1)}%`,

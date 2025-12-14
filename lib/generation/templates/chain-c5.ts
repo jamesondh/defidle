@@ -92,6 +92,12 @@ export class C5TopProtocolByFees extends ChainTemplate {
       const choices = shuffled.map((x) => x.name)
       const answerIndex = shuffled.findIndex((x) => x.isCorrect)
 
+      // Build comparison data for distractors
+      const distractorData = selectedDistractors.map((d) => ({
+        name: d.displayName ?? d.name,
+        fees: formatNumber(d.fees24h ?? 0),
+      }))
+
       return {
         templateId: this.id,
         format,
@@ -109,10 +115,14 @@ export class C5TopProtocolByFees extends ChainTemplate {
           topProtocol: topProtocol.displayName ?? topProtocol.name,
           feesAmount: formatNumber(topFees),
           sharePercent,
+          // Include comparison data for wrong choices
+          otherProtocols: distractorData,
+          comparison: distractorData.map((d) => `${d.name} (${d.fees})`).join(", "),
         },
         buildNotes: [
           `Top protocol: ${topProtocol.name} with ${formatNumber(topFees)} fees`,
           `Margin over #2: ${(margin * 100).toFixed(1)}%`,
+          `Other choices: ${distractorData.map((d) => `${d.name}: ${d.fees}`).join(", ")}`,
         ],
       }
     }

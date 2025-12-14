@@ -435,6 +435,58 @@ function generateFallbackExplanation(
 3. Mark question with `"llmFallback": true` in episode JSON
 4. Continue episode generation (don't fail entire episode)
 
+#### Question Fallback Diversity
+
+When templates fail prerequisite checks (e.g., missing fees data, insufficient chain support), the system falls back to simple true/false questions. To avoid repetition and maintain engagement, the fallback system uses a **diverse pool of fallback questions**:
+
+**Protocol fallbacks:**
+- "Is {name} a DeFi protocol?"
+- "Does {name} have more than $1M in TVL?"
+- "Is {name} ranked in the top 100 protocols by TVL?"
+- "Is {name} tracked on DefiLlama?"
+- "Is {name} deployed on more than one blockchain?"
+
+**Chain fallbacks:**
+- "Is {name} a blockchain network?"
+- "Does {name} have DeFi protocols deployed on it?"
+- "Is {name} ranked in the top 50 chains by TVL?"
+- "Is {name} tracked on DefiLlama?"
+- "Does {name} have more than $10M in total TVL?"
+
+**Deduplication:**
+- The system tracks used prompts across all questions in an episode
+- Fallback selection prioritizes unused prompts to prevent duplicates
+- Post-balance pass detects and replaces any duplicate prompts that slip through
+
+#### Explanation Comparison Data
+
+Explanations should include metrics for wrong choices when available, making the learning experience more educational. For multiple-choice questions, the `explainData` includes comparison data:
+
+```typescript
+// Example: C4_GROWTH_RANKING explainData
+{
+  topChain: "Celo",
+  topGrowth: "48.8",
+  topChange: "+48.8%",
+  otherChains: [
+    { name: "Stable", change: "+32.1%" },
+    { name: "Corn", change: "+18.5%" },
+    { name: "Hyperliquid L1", change: "+12.3%" }
+  ],
+  comparison: "Stable (+32.1%), Corn (+18.5%), Hyperliquid L1 (+12.3%)"
+}
+```
+
+The LLM uses this comparison data to generate explanations like:
+> "Celo leads in growth ranking among chains with a remarkable increase of 48.8%, outpacing Stable (+32.1%), Corn (+18.5%), and Hyperliquid L1 (+12.3%)."
+
+**Templates with comparison data:**
+- C4 (Growth Ranking): Shows growth rates of all choices
+- C5 (Top by Fees): Shows fees for other protocols in leaderboard
+- C6 (Top DEX): Shows volume for other DEXes in leaderboard
+- P4/C3 (ATH Timing): Lists the distractor months considered
+- A/B comparisons (P2, C2): Already include metrics for both options
+
 #### Cost Estimation
 
 | Item | Estimate |

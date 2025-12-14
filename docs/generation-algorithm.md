@@ -463,9 +463,52 @@ function selectQuestionForSlot(
     }
   }
   
-  // No template worked - use safe fallback
+  // No template worked - use safe fallback with prompt deduplication
   buildLog.push({ slot, decision: "fallback", reason: "no_template_matched" })
-  return safeFallback(slot, ctx, seed)
+  return safeFallback(slot, ctx, seed, usedPrompts)
+}
+```
+
+### Diverse Fallback System
+
+When no template can produce a valid question, the system uses a diverse pool of fallback questions:
+
+```typescript
+const PROTOCOL_FALLBACKS = [
+  { id: "protocol_is_defi", prompt: "Is {name} a DeFi protocol?" },
+  { id: "protocol_tvl_positive", prompt: "Does {name} have more than $1M in TVL?" },
+  { id: "protocol_top_100", prompt: "Is {name} ranked in the top 100 protocols by TVL?" },
+  { id: "protocol_tracked", prompt: "Is {name} tracked on DefiLlama?" },
+  { id: "protocol_multichain", prompt: "Is {name} deployed on more than one blockchain?" },
+]
+
+const CHAIN_FALLBACKS = [
+  { id: "chain_is_blockchain", prompt: "Is {name} a blockchain network?" },
+  { id: "chain_has_defi", prompt: "Does {name} have DeFi protocols deployed on it?" },
+  { id: "chain_top_50", prompt: "Is {name} ranked in the top 50 chains by TVL?" },
+  { id: "chain_tracked", prompt: "Is {name} tracked on DefiLlama?" },
+  { id: "chain_tvl_positive", prompt: "Does {name} have more than $10M in total TVL?" },
+]
+
+function safeFallback(
+  slot: string,
+  ctx: TemplateContext,
+  seed: number,
+  usedPrompts?: Set<string>
+): QuestionDraft | null {
+  const fallbacks = ctx.episodeType === "protocol" ? PROTOCOL_FALLBACKS : CHAIN_FALLBACKS
+  
+  // Filter to fallbacks that haven't been used
+  const available = fallbacks.filter(fb => {
+    if (fb.canUse && !fb.canUse(ctx)) return false
+    const prompt = fb.getPrompt(ctx)
+    return !usedPrompts?.has(prompt)
+  })
+  
+  // Select deterministically from available pool
+  const pool = available.length > 0 ? available : fallbacks
+  const index = Math.floor(createRng(seed)() * pool.length)
+  return createFallbackQuestion(pool[index], ctx)
 }
 ```
 
@@ -496,8 +539,19 @@ function postBalancePass(
     }
   }
   
-  // Constraint: ensure difficulty mix is roughly correct
-  // (optional fine-tuning pass)
+  // Constraint: deduplicate prompts (especially fallbacks)
+  const prompts = new Set<string>()
+  for (let i = 0; i < result.length; i++) {
+    if (prompts.has(result[i].prompt)) {
+      // Replace duplicate with alternative fallback
+      const replacement = generateAlternativeFallback(result[i], ctx, prompts)
+      if (replacement) {
+        result[i] = replacement
+        buildLog.push({ qid: `q${i+1}`, decision: "post_balance", reason: "fallback_replaced" })
+      }
+    }
+    prompts.add(result[i].prompt)
+  }
   
   return result
 }
@@ -546,11 +600,48 @@ async function llmExplain(data: Record<string, any>, topic: Topic): Promise<stri
   const prompt = `Generate a 1-2 sentence explanation for a DeFi quiz answer.
 Topic: ${topic.name}
 Data: ${JSON.stringify(data)}
-Keep it educational and concise.`
+Keep it educational and concise.
+When comparison data for wrong choices is available, mention how they compare.`
   
   return await callLLM(prompt)
 }
 ```
+
+### Comparison Data in Explanations
+
+For multiple-choice questions, `explainData` includes metrics for wrong choices to make explanations more educational:
+
+```typescript
+// Example: C4_GROWTH_RANKING with comparison data
+{
+  topChain: "Celo",
+  topGrowth: "48.8",
+  // Comparison data for wrong choices
+  otherChains: [
+    { name: "Stable", change: "+32.1%" },
+    { name: "Corn", change: "+18.5%" },
+    { name: "Hyperliquid L1", change: "+12.3%" }
+  ],
+  comparison: "Stable (+32.1%), Corn (+18.5%), Hyperliquid L1 (+12.3%)"
+}
+
+// Example: C5_TOP_BY_FEES with comparison data
+{
+  chain: "Ethereum",
+  topProtocol: "Uniswap",
+  feesAmount: "$2.5M",
+  otherProtocols: [
+    { name: "Aave", fees: "$1.2M" },
+    { name: "Lido", fees: "$980K" },
+    { name: "GMX", fees: "$750K" }
+  ],
+  comparison: "Aave ($1.2M), Lido ($980K), GMX ($750K)"
+}
+```
+
+This enables explanations like:
+- "Celo had the highest 30-day TVL growth at 48.8%, outpacing Stable (+32.1%), Corn (+18.5%), and Hyperliquid L1 (+12.3%)."
+- "Uniswap leads Ethereum in 24h fees with $2.5M, ahead of Aave ($1.2M), Lido ($980K), and GMX ($750K)."
 
 ---
 
@@ -570,13 +661,15 @@ const PROTOCOL_MATRIX: Record<string, Template[]> = {
 
 ### Chain Matrix
 
+Note: Slots C and E have expanded template lists to reduce fallback frequency when fees/DEX data is unavailable.
+
 ```typescript
 const CHAIN_MATRIX: Record<string, Template[]> = {
   "A": [C1_Fingerprint],
   "B": [C2_TVLComparison],
-  "C": [C5_TopByFees, C6_TopDEX],
+  "C": [C5_TopByFees, C6_TopDEX, C3_ATHTiming, C4_GrowthRanking],  // Expanded
   "D": [C3_ATHTiming, C4_GrowthRanking],
-  "E": [C6_TopDEX, C5_TopByFees, C2_GrowthComparison],
+  "E": [C6_TopDEX, C5_TopByFees, C4_GrowthRanking, C2_TVLComparison],  // Expanded
 }
 ```
 

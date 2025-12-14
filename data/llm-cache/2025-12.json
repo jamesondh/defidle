@@ -1,52 +1,52 @@
 {
-  "2025-12-14|protocol|justcryptos|A|P1_FINGERPRINT|explanation|010b3c3c9948d70a": {
-    "text": "JustCryptos is a bridge in the DeFi space that operates on the Tron blockchain, with a total value locked (TVL) ranging between $1B and $5B. It facilitates the transfer of assets across different platforms.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-14T16:28:44.582Z"
-  },
-  "2025-12-14|protocol|justcryptos|B|P3_CONCENTRATION|explanation|757302d208fd0ab0": {
-    "text": "JustCryptos operates entirely on the Tron blockchain, holding a total TVL of $3.1B, which represents 100% of its assets concentrated on this chain.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-14T16:28:46.975Z"
-  },
-  "2025-12-14|protocol|justcryptos|C|P4_ATH_TIMING|explanation|a87fd447eea28abd": {
-    "text": "JustCryptos reached an all-time high (ATH) market capitalization of $8.3B in March 2024.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-14T16:28:48.772Z"
-  },
-  "2025-12-14|protocol|justcryptos|D|FALLBACK|explanation|6434a5a50749c48a": {
-    "text": "JustCryptos is a protocol categorized under slot D, indicating its specific functionality and classification within the DeFi ecosystem.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-14T16:28:50.481Z"
-  },
-  "2025-12-14|protocol|justcryptos|E|P6_TVL_TREND|explanation|4db54b041a2b64f1": {
-    "text": "JustCryptos has experienced an increase in its total value locked (TVL) by 1% over the past 7 days, bringing its current TVL to $3.1B.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-14T16:28:52.372Z"
-  },
   "2025-12-13|chain|Stellar|A|C1_FINGERPRINT|explanation|53f130c70c1dd8c8": {
-    "text": "Stellar is a DeFi platform ranked 30th in total value locked (TVL), with an estimated TVL between $100M and $500M. It utilizes the XLM token and supports 24 different protocols.",
+    "text": "Stellar is a DeFi platform with a total value locked (TVL) between $100M and $500M, ranking 30th in the DeFi space. It has 24 protocols and uses the token symbol XLM.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-14T17:59:57.760Z"
+    "generatedAt": "2025-12-14T18:24:17.365Z"
   },
   "2025-12-13|chain|Stellar|B|C2_CHAIN_COMPARISON|explanation|df099f375f9f3786": {
     "text": "Stellar has a total value locked (TVL) of $173M, which is 3% higher than Rootstock's TVL of $168M, making Stellar the leading chain in this comparison.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-14T17:59:59.584Z"
+    "generatedAt": "2025-12-14T18:24:18.745Z"
   },
-  "2025-12-13|chain|Stellar|C|FALLBACK|explanation|d7b16924545d1743": {
-    "text": "Stellar is a blockchain network categorized as a \"chain\" and is classified under slot \"C.\" It is designed to facilitate fast and low-cost cross-border transactions.",
+  "2025-12-13|chain|Stellar|C|C4_GROWTH_RANKING|explanation|366ed57303560414": {
+    "text": "Stellar's top growth ranking is 43.3%, significantly higher than other chains like Plasma at +11.3%, Base at +22.7%, and Mantle at +2.6%. This indicates Stellar's strong performance in terms of growth compared to its peers.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-14T18:00:01.635Z"
+    "generatedAt": "2025-12-14T18:24:21.596Z"
   },
-  "2025-12-13|chain|Stellar|D|C4_GROWTH_RANKING|explanation|9caef1e3e07c162c": {
-    "text": "Celo leads in growth ranking among chains with a remarkable increase of 48.8%. This indicates strong adoption and activity within the Celo ecosystem.",
+  "2025-12-13|chain|Stellar|D|FALLBACK|explanation|43909c959514d321": {
+    "text": "Stellar is a blockchain platform that supports decentralized finance (DeFi) applications, enabling users to create and manage financial services without intermediaries.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-14T18:00:03.490Z"
+    "generatedAt": "2025-12-14T18:24:23.407Z"
   },
-  "2025-12-13|chain|Stellar|E|FALLBACK|explanation|f96072b547b30368": {
-    "text": "Stellar is a blockchain network categorized as a chain and is designated as slot E. It focuses on facilitating cross-border transactions and financial inclusivity.",
+  "2025-12-13|chain|Stellar|E|FALLBACK|explanation|477a968df0f363e0": {
+    "text": "Stellar is a tracked blockchain platform designed to facilitate cross-border transactions and improve financial access. Its tracking status indicates that it is actively monitored for performance and developments in the DeFi space.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-14T18:00:05.231Z"
+    "generatedAt": "2025-12-14T18:24:24.327Z"
+  },
+  "2025-12-14|protocol|justcryptos|A|P1_FINGERPRINT|explanation|010b3c3c9948d70a": {
+    "text": "JustCryptos is a bridge in the DeFi space that operates on the Tron blockchain, with a total value locked (TVL) estimated between $1B and $5B. It facilitates the transfer of assets across different platforms within its single chain environment.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-14T18:24:30.677Z"
+  },
+  "2025-12-14|protocol|justcryptos|B|P3_CONCENTRATION|explanation|757302d208fd0ab0": {
+    "text": "JustCryptos operates entirely on the Tron blockchain, holding a total value locked (TVL) of $3.1B, which represents 100% of its total TVL.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-14T18:24:31.707Z"
+  },
+  "2025-12-14|protocol|justcryptos|C|P4_ATH_TIMING|explanation|9484435334054f4c": {
+    "text": "JustCryptos reached its all-time high (ATH) of $8.3B in March 2024, which is distinct from the values in other months like June 2024, December 2023, and February 2024.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-14T18:24:34.318Z"
+  },
+  "2025-12-14|protocol|justcryptos|D|FALLBACK|explanation|a4f1b34bd61346df": {
+    "text": "JustCryptos is a protocol in the decentralized finance (DeFi) space, designed to facilitate various financial services using blockchain technology.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-14T18:24:35.095Z"
+  },
+  "2025-12-14|protocol|justcryptos|E|P6_TVL_TREND|explanation|d3b0d9381e54dcdb": {
+    "text": "JustCryptos has experienced an increased total value locked (TVL) of $3.1B over the past 7 days, with no percentage change during this period.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-14T18:24:36.713Z"
   }
 }

@@ -12,6 +12,9 @@
 /**
  * Template strings for each question template type.
  * Placeholders use {key} syntax and are replaced with explainData values.
+ * 
+ * Templates now support comparison data for MC questions to show how
+ * wrong choices compare to the correct answer.
  */
 export const EXPLANATION_TEMPLATES: Record<string, string> = {
   // Protocol templates
@@ -36,15 +39,15 @@ export const EXPLANATION_TEMPLATES: Record<string, string> = {
   C3_ATH_TIMING:
     "{name} reached its all-time high TVL of {athValue} in {athMonth}.",
   C4_GROWTH_RANKING:
-    "{topChain} had the highest 30-day TVL growth at {topGrowth}% among the compared chains.",
+    "{topChain} had the highest 30-day TVL growth at {topGrowth}%, outpacing {comparison}.",
   C5_TOP_BY_FEES:
-    "{topProtocol} leads {chain} in 24h fees with {feesAmount}, capturing {sharePercent}% of chain fees.",
+    "{topProtocol} leads {chain} in 24h fees with {feesAmount}, ahead of {comparison}.",
   C6_TOP_DEX:
-    "{topDex} is the top DEX on {chain} with {volumeAmount} in 24h volume ({sharePercent}% of chain DEX volume).",
+    "{topDex} is the top DEX on {chain} with {volumeAmount} in 24h volume, ahead of {comparison}.",
 
-  // Generic fallback
+  // Generic fallback - now more specific based on available data
   FALLBACK:
-    "The correct answer is based on data from DefiLlama as of {date}.",
+    "{name} is a {type} tracked on DefiLlama.",
 }
 
 // =============================================================================

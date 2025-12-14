@@ -92,6 +92,12 @@ export class C6TopDEXByVolume extends ChainTemplate {
       const choices = shuffled.map((x) => x.name)
       const answerIndex = shuffled.findIndex((x) => x.isCorrect)
 
+      // Build comparison data for distractors
+      const distractorData = selectedDistractors.map((d) => ({
+        name: d.displayName ?? d.name,
+        volume: formatNumber(d.total24h ?? 0),
+      }))
+
       return {
         templateId: this.id,
         format,
@@ -109,10 +115,14 @@ export class C6TopDEXByVolume extends ChainTemplate {
           topDex: topDex.displayName ?? topDex.name,
           volumeAmount: formatNumber(topVolume),
           sharePercent,
+          // Include comparison data for wrong choices
+          otherDexes: distractorData,
+          comparison: distractorData.map((d) => `${d.name} (${d.volume})`).join(", "),
         },
         buildNotes: [
           `Top DEX: ${topDex.name} with ${formatNumber(topVolume)} volume`,
           `Margin over #2: ${(margin * 100).toFixed(1)}%`,
+          `Other choices: ${distractorData.map((d) => `${d.name}: ${d.volume}`).join(", ")}`,
         ],
       }
     }

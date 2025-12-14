@@ -106,7 +106,8 @@ export class P6TVLTrend extends ProtocolTemplate {
         explainData: {
           name: detail.name,
           trendDirection: increased ? "increased" : "decreased",
-          changePercent: Math.abs(Math.round(change * 100)),
+          // Use toFixed(1) to preserve small percentages (don't round 0.5% to 0%)
+          changePercent: Math.abs(change * 100).toFixed(1),
           period,
           currentTvl: formatNumber(currentTvl),
         },

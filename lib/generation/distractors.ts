@@ -331,13 +331,13 @@ export function formatMonthDisplay(yyyyMm: string): string {
  * @param correctMonth - Correct month in YYYY-MM format
  * @param count - Number of distractors needed
  * @param seed - Seed for deterministic selection
- * @returns Object with choices array and answer index
+ * @returns Object with choices array, answer index, and distractor months for explanations
  */
 export function makeTimingDistractors(
   correctMonth: string,
   count: number,
   seed: number
-): { choices: string[]; answerIndex: number } {
+): { choices: string[]; answerIndex: number; distractorMonths: string[] } {
   // Generate adjacent months (+-1 to +-3 from correct)
   const candidates: string[] = []
   for (let offset = -3; offset <= 3; offset++) {
@@ -348,6 +348,9 @@ export function makeTimingDistractors(
   // Deterministically select distractors
   const shuffled = deterministicShuffle(candidates, seed.toString())
   const distractors = shuffled.slice(0, count)
+  
+  // Store formatted distractor months for explanations
+  const distractorMonths = distractors.map((m) => formatMonthDisplay(m))
 
   // Combine with correct answer
   const allMonths = [correctMonth, ...distractors]
@@ -361,7 +364,7 @@ export function makeTimingDistractors(
   const choices = shuffledFinal.map((x) => formatMonthDisplay(x.m))
   const answerIndex = shuffledFinal.findIndex((x) => x.isCorrect)
 
-  return { choices, answerIndex }
+  return { choices, answerIndex, distractorMonths }
 }
 
 /**

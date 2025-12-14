@@ -155,7 +155,7 @@ export function postBalancePass(
     // This is because forceful changes could make questions incorrect
   }
 
-  // 3. Check for duplicate prompts (safety check)
+  // 3. Check for and handle duplicate prompts
   const prompts = new Set<string>()
   for (let i = 0; i < result.length; i++) {
     const prompt = result[i].prompt
@@ -165,11 +165,81 @@ export function postBalancePass(
         decision: "post_balance",
         reason: "duplicate_prompt_detected",
       })
+      
+      // If this is a fallback question, try to generate a different one
+      if (result[i].templateId === "FALLBACK") {
+        const replacement = generateAlternativeFallback(result[i], ctx, prompts)
+        if (replacement && !prompts.has(replacement.prompt)) {
+          result[i] = replacement
+          buildLog.push({
+            qid: `q${i + 1}`,
+            decision: "post_balance",
+            reason: "fallback_replaced_with_alternative",
+          })
+        }
+      }
     }
-    prompts.add(prompt)
+    prompts.add(result[i].prompt)
   }
 
   return result
+}
+
+/**
+ * Generate an alternative fallback question to avoid duplicates
+ */
+function generateAlternativeFallback(
+  original: QuestionDraft,
+  ctx: TemplateContext,
+  usedPrompts: Set<string>
+): QuestionDraft | null {
+  const topicName = ctx.topic.name
+  const isProtocol = ctx.episodeType === "protocol"
+  
+  // Alternative fallback questions
+  const alternatives = isProtocol
+    ? [
+        {
+          prompt: `Is ${topicName} tracked on DefiLlama?`,
+          explainData: { name: topicName, isTracked: true },
+        },
+        {
+          prompt: `Does ${topicName} have any TVL locked?`,
+          explainData: { name: topicName, hasTvl: true },
+        },
+        {
+          prompt: `Is ${topicName} a decentralized application?`,
+          explainData: { name: topicName, isDecentralized: true },
+        },
+      ]
+    : [
+        {
+          prompt: `Is ${topicName} tracked on DefiLlama?`,
+          explainData: { name: topicName, isTracked: true },
+        },
+        {
+          prompt: `Does ${topicName} support smart contracts?`,
+          explainData: { name: topicName, supportsSmartContracts: true },
+        },
+        {
+          prompt: `Is ${topicName} a layer 1 or layer 2 network?`,
+          explainData: { name: topicName, isL1OrL2: true },
+        },
+      ]
+  
+  // Find first alternative that's not already used
+  for (const alt of alternatives) {
+    if (!usedPrompts.has(alt.prompt)) {
+      return {
+        ...original,
+        prompt: alt.prompt,
+        explainData: alt.explainData,
+        buildNotes: [...original.buildNotes, "Replaced with alternative to avoid duplicate"],
+      }
+    }
+  }
+  
+  return null
 }
 
 /**

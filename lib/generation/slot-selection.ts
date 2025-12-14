@@ -19,6 +19,7 @@ import {
   findBestFormat,
 } from "./difficulty"
 import { getSlotDifficultyTarget } from "./schedule"
+import { createRng } from "./rng"
 
 /**
  * Result of attempting to select a question for a slot
@@ -57,40 +58,177 @@ function tryAdjustDifficulty(
 }
 
 /**
+ * Fallback question definitions for diverse fallback generation
+ */
+interface FallbackQuestion {
+  id: string
+  getPrompt: (ctx: TemplateContext) => string
+  getExplainData: (ctx: TemplateContext) => Record<string, unknown>
+  /** Check if this fallback can be used given the context */
+  canUse?: (ctx: TemplateContext) => boolean
+}
+
+/**
+ * Pool of diverse fallback questions for protocols
+ */
+const PROTOCOL_FALLBACKS: FallbackQuestion[] = [
+  {
+    id: "protocol_is_defi",
+    getPrompt: (ctx) => `Is ${ctx.topic.name} a DeFi protocol?`,
+    getExplainData: (ctx) => ({
+      name: ctx.topic.name,
+      type: "protocol",
+    }),
+  },
+  {
+    id: "protocol_tvl_positive",
+    getPrompt: (ctx) => `Does ${ctx.topic.name} have more than $1M in TVL?`,
+    getExplainData: (ctx) => ({
+      name: ctx.topic.name,
+      tvl: ctx.derived.tvlRank ? `ranked #${ctx.derived.tvlRank}` : "significant",
+      hasHighTvl: true,
+    }),
+    canUse: (ctx) => (ctx.derived.tvlRank ?? 999) <= 100,
+  },
+  {
+    id: "protocol_top_100",
+    getPrompt: (ctx) => `Is ${ctx.topic.name} ranked in the top 100 protocols by TVL?`,
+    getExplainData: (ctx) => ({
+      name: ctx.topic.name,
+      tvlRank: ctx.derived.tvlRank,
+      isTop100: (ctx.derived.tvlRank ?? 999) <= 100,
+    }),
+    canUse: (ctx) => ctx.derived.tvlRank !== undefined,
+  },
+  {
+    id: "protocol_tracked_defillama",
+    getPrompt: (ctx) => `Is ${ctx.topic.name} tracked on DefiLlama?`,
+    getExplainData: (ctx) => ({
+      name: ctx.topic.name,
+      isTracked: true,
+    }),
+  },
+  {
+    id: "protocol_multichain",
+    getPrompt: (ctx) => `Is ${ctx.topic.name} deployed on more than one blockchain?`,
+    getExplainData: (ctx) => ({
+      name: ctx.topic.name,
+      chainCount: ctx.derived.chainCount,
+      isMultichain: (ctx.derived.chainCount ?? 0) > 1,
+    }),
+    canUse: (ctx) => ctx.derived.chainCount !== undefined,
+  },
+]
+
+/**
+ * Pool of diverse fallback questions for chains
+ */
+const CHAIN_FALLBACKS: FallbackQuestion[] = [
+  {
+    id: "chain_is_blockchain",
+    getPrompt: (ctx) => `Is ${ctx.topic.name} a blockchain network?`,
+    getExplainData: (ctx) => ({
+      name: ctx.topic.name,
+      type: "chain",
+    }),
+  },
+  {
+    id: "chain_has_defi",
+    getPrompt: (ctx) => `Does ${ctx.topic.name} have DeFi protocols deployed on it?`,
+    getExplainData: (ctx) => ({
+      name: ctx.topic.name,
+      hasDefi: true,
+    }),
+  },
+  {
+    id: "chain_top_50",
+    getPrompt: (ctx) => `Is ${ctx.topic.name} ranked in the top 50 chains by TVL?`,
+    getExplainData: (ctx) => ({
+      name: ctx.topic.name,
+      tvlRank: ctx.derived.chainTvlRank ?? ctx.derived.tvlRank,
+      isTop50: (ctx.derived.chainTvlRank ?? ctx.derived.tvlRank ?? 999) <= 50,
+    }),
+    canUse: (ctx) => (ctx.derived.chainTvlRank ?? ctx.derived.tvlRank) !== undefined,
+  },
+  {
+    id: "chain_tracked_defillama",
+    getPrompt: (ctx) => `Is ${ctx.topic.name} tracked on DefiLlama?`,
+    getExplainData: (ctx) => ({
+      name: ctx.topic.name,
+      isTracked: true,
+    }),
+  },
+  {
+    id: "chain_tvl_positive",
+    getPrompt: (ctx) => `Does ${ctx.topic.name} have more than $10M in total TVL?`,
+    getExplainData: (ctx) => ({
+      name: ctx.topic.name,
+      hasTvl: true,
+    }),
+    canUse: (ctx) => (ctx.derived.chainTvlRank ?? ctx.derived.tvlRank ?? 999) <= 50,
+  },
+]
+
+/**
  * Generate a safe fallback question for a slot
- * This is used when no template can produce a valid question
+ * This is used when no template can produce a valid question.
+ * Uses a diverse pool of fallback questions and tracks used prompts to avoid duplicates.
  */
 function safeFallback(
   slot: string,
   ctx: TemplateContext,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  _seed: number
+  seed: number,
+  usedPrompts?: Set<string>
 ): QuestionDraft | null {
-  // Create a simple true/false question about the topic
   const topicName = ctx.topic.name
   const isProtocol = ctx.episodeType === "protocol"
+  const fallbacks = isProtocol ? PROTOCOL_FALLBACKS : CHAIN_FALLBACKS
+
+  // Use seed to select a fallback, but also consider which ones we've used
+  const rng = createRng(seed)
+  
+  // Filter to fallbacks that can be used and haven't been used yet
+  const availableFallbacks = fallbacks.filter((fb) => {
+    // Check if this fallback can be used given context
+    if (fb.canUse && !fb.canUse(ctx)) return false
+    // Check if prompt already used
+    if (usedPrompts) {
+      const prompt = fb.getPrompt(ctx)
+      if (usedPrompts.has(prompt)) return false
+    }
+    return true
+  })
+
+  // If no available fallbacks, use the first one from the pool (better than nothing)
+  const fallbackPool = availableFallbacks.length > 0 ? availableFallbacks : fallbacks
+
+  // Deterministically select based on seed
+  const index = Math.floor(rng() * fallbackPool.length)
+  const selected = fallbackPool[index]
+
+  const prompt = selected.getPrompt(ctx)
+  const explainData = selected.getExplainData(ctx)
+
+  // Determine answer based on the fallback type
+  // All our fallbacks are designed to have "True" as the answer
+  const answerValue = true
+  const answerIndex = 0
 
   return {
     templateId: "FALLBACK",
     format: "tf" as QuestionFormat,
-    prompt: isProtocol
-      ? `Is ${topicName} a DeFi protocol?`
-      : `Is ${topicName} a blockchain network?`,
+    prompt,
     choices: ["True", "False"],
-    answerIndex: 0, // answerValue is true
-    answerValue: true,
+    answerIndex,
+    answerValue,
     signals: {
       format: "tf",
       familiarityRankBucket: "top_100",
       margin: 1.0, // Trivial question
       volatility: 0,
     },
-    explainData: {
-      name: topicName,
-      type: isProtocol ? "protocol" : "chain",
-      slot,
-    },
-    buildNotes: [`Used fallback question for slot ${slot}`],
+    explainData,
+    buildNotes: [`Used fallback question "${selected.id}" for slot ${slot}`],
   }
 }
 
@@ -105,7 +243,8 @@ export function selectQuestionForSlot(
   templates: Template[],
   ctx: TemplateContext,
   seed: number,
-  usedTemplates: Set<string>
+  usedTemplates: Set<string>,
+  usedPrompts?: Set<string>
 ): SlotSelectionResult {
   const target = getSlotDifficultyTarget(slot)
   const logEntries: BuildLogEntry[] = []
@@ -256,7 +395,7 @@ export function selectQuestionForSlot(
   })
 
   return {
-    draft: safeFallback(slot, ctx, seed),
+    draft: safeFallback(slot, ctx, seed, usedPrompts),
     logEntries,
   }
 }
@@ -273,6 +412,7 @@ export function selectAllQuestions(
   const drafts: QuestionDraft[] = []
   const buildLog: BuildLogEntry[] = []
   const usedTemplates = new Set<string>()
+  const usedPrompts = new Set<string>()
 
   for (const slot of slots) {
     const templates = matrix[slot] ?? []
@@ -283,7 +423,8 @@ export function selectAllQuestions(
       templates,
       ctx,
       slotSeed,
-      usedTemplates
+      usedTemplates,
+      usedPrompts
     )
 
     buildLog.push(...result.logEntries)
@@ -291,6 +432,7 @@ export function selectAllQuestions(
     if (result.draft) {
       drafts.push(result.draft)
       usedTemplates.add(result.draft.templateId)
+      usedPrompts.add(result.draft.prompt)
     }
   }
 

@@ -85,8 +85,12 @@ export class C3ChainATHTiming extends ChainTemplate {
           name: topic.name,
           athValue: formatNumber(ath.value),
           athMonth: athMonthDisplay,
+          // Note: We intentionally don't include comparison/distractor months here
+          // as it makes explanations awkward (e.g., "not in June, December, or February")
         },
-        buildNotes: [`ATH: ${formatNumber(ath.value)} in ${athMonthDisplay}`],
+        buildNotes: [
+          `ATH: ${formatNumber(ath.value)} in ${athMonthDisplay}`,
+        ],
       }
     }
 

@@ -80,13 +80,17 @@ export const PROTOCOL_MATRIX: TemplateMatrix = {
 
 /**
  * Chain template matrix - maps slots to ordered list of templates to try
+ * 
+ * Note: Slots C and E have expanded template lists to reduce fallback frequency.
+ * When fees/DEX data is unavailable, the algorithm can fall back to comparison
+ * and growth templates which only require basic chain data.
  */
 export const CHAIN_MATRIX: TemplateMatrix = {
   A: [c1ChainFingerprint],
   B: [c2ChainTVLComparison],
-  C: [c5TopProtocolByFees, c6TopDEXByVolume],
+  C: [c5TopProtocolByFees, c6TopDEXByVolume, c3ChainATHTiming, c4ChainGrowthRanking],
   D: [c3ChainATHTiming, c4ChainGrowthRanking],
-  E: [c6TopDEXByVolume, c5TopProtocolByFees, c2ChainTVLComparison],
+  E: [c6TopDEXByVolume, c5TopProtocolByFees, c4ChainGrowthRanking, c2ChainTVLComparison],
 }
 
 /**

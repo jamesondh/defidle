@@ -88,6 +88,8 @@ export class P4ATHTiming extends ProtocolTemplate {
           name: detail.name,
           athValue: formatNumber(ath.value),
           athMonth: athMonthDisplay,
+          // Note: We intentionally don't include comparison/distractor months here
+          // as it makes explanations awkward (e.g., "not in June, December, or February")
         },
         buildNotes: [
           `ATH: ${formatNumber(ath.value)} in ${athMonthDisplay}`,

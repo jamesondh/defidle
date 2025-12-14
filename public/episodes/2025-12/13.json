@@ -22,11 +22,11 @@
       "choices": [
         "Berachain",
         "Stellar",
-        "Etherlink",
+        "X Layer",
         "Stargaze"
       ],
       "answerIndex": 1,
-      "explanation": "Stellar is a DeFi platform ranked 30th in total value locked (TVL), with an estimated TVL between $100M and $500M. It utilizes the XLM token and supports 24 different protocols.",
+      "explanation": "Stellar is a DeFi platform with a total value locked (TVL) between $100M and $500M, ranking 30th in the DeFi space. It has 24 protocols and uses the token symbol XLM.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
@@ -55,25 +55,49 @@
       "signals": {
         "format": "tf",
         "familiarityRankBucket": "top_100",
-        "margin": 0.026283987230931168,
+        "margin": 0.026070572970157208,
         "volatility": null
       },
-      "difficultyScore": 0.3930966773075574
+      "difficultyScore": 0.39327452252486894
     },
     {
       "qid": "q3",
       "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "TAC",
+        "Base",
+        "Mantle",
+        "Plasma"
+      ],
+      "answerIndex": 0,
+      "explanation": "Stellar's top growth ranking is 43.3%, significantly higher than other chains like Plasma at +11.3%, Base at +22.7%, and Mantle at +2.6%. This indicates Stellar's strong performance in terms of growth compared to its peers.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.20539327636361127,
+        "volatility": null
+      },
+      "difficultyScore": 0.34883893636365726
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
       "templateId": "FALLBACK",
       "format": "tf",
-      "prompt": "Is Stellar a blockchain network?",
+      "prompt": "Does Stellar have DeFi protocols deployed on it?",
       "choices": [
         "True",
         "False"
       ],
       "answerIndex": 0,
       "answerValue": true,
-      "explanation": "Stellar is a blockchain network categorized as a \"chain\" and is classified under slot \"C.\" It is designed to facilitate fast and low-cost cross-border transactions.",
-      "difficulty": "medium",
+      "explanation": "Stellar is a blockchain platform that supports decentralized finance (DeFi) applications, enabling users to create and manage financial services without intermediaries.",
+      "difficulty": "hard",
       "llmFallback": false,
       "signals": {
         "format": "tf",
@@ -84,42 +108,18 @@
       "difficultyScore": 0.1275
     },
     {
-      "qid": "q4",
-      "slot": "D",
-      "templateId": "C4_GROWTH_RANKING",
-      "format": "mc4",
-      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
-      "choices": [
-        "Stable",
-        "Celo",
-        "Corn",
-        "Hyperliquid L1"
-      ],
-      "answerIndex": 1,
-      "explanation": "Celo leads in growth ranking among chains with a remarkable increase of 48.8%. This indicates strong adoption and activity within the Celo ecosystem.",
-      "difficulty": "hard",
-      "llmFallback": false,
-      "signals": {
-        "format": "mc4",
-        "familiarityRankBucket": "top_100",
-        "margin": 0.05505280457437045,
-        "volatility": null
-      },
-      "difficultyScore": 0.47412266285469123
-    },
-    {
       "qid": "q5",
       "slot": "E",
       "templateId": "FALLBACK",
       "format": "tf",
-      "prompt": "Is Stellar a blockchain network?",
+      "prompt": "Is Stellar tracked on DefiLlama?",
       "choices": [
         "True",
         "False"
       ],
       "answerIndex": 0,
       "answerValue": true,
-      "explanation": "Stellar is a blockchain network categorized as a chain and is designated as slot E. It focuses on facilitating cross-border transactions and financial inclusivity.",
+      "explanation": "Stellar is a tracked blockchain platform designed to facilitate cross-border transactions and improve financial access. Its tracking status indicates that it is actively monitored for performance and developments in the DeFi space.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
@@ -131,7 +131,7 @@
       "difficultyScore": 0.1275
     }
   ],
-  "generatedAt": "2025-12-14T18:00:05.231Z",
+  "generatedAt": "2025-12-14T18:24:24.328Z",
   "buildLog": [
     {
       "slot": "A",
@@ -147,7 +147,7 @@
       "format": "tf",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.3930966773075574,
+      "score": 0.39327452252486894,
       "target": "easy"
     },
     {
@@ -156,7 +156,7 @@
       "format": "tf",
       "decision": "selected",
       "reason": "close_enough",
-      "score": 0.3930966773075574,
+      "score": 0.39327452252486894,
       "target": "easy"
     },
     {
@@ -173,8 +173,17 @@
     },
     {
       "slot": "C",
-      "decision": "fallback",
-      "reason": "no_template_matched"
+      "template": "C3_ATH_TIMING",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.34883893636365726,
+      "target": "medium"
     },
     {
       "slot": "D",
@@ -185,29 +194,13 @@
     {
       "slot": "D",
       "template": "C4_GROWTH_RANKING",
-      "format": "mc4",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.47412266285469123,
-      "target": "hard"
+      "decision": "skip",
+      "reason": "already_used"
     },
     {
       "slot": "D",
-      "template": "C4_GROWTH_RANKING",
-      "format": "ab",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.42162266285469124,
-      "target": "hard"
-    },
-    {
-      "slot": "D",
-      "template": "C4_GROWTH_RANKING",
-      "format": "mc4",
-      "decision": "selected",
-      "reason": "close_enough",
-      "score": 0.47412266285469123,
-      "target": "hard"
+      "decision": "fallback",
+      "reason": "no_template_matched"
     },
     {
       "slot": "E",
@@ -220,6 +213,12 @@
       "template": "C5_TOP_BY_FEES",
       "decision": "skip",
       "reason": "prereq_failed"
+    },
+    {
+      "slot": "E",
+      "template": "C4_GROWTH_RANKING",
+      "decision": "skip",
+      "reason": "already_used"
     },
     {
       "slot": "E",
@@ -235,11 +234,6 @@
     {
       "decision": "post_balance",
       "reason": "No hard questions in episode"
-    },
-    {
-      "qid": "q5",
-      "decision": "post_balance",
-      "reason": "duplicate_prompt_detected"
     }
   ]
 }
