@@ -22,8 +22,8 @@
       ],
       "choices": [
         "JustCryptos",
-        "Ion Protocol",
-        "SwanSwap",
+        "Tranche Finance",
+        "Velocimeter V2",
         "Windfall",
         "MortgageFi",
         "NovaSwap V1"
@@ -36,9 +36,9 @@
         "format": "mc6",
         "familiarityRankBucket": "top_100",
         "margin": null,
-        "volatility": 0.1902274211267956
+        "volatility": 0.1901585990782042
       },
-      "difficultyScore": 0.35853411316901934
+      "difficultyScore": 0.35852378986173067
     },
     {
       "qid": "q2",
@@ -59,9 +59,9 @@
         "format": "tf",
         "familiarityRankBucket": "top_100",
         "margin": 0.25,
-        "volatility": 0.1902274211267956
+        "volatility": 0.1901585990782042
       },
-      "difficultyScore": 0.197700779835686
+      "difficultyScore": 0.19769045652839728
     },
     {
       "qid": "q3",
@@ -83,9 +83,9 @@
         "format": "mc4",
         "familiarityRankBucket": "top_100",
         "margin": 0.15,
-        "volatility": 0.1902274211267956
+        "volatility": 0.1901585990782042
       },
-      "difficultyScore": 0.3860341131690193
+      "difficultyScore": 0.38602378986173064
     },
     {
       "qid": "q4",
@@ -93,6 +93,11 @@
       "templateId": "FALLBACK",
       "format": "tf",
       "prompt": "Is JustCryptos a DeFi protocol?",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
       "answerValue": true,
       "explanation": "JustCryptos is a protocol categorized under slot D, indicating its specific functionality and classification within the DeFi ecosystem.",
       "difficulty": "hard",
@@ -123,20 +128,20 @@
       "signals": {
         "format": "tf",
         "familiarityRankBucket": "top_100",
-        "margin": 0.005868485926016239,
-        "volatility": 0.1902274211267956
+        "margin": 0.006317380402085208,
+        "volatility": 0.1901585990782042
       },
-      "difficultyScore": 0.40114370823067247
+      "difficultyScore": 0.40075930619332634
     }
   ],
-  "generatedAt": "2025-12-14T16:28:52.373Z",
+  "generatedAt": "2025-12-14T17:58:55.029Z",
   "buildLog": [
     {
       "slot": "A",
       "template": "P1_FINGERPRINT",
       "format": "mc6",
       "decision": "selected",
-      "score": 0.35853411316901934,
+      "score": 0.35852378986173067,
       "target": "medium"
     },
     {
@@ -150,7 +155,7 @@
       "template": "P3_CONCENTRATION",
       "format": "tf",
       "decision": "selected",
-      "score": 0.197700779835686,
+      "score": 0.19769045652839728,
       "target": "easy"
     },
     {
@@ -164,7 +169,7 @@
       "template": "P4_ATH_TIMING",
       "format": "mc4",
       "decision": "selected",
-      "score": 0.3860341131690193,
+      "score": 0.38602378986173064,
       "target": "medium"
     },
     {
@@ -196,7 +201,7 @@
       "format": "tf",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.40114370823067247,
+      "score": 0.40075930619332634,
       "target": "easy"
     },
     {
@@ -217,7 +222,7 @@
       "format": "tf",
       "decision": "selected",
       "reason": "close_enough",
-      "score": 0.40114370823067247,
+      "score": 0.40075930619332634,
       "target": "easy"
     },
     {

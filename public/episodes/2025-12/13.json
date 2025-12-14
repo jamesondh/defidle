@@ -1,0 +1,245 @@
+{
+  "episodeId": "2025-12-13:chain:Stellar",
+  "dateUtc": "2025-12-13",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Stellar",
+    "name": "Stellar"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "TVL: $100M-$500M",
+        "Native token: XLM",
+        "30d trend: up >10%"
+      ],
+      "choices": [
+        "Berachain",
+        "Stellar",
+        "Etherlink",
+        "Stargaze"
+      ],
+      "answerIndex": 1,
+      "explanation": "Stellar is a DeFi platform ranked 30th in total value locked (TVL), with an estimated TVL between $100M and $500M. It utilizes the XLM token and supports 24 different protocols.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.33249999999999996
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "prompt": "Stellar has higher TVL than Rootstock.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Stellar has a total value locked (TVL) of $173M, which is 3% higher than Rootstock's TVL of $168M, making Stellar the leading chain in this comparison.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.026283987230931168,
+        "volatility": null
+      },
+      "difficultyScore": 0.3930966773075574
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "FALLBACK",
+      "format": "tf",
+      "prompt": "Is Stellar a blockchain network?",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Stellar is a blockchain network categorized as a \"chain\" and is classified under slot \"C.\" It is designed to facilitate fast and low-cost cross-border transactions.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0
+      },
+      "difficultyScore": 0.1275
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Stable",
+        "Celo",
+        "Corn",
+        "Hyperliquid L1"
+      ],
+      "answerIndex": 1,
+      "explanation": "Celo leads in growth ranking among chains with a remarkable increase of 48.8%. This indicates strong adoption and activity within the Celo ecosystem.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.05505280457437045,
+        "volatility": null
+      },
+      "difficultyScore": 0.47412266285469123
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "FALLBACK",
+      "format": "tf",
+      "prompt": "Is Stellar a blockchain network?",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Stellar is a blockchain network categorized as a chain and is designated as slot E. It focuses on facilitating cross-border transactions and financial inclusivity.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0
+      },
+      "difficultyScore": 0.1275
+    }
+  ],
+  "generatedAt": "2025-12-14T18:00:05.231Z",
+  "buildLog": [
+    {
+      "slot": "A",
+      "template": "C1_FINGERPRINT",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.33249999999999996,
+      "target": "medium"
+    },
+    {
+      "slot": "B",
+      "template": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.3930966773075574,
+      "target": "easy"
+    },
+    {
+      "slot": "B",
+      "template": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "decision": "selected",
+      "reason": "close_enough",
+      "score": 0.3930966773075574,
+      "target": "easy"
+    },
+    {
+      "slot": "C",
+      "template": "C5_TOP_BY_FEES",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "C6_TOP_DEX",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "decision": "fallback",
+      "reason": "no_template_matched"
+    },
+    {
+      "slot": "D",
+      "template": "C3_ATH_TIMING",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.47412266285469123,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "C4_GROWTH_RANKING",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.42162266285469124,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "decision": "selected",
+      "reason": "close_enough",
+      "score": 0.47412266285469123,
+      "target": "hard"
+    },
+    {
+      "slot": "E",
+      "template": "C6_TOP_DEX",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "E",
+      "template": "C5_TOP_BY_FEES",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "E",
+      "template": "C2_CHAIN_COMPARISON",
+      "decision": "skip",
+      "reason": "already_used"
+    },
+    {
+      "slot": "E",
+      "decision": "fallback",
+      "reason": "no_template_matched"
+    },
+    {
+      "decision": "post_balance",
+      "reason": "No hard questions in episode"
+    },
+    {
+      "qid": "q5",
+      "decision": "post_balance",
+      "reason": "duplicate_prompt_detected"
+    }
+  ]
+}

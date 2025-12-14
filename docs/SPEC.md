@@ -524,6 +524,19 @@ No authentication, no leaderboards, no streaks (v1).
       "explanation": "Uniswap is the largest DEX by TVL, deployed on 12 chains with over $4B TVL.",
       "difficulty": "medium",
       "llmFallback": false
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P3_CONCENTRATION",
+      "format": "tf",
+      "prompt": "More than 50% of Uniswap's TVL is on Ethereum.",
+      "choices": ["True", "False"],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Ethereum holds 65% of Uniswap's total TVL.",
+      "difficulty": "easy",
+      "llmFallback": false
     }
   ],
   "generatedAt": "2025-12-13T00:00:00Z"
@@ -539,6 +552,8 @@ No authentication, no leaderboards, no streaks (v1).
 | `mc4` | 4-choice multiple choice | "Which chain has the most Uniswap TVL?" |
 | `mc6` | 6-choice multiple choice | "Identify the protocol from these clues" |
 | `rank` | Order 3-4 items | "Rank these chains by TVL" |
+
+**Important:** All choice-based formats (`tf`, `ab`, `mc4`, `mc6`) use `choices` array and `answerIndex` for answer evaluation. For `tf` questions, the `choices` array is always `["True", "False"]` and `answerIndex` is `0` for true, `1` for false. The optional `answerValue` field stores the boolean for reference but is not used for answer evaluation.
 
 ## Episode Storage
 

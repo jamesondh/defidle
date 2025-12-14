@@ -76,6 +76,8 @@ function safeFallback(
     prompt: isProtocol
       ? `Is ${topicName} a DeFi protocol?`
       : `Is ${topicName} a blockchain network?`,
+    choices: ["True", "False"],
+    answerIndex: 0, // answerValue is true
     answerValue: true,
     signals: {
       format: "tf",

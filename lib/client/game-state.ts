@@ -100,6 +100,10 @@ export function startGame(state: GameState): GameState {
 
 /**
  * Check if an answer is correct for a given question
+ * 
+ * All choice-based formats (tf, ab, mc4, mc6) use answerIndex for evaluation.
+ * This ensures consistent behavior across all formats since the frontend
+ * always submits selectedIndex when a choice button is clicked.
  */
 export function isAnswerCorrect(
   question: Question,
@@ -113,11 +117,10 @@ export function isAnswerCorrect(
 
   switch (format) {
     case "tf":
-      return question.answerValue === answer.selectedValue
-
     case "ab":
     case "mc4":
     case "mc6":
+      // All choice-based formats use answerIndex
       return question.answerIndex === answer.selectedIndex
 
     case "rank4":

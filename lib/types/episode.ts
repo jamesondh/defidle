@@ -66,11 +66,21 @@ export interface Question {
   prompt: string
   /** Optional clues for fingerprint-style questions */
   clues?: string[]
-  /** Answer choices (for MC and AB formats) */
+  /** 
+   * Answer choices for all choice-based formats (tf, ab, mc4, mc6).
+   * For TF format, this is always ["True", "False"].
+   */
   choices?: string[]
-  /** Index of correct answer in choices array (for MC and AB) */
+  /** 
+   * Index of correct answer in choices array.
+   * Used for answer evaluation in all choice-based formats (tf, ab, mc4, mc6).
+   * For TF format: 0 = True, 1 = False.
+   */
   answerIndex?: number
-  /** Correct answer value (for TF format) */
+  /** 
+   * Boolean value of correct answer (for TF format only).
+   * This is informational/for reference - answerIndex is used for evaluation.
+   */
   answerValue?: boolean
   /** Correct ranking order (for rank format) */
   answerOrder?: string[]

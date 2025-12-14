@@ -23,5 +23,30 @@
     "text": "JustCryptos has experienced an increase in its total value locked (TVL) by 1% over the past 7 days, bringing its current TVL to $3.1B.",
     "model": "gpt-4o-mini",
     "generatedAt": "2025-12-14T16:28:52.372Z"
+  },
+  "2025-12-13|chain|Stellar|A|C1_FINGERPRINT|explanation|53f130c70c1dd8c8": {
+    "text": "Stellar is a DeFi platform ranked 30th in total value locked (TVL), with an estimated TVL between $100M and $500M. It utilizes the XLM token and supports 24 different protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-14T17:59:57.760Z"
+  },
+  "2025-12-13|chain|Stellar|B|C2_CHAIN_COMPARISON|explanation|df099f375f9f3786": {
+    "text": "Stellar has a total value locked (TVL) of $173M, which is 3% higher than Rootstock's TVL of $168M, making Stellar the leading chain in this comparison.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-14T17:59:59.584Z"
+  },
+  "2025-12-13|chain|Stellar|C|FALLBACK|explanation|d7b16924545d1743": {
+    "text": "Stellar is a blockchain network categorized as a \"chain\" and is classified under slot \"C.\" It is designed to facilitate fast and low-cost cross-border transactions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-14T18:00:01.635Z"
+  },
+  "2025-12-13|chain|Stellar|D|C4_GROWTH_RANKING|explanation|9caef1e3e07c162c": {
+    "text": "Celo leads in growth ranking among chains with a remarkable increase of 48.8%. This indicates strong adoption and activity within the Celo ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-14T18:00:03.490Z"
+  },
+  "2025-12-13|chain|Stellar|E|FALLBACK|explanation|f96072b547b30368": {
+    "text": "Stellar is a blockchain network categorized as a chain and is designated as slot E. It focuses on facilitating cross-border transactions and financial inclusivity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-14T18:00:05.231Z"
   }
 }
