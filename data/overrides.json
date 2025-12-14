@@ -1,0 +1,10 @@
+{
+  "protocols": {
+    "blocklist": [],
+    "forceInclude": []
+  },
+  "chains": {
+    "blocklist": [],
+    "forceInclude": []
+  }
+}

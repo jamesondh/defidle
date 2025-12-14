@@ -22,7 +22,7 @@ The implementation is divided into **5 phases**, ordered by dependency and risk.
 
 ### 1.1 Project Structure Setup
 
-- [ ] Create directory structure:
+- [x] Create directory structure:
   ```
   /data/
     pools/
@@ -41,12 +41,12 @@ The implementation is divided into **5 phases**, ordered by dependency and risk.
   /public/
     episodes/
   ```
-- [ ] Configure TypeScript for scripts (separate tsconfig for Node.js execution)
-- [ ] Add required dependencies: `openai`, date utilities, crypto for hashing
+- [x] Configure TypeScript for scripts (separate tsconfig for Node.js execution)
+- [x] Add required dependencies: `openai`, date utilities, crypto for hashing
 
 ### 1.2 DefiLlama API Client
 
-- [ ] Implement `lib/api/defillama.ts` with typed clients for:
+- [x] Implement `lib/api/defillama.ts` with typed clients for:
   - `GET /api/protocols` — protocol list with TVL, category, chains
   - `GET /api/protocol/{slug}` — protocol detail with TVL history
   - `GET /api/v2/chains` — chain list with TVL
@@ -54,26 +54,26 @@ The implementation is divided into **5 phases**, ordered by dependency and risk.
   - `GET /api/overview/fees/{chain}` — fees leaderboard
   - `GET /api/summary/fees/{protocol}` — protocol fees/revenue
   - `GET /api/overview/dexs/{chain}` — DEX volume leaderboard
-- [ ] Add error handling, timeouts, and retry logic
-- [ ] Create TypeScript types for all API responses
+- [x] Add error handling, timeouts, and retry logic
+- [x] Create TypeScript types for all API responses
 - [ ] Write integration tests against live API (can be skipped in CI)
 
 ### 1.3 Topic Pool System
 
-- [ ] Define pool entry schemas (`ProtocolPoolEntry`, `ChainPoolEntry`)
-- [ ] Implement `scripts/refresh-pools.ts`:
+- [x] Define pool entry schemas (`ProtocolPoolEntry`, `ChainPoolEntry`)
+- [x] Implement `scripts/refresh-pools.ts`:
   - Fetch top 150 protocols, top 50 chains
   - Compute quality signals (hasFeesData, historyDays, etc.)
   - Apply quality thresholds (30+ days history, etc.)
   - Apply overrides (blocklist, forceInclude)
   - Rank and trim to top 100 protocols, top 30 chains
   - Write to `/data/pools/*.json`
-- [ ] Create initial `overrides.json` with empty blocklists
-- [ ] Run pool refresh manually, validate output
+- [x] Create initial `overrides.json` with empty blocklists
+- [x] Run pool refresh manually, validate output
 
 ### 1.4 Deterministic RNG Utilities
 
-- [ ] Implement `lib/generation/rng.ts`:
+- [x] Implement `lib/generation/rng.ts`:
   - `seedFromParts(...parts: string[]): number` — stable hash
   - `createRng(seed: number): () => number` — deterministic PRNG
   - `deterministicShuffle<T>(items: T[], ...seedParts: string[]): T[]`
@@ -81,7 +81,7 @@ The implementation is divided into **5 phases**, ordered by dependency and risk.
 
 ### 1.5 Topic Selection Algorithm
 
-- [ ] Implement `lib/generation/topic-selection.ts`:
+- [x] Implement `lib/generation/topic-selection.ts`:
   - `selectTopic(date: string, type: "protocol" | "chain"): Topic`
   - Weight calculation: TVL rank (40%), data quality (30%), diversity bonus (30%)
   - Cooldown penalty system (14 days protocols, 10 days chains)
