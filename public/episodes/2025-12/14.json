@@ -1,0 +1,228 @@
+{
+  "episodeId": "2025-12-14:protocol:justcryptos",
+  "dateUtc": "2025-12-14",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "justcryptos",
+    "name": "JustCryptos",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: single-chain",
+        "TVL: $1B-$5B",
+        "7d change: roughly flat"
+      ],
+      "choices": [
+        "JustCryptos",
+        "Ion Protocol",
+        "SwanSwap",
+        "Windfall",
+        "MortgageFi",
+        "NovaSwap V1"
+      ],
+      "answerIndex": 0,
+      "explanation": "JustCryptos is a bridge in the DeFi space that operates on the Tron blockchain, with a total value locked (TVL) ranging between $1B and $5B. It facilitates the transfer of assets across different platforms.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.1902274211267956
+      },
+      "difficultyScore": 0.35853411316901934
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P3_CONCENTRATION",
+      "format": "tf",
+      "prompt": "More than 75% of JustCryptos's TVL is on Tron.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "JustCryptos operates entirely on the Tron blockchain, holding a total TVL of $3.1B, which represents 100% of its assets concentrated on this chain.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.1902274211267956
+      },
+      "difficultyScore": 0.197700779835686
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc4",
+      "prompt": "In what month did JustCryptos reach its all-time high TVL?",
+      "choices": [
+        "Mar 2024",
+        "Feb 2024",
+        "Jun 2024",
+        "Dec 2023"
+      ],
+      "answerIndex": 0,
+      "explanation": "JustCryptos reached an all-time high (ATH) market capitalization of $8.3B in March 2024.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.15,
+        "volatility": 0.1902274211267956
+      },
+      "difficultyScore": 0.3860341131690193
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "FALLBACK",
+      "format": "tf",
+      "prompt": "Is JustCryptos a DeFi protocol?",
+      "answerValue": true,
+      "explanation": "JustCryptos is a protocol categorized under slot D, indicating its specific functionality and classification within the DeFi ecosystem.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0
+      },
+      "difficultyScore": 0.1275
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "JustCryptos's TVL has increased over the past 7 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "JustCryptos has experienced an increase in its total value locked (TVL) by 1% over the past 7 days, bringing its current TVL to $3.1B.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.005868485926016239,
+        "volatility": 0.1902274211267956
+      },
+      "difficultyScore": 0.40114370823067247
+    }
+  ],
+  "generatedAt": "2025-12-14T16:28:52.373Z",
+  "buildLog": [
+    {
+      "slot": "A",
+      "template": "P1_FINGERPRINT",
+      "format": "mc6",
+      "decision": "selected",
+      "score": 0.35853411316901934,
+      "target": "medium"
+    },
+    {
+      "slot": "B",
+      "template": "P2_CROSSCHAIN",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "B",
+      "template": "P3_CONCENTRATION",
+      "format": "tf",
+      "decision": "selected",
+      "score": 0.197700779835686,
+      "target": "easy"
+    },
+    {
+      "slot": "C",
+      "template": "P5_FEES_REVENUE",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "P4_ATH_TIMING",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.3860341131690193,
+      "target": "medium"
+    },
+    {
+      "slot": "D",
+      "template": "P4_ATH_TIMING",
+      "decision": "skip",
+      "reason": "already_used"
+    },
+    {
+      "slot": "D",
+      "template": "P5_FEES_REVENUE",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P2_CROSSCHAIN",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "decision": "fallback",
+      "reason": "no_template_matched"
+    },
+    {
+      "slot": "E",
+      "template": "P6_TVL_TREND",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.40114370823067247,
+      "target": "easy"
+    },
+    {
+      "slot": "E",
+      "template": "P3_CONCENTRATION",
+      "decision": "skip",
+      "reason": "already_used"
+    },
+    {
+      "slot": "E",
+      "template": "P5_FEES_REVENUE",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "E",
+      "template": "P6_TVL_TREND",
+      "format": "tf",
+      "decision": "selected",
+      "reason": "close_enough",
+      "score": 0.40114370823067247,
+      "target": "easy"
+    },
+    {
+      "decision": "post_balance",
+      "reason": "No hard questions in episode"
+    }
+  ]
+}

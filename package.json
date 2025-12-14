@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "refresh-pools": "bun run scripts/refresh-pools.ts",
-    "test:topic-selection": "bun run scripts/test-topic-selection.ts"
+    "generate": "bun run scripts/generate-episode.ts",
+    "test:topic-selection": "bun run scripts/test-topic-selection.ts",
+    "test:episode": "bun run scripts/test-episode-generation.ts"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

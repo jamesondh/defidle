@@ -2,13 +2,11 @@
  * Episode Generation Engine
  *
  * Main entry point for generating complete episodes.
- * Handles data fetching, question selection, and episode assembly.
+ * Handles data fetching, question selection, episode assembly, and LLM text generation.
  */
 
 import type {
   Episode,
-  Question,
-  QuestionDraft,
   FetchedData,
   DerivedMetrics,
   TemplateContext,
@@ -33,7 +31,7 @@ import {
 
 import { getTemplateMatrix } from "./templates"
 import { seedFromParts } from "./rng"
-import { getSlots, getSlotDifficultyTarget } from "./schedule"
+import { getSlots } from "./schedule"
 import { selectAllQuestions } from "./slot-selection"
 import { postBalancePass } from "./post-balance"
 import {
@@ -45,6 +43,11 @@ import {
   formatMonth,
 } from "./metrics"
 import { getRankBucket, computeDifficulty } from "./difficulty"
+import {
+  generateAllQuestionText,
+  checkLLMReady,
+  type TextGenerationOptions,
+} from "@/lib/llm/text"
 
 // =============================================================================
 // Data Fetching
@@ -274,73 +277,19 @@ function computeChainMetrics(
 }
 
 // =============================================================================
-// Question Finalization
+// Episode Generation Options
 // =============================================================================
 
-/**
- * Convert a draft question to a final question
- */
-function finalizeQuestion(
-  draft: QuestionDraft,
-  slot: string,
-  index: number
-): Question {
-  const target = getSlotDifficultyTarget(slot)
-  const score = computeDifficulty(draft.signals)
-
-  return {
-    qid: `q${index + 1}`,
-    slot,
-    templateId: draft.templateId,
-    format: draft.format,
-    prompt: draft.prompt,
-    clues: draft.clues,
-    choices: draft.choices,
-    answerIndex: draft.answerIndex,
-    answerValue: draft.answerValue,
-    answerOrder: draft.answerOrder,
-    // Placeholder explanation - will be filled by LLM in Phase 4
-    explanation: generatePlaceholderExplanation(draft),
-    difficulty: target,
-    difficultyScore: score,
-    llmFallback: true, // Will be set to false when LLM is integrated
-    signals: draft.signals,
-  }
+export interface EpisodeGenerationOptions {
+  /** Skip LLM calls entirely (for testing) */
+  skipLLM?: boolean
+  /** Skip LLM cache lookup (force regeneration) */
+  skipCache?: boolean
+  /** Enable verbose logging */
+  verbose?: boolean
 }
 
-/**
- * Generate a placeholder explanation from explainData
- * This will be replaced by LLM-generated text in Phase 4
- */
-function generatePlaceholderExplanation(draft: QuestionDraft): string {
-  const data = draft.explainData
-  
-  // Template-based fallback explanations
-  const templates: Record<string, string> = {
-    P1_FINGERPRINT: `${data.name} is a ${data.category} protocol deployed on ${data.chainCount} chains with ${data.tvlFormatted} TVL.`,
-    P2_CROSSCHAIN: `${data.name} has ${data.marginPercent}% more TVL on ${data.winnerChain} (${data.winnerTvl}) compared to ${data.loserChain} (${data.loserTvl}).`,
-    P3_CONCENTRATION: `${data.topChain} holds ${data.sharePercent}% of ${data.name}'s total TVL.`,
-    P4_ATH_TIMING: `${data.name} reached its all-time high TVL of ${data.athValue} in ${data.athMonth}.`,
-    P5_FEES_REVENUE: `${data.name} generated ${data.fees7d} in fees over the past 7 days.`,
-    P6_TVL_TREND: `${data.name}'s TVL ${data.trendDirection} over the past ${data.period}.`,
-    C1_FINGERPRINT: `${data.name} is ranked #${data.tvlRank} by TVL with ${data.tvlFormatted} locked.`,
-    C2_CHAIN_COMPARISON: `${data.winnerChain} has higher TVL than ${data.loserChain}.`,
-    C3_ATH_TIMING: `${data.name} reached its all-time high TVL in ${data.athMonth}.`,
-    C4_GROWTH_RANKING: `${data.topChain} had the highest growth among the compared chains.`,
-    C5_TOP_BY_FEES: `${data.topProtocol} leads ${data.chain} in 24h fees.`,
-    C6_TOP_DEX: `${data.topDex} is the top DEX on ${data.chain} by 24h volume.`,
-    FALLBACK: `The correct answer is based on data from DefiLlama.`,
-  }
 
-  const template = templates[draft.templateId] ?? templates.FALLBACK
-  
-  // Replace placeholders with actual values
-  return template.replace(/{(\w+)}/g, (_, key) => {
-    const value = data[key]
-    if (value === undefined || value === null) return `[${key}]`
-    return String(value)
-  })
-}
 
 // =============================================================================
 // Main Episode Generator
@@ -356,13 +305,26 @@ function generatePlaceholderExplanation(draft: QuestionDraft): string {
  * 4. Computes derived metrics
  * 5. Selects questions for each slot
  * 6. Runs post-balance pass
- * 7. Returns assembled episode (without LLM text)
+ * 7. Generates LLM explanations (or uses fallbacks)
+ * 8. Returns assembled episode
  *
  * @param date - Date in YYYY-MM-DD format
+ * @param options - Generation options (skipLLM, skipCache, verbose)
  * @returns Generated episode or null if generation failed
  */
-export async function generateEpisode(date: string): Promise<Episode | null> {
+export async function generateEpisode(
+  date: string,
+  options: EpisodeGenerationOptions = {}
+): Promise<Episode | null> {
+  const { verbose = false } = options
+
   console.log(`\n=== Generating episode for ${date} ===\n`)
+
+  // Check LLM readiness
+  const llmStatus = checkLLMReady()
+  if (verbose) {
+    console.log(`LLM Status: ${llmStatus.ready ? "Ready" : `Not ready (${llmStatus.reason})`}`)
+  }
 
   // 1. Determine episode type
   const episodeType = getEpisodeType(date)
@@ -401,7 +363,9 @@ export async function generateEpisode(date: string): Promise<Episode | null> {
   } else {
     derived = computeChainMetrics(topic, data)
   }
-  console.log("Metrics computed:", Object.keys(derived).length, "values")
+  if (verbose) {
+    console.log("Metrics computed:", Object.keys(derived).length, "values")
+  }
 
   // 5. Build template context
   const ctx: TemplateContext = {
@@ -423,13 +387,29 @@ export async function generateEpisode(date: string): Promise<Episode | null> {
   console.log(`Selected ${drafts.length} questions`)
 
   // 8. Run post-balance pass
-  console.log("Running post-balance pass...")
+  if (verbose) {
+    console.log("Running post-balance pass...")
+  }
   const balancedDrafts = postBalancePass(drafts, ctx, buildLog)
 
-  // 9. Finalize questions
-  const questions: Question[] = balancedDrafts.map((draft, i) =>
-    finalizeQuestion(draft, slots[i], i)
+  // 9. Generate LLM text for questions
+  console.log("Generating explanations...")
+  const textOptions: TextGenerationOptions = {
+    skipLLM: options.skipLLM,
+    skipCache: options.skipCache,
+    verbose: options.verbose,
+  }
+  const questions = await generateAllQuestionText(
+    balancedDrafts,
+    slots,
+    ctx,
+    textOptions
   )
+
+  // Add difficulty scores to questions
+  for (let i = 0; i < questions.length; i++) {
+    questions[i].difficultyScore = computeDifficulty(balancedDrafts[i].signals)
+  }
 
   // 10. Assemble episode
   const episode: Episode = {
@@ -451,11 +431,16 @@ export async function generateEpisode(date: string): Promise<Episode | null> {
   console.log(`Episode ID: ${episode.episodeId}`)
   console.log(`Questions: ${questions.length}`)
   for (const q of questions) {
+    const llmIndicator = q.llmFallback ? " [fallback]" : " [LLM]"
     console.log(
-      `  ${q.slot}: ${q.templateId} (${q.format}) - ${q.difficulty} (score: ${q.difficultyScore?.toFixed(2)})`
+      `  ${q.slot}: ${q.templateId} (${q.format}) - ${q.difficulty} (score: ${q.difficultyScore?.toFixed(2)})${llmIndicator}`
     )
   }
-  console.log(`Build log entries: ${buildLog.length}`)
+  if (verbose) {
+    console.log(`Build log entries: ${buildLog.length}`)
+    const llmCount = questions.filter((q) => !q.llmFallback).length
+    console.log(`LLM generated: ${llmCount}/${questions.length}`)
+  }
 
   return episode
 }
@@ -463,12 +448,14 @@ export async function generateEpisode(date: string): Promise<Episode | null> {
 /**
  * Generate an episode for today's date
  */
-export async function generateTodayEpisode(): Promise<Episode | null> {
+export async function generateTodayEpisode(
+  options: EpisodeGenerationOptions = {}
+): Promise<Episode | null> {
   const today = new Date()
   const year = today.getUTCFullYear()
   const month = String(today.getUTCMonth() + 1).padStart(2, "0")
   const day = String(today.getUTCDate()).padStart(2, "0")
   const dateStr = `${year}-${month}-${day}`
 
-  return generateEpisode(dateStr)
+  return generateEpisode(dateStr, options)
 }

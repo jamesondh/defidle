@@ -285,7 +285,7 @@ Implement each template as a class implementing `Template` interface:
 
 ### 4.1 LLM Client
 
-- [ ] Implement `lib/llm/client.ts`:
+- [x] Implement `lib/llm/client.ts`:
   - OpenAI client configuration (gpt-4o-mini)
   - Explanation generation with temperature=0.3, max_tokens=150
   - Optional prompt rephrasing with temperature=0.5
@@ -294,7 +294,7 @@ Implement each template as a class implementing `Template` interface:
 
 ### 4.2 LLM Caching
 
-- [ ] Implement `lib/llm/cache.ts`:
+- [x] Implement `lib/llm/cache.ts`:
   - Cache key: `date|type|topic|slot|templateId|contentType|dataHash`
   - `hashData(data): string` — deterministic SHA-256 hash
   - Load/save cache from `/data/llm-cache/{YYYY-MM}.json`
@@ -303,40 +303,40 @@ Implement each template as a class implementing `Template` interface:
 
 ### 4.3 Template-Based Fallbacks
 
-- [ ] Implement `lib/llm/fallbacks.ts`:
+- [x] Implement `lib/llm/fallbacks.ts`:
   - `EXPLANATION_TEMPLATES` map with placeholders
   - `generateFallbackExplanation(templateId, data): string`
-- [ ] Trigger fallback on: API error, timeout, validation failure, SKIP_LLM=true
+- [x] Trigger fallback on: API error, timeout, validation failure, SKIP_LLM=true
 
 ### 4.4 Text Generation Integration
 
-- [ ] Implement `lib/generation/text.ts`:
+- [x] Implement `lib/llm/text.ts`:
   - `generateQuestionText(questions, ctx): Promise<Question[]>`
   - For each question: generate explanation (LLM or fallback)
   - Mark `llmFallback: true` if fallback used
 
 ### 4.5 Episode Storage
 
-- [ ] Implement `lib/storage/episodes.ts`:
+- [x] Implement `lib/storage/episodes.ts`:
   - `saveEpisode(episode): void` — write to `/public/episodes/{YYYY-MM}/{DD}.json`
   - `loadEpisode(date): Episode | null` — read episode for date
   - Create directories as needed
 
 ### 4.6 Generation Script
 
-- [ ] Complete `scripts/generate-episode.ts`:
+- [x] Complete `scripts/generate-episode.ts`:
   - Accept date argument (default: today)
   - Run full generation pipeline
   - Save episode JSON
   - Update LLM cache
   - Exit with appropriate code on failure
-- [ ] Add `npm run generate` script
+- [x] Add `bun run generate` script
 
 **Phase 4 Deliverables**:
-- Complete episode generation with LLM explanations
-- Deterministic caching for reproducibility
-- Graceful fallbacks when LLM fails
-- Episodes saved as static JSON files
+- [x] Complete episode generation with LLM explanations
+- [x] Deterministic caching for reproducibility
+- [x] Graceful fallbacks when LLM fails
+- [x] Episodes saved as static JSON files
 
 ---
 
