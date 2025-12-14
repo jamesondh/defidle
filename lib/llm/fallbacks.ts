@@ -30,6 +30,18 @@ export const EXPLANATION_TEMPLATES: Record<string, string> = {
     "{name} generated {fees7d} in fees over the past 7 days, with {revPercent}% going to protocol revenue.",
   P6_TVL_TREND:
     "{name}'s TVL {trendDirection} by {changePercent}% over the past {period}, from {startTvl} to {endTvl}.",
+  P7_CATEGORY:
+    "{name} is a {category} protocol, ranked #{tvlRank} by TVL.",
+  P8_CHAIN_MEMBERSHIP:
+    "{name} is deployed on {chainCount} chains including {chains}.",
+  P9_TOP_CHAIN:
+    "{topChain} holds the most TVL for {name} with {topChainTvl} ({sharePercent}% of total).",
+  P10_TVL_BAND:
+    "{name} has {tvl} in TVL, placing it in the {tvlBand} range.",
+  P11_FEES_TREND:
+    "{name}'s fees {trendDirection} by {changePercent}% over the past month, from {pastFees} to {recentFees} weekly.",
+  P12_DEX_VOLUME_TREND:
+    "{name}'s trading volume {trendDirection} by {changePercent}% over the past 7 days, from {pastVolume} to {recentVolume}.",
 
   // Chain templates
   C1_FINGERPRINT:
@@ -44,6 +56,12 @@ export const EXPLANATION_TEMPLATES: Record<string, string> = {
     "{topProtocol} leads {chain} in 24h fees with {feesAmount}, ahead of {comparison}.",
   C6_TOP_DEX:
     "{topDex} is the top DEX on {chain} with {volumeAmount} in 24h volume, ahead of {comparison}.",
+  C7_CHAIN_TVL_BAND:
+    "{name} has {tvl} in TVL, placing it in the {tvlBand} range among chains.",
+  C8_30D_DIRECTION:
+    "{name}'s TVL {direction} by {changePercent}% over the past 30 days, from {pastTvl} to {currentTvl}.",
+  C9_DISTANCE_FROM_ATH:
+    "{name} is currently {distancePercent}% below its all-time high TVL of {athValue} reached in {athMonth}.",
 
   // Generic fallback - now more specific based on available data
   FALLBACK:
@@ -141,12 +159,21 @@ export function generateSimpleFallback(
     P4_ATH_TIMING: "historical TVL peak",
     P5_FEES_REVENUE: "fee and revenue data",
     P6_TVL_TREND: "TVL trend",
+    P7_CATEGORY: "protocol category",
+    P8_CHAIN_MEMBERSHIP: "chain deployment",
+    P9_TOP_CHAIN: "top chain by TVL",
+    P10_TVL_BAND: "TVL size category",
+    P11_FEES_TREND: "fees trend",
+    P12_DEX_VOLUME_TREND: "trading volume trend",
     C1_FINGERPRINT: "chain characteristics",
     C2_CHAIN_COMPARISON: "chain TVL comparison",
     C3_ATH_TIMING: "historical TVL peak",
     C4_GROWTH_RANKING: "chain growth ranking",
     C5_TOP_BY_FEES: "fee leaderboard",
     C6_TOP_DEX: "DEX volume leaderboard",
+    C7_CHAIN_TVL_BAND: "chain TVL size category",
+    C8_30D_DIRECTION: "30-day TVL direction",
+    C9_DISTANCE_FROM_ATH: "distance from all-time high",
   }
 
   const description = templateDescriptions[templateId] || "DeFi metrics"

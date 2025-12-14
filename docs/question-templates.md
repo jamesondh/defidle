@@ -400,6 +400,274 @@ Which DEX has the highest volume on a given chain?
 
 ---
 
+## Future Protocol Templates (P7-P11)
+
+> **Status**: Planned. Not yet implemented.
+
+### P7: Category Identification
+
+Identify a protocol's category.
+
+**Prompt**: "Which category is {protocol}?"
+
+**API data**:
+- `GET /api/protocols` → `category`
+
+**Formats**: `mc4` → `mc6`
+
+**Computed fields**:
+- `category`: protocol's category (e.g., "Dexes", "Lending", "Bridge")
+
+**Distractors**: Categories from protocols with similar TVL rank (nearby in leaderboard)
+
+**Fallbacks**:
+- If protocol category is rare/unique → use broader category groupings
+
+**Difficulty factors**:
+- Category ambiguity — some protocols span multiple categories
+- Protocol familiarity — well-known protocols easier
+
+---
+
+### P8: Chain Membership
+
+Check if a protocol is deployed on a specific chain.
+
+**Prompt variations**:
+- "Which chain is {protocol} deployed on?" (MC4)
+- "Is {protocol} deployed on {chainX}?" (TF)
+
+**API data**:
+- `GET /api/protocol/{slug}` → `chains`
+- `GET /api/protocols` → `chains`
+
+**Formats**: `mc4` → `tf`
+
+**Computed fields**:
+- `chains`: list of chains the protocol is deployed on
+- `chainCount`: number of chains
+- `isDeployedOn(chain)`: boolean check
+
+**Distractors** (for MC4): Mix of chains the protocol IS on and popular chains it's NOT on
+
+**Fallbacks**:
+- For TF version: intentionally pick present/absent chains for balanced True/False distribution
+
+**Difficulty factors**:
+- Protocol familiarity — flagship chains easier to recall
+- Chain count — protocols on many chains have more possible "yes" answers
+
+---
+
+### P9: Top Chain Name
+
+Which chain has the most TVL for a multi-chain protocol?
+
+**Prompt**: "On which chain does {protocol} have the most TVL?"
+
+**API data**:
+- `GET /api/protocol/{slug}` → `currentChainTvls`
+
+**Formats**: `mc4`
+
+**Computed fields**:
+- `topChain`: chain with highest TVL
+- `chainTvls`: sorted list of chain → TVL pairs
+- `top2Margin`: margin between #1 and #2
+
+**Distractors**: Other chains the protocol is deployed on (or common L1/L2s if sparse)
+
+**Fallbacks**:
+- If only 1-2 chains → use TF: "Does {protocol} have more TVL on {chainA} than {chainB}?"
+- If top2 margin < 15% → add margin note in explanation
+
+**Difficulty factors**:
+- Top-2 margin — larger = easier
+- Chain familiarity — Ethereum vs L2s often predictable
+
+---
+
+### P10: TVL Band
+
+Which TVL range fits a protocol?
+
+**Prompt**: "Which TVL range fits {protocol}?"
+
+**Choices**: `<$50M`, `$50M-$250M`, `$250M-$1B`, `$1B-$5B`, `>$5B`
+
+**API data**:
+- `GET /api/protocols` → `tvl`
+
+**Formats**: `mc4`
+
+**Computed fields**:
+- `tvl`: current total TVL
+- `tvlBand`: bucket the TVL falls into
+
+**Distractors**: Adjacent TVL bands
+
+**Fallbacks**:
+- If TVL near bucket boundary (within 5%) → widen buckets or add margin note
+
+**Difficulty factors**:
+- Proximity to bucket boundary
+- Protocol familiarity — easier if player knows rough size
+
+---
+
+### P11: Fees Trend
+
+Did a protocol's fees increase or decrease over a period?
+
+**Prompt variations**:
+- TF: "Did {protocol} fees rise over the last month?"
+- MC4 (buckets): "How did {protocol}'s fees change over the past 30 days?"
+
+**Buckets**: `Down >20%`, `Down 5-20%`, `Roughly flat`, `Up 5-20%`, `Up >20%`
+
+**API data**:
+- `GET /api/summary/fees/{slug}?dataType=dailyFees`
+
+**Formats**: `tf` → `mc4` (buckets)
+
+**Computed fields**:
+- `fees30dAgo`: fees from 30 days ago
+- `feesNow`: recent fees (7d average)
+- `feesTrend`: percentage change
+- `trendDirection`: "increased" | "decreased" | "flat"
+
+**Fallbacks**:
+- If fees data sparse (< 30 days) → use 7d trend or skip template
+- If change near bucket boundary → use TF format
+
+**Difficulty factors**:
+- Volatility — protocols with erratic fees harder
+- Market conditions — trending markets make direction clearer
+
+---
+
+### P12: DEX Volume Trend
+
+Did a DEX's volume increase or decrease? (Only for DEX protocols)
+
+**Prompt**: "Did {protocol}'s trading volume increase over the past 7 days?"
+
+**API data**:
+- `GET /api/summary/dexs/{slug}`
+
+**Formats**: `tf` → `mc4` (buckets)
+
+**Computed fields**:
+- `volume7dAgo`: volume from 7 days ago
+- `volumeNow`: recent volume
+- `volumeTrend`: percentage change
+- `trendDirection`: "increased" | "decreased" | "flat"
+
+**Prerequisites**:
+- Protocol must be a DEX (category = "Dexes")
+- Protocol must have volume data available
+
+**Fallbacks**:
+- If no volume data → skip template entirely
+
+**Difficulty factors**:
+- Volume volatility — DEX volumes can swing wildly
+- Market conditions — clear bull/bear trends make direction predictable
+
+---
+
+## Future Chain Templates (C7-C9)
+
+> **Status**: Planned. Not yet implemented.
+
+### C7: Chain TVL Band
+
+Which TVL range fits a chain?
+
+**Prompt**: "Which TVL range fits {chain}?"
+
+**Choices**: `<$100M`, `$100M-$500M`, `$500M-$2B`, `$2B-$10B`, `>$10B`
+
+**API data**:
+- `GET /api/v2/chains` → `tvl`
+
+**Formats**: `mc4`
+
+**Computed fields**:
+- `tvl`: chain's total TVL
+- `tvlBand`: bucket the TVL falls into
+
+**Distractors**: Adjacent TVL bands
+
+**Fallbacks**:
+- If TVL near bucket boundary → widen buckets or add margin note
+
+**Difficulty factors**:
+- Proximity to bucket boundary
+- Chain familiarity
+
+---
+
+### C8: 30-Day Direction
+
+Did a chain's TVL increase or decrease over the last 30 days?
+
+**Prompt variations**:
+- TF: "Did {chain} TVL increase over the last 30 days?"
+- AB: "Over the last 30d, did {chain} TVL increase or decrease?"
+
+**API data**:
+- `GET /api/v2/historicalChainTvl/{chain}`
+
+**Formats**: `ab` → `tf`
+
+**Computed fields**:
+- `tvl30dAgo`: TVL from 30 days ago
+- `tvlNow`: current TVL
+- `change30d`: percentage change
+- `direction`: "increased" | "decreased"
+
+**Fallbacks**:
+- If change < 2% → use "roughly flat" option or skip
+
+**Difficulty factors**:
+- Magnitude of change — larger swings easier to track
+- Chain activity/news — memorable events make direction clearer
+
+---
+
+### C9: Distance from ATH
+
+How close is a chain to its all-time high TVL?
+
+**Prompt variations**:
+- TF: "Is {chain} within 10% of its ATH TVL?"
+- MC4 (buckets): "How far is {chain} from its ATH TVL?"
+
+**Buckets**: `At ATH`, `Within 10%`, `10-30% below`, `30-60% below`, `>60% below`
+
+**API data**:
+- `GET /api/v2/historicalChainTvl/{chain}`
+
+**Formats**: `tf` → `mc4` (buckets)
+
+**Computed fields**:
+- `athValue`: maximum TVL in history
+- `athDate`: when ATH occurred
+- `currentTvl`: current TVL
+- `athDistance`: `(athValue - currentTvl) / athValue` as percentage
+- `isWithin10Pct`: boolean
+
+**Fallbacks**:
+- If history < 90 days → skip template
+- If at or very near ATH → use TF format
+
+**Difficulty factors**:
+- Market cycle awareness — bear market = most chains far from ATH
+- Proximity to bucket boundary
+
+---
+
 ## Template Summary
 
 | ID | Name | Primary Format | Fallback Format | Key Metric |
@@ -410,9 +678,18 @@ Which DEX has the highest volume on a given chain?
 | P4 | ATH Timing | mc4 (months) | tf | TVL history |
 | P5 | Fees vs Revenue | ab/mc4 | tf | Fees, revenue |
 | P6 | TVL Trend | tf/mc4 | ab | TVL change over time |
+| **P7** | **Category Identification** | mc4 | mc6 | Protocol category |
+| **P8** | **Chain Membership** | mc4 | tf | Deployment chains |
+| **P9** | **Top Chain Name** | mc4 | tf | Top chain by TVL |
+| **P10** | **TVL Band** | mc4 | — | TVL bucket |
+| **P11** | **Fees Trend** | tf | mc4 | Fees change over time |
+| **P12** | **DEX Volume Trend** | tf | mc4 | Volume change (DEX only) |
 | C1 | Chain Fingerprint | mc6 | mc4 | Multiple clues |
 | C2 | Chain TVL Comparison | ab | buckets | Chain TVL |
 | C3 | Chain ATH Timing | mc4 (months) | tf | Chain TVL history |
 | C4 | Chain Growth Ranking | rank4 | mc4/ab | 30d TVL change |
 | C5 | Top Protocol by Fees | mc4 | ab | Chain fees leaderboard |
 | C6 | Top DEX by Volume | mc4 | ab | Chain DEX volume |
+| **C7** | **Chain TVL Band** | mc4 | — | Chain TVL bucket |
+| **C8** | **30-Day Direction** | ab | tf | 30d TVL direction |
+| **C9** | **Distance from ATH** | tf | mc4 | ATH proximity |

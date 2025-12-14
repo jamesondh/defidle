@@ -1,0 +1,287 @@
+{
+  "episodeId": "2025-12-12:protocol:ethena-usde",
+  "dateUtc": "2025-12-12",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "ethena-usde",
+    "name": "Ethena USDe",
+    "category": "Basis Trading"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Basis Trading",
+        "Chains: single-chain",
+        "TVL: $5B-$10B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Vovo Finance",
+        "Bryan on Base",
+        "Hamburger Finance",
+        "Ponder Finance",
+        "Seneca",
+        "Ethena USDe"
+      ],
+      "answerIndex": 5,
+      "explanation": "Ethena USDe is a basis trading protocol operating on the Ethereum blockchain, with a total value locked (TVL) estimated between $5B and $10B. It focuses on trading strategies that exploit price differences in various markets.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.03942278602825551
+      },
+      "difficultyScore": 0.3059134179042383
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P3_CONCENTRATION",
+      "format": "tf",
+      "prompt": "More than 75% of Ethena USDe's TVL is on Ethereum.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Ethena USDe operates entirely on the Ethereum blockchain, holding a total TVL of $6.5B, which represents 100% of its share in the top chain's TVL.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": 0.03942278602825551
+      },
+      "difficultyScore": 0.145080084570905
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Ethena USDe's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Ethena USDe generated $5M in fees over the past week, but its revenue was only $14K, indicating that the revenue represents 0% of the fees collected. This suggests a significant disparity between fees and actual earnings.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.38885061693333084,
+        "volatility": null
+      },
+      "difficultyScore": 0.24000000000000002
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "FALLBACK",
+      "format": "tf",
+      "prompt": "Is Ethena USDe deployed on more than one blockchain?",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Ethena USDe operates on a single blockchain and is not a multichain asset, indicating its functionality is limited to one specific network.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0
+      },
+      "difficultyScore": 0.1275
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "Ethena USDe's TVL has increased over the past 7 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "Ethena USDe's total value locked (TVL) has decreased by 2.8% over the past 7 days, bringing its current TVL to $6.5B.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.028156877841965952,
+        "volatility": 0.03942278602825551
+      },
+      "difficultyScore": 0.32994935303593337
+    }
+  ],
+  "generatedAt": "2025-12-14T23:50:12.079Z",
+  "buildLog": [
+    {
+      "slot": "A",
+      "template": "P1_FINGERPRINT",
+      "format": "mc6",
+      "decision": "selected",
+      "score": 0.3059134179042383,
+      "target": "medium"
+    },
+    {
+      "slot": "B",
+      "template": "P2_CROSSCHAIN",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "B",
+      "template": "P3_CONCENTRATION",
+      "format": "tf",
+      "decision": "selected",
+      "score": 0.145080084570905,
+      "target": "easy"
+    },
+    {
+      "slot": "C",
+      "template": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.24000000000000002,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P5_FEES_REVENUE",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.1875,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P5_FEES_REVENUE",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.135,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P4_ATH_TIMING",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.18674675123757165,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P11_FEES_TREND",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.135,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P11_FEES_TREND",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.24000000000000002,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "decision": "selected",
+      "reason": "close_enough",
+      "score": 0.24000000000000002,
+      "target": "medium"
+    },
+    {
+      "slot": "D",
+      "template": "P4_ATH_TIMING",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.18674675123757165,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P5_FEES_REVENUE",
+      "decision": "skip",
+      "reason": "already_used"
+    },
+    {
+      "slot": "D",
+      "template": "P2_CROSSCHAIN",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P11_FEES_TREND",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.135,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P11_FEES_TREND",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.24000000000000002,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P9_TOP_CHAIN",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "decision": "fallback",
+      "reason": "no_template_matched"
+    },
+    {
+      "slot": "E",
+      "template": "P6_TVL_TREND",
+      "format": "tf",
+      "decision": "selected",
+      "score": 0.32994935303593337,
+      "target": "easy"
+    },
+    {
+      "decision": "post_balance",
+      "reason": "No hard questions in episode"
+    }
+  ]
+}

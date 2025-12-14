@@ -22,23 +22,23 @@
       ],
       "choices": [
         "JustCryptos",
-        "Kyrios Finance",
-        "SPICE Protocol",
-        "1Pulse",
-        "SiloStake",
+        "Tranche Finance",
+        "Crescent Dex",
+        "zkBoost",
+        "MortgageFi",
         "Sanctuary"
       ],
       "answerIndex": 0,
-      "explanation": "JustCryptos is a bridge protocol operating on the Tron blockchain, with a total value locked (TVL) estimated between $1B and $5B. It facilitates the transfer of assets across different networks.",
+      "explanation": "JustCryptos is a bridge in the DeFi space that operates on the Tron blockchain, with a total value locked (TVL) estimated between $1B and $5B. It facilitates the transfer of assets across different platforms within its single chain environment.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc6",
         "familiarityRankBucket": "top_100",
         "margin": null,
-        "volatility": 0.19043390422324374
+        "volatility": 0.19161652790054115
       },
-      "difficultyScore": 0.35856508563348655
+      "difficultyScore": 0.3587424791850812
     },
     {
       "qid": "q2",
@@ -52,16 +52,16 @@
       ],
       "answerIndex": 0,
       "answerValue": true,
-      "explanation": "JustCryptos operates entirely on the Tron blockchain, holding a total TVL of $3.1B, which represents 100% of its assets on this chain.",
+      "explanation": "JustCryptos operates entirely on the Tron blockchain, holding a total value locked (TVL) of $3.1B, which represents 100% of its total TVL.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "tf",
         "familiarityRankBucket": "top_100",
         "margin": 0.25,
-        "volatility": 0.19043390422324374
+        "volatility": 0.19161652790054115
       },
-      "difficultyScore": 0.19773175230015322
+      "difficultyScore": 0.19790914585174782
     },
     {
       "qid": "q3",
@@ -83,9 +83,9 @@
         "format": "mc4",
         "familiarityRankBucket": "top_100",
         "margin": 0.15,
-        "volatility": 0.19043390422324374
+        "volatility": 0.19161652790054115
       },
-      "difficultyScore": 0.3860650856334865
+      "difficultyScore": 0.38624247918508114
     },
     {
       "qid": "q4",
@@ -113,35 +113,35 @@
     {
       "qid": "q5",
       "slot": "E",
-      "templateId": "P6_TVL_TREND",
-      "format": "tf",
-      "prompt": "JustCryptos's TVL has increased over the past 7 days.",
+      "templateId": "P10_TVL_BAND",
+      "format": "mc4",
+      "prompt": "Which TVL range fits JustCryptos?",
       "choices": [
-        "True",
-        "False"
+        "$250M-$1B",
+        "$1B-$5B",
+        ">$5B"
       ],
-      "answerIndex": 0,
-      "answerValue": true,
-      "explanation": "JustCryptos has seen an increase in its total value locked (TVL) by 0.5% over the past 7 days, bringing its current TVL to $3.1B.",
+      "answerIndex": 1,
+      "explanation": "JustCryptos has a total value locked (TVL) of $3.1B, placing it within the TVL band of $1B-$5B and ranking it 32nd among DeFi platforms.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
-        "format": "tf",
+        "format": "mc4",
         "familiarityRankBucket": "top_100",
-        "margin": 0.004604037613259731,
-        "volatility": 0.19043390422324374
+        "margin": 1,
+        "volatility": 0.19161652790054115
       },
-      "difficultyScore": 0.40222838762243684
+      "difficultyScore": 0.26124247918508114
     }
   ],
-  "generatedAt": "2025-12-14T21:27:34.871Z",
+  "generatedAt": "2025-12-14T23:49:50.518Z",
   "buildLog": [
     {
       "slot": "A",
       "template": "P1_FINGERPRINT",
       "format": "mc6",
       "decision": "selected",
-      "score": 0.35856508563348655,
+      "score": 0.3587424791850812,
       "target": "medium"
     },
     {
@@ -155,7 +155,7 @@
       "template": "P3_CONCENTRATION",
       "format": "tf",
       "decision": "selected",
-      "score": 0.19773175230015322,
+      "score": 0.19790914585174782,
       "target": "easy"
     },
     {
@@ -169,7 +169,7 @@
       "template": "P4_ATH_TIMING",
       "format": "mc4",
       "decision": "selected",
-      "score": 0.3860650856334865,
+      "score": 0.38624247918508114,
       "target": "medium"
     },
     {
@@ -187,6 +187,18 @@
     {
       "slot": "D",
       "template": "P2_CROSSCHAIN",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P11_FEES_TREND",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P9_TOP_CHAIN",
       "decision": "skip",
       "reason": "prereq_failed"
     },
@@ -201,7 +213,7 @@
       "format": "tf",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.40222838762243684,
+      "score": 0.4052577491143334,
       "target": "easy"
     },
     {
@@ -212,17 +224,10 @@
     },
     {
       "slot": "E",
-      "template": "P5_FEES_REVENUE",
-      "decision": "skip",
-      "reason": "prereq_failed"
-    },
-    {
-      "slot": "E",
-      "template": "P6_TVL_TREND",
-      "format": "tf",
+      "template": "P10_TVL_BAND",
+      "format": "mc4",
       "decision": "selected",
-      "reason": "close_enough",
-      "score": 0.40222838762243684,
+      "score": 0.26124247918508114,
       "target": "easy"
     },
     {

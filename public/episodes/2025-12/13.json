@@ -22,11 +22,11 @@
       "choices": [
         "Berachain",
         "Stellar",
-        "Corn",
+        "TAC",
         "Stargaze"
       ],
       "answerIndex": 1,
-      "explanation": "Stellar is a DeFi platform ranked 30th in total value locked (TVL), with a TVL ranging between $100M and $500M. It utilizes the XLM token and supports 24 different protocols.",
+      "explanation": "Stellar is ranked 30th in total value locked (TVL) with an estimated range of $100M to $500M and supports 24 different protocols. Its native token is XLM.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
@@ -40,62 +40,61 @@
     {
       "qid": "q2",
       "slot": "B",
-      "templateId": "C2_CHAIN_COMPARISON",
-      "format": "tf",
-      "prompt": "Stellar has higher TVL than Rootstock.",
+      "templateId": "C8_30D_DIRECTION",
+      "format": "ab",
+      "prompt": "Over the last 30 days, did Stellar's TVL increase or decrease?",
       "choices": [
-        "True",
-        "False"
+        "Decreased",
+        "Increased"
       ],
-      "answerIndex": 0,
-      "answerValue": true,
-      "explanation": "Stellar has a total value locked (TVL) of $173M, which is 4% higher than Rootstock's TVL of $167M, making Stellar the leading chain in this comparison.",
+      "answerIndex": 1,
+      "explanation": "Stellar's total value locked (TVL) increased by 18%, rising from $143M to $170M. This indicates growing interest and investment in the Stellar network.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
-        "format": "tf",
+        "format": "ab",
         "familiarityRankBucket": "top_100",
-        "margin": 0.03508103801222421,
+        "margin": 0.18315496056635874,
         "volatility": null
       },
-      "difficultyScore": 0.3857658016564798
+      "difficultyScore": 0.314870866194701
     },
     {
       "qid": "q3",
       "slot": "C",
-      "templateId": "FALLBACK",
+      "templateId": "C9_DISTANCE_FROM_ATH",
       "format": "tf",
-      "prompt": "Is Stellar ranked in the top 50 chains by TVL?",
+      "prompt": "Stellar is currently within 10% of its all-time high TVL.",
       "choices": [
         "True",
         "False"
       ],
       "answerIndex": 0,
       "answerValue": true,
-      "explanation": "Stellar is ranked 30th in total value locked (TVL) among DeFi projects, placing it within the top 50. This indicates its significant presence in the DeFi ecosystem.",
+      "explanation": "Stellar's current total value locked (TVL) is $170M, which is 5% below its all-time high (ATH) of $180M reached in December 2025, indicating it is within 10% of its ATH.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "tf",
         "familiarityRankBucket": "top_100",
-        "margin": 1,
-        "volatility": 0
+        "margin": 0.04769733148268672,
+        "volatility": null
       },
-      "difficultyScore": 0.1275
+      "difficultyScore": 0.3752522237644277
     },
     {
       "qid": "q4",
       "slot": "D",
       "templateId": "FALLBACK",
       "format": "tf",
-      "prompt": "Is Stellar a blockchain network?",
+      "prompt": "Does Stellar have DeFi protocols deployed on it?",
       "choices": [
         "True",
         "False"
       ],
       "answerIndex": 0,
       "answerValue": true,
-      "explanation": "Stellar is a blockchain platform designed for facilitating cross-border payments and enabling the transfer of digital assets. It aims to provide fast and low-cost transactions, making it accessible for various financial applications.",
+      "explanation": "Stellar is a blockchain platform that supports decentralized finance (DeFi) applications, enabling users to create and manage financial products and services.",
       "difficulty": "hard",
       "llmFallback": false,
       "signals": {
@@ -109,28 +108,28 @@
     {
       "qid": "q5",
       "slot": "E",
-      "templateId": "FALLBACK",
+      "templateId": "C2_CHAIN_COMPARISON",
       "format": "tf",
-      "prompt": "Does Stellar have more than $10M in total TVL?",
+      "prompt": "Stellar has higher TVL than PulseChain.",
       "choices": [
         "True",
         "False"
       ],
       "answerIndex": 0,
       "answerValue": true,
-      "explanation": "Stellar has a Total Value Locked (TVL) feature, indicating that it holds assets within its ecosystem for various financial activities. This functionality is essential for enabling liquidity and supporting decentralized finance applications.",
+      "explanation": "Stellar has a total value locked (TVL) of $173M, which is 5% higher than PulseChain's TVL of $163M, making Stellar the leading chain in this comparison.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "tf",
         "familiarityRankBucket": "top_100",
-        "margin": 1,
-        "volatility": 0
+        "margin": 0.053183791023599596,
+        "volatility": null
       },
-      "difficultyScore": 0.1275
+      "difficultyScore": 0.37068017414700033
     }
   ],
-  "generatedAt": "2025-12-14T21:27:23.985Z",
+  "generatedAt": "2025-12-14T23:50:03.408Z",
   "buildLog": [
     {
       "slot": "A",
@@ -146,16 +145,15 @@
       "format": "tf",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.3857658016564798,
+      "score": 0.38414869667062473,
       "target": "easy"
     },
     {
       "slot": "B",
-      "template": "C2_CHAIN_COMPARISON",
-      "format": "tf",
+      "template": "C8_30D_DIRECTION",
+      "format": "ab",
       "decision": "selected",
-      "reason": "close_enough",
-      "score": 0.3857658016564798,
+      "score": 0.314870866194701,
       "target": "easy"
     },
     {
@@ -184,8 +182,11 @@
     },
     {
       "slot": "C",
-      "decision": "fallback",
-      "reason": "no_template_matched"
+      "template": "C9_DISTANCE_FROM_ATH",
+      "format": "tf",
+      "decision": "selected",
+      "score": 0.3752522237644277,
+      "target": "medium"
     },
     {
       "slot": "D",
@@ -198,6 +199,12 @@
       "template": "C4_GROWTH_RANKING",
       "decision": "skip",
       "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "C9_DISTANCE_FROM_ATH",
+      "decision": "skip",
+      "reason": "already_used"
     },
     {
       "slot": "D",
@@ -225,13 +232,10 @@
     {
       "slot": "E",
       "template": "C2_CHAIN_COMPARISON",
-      "decision": "skip",
-      "reason": "already_used"
-    },
-    {
-      "slot": "E",
-      "decision": "fallback",
-      "reason": "no_template_matched"
+      "format": "tf",
+      "decision": "selected",
+      "score": 0.37068017414700033,
+      "target": "easy"
     },
     {
       "decision": "post_balance",

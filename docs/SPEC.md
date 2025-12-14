@@ -273,6 +273,12 @@ Questions are generated from a fixed set of **templates**. Each template:
 
 See `question-templates.md` for the template catalog.
 
+**Current templates:** P1-P6 (protocol) and C1-C6 (chain) — 12 templates total.
+
+**Planned templates:** P7-P12 (protocol) and C7-C9 (chain) — 9 additional templates covering:
+- Category identification, chain membership, top chain name, TVL bands, fees trends, DEX volume trends (protocols)
+- Chain TVL bands, 30d direction, distance from ATH (chains)
+
 ### 3a. LLM Configuration
 
 LLM is used **only at generation time** (GitHub Action), never at runtime. The client receives pre-generated text.
@@ -678,7 +684,7 @@ At ~2-5KB per episode, a full year is ~1-2MB. No immediate need for cleanup or e
 
 | File | Description |
 |------|-------------|
-| `question-templates.md` | Template catalog (P1-P6 for protocols, C1-C6 for chains) |
+| `question-templates.md` | Template catalog (P1-P6, C1-C6 implemented; P7-P12, C7-C9 planned) |
 | `episode-assembly.md` | Slot matrix, difficulty targeting, prerequisite checks |
 | `generation-algorithm.md` | Deterministic RNG, difficulty scoring, distractor selection |
 | `defillama-api.md` | DefiLlama API reference |
