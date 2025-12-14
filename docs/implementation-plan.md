@@ -346,24 +346,24 @@ Implement each template as a class implementing `Template` interface:
 
 ### 5.1 GitHub Actions: Pool Refresh
 
-- [ ] Create `.github/workflows/refresh-pools.yml`:
+- [x] Create `.github/workflows/refresh-pools.yml`:
   - Schedule: Sundays 00:00 UTC
-  - Run `npm run refresh-pools`
+  - Run `bun run refresh-pools`
   - Commit and push changes to main
   - Manual trigger option
 
 ### 5.2 GitHub Actions: Daily Generation
 
-- [ ] Create `.github/workflows/generate-episode.yml`:
+- [x] Create `.github/workflows/generate-episode.yml`:
   - Schedule: Daily 00:00 UTC
-  - Run `npm run generate`
+  - Run `bun run generate`
   - Commit episode JSON to main
   - Trigger Vercel deploy on commit
-- [ ] Add secrets: OPENAI_API_KEY
+- [x] Add secrets: OPENAI_API_KEY (configured via repository secrets)
 
 ### 5.3 Client: Episode Fetching
 
-- [ ] Implement `lib/client/episode.ts`:
+- [x] Implement `lib/client/episode.ts`:
   - `fetchTodayEpisode(): Promise<Episode>`
   - Construct path from current UTC date
   - Fetch from `/episodes/{YYYY-MM}/{DD}.json`
@@ -371,7 +371,7 @@ Implement each template as a class implementing `Template` interface:
 
 ### 5.4 Client: Game State
 
-- [ ] Implement `lib/client/game-state.ts`:
+- [x] Implement `lib/client/game-state.ts`:
   - Session-only state (no persistence)
   - Track current question index
   - Track answers given

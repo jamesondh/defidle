@@ -1,0 +1,43 @@
+name: Refresh Topic Pools
+
+on:
+  schedule:
+    # Run every Sunday at 00:00 UTC (before the week's episodes generate)
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+    # Allow manual trigger from GitHub Actions UI
+
+jobs:
+  refresh-pools:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Refresh topic pools
+        run: bun run refresh-pools
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet data/pools/ || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push changes
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/pools/
+          git commit -m "chore: refresh topic pools [automated]"
+          git push
