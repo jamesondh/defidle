@@ -211,14 +211,14 @@ Implement each template as a class implementing `Template` interface:
 
 ### 3.1 Episode Type Scheduling
 
-- [ ] Implement `lib/generation/schedule.ts`:
+- [x] Implement `lib/generation/schedule.ts`:
   - Map day of week to episode type
   - Sun/Mon/Wed/Fri → Protocol
   - Tue/Thu/Sat → Chain
 
 ### 3.2 Template Matrices
 
-- [ ] Define slot-to-template mappings in `lib/generation/matrices.ts`:
+- [x] Define slot-to-template mappings in `lib/generation/templates/index.ts`:
   ```typescript
   PROTOCOL_MATRIX = {
     A: [P1],
@@ -238,7 +238,7 @@ Implement each template as a class implementing `Template` interface:
 
 ### 3.3 Slot Selection Algorithm
 
-- [ ] Implement `lib/generation/slot-selection.ts`:
+- [x] Implement `lib/generation/slot-selection.ts`:
   - `selectQuestionForSlot(slot, templates, ctx, target, seed, usedTemplates, buildLog)`
   - Try templates in priority order
   - Check prerequisites
@@ -249,20 +249,20 @@ Implement each template as a class implementing `Template` interface:
 
 ### 3.4 Post-Balance Pass
 
-- [ ] Implement post-assembly validation:
+- [x] Implement `lib/generation/post-balance.ts`:
   - Max 1 high-volatility question per episode
   - Convert excess high-vol questions to bucket format
   - Ensure difficulty mix is roughly correct (1 easy, 2 medium, 1 hard, 1 easy)
 
 ### 3.5 Build Log System
 
-- [ ] Define `BuildLogEntry` schema
-- [ ] Log all decisions: selected, skip, reject, adjusted, fallback
-- [ ] Include in episode JSON for debugging (optional, can strip in prod)
+- [x] Define `BuildLogEntry` schema in `lib/types/episode.ts`
+- [x] Log all decisions: selected, skip, reject, adjusted, fallback
+- [x] Include in episode JSON for debugging (optional, can strip in prod)
 
 ### 3.6 Episode Generator Entry Point
 
-- [ ] Implement `lib/generation/generate-episode.ts`:
+- [x] Implement `lib/generation/generate-episode.ts`:
   - Determine episode type from date
   - Select topic
   - Fetch all required data
@@ -270,7 +270,7 @@ Implement each template as a class implementing `Template` interface:
   - Iterate through slots, select questions
   - Run post-balance pass
   - Return assembled episode (without LLM text yet)
-- [ ] Write integration tests generating episodes for multiple dates
+- [x] Write integration tests generating episodes for multiple dates (`scripts/test-episode-generation.ts`)
 
 **Phase 3 Deliverables**:
 - Complete episode generation (data + questions, no LLM text)
