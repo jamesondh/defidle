@@ -1,12 +1,14 @@
 "use client"
 
 import { useEffect, useState, useCallback } from "react"
-import { Progress } from "@/components/ui/progress"
-import { QuestionCard } from "@/components/game/question-card"
+import { Button } from "@/components/ui/button"
+import { GameCard } from "@/components/game/game-card"
+import { QuestionContent } from "@/components/game/question-content"
 import { ExplanationPanel } from "@/components/game/explanation-panel"
-import { ResultsSummary } from "@/components/game/results-summary"
-import { LoadingState } from "@/components/game/loading-state"
-import { ErrorState } from "@/components/game/error-state"
+import { ResultsContent } from "@/components/game/results-content"
+import { LoadingContent } from "@/components/game/loading-content"
+import { ErrorContent } from "@/components/game/error-content"
+import { ArrowRight, RefreshCw, RotateCcw } from "lucide-react"
 import {
   fetchEpisode,
   type EpisodeError,
@@ -117,23 +119,35 @@ export function GamePage({ date }: GamePageProps) {
     }
   }, [selectedIndex, appState])
 
+  // Loading state
   if (appState.status === "loading") {
     return (
       <div className="min-h-screen">
-        <main className="mx-auto max-w-lg px-4 py-8">
-          <Header />
-          <LoadingState />
+        <main className="mx-auto max-w-xl px-4 py-8">
+          <GameCard date={date}>
+            <LoadingContent />
+          </GameCard>
         </main>
       </div>
     )
   }
 
+  // Error state
   if (appState.status === "error") {
     return (
       <div className="min-h-screen">
-        <main className="mx-auto max-w-lg px-4 py-8">
-          <Header />
-          <ErrorState error={appState.error} onRetry={loadEpisode} />
+        <main className="mx-auto max-w-xl px-4 py-8">
+          <GameCard
+            date={date}
+            footer={
+              <Button variant="outline" onClick={loadEpisode} className="w-full">
+                <RefreshCw className="mr-2 size-4" />
+                Try Again
+              </Button>
+            }
+          >
+            <ErrorContent error={appState.error} />
+          </GameCard>
         </main>
       </div>
     )
@@ -145,35 +159,51 @@ export function GamePage({ date }: GamePageProps) {
   const progress = getProgress(gameState)
   const results = getResults(gameState)
 
-  // Show results if game is complete
+  // Results state
   if (isGameComplete(gameState)) {
     return (
       <div className="min-h-screen">
-        <main className="mx-auto max-w-lg px-4 py-8">
-          <Header />
-          <ResultsSummary
-            correctCount={results.correctCount}
-            totalQuestions={results.totalQuestions}
-            topic={episode.topic}
-            answers={gameState.answers}
-            questions={episode.questions}
-            onPlayAgain={handlePlayAgain}
-          />
+        <main className="mx-auto max-w-xl px-4 py-8">
+          <GameCard
+            date={date}
+            footer={
+              <Button variant="outline" onClick={handlePlayAgain} className="w-full">
+                <RotateCcw className="mr-2 size-4" />
+                Play Again
+              </Button>
+            }
+          >
+            <ResultsContent
+              correctCount={results.correctCount}
+              totalQuestions={results.totalQuestions}
+              topic={episode.topic}
+              answers={gameState.answers}
+              questions={episode.questions}
+            />
+          </GameCard>
         </main>
       </div>
     )
   }
 
-  // Show current question
+  // No question found error
   if (!currentQuestion) {
     return (
       <div className="min-h-screen">
-        <main className="mx-auto max-w-lg px-4 py-8">
-          <Header />
-          <ErrorState
-            error={{ code: "PARSE_ERROR", message: "No question found" }}
-            onRetry={loadEpisode}
-          />
+        <main className="mx-auto max-w-xl px-4 py-8">
+          <GameCard
+            date={date}
+            footer={
+              <Button variant="outline" onClick={loadEpisode} className="w-full">
+                <RefreshCw className="mr-2 size-4" />
+                Try Again
+              </Button>
+            }
+          >
+            <ErrorContent
+              error={{ code: "PARSE_ERROR", message: "No question found" }}
+            />
+          </GameCard>
         </main>
       </div>
     )
@@ -181,47 +211,43 @@ export function GamePage({ date }: GamePageProps) {
 
   const currentAnswer = getAnswer(gameState, currentQuestion.qid)
   const isCorrect = currentAnswer?.isCorrect ?? false
+  const isLastQuestion = gameState.currentQuestionIndex === episode.questions.length - 1
 
+  // Question state
   return (
     <div className="min-h-screen">
-      <main className="mx-auto max-w-lg px-4 py-8">
-        <Header />
-
-        <div className="mb-6">
-          <Progress value={progress.percentage} className="h-2" />
-        </div>
-
-        <div className="space-y-4">
-          <QuestionCard
-            question={currentQuestion}
-            questionNumber={gameState.currentQuestionIndex + 1}
-            totalQuestions={episode.questions.length}
-            selectedIndex={selectedIndex}
-            hasAnswered={hasAnswered}
-            onSelectChoice={handleSelectChoice}
-          />
-
-          {hasAnswered && (
-            <ExplanationPanel
-              isCorrect={isCorrect}
-              explanation={currentQuestion.explanation}
-              isLastQuestion={
-                gameState.currentQuestionIndex === episode.questions.length - 1
-              }
-              onContinue={handleContinue}
+      <main className="mx-auto max-w-xl px-4 py-8">
+        <GameCard
+          date={date}
+          currentQuestion={progress.current}
+          totalQuestions={progress.total}
+          difficulty={currentQuestion.difficulty}
+          footer={
+            hasAnswered && (
+              <Button onClick={handleContinue} className="w-full">
+                {isLastQuestion ? "See Results" : "Next Question"}
+                <ArrowRight className="ml-2 size-4" />
+              </Button>
+            )
+          }
+        >
+          <div className="space-y-4">
+            <QuestionContent
+              question={currentQuestion}
+              selectedIndex={selectedIndex}
+              hasAnswered={hasAnswered}
+              onSelectChoice={handleSelectChoice}
             />
-          )}
-        </div>
+
+            {hasAnswered && (
+              <ExplanationPanel
+                isCorrect={isCorrect}
+                explanation={currentQuestion.explanation}
+              />
+            )}
+          </div>
+        </GameCard>
       </main>
     </div>
-  )
-}
-
-function Header() {
-  return (
-    <header className="mb-8 text-center">
-      <h1 className="text-3xl font-bold tracking-tight">DeFidle</h1>
-      <p className="mt-1 text-sm text-muted-foreground">Daily DeFi Quiz</p>
-    </header>
   )
 }
