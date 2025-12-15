@@ -15,6 +15,7 @@ import type { ChainPoolEntry } from "@/lib/types/pools"
 export class C5TopProtocolByFees extends ChainTemplate {
   id = "C5_TOP_BY_FEES"
   name = "Top Protocol by Fees"
+  semanticTopics = ["fees_metrics"]
 
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isChainContext(ctx)) return false

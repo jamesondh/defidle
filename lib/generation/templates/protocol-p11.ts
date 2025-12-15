@@ -40,6 +40,7 @@ function calculateFeesTrend(
 export class P11FeesTrend extends ProtocolTemplate {
   id = "P11_FEES_TREND"
   name = "Fees Trend"
+  semanticTopics = ["fees_metrics"]
 
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isProtocolContext(ctx)) return false

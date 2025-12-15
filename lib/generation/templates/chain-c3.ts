@@ -19,6 +19,7 @@ import type { ChainPoolEntry } from "@/lib/types/pools"
 export class C3ChainATHTiming extends ChainTemplate {
   id = "C3_ATH_TIMING"
   name = "Chain ATH Timing"
+  semanticTopics = ["ath_history"]
 
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isChainContext(ctx)) return false

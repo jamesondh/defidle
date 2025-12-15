@@ -52,6 +52,7 @@ function distanceToBucketBoundary(athDistance: number): number {
 export class C9DistanceFromATH extends ChainTemplate {
   id = "C9_DISTANCE_FROM_ATH"
   name = "Distance from ATH"
+  semanticTopics = ["ath_history"]
 
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isChainContext(ctx)) return false

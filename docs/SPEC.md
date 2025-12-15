@@ -476,6 +476,9 @@ When templates fail prerequisite checks (e.g., missing fees data, insufficient c
 - A/B format fallbacks provide more engaging comparisons
 - All answers are verifiable from DefiLlama data
 
+**Hard Slot Fallback Preference:**
+For hard slots (Slot D), the system **strongly prefers A/B comparison fallbacks** over T/F threshold questions. This prevents trivially obvious questions like "Does Stellar have $5B TVL?" when Stellar has $173M - the answer is obviously "No" with ~97% margin, making it paradoxically easy. A/B comparisons are more engaging and maintain appropriate difficulty.
+
 **Deduplication:**
 - The system tracks used prompts across all questions in an episode
 - Fallback selection prioritizes unused prompts to prevent duplicates

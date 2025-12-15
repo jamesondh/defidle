@@ -29,16 +29,16 @@
         "Polygon Bridge & Staking"
       ],
       "answerIndex": 0,
-      "explanation": "JustCryptos is a bridge in the DeFi space that operates on the Tron blockchain, with a total value locked (TVL) of $3.0B, placing it within the $1B-$5B TVL band. It currently supports one blockchain.",
+      "explanation": "JustCryptos is a bridge in the DeFi space operating on the Tron blockchain, with a total value locked (TVL) of $3.0B, placing it within the $1B-$5B range for TVL. It supports one blockchain, which is Tron.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc6",
         "familiarityRankBucket": "top_100",
         "margin": null,
-        "volatility": 0.19212103492367236
+        "volatility": 0.19368136374106446
       },
-      "difficultyScore": 0.3588181552385509
+      "difficultyScore": 0.35905220456115966
     },
     {
       "qid": "q2",
@@ -53,7 +53,7 @@
         "DAO Service Provider"
       ],
       "answerIndex": 0,
-      "explanation": "JustCryptos operates in the Bridge category and holds a total value locked (TVL) rank of 32 among DeFi projects.",
+      "explanation": "JustCryptos operates in the Bridge category of DeFi and holds a total value locked (TVL) rank of 32 among DeFi projects.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
@@ -77,16 +77,16 @@
         "Dec 2023"
       ],
       "answerIndex": 0,
-      "explanation": "JustCryptos reached an all-time high (ATH) total value locked (TVL) of $8.3B in March 2024. This metric reflects the total assets staked or locked in the platform at that time.",
+      "explanation": "JustCryptos reached an all-time high (ATH) total value locked (TVL) of $8.3B in March 2024. This metric indicates the total assets staked or locked in the platform at its peak.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_100",
         "margin": 0.15,
-        "volatility": 0.19212103492367236
+        "volatility": 0.19368136374106446
       },
-      "difficultyScore": 0.38631815523855084
+      "difficultyScore": 0.38655220456115963
     },
     {
       "qid": "q4",
@@ -99,7 +99,7 @@
         "MEXC"
       ],
       "answerIndex": 1,
-      "explanation": "JustCryptos is ranked 32nd in total value locked (TVL), while MEXC holds a higher rank at 21st. This indicates that MEXC has a greater amount of assets locked in its protocol compared to JustCryptos.",
+      "explanation": "JustCryptos is ranked 32nd in total value locked (TVL), while MEXC holds a higher rank at 21st. This indicates that MEXC has a greater amount of assets locked in its platform compared to JustCryptos.",
       "difficulty": "hard",
       "llmFallback": false,
       "signals": {
@@ -113,35 +113,35 @@
     {
       "qid": "q5",
       "slot": "E",
-      "templateId": "P10_TVL_BAND",
-      "format": "mc4",
-      "prompt": "Which TVL range fits JustCryptos?",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "JustCryptos's TVL has increased over the past 7 days.",
       "choices": [
-        "$250M-$1B",
-        "$1B-$5B",
-        ">$5B"
+        "True",
+        "False"
       ],
       "answerIndex": 1,
-      "explanation": "JustCryptos has a total value locked (TVL) of $3.0B, placing it within the TVL band of $1B-$5B and ranking 32nd among DeFi platforms.",
+      "answerValue": false,
+      "explanation": "JustCryptos experienced a decrease in total value locked (TVL) by 3.4% over the past 7 days, bringing its current TVL to $3.0B.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
-        "format": "mc4",
+        "format": "tf",
         "familiarityRankBucket": "top_100",
-        "margin": 1,
-        "volatility": 0.19212103492367236
+        "margin": 0.03393648391481586,
+        "volatility": 0.19368136374106446
       },
-      "difficultyScore": 0.26131815523855084
+      "difficultyScore": 0.3782718012988131
     }
   ],
-  "generatedAt": "2025-12-15T17:14:49.752Z",
+  "generatedAt": "2025-12-15T17:51:24.273Z",
   "buildLog": [
     {
       "slot": "A",
       "template": "P1_FINGERPRINT",
       "format": "mc6",
       "decision": "selected",
-      "score": 0.3588181552385509,
+      "score": 0.35905220456115966,
       "target": "medium"
     },
     {
@@ -175,7 +175,7 @@
       "template": "P4_ATH_TIMING",
       "format": "mc4",
       "decision": "selected",
-      "score": 0.38631815523855084,
+      "score": 0.38655220456115963,
       "target": "medium"
     },
     {
@@ -266,23 +266,8 @@
       "slot": "E",
       "template": "P6_TVL_TREND",
       "format": "tf",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.3836836802254325,
-      "target": "easy"
-    },
-    {
-      "slot": "E",
-      "template": "P3_CONCENTRATION",
-      "decision": "skip",
-      "reason": "prereq_failed"
-    },
-    {
-      "slot": "E",
-      "template": "P10_TVL_BAND",
-      "format": "mc4",
       "decision": "selected",
-      "score": 0.26131815523855084,
+      "score": 0.3782718012988131,
       "target": "easy"
     },
     {

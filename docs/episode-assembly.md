@@ -26,9 +26,9 @@ Default mix for 5-question episode: **1 easy, 2 medium, 1 hard, 1 easy**
 |--------|-------------|-----------------|
 | Easy | 0.00 - 0.38 | Large margins (>25%), familiar topics, simple formats |
 | Medium | 0.30 - 0.68 | Moderate margins (10-25%), standard formats |
-| Hard | 0.60 - 1.00 | Tight margins (5-15%), precise timing, complex formats |
+| Hard | 0.45 - 1.00 | Tight margins (5-15%), precise timing, complex formats |
 
-Note: Ranges overlap intentionally to allow flexibility in slot assignment.
+Note: Ranges overlap intentionally to allow flexibility in slot assignment. The hard threshold was relaxed from 0.60 to 0.45 to reduce fallback frequency - a medium-difficulty question is better than a trivial fallback.
 
 ### Difficulty Scoring
 

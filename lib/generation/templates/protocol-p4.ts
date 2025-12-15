@@ -18,6 +18,7 @@ import { formatNumber, makeTimingDistractors } from "../distractors"
 export class P4ATHTiming extends ProtocolTemplate {
   id = "P4_ATH_TIMING"
   name = "ATH Timing"
+  semanticTopics = ["ath_history"]
 
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isProtocolContext(ctx)) return false

@@ -22,11 +22,11 @@
       "choices": [
         "Berachain",
         "Stellar",
-        "Etherlink",
+        "Monad",
         "Stargaze"
       ],
       "answerIndex": 1,
-      "explanation": "Stellar ranks 30th in total value locked (TVL) with an estimated range of $100M to $500M, and it has 24 protocols operating on its network. The native token for Stellar is XLM.",
+      "explanation": "Stellar ranks 30th in total value locked (TVL) with an estimated range of $100M to $500M and has 24 protocols operating on its network. Its native token is XLM.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
@@ -49,16 +49,16 @@
       ],
       "answerIndex": 0,
       "answerValue": true,
-      "explanation": "Stellar has a total value locked (TVL) of $173M, which is 5% higher than PulseChain's TVL of $165M. This indicates that Stellar has a greater amount of assets staked or locked in its ecosystem compared to PulseChain.",
+      "explanation": "Stellar has a total value locked (TVL) of $173M, which is 5% higher than PulseChain's TVL of $165M. This indicates that Stellar has a greater amount of assets secured in its DeFi ecosystem compared to PulseChain.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "tf",
         "familiarityRankBucket": "top_100",
-        "margin": 0.04673815393187018,
+        "margin": 0.04674439303082052,
         "volatility": null
       },
-      "difficultyScore": 0.3760515383901082
+      "difficultyScore": 0.37604633914098284
     },
     {
       "qid": "q3",
@@ -72,7 +72,7 @@
       ],
       "answerIndex": 0,
       "answerValue": true,
-      "explanation": "Stellar's current total value locked (TVL) is $167M, which is 7% below its all-time high (ATH) of $180M reached in December 2025, indicating it is within 10% of its ATH but not at that peak.",
+      "explanation": "Stellar's current total value locked (TVL) is $167M, which is 7% below its all-time high (ATH) of $180M reached in December 2025. This means Stellar is within 10% of its ATH but is not currently at that peak value.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
@@ -86,25 +86,24 @@
     {
       "qid": "q4",
       "slot": "D",
-      "templateId": "FALLBACK_CHAIN_TVL_ABOVE_5B",
-      "format": "tf",
-      "prompt": "Stellar has more than $5B in total TVL.",
+      "templateId": "FALLBACK_CHAIN_COMPARE_NEARBY",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL?",
       "choices": [
-        "True",
-        "False"
+        "Stellar",
+        "Near"
       ],
-      "answerIndex": 1,
-      "answerValue": false,
-      "explanation": "Stellar's total value locked (TVL) is $173M, which is below the $5B threshold. This indicates that Stellar's DeFi ecosystem has not reached the significant milestone of $5B in TVL.",
+      "answerIndex": 0,
+      "explanation": "Stellar has a total value locked (TVL) of $173M, which is 19% higher than Near's TVL of $140M. This indicates that Stellar has a stronger position in terms of locked assets compared to Near.",
       "difficulty": "hard",
       "llmFallback": false,
       "signals": {
-        "format": "tf",
+        "format": "ab",
         "familiarityRankBucket": "top_100",
         "margin": 0.5,
         "volatility": 0
       },
-      "difficultyScore": 0.1275
+      "difficultyScore": 0.18
     },
     {
       "qid": "q5",
@@ -119,7 +118,7 @@
         "$2B-$10B"
       ],
       "answerIndex": 1,
-      "explanation": "Stellar has a total value locked (TVL) of $173M, placing it within the TVL band of $100M-$500M and ranking it 30th among DeFi platforms.",
+      "explanation": "Stellar has a total value locked (TVL) of $173M, placing it within the TVL band of $100M-$500M and ranking it 30th among DeFi projects.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
@@ -131,7 +130,7 @@
       "difficultyScore": 0.26999999999999996
     }
   ],
-  "generatedAt": "2025-12-15T17:15:11.370Z",
+  "generatedAt": "2025-12-15T17:52:01.731Z",
   "buildLog": [
     {
       "slot": "A",
@@ -146,7 +145,7 @@
       "template": "C2_CHAIN_COMPARISON",
       "format": "tf",
       "decision": "selected",
-      "score": 0.3760515383901082,
+      "score": 0.37604633914098284,
       "target": "easy"
     },
     {
@@ -185,7 +184,7 @@
       "slot": "D",
       "template": "C3_ATH_TIMING",
       "decision": "skip",
-      "reason": "prereq_failed"
+      "reason": "semantic_topic_covered:ath_history"
     },
     {
       "slot": "D",

@@ -683,6 +683,10 @@ export function getAllFallbacks(
 
 /**
  * Select a fallback question for a slot
+ * 
+ * For hard slots, we prefer A/B comparison fallbacks over T/F threshold questions.
+ * A/B comparisons are more engaging and avoid the issue of trivially obvious
+ * threshold questions (e.g., "Does X have $5B TVL?" when X has $173M).
  */
 export function selectQuantitativeFallback(
   ctx: TemplateContext,
@@ -724,9 +728,26 @@ export function selectQuantitativeFallback(
     return null
   }
 
-  // Deterministically select based on seed
-  const index = Math.floor(rng() * available.length)
-  const selected = available[index]
+  // For hard slots, strongly prefer A/B comparison fallbacks over T/F threshold questions.
+  // A/B comparisons are more engaging and avoid trivially obvious threshold questions
+  // (e.g., asking "Does Stellar have $5B TVL?" when it has $173M).
+  let selected: QuantitativeFallback
+  if (target === "hard") {
+    const abFallbacks = available.filter((fb) => fb.format === "ab")
+    if (abFallbacks.length > 0) {
+      // Prefer A/B fallbacks for hard slots
+      const index = Math.floor(rng() * abFallbacks.length)
+      selected = abFallbacks[index]
+    } else {
+      // Fall back to any available if no A/B options
+      const index = Math.floor(rng() * available.length)
+      selected = available[index]
+    }
+  } else {
+    // For easy/medium slots, random selection is fine
+    const index = Math.floor(rng() * available.length)
+    selected = available[index]
+  }
 
   // Build the question draft
   const prompt = selected.getPrompt(ctx)

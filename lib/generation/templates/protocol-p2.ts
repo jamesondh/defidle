@@ -15,6 +15,7 @@ import { isActualChain } from "../chain-filter"
 export class P2CrossChainDominance extends ProtocolTemplate {
   id = "P2_CROSSCHAIN"
   name = "Cross-Chain Dominance"
+  semanticTopics = ["tvl_comparison"]
 
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isProtocolContext(ctx)) return false

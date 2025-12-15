@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTheme } from "next-themes";
 
 declare global {
   interface Window {
@@ -13,27 +14,19 @@ declare global {
 export function VantaBackground() {
   const vantaRef = useRef<HTMLDivElement>(null);
   const vantaEffect = useRef<{ destroy: () => void } | null>(null);
-  const [isDark, setIsDark] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
 
+  // Wait for theme to be resolved (avoids hydration mismatch)
   useEffect(() => {
-    // Check initial dark mode
-    const dark = document.documentElement.classList.contains("dark");
-    setIsDark(dark);
-
-    // Watch for dark mode changes
-    const observer = new MutationObserver(() => {
-      setIsDark(document.documentElement.classList.contains("dark"));
-    });
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-
-    return () => observer.disconnect();
+    setMounted(true);
   }, []);
 
   useEffect(() => {
-    if (!vantaRef.current) return;
+    // Don't initialize until mounted and theme is resolved
+    if (!mounted || !vantaRef.current || !resolvedTheme) return;
+
+    const isDark = resolvedTheme === "dark";
 
     // Load scripts
     const loadScript = (src: string): Promise<void> => {
@@ -89,8 +82,10 @@ export function VantaBackground() {
         vantaEffect.current = null;
       }
     };
-  }, [isDark]);
+  }, [mounted, resolvedTheme]);
 
+  // Show a solid background matching the theme while Vanta loads
+  // This prevents the flash of wrong-colored background
   return (
     <div
       ref={vantaRef}

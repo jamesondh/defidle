@@ -29,16 +29,16 @@
         "Ethena USDe"
       ],
       "answerIndex": 5,
-      "explanation": "Ethena USDe is a Basis Trading platform operating on the Ethereum blockchain, with a total value locked (TVL) of $6.5B, placing it within the TVL band of $5B-$10B. It is currently active on one blockchain.",
+      "explanation": "Ethena USDe is a Basis Trading platform operating on the Ethereum blockchain, with a total value locked (TVL) of $6.5B, which falls within the range of $5B-$10B. It is currently active on one chain.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc6",
         "familiarityRankBucket": "top_25",
         "margin": null,
-        "volatility": 0.03992557664367732
+        "volatility": 0.0397237598612394
       },
-      "difficultyScore": 0.30598883649655156
+      "difficultyScore": 0.3059585639791859
     },
     {
       "qid": "q2",
@@ -75,16 +75,16 @@
         "Decreased"
       ],
       "answerIndex": 1,
-      "explanation": "Ethena USDe has experienced a decrease in total value locked (TVL) by 3.0% over the past 7 days, bringing its current TVL to $6.5B.",
+      "explanation": "Ethena USDe's total value locked (TVL) has decreased by 3.1% over the past 7 days, bringing its current TVL to $6.5B.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "ab",
         "familiarityRankBucket": "top_25",
-        "margin": 0.029953291803442167,
-        "volatility": 0.03992557664367732
+        "margin": 0.03088625565961455,
+        "volatility": 0.0397237598612394
       },
-      "difficultyScore": 0.3810277599936831
+      "difficultyScore": 0.3802200175961738
     },
     {
       "qid": "q4",
@@ -97,7 +97,7 @@
         "WBTC"
       ],
       "answerIndex": 1,
-      "explanation": "Ethena USDe ranks 16th in total value locked (TVL), while WBTC ranks 8th, indicating that WBTC has a higher TVL compared to Ethena USDe.",
+      "explanation": "Ethena USDe is ranked 16th in total value locked (TVL), while WBTC holds the 8th position, indicating that WBTC has a higher TVL compared to Ethena USDe.",
       "difficulty": "hard",
       "llmFallback": false,
       "signals": {
@@ -127,20 +127,20 @@
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_25",
-        "margin": 0.4607053201875296,
-        "volatility": 0.03992557664367732
+        "margin": 0.4592234442894213,
+        "volatility": 0.0397237598612394
       },
-      "difficultyScore": 0.20848883649655162
+      "difficultyScore": 0.2084585639791859
     }
   ],
-  "generatedAt": "2025-12-15T17:17:02.857Z",
+  "generatedAt": "2025-12-15T17:52:15.086Z",
   "buildLog": [
     {
       "slot": "A",
       "template": "P1_FINGERPRINT",
       "format": "mc6",
       "decision": "selected",
-      "score": 0.30598883649655156,
+      "score": 0.3059585639791859,
       "target": "medium"
     },
     {
@@ -196,7 +196,7 @@
       "format": "tf",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.18682216982988492,
+      "score": 0.18679189731251922,
       "target": "medium"
     },
     {
@@ -249,7 +249,7 @@
       "template": "P15_RECENT_TVL_DIRECTION",
       "format": "ab",
       "decision": "selected",
-      "score": 0.3810277599936831,
+      "score": 0.3802200175961738,
       "target": "medium"
     },
     {
@@ -258,7 +258,7 @@
       "format": "tf",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.18682216982988492,
+      "score": 0.18679189731251922,
       "target": "hard"
     },
     {
@@ -382,14 +382,14 @@
       "slot": "E",
       "template": "P3_CONCENTRATION",
       "decision": "skip",
-      "reason": "prereq_failed"
+      "reason": "semantic_topic_covered:tvl_comparison"
     },
     {
       "slot": "E",
       "template": "P10_TVL_BAND",
       "format": "mc4",
       "decision": "selected",
-      "score": 0.20848883649655162,
+      "score": 0.2084585639791859,
       "target": "easy"
     },
     {

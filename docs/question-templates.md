@@ -867,29 +867,29 @@ What category has the most TVL on a given chain?
 | ID | Name | Primary Format | Fallback Format | Key Metric | Single-Chain Friendly | Semantic Topics |
 |----|------|----------------|-----------------|------------|----------------------|-----------------|
 | P1 | Protocol Fingerprint | mc6 | mc4 | Multiple clues | ✓ | — |
-| P2 | Cross-Chain Dominance | ab | tf | Chain TVL comparison | ✗ | — |
-| P3 | Top Chain Concentration | mc4 (buckets) | tf | TVL share | ✗ | — |
-| P4 | ATH Timing | mc4 (months) | tf | TVL history | ✓ | — |
-| P5 | Fees vs Revenue | ab/mc4 | tf | Fees, revenue | ✓ | — |
+| P2 | Cross-Chain Dominance | ab | tf | Chain TVL comparison | ✗ | `tvl_comparison` |
+| P3 | Top Chain Concentration | mc4 (buckets) | tf | TVL share | ✗ | `tvl_comparison` |
+| P4 | ATH Timing | mc4 (months) | tf | TVL history | ✓ | `ath_history` |
+| P5 | Fees vs Revenue | ab/mc4 | tf | Fees, revenue | ✓ | `fees_metrics` |
 | P6 | TVL Trend | tf/mc4 | ab | TVL change over time | ✓ | `tvl_trend_7d`, `tvl_direction` |
 | P7 | Category Identification | mc4 | mc6 | Protocol category | ✓ | `category_identification` |
 | P8 | Chain Membership | mc4 | tf | Deployment chains | ✓ | — |
 | P9 | Top Chain Name | mc4 | tf | Top chain by TVL | ✗ | — |
-| P10 | TVL Band | mc4 | — | TVL bucket | ✓ | — |
-| P11 | Fees Trend | tf | mc4 | Fees change over time | ✓ | — |
+| P10 | TVL Band | mc4 | — | TVL bucket | ✓ | `tvl_magnitude` |
+| P11 | Fees Trend | tf | mc4 | Fees change over time | ✓ | `fees_metrics` |
 | P12 | DEX Volume Trend | tf | mc4 | Volume change (DEX only) | ✓ | — |
-| P13 | TVL Rank Comparison | ab | tf | Compare to similar protocol | ✓ | — |
-| P14 | Category Leader | ab/mc4 | tf | Category context | ✓ | — |
+| P13 | TVL Rank Comparison | ab | tf | Compare to similar protocol | ✓ | `tvl_comparison` |
+| P14 | Category Leader | ab/mc4 | tf | Category context | ✓ | `tvl_comparison` |
 | P15 | Recent TVL Direction | ab | tf/mc4 | Recent trend | ✓ | `tvl_trend_7d`, `tvl_direction` |
 | C1 | Chain Fingerprint | mc6 | mc4 | Multiple clues | — | — |
 | C2 | Chain TVL Comparison | ab | buckets | Chain TVL | — | — |
-| C3 | Chain ATH Timing | mc4 (months) | tf | Chain TVL history | — | — |
+| C3 | Chain ATH Timing | mc4 (months) | tf | Chain TVL history | — | `ath_history` |
 | C4 | Chain Growth Ranking | mc4 | ab | 30d TVL change | — | — |
-| C5 | Top Protocol by Fees | mc4 | ab | Chain fees leaderboard | — | — |
+| C5 | Top Protocol by Fees | mc4 | ab | Chain fees leaderboard | — | `fees_metrics` |
 | C6 | Top DEX by Volume | mc4 | ab | Chain DEX volume | — | — |
-| C7 | Chain TVL Band | mc4 | — | Chain TVL bucket | — | — |
+| C7 | Chain TVL Band | mc4 | — | Chain TVL bucket | — | `tvl_magnitude` |
 | C8 | 30-Day Direction | ab | tf | 30d TVL direction | — | — |
-| C9 | Distance from ATH | tf | mc4 | ATH proximity | — | — |
+| C9 | Distance from ATH | tf | mc4 | ATH proximity | — | `ath_history` |
 | C10 | Protocol Count | mc4 | — | Protocol count bucket | — | — |
 | C11 | Top Protocol by TVL | mc4 | ab | Chain protocol leaderboard | — | — |
 | C12 | Category Dominance | mc4 | — | Category TVL aggregation | — | — |
@@ -898,7 +898,11 @@ What category has the most TVL on a given chain?
 
 Templates with overlapping `semanticTopics` will not both be selected in the same episode. This prevents questions that ask about the same underlying metric in different formats:
 
-- **P6 and P15** both have `tvl_trend_7d` → Only one TVL direction question per episode
+- **P6 and P15** both have `tvl_trend_7d`, `tvl_direction` → Only one TVL trend question per episode
 - **P7** has `category_identification` → Only one category question per episode
+- **P2, P3, P13, P14** share `tvl_comparison` → Only one TVL comparison question per episode
+- **P4, C3, C9** share `ath_history` → Only one ATH-related question per episode
+- **P5, P11, C5** share `fees_metrics` → Only one fees question per episode
+- **P10, C7** share `tvl_magnitude` → Only one TVL band question per episode
 
 Add semantic topics to new templates when they cover the same underlying data/metric as existing templates.

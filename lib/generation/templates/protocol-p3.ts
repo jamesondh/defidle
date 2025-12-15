@@ -14,6 +14,7 @@ import { filterToActualChains, warnIfSingleChain } from "../chain-filter"
 export class P3TopChainConcentration extends ProtocolTemplate {
   id = "P3_CONCENTRATION"
   name = "Top Chain Concentration"
+  semanticTopics = ["tvl_comparison"]
 
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isProtocolContext(ctx)) return false

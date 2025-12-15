@@ -51,6 +51,7 @@ function distanceToBoundary(tvl: number): number {
 export class P10TVLBand extends ProtocolTemplate {
   id = "P10_TVL_BAND"
   name = "TVL Band"
+  semanticTopics = ["tvl_magnitude"]
 
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isProtocolContext(ctx)) return false

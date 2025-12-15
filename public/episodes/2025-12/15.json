@@ -27,16 +27,16 @@
         "Tornado Cash"
       ],
       "answerIndex": 2,
-      "explanation": "Jupiter Lend is a lending platform operating on the Solana blockchain, with a total value locked (TVL) of $990M, placing it within the $500M-$1B range. It currently supports one blockchain.",
+      "explanation": "Jupiter Lend is a lending platform operating on the Solana blockchain, with a total value locked (TVL) of $993M, placing it in the TVL band of $500M-$1B. It currently supports one blockchain.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_100",
         "margin": null,
-        "volatility": 0.14672827828209895
+        "volatility": 0.1463584550005364
       },
-      "difficultyScore": 0.3170092417423148
+      "difficultyScore": 0.3169537682500804
     },
     {
       "qid": "q2",
@@ -49,7 +49,7 @@
         "Jupiter Lend"
       ],
       "answerIndex": 0,
-      "explanation": "Jupiter Lend ranks 78th in total value locked (TVL), while Raydium AMM ranks 60th, indicating that Raydium AMM has a higher TVL compared to Jupiter Lend.",
+      "explanation": "Jupiter Lend is ranked 78th in total value locked (TVL), while Raydium AMM holds a higher rank at 60th. This indicates that Raydium AMM has a greater amount of assets locked in its protocol compared to Jupiter Lend.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
@@ -71,40 +71,38 @@
         "Increased"
       ],
       "answerIndex": 1,
-      "explanation": "Jupiter Lend has experienced an increase in total value locked (TVL) of 3.4% over the past 7 days, bringing its current TVL to $1.0B.",
+      "explanation": "Jupiter Lend's total value locked (TVL) increased by 3.7% over the past 7 days, bringing its current TVL to $1.0B.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "ab",
         "familiarityRankBucket": "top_100",
-        "margin": 0.03422584181901773,
-        "volatility": 0.14672827828209895
+        "margin": 0.037198804339840734,
+        "volatility": 0.1463584550005364
       },
-      "difficultyScore": 0.42348770689313336
+      "difficultyScore": 0.4209547646335465
     },
     {
       "qid": "q4",
       "slot": "D",
-      "templateId": "P14_CATEGORY_LEADER",
-      "format": "mc4",
-      "prompt": "Which protocol has the most TVL in the Lending category?",
+      "templateId": "FALLBACK_PROTOCOL_COMPARE_CATEGORY",
+      "format": "ab",
+      "prompt": "Which Lending protocol has higher TVL?",
       "choices": [
-        "Aave V3",
-        "Fluid Lending",
-        "Morpho V1",
-        "Maple"
+        "Jupiter Lend",
+        "Aave V3"
       ],
-      "answerIndex": 0,
-      "explanation": "In the lending category, Aave V3 is the leader with a total value locked (TVL) of $32.5B, while Jupiter Lend ranks 11th. Other notable platforms include Fluid Lending at $1.7B, Maple at $2.8B, and Morpho V1 at $5.6B.",
+      "answerIndex": 1,
+      "explanation": "Aave V3 leads the lending category with a total value locked (TVL) of $32.5B, while Jupiter Lend has a significantly lower TVL of $993M.",
       "difficulty": "hard",
       "llmFallback": false,
       "signals": {
-        "format": "mc4",
+        "format": "ab",
         "familiarityRankBucket": "top_100",
-        "margin": 0.8279388578128787,
-        "volatility": null
+        "margin": 0.5,
+        "volatility": 0
       },
-      "difficultyScore": 0.26999999999999996
+      "difficultyScore": 0.18
     },
     {
       "qid": "q5",
@@ -118,7 +116,7 @@
       ],
       "answerIndex": 0,
       "answerValue": true,
-      "explanation": "Jupiter Lend is a DeFi platform deployed on the Solana blockchain, with a focus solely on this single chain. It is currently operational and supports activities within the Solana ecosystem.",
+      "explanation": "Jupiter Lend is a DeFi platform that is deployed on the Solana blockchain, making it a single-chain project focused solely on Solana.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
@@ -130,14 +128,14 @@
       "difficultyScore": 0.20666666666666667
     }
   ],
-  "generatedAt": "2025-12-15T17:14:38.682Z",
+  "generatedAt": "2025-12-15T17:51:45.653Z",
   "buildLog": [
     {
       "slot": "A",
       "template": "P1_FINGERPRINT",
       "format": "mc4",
       "decision": "selected",
-      "score": 0.3170092417423148,
+      "score": 0.3169537682500804,
       "target": "medium"
     },
     {
@@ -193,36 +191,15 @@
     {
       "slot": "C",
       "template": "P14_CATEGORY_LEADER",
-      "format": "ab",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.2175,
-      "target": "medium"
-    },
-    {
-      "slot": "C",
-      "template": "P14_CATEGORY_LEADER",
-      "format": "mc4",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.26999999999999996,
-      "target": "medium"
-    },
-    {
-      "slot": "C",
-      "template": "P14_CATEGORY_LEADER",
-      "format": "tf",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.165,
-      "target": "medium"
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_comparison"
     },
     {
       "slot": "C",
       "template": "P15_RECENT_TVL_DIRECTION",
       "format": "ab",
       "decision": "selected",
-      "score": 0.42348770689313336,
+      "score": 0.4209547646335465,
       "target": "medium"
     },
     {
@@ -241,7 +218,7 @@
       "slot": "D",
       "template": "P2_CROSSCHAIN",
       "decision": "skip",
-      "reason": "prereq_failed"
+      "reason": "semantic_topic_covered:tvl_comparison"
     },
     {
       "slot": "D",
@@ -264,38 +241,13 @@
     {
       "slot": "D",
       "template": "P14_CATEGORY_LEADER",
-      "format": "ab",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.2175,
-      "target": "hard"
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_comparison"
     },
     {
       "slot": "D",
-      "template": "P14_CATEGORY_LEADER",
-      "format": "mc4",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.26999999999999996,
-      "target": "hard"
-    },
-    {
-      "slot": "D",
-      "template": "P14_CATEGORY_LEADER",
-      "format": "tf",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.165,
-      "target": "hard"
-    },
-    {
-      "slot": "D",
-      "template": "P14_CATEGORY_LEADER",
-      "format": "mc4",
-      "decision": "selected",
-      "reason": "close_enough",
-      "score": 0.26999999999999996,
-      "target": "hard"
+      "decision": "fallback",
+      "reason": "no_template_matched"
     },
     {
       "slot": "E",
@@ -307,7 +259,7 @@
       "slot": "E",
       "template": "P3_CONCENTRATION",
       "decision": "skip",
-      "reason": "prereq_failed"
+      "reason": "semantic_topic_covered:tvl_comparison"
     },
     {
       "slot": "E",
@@ -315,7 +267,7 @@
       "format": "mc4",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.4882555922803839,
+      "score": 0.49302393752419826,
       "target": "easy"
     },
     {

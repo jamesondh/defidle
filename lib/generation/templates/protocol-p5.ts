@@ -30,6 +30,7 @@ function formatPercentage(ratio: number): string {
 export class P5FeesVsRevenue extends ProtocolTemplate {
   id = "P5_FEES_REVENUE"
   name = "Fees vs Revenue"
+  semanticTopics = ["fees_metrics"]
 
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isProtocolContext(ctx)) return false
