@@ -10,6 +10,7 @@ import { getRankBucket } from "../difficulty"
 import { abMargin } from "../metrics"
 import { formatNumber } from "../distractors"
 import { createRng } from "../rng"
+import { isActualChain } from "../chain-filter"
 
 export class P2CrossChainDominance extends ProtocolTemplate {
   id = "P2_CROSSCHAIN"
@@ -26,7 +27,7 @@ export class P2CrossChainDominance extends ProtocolTemplate {
     if (!chainTvls) return false
 
     const nonZeroChains = Object.entries(chainTvls).filter(
-      ([, tvl]) => tvl > 0
+      ([key, tvl]) => tvl > 0 && isActualChain(key)
     )
     if (nonZeroChains.length < 2) return false
 
@@ -37,9 +38,9 @@ export class P2CrossChainDominance extends ProtocolTemplate {
     const detail = ctx.data.protocolDetail!
     const chainTvls = detail.currentChainTvls
 
-    // Get sorted chain TVLs
+    // Get sorted chain TVLs (filtering out non-chain keys like "borrowed")
     const sorted = Object.entries(chainTvls)
-      .filter(([, tvl]) => tvl > 0)
+      .filter(([key, tvl]) => tvl > 0 && isActualChain(key))
       .sort((a, b) => b[1] - a[1])
 
     if (sorted.length < 2) return []
@@ -62,9 +63,9 @@ export class P2CrossChainDominance extends ProtocolTemplate {
     const detail = ctx.data.protocolDetail!
     const chainTvls = detail.currentChainTvls
 
-    // Get sorted chain TVLs
+    // Get sorted chain TVLs (filtering out non-chain keys like "borrowed")
     const sorted = Object.entries(chainTvls)
-      .filter(([, tvl]) => tvl > 0)
+      .filter(([key, tvl]) => tvl > 0 && isActualChain(key))
       .sort((a, b) => b[1] - a[1])
 
     if (sorted.length < 2) return null

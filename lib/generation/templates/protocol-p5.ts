@@ -10,6 +10,23 @@ import { getRankBucket } from "../difficulty"
 import { formatNumber, getRevenueBucketChoices, getRevenueBucketIndex } from "../distractors"
 import { createRng } from "../rng"
 
+/**
+ * Format a percentage for display, handling small values appropriately
+ * - Values < 1% become "less than 1%"
+ * - Values 1-10% get one decimal place
+ * - Values >= 10% are rounded to whole numbers
+ */
+function formatPercentage(ratio: number): string {
+  const percent = ratio * 100
+  if (percent < 1 && percent > 0) {
+    return "less than 1%"
+  }
+  if (percent < 10) {
+    return `${percent.toFixed(1)}%`
+  }
+  return `${Math.round(percent)}%`
+}
+
 export class P5FeesVsRevenue extends ProtocolTemplate {
   id = "P5_FEES_REVENUE"
   name = "Fees vs Revenue"
@@ -114,7 +131,7 @@ export class P5FeesVsRevenue extends ProtocolTemplate {
           name: detail.name,
           fees7d: formatNumber(fees7d),
           rev7d: formatNumber(rev7d),
-          revPercent: Math.round(revToFeesRatio * 100),
+          revPercent: formatPercentage(revToFeesRatio),
         },
         buildNotes: [
           `Revenue to fees ratio: ${(revToFeesRatio * 100).toFixed(1)}%`,

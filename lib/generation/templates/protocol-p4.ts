@@ -86,8 +86,9 @@ export class P4ATHTiming extends ProtocolTemplate {
         },
         explainData: {
           name: detail.name,
-          athValue: formatNumber(ath.value),
+          athTvl: formatNumber(ath.value),
           athMonth: athMonthDisplay,
+          metric: "TVL",
           // Note: We intentionally don't include comparison/distractor months here
           // as it makes explanations awkward (e.g., "not in June, December, or February")
         },
@@ -134,8 +135,9 @@ export class P4ATHTiming extends ProtocolTemplate {
       },
       explainData: {
         name: detail.name,
-        athValue: formatNumber(ath.value),
+        athTvl: formatNumber(ath.value),
         athMonth: athMonthDisplay,
+        metric: "TVL",
       },
       buildNotes: [
         `TF: "${statement}" -> ${answerValue}`,

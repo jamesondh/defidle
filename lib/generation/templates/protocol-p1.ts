@@ -12,8 +12,9 @@ import {
   getChainCountBucket,
   getChangeBucket,
 } from "../metrics"
-import { pickProtocolDistractors, type ProtocolEntity } from "../distractors"
+import { pickProtocolDistractors, formatNumber, type ProtocolEntity } from "../distractors"
 import { deterministicShuffle } from "../rng"
+import { sumActualChainTvl } from "../chain-filter"
 
 export class P1ProtocolFingerprint extends ProtocolTemplate {
   id = "P1_FINGERPRINT"
@@ -63,12 +64,12 @@ export class P1ProtocolFingerprint extends ProtocolTemplate {
     const chainBucket = getChainCountBucket(chainCount)
     clues.push(`Chains: ${chainBucket}`)
 
-    // TVL band
+    // TVL band - prefer historical series, fall back to sum of actual chains
     const currentTvl =
       detail.tvl[detail.tvl.length - 1]?.totalLiquidityUSD ??
-      detail.currentChainTvls
-        ? Object.values(detail.currentChainTvls).reduce((a, b) => a + b, 0)
-        : 0
+      (detail.currentChainTvls
+        ? sumActualChainTvl(detail.currentChainTvls)
+        : 0)
     const tvlBand = getTvlBand(currentTvl)
     clues.push(`TVL: ${tvlBand}`)
 
@@ -139,7 +140,8 @@ export class P1ProtocolFingerprint extends ProtocolTemplate {
         name: detail.name,
         category: detail.category,
         chainCount,
-        tvlFormatted: tvlBand,
+        tvl: formatNumber(currentTvl),
+        tvlBand,
         chains: detail.chains.slice(0, 5).join(", "),
       },
       buildNotes: [`Generated ${clues.length} clues for fingerprint`],

@@ -2,12 +2,14 @@
  * P3: Top Chain Concentration
  *
  * What share of a protocol's TVL is on its dominant chain?
+ * Only applicable to multi-chain protocols (2+ actual chains).
  */
 
 import type { QuestionFormat, QuestionDraft, TemplateContext } from "@/lib/types/episode"
 import { ProtocolTemplate } from "@/lib/types/template"
 import { getRankBucket } from "../difficulty"
 import { formatNumber, getConcentrationBucketChoices, getConcentrationBucketIndex } from "../distractors"
+import { filterToActualChains, warnIfSingleChain } from "../chain-filter"
 
 export class P3TopChainConcentration extends ProtocolTemplate {
   id = "P3_CONCENTRATION"
@@ -23,25 +25,28 @@ export class P3TopChainConcentration extends ProtocolTemplate {
     const chainTvls = detail.currentChainTvls
     if (!chainTvls) return false
 
-    const nonZeroChains = Object.entries(chainTvls).filter(
-      ([, tvl]) => tvl > 0
-    )
+    // Filter to actual chains only (excludes "borrowed", "staking", etc.)
+    const actualChains = filterToActualChains(chainTvls)
 
-    // Need at least 1 chain (but question is more interesting with 2+)
-    return nonZeroChains.length >= 1
+    // Need at least 2 actual chains for concentration to be meaningful
+    // For single-chain protocols, asking "what % is on X" is nonsensical (always 100%)
+    if (actualChains.length < 2) {
+      warnIfSingleChain(detail.name, chainTvls, this.id)
+      return false
+    }
+
+    return true
   }
 
   proposeFormats(ctx: TemplateContext): QuestionFormat[] {
     const detail = ctx.data.protocolDetail!
     const chainTvls = detail.currentChainTvls
 
-    const nonZeroChains = Object.entries(chainTvls).filter(
-      ([, tvl]) => tvl > 0
-    )
+    // Filter to actual chains only
+    const actualChains = filterToActualChains(chainTvls)
 
-    // If single chain, use TF format
-    if (nonZeroChains.length === 1) {
-      return ["tf"]
+    if (actualChains.length < 2) {
+      return []
     }
 
     return ["mc4", "tf"]
@@ -55,12 +60,11 @@ export class P3TopChainConcentration extends ProtocolTemplate {
     const detail = ctx.data.protocolDetail!
     const chainTvls = detail.currentChainTvls
 
-    // Calculate top chain and share
-    const sorted = Object.entries(chainTvls)
-      .filter(([, tvl]) => tvl > 0)
-      .sort((a, b) => b[1] - a[1])
+    // Filter to actual chains only and sort by TVL
+    const sorted = filterToActualChains(chainTvls).sort((a, b) => b[1] - a[1])
 
-    if (sorted.length === 0) return null
+    // Need at least 2 chains for this template
+    if (sorted.length < 2) return null
 
     const topChain = sorted[0][0]
     const topChainTvl = sorted[0][1]
@@ -101,10 +105,12 @@ export class P3TopChainConcentration extends ProtocolTemplate {
           sharePercent: Math.round(topShare * 100),
           topChainTvl: formatNumber(topChainTvl),
           totalTvl: formatNumber(totalTvl),
+          chainCount: sorted.length,
         },
         buildNotes: [
           `Top chain: ${topChainDisplay} with ${(topShare * 100).toFixed(1)}% share`,
           `Total TVL: ${formatNumber(totalTvl)}`,
+          `Chains: ${sorted.length}`,
         ],
       }
     }
@@ -134,6 +140,7 @@ export class P3TopChainConcentration extends ProtocolTemplate {
         sharePercent: Math.round(topShare * 100),
         topChainTvl: formatNumber(topChainTvl),
         totalTvl: formatNumber(totalTvl),
+        chainCount: sorted.length,
       },
       buildNotes: [
         `TF: "${statement}" -> ${answerValue}`,

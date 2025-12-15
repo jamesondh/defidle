@@ -8,6 +8,7 @@ import type { QuestionFormat, QuestionDraft, TemplateContext } from "@/lib/types
 import { ProtocolTemplate } from "@/lib/types/template"
 import { getRankBucket } from "../difficulty"
 import { formatNumber } from "../distractors"
+import { sumActualChainTvl } from "../chain-filter"
 
 // TVL bands as specified in question-templates.md
 const TVL_BANDS = [
@@ -79,11 +80,11 @@ export class P10TVLBand extends ProtocolTemplate {
   ): QuestionDraft | null {
     const detail = ctx.data.protocolDetail!
 
-    // Get current TVL
+    // Get current TVL - prefer historical series, fall back to sum of actual chains
     const currentTvl =
       detail.tvl[detail.tvl.length - 1]?.totalLiquidityUSD ??
       (detail.currentChainTvls
-        ? Object.values(detail.currentChainTvls).reduce((a, b) => a + b, 0)
+        ? sumActualChainTvl(detail.currentChainTvls)
         : 0)
 
     if (currentTvl <= 0) return null

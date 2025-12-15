@@ -10,6 +10,7 @@ import { getRankBucket } from "../difficulty"
 import { abMargin } from "../metrics"
 import { formatNumber } from "../distractors"
 import { deterministicShuffle } from "../rng"
+import { filterToActualChains, warnIfSingleChain } from "../chain-filter"
 
 // Popular chains for distractors when needed
 const POPULAR_CHAINS = [
@@ -37,24 +38,27 @@ export class P9TopChainName extends ProtocolTemplate {
     const detail = ctx.data.protocolDetail
     if (!detail) return false
 
-    // Need chain TVL data with at least 2 chains
+    // Need chain TVL data with at least 2 actual chains
     const chainTvls = detail.currentChainTvls
     if (!chainTvls) return false
 
-    const nonZeroChains = Object.entries(chainTvls).filter(
-      ([, tvl]) => tvl > 0
-    )
+    // Filter to actual chains (excludes "borrowed", "staking", etc.)
+    const actualChains = filterToActualChains(chainTvls)
 
-    return nonZeroChains.length >= 2
+    if (actualChains.length < 2) {
+      warnIfSingleChain(detail.name, chainTvls, this.id)
+      return false
+    }
+
+    return true
   }
 
   proposeFormats(ctx: TemplateContext): QuestionFormat[] {
     const detail = ctx.data.protocolDetail!
     const chainTvls = detail.currentChainTvls
 
-    const sorted = Object.entries(chainTvls)
-      .filter(([, tvl]) => tvl > 0)
-      .sort((a, b) => b[1] - a[1])
+    // Filter to actual chains only
+    const sorted = filterToActualChains(chainTvls).sort((a, b) => b[1] - a[1])
 
     // If only 2 chains, use TF
     if (sorted.length === 2) {
@@ -80,10 +84,8 @@ export class P9TopChainName extends ProtocolTemplate {
     const detail = ctx.data.protocolDetail!
     const chainTvls = detail.currentChainTvls
 
-    // Get sorted chain TVLs
-    const sorted = Object.entries(chainTvls)
-      .filter(([, tvl]) => tvl > 0)
-      .sort((a, b) => b[1] - a[1])
+    // Filter to actual chains only and sort by TVL
+    const sorted = filterToActualChains(chainTvls).sort((a, b) => b[1] - a[1])
 
     if (sorted.length < 2) return null
 

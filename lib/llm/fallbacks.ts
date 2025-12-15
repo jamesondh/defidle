@@ -19,15 +19,15 @@
 export const EXPLANATION_TEMPLATES: Record<string, string> = {
   // Protocol templates
   P1_FINGERPRINT:
-    "{name} is a {category} protocol deployed on {chainCount} chains with {tvlFormatted} TVL.",
+    "{name} is a {category} protocol deployed on {chainCount} chains with {tvl} TVL.",
   P2_CROSSCHAIN:
     "{name} has {marginPercent}% more TVL on {winnerChain} ({winnerTvl}) compared to {loserChain} ({loserTvl}).",
   P3_CONCENTRATION:
     "{topChain} holds {sharePercent}% of {name}'s total TVL ({topChainTvl} of {totalTvl}).",
   P4_ATH_TIMING:
-    "{name} reached its all-time high TVL of {athValue} in {athMonth}.",
+    "{name} reached its all-time high TVL of {athTvl} in {athMonth}.",
   P5_FEES_REVENUE:
-    "{name} generated {fees7d} in fees over the past 7 days, with {revPercent}% going to protocol revenue.",
+    "{name} generated {fees7d} in fees over the past 7 days, with {revPercent} going to protocol revenue.",
   P6_TVL_TREND:
     "{name}'s TVL {trendDirection} by {changePercent}% over the past {period}, from {startTvl} to {endTvl}.",
   P7_CATEGORY:
@@ -49,7 +49,7 @@ export const EXPLANATION_TEMPLATES: Record<string, string> = {
   C2_CHAIN_COMPARISON:
     "{winnerChain} has {marginPercent}% more TVL than {loserChain} ({winnerTvl} vs {loserTvl}).",
   C3_ATH_TIMING:
-    "{name} reached its all-time high TVL of {athValue} in {athMonth}.",
+    "{name} reached its all-time high TVL of {athTvl} in {athMonth}.",
   C4_GROWTH_RANKING:
     "{topChain} had the highest 30-day TVL growth at {topGrowth}%, outpacing {comparison}.",
   C5_TOP_BY_FEES:

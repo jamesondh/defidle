@@ -64,6 +64,8 @@ interface FallbackQuestion {
   id: string
   getPrompt: (ctx: TemplateContext) => string
   getExplainData: (ctx: TemplateContext) => Record<string, unknown>
+  /** Determine the correct answer for this fallback (default: true) */
+  getAnswer: (ctx: TemplateContext) => boolean
   /** Check if this fallback can be used given the context */
   canUse?: (ctx: TemplateContext) => boolean
 }
@@ -79,6 +81,7 @@ const PROTOCOL_FALLBACKS: FallbackQuestion[] = [
       name: ctx.topic.name,
       type: "protocol",
     }),
+    getAnswer: () => true, // All protocols in our pool are DeFi protocols
   },
   {
     id: "protocol_tvl_positive",
@@ -88,6 +91,7 @@ const PROTOCOL_FALLBACKS: FallbackQuestion[] = [
       tvl: ctx.derived.tvlRank ? `ranked #${ctx.derived.tvlRank}` : "significant",
       hasHighTvl: true,
     }),
+    getAnswer: (ctx) => (ctx.derived.tvlRank ?? 999) <= 100, // Top 100 have > $1M TVL
     canUse: (ctx) => (ctx.derived.tvlRank ?? 999) <= 100,
   },
   {
@@ -98,6 +102,7 @@ const PROTOCOL_FALLBACKS: FallbackQuestion[] = [
       tvlRank: ctx.derived.tvlRank,
       isTop100: (ctx.derived.tvlRank ?? 999) <= 100,
     }),
+    getAnswer: (ctx) => (ctx.derived.tvlRank ?? 999) <= 100,
     canUse: (ctx) => ctx.derived.tvlRank !== undefined,
   },
   {
@@ -107,6 +112,7 @@ const PROTOCOL_FALLBACKS: FallbackQuestion[] = [
       name: ctx.topic.name,
       isTracked: true,
     }),
+    getAnswer: () => true, // All protocols in our pool are tracked
   },
   {
     id: "protocol_multichain",
@@ -116,6 +122,7 @@ const PROTOCOL_FALLBACKS: FallbackQuestion[] = [
       chainCount: ctx.derived.chainCount,
       isMultichain: (ctx.derived.chainCount ?? 0) > 1,
     }),
+    getAnswer: (ctx) => (ctx.derived.chainCount ?? 0) > 1,
     canUse: (ctx) => ctx.derived.chainCount !== undefined,
   },
 ]
@@ -131,6 +138,7 @@ const CHAIN_FALLBACKS: FallbackQuestion[] = [
       name: ctx.topic.name,
       type: "chain",
     }),
+    getAnswer: () => true, // All chains in our pool are blockchain networks
   },
   {
     id: "chain_has_defi",
@@ -139,6 +147,7 @@ const CHAIN_FALLBACKS: FallbackQuestion[] = [
       name: ctx.topic.name,
       hasDefi: true,
     }),
+    getAnswer: () => true, // All chains in our pool have DeFi protocols
   },
   {
     id: "chain_top_50",
@@ -148,6 +157,7 @@ const CHAIN_FALLBACKS: FallbackQuestion[] = [
       tvlRank: ctx.derived.chainTvlRank ?? ctx.derived.tvlRank,
       isTop50: (ctx.derived.chainTvlRank ?? ctx.derived.tvlRank ?? 999) <= 50,
     }),
+    getAnswer: (ctx) => (ctx.derived.chainTvlRank ?? ctx.derived.tvlRank ?? 999) <= 50,
     canUse: (ctx) => (ctx.derived.chainTvlRank ?? ctx.derived.tvlRank) !== undefined,
   },
   {
@@ -157,6 +167,7 @@ const CHAIN_FALLBACKS: FallbackQuestion[] = [
       name: ctx.topic.name,
       isTracked: true,
     }),
+    getAnswer: () => true, // All chains in our pool are tracked
   },
   {
     id: "chain_tvl_positive",
@@ -165,6 +176,7 @@ const CHAIN_FALLBACKS: FallbackQuestion[] = [
       name: ctx.topic.name,
       hasTvl: true,
     }),
+    getAnswer: (ctx) => (ctx.derived.chainTvlRank ?? ctx.derived.tvlRank ?? 999) <= 50, // Top 50 have > $10M
     canUse: (ctx) => (ctx.derived.chainTvlRank ?? ctx.derived.tvlRank ?? 999) <= 50,
   },
 ]
@@ -209,10 +221,9 @@ function safeFallback(
   const prompt = selected.getPrompt(ctx)
   const explainData = selected.getExplainData(ctx)
 
-  // Determine answer based on the fallback type
-  // All our fallbacks are designed to have "True" as the answer
-  const answerValue = true
-  const answerIndex = 0
+  // Determine answer dynamically based on the fallback question and context
+  const answerValue = selected.getAnswer(ctx)
+  const answerIndex = answerValue ? 0 : 1
 
   return {
     templateId: "FALLBACK",

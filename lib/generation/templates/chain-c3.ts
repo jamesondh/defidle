@@ -83,8 +83,9 @@ export class C3ChainATHTiming extends ChainTemplate {
         },
         explainData: {
           name: topic.name,
-          athValue: formatNumber(ath.value),
+          athTvl: formatNumber(ath.value),
           athMonth: athMonthDisplay,
+          metric: "TVL",
           // Note: We intentionally don't include comparison/distractor months here
           // as it makes explanations awkward (e.g., "not in June, December, or February")
         },
@@ -127,8 +128,9 @@ export class C3ChainATHTiming extends ChainTemplate {
       },
       explainData: {
         name: topic.name,
-        athValue: formatNumber(ath.value),
+        athTvl: formatNumber(ath.value),
         athMonth: athMonthDisplay,
+        metric: "TVL",
       },
       buildNotes: [
         `TF: "${statement}" -> ${answerValue}`,
