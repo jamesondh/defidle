@@ -32,18 +32,18 @@ export function QuestionContent({
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-8">
       <div className="space-y-2">
-        <h2 className="text-xl font-semibold">{question.prompt}</h2>
+        <h2 className="text-xl font-semibold text-center">{question.prompt}</h2>
         {question.clues && question.clues.length > 0 && (
-          <ul className="space-y-1 text-sm text-muted-foreground">
+          <ul className="text-center space-y-1 text-sm text-muted-foreground">
             {question.clues.map((clue, i) => (
               <li key={i}>{clue}</li>
             ))}
           </ul>
         )}
       </div>
-      <div className="space-y-2">
+      <div className="grid grid-cols-1 gap-2 xs:grid-cols-2">
         {question.choices?.map((choice, index) => (
           <ChoiceButton
             key={index}

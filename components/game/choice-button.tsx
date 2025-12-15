@@ -27,12 +27,12 @@ export function ChoiceButton({
     <Button
       variant="outline"
       className={cn(
-        "h-auto w-full justify-start gap-3 px-4 py-3 text-left font-normal",
+        "h-auto min-h-[3.5rem] w-full justify-start gap-3 whitespace-normal px-4 py-3 text-left font-normal",
         state === "selected" && "border-primary bg-primary/5",
         state === "correct" &&
-          "border-green-500 bg-green-500/10 text-green-700 dark:text-green-400",
+        "border-green-500 bg-green-500/10 text-green-700 dark:text-green-400",
         state === "incorrect" &&
-          "border-red-500 bg-red-500/10 text-red-700 dark:text-red-400"
+        "border-red-500 bg-red-500/10 text-red-700 dark:text-red-400"
       )}
       disabled={disabled}
       onClick={onClick}
@@ -48,7 +48,7 @@ export function ChoiceButton({
       >
         {label}
       </span>
-      <span className="flex-1">{choice}</span>
+      <span className="min-w-0 flex-1 break-words">{choice}</span>
     </Button>
   )
 }

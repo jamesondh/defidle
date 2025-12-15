@@ -32,10 +32,10 @@ export function ResultsContent({
 
   const getMessage = () => {
     if (percentage === 100) return "True Degen!"
-    if (percentage >= 80) return "Hell yeah!"
-    if (percentage >= 60) return "Could be worse!"
-    if (percentage >= 40) return "Womp womp!"
-    return "Yikes!"
+    if (percentage >= 80) return "Based"
+    if (percentage >= 60) return "Mid-Curve"
+    if (percentage >= 40) return "NGMI"
+    return "1) What"
   }
 
   return (
@@ -57,26 +57,32 @@ export function ResultsContent({
       <SegmentedProgress total={totalQuestions} completed={correctCount} className="h-3" />
 
       <div className="space-y-2">
-        {questions.map((question, index) => {
+        {questions.map((question) => {
           const answer = answers.find(a => a.qid === question.qid)
           const isCorrect = answer?.isCorrect ?? false
+          const correctAnswer = question.choices?.[question.answerIndex ?? 0] ?? ""
 
           return (
             <div
               key={question.qid}
-              className="flex items-center justify-between rounded-lg border p-3"
+              className="flex items-start gap-3 rounded-lg border p-3"
             >
-              <div className="flex items-center gap-3">
+              <div className="mt-0.5 shrink-0">
                 {isCorrect ? (
                   <CheckCircle2 className="size-5 text-green-500" />
                 ) : (
                   <XCircle className="size-5 text-red-500" />
                 )}
-                <span className="text-sm">Question {index + 1}</span>
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm leading-relaxed break-words">
+                  {question.prompt}{" "}
+                  <span className="font-bold">{correctAnswer}</span>
+                </p>
               </div>
               <Badge
                 variant="outline"
-                className={cn("capitalize", difficultyStyles[question.difficulty])}
+                className={cn("capitalize shrink-0 ml-2", difficultyStyles[question.difficulty])}
               >
                 {question.difficulty}
               </Badge>

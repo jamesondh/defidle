@@ -120,17 +120,19 @@ export function GameCard({ currentQuestion, totalQuestions, difficulty, children
     <Card>
       <CardHeader className="text-center">
         <div className="flex items-center justify-between">
-          <div className="text-left">
+          <div className="flex-1 min-w-0 text-left">
             <div className="flex items-center gap-2">
-              <Image src="/logo/logo-2.png" alt="DeFidle" width={44} height={44} />
+              <Image src="/logo/logo-2.png" alt="DeFidle" width={44} height={44} className="shrink-0" />
               <div>
                 <CardTitle className="text-xl font-bold tracking-tight">DeFidle</CardTitle>
-                <p className="text-sm text-muted-foreground">Daily DeFi Quiz</p>
+                <p className="text-xs text-muted-foreground whitespace-nowrap">Daily DeFi Quiz</p>
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-1">
-            <DatePicker date={date} />
+          <div className="flex flex-wrap items-center justify-end gap-1 shrink-0">
+            <div className="w-full xs:w-auto flex justify-end">
+              <DatePicker date={date} />
+            </div>
             <ThemeToggle />
             <Dialog>
               <form>

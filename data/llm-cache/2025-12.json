@@ -98,5 +98,30 @@
     "text": "Ethena USDe has a total value locked (TVL) of $6.5B, placing it in the TVL band of over $5B and ranking it 16th among DeFi projects.",
     "model": "gpt-4o-mini",
     "generatedAt": "2025-12-15T17:52:15.085Z"
+  },
+  "2025-12-11|chain|Bitcoin|A|C1_FINGERPRINT|explanation|595f07c1fc7e9158": {
+    "text": "Bitcoin, represented by the token symbol BTC, ranks 3rd in total value locked (TVL) with an estimated range of $5B to $10B and is associated with 152 different protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T20:28:49.064Z"
+  },
+  "2025-12-11|chain|Bitcoin|B|C2_CHAIN_COMPARISON|explanation|c8e8184af9b921ec": {
+    "text": "Solana has a total value locked (TVL) of $8.5B, surpassing Bitcoin's TVL of $6.9B by a margin of 18%. This indicates that Solana currently has more funds locked in its DeFi ecosystem compared to Bitcoin.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T20:28:51.075Z"
+  },
+  "2025-12-11|chain|Bitcoin|C|C9_DISTANCE_FROM_ATH|explanation|90cb647531a3490e": {
+    "text": "Bitcoin's current total value locked (TVL) is $6.6B, which is 27% below its all-time high (ATH) of $9.1B reached in October 2025, placing it in the 10-30% below bucket.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T20:28:52.304Z"
+  },
+  "2025-12-11|chain|Bitcoin|D|FALLBACK_CHAIN_TVL_ABOVE_5B|explanation|481c4dfd93ad4da0": {
+    "text": "Bitcoin's total value locked (TVL) is $6.9B, which is above the $5B threshold. This indicates a significant amount of capital is currently utilized in Bitcoin-based DeFi applications.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T20:28:53.788Z"
+  },
+  "2025-12-11|chain|Bitcoin|E|C7_CHAIN_TVL_BAND|explanation|d11ca320e7d8293f": {
+    "text": "Bitcoin has a total value locked (TVL) of $6.9B, placing it in the TVL band of $2B-$10B and ranking it 3rd among DeFi assets.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T20:28:55.185Z"
   }
 }
