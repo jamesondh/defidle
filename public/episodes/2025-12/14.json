@@ -23,22 +23,22 @@
       "choices": [
         "JustCryptos",
         "MEXC",
-        "Arbitrum Bridge",
+        "Hyperliquid Bridge",
         "Kamino Lend",
-        "JustLend",
+        "Pendle",
         "Polygon Bridge & Staking"
       ],
       "answerIndex": 0,
-      "explanation": "JustCryptos is a bridge in the DeFi space operating on the Tron blockchain, with a total value locked (TVL) of $3.0B, placing it within the $1B-$5B range for TVL. It supports one blockchain, which is Tron.",
+      "explanation": "JustCryptos is a Bridge protocol deployed on 1 chains with $2.9B TVL.",
       "difficulty": "medium",
-      "llmFallback": false,
+      "llmFallback": true,
       "signals": {
         "format": "mc6",
         "familiarityRankBucket": "top_100",
         "margin": null,
-        "volatility": 0.19368136374106446
+        "volatility": 0.19861282420571896
       },
-      "difficultyScore": 0.35905220456115966
+      "difficultyScore": 0.3597919236308579
     },
     {
       "qid": "q2",
@@ -48,9 +48,9 @@
       "prompt": "What category is JustCryptos?",
       "choices": [
         "Bridge",
-        "Liquidations",
-        "Derivatives",
-        "DAO Service Provider"
+        "OTC Marketplace",
+        "OnChain Capital Allocator",
+        "Anchor BTC"
       ],
       "answerIndex": 0,
       "explanation": "JustCryptos operates in the Bridge category of DeFi and holds a total value locked (TVL) rank of 32 among DeFi projects.",
@@ -84,77 +84,78 @@
         "format": "mc4",
         "familiarityRankBucket": "top_100",
         "margin": 0.15,
-        "volatility": 0.19368136374106446
+        "volatility": 0.19861282420571896
       },
-      "difficultyScore": 0.38655220456115963
+      "difficultyScore": 0.38729192363085785
     },
     {
       "qid": "q4",
       "slot": "D",
-      "templateId": "P13_TVL_RANK_COMPARISON",
-      "format": "ab",
-      "prompt": "Which protocol has higher TVL?",
-      "choices": [
-        "JustCryptos",
-        "MEXC"
-      ],
-      "answerIndex": 1,
-      "explanation": "JustCryptos is ranked 32nd in total value locked (TVL), while MEXC holds a higher rank at 21st. This indicates that MEXC has a greater amount of assets locked in its platform compared to JustCryptos.",
-      "difficulty": "hard",
-      "llmFallback": false,
-      "signals": {
-        "format": "ab",
-        "familiarityRankBucket": "top_100",
-        "margin": 0.22,
-        "volatility": null
-      },
-      "difficultyScore": 0.2841666666666666
-    },
-    {
-      "qid": "q5",
-      "slot": "E",
-      "templateId": "P6_TVL_TREND",
+      "templateId": "FALLBACK_PROTOCOL_TVL_UP_5PCT",
       "format": "tf",
-      "prompt": "JustCryptos's TVL has increased over the past 7 days.",
+      "prompt": "JustCryptos's TVL increased by more than 5% over the past week.",
       "choices": [
         "True",
         "False"
       ],
       "answerIndex": 1,
       "answerValue": false,
-      "explanation": "JustCryptos experienced a decrease in total value locked (TVL) by 3.4% over the past 7 days, bringing its current TVL to $3.0B.",
+      "explanation": "JustCryptos's TVL changed by -4.5% over the past week, which did not reach the 5% threshold.",
       "difficulty": "easy",
-      "llmFallback": false,
+      "llmFallback": true,
       "signals": {
         "format": "tf",
         "familiarityRankBucket": "top_100",
-        "margin": 0.03393648391481586,
-        "volatility": 0.19368136374106446
+        "margin": 0.09454363751383255,
+        "volatility": 0
       },
-      "difficultyScore": 0.3782718012988131
+      "difficultyScore": 0.2987136354051395
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "tf",
+      "prompt": "JustCryptos is deployed on Tron.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "JustCryptos is deployed on 1 chains including Tron.",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.20666666666666667
     }
   ],
-  "generatedAt": "2025-12-15T17:51:24.273Z",
+  "generatedAt": "2025-12-15T22:18:14.537Z",
   "buildLog": [
     {
       "slot": "A",
       "template": "P1_FINGERPRINT",
       "format": "mc6",
       "decision": "selected",
-      "score": 0.35905220456115966,
+      "score": 0.3597919236308579,
       "target": "medium"
     },
     {
       "slot": "B",
       "template": "P2_CROSSCHAIN",
       "decision": "skip",
-      "reason": "prereq_failed"
+      "reason": "semantic_topic_covered:tvl_absolute"
     },
     {
       "slot": "B",
       "template": "P3_CONCENTRATION",
       "decision": "skip",
-      "reason": "prereq_failed"
+      "reason": "semantic_topic_covered:tvl_absolute"
     },
     {
       "slot": "B",
@@ -175,7 +176,7 @@
       "template": "P4_ATH_TIMING",
       "format": "mc4",
       "decision": "selected",
-      "score": 0.38655220456115963,
+      "score": 0.38729192363085785,
       "target": "medium"
     },
     {
@@ -194,7 +195,7 @@
       "slot": "D",
       "template": "P2_CROSSCHAIN",
       "decision": "skip",
-      "reason": "prereq_failed"
+      "reason": "semantic_topic_covered:tvl_absolute"
     },
     {
       "slot": "D",
@@ -211,63 +212,44 @@
     {
       "slot": "D",
       "template": "P13_TVL_RANK_COMPARISON",
-      "format": "ab",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.2841666666666666,
-      "target": "hard"
-    },
-    {
-      "slot": "D",
-      "template": "P13_TVL_RANK_COMPARISON",
-      "format": "tf",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.23166666666666666,
-      "target": "hard"
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_absolute"
     },
     {
       "slot": "D",
       "template": "P14_CATEGORY_LEADER",
-      "format": "ab",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.24111755143115407,
-      "target": "hard"
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_absolute"
     },
     {
       "slot": "D",
-      "template": "P14_CATEGORY_LEADER",
-      "format": "mc4",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.26999999999999996,
-      "target": "hard"
-    },
-    {
-      "slot": "D",
-      "template": "P14_CATEGORY_LEADER",
-      "format": "tf",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.165,
-      "target": "hard"
-    },
-    {
-      "slot": "D",
-      "template": "P13_TVL_RANK_COMPARISON",
-      "format": "ab",
-      "decision": "selected",
-      "reason": "close_enough",
-      "score": 0.2841666666666666,
-      "target": "hard"
+      "decision": "fallback",
+      "reason": "no_template_matched"
     },
     {
       "slot": "E",
       "template": "P6_TVL_TREND",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_trend"
+    },
+    {
+      "slot": "E",
+      "template": "P3_CONCENTRATION",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_absolute"
+    },
+    {
+      "slot": "E",
+      "template": "P10_TVL_BAND",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_absolute"
+    },
+    {
+      "slot": "E",
+      "template": "P8_CHAIN_MEMBERSHIP",
       "format": "tf",
       "decision": "selected",
-      "score": 0.3782718012988131,
+      "score": 0.20666666666666667,
       "target": "easy"
     },
     {

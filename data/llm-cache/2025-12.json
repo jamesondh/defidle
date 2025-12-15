@@ -123,5 +123,75 @@
     "text": "Bitcoin has a total value locked (TVL) of $6.9B, placing it in the TVL band of $2B-$10B and ranking it 3rd among DeFi assets.",
     "model": "gpt-4o-mini",
     "generatedAt": "2025-12-15T20:28:55.185Z"
+  },
+  "2025-12-14|protocol|justcryptos|A|P1_FINGERPRINT|explanation|0ab0f4c064b31b71": {
+    "text": "JustCryptos is a bridge platform operating on the Tron blockchain, with a total value locked (TVL) of $2.9B, placing it within the $1B-$5B TVL range. It supports one blockchain, which is Tron.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T22:19:02.933Z"
+  },
+  "2025-12-14|protocol|justcryptos|D|FALLBACK_PROTOCOL_TVL_UP_5PCT|explanation|359bb0f65fac4872": {
+    "text": "JustCryptos experienced a change of -4.5% in its Total Value Locked (TVL), which means it did not reach the 5% threshold for growth.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T22:19:04.650Z"
+  },
+  "2025-12-14|protocol|justcryptos|E|P8_CHAIN_MEMBERSHIP|explanation|69483d82bc16b337": {
+    "text": "JustCryptos is deployed on the Tron blockchain and operates solely on this single chain, making its chain count 1.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T22:19:05.902Z"
+  },
+  "2025-12-15|protocol|jupiter-lend|A|P1_FINGERPRINT|explanation|cac19a28768875b5": {
+    "text": "Jupiter Lend is a lending platform operating on the Solana blockchain, with a total value locked (TVL) of $984 million, placing it in the TVL band of $500 million to $1 billion. It currently supports one blockchain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T22:19:51.171Z"
+  },
+  "2025-12-15|protocol|jupiter-lend|B|FALLBACK_PROTOCOL_RANK_TOP_50|explanation|d10ea77906ee4223": {
+    "text": "Jupiter Lend is currently ranked 78th among DeFi protocols, which places it outside the top 50 threshold. This indicates that it has not yet reached the level of prominence held by the leading DeFi platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T22:19:53.312Z"
+  },
+  "2025-12-15|protocol|jupiter-lend|C|P15_RECENT_TVL_DIRECTION|explanation|cc573de5dff9b201": {
+    "text": "Jupiter Lend's total value locked (TVL) has increased by 2.7% over the past 7 days, bringing its current TVL to $1.0B. This indicates a positive trend in the platform's usage and liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T22:19:54.798Z"
+  },
+  "2025-12-15|protocol|jupiter-lend|D|FALLBACK_PROTOCOL_CHAINS_ABOVE_3|explanation|532f0e5f5a2dc9ec": {
+    "text": "Jupiter Lend operates on a single blockchain, which is below the threshold of 3 chains. This means it does not meet the criteria for fallback protocols that require connections to 3 or more chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T22:19:56.909Z"
+  },
+  "2025-12-11|chain|Bitcoin|B|C8_30D_DIRECTION|explanation|036240f1be8c3a4c": {
+    "text": "Bitcoin's total value locked (TVL) decreased from $7.0B to $6.7B, reflecting a 5% decline.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T22:21:21.788Z"
+  },
+  "2025-12-11|chain|Bitcoin|C|FALLBACK_CHAIN_RANK_TOP_20|explanation|c1b741c6d15fded6": {
+    "text": "Bitcoin is ranked 3rd among cryptocurrencies, which places it well within the top 20 by market capitalization.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T22:21:22.503Z"
+  },
+  "2025-12-11|chain|Bitcoin|D|FALLBACK_GENERIC|explanation|a68af05739c5adf7": {
+    "text": "Bitcoin is a blockchain that is tracked for its transactions and network activity, providing transparency and security in its decentralized system.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T22:21:23.097Z"
+  },
+  "2025-12-11|chain|Bitcoin|E|FALLBACK_GENERIC|explanation|fb6ff8846fa573c3": {
+    "text": "Bitcoin operates as a blockchain and has a total value locked (TVL) available in DeFi applications, reflecting its integration into decentralized finance ecosystems.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T22:21:23.882Z"
+  },
+  "2025-12-11|chain|Bitcoin|C|C11_TOP_PROTOCOL_TVL|explanation|3a6b1b74511f92b5": {
+    "text": "On the Bitcoin blockchain, the top protocol by total value locked (TVL) is Binance CEX, with a TVL of $50.1B, accounting for 33% of the total market share. Other notable protocols include Gemini at $5.5B, Binance Bitcoin at $5.8B, and Babylon Protocol at $5.3B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T22:22:45.754Z"
+  },
+  "2025-12-11|chain|Bitcoin|D|FALLBACK_CHAIN_RANK_TOP_5|explanation|1706286e7f01501a": {
+    "text": "Bitcoin is ranked 3rd among cryptocurrencies, placing it within the top 5 in terms of market capitalization. This ranking indicates its significant position in the overall crypto market.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T22:22:46.674Z"
+  },
+  "2025-12-11|chain|Bitcoin|E|C10_PROTOCOL_COUNT|explanation|27012a9946004090": {
+    "text": "Bitcoin has 152 protocols, placing it in the 100-250 count bucket. Examples of platforms utilizing Bitcoin include Binance CEX, OKX, Bitfinex, Bybit, and Robinhood.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T22:22:47.729Z"
   }
 }

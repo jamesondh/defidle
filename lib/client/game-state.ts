@@ -347,7 +347,130 @@ export function isGameComplete(state: GameState): boolean {
 
 /**
  * Check if the game has started
+ *
+ * @param date - Date in YYYY-MM-DD format
  */
 export function isGameStarted(state: GameState): boolean {
   return state.status !== "not_started"
+}
+
+// =============================================================================
+// localStorage Persistence
+// =============================================================================
+
+/**
+ * Saved quiz result structure for localStorage
+ */
+export interface SavedQuizResult {
+  /** Episode ID for validation */
+  episodeId: string
+  /** When the quiz was completed */
+  completedAt: number
+  /** Player's answers */
+  answers: PlayerAnswer[]
+  /** Number of correct answers */
+  correctCount: number
+  /** Total number of questions */
+  totalQuestions: number
+}
+
+/**
+ * Get the localStorage key for a given date
+ */
+function getStorageKey(date: string): string {
+  return `defidle:results:${date}`
+}
+
+/**
+ * Save completed quiz result to localStorage
+ */
+export function saveQuizResult(date: string, state: GameState): void {
+  if (state.status !== "completed") {
+    return
+  }
+
+  const results = getResults(state)
+  const savedResult: SavedQuizResult = {
+    episodeId: state.episode.episodeId,
+    completedAt: state.completedAt ?? Date.now(),
+    answers: state.answers,
+    correctCount: results.correctCount,
+    totalQuestions: results.totalQuestions,
+  }
+
+  try {
+    localStorage.setItem(getStorageKey(date), JSON.stringify(savedResult))
+  } catch {
+    // localStorage unavailable or quota exceeded - fail silently
+  }
+}
+
+/**
+ * Load saved quiz result from localStorage
+ * Returns null if not found or invalid
+ */
+export function loadQuizResult(date: string): SavedQuizResult | null {
+  try {
+    const stored = localStorage.getItem(getStorageKey(date))
+    if (!stored) return null
+
+    const parsed = JSON.parse(stored) as SavedQuizResult
+
+    // Basic validation
+    if (
+      !parsed.episodeId ||
+      !Array.isArray(parsed.answers) ||
+      typeof parsed.correctCount !== "number" ||
+      typeof parsed.totalQuestions !== "number"
+    ) {
+      return null
+    }
+
+    return parsed
+  } catch {
+    // localStorage unavailable or parse error
+    return null
+  }
+}
+
+/**
+ * Clear saved quiz result from localStorage (for "Play Again")
+ */
+export function clearQuizResult(date: string): void {
+  try {
+    localStorage.removeItem(getStorageKey(date))
+  } catch {
+    // localStorage unavailable - fail silently
+  }
+}
+
+/**
+ * Check if a quiz has been completed for a given date
+ */
+export function hasCompletedQuiz(date: string): boolean {
+  return loadQuizResult(date) !== null
+}
+
+/**
+ * Restore a completed game state from saved result
+ * Returns null if the episodeId doesn't match (stale data)
+ */
+export function restoreCompletedState(
+  episode: Episode,
+  savedResult: SavedQuizResult
+): GameState | null {
+  // Validate that the saved result matches this episode
+  if (savedResult.episodeId !== episode.episodeId) {
+    return null
+  }
+
+  return {
+    episode,
+    currentQuestionIndex: episode.questions.length - 1,
+    answers: savedResult.answers,
+    status: "completed",
+    startedAt: savedResult.completedAt, // approximate
+    completedAt: savedResult.completedAt,
+    questionStartedAt: null,
+  }
 }

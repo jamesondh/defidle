@@ -121,11 +121,13 @@ async function fetchChainData(
   topic: ChainPoolEntry
 ): Promise<FetchedData | null> {
   try {
-    // Fetch chain list, history, and pool in parallel
-    const [chainList, chainHistory, chainPool] = await Promise.all([
+    // Fetch chain list, history, pool, and protocol list in parallel
+    // Protocol list is needed for templates like C10 (protocol count), C11 (top protocol), C12 (category dominance)
+    const [chainList, chainHistory, chainPool, protocolList] = await Promise.all([
       getChains(),
       getChainTVLHistory(topic.slug),
       loadChainPool(),
+      getProtocols(),
     ])
 
     if (!chainHistory || chainHistory.length === 0) {
@@ -137,6 +139,7 @@ async function fetchChainData(
       chainList,
       chainHistory,
       chainPool,
+      protocolList, // Add protocol list for chain templates that need it
     }
 
     // Try to fetch chain fees and DEX volume

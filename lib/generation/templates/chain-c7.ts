@@ -51,7 +51,8 @@ function distanceToBoundary(tvl: number): number {
 export class C7ChainTVLBand extends ChainTemplate {
   id = "C7_CHAIN_TVL_BAND"
   name = "Chain TVL Band"
-  semanticTopics = ["tvl_magnitude"]
+  // Reveals absolute TVL value in the explanation
+  semanticTopics = ["tvl_absolute"]
 
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isChainContext(ctx)) return false

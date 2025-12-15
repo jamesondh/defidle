@@ -250,43 +250,53 @@ const protocolCtx = createMockProtocolContext({ tvl: 800_000_000, rank: 35, chan
 const chainCtx = createMockChainContext({ tvl: 3_000_000_000, rank: 12, change30d: 0.08 })
 
 // Test easy fallback
-const easyFallback = selectQuantitativeFallback(protocolCtx, "easy", 12345)
+const easyResult = selectQuantitativeFallback(protocolCtx, "easy", 12345)
+const easyFallback = easyResult?.draft
 console.log(`  Easy protocol fallback:`)
 console.log(`    Template: ${easyFallback?.templateId}`)
 console.log(`    Prompt: ${easyFallback?.prompt}`)
 console.log(`    Format: ${easyFallback?.format}`)
 console.log(`    Answer: ${easyFallback?.answerValue ?? easyFallback?.choices?.[easyFallback?.answerIndex ?? 0]}`)
+console.log(`    Semantic Topics: ${easyResult?.semanticTopics?.join(", ")}`)
 
 // Test medium fallback
-const mediumFallback = selectQuantitativeFallback(protocolCtx, "medium", 67890)
+const mediumResult = selectQuantitativeFallback(protocolCtx, "medium", 67890)
+const mediumFallback = mediumResult?.draft
 console.log(`  Medium protocol fallback:`)
 console.log(`    Template: ${mediumFallback?.templateId}`)
 console.log(`    Prompt: ${mediumFallback?.prompt}`)
 console.log(`    Format: ${mediumFallback?.format}`)
 console.log(`    Answer: ${mediumFallback?.answerValue ?? mediumFallback?.choices?.[mediumFallback?.answerIndex ?? 0]}`)
+console.log(`    Semantic Topics: ${mediumResult?.semanticTopics?.join(", ")}`)
 
 // Test chain fallback
-const chainFallback = selectQuantitativeFallback(chainCtx, "medium", 11111)
+const chainResult = selectQuantitativeFallback(chainCtx, "medium", 11111)
+const chainFallback = chainResult?.draft
 console.log(`  Medium chain fallback:`)
 console.log(`    Template: ${chainFallback?.templateId}`)
 console.log(`    Prompt: ${chainFallback?.prompt}`)
 console.log(`    Format: ${chainFallback?.format}`)
 console.log(`    Answer: ${chainFallback?.answerValue ?? chainFallback?.choices?.[chainFallback?.answerIndex ?? 0]}`)
+console.log(`    Semantic Topics: ${chainResult?.semanticTopics?.join(", ")}`)
 
 console.log()
 
-// Test 8: Test deduplication
-console.log("Test 8: Deduplication")
+// Test 8: Test deduplication (both prompt and semantic topic)
+console.log("Test 8: Deduplication (prompt and semantic topic)")
 
 const usedPrompts = new Set<string>()
+const usedSemanticTopics = new Set<string>()
 const ctx = createMockProtocolContext()
 
 console.log("  Selecting 5 fallbacks with deduplication:")
 for (let i = 0; i < 5; i++) {
-  const fallback = selectQuantitativeFallback(ctx, "easy", 10000 + i, usedPrompts)
-  if (fallback) {
-    console.log(`    ${i + 1}. ${fallback.prompt.substring(0, 60)}...`)
-    usedPrompts.add(fallback.prompt)
+  const result = selectQuantitativeFallback(ctx, "easy", 10000 + i, usedPrompts, usedSemanticTopics)
+  if (result) {
+    console.log(`    ${i + 1}. ${result.draft.prompt.substring(0, 50)}... [${result.semanticTopics.join(", ")}]`)
+    usedPrompts.add(result.draft.prompt)
+    for (const topic of result.semanticTopics) {
+      usedSemanticTopics.add(topic)
+    }
   }
 }
 

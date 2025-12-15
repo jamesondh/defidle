@@ -15,6 +15,8 @@ import type { ChainPoolEntry } from "@/lib/types/pools"
 export class C8_30DayDirection extends ChainTemplate {
   id = "C8_30D_DIRECTION"
   name = "30-Day Direction"
+  // Asks about TVL trend over time
+  semanticTopics = ["tvl_trend"]
 
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isChainContext(ctx)) return false

@@ -22,14 +22,14 @@
       "choices": [
         "Bitcoin",
         "Energi",
-        "Bitcoincash",
+        "CosmosHub",
         "Naka",
         "Vite",
-        "CosmosHub"
+        "Tron"
       ],
       "answerIndex": 0,
       "explanation": "Bitcoin, represented by the token symbol BTC, ranks 3rd in total value locked (TVL) with an estimated range of $5B to $10B and is associated with 152 different protocols.",
-      "difficulty": "medium",
+      "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc6",
@@ -42,99 +42,98 @@
     {
       "qid": "q2",
       "slot": "B",
-      "templateId": "C2_CHAIN_COMPARISON",
+      "templateId": "C8_30D_DIRECTION",
       "format": "ab",
-      "prompt": "Which chain has higher TVL?",
+      "prompt": "Over the last 30 days, did Bitcoin's TVL increase or decrease?",
       "choices": [
-        "Solana",
-        "Bitcoin"
+        "Increased",
+        "Decreased"
       ],
-      "answerIndex": 0,
-      "explanation": "Solana has a total value locked (TVL) of $8.5B, surpassing Bitcoin's TVL of $6.9B by a margin of 18%. This indicates that Solana currently has more funds locked in its DeFi ecosystem compared to Bitcoin.",
-      "difficulty": "easy",
+      "answerIndex": 1,
+      "explanation": "Bitcoin's total value locked (TVL) decreased from $7.0B to $6.7B, reflecting a 5% decline.",
+      "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "ab",
         "familiarityRankBucket": "top_10",
-        "margin": 0.18301672854410267,
+        "margin": 0.054801860801340314,
         "volatility": null
       },
-      "difficultyScore": 0.2649860595465811
+      "difficultyScore": 0.3718317826655497
     },
     {
       "qid": "q3",
       "slot": "C",
-      "templateId": "C9_DISTANCE_FROM_ATH",
+      "templateId": "C11_TOP_PROTOCOL_TVL",
       "format": "mc4",
-      "prompt": "How far is Bitcoin from its all-time high TVL?",
+      "prompt": "Which protocol has the most TVL on Bitcoin?",
       "choices": [
-        "At ATH",
-        "Within 10%",
-        "10-30% below",
-        "30-60% below",
-        ">60% below"
+        "Binance Bitcoin",
+        "Babylon Protocol",
+        "Binance CEX",
+        "Gemini"
       ],
       "answerIndex": 2,
-      "explanation": "Bitcoin's current total value locked (TVL) is $6.6B, which is 27% below its all-time high (ATH) of $9.1B reached in October 2025, placing it in the 10-30% below bucket.",
-      "difficulty": "medium",
+      "explanation": "On the Bitcoin blockchain, the top protocol by total value locked (TVL) is Binance CEX, with a TVL of $50.1B, accounting for 33% of the total market share. Other notable protocols include Gemini at $5.5B, Binance Bitcoin at $5.8B, and Babylon Protocol at $5.3B.",
+      "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_10",
-        "margin": 0.1410352625185951,
+        "margin": 0.7429705131881578,
         "volatility": null
       },
-      "difficultyScore": 0.35247061456783735
+      "difficultyScore": 0.22
     },
     {
       "qid": "q4",
       "slot": "D",
-      "templateId": "FALLBACK_CHAIN_TVL_ABOVE_5B",
+      "templateId": "FALLBACK_CHAIN_RANK_TOP_5",
       "format": "tf",
-      "prompt": "Bitcoin has more than $5B in total TVL.",
+      "prompt": "Bitcoin is ranked in the top 5 chains by TVL.",
       "choices": [
         "True",
         "False"
       ],
       "answerIndex": 0,
       "answerValue": true,
-      "explanation": "Bitcoin's total value locked (TVL) is $6.9B, which is above the $5B threshold. This indicates a significant amount of capital is currently utilized in Bitcoin-based DeFi applications.",
-      "difficulty": "hard",
+      "explanation": "Bitcoin is ranked 3rd among cryptocurrencies, placing it within the top 5 in terms of market capitalization. This ranking indicates its significant position in the overall crypto market.",
+      "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "tf",
         "familiarityRankBucket": "top_10",
-        "margin": 0.5,
+        "margin": 0.1,
         "volatility": 0
       },
-      "difficultyScore": 0.0775
+      "difficultyScore": 0.24416666666666664
     },
     {
       "qid": "q5",
       "slot": "E",
-      "templateId": "C7_CHAIN_TVL_BAND",
+      "templateId": "C10_PROTOCOL_COUNT",
       "format": "mc4",
-      "prompt": "Which TVL range fits Bitcoin?",
+      "prompt": "How many protocols are deployed on Bitcoin?",
       "choices": [
-        "$100M-$500M",
-        "$500M-$2B",
-        "$2B-$10B",
-        ">$10B"
+        "<50",
+        "50-100",
+        ">250",
+        "100-250"
       ],
-      "answerIndex": 2,
-      "explanation": "Bitcoin has a total value locked (TVL) of $6.9B, placing it in the TVL band of $2B-$10B and ranking it 3rd among DeFi assets.",
+      "answerIndex": 3,
+      "explanation": "Bitcoin has 152 protocols, placing it in the 100-250 count bucket. Examples of platforms utilizing Bitcoin include Binance CEX, OKX, Bitfinex, Bybit, and Robinhood.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_10",
-        "margin": 0.8787703000563865,
+        "margin": 0.9,
         "volatility": null
       },
       "difficultyScore": 0.22
     }
   ],
-  "generatedAt": "2025-12-15T20:28:55.186Z",
+  "generatedAt": "2025-12-15T22:22:47.729Z",
   "buildLog": [
     {
       "slot": "A",
@@ -147,9 +146,15 @@
     {
       "slot": "B",
       "template": "C2_CHAIN_COMPARISON",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_absolute"
+    },
+    {
+      "slot": "B",
+      "template": "C8_30D_DIRECTION",
       "format": "ab",
       "decision": "selected",
-      "score": 0.2649860595465811,
+      "score": 0.3718317826655497,
       "target": "easy"
     },
     {
@@ -177,46 +182,85 @@
       "slot": "C",
       "template": "C4_GROWTH_RANKING",
       "decision": "skip",
-      "reason": "prereq_failed"
+      "reason": "semantic_topic_covered:tvl_trend"
     },
     {
       "slot": "C",
       "template": "C9_DISTANCE_FROM_ATH",
-      "decision": "adjusted",
-      "originalFormat": "tf",
-      "newFormat": "mc4",
-      "score": 0.35247061456783735,
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_absolute"
+    },
+    {
+      "slot": "C",
+      "template": "C11_TOP_PROTOCOL_TVL",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.22,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "C11_TOP_PROTOCOL_TVL",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.1675,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "C12_CATEGORY_DOMINANCE",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.22,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "C11_TOP_PROTOCOL_TVL",
+      "format": "mc4",
+      "decision": "selected",
+      "reason": "close_enough",
+      "score": 0.22,
       "target": "medium"
     },
     {
       "slot": "D",
       "template": "C3_ATH_TIMING",
-      "decision": "skip",
-      "reason": "semantic_topic_covered:ath_history"
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.19833333333333333,
+      "target": "hard"
     },
     {
       "slot": "D",
       "template": "C4_GROWTH_RANKING",
       "decision": "skip",
-      "reason": "prereq_failed"
+      "reason": "semantic_topic_covered:tvl_trend"
     },
     {
       "slot": "D",
       "template": "C9_DISTANCE_FROM_ATH",
       "decision": "skip",
-      "reason": "already_used"
+      "reason": "semantic_topic_covered:tvl_absolute"
     },
     {
       "slot": "D",
       "template": "C11_TOP_PROTOCOL_TVL",
       "decision": "skip",
-      "reason": "prereq_failed"
+      "reason": "already_used"
     },
     {
       "slot": "D",
       "template": "C12_CATEGORY_DOMINANCE",
-      "decision": "skip",
-      "reason": "prereq_failed"
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.22,
+      "target": "hard"
     },
     {
       "slot": "D",
@@ -239,17 +283,29 @@
       "slot": "E",
       "template": "C4_GROWTH_RANKING",
       "decision": "skip",
-      "reason": "prereq_failed"
+      "reason": "semantic_topic_covered:tvl_trend"
     },
     {
       "slot": "E",
       "template": "C2_CHAIN_COMPARISON",
       "decision": "skip",
-      "reason": "already_used"
+      "reason": "semantic_topic_covered:tvl_absolute"
     },
     {
       "slot": "E",
       "template": "C7_CHAIN_TVL_BAND",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_absolute"
+    },
+    {
+      "slot": "E",
+      "template": "C8_30D_DIRECTION",
+      "decision": "skip",
+      "reason": "already_used"
+    },
+    {
+      "slot": "E",
+      "template": "C10_PROTOCOL_COUNT",
       "format": "mc4",
       "decision": "selected",
       "score": 0.22,

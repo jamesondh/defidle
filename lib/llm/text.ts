@@ -21,6 +21,7 @@ import {
   generateFallbackExplanation,
   generateSimpleFallback,
 } from "./fallbacks"
+import { computeDifficulty, estimateTarget } from "@/lib/generation/difficulty"
 
 // =============================================================================
 // Types
@@ -195,6 +196,10 @@ export async function generateAllQuestionText(
 
     const result = await generateQuestionExplanation(draft, ctx, slot, options)
 
+    // Compute actual difficulty from signals, not from slot target
+    const difficultyScore = computeDifficulty(draft.signals)
+    const actualDifficulty = estimateTarget(difficultyScore)
+    
     const question: Question = {
       qid: `q${i + 1}`,
       slot,
@@ -207,7 +212,7 @@ export async function generateAllQuestionText(
       answerValue: draft.answerValue,
       answerOrder: draft.answerOrder,
       explanation: result.explanation,
-      difficulty: getSlotDifficulty(slot),
+      difficulty: actualDifficulty, // Now based on actual score, not slot target
       llmFallback: result.llmFallback,
       signals: draft.signals,
     }
@@ -237,20 +242,6 @@ export async function generateAllQuestionText(
 // =============================================================================
 // Helpers
 // =============================================================================
-
-/**
- * Map slot to difficulty target
- */
-function getSlotDifficulty(slot: string): "easy" | "medium" | "hard" {
-  const slotDifficulties: Record<string, "easy" | "medium" | "hard"> = {
-    A: "medium",
-    B: "easy",
-    C: "medium",
-    D: "hard",
-    E: "easy",
-  }
-  return slotDifficulties[slot] || "medium"
-}
 
 /**
  * Check if LLM is configured and ready

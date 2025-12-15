@@ -20,6 +20,8 @@ interface ChainGrowth {
 export class C4ChainGrowthRanking extends ChainTemplate {
   id = "C4_GROWTH_RANKING"
   name = "Chain Growth Ranking"
+  // Asks about TVL growth over time (trend)
+  semanticTopics = ["tvl_trend"]
 
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isChainContext(ctx)) return false

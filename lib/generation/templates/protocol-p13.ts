@@ -14,7 +14,8 @@ import type { ProtocolPoolEntry } from "@/lib/types/pools"
 export class P13TVLRankComparison extends ProtocolTemplate {
   id = "P13_TVL_RANK_COMPARISON"
   name = "TVL Rank Comparison"
-  semanticTopics = ["tvl_comparison"]
+  // Reveals relative TVL rankings (may mention absolute values in explanation)
+  semanticTopics = ["tvl_absolute"]
 
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isProtocolContext(ctx)) return false

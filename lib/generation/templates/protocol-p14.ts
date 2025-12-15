@@ -15,7 +15,8 @@ import { formatNumber } from "../distractors"
 export class P14CategoryLeaderComparison extends ProtocolTemplate {
   id = "P14_CATEGORY_LEADER"
   name = "Category Leader Comparison"
-  semanticTopics = ["tvl_comparison"]
+  // Reveals TVL values when comparing
+  semanticTopics = ["tvl_absolute"]
 
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isProtocolContext(ctx)) return false

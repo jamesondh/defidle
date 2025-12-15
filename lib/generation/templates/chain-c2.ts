@@ -15,6 +15,8 @@ import type { ChainPoolEntry } from "@/lib/types/pools"
 export class C2ChainTVLComparison extends ChainTemplate {
   id = "C2_CHAIN_COMPARISON"
   name = "Chain TVL Comparison"
+  // Reveals absolute TVL values in the explanation
+  semanticTopics = ["tvl_absolute"]
 
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isChainContext(ctx)) return false

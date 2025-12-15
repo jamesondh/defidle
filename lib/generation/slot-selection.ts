@@ -60,6 +60,14 @@ function tryAdjustDifficulty(
 }
 
 /**
+ * Result of fallback selection
+ */
+interface FallbackResult {
+  draft: QuestionDraft
+  semanticTopics: string[]
+}
+
+/**
  * Generate a safe fallback question for a slot
  * 
  * This function now delegates to the quantitative fallback system which provides
@@ -79,42 +87,77 @@ function safeFallback(
   ctx: TemplateContext,
   seed: number,
   usedPrompts?: Set<string>,
+  usedSemanticTopics?: Set<string>,
   target?: DifficultyTarget
-): QuestionDraft | null {
+): FallbackResult | null {
   // Use the new quantitative fallback system
-  const draft = selectQuantitativeFallback(
+  const result = selectQuantitativeFallback(
     ctx,
     target ?? getSlotDifficultyTarget(slot),
     seed,
-    usedPrompts
+    usedPrompts,
+    usedSemanticTopics
   )
 
-  if (draft) {
+  if (result) {
     // Add slot info to build notes
-    draft.buildNotes.push(`Selected for slot ${slot}`)
-    return draft
+    result.draft.buildNotes.push(`Selected for slot ${slot}`)
+    return result
   }
 
   // Ultimate fallback if even quantitative fallbacks fail (should be rare)
   // This only happens if all fallbacks fail their canUse check
+  // Generate a unique generic question variant
+  const genericVariants = [
+    {
+      prompt: `${ctx.topic.name} is tracked on DefiLlama.`,
+      explainData: { name: ctx.topic.name, type: ctx.episodeType, fact: "tracked" },
+    },
+    {
+      prompt: `${ctx.topic.name} has a publicly available TVL on DefiLlama.`,
+      explainData: { name: ctx.topic.name, type: ctx.episodeType, fact: "tvl_available" },
+    },
+    {
+      prompt: `DefiLlama tracks ${ctx.topic.name}'s total value locked.`,
+      explainData: { name: ctx.topic.name, type: ctx.episodeType, fact: "tvl_tracked" },
+    },
+    {
+      prompt: `${ctx.topic.name} appears in DefiLlama's ${ctx.episodeType} rankings.`,
+      explainData: { name: ctx.topic.name, type: ctx.episodeType, fact: "ranked" },
+    },
+    {
+      prompt: `${ctx.topic.name} is listed as a ${ctx.episodeType} on DefiLlama.`,
+      explainData: { name: ctx.topic.name, type: ctx.episodeType, fact: "listed" },
+    },
+  ]
+
+  // Find first unused variant
+  const variant = genericVariants.find(v => !usedPrompts?.has(v.prompt))
+  
+  if (!variant) {
+    // All variants used - this shouldn't happen in practice (5 slots, 5 variants)
+    // Return null to indicate complete fallback exhaustion
+    return null
+  }
+
   return {
-    templateId: "FALLBACK_GENERIC",
-    format: "tf" as QuestionFormat,
-    prompt: `${ctx.topic.name} is tracked on DefiLlama.`,
-    choices: ["True", "False"],
-    answerIndex: 0,
-    answerValue: true,
-    signals: {
-      format: "tf",
-      familiarityRankBucket: ctx.derived.tvlRankBucket ?? "top_100",
-      margin: 1.0,
-      volatility: 0,
+    draft: {
+      templateId: "FALLBACK_GENERIC",
+      format: "tf" as QuestionFormat,
+      prompt: variant.prompt,
+      choices: ["True", "False"],
+      answerIndex: 0,
+      answerValue: true,
+      signals: {
+        format: "tf",
+        familiarityRankBucket: ctx.derived.tvlRankBucket ?? "top_100",
+        margin: 1.0,
+        volatility: 0,
+      },
+      explainData: variant.explainData,
+      buildNotes: [`Used generic fallback for slot ${slot} (all quantitative fallbacks failed)`],
     },
-    explainData: {
-      name: ctx.topic.name,
-      type: ctx.episodeType,
-    },
-    buildNotes: [`Used generic fallback for slot ${slot} (all quantitative fallbacks failed)`],
+    semanticTopics: [], // Generic fallback has no semantic topics
   }
 }
 
@@ -304,10 +347,13 @@ export function selectQuestionForSlot(
     reason: "no_template_matched",
   })
 
+  const fallbackResult = safeFallback(slot, ctx, seed, usedPrompts, usedSemanticTopics, target)
+  
   return {
-    draft: safeFallback(slot, ctx, seed, usedPrompts, target),
+    draft: fallbackResult?.draft ?? null,
     logEntries,
-    // Fallback questions don't have semantic topics
+    // Fallbacks now have semantic topics too
+    selectedTopics: fallbackResult?.semanticTopics,
   }
 }
 

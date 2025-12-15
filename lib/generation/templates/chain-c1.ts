@@ -15,6 +15,8 @@ import type { ChainPoolEntry } from "@/lib/types/pools"
 export class C1ChainFingerprint extends ChainTemplate {
   id = "C1_FINGERPRINT"
   name = "Chain Fingerprint Guess"
+  // Note: Fingerprint questions reveal TVL bands as clues, so they cover the tvl_absolute topic
+  semanticTopics = ["tvl_absolute"]
 
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isChainContext(ctx)) return false

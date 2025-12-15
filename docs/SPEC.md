@@ -484,6 +484,24 @@ For hard slots (Slot D), the system **strongly prefers A/B comparison fallbacks*
 - Fallback selection prioritizes unused prompts to prevent duplicates
 - Post-balance pass detects and replaces any duplicate prompts that slip through
 
+**Semantic Topic Deduplication:**
+
+Templates and fallbacks declare **semantic topics** that describe the underlying metric they reveal. The system prevents multiple questions from covering the same semantic topic within an episode.
+
+| Semantic Topic | Description | Templates |
+|----------------|-------------|-----------|
+| `tvl_absolute` | Reveals the topic's current TVL value | C1, C2, C7, C9, P1, P2, P3, P10, P13, TVL threshold fallbacks |
+| `tvl_trend` | Asks about TVL changes over time | P6, P15, trend fallbacks |
+| `tvl_rank` | Asks about TVL ranking | Rank-based fallbacks |
+| `ath_history` | Reveals ATH timing or distance | C3, C9, P4 |
+| `chain_count` | Asks about deployment breadth | Chain count fallbacks |
+
+This prevents semantically redundant episodes like the Bitcoin example where 4 out of 5 questions all revealed that Bitcoin has ~$6.9B TVL.
+
+**T/F Margin Validation (Hard Slots):**
+
+For hard slots (Slot D), T/F fallback questions with margins greater than 25% are filtered out. This prevents trivially easy questions like "Does Bitcoin have $5B TVL?" when Bitcoin has $6.9B (38% margin above threshold).
+
 See `lib/generation/quantitative-fallbacks.ts` for the full fallback pool implementation.
 
 #### Explanation Comparison Data
@@ -547,6 +565,18 @@ Each episode follows a **slot-based structure** with difficulty targeting:
 - **Slot E (Wrap-up)**: Easy-Medium — Insight or trend question
 
 Templates are assigned to slots based on prerequisite checks and difficulty scoring.
+
+#### Difficulty Labels
+
+The `difficulty` field on each question reflects the **actual computed difficulty score**, not the slot's target difficulty. This ensures labels accurately represent how hard a question is.
+
+| Score Range | Label | Characteristics |
+|-------------|-------|-----------------|
+| 0.00 - 0.35 | easy | Large margins, simple formats |
+| 0.35 - 0.65 | medium | Moderate margins, standard formats |
+| 0.65 - 1.00 | hard | Tight margins, complex formats |
+
+For example, if Slot D (hard target) receives a fallback question with score 0.08 due to template exhaustion, it will be labeled "easy" rather than "hard". This gives users accurate feedback about question difficulty.
 
 See `episode-assembly.md` for the slot matrix and difficulty system.
 

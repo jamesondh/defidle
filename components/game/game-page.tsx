@@ -25,6 +25,10 @@ import {
   getProgress,
   isGameComplete,
   getAnswer,
+  loadQuizResult,
+  saveQuizResult,
+  clearQuizResult,
+  restoreCompletedState,
   type GameState,
 } from "@/lib/client/game-state"
 import type { Episode } from "@/lib/types/episode"
@@ -57,6 +61,24 @@ export function GamePage({ date }: GamePageProps) {
     const result = await fetchEpisode(date)
 
     if (result.success) {
+      // Check for saved results in localStorage
+      const savedResult = loadQuizResult(date)
+      if (savedResult) {
+        const restoredState = restoreCompletedState(result.episode, savedResult)
+        if (restoredState) {
+          // Successfully restored completed state
+          setAppState({
+            status: "ready",
+            episode: result.episode,
+            gameState: restoredState,
+          })
+          return
+        }
+        // Episode ID mismatch - clear stale data and start fresh
+        clearQuizResult(date)
+      }
+
+      // No saved result or stale data - start new game
       const initialState = createGameState(result.episode)
       const startedState = startGame(initialState)
       setAppState({
@@ -106,6 +128,9 @@ export function GamePage({ date }: GamePageProps) {
   const handlePlayAgain = () => {
     if (appState.status !== "ready") return
 
+    // Clear saved results from localStorage
+    clearQuizResult(date)
+
     const initialState = createGameState(appState.episode)
     const startedState = startGame(initialState)
     setSelectedIndex(null)
@@ -128,6 +153,13 @@ export function GamePage({ date }: GamePageProps) {
       return () => clearTimeout(timer)
     }
   }, [selectedIndex, appState])
+
+  // Save results to localStorage when game completes
+  useEffect(() => {
+    if (appState.status === "ready" && isGameComplete(appState.gameState)) {
+      saveQuizResult(date, appState.gameState)
+    }
+  }, [appState, date])
 
   // Loading state
   if (appState.status === "loading") {
@@ -184,7 +216,7 @@ export function GamePage({ date }: GamePageProps) {
                   className="flex-1"
                 >
                   <CalendarDays className="mr-2 size-4" />
-                  Play Yesterday&apos;s Quiz
+                  Yesterday&apos;s Quiz
                 </Button>
                 <Button variant="outline" onClick={handlePlayAgain} className="flex-1">
                   <RotateCcw className="mr-2 size-4" />

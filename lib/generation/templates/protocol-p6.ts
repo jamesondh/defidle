@@ -17,7 +17,7 @@ import { createRng } from "../rng"
 export class P6TVLTrend extends ProtocolTemplate {
   id = "P6_TVL_TREND"
   name = "TVL Trend"
-  semanticTopics = ["tvl_trend_7d", "tvl_direction"]
+  semanticTopics = ["tvl_trend"]
 
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isProtocolContext(ctx)) return false

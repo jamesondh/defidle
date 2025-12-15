@@ -19,6 +19,8 @@ import { sumActualChainTvl } from "../chain-filter"
 export class P1ProtocolFingerprint extends ProtocolTemplate {
   id = "P1_FINGERPRINT"
   name = "Protocol Fingerprint Guess"
+  // Note: Fingerprint questions reveal TVL bands as clues, so they cover the tvl_absolute topic
+  semanticTopics = ["tvl_absolute"]
 
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isProtocolContext(ctx)) return false
