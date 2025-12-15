@@ -472,47 +472,71 @@ function selectQuestionForSlot(
 }
 ```
 
-### Diverse Fallback System
+### Quantitative Fallback System
 
-When no template can produce a valid question, the system uses a diverse pool of fallback questions:
+When no template can produce a valid question, the system uses a **quantitative fallback system** that generates substantive, data-driven questions instead of trivial "Is X a DeFi protocol?" type questions.
+
+**Key improvements:**
+- Questions produce variable True/False answers based on actual data
+- Supports both `tf` and `ab` formats for more engaging questions
+- Difficulty targeting (easy/medium) matches the slot requirements
+- Uses real TVL thresholds, trends, ranks, and comparisons
 
 ```typescript
-const PROTOCOL_FALLBACKS = [
-  { id: "protocol_is_defi", prompt: "Is {name} a DeFi protocol?" },
-  { id: "protocol_tvl_positive", prompt: "Does {name} have more than $1M in TVL?" },
-  { id: "protocol_top_100", prompt: "Is {name} ranked in the top 100 protocols by TVL?" },
-  { id: "protocol_tracked", prompt: "Is {name} tracked on DefiLlama?" },
-  { id: "protocol_multichain", prompt: "Is {name} deployed on more than one blockchain?" },
-]
+// Example quantitative fallback categories:
 
-const CHAIN_FALLBACKS = [
-  { id: "chain_is_blockchain", prompt: "Is {name} a blockchain network?" },
-  { id: "chain_has_defi", prompt: "Does {name} have DeFi protocols deployed on it?" },
-  { id: "chain_top_50", prompt: "Is {name} ranked in the top 50 chains by TVL?" },
-  { id: "chain_tracked", prompt: "Is {name} tracked on DefiLlama?" },
-  { id: "chain_tvl_positive", prompt: "Does {name} have more than $10M in total TVL?" },
-]
+// TVL Threshold Questions (variable answers based on actual TVL)
+{ id: "protocol_tvl_above_100m", prompt: "{name} has more than $100M in TVL." }
+{ id: "protocol_tvl_above_1b", prompt: "{name} has more than $1B in TVL." }
+{ id: "protocol_tvl_above_5b", prompt: "{name} has more than $5B in TVL." }
 
-function safeFallback(
-  slot: string,
+// Trend-Based Questions (uses change7d data)
+{ id: "protocol_tvl_increased_7d", prompt: "{name}'s TVL increased over the past 7 days." }
+{ id: "protocol_tvl_up_5pct", prompt: "{name}'s TVL increased by more than 5% over the past week." }
+
+// Rank-Based Questions
+{ id: "protocol_rank_top_10", prompt: "{name} is ranked in the top 10 protocols by TVL." }
+{ id: "protocol_rank_top_25", prompt: "{name} is ranked in the top 25 protocols by TVL." }
+
+// Chain Count Questions
+{ id: "protocol_chains_above_5", prompt: "{name} is deployed on more than 5 blockchains." }
+
+// A/B Comparison Questions (uses nearbyProtocols data)
+{ id: "protocol_compare_nearby", format: "ab", prompt: "Which protocol has higher TVL?" }
+{ id: "protocol_compare_category", format: "ab", prompt: "Which {category} protocol has higher TVL?" }
+
+function selectQuantitativeFallback(
   ctx: TemplateContext,
+  target: DifficultyTarget,
   seed: number,
   usedPrompts?: Set<string>
 ): QuestionDraft | null {
-  const fallbacks = ctx.episodeType === "protocol" ? PROTOCOL_FALLBACKS : CHAIN_FALLBACKS
+  // Get fallbacks matching target difficulty (easy or medium)
+  const fallbacks = getFallbacksForTarget(ctx.episodeType, target)
   
-  // Filter to fallbacks that haven't been used
+  // Filter to usable, unused fallbacks
   const available = fallbacks.filter(fb => {
-    if (fb.canUse && !fb.canUse(ctx)) return false
+    if (!fb.canUse(ctx)) return false
     const prompt = fb.getPrompt(ctx)
     return !usedPrompts?.has(prompt)
   })
   
-  // Select deterministically from available pool
-  const pool = available.length > 0 ? available : fallbacks
-  const index = Math.floor(createRng(seed)() * pool.length)
-  return createFallbackQuestion(pool[index], ctx)
+  // Deterministically select based on seed
+  const rng = createRng(seed)
+  const selected = available[Math.floor(rng() * available.length)]
+  
+  return createFallbackQuestion(selected, ctx)
 }
+```
+
+**Answer determination examples:**
+- `protocol_tvl_above_1b`: `ctx.derived.currentTvl > 1_000_000_000`
+- `protocol_tvl_increased_7d`: `ctx.derived.change7d > 0`
+- `protocol_rank_top_25`: `ctx.derived.tvlRank <= 25`
+- `protocol_chains_above_5`: `ctx.derived.chainCount > 5`
+- `protocol_compare_nearby`: compares `currentTvl` to `nearbyProtocols[0].tvl`
+
+See `lib/generation/quantitative-fallbacks.ts` for the complete implementation.
 ```
 
 ### Post-Balance Pass

@@ -21,7 +21,7 @@ export { p13TVLRankComparison, P13TVLRankComparison } from "./protocol-p13"
 export { p14CategoryLeaderComparison, P14CategoryLeaderComparison } from "./protocol-p14"
 export { p15RecentTVLDirection, P15RecentTVLDirection } from "./protocol-p15"
 
-// Chain Templates (C1-C9)
+// Chain Templates (C1-C12)
 export { c1ChainFingerprint, C1ChainFingerprint } from "./chain-c1"
 export { c2ChainTVLComparison, C2ChainTVLComparison } from "./chain-c2"
 export { c3ChainATHTiming, C3ChainATHTiming } from "./chain-c3"
@@ -31,6 +31,9 @@ export { c6TopDEXByVolume, C6TopDEXByVolume } from "./chain-c6"
 export { c7ChainTVLBand, C7ChainTVLBand } from "./chain-c7"
 export { c8_30DayDirection, C8_30DayDirection } from "./chain-c8"
 export { c9DistanceFromATH, C9DistanceFromATH } from "./chain-c9"
+export { c10ProtocolCount, C10ProtocolCount } from "./chain-c10"
+export { c11TopProtocolByTVL, C11TopProtocolByTVL } from "./chain-c11"
+export { c12CategoryDominance, C12CategoryDominance } from "./chain-c12"
 
 import type { Template, TemplateMatrix } from "@/lib/types/template"
 
@@ -51,7 +54,7 @@ import { p13TVLRankComparison } from "./protocol-p13"
 import { p14CategoryLeaderComparison } from "./protocol-p14"
 import { p15RecentTVLDirection } from "./protocol-p15"
 
-// Chain Templates (C1-C9)
+// Chain Templates (C1-C12)
 import { c1ChainFingerprint } from "./chain-c1"
 import { c2ChainTVLComparison } from "./chain-c2"
 import { c3ChainATHTiming } from "./chain-c3"
@@ -61,6 +64,9 @@ import { c6TopDEXByVolume } from "./chain-c6"
 import { c7ChainTVLBand } from "./chain-c7"
 import { c8_30DayDirection } from "./chain-c8"
 import { c9DistanceFromATH } from "./chain-c9"
+import { c10ProtocolCount } from "./chain-c10"
+import { c11TopProtocolByTVL } from "./chain-c11"
+import { c12CategoryDominance } from "./chain-c12"
 
 /**
  * All protocol templates indexed by ID
@@ -96,6 +102,9 @@ export const CHAIN_TEMPLATES: Record<string, Template> = {
   C7_CHAIN_TVL_BAND: c7ChainTVLBand,
   C8_30D_DIRECTION: c8_30DayDirection,
   C9_DISTANCE_FROM_ATH: c9DistanceFromATH,
+  C10_PROTOCOL_COUNT: c10ProtocolCount,
+  C11_TOP_PROTOCOL_TVL: c11TopProtocolByTVL,
+  C12_CATEGORY_DOMINANCE: c12CategoryDominance,
 }
 
 /**
@@ -136,17 +145,20 @@ export const PROTOCOL_MATRIX: TemplateMatrix = {
  * When fees/DEX data is unavailable, the algorithm can fall back to comparison
  * and growth templates which only require basic chain data.
  *
- * New templates integrated:
+ * Template slot assignments:
  * - C7 (Chain TVL Band): Good for slot E (wrap-up, general knowledge)
  * - C8 (30-Day Direction): Good for slots B, E (easy trend question)
  * - C9 (Distance from ATH): Good for slots C, D (medium-hard analysis)
+ * - C10 (Protocol Count): Good for slots B, E (easy, uses bucket format)
+ * - C11 (Top Protocol by TVL): Good for slots B, C, D (similar to C5/C6)
+ * - C12 (Category Dominance): Good for slots C, D (requires category knowledge)
  */
 export const CHAIN_MATRIX: TemplateMatrix = {
   A: [c1ChainFingerprint],
-  B: [c2ChainTVLComparison, c8_30DayDirection],
-  C: [c5TopProtocolByFees, c6TopDEXByVolume, c3ChainATHTiming, c4ChainGrowthRanking, c9DistanceFromATH],
-  D: [c3ChainATHTiming, c4ChainGrowthRanking, c9DistanceFromATH],
-  E: [c6TopDEXByVolume, c5TopProtocolByFees, c4ChainGrowthRanking, c2ChainTVLComparison, c7ChainTVLBand, c8_30DayDirection],
+  B: [c2ChainTVLComparison, c8_30DayDirection, c10ProtocolCount, c11TopProtocolByTVL],
+  C: [c5TopProtocolByFees, c6TopDEXByVolume, c3ChainATHTiming, c4ChainGrowthRanking, c9DistanceFromATH, c11TopProtocolByTVL, c12CategoryDominance],
+  D: [c3ChainATHTiming, c4ChainGrowthRanking, c9DistanceFromATH, c11TopProtocolByTVL, c12CategoryDominance],
+  E: [c6TopDEXByVolume, c5TopProtocolByFees, c4ChainGrowthRanking, c2ChainTVLComparison, c7ChainTVLBand, c8_30DayDirection, c10ProtocolCount],
 }
 
 /**

@@ -62,10 +62,100 @@ export const EXPLANATION_TEMPLATES: Record<string, string> = {
     "{name}'s TVL {direction} by {changePercent}% over the past 30 days, from {pastTvl} to {currentTvl}.",
   C9_DISTANCE_FROM_ATH:
     "{name} is currently {distancePercent}% below its all-time high TVL of {athValue} reached in {athMonth}.",
+  C10_PROTOCOL_COUNT:
+    "{chain} has {protocolCount} protocols deployed, placing it in the {countBucket} protocols range.",
+  C11_TOP_PROTOCOL_TVL:
+    "{topProtocol} leads {chain} in TVL with {topTvl}, capturing {sharePercent}% of chain TVL. Other top protocols include {comparison}.",
+  C12_CATEGORY_DOMINANCE:
+    "{topCategory} dominates {chain} with {topCategoryTvl} in TVL ({sharePercent}%), across {protocolCount} protocols. Other categories include {comparison}.",
 
   // Generic fallback - now more specific based on available data
   FALLBACK:
     "{name} is a {type} tracked on DefiLlama.",
+  FALLBACK_GENERIC:
+    "{name} is a {type} tracked on DefiLlama.",
+
+  // ==========================================================================
+  // Quantitative Fallback Templates
+  // ==========================================================================
+  // These provide explanations for the new data-driven fallback questions
+  // that use actual TVL thresholds, trends, ranks, and comparisons.
+
+  // TVL Threshold Questions
+  FALLBACK_PROTOCOL_TVL_ABOVE_100M:
+    "{name} has {tvl} in TVL, which is {comparison} the $100M threshold.",
+  FALLBACK_PROTOCOL_TVL_ABOVE_500M:
+    "{name} has {tvl} in TVL, which is {comparison} the $500M threshold.",
+  FALLBACK_PROTOCOL_TVL_ABOVE_1B:
+    "{name} has {tvl} in TVL, which is {comparison} the $1B threshold.",
+  FALLBACK_PROTOCOL_TVL_ABOVE_5B:
+    "{name} has {tvl} in TVL, which is {comparison} the $5B threshold.",
+
+  // Trend Questions (Protocol)
+  FALLBACK_PROTOCOL_TVL_INCREASED_7D:
+    "{name}'s TVL {direction} by {change} over the past 7 days, reaching {tvl}.",
+  FALLBACK_PROTOCOL_TVL_DECREASED_7D:
+    "{name}'s TVL {direction} by {change} over the past 7 days, reaching {tvl}.",
+  FALLBACK_PROTOCOL_TVL_UP_5PCT:
+    "{name}'s TVL changed by {change} over the past week, which {comparison} the 5% threshold.",
+  FALLBACK_PROTOCOL_TVL_DOWN_5PCT:
+    "{name}'s TVL changed by {change} over the past week, which {comparison} the 5% decline threshold.",
+
+  // Rank Questions (Protocol)
+  FALLBACK_PROTOCOL_RANK_TOP_10:
+    "{name} is ranked #{rank} by TVL, which is {comparison} the top 10.",
+  FALLBACK_PROTOCOL_RANK_TOP_25:
+    "{name} is ranked #{rank} by TVL, which is {comparison} the top 25.",
+  FALLBACK_PROTOCOL_RANK_TOP_50:
+    "{name} is ranked #{rank} by TVL, which is {comparison} the top 50.",
+
+  // Chain Count Questions
+  FALLBACK_PROTOCOL_CHAINS_ABOVE_3:
+    "{name} is deployed on {chainCount} chains, which is {comparison} the 3-chain threshold.",
+  FALLBACK_PROTOCOL_CHAINS_ABOVE_5:
+    "{name} is deployed on {chainCount} chains, which is {comparison} the 5-chain threshold.",
+  FALLBACK_PROTOCOL_CHAINS_ABOVE_10:
+    "{name} is deployed on {chainCount} chains, which is {comparison} the 10-chain threshold.",
+
+  // A/B Comparison Questions (Protocol)
+  FALLBACK_PROTOCOL_COMPARE_NEARBY:
+    "{winner} has {winnerTvl} in TVL compared to {loser}'s {loserTvl}, a {marginPercent}% difference.",
+  FALLBACK_PROTOCOL_COMPARE_CATEGORY:
+    "In the {category} category, {winner} has {winnerTvl} in TVL compared to {loser}'s {loserTvl}.",
+
+  // Chain TVL Threshold Questions
+  FALLBACK_CHAIN_TVL_ABOVE_100M:
+    "{name} has {tvl} in total TVL, which is {comparison} the $100M threshold.",
+  FALLBACK_CHAIN_TVL_ABOVE_500M:
+    "{name} has {tvl} in total TVL, which is {comparison} the $500M threshold.",
+  FALLBACK_CHAIN_TVL_ABOVE_1B:
+    "{name} has {tvl} in total TVL, which is {comparison} the $1B threshold.",
+  FALLBACK_CHAIN_TVL_ABOVE_5B:
+    "{name} has {tvl} in total TVL, which is {comparison} the $5B threshold.",
+  FALLBACK_CHAIN_TVL_ABOVE_10B:
+    "{name} has {tvl} in total TVL, which is {comparison} the $10B threshold.",
+
+  // Trend Questions (Chain)
+  FALLBACK_CHAIN_TVL_INCREASED_30D:
+    "{name}'s TVL {direction} by {change} over the past 30 days, reaching {tvl}.",
+  FALLBACK_CHAIN_TVL_DECREASED_30D:
+    "{name}'s TVL {direction} by {change} over the past 30 days, reaching {tvl}.",
+  FALLBACK_CHAIN_TVL_UP_10PCT:
+    "{name}'s TVL changed by {change} over the past month, which {comparison} the 10% threshold.",
+  FALLBACK_CHAIN_TVL_DOWN_10PCT:
+    "{name}'s TVL changed by {change} over the past month, which {comparison} the 10% decline threshold.",
+
+  // Rank Questions (Chain)
+  FALLBACK_CHAIN_RANK_TOP_5:
+    "{name} is ranked #{rank} by TVL, which is {comparison} the top 5 chains.",
+  FALLBACK_CHAIN_RANK_TOP_10:
+    "{name} is ranked #{rank} by TVL, which is {comparison} the top 10 chains.",
+  FALLBACK_CHAIN_RANK_TOP_20:
+    "{name} is ranked #{rank} by TVL, which is {comparison} the top 20 chains.",
+
+  // A/B Comparison Questions (Chain)
+  FALLBACK_CHAIN_COMPARE_NEARBY:
+    "{winner} has {winnerTvl} in TVL compared to {loser}'s {loserTvl}, a {marginPercent}% difference.",
 }
 
 // =============================================================================
@@ -174,6 +264,40 @@ export function generateSimpleFallback(
     C7_CHAIN_TVL_BAND: "chain TVL size category",
     C8_30D_DIRECTION: "30-day TVL direction",
     C9_DISTANCE_FROM_ATH: "distance from all-time high",
+    C10_PROTOCOL_COUNT: "protocol deployment count",
+    C11_TOP_PROTOCOL_TVL: "top protocol by TVL",
+    C12_CATEGORY_DOMINANCE: "category TVL breakdown",
+    // Quantitative fallback descriptions
+    FALLBACK_PROTOCOL_TVL_ABOVE_100M: "TVL threshold check",
+    FALLBACK_PROTOCOL_TVL_ABOVE_500M: "TVL threshold check",
+    FALLBACK_PROTOCOL_TVL_ABOVE_1B: "TVL threshold check",
+    FALLBACK_PROTOCOL_TVL_ABOVE_5B: "TVL threshold check",
+    FALLBACK_PROTOCOL_TVL_INCREASED_7D: "weekly TVL trend",
+    FALLBACK_PROTOCOL_TVL_DECREASED_7D: "weekly TVL trend",
+    FALLBACK_PROTOCOL_TVL_UP_5PCT: "weekly TVL change",
+    FALLBACK_PROTOCOL_TVL_DOWN_5PCT: "weekly TVL change",
+    FALLBACK_PROTOCOL_RANK_TOP_10: "TVL ranking",
+    FALLBACK_PROTOCOL_RANK_TOP_25: "TVL ranking",
+    FALLBACK_PROTOCOL_RANK_TOP_50: "TVL ranking",
+    FALLBACK_PROTOCOL_CHAINS_ABOVE_3: "chain deployment count",
+    FALLBACK_PROTOCOL_CHAINS_ABOVE_5: "chain deployment count",
+    FALLBACK_PROTOCOL_CHAINS_ABOVE_10: "chain deployment count",
+    FALLBACK_PROTOCOL_COMPARE_NEARBY: "TVL comparison",
+    FALLBACK_PROTOCOL_COMPARE_CATEGORY: "category TVL comparison",
+    FALLBACK_CHAIN_TVL_ABOVE_100M: "chain TVL threshold",
+    FALLBACK_CHAIN_TVL_ABOVE_500M: "chain TVL threshold",
+    FALLBACK_CHAIN_TVL_ABOVE_1B: "chain TVL threshold",
+    FALLBACK_CHAIN_TVL_ABOVE_5B: "chain TVL threshold",
+    FALLBACK_CHAIN_TVL_ABOVE_10B: "chain TVL threshold",
+    FALLBACK_CHAIN_TVL_INCREASED_30D: "monthly TVL trend",
+    FALLBACK_CHAIN_TVL_DECREASED_30D: "monthly TVL trend",
+    FALLBACK_CHAIN_TVL_UP_10PCT: "monthly TVL change",
+    FALLBACK_CHAIN_TVL_DOWN_10PCT: "monthly TVL change",
+    FALLBACK_CHAIN_RANK_TOP_5: "chain TVL ranking",
+    FALLBACK_CHAIN_RANK_TOP_10: "chain TVL ranking",
+    FALLBACK_CHAIN_RANK_TOP_20: "chain TVL ranking",
+    FALLBACK_CHAIN_COMPARE_NEARBY: "chain TVL comparison",
+    FALLBACK_GENERIC: "DeFi metrics",
   }
 
   const description = templateDescriptions[templateId] || "DeFi metrics"

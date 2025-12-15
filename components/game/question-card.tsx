@@ -26,7 +26,7 @@ export function QuestionCard({
     if (!hasAnswered) {
       return selectedIndex === index ? "selected" : "default"
     }
-    
+
     // After answering
     if (index === question.answerIndex) {
       return "correct"

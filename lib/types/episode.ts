@@ -226,6 +226,17 @@ export interface FetchedData {
 }
 
 /**
+ * Simplified protocol/chain entry for comparison fallbacks
+ */
+export interface ComparisonEntry {
+  slug: string
+  name: string
+  tvl: number
+  rank: number
+  category?: string
+}
+
+/**
  * Derived metrics computed from fetched data
  */
 export interface DerivedMetrics {
@@ -256,6 +267,16 @@ export interface DerivedMetrics {
   chainAthValue?: number
   chainAthDate?: number
   chainAthMonth?: string
+
+  // Comparison data for quantitative fallbacks
+  /** Protocols within ±5 rank positions for TVL comparisons */
+  nearbyProtocols?: ComparisonEntry[]
+  /** Other protocols in the same category */
+  categoryProtocols?: ComparisonEntry[]
+  /** Chains within ±5 rank positions for TVL comparisons */
+  nearbyChains?: ComparisonEntry[]
+  /** Current TVL value (for threshold questions) */
+  currentTvl?: number
 }
 
 /**

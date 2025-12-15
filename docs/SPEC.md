@@ -274,7 +274,7 @@ Questions are generated from a fixed set of **templates**. Each template:
 
 See `question-templates.md` for the template catalog.
 
-**Current templates:** P1-P15 (protocol) and C1-C9 (chain) — 24 templates total.
+**Current templates:** P1-P15 (protocol) and C1-C12 (chain) — 27 templates total.
 
 **Single-chain friendly templates (P13-P15):** These templates work well for protocols deployed on only one chain, reducing FALLBACK frequency:
 - P13: TVL Rank Comparison — compare to similar protocols by TVL
@@ -445,26 +445,43 @@ function generateFallbackExplanation(
 
 #### Question Fallback Diversity
 
-When templates fail prerequisite checks (e.g., missing fees data, insufficient chain support), the system falls back to simple true/false questions. To avoid repetition and maintain engagement, the fallback system uses a **diverse pool of fallback questions**:
+When templates fail prerequisite checks (e.g., missing fees data, insufficient chain support), the system falls back to **quantitative fallback questions**. Unlike trivial yes/no questions, these fallbacks use real data to create substantive questions with variable answers.
 
-**Protocol fallbacks:**
-- "Is {name} a DeFi protocol?"
-- "Does {name} have more than $1M in TVL?"
-- "Is {name} ranked in the top 100 protocols by TVL?"
-- "Is {name} tracked on DefiLlama?"
-- "Is {name} deployed on more than one blockchain?"
+**Quantitative Fallback Categories:**
 
-**Chain fallbacks:**
-- "Is {name} a blockchain network?"
-- "Does {name} have DeFi protocols deployed on it?"
-- "Is {name} ranked in the top 50 chains by TVL?"
-- "Is {name} tracked on DefiLlama?"
-- "Does {name} have more than $10M in total TVL?"
+1. **TVL Threshold Questions** - Compare against specific thresholds
+   - "Does {name} have more than $100M in TVL?"
+   - "Does {name} have more than $1B in TVL?"
+   - "Does {name} have more than $5B in TVL?"
+
+2. **Trend-Based Questions** - Use actual change data
+   - "{name}'s TVL increased over the past 7 days."
+   - "{name}'s TVL dropped by more than 5% over the past week."
+
+3. **Rank-Based Questions** - Use TVL rankings
+   - "{name} is ranked in the top 10 protocols by TVL."
+   - "{name} is ranked in the top 25 protocols by TVL."
+
+4. **Chain Count Questions** (protocols only)
+   - "{name} is deployed on more than 5 blockchains."
+   - "{name} is deployed on more than 10 blockchains."
+
+5. **A/B Comparison Questions** - Compare to nearby protocols/chains
+   - "Which protocol has higher TVL?" (comparing to ±5 rank positions)
+   - "Which {category} protocol has higher TVL?" (same category comparison)
+
+**Key Improvements Over Trivial Fallbacks:**
+- Questions produce **both True and False answers** depending on actual data
+- Difficulty is calibrated to match the target slot (easy, medium)
+- A/B format fallbacks provide more engaging comparisons
+- All answers are verifiable from DefiLlama data
 
 **Deduplication:**
 - The system tracks used prompts across all questions in an episode
 - Fallback selection prioritizes unused prompts to prevent duplicates
 - Post-balance pass detects and replaces any duplicate prompts that slip through
+
+See `lib/generation/quantitative-fallbacks.ts` for the full fallback pool implementation.
 
 #### Explanation Comparison Data
 
@@ -686,7 +703,7 @@ At ~2-5KB per episode, a full year is ~1-2MB. No immediate need for cleanup or e
 
 | File | Description |
 |------|-------------|
-| `question-templates.md` | Template catalog (P1-P12, C1-C9) |
+| `question-templates.md` | Template catalog (P1-P15, C1-C12) |
 | `episode-assembly.md` | Slot matrix, difficulty targeting, prerequisite checks |
 | `generation-algorithm.md` | Deterministic RNG, difficulty scoring, distractor selection |
 | `defillama-api.md` | DefiLlama API reference |

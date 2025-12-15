@@ -760,6 +760,94 @@ How close is a chain to its all-time high TVL?
 
 ---
 
+### C10: Protocol Count
+
+How many protocols are deployed on a given chain?
+
+**Prompt**: "How many protocols are deployed on {chain}?"
+
+**Choices**: `<50`, `50-100`, `100-250`, `>250`
+
+**API data**:
+- `GET /api/protocols` → filter by `chains` array containing target chain
+
+**Formats**: `mc4` (buckets)
+
+**Computed fields**:
+- `protocolCount`: count of protocols where `chains` includes target chain
+- `countBucket`: bucket the count falls into
+
+**Distractors**: Adjacent count buckets
+
+**Fallbacks**:
+- If count near bucket boundary (within 10%) → add margin note in explanation
+
+**Difficulty factors**:
+- Proximity to bucket boundary — counts near 50, 100, 250 are harder
+- Chain familiarity — major chains like Ethereum have obviously high counts
+
+---
+
+### C11: Top Protocol by TVL
+
+Which protocol has the most TVL on a given chain?
+
+**Prompt**: "Which protocol has the most TVL on {chain}?"
+
+**API data**:
+- `GET /api/protocols` → filter by chain, use `chainTvls[chain]` for ranking
+
+**Formats**: `mc4` → `ab` (top 2)
+
+**Computed fields**:
+- `topProtocol`: protocol with highest TVL on chain
+- `topProtocolTvl`: that protocol's TVL on the chain
+- `top2Margin`: margin between #1 and #2
+- `leaderboard`: sorted list of protocols by chain TVL
+
+**Distractors**: Other protocols from the chain's TVL leaderboard
+
+**Fallbacks**:
+- If fewer than 4 protocols with TVL data → use A/B (top 2)
+- If top2 margin < 10% → use A/B format
+
+**Difficulty factors**:
+- Top-2 margin — larger = easier
+- Protocol familiarity — well-known protocols easier to identify
+
+---
+
+### C12: Category Dominance
+
+What category has the most TVL on a given chain?
+
+**Prompt**: "What category has the most TVL on {chain}?"
+
+**API data**:
+- `GET /api/protocols` → filter by chain, aggregate `chainTvls[chain]` by `category`
+
+**Formats**: `mc4`
+
+**Computed fields**:
+- `topCategory`: category with highest aggregate TVL on chain
+- `topCategoryTvl`: total TVL in that category on the chain
+- `categoryTvls`: sorted map of category → TVL
+- `top2Margin`: margin between #1 and #2 categories
+
+**Distractors**: Other categories with significant TVL on the chain
+
+**Category grouping**: Minor categories (< 2% of chain TVL) are grouped into "Other" to reduce noise
+
+**Fallbacks**:
+- If fewer than 4 distinct categories → skip template
+- If top2 margin < 10% → add margin note in explanation
+
+**Difficulty factors**:
+- Top-2 margin — larger category dominance = easier
+- Chain ecosystem knowledge — knowing which categories dominate which chains
+
+---
+
 ## Template Summary
 
 | ID | Name | Primary Format | Fallback Format | Key Metric | Single-Chain Friendly |
@@ -788,3 +876,6 @@ How close is a chain to its all-time high TVL?
 | C7 | Chain TVL Band | mc4 | — | Chain TVL bucket | — |
 | C8 | 30-Day Direction | ab | tf | 30d TVL direction | — |
 | C9 | Distance from ATH | tf | mc4 | ATH proximity | — |
+| C10 | Protocol Count | mc4 | — | Protocol count bucket | — |
+| C11 | Top Protocol by TVL | mc4 | ab | Chain protocol leaderboard | — |
+| C12 | Category Dominance | mc4 | — | Category TVL aggregation | — |

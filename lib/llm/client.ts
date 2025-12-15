@@ -33,7 +33,7 @@ Rules:
 - Use plain language accessible to DeFi beginners
 - Format large numbers with appropriate units ($4.2B, not $4,200,000,000)
 - Do not include phrases like "The correct answer is..." or "According to data..."
-- Just state the fact directly`
+- Do not speculate on why the answer is correct, just state the fact directly`
 
 const REPHRASE_SYSTEM_PROMPT = `Rephrase the quiz question while keeping the exact same meaning.
 

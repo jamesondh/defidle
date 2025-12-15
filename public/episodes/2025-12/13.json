@@ -1,0 +1,256 @@
+{
+  "episodeId": "2025-12-13:chain:Stellar",
+  "dateUtc": "2025-12-13",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Stellar",
+    "name": "Stellar"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "TVL: $100M-$500M",
+        "Native token: XLM",
+        "30d trend: up >10%"
+      ],
+      "choices": [
+        "Berachain",
+        "Stellar",
+        "Unichain",
+        "Stargaze"
+      ],
+      "answerIndex": 1,
+      "explanation": "Stellar is a DeFi platform ranked 30th in total value locked (TVL), with a TVL ranging from $100M to $500M. It has 24 protocols and uses the token symbol XLM.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.33249999999999996
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "prompt": "Stellar has higher TVL than PulseChain.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Stellar has a total value locked (TVL) of $173M, surpassing PulseChain's TVL of $165M by a margin of 5%. This indicates that Stellar is currently more popular or has more funds committed in its ecosystem compared to PulseChain.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.04576072550547644,
+        "volatility": null
+      },
+      "difficultyScore": 0.3768660620787696
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C9_DISTANCE_FROM_ATH",
+      "format": "tf",
+      "prompt": "Stellar is currently within 10% of its all-time high TVL.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Stellar's current total value locked (TVL) is $171M, which is 5% below its all-time high (ATH) of $180M reached in December 2025, indicating it is within 10% of that peak.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.04779231967645136,
+        "volatility": null
+      },
+      "difficultyScore": 0.3751730669362905
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "FALLBACK_CHAIN_TVL_ABOVE_5B",
+      "format": "tf",
+      "prompt": "Stellar has more than $5B in total TVL.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "Stellar's total value locked (TVL) is $173M, which is significantly below the $5B threshold. This indicates that Stellar has not yet reached a high level of assets locked in its DeFi ecosystem.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0
+      },
+      "difficultyScore": 0.1275
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C7_CHAIN_TVL_BAND",
+      "format": "mc4",
+      "prompt": "Which TVL range fits Stellar?",
+      "choices": [
+        "<$100M",
+        "$100M-$500M",
+        "$500M-$2B",
+        "$2B-$10B"
+      ],
+      "answerIndex": 1,
+      "explanation": "Stellar has a total value locked (TVL) of $173M, placing it within the TVL band of $100M-$500M and ranking it 30th among DeFi projects.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.8415798148856943,
+        "volatility": null
+      },
+      "difficultyScore": 0.26999999999999996
+    }
+  ],
+  "generatedAt": "2025-12-15T14:52:09.967Z",
+  "buildLog": [
+    {
+      "slot": "A",
+      "template": "C1_FINGERPRINT",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.33249999999999996,
+      "target": "medium"
+    },
+    {
+      "slot": "B",
+      "template": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "decision": "selected",
+      "score": 0.3768660620787696,
+      "target": "easy"
+    },
+    {
+      "slot": "C",
+      "template": "C5_TOP_BY_FEES",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "C6_TOP_DEX",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "C3_ATH_TIMING",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "C4_GROWTH_RANKING",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "C9_DISTANCE_FROM_ATH",
+      "format": "tf",
+      "decision": "selected",
+      "score": 0.3751730669362905,
+      "target": "medium"
+    },
+    {
+      "slot": "D",
+      "template": "C3_ATH_TIMING",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "C4_GROWTH_RANKING",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "C9_DISTANCE_FROM_ATH",
+      "decision": "skip",
+      "reason": "already_used"
+    },
+    {
+      "slot": "D",
+      "template": "C11_TOP_PROTOCOL_TVL",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "C12_CATEGORY_DOMINANCE",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "decision": "fallback",
+      "reason": "no_template_matched"
+    },
+    {
+      "slot": "E",
+      "template": "C6_TOP_DEX",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "E",
+      "template": "C5_TOP_BY_FEES",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "E",
+      "template": "C4_GROWTH_RANKING",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "E",
+      "template": "C2_CHAIN_COMPARISON",
+      "decision": "skip",
+      "reason": "already_used"
+    },
+    {
+      "slot": "E",
+      "template": "C7_CHAIN_TVL_BAND",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.26999999999999996,
+      "target": "easy"
+    },
+    {
+      "decision": "post_balance",
+      "reason": "No hard questions in episode"
+    }
+  ]
+}

@@ -10,6 +10,7 @@ import type {
   FetchedData,
   DerivedMetrics,
   TemplateContext,
+  ComparisonEntry,
 } from "@/lib/types/episode"
 import type { ProtocolPoolEntry, ChainPoolEntry, ChainPool } from "@/lib/types/pools"
 
@@ -252,6 +253,46 @@ function computeProtocolMetrics(
     metrics.revToFeesRatio = metrics.revenue7d / metrics.fees7d
   }
 
+  // Store current TVL for threshold comparisons
+  metrics.currentTvl = currentTvl
+
+  // Compute nearby protocols for comparison fallbacks
+  if (data.protocolList && data.protocolList.length > 0) {
+    // Sort protocols by TVL descending
+    const sortedProtocols = [...data.protocolList]
+      .filter((p) => p.tvl && p.tvl > 0 && p.slug !== topic.slug)
+      .sort((a, b) => (b.tvl ?? 0) - (a.tvl ?? 0))
+
+    // Find protocols within ±5 rank positions
+    const topicRank = topic.tvlRank
+    const nearbyProtocols: ComparisonEntry[] = sortedProtocols
+      .map((p, idx) => ({
+        slug: p.slug,
+        name: p.name,
+        tvl: p.tvl ?? 0,
+        rank: idx + 1, // 1-indexed rank
+        category: p.category,
+      }))
+      .filter((p) => Math.abs(p.rank - topicRank) <= 5 && Math.abs(p.rank - topicRank) > 0)
+      .slice(0, 5) // Limit to 5 nearby protocols
+
+    metrics.nearbyProtocols = nearbyProtocols
+
+    // Find protocols in the same category
+    const categoryProtocols: ComparisonEntry[] = sortedProtocols
+      .filter((p) => p.category === topic.category && p.slug !== topic.slug)
+      .slice(0, 10)
+      .map((p, idx) => ({
+        slug: p.slug,
+        name: p.name,
+        tvl: p.tvl ?? 0,
+        rank: idx + 1, // Rank within category
+        category: p.category,
+      }))
+
+    metrics.categoryProtocols = categoryProtocols
+  }
+
   return metrics
 }
 
@@ -290,6 +331,49 @@ function computeChainMetrics(
   // Also compute protocol metrics for context
   metrics.tvlRank = topic.tvlRank
   metrics.tvlRankBucket = getRankBucket(topic.tvlRank)
+
+  // Store current TVL for threshold comparisons
+  metrics.currentTvl = topic.tvl
+
+  // Compute nearby chains for comparison fallbacks
+  if (data.chainPool && data.chainPool.length > 0) {
+    // Sort chains by TVL descending
+    const sortedChains = [...data.chainPool]
+      .filter((c) => c.tvl && c.tvl > 0 && c.slug !== topic.slug)
+      .sort((a, b) => (b.tvl ?? 0) - (a.tvl ?? 0))
+
+    // Find chains within ±5 rank positions
+    const topicRank = topic.tvlRank
+    const nearbyChains: ComparisonEntry[] = sortedChains
+      .map((c, idx) => ({
+        slug: c.slug,
+        name: c.name,
+        tvl: c.tvl ?? 0,
+        rank: idx + 1, // 1-indexed rank
+      }))
+      .filter((c) => Math.abs(c.rank - topicRank) <= 5 && Math.abs(c.rank - topicRank) > 0)
+      .slice(0, 5) // Limit to 5 nearby chains
+
+    metrics.nearbyChains = nearbyChains
+  } else if (data.chainList && data.chainList.length > 0) {
+    // Fallback to chainList if pool not available
+    const sortedChains = [...data.chainList]
+      .filter((c) => c.tvl && c.tvl > 0 && c.name !== topic.slug)
+      .sort((a, b) => (b.tvl ?? 0) - (a.tvl ?? 0))
+
+    const topicRank = topic.tvlRank
+    const nearbyChains: ComparisonEntry[] = sortedChains
+      .map((c, idx) => ({
+        slug: c.name, // chainList uses name as slug
+        name: c.name,
+        tvl: c.tvl ?? 0,
+        rank: idx + 1,
+      }))
+      .filter((c) => Math.abs(c.rank - topicRank) <= 5 && Math.abs(c.rank - topicRank) > 0)
+      .slice(0, 5)
+
+    metrics.nearbyChains = nearbyChains
+  }
 
   return metrics
 }
