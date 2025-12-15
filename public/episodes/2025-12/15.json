@@ -17,50 +17,48 @@
       "clues": [
         "Category: Lending",
         "Chains: single-chain",
-        "TVL: $1B-$5B",
+        "TVL: $500M-$1B",
         "7d change: up 1-10%"
       ],
       "choices": [
-        "Native Swap",
-        "ArbiCheems",
+        "Liquid Collective",
+        "Lombard LBTC",
         "Jupiter Lend",
-        "PulseGun AMM"
+        "Tornado Cash"
       ],
       "answerIndex": 2,
-      "explanation": "Jupiter Lend is a lending platform on the Solana blockchain with a total value locked (TVL) of $1.0B, placing it in the $1B-$5B range for TVL. It operates on a single blockchain, which is Solana.",
+      "explanation": "Jupiter Lend is a lending platform operating on the Solana blockchain, with a total value locked (TVL) of $990M, placing it within the $500M-$1B range. It currently supports one blockchain.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_100",
         "margin": null,
-        "volatility": 0.14676966918704215
+        "volatility": 0.14672827828209895
       },
-      "difficultyScore": 0.3170154503780563
+      "difficultyScore": 0.3170092417423148
     },
     {
       "qid": "q2",
       "slot": "B",
-      "templateId": "P7_CATEGORY",
-      "format": "mc4",
-      "prompt": "What category is Jupiter Lend?",
+      "templateId": "P13_TVL_RANK_COMPARISON",
+      "format": "ab",
+      "prompt": "Which protocol has higher TVL?",
       "choices": [
-        "Physical TCG",
-        "Canonical Bridge",
-        "CDP Manager",
-        "Lending"
+        "Raydium AMM",
+        "Jupiter Lend"
       ],
-      "answerIndex": 3,
-      "explanation": "Jupiter Lend is a lending platform in the DeFi space, currently ranked 78th in terms of total value locked (TVL). This ranking indicates its relative size and usage compared to other lending platforms.",
+      "answerIndex": 0,
+      "explanation": "Jupiter Lend ranks 78th in total value locked (TVL), while Raydium AMM ranks 60th, indicating that Raydium AMM has a higher TVL compared to Jupiter Lend.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
-        "format": "mc4",
+        "format": "ab",
         "familiarityRankBucket": "top_100",
-        "margin": 0.3,
+        "margin": 0.36,
         "volatility": null
       },
-      "difficultyScore": 0.26999999999999996
+      "difficultyScore": 0.2175
     },
     {
       "qid": "q3",
@@ -73,16 +71,16 @@
         "Increased"
       ],
       "answerIndex": 1,
-      "explanation": "Jupiter Lend's total value locked (TVL) has increased by 5.5% over the past 7 days, reaching a current TVL of $1.0B. This indicates growing interest and activity in the platform.",
+      "explanation": "Jupiter Lend has experienced an increase in total value locked (TVL) of 3.4% over the past 7 days, bringing its current TVL to $1.0B.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "ab",
         "familiarityRankBucket": "top_100",
-        "margin": 0.055136308109545284,
-        "volatility": 0.14676966918704215
+        "margin": 0.03422584181901773,
+        "volatility": 0.14672827828209895
       },
-      "difficultyScore": 0.4060685269534352
+      "difficultyScore": 0.42348770689313336
     },
     {
       "qid": "q4",
@@ -97,13 +95,13 @@
         "Maple"
       ],
       "answerIndex": 0,
-      "explanation": "In the lending category, Aave V3 is the leader with a total value locked (TVL) of $33.4B, while Jupiter Lend ranks 10th. Other notable platforms include Fluid Lending at $1.7B, Maple at $2.8B, and Morpho V1 at $5.7B.",
+      "explanation": "In the lending category, Aave V3 is the leader with a total value locked (TVL) of $32.5B, while Jupiter Lend ranks 11th. Other notable platforms include Fluid Lending at $1.7B, Maple at $2.8B, and Morpho V1 at $5.6B.",
       "difficulty": "hard",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_100",
-        "margin": 0.8284373401307094,
+        "margin": 0.8279388578128787,
         "volatility": null
       },
       "difficultyScore": 0.26999999999999996
@@ -111,35 +109,35 @@
     {
       "qid": "q5",
       "slot": "E",
-      "templateId": "P6_TVL_TREND",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
       "format": "tf",
-      "prompt": "Jupiter Lend's TVL has increased over the past 7 days.",
+      "prompt": "Jupiter Lend is deployed on Solana.",
       "choices": [
         "True",
         "False"
       ],
       "answerIndex": 0,
       "answerValue": true,
-      "explanation": "Jupiter Lend's total value locked (TVL) has increased by 5.5% over the past 7 days, reaching a current TVL of $1.0B.",
+      "explanation": "Jupiter Lend is a DeFi platform deployed on the Solana blockchain, with a focus solely on this single chain. It is currently operational and supports activities within the Solana ecosystem.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "tf",
         "familiarityRankBucket": "top_100",
-        "margin": 0.055136308109545284,
-        "volatility": 0.14676966918704215
+        "margin": 0.25,
+        "volatility": null
       },
-      "difficultyScore": 0.3535685269534352
+      "difficultyScore": 0.20666666666666667
     }
   ],
-  "generatedAt": "2025-12-15T14:51:06.588Z",
+  "generatedAt": "2025-12-15T17:14:38.682Z",
   "buildLog": [
     {
       "slot": "A",
       "template": "P1_FINGERPRINT",
       "format": "mc4",
       "decision": "selected",
-      "score": 0.3170154503780563,
+      "score": 0.3170092417423148,
       "target": "medium"
     },
     {
@@ -157,9 +155,21 @@
     {
       "slot": "B",
       "template": "P7_CATEGORY",
-      "format": "mc4",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "B",
+      "template": "P9_TOP_CHAIN",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "B",
+      "template": "P13_TVL_RANK_COMPARISON",
+      "format": "ab",
       "decision": "selected",
-      "score": 0.26999999999999996,
+      "score": 0.2175,
       "target": "easy"
     },
     {
@@ -212,7 +222,7 @@
       "template": "P15_RECENT_TVL_DIRECTION",
       "format": "ab",
       "decision": "selected",
-      "score": 0.4060685269534352,
+      "score": 0.42348770689313336,
       "target": "medium"
     },
     {
@@ -248,20 +258,8 @@
     {
       "slot": "D",
       "template": "P13_TVL_RANK_COMPARISON",
-      "format": "ab",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.23416666666666663,
-      "target": "hard"
-    },
-    {
-      "slot": "D",
-      "template": "P13_TVL_RANK_COMPARISON",
-      "format": "tf",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.18166666666666664,
-      "target": "hard"
+      "decision": "skip",
+      "reason": "already_used"
     },
     {
       "slot": "D",
@@ -302,9 +300,30 @@
     {
       "slot": "E",
       "template": "P6_TVL_TREND",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_trend_7d"
+    },
+    {
+      "slot": "E",
+      "template": "P3_CONCENTRATION",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "E",
+      "template": "P10_TVL_BAND",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.4882555922803839,
+      "target": "easy"
+    },
+    {
+      "slot": "E",
+      "template": "P8_CHAIN_MEMBERSHIP",
       "format": "tf",
       "decision": "selected",
-      "score": 0.3535685269534352,
+      "score": 0.20666666666666667,
       "target": "easy"
     },
     {

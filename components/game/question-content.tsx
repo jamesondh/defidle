@@ -34,7 +34,7 @@ export function QuestionContent({
   return (
     <div className="space-y-4">
       <div className="space-y-2">
-        <h2 className="text-lg font-semibold">{question.prompt}</h2>
+        <h2 className="text-xl font-semibold">{question.prompt}</h2>
         {question.clues && question.clues.length > 0 && (
           <ul className="space-y-1 text-sm text-muted-foreground">
             {question.clues.map((clue, i) => (

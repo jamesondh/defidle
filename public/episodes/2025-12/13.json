@@ -22,11 +22,11 @@
       "choices": [
         "Berachain",
         "Stellar",
-        "Unichain",
+        "Etherlink",
         "Stargaze"
       ],
       "answerIndex": 1,
-      "explanation": "Stellar is a DeFi platform ranked 30th in total value locked (TVL), with a TVL ranging from $100M to $500M. It has 24 protocols and uses the token symbol XLM.",
+      "explanation": "Stellar ranks 30th in total value locked (TVL) with an estimated range of $100M to $500M, and it has 24 protocols operating on its network. The native token for Stellar is XLM.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
@@ -49,16 +49,16 @@
       ],
       "answerIndex": 0,
       "answerValue": true,
-      "explanation": "Stellar has a total value locked (TVL) of $173M, surpassing PulseChain's TVL of $165M by a margin of 5%. This indicates that Stellar is currently more popular or has more funds committed in its ecosystem compared to PulseChain.",
+      "explanation": "Stellar has a total value locked (TVL) of $173M, which is 5% higher than PulseChain's TVL of $165M. This indicates that Stellar has a greater amount of assets staked or locked in its ecosystem compared to PulseChain.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "tf",
         "familiarityRankBucket": "top_100",
-        "margin": 0.04576072550547644,
+        "margin": 0.04673815393187018,
         "volatility": null
       },
-      "difficultyScore": 0.3768660620787696
+      "difficultyScore": 0.3760515383901082
     },
     {
       "qid": "q3",
@@ -72,16 +72,16 @@
       ],
       "answerIndex": 0,
       "answerValue": true,
-      "explanation": "Stellar's current total value locked (TVL) is $171M, which is 5% below its all-time high (ATH) of $180M reached in December 2025, indicating it is within 10% of that peak.",
+      "explanation": "Stellar's current total value locked (TVL) is $167M, which is 7% below its all-time high (ATH) of $180M reached in December 2025, indicating it is within 10% of its ATH but not at that peak.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "tf",
         "familiarityRankBucket": "top_100",
-        "margin": 0.04779231967645136,
+        "margin": 0.027323636877589763,
         "volatility": null
       },
-      "difficultyScore": 0.3751730669362905
+      "difficultyScore": 0.39223030260200853
     },
     {
       "qid": "q4",
@@ -95,7 +95,7 @@
       ],
       "answerIndex": 1,
       "answerValue": false,
-      "explanation": "Stellar's total value locked (TVL) is $173M, which is significantly below the $5B threshold. This indicates that Stellar has not yet reached a high level of assets locked in its DeFi ecosystem.",
+      "explanation": "Stellar's total value locked (TVL) is $173M, which is below the $5B threshold. This indicates that Stellar's DeFi ecosystem has not reached the significant milestone of $5B in TVL.",
       "difficulty": "hard",
       "llmFallback": false,
       "signals": {
@@ -119,7 +119,7 @@
         "$2B-$10B"
       ],
       "answerIndex": 1,
-      "explanation": "Stellar has a total value locked (TVL) of $173M, placing it within the TVL band of $100M-$500M and ranking it 30th among DeFi projects.",
+      "explanation": "Stellar has a total value locked (TVL) of $173M, placing it within the TVL band of $100M-$500M and ranking it 30th among DeFi platforms.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
@@ -131,7 +131,7 @@
       "difficultyScore": 0.26999999999999996
     }
   ],
-  "generatedAt": "2025-12-15T14:52:09.967Z",
+  "generatedAt": "2025-12-15T17:15:11.370Z",
   "buildLog": [
     {
       "slot": "A",
@@ -146,7 +146,7 @@
       "template": "C2_CHAIN_COMPARISON",
       "format": "tf",
       "decision": "selected",
-      "score": 0.3768660620787696,
+      "score": 0.3760515383901082,
       "target": "easy"
     },
     {
@@ -178,7 +178,7 @@
       "template": "C9_DISTANCE_FROM_ATH",
       "format": "tf",
       "decision": "selected",
-      "score": 0.3751730669362905,
+      "score": 0.39223030260200853,
       "target": "medium"
     },
     {

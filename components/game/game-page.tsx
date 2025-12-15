@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState, useCallback } from "react"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { GameCard } from "@/components/game/game-card"
 import { QuestionContent } from "@/components/game/question-content"
@@ -8,7 +9,7 @@ import { ExplanationPanel } from "@/components/game/explanation-panel"
 import { ResultsContent } from "@/components/game/results-content"
 import { LoadingContent } from "@/components/game/loading-content"
 import { ErrorContent } from "@/components/game/error-content"
-import { ArrowRight, RefreshCw, RotateCcw } from "lucide-react"
+import { ArrowRight, RefreshCw, RotateCcw, CalendarDays } from "lucide-react"
 import {
   fetchEpisode,
   type EpisodeError,
@@ -38,9 +39,18 @@ interface GamePageProps {
   date: string
 }
 
+function getYesterdayDate(currentDate: string): string {
+  const date = new Date(currentDate)
+  date.setDate(date.getDate() - 1)
+  return date.toISOString().split("T")[0]
+}
+
 export function GamePage({ date }: GamePageProps) {
+  const router = useRouter()
   const [appState, setAppState] = useState<AppState>({ status: "loading" })
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
+
+  const yesterdayDate = getYesterdayDate(date)
 
   const loadEpisode = useCallback(async () => {
     setAppState({ status: "loading" })
@@ -167,10 +177,20 @@ export function GamePage({ date }: GamePageProps) {
           <GameCard
             date={date}
             footer={
-              <Button variant="outline" onClick={handlePlayAgain} className="w-full">
-                <RotateCcw className="mr-2 size-4" />
-                Play Again
-              </Button>
+              <div className="flex gap-2 w-full">
+                <Button
+                  variant="outline"
+                  onClick={() => router.push(`/${yesterdayDate}`)}
+                  className="flex-1"
+                >
+                  <CalendarDays className="mr-2 size-4" />
+                  Play Yesterday&apos;s Quiz
+                </Button>
+                <Button variant="outline" onClick={handlePlayAgain} className="flex-1">
+                  <RotateCcw className="mr-2 size-4" />
+                  Play Again
+                </Button>
+              </div>
             }
           >
             <ResultsContent

@@ -14,6 +14,7 @@ import { formatNumber } from "../distractors"
 export class P15RecentTVLDirection extends ProtocolTemplate {
   id = "P15_RECENT_TVL_DIRECTION"
   name = "Recent TVL Direction"
+  semanticTopics = ["tvl_trend_7d", "tvl_direction"]
 
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isProtocolContext(ctx)) return false

@@ -209,6 +209,8 @@ Did a protocol's TVL increase or decrease over a given period?
 
 **Formats**: `tf` → `mc4` (buckets) → `ab`
 
+**Semantic topics**: `tvl_trend_7d`, `tvl_direction` (shared with P15 to prevent duplicates)
+
 **Computed fields**:
 - `change1d`: 1-day TVL percentage change
 - `change7d`: 7-day TVL percentage change  
@@ -240,10 +242,20 @@ Identify a protocol's category.
 
 **Formats**: `mc4` → `mc6`
 
+**Semantic topics**: `category_identification`
+
 **Computed fields**:
 - `category`: protocol's category (e.g., "Dexes", "Lending", "Bridge")
 
 **Distractors**: Categories from protocols with similar TVL rank (nearby in leaderboard)
+
+**Prerequisites**:
+- Protocol must have a category
+- **Name-answer leakage check**: Template is skipped if the protocol name contains keywords that reveal the category. For example:
+  - "Jupiter **Lend**" → "Lending" (skipped - "lend" reveals answer)
+  - "Uni**swap**" → "Dexes" (skipped - "swap" reveals answer)
+  - "Across **Bridge**" → "Bridge" (skipped - "bridge" reveals answer)
+  - "Aave" → "Lending" (allowed - name doesn't reveal category)
 
 **Fallbacks**:
 - If protocol category is rare/unique → use broader category groupings
@@ -479,6 +491,8 @@ Simple question about protocol's recent TVL trend. Works with minimal history.
 - `GET /api/protocol/{slug}` → `tvl[]` or `change_7d` from list
 
 **Formats**: `ab` → `tf` → `mc4` (buckets)
+
+**Semantic topics**: `tvl_trend_7d`, `tvl_direction` (shared with P6 to prevent duplicates)
 
 **Buckets for MC4**: `Down >10%`, `Down 5-10%`, `Roughly flat`, `Up 5-10%`, `Up >10%`
 
@@ -850,32 +864,41 @@ What category has the most TVL on a given chain?
 
 ## Template Summary
 
-| ID | Name | Primary Format | Fallback Format | Key Metric | Single-Chain Friendly |
-|----|------|----------------|-----------------|------------|----------------------|
-| P1 | Protocol Fingerprint | mc6 | mc4 | Multiple clues | ✓ |
-| P2 | Cross-Chain Dominance | ab | tf | Chain TVL comparison | ✗ |
-| P3 | Top Chain Concentration | mc4 (buckets) | tf | TVL share | ✗ |
-| P4 | ATH Timing | mc4 (months) | tf | TVL history | ✓ |
-| P5 | Fees vs Revenue | ab/mc4 | tf | Fees, revenue | ✓ |
-| P6 | TVL Trend | tf/mc4 | ab | TVL change over time | ✓ |
-| P7 | Category Identification | mc4 | mc6 | Protocol category | ✓ |
-| P8 | Chain Membership | mc4 | tf | Deployment chains | ✓ |
-| P9 | Top Chain Name | mc4 | tf | Top chain by TVL | ✗ |
-| P10 | TVL Band | mc4 | — | TVL bucket | ✓ |
-| P11 | Fees Trend | tf | mc4 | Fees change over time | ✓ |
-| P12 | DEX Volume Trend | tf | mc4 | Volume change (DEX only) | ✓ |
-| P13 | TVL Rank Comparison | ab | tf | Compare to similar protocol | ✓ |
-| P14 | Category Leader | ab/mc4 | tf | Category context | ✓ |
-| P15 | Recent TVL Direction | ab | tf/mc4 | Recent trend | ✓ |
-| C1 | Chain Fingerprint | mc6 | mc4 | Multiple clues | — |
-| C2 | Chain TVL Comparison | ab | buckets | Chain TVL | — |
-| C3 | Chain ATH Timing | mc4 (months) | tf | Chain TVL history | — |
-| C4 | Chain Growth Ranking | mc4 | ab | 30d TVL change | — |
-| C5 | Top Protocol by Fees | mc4 | ab | Chain fees leaderboard | — |
-| C6 | Top DEX by Volume | mc4 | ab | Chain DEX volume | — |
-| C7 | Chain TVL Band | mc4 | — | Chain TVL bucket | — |
-| C8 | 30-Day Direction | ab | tf | 30d TVL direction | — |
-| C9 | Distance from ATH | tf | mc4 | ATH proximity | — |
-| C10 | Protocol Count | mc4 | — | Protocol count bucket | — |
-| C11 | Top Protocol by TVL | mc4 | ab | Chain protocol leaderboard | — |
-| C12 | Category Dominance | mc4 | — | Category TVL aggregation | — |
+| ID | Name | Primary Format | Fallback Format | Key Metric | Single-Chain Friendly | Semantic Topics |
+|----|------|----------------|-----------------|------------|----------------------|-----------------|
+| P1 | Protocol Fingerprint | mc6 | mc4 | Multiple clues | ✓ | — |
+| P2 | Cross-Chain Dominance | ab | tf | Chain TVL comparison | ✗ | — |
+| P3 | Top Chain Concentration | mc4 (buckets) | tf | TVL share | ✗ | — |
+| P4 | ATH Timing | mc4 (months) | tf | TVL history | ✓ | — |
+| P5 | Fees vs Revenue | ab/mc4 | tf | Fees, revenue | ✓ | — |
+| P6 | TVL Trend | tf/mc4 | ab | TVL change over time | ✓ | `tvl_trend_7d`, `tvl_direction` |
+| P7 | Category Identification | mc4 | mc6 | Protocol category | ✓ | `category_identification` |
+| P8 | Chain Membership | mc4 | tf | Deployment chains | ✓ | — |
+| P9 | Top Chain Name | mc4 | tf | Top chain by TVL | ✗ | — |
+| P10 | TVL Band | mc4 | — | TVL bucket | ✓ | — |
+| P11 | Fees Trend | tf | mc4 | Fees change over time | ✓ | — |
+| P12 | DEX Volume Trend | tf | mc4 | Volume change (DEX only) | ✓ | — |
+| P13 | TVL Rank Comparison | ab | tf | Compare to similar protocol | ✓ | — |
+| P14 | Category Leader | ab/mc4 | tf | Category context | ✓ | — |
+| P15 | Recent TVL Direction | ab | tf/mc4 | Recent trend | ✓ | `tvl_trend_7d`, `tvl_direction` |
+| C1 | Chain Fingerprint | mc6 | mc4 | Multiple clues | — | — |
+| C2 | Chain TVL Comparison | ab | buckets | Chain TVL | — | — |
+| C3 | Chain ATH Timing | mc4 (months) | tf | Chain TVL history | — | — |
+| C4 | Chain Growth Ranking | mc4 | ab | 30d TVL change | — | — |
+| C5 | Top Protocol by Fees | mc4 | ab | Chain fees leaderboard | — | — |
+| C6 | Top DEX by Volume | mc4 | ab | Chain DEX volume | — | — |
+| C7 | Chain TVL Band | mc4 | — | Chain TVL bucket | — | — |
+| C8 | 30-Day Direction | ab | tf | 30d TVL direction | — | — |
+| C9 | Distance from ATH | tf | mc4 | ATH proximity | — | — |
+| C10 | Protocol Count | mc4 | — | Protocol count bucket | — | — |
+| C11 | Top Protocol by TVL | mc4 | ab | Chain protocol leaderboard | — | — |
+| C12 | Category Dominance | mc4 | — | Category TVL aggregation | — | — |
+
+### Semantic Topic Deduplication
+
+Templates with overlapping `semanticTopics` will not both be selected in the same episode. This prevents questions that ask about the same underlying metric in different formats:
+
+- **P6 and P15** both have `tvl_trend_7d` → Only one TVL direction question per episode
+- **P7** has `category_identification` → Only one category question per episode
+
+Add semantic topics to new templates when they cover the same underlying data/metric as existing templates.

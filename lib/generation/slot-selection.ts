@@ -27,6 +27,8 @@ import { selectQuantitativeFallback } from "./quantitative-fallbacks"
 export interface SlotSelectionResult {
   draft: QuestionDraft | null
   logEntries: BuildLogEntry[]
+  /** Semantic topics covered by the selected template (for deduplication) */
+  selectedTopics?: string[]
 }
 
 /**
@@ -128,7 +130,8 @@ export function selectQuestionForSlot(
   ctx: TemplateContext,
   seed: number,
   usedTemplates: Set<string>,
-  usedPrompts?: Set<string>
+  usedPrompts?: Set<string>,
+  usedSemanticTopics?: Set<string>
 ): SlotSelectionResult {
   const target = getSlotDifficultyTarget(slot)
   const logEntries: BuildLogEntry[] = []
@@ -141,6 +144,20 @@ export function selectQuestionForSlot(
         template: template.id,
         decision: "skip",
         reason: "already_used",
+      })
+      continue
+    }
+
+    // Skip if any semantic topic is already covered by another question
+    // This prevents semantically duplicate questions (e.g., P6 and P15 both asking about 7d TVL trend)
+    const templateTopics = template.semanticTopics ?? []
+    const conflictingTopic = templateTopics.find(t => usedSemanticTopics?.has(t))
+    if (conflictingTopic) {
+      logEntries.push({
+        slot,
+        template: template.id,
+        decision: "skip",
+        reason: `semantic_topic_covered:${conflictingTopic}`,
       })
       continue
     }
@@ -186,6 +203,7 @@ export function selectQuestionForSlot(
         return {
           draft: { ...draft, buildNotes: [...draft.buildNotes, `Score: ${score.toFixed(2)}`] },
           logEntries,
+          selectedTopics: template.semanticTopics,
         }
       }
 
@@ -213,6 +231,7 @@ export function selectQuestionForSlot(
               ],
             },
             logEntries,
+            selectedTopics: template.semanticTopics,
           }
         }
       }
@@ -234,6 +253,10 @@ export function selectQuestionForSlot(
   for (const template of templates) {
     if (usedTemplates.has(template.id) && !template.allowReuse) continue
     if (!template.checkPrereqs(ctx)) continue
+    
+    // Also check semantic topics in the "close enough" pass
+    const closeEnoughTopics = template.semanticTopics ?? []
+    if (closeEnoughTopics.some(t => usedSemanticTopics?.has(t))) continue
 
     const formats = template.proposeFormats(ctx)
     for (const format of formats) {
@@ -268,6 +291,7 @@ export function selectQuestionForSlot(
             ],
           },
           logEntries,
+          selectedTopics: template.semanticTopics,
         }
       }
     }
@@ -283,6 +307,7 @@ export function selectQuestionForSlot(
   return {
     draft: safeFallback(slot, ctx, seed, usedPrompts, target),
     logEntries,
+    // Fallback questions don't have semantic topics
   }
 }
 
@@ -299,6 +324,7 @@ export function selectAllQuestions(
   const buildLog: BuildLogEntry[] = []
   const usedTemplates = new Set<string>()
   const usedPrompts = new Set<string>()
+  const usedSemanticTopics = new Set<string>()
 
   for (const slot of slots) {
     const templates = matrix[slot] ?? []
@@ -310,7 +336,8 @@ export function selectAllQuestions(
       ctx,
       slotSeed,
       usedTemplates,
-      usedPrompts
+      usedPrompts,
+      usedSemanticTopics
     )
 
     buildLog.push(...result.logEntries)
@@ -319,6 +346,13 @@ export function selectAllQuestions(
       drafts.push(result.draft)
       usedTemplates.add(result.draft.templateId)
       usedPrompts.add(result.draft.prompt)
+      
+      // Track semantic topics to prevent duplicate questions on same underlying metric
+      if (result.selectedTopics) {
+        for (const topic of result.selectedTopics) {
+          usedSemanticTopics.add(topic)
+        }
+      }
     }
   }
 

@@ -81,6 +81,12 @@ export class P1ProtocolFingerprint extends ProtocolTemplate {
 
     // Get distractors
     const distractorCount = format === "mc6" ? 5 : 3
+    
+    // Sort protocols by TVL to compute ranks
+    const sortedProtocols = [...list].sort((a, b) => (b.tvl ?? 0) - (a.tvl ?? 0))
+    const rankMap = new Map<string, number>()
+    sortedProtocols.forEach((p, idx) => rankMap.set(p.slug, idx + 1))
+    
     const pool: ProtocolEntity[] = list.map((p) => ({
       id: p.slug,
       slug: p.slug,
@@ -88,9 +94,11 @@ export class P1ProtocolFingerprint extends ProtocolTemplate {
       category: p.category,
       tvl: p.tvl,
       chains: p.chains,
+      tvlRank: rankMap.get(p.slug),
     }))
 
-    const distractorNames = pickProtocolDistractors(
+    // First try: same category, recognizable protocols (top 150)
+    let distractorNames = pickProtocolDistractors(
       detail.slug,
       pool,
       distractorCount,
@@ -98,12 +106,44 @@ export class P1ProtocolFingerprint extends ProtocolTemplate {
       {
         mustMatch: { category: detail.category },
         avoid: new Set([detail.slug]),
+        maxTvlRank: 150,
+        preferNearRank: ctx.topic.tvlRank,
       }
     )
 
+    // Second try: same category, relax rank constraint to top 200
+    if (!distractorNames) {
+      distractorNames = pickProtocolDistractors(
+        detail.slug,
+        pool,
+        distractorCount,
+        seed,
+        {
+          mustMatch: { category: detail.category },
+          avoid: new Set([detail.slug]),
+          maxTvlRank: 200,
+          preferNearRank: ctx.topic.tvlRank,
+        }
+      )
+    }
+
+    // Third try: drop category constraint but keep rank constraint
     let finalDistractors = distractorNames
     if (!finalDistractors) {
-      // Try without category constraint
+      finalDistractors = pickProtocolDistractors(
+        detail.slug,
+        pool,
+        distractorCount,
+        seed,
+        {
+          maxTvlRank: 150,
+          preferNearRank: ctx.topic.tvlRank,
+        }
+      )
+    }
+    
+    // Final fallback: any protocol
+    if (!finalDistractors) {
       finalDistractors = pickProtocolDistractors(
         detail.slug,
         pool,

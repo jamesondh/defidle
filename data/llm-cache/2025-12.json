@@ -1,77 +1,102 @@
 {
-  "2025-12-15|protocol|jupiter-lend|A|P1_FINGERPRINT|explanation|7009d4dbdde12de6": {
-    "text": "Jupiter Lend is a lending platform on the Solana blockchain with a total value locked (TVL) of $1.0B, placing it in the $1B-$5B range for TVL. It operates on a single blockchain, which is Solana.",
+  "2025-12-15|protocol|jupiter-lend|A|P1_FINGERPRINT|explanation|7c12661bcb4f3da4": {
+    "text": "Jupiter Lend is a lending platform operating on the Solana blockchain, with a total value locked (TVL) of $990M, placing it within the $500M-$1B range. It currently supports one blockchain.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-15T14:50:59.238Z"
+    "generatedAt": "2025-12-15T17:14:32.039Z"
   },
-  "2025-12-15|protocol|jupiter-lend|B|P7_CATEGORY|explanation|29be0309d078c662": {
-    "text": "Jupiter Lend is a lending platform in the DeFi space, currently ranked 78th in terms of total value locked (TVL). This ranking indicates its relative size and usage compared to other lending platforms.",
+  "2025-12-15|protocol|jupiter-lend|B|P13_TVL_RANK_COMPARISON|explanation|7f86b6900aec692b": {
+    "text": "Jupiter Lend ranks 78th in total value locked (TVL), while Raydium AMM ranks 60th, indicating that Raydium AMM has a higher TVL compared to Jupiter Lend.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-15T14:51:00.537Z"
+    "generatedAt": "2025-12-15T17:14:33.392Z"
   },
-  "2025-12-15|protocol|jupiter-lend|C|P15_RECENT_TVL_DIRECTION|explanation|7ed822d5c4f6525a": {
-    "text": "Jupiter Lend's total value locked (TVL) has increased by 5.5% over the past 7 days, reaching a current TVL of $1.0B. This indicates growing interest and activity in the platform.",
+  "2025-12-15|protocol|jupiter-lend|C|P15_RECENT_TVL_DIRECTION|explanation|5c9b4f8194181ad5": {
+    "text": "Jupiter Lend has experienced an increase in total value locked (TVL) of 3.4% over the past 7 days, bringing its current TVL to $1.0B.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-15T14:51:01.952Z"
+    "generatedAt": "2025-12-15T17:14:34.391Z"
   },
-  "2025-12-15|protocol|jupiter-lend|D|P14_CATEGORY_LEADER|explanation|9ad7405c4b60b526": {
-    "text": "In the lending category, Aave V3 is the leader with a total value locked (TVL) of $33.4B, while Jupiter Lend ranks 10th. Other notable platforms include Fluid Lending at $1.7B, Maple at $2.8B, and Morpho V1 at $5.7B.",
+  "2025-12-15|protocol|jupiter-lend|D|P14_CATEGORY_LEADER|explanation|7de8437349f9dd34": {
+    "text": "In the lending category, Aave V3 is the leader with a total value locked (TVL) of $32.5B, while Jupiter Lend ranks 11th. Other notable platforms include Fluid Lending at $1.7B, Maple at $2.8B, and Morpho V1 at $5.6B.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-15T14:51:04.111Z"
+    "generatedAt": "2025-12-15T17:14:36.850Z"
   },
-  "2025-12-15|protocol|jupiter-lend|E|P6_TVL_TREND|explanation|6ed3efd5f636deea": {
-    "text": "Jupiter Lend's total value locked (TVL) has increased by 5.5% over the past 7 days, reaching a current TVL of $1.0B.",
+  "2025-12-15|protocol|jupiter-lend|E|P8_CHAIN_MEMBERSHIP|explanation|07687cfa029f1838": {
+    "text": "Jupiter Lend is a DeFi platform deployed on the Solana blockchain, with a focus solely on this single chain. It is currently operational and supports activities within the Solana ecosystem.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-15T14:51:06.588Z"
+    "generatedAt": "2025-12-15T17:14:38.681Z"
   },
-  "2025-12-14|protocol|justcryptos|A|P1_FINGERPRINT|explanation|6e5065d55f56c663": {
-    "text": "JustCryptos is a bridge operating on the Tron blockchain, with a total value locked (TVL) of $3.1B, placing it within the $1B-$5B range for TVL. It currently supports only one blockchain, which is Tron.",
+  "2025-12-14|protocol|justcryptos|A|P1_FINGERPRINT|explanation|816c030fd254e9d6": {
+    "text": "JustCryptos is a bridge in the DeFi space that operates on the Tron blockchain, with a total value locked (TVL) of $3.0B, placing it within the $1B-$5B TVL band. It currently supports one blockchain.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-15T14:51:19.044Z"
+    "generatedAt": "2025-12-15T17:14:45.531Z"
   },
   "2025-12-14|protocol|justcryptos|B|P7_CATEGORY|explanation|a230b8af2d1adce9": {
-    "text": "JustCryptos operates in the Bridge category and holds a total value locked (TVL) rank of 32 among DeFi projects. This indicates its position relative to other projects in terms of the amount of assets secured within its platform.",
+    "text": "JustCryptos operates in the Bridge category and holds a total value locked (TVL) rank of 32 among DeFi projects.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-15T14:51:21.141Z"
+    "generatedAt": "2025-12-15T17:14:46.270Z"
   },
   "2025-12-14|protocol|justcryptos|C|P4_ATH_TIMING|explanation|6d2f7001e2c005ea": {
-    "text": "JustCryptos reached its all-time high total value locked (TVL) of $8.3B in March 2024. This metric reflects the total assets staked or locked in the platform at that peak time.",
+    "text": "JustCryptos reached an all-time high (ATH) total value locked (TVL) of $8.3B in March 2024. This metric reflects the total assets staked or locked in the platform at that time.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-15T14:51:22.735Z"
+    "generatedAt": "2025-12-15T17:14:47.383Z"
   },
   "2025-12-14|protocol|justcryptos|D|P13_TVL_RANK_COMPARISON|explanation|4c24c2370e11c1ff": {
-    "text": "JustCryptos ranks 32nd in total value locked (TVL), while MEXC ranks 21st, indicating that MEXC has a higher TVL compared to JustCryptos.",
+    "text": "JustCryptos is ranked 32nd in total value locked (TVL), while MEXC holds a higher rank at 21st. This indicates that MEXC has a greater amount of assets locked in its protocol compared to JustCryptos.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-15T14:51:24.501Z"
+    "generatedAt": "2025-12-15T17:14:48.728Z"
   },
-  "2025-12-14|protocol|justcryptos|E|P10_TVL_BAND|explanation|5f43a7c6e2ff4e44": {
-    "text": "JustCryptos has a total value locked (TVL) of $3.1B, placing it within the TVL band of $1B-$5B and ranking 32nd among DeFi platforms.",
+  "2025-12-14|protocol|justcryptos|E|P10_TVL_BAND|explanation|6743f98f16021910": {
+    "text": "JustCryptos has a total value locked (TVL) of $3.0B, placing it within the TVL band of $1B-$5B and ranking 32nd among DeFi platforms.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-15T14:51:26.039Z"
+    "generatedAt": "2025-12-15T17:14:49.752Z"
   },
   "2025-12-13|chain|Stellar|A|C1_FINGERPRINT|explanation|53f130c70c1dd8c8": {
-    "text": "Stellar is a DeFi platform ranked 30th in total value locked (TVL), with a TVL ranging from $100M to $500M. It has 24 protocols and uses the token symbol XLM.",
+    "text": "Stellar ranks 30th in total value locked (TVL) with an estimated range of $100M to $500M, and it has 24 protocols operating on its network. The native token for Stellar is XLM.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-15T14:52:00.956Z"
+    "generatedAt": "2025-12-15T17:15:05.620Z"
   },
   "2025-12-13|chain|Stellar|B|C2_CHAIN_COMPARISON|explanation|0bb91fd6d65aae92": {
-    "text": "Stellar has a total value locked (TVL) of $173M, surpassing PulseChain's TVL of $165M by a margin of 5%. This indicates that Stellar is currently more popular or has more funds committed in its ecosystem compared to PulseChain.",
+    "text": "Stellar has a total value locked (TVL) of $173M, which is 5% higher than PulseChain's TVL of $165M. This indicates that Stellar has a greater amount of assets staked or locked in its ecosystem compared to PulseChain.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-15T14:52:04.765Z"
+    "generatedAt": "2025-12-15T17:15:08.169Z"
   },
-  "2025-12-13|chain|Stellar|C|C9_DISTANCE_FROM_ATH|explanation|3f7ead19ad8ec079": {
-    "text": "Stellar's current total value locked (TVL) is $171M, which is 5% below its all-time high (ATH) of $180M reached in December 2025, indicating it is within 10% of that peak.",
+  "2025-12-13|chain|Stellar|C|C9_DISTANCE_FROM_ATH|explanation|24c3e0e5b5a2ce0f": {
+    "text": "Stellar's current total value locked (TVL) is $167M, which is 7% below its all-time high (ATH) of $180M reached in December 2025, indicating it is within 10% of its ATH but not at that peak.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-15T14:52:06.715Z"
+    "generatedAt": "2025-12-15T17:15:09.312Z"
   },
   "2025-12-13|chain|Stellar|D|FALLBACK_CHAIN_TVL_ABOVE_5B|explanation|d0fa72b16413de0d": {
-    "text": "Stellar's total value locked (TVL) is $173M, which is significantly below the $5B threshold. This indicates that Stellar has not yet reached a high level of assets locked in its DeFi ecosystem.",
+    "text": "Stellar's total value locked (TVL) is $173M, which is below the $5B threshold. This indicates that Stellar's DeFi ecosystem has not reached the significant milestone of $5B in TVL.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-15T14:52:08.646Z"
+    "generatedAt": "2025-12-15T17:15:10.437Z"
   },
   "2025-12-13|chain|Stellar|E|C7_CHAIN_TVL_BAND|explanation|1bae58050ee50b2b": {
-    "text": "Stellar has a total value locked (TVL) of $173M, placing it within the TVL band of $100M-$500M and ranking it 30th among DeFi projects.",
+    "text": "Stellar has a total value locked (TVL) of $173M, placing it within the TVL band of $100M-$500M and ranking it 30th among DeFi platforms.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-15T14:52:09.965Z"
+    "generatedAt": "2025-12-15T17:15:11.369Z"
+  },
+  "2025-12-12|protocol|ethena-usde|A|P1_FINGERPRINT|explanation|8f1e00a87825bd19": {
+    "text": "Ethena USDe is a Basis Trading platform operating on the Ethereum blockchain, with a total value locked (TVL) of $6.5B, placing it within the TVL band of $5B-$10B. It is currently active on one blockchain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T17:16:56.911Z"
+  },
+  "2025-12-12|protocol|ethena-usde|B|P7_CATEGORY|explanation|5a14651cc7e9e2e6": {
+    "text": "Ethena USDe is categorized under Basis Trading and holds a total value locked (TVL) rank of 16 in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T17:16:58.476Z"
+  },
+  "2025-12-12|protocol|ethena-usde|C|P15_RECENT_TVL_DIRECTION|explanation|cdeddf0209e8b34e": {
+    "text": "Ethena USDe has experienced a decrease in total value locked (TVL) by 3.0% over the past 7 days, bringing its current TVL to $6.5B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T17:16:59.542Z"
+  },
+  "2025-12-12|protocol|ethena-usde|D|P13_TVL_RANK_COMPARISON|explanation|471b64a266e39ad4": {
+    "text": "Ethena USDe ranks 16th in total value locked (TVL), while WBTC ranks 8th, indicating that WBTC has a higher TVL compared to Ethena USDe.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T17:17:01.167Z"
+  },
+  "2025-12-12|protocol|ethena-usde|E|P10_TVL_BAND|explanation|00e079abecc494c9": {
+    "text": "Ethena USDe has a total value locked (TVL) of $6.5B, placing it in the TVL band of over $5B and ranking it 16th among DeFi projects.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-15T17:17:02.856Z"
   }
 }

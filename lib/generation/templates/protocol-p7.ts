@@ -32,9 +32,74 @@ const COMMON_CATEGORIES = [
   "Cross Chain",
 ]
 
+/**
+ * Keywords that strongly indicate a category.
+ * If a protocol name contains one of these keywords, asking about its category
+ * would be trivially guessable (e.g., "Jupiter Lend" → Lending).
+ * 
+ * Keys are category names (lowercase for matching).
+ * Values are arrays of keywords to check against the protocol name.
+ */
+const CATEGORY_KEYWORDS: Record<string, string[]> = {
+  "lending": ["lend", "loan", "borrow", "credit", "aave", "compound"],
+  "dexes": ["swap", "dex", "exchange", "amm"],
+  "bridge": ["bridge"],
+  "yield": ["yield", "farm", "harvest", "vault"],
+  "liquid staking": ["staking", "stake", "lido", "liquid"],
+  "derivatives": ["perp", "perpetual", "futures", "derivative"],
+  "cdp": ["cdp", "maker", "dai"],
+  "options": ["option", "opyn"],
+  "synthetics": ["synth", "synthetic"],
+  "insurance": ["insur", "cover", "nexus"],
+  "nft lending": ["nft lend", "nft loan"],
+  "prediction market": ["predict", "polymarket", "augur"],
+  "launchpad": ["launch", "pad", "ido"],
+  "rwa": ["rwa", "real world"],
+  "privacy": ["privacy", "tornado", "mixer"],
+}
+
+/**
+ * Check if the protocol name contains keywords that would make the category
+ * trivially guessable.
+ * 
+ * @example
+ * hasNameCategoryLeakage("Jupiter Lend", "Lending") // true - "Lend" appears in name
+ * hasNameCategoryLeakage("Aave", "Lending") // true - "aave" is a lending keyword
+ * hasNameCategoryLeakage("Uniswap", "Dexes") // true - "swap" appears in name
+ * hasNameCategoryLeakage("Ethereum", "Chain") // false - no leakage
+ */
+function hasNameCategoryLeakage(name: string, category: string): boolean {
+  const nameLower = name.toLowerCase()
+  const categoryLower = category.toLowerCase()
+  
+  // Check against category-specific keywords
+  const keywords = CATEGORY_KEYWORDS[categoryLower]
+  if (keywords) {
+    for (const keyword of keywords) {
+      if (nameLower.includes(keyword)) {
+        return true
+      }
+    }
+  }
+  
+  // Also check if the category name itself appears in the protocol name
+  // But only for multi-word categories or short category names that are distinctive
+  // Skip generic words like "yield" which may be part of compound names
+  const categoryWords = categoryLower.split(/\s+/)
+  for (const word of categoryWords) {
+    // Only check words that are 4+ chars to avoid false positives
+    if (word.length >= 4 && nameLower.includes(word)) {
+      return true
+    }
+  }
+  
+  return false
+}
+
 export class P7CategoryIdentification extends ProtocolTemplate {
   id = "P7_CATEGORY"
   name = "Category Identification"
+  semanticTopics = ["category_identification"]
 
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isProtocolContext(ctx)) return false
@@ -44,6 +109,12 @@ export class P7CategoryIdentification extends ProtocolTemplate {
 
     // Need category
     if (!detail.category) return false
+
+    // Skip if the category answer is leaked in the protocol name
+    // e.g., "Jupiter Lend" → "Lending" is trivially guessable
+    if (hasNameCategoryLeakage(detail.name, detail.category)) {
+      return false
+    }
 
     // Need protocol list for context
     if (!ctx.data.protocolList || ctx.data.protocolList.length < 4) return false

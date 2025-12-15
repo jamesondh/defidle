@@ -26,6 +26,24 @@ export interface Template {
   allowReuse?: boolean
 
   /**
+   * Semantic topics this template covers.
+   * 
+   * Templates with overlapping semantic topics will not both be selected
+   * in the same episode, even if they have different template IDs.
+   * This prevents semantically duplicate questions like:
+   * - P6 "Did TVL increase over 7 days?" (tf)
+   * - P15 "Over the past 7 days, did TVL increase or decrease?" (ab)
+   * 
+   * Common semantic topics:
+   * - "tvl_trend_7d" - questions about 7-day TVL direction
+   * - "tvl_trend_30d" - questions about 30-day TVL direction  
+   * - "category_identification" - what category is the protocol
+   * - "chain_tvl_comparison" - comparing TVL across chains
+   * - "ath_timing" - when did ATH occur
+   */
+  semanticTopics?: string[]
+
+  /**
    * Check if template prerequisites are met
    * Returns true if the template can be used with the given context
    */
@@ -65,6 +83,7 @@ export abstract class ProtocolTemplate implements Template {
   abstract id: string
   abstract name: string
   allowReuse?: boolean
+  semanticTopics?: string[]
 
   abstract checkPrereqs(ctx: TemplateContext): boolean
   abstract proposeFormats(ctx: TemplateContext): QuestionFormat[]
@@ -102,6 +121,7 @@ export abstract class ChainTemplate implements Template {
   abstract id: string
   abstract name: string
   allowReuse?: boolean
+  semanticTopics?: string[]
 
   abstract checkPrereqs(ctx: TemplateContext): boolean
   abstract proposeFormats(ctx: TemplateContext): QuestionFormat[]

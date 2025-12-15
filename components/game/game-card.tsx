@@ -3,7 +3,7 @@
 import * as React from "react"
 import { ReactNode } from "react"
 import { useRouter } from "next/navigation"
-import { CalendarIcon } from "lucide-react"
+import { CalendarIcon, CircleQuestionMark } from "lucide-react"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { QuestionProgressIndicator } from "@/components/game/question-progress-indicator"
 import { Button } from "@/components/ui/button"
@@ -11,7 +11,16 @@ import type { DifficultyTarget } from "@/lib/types/episode"
 import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { getTodayDateUtc } from "@/lib/client/episode"
+import { ThemeToggle } from "@/components/theme-toggle"
 import Image from "next/image"
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import Link from "next/link"
 
 interface GameCardProps {
   /** Current question number (1-based), hidden if undefined */
@@ -83,7 +92,7 @@ function DatePicker({ date }: { date?: string }) {
           size="sm"
           className="justify-between gap-2 font-normal"
         >
-          <CalendarIcon className="size-4 text-muted-foreground" />
+          <CalendarIcon className="size-4" />
           {selectedDate ? formatDateForDisplay(selectedDate) : "Select date"}
         </Button>
       </PopoverTrigger>
@@ -113,12 +122,34 @@ export function GameCard({ currentQuestion, totalQuestions, difficulty, children
         <div className="flex items-center justify-between">
           <div className="text-left">
             <div className="flex items-center gap-2">
-              <Image src="/logo/logo-2.png" alt="DeFidle" width={32} height={32} />
-              <CardTitle className="text-2xl font-bold tracking-tight">DeFidle</CardTitle>
+              <Image src="/logo/logo-2.png" alt="DeFidle" width={44} height={44} />
+              <div>
+                <CardTitle className="text-xl font-bold tracking-tight">DeFidle</CardTitle>
+                <p className="text-sm text-muted-foreground">Daily DeFi Quiz</p>
+              </div>
             </div>
-            <p className="mt-1 text-sm text-muted-foreground">Daily DeFi Quiz</p>
           </div>
-          <DatePicker date={date} />
+          <div className="flex items-center gap-1">
+            <DatePicker date={date} />
+            <ThemeToggle />
+            <Dialog>
+              <form>
+                <DialogTrigger asChild>
+                  <Button size="sm" variant="outline" className="size-8 p-0"><CircleQuestionMark className="size-4" /></Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[425px]">
+                  <DialogHeader>
+                    <DialogTitle>About</DialogTitle>
+                    <div className="text-sm text-muted-foreground flex flex-col gap-2">
+                      <p>DeFidle is a daily DeFi quiz where players answer 4-6 questions about a protocol or chain, using real data from DefiLlama.</p>
+                      <p>Created by <Link href="https://jamesonhodge.com" target="_blank" rel="noopener noreferrer" className="underline">Jameson Hodge</Link>.</p>
+                      <p>Problems? Feedback? Suggestions? Create an issue or pull request on <Link href="https://github.com/jamesondh/defidle" target="_blank" rel="noopener noreferrer" className="underline">GitHub</Link>!</p>
+                    </div>
+                  </DialogHeader>
+                </DialogContent>
+              </form>
+            </Dialog>
+          </div>
         </div>
       </CardHeader>
 

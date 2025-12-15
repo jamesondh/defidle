@@ -29,6 +29,8 @@ export interface ProtocolEntity extends Entity {
   category: string
   tvl: number
   chains?: string[]
+  /** TVL rank (1 = highest TVL). Used to filter out obscure protocols as distractors. */
+  tvlRank?: number
 }
 
 /**
@@ -60,6 +62,16 @@ export interface DistractorConstraints {
   }
   /** IDs to exclude */
   avoid?: Set<string>
+  /** 
+   * Maximum TVL rank for distractors (e.g., 100 = only top 100 protocols).
+   * This ensures distractors are recognizable protocols, not obscure ones.
+   */
+  maxTvlRank?: number
+  /**
+   * Prefer distractors near a specific rank (for more plausible wrong answers).
+   * When set, distractors will be sorted by proximity to this rank before selection.
+   */
+  preferNearRank?: number
 }
 
 // =============================================================================
@@ -138,7 +150,7 @@ export function pickEntityDistractors<T extends Entity>(
   correctTvl?: number
 ): T[] | null {
   // Filter candidates
-  const candidates = pool.filter((item) => {
+  let candidates = pool.filter((item) => {
     if (item.id === correctId) return false
     if (constraints.avoid?.has(item.id)) return false
     if (constraints.mustMatch && !matchesBands(item, constraints.mustMatch)) {
@@ -149,11 +161,33 @@ export function pickEntityDistractors<T extends Entity>(
         return false
       }
     }
+    // Filter by maximum TVL rank to ensure recognizable distractors
+    if (constraints.maxTvlRank !== undefined) {
+      const rank = (item as unknown as ProtocolEntity).tvlRank
+      if (rank !== undefined && rank > constraints.maxTvlRank) {
+        return false
+      }
+    }
     return true
   })
 
-  // Deterministic shuffle
-  const shuffled = deterministicShuffle(candidates, seed.toString())
+  // If preferNearRank is set, sort candidates by proximity to that rank
+  // This makes wrong answers more plausible (similar-sized protocols)
+  if (constraints.preferNearRank !== undefined) {
+    const targetRank = constraints.preferNearRank
+    candidates = candidates.sort((a, b) => {
+      const rankA = (a as unknown as ProtocolEntity).tvlRank ?? 999
+      const rankB = (b as unknown as ProtocolEntity).tvlRank ?? 999
+      return Math.abs(rankA - targetRank) - Math.abs(rankB - targetRank)
+    })
+  }
+
+  // Deterministic shuffle (but maintain some rank-proximity ordering if preferNearRank was set)
+  // We shuffle within "buckets" of similar rank distance to maintain some determinism
+  // while still preferring nearby protocols
+  const shuffled = constraints.preferNearRank !== undefined
+    ? shuffleWithRankPreference(candidates, constraints.preferNearRank, seed)
+    : deterministicShuffle(candidates, seed.toString())
 
   // Pick with diversity constraints
   const picked: T[] = []
@@ -168,7 +202,49 @@ export function pickEntityDistractors<T extends Entity>(
 }
 
 /**
- * Pick protocol distractors with name display
+ * Shuffle candidates while preferring those near a target rank.
+ * Divides candidates into tiers by rank distance and shuffles within each tier,
+ * then concatenates tiers in order.
+ */
+function shuffleWithRankPreference<T extends Entity>(
+  candidates: T[],
+  targetRank: number,
+  seed: number
+): T[] {
+  // Define tiers: very close (±10), close (±25), medium (±50), far (rest)
+  const tiers: T[][] = [[], [], [], []]
+  
+  for (const item of candidates) {
+    const rank = (item as unknown as ProtocolEntity).tvlRank ?? 999
+    const distance = Math.abs(rank - targetRank)
+    
+    if (distance <= 10) tiers[0].push(item)
+    else if (distance <= 25) tiers[1].push(item)
+    else if (distance <= 50) tiers[2].push(item)
+    else tiers[3].push(item)
+  }
+  
+  // Shuffle each tier and concatenate
+  const result: T[] = []
+  for (let i = 0; i < tiers.length; i++) {
+    const shuffledTier = deterministicShuffle(tiers[i], `${seed}:tier${i}`)
+    result.push(...shuffledTier)
+  }
+  
+  return result
+}
+
+/**
+ * Pick protocol distractors with name display.
+ * 
+ * By default, applies a maxTvlRank of 150 to ensure distractors are
+ * recognizable protocols. Override with constraints.maxTvlRank if needed.
+ * 
+ * @param correctSlug - Slug of the correct protocol
+ * @param pool - Pool of protocol candidates
+ * @param count - Number of distractors needed
+ * @param seed - Seed for deterministic selection
+ * @param constraints - Optional constraints (maxTvlRank defaults to 150)
  */
 export function pickProtocolDistractors(
   correctSlug: string,
@@ -177,12 +253,17 @@ export function pickProtocolDistractors(
   seed: number,
   constraints?: Partial<DistractorConstraints>
 ): string[] | null {
+  const correct = pool.find((p) => p.slug === correctSlug)
+  
+  // Apply default maxTvlRank to ensure recognizable distractors
+  // Can be overridden via constraints
   const fullConstraints: DistractorConstraints = {
     count,
+    maxTvlRank: 150, // Default: only top 150 protocols as distractors
+    preferNearRank: correct?.tvlRank, // Prefer protocols of similar size
     ...constraints,
   }
 
-  const correct = pool.find((p) => p.slug === correctSlug)
   const distractors = pickEntityDistractors(
     correctSlug,
     pool,

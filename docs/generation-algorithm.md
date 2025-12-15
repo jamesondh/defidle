@@ -203,6 +203,10 @@ interface Template {
   id: string
   slot: string
   
+  // Semantic topics this template covers (for deduplication)
+  // Templates with overlapping topics won't both be selected
+  semanticTopics?: string[]
+  
   // Check if template can be used
   checkPrereqs(ctx: TemplateContext): boolean
   
@@ -253,6 +257,10 @@ interface DistractorConstraints {
     minTvlRatio?: number  // e.g., 0.5 means distractor TVL must be <50% or >200% of correct
   }
   avoid?: Set<string>  // IDs to exclude
+  
+  // Rank-based constraints for quality distractors
+  maxTvlRank?: number    // Only top N protocols (e.g., 150) to ensure recognizable distractors
+  preferNearRank?: number // Prefer protocols near this rank for more plausible wrong answers
 }
 
 function pickEntityDistractors(
@@ -262,16 +270,26 @@ function pickEntityDistractors(
   seed: number
 ): Entity[] | null {
   // Filter candidates
-  const candidates = pool.filter(item => {
+  let candidates = pool.filter(item => {
     if (item.id === correctId) return false
     if (constraints.avoid?.has(item.id)) return false
     if (constraints.mustMatch && !matchesBands(item, constraints.mustMatch)) return false
     if (constraints.mustDiffer && !differsEnough(item, constraints.mustDiffer)) return false
+    // Filter by rank to ensure recognizable protocols
+    if (constraints.maxTvlRank && item.tvlRank > constraints.maxTvlRank) return false
     return true
   })
+  
+  // Sort by proximity to preferred rank if specified
+  if (constraints.preferNearRank) {
+    candidates = candidates.sort((a, b) => 
+      Math.abs(a.tvlRank - constraints.preferNearRank!) - 
+      Math.abs(b.tvlRank - constraints.preferNearRank!)
+    )
+  }
 
-  // Deterministic shuffle
-  const shuffled = deterministicShuffle(candidates, seed.toString())
+  // Shuffle with rank preference (nearby ranks first)
+  const shuffled = shuffleWithRankPreference(candidates, constraints.preferNearRank, seed)
 
   // Pick with diversity (avoid all same category, etc.)
   const picked: Entity[] = []
@@ -283,6 +301,23 @@ function pickEntityDistractors(
   }
 
   return picked.length === constraints.count ? picked : null
+}
+
+// Shuffle while preferring protocols near the target rank
+// Divides candidates into tiers by rank distance and shuffles within each tier
+function shuffleWithRankPreference(candidates, targetRank, seed) {
+  const tiers = [[], [], [], []]  // very close (±10), close (±25), medium (±50), far
+  
+  for (const item of candidates) {
+    const distance = Math.abs(item.tvlRank - targetRank)
+    if (distance <= 10) tiers[0].push(item)
+    else if (distance <= 25) tiers[1].push(item)
+    else if (distance <= 50) tiers[2].push(item)
+    else tiers[3].push(item)
+  }
+  
+  // Shuffle each tier and concatenate
+  return tiers.flatMap((tier, i) => deterministicShuffle(tier, `${seed}:tier${i}`))
 }
 ```
 
@@ -412,6 +447,14 @@ async function generateEpisode(date: string): Promise<Episode | null> {
 
 ### Slot Selection
 
+The slot selection algorithm prevents both template reuse AND semantic topic overlap. This ensures questions cover different aspects of the topic rather than asking about the same metric in different formats.
+
+**Semantic Topics:**
+Templates declare `semanticTopics` to indicate what underlying data/metric they cover:
+- `"tvl_trend_7d"` - P6, P15 (prevents duplicate 7-day TVL direction questions)
+- `"category_identification"` - P7 (only one category question per episode)
+- `"chain_tvl_comparison"` - P2 (cross-chain dominance questions)
+
 ```typescript
 function selectQuestionForSlot(
   slot: string,
@@ -420,12 +463,21 @@ function selectQuestionForSlot(
   target: DifficultyTarget,
   seed: number,
   usedTemplates: Set<string>,
+  usedSemanticTopics: Set<string>,  // NEW: track semantic topics
   buildLog: BuildLogEntry[]
 ): QuestionDraft | null {
   for (const template of templates) {
     // Skip if already used (except for some templates that allow reuse)
     if (usedTemplates.has(template.id) && !template.allowReuse) {
       buildLog.push({ slot, template: template.id, decision: "skip", reason: "already_used" })
+      continue
+    }
+    
+    // Skip if semantic topic already covered by another question
+    // This prevents e.g., P6 and P15 both asking about 7-day TVL direction
+    const topics = template.semanticTopics ?? []
+    if (topics.some(t => usedSemanticTopics.has(t))) {
+      buildLog.push({ slot, template: template.id, decision: "skip", reason: "semantic_topic_covered" })
       continue
     }
     
