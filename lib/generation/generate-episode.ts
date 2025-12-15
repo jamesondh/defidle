@@ -11,7 +11,7 @@ import type {
   DerivedMetrics,
   TemplateContext,
 } from "@/lib/types/episode"
-import type { ProtocolPoolEntry, ChainPoolEntry } from "@/lib/types/pools"
+import type { ProtocolPoolEntry, ChainPoolEntry, ChainPool } from "@/lib/types/pools"
 
 import {
   getProtocol,
@@ -22,6 +22,8 @@ import {
   getChainFees,
   getChainDEXVolume,
 } from "@/lib/api/defillama"
+
+import { readFile } from "fs/promises"
 
 import {
   selectTopic,
@@ -98,16 +100,31 @@ async function fetchProtocolData(
 }
 
 /**
+ * Load chain pool from static JSON file
+ */
+async function loadChainPool(): Promise<ChainPoolEntry[]> {
+  try {
+    const content = await readFile("./data/pools/chains.json", "utf-8")
+    const pool = JSON.parse(content) as ChainPool
+    return pool.chains
+  } catch (error) {
+    console.warn("Could not load chain pool:", error)
+    return []
+  }
+}
+
+/**
  * Fetch all data needed for a chain episode
  */
 async function fetchChainData(
   topic: ChainPoolEntry
 ): Promise<FetchedData | null> {
   try {
-    // Fetch chain list and history in parallel
-    const [chainList, chainHistory] = await Promise.all([
+    // Fetch chain list, history, and pool in parallel
+    const [chainList, chainHistory, chainPool] = await Promise.all([
       getChains(),
       getChainTVLHistory(topic.slug),
+      loadChainPool(),
     ])
 
     if (!chainHistory || chainHistory.length === 0) {
@@ -118,6 +135,7 @@ async function fetchChainData(
     const data: FetchedData = {
       chainList,
       chainHistory,
+      chainPool,
     }
 
     // Try to fetch chain fees and DEX volume

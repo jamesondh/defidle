@@ -100,6 +100,7 @@ Topic pools are stored as static JSON files in the repository, refreshed weekly 
   "tvl": 62000000000,
   "protocolCount": 850,
   "historyDays": 1500,
+  "change30d": 0.05,
   "lastUpdated": "2025-12-13"
 }
 ```
@@ -273,11 +274,12 @@ Questions are generated from a fixed set of **templates**. Each template:
 
 See `question-templates.md` for the template catalog.
 
-**Current templates:** P1-P6 (protocol) and C1-C6 (chain) — 12 templates total.
+**Current templates:** P1-P15 (protocol) and C1-C9 (chain) — 24 templates total.
 
-**Planned templates:** P7-P12 (protocol) and C7-C9 (chain) — 9 additional templates covering:
-- Category identification, chain membership, top chain name, TVL bands, fees trends, DEX volume trends (protocols)
-- Chain TVL bands, 30d direction, distance from ATH (chains)
+**Single-chain friendly templates (P13-P15):** These templates work well for protocols deployed on only one chain, reducing FALLBACK frequency:
+- P13: TVL Rank Comparison — compare to similar protocols by TVL
+- P14: Category Leader — compare within the same category
+- P15: Recent TVL Direction — simple trend question with minimal data requirements
 
 ### 3a. LLM Configuration
 
@@ -684,7 +686,7 @@ At ~2-5KB per episode, a full year is ~1-2MB. No immediate need for cleanup or e
 
 | File | Description |
 |------|-------------|
-| `question-templates.md` | Template catalog (P1-P6, C1-C6 implemented; P7-P12, C7-C9 planned) |
+| `question-templates.md` | Template catalog (P1-P12, C1-C9) |
 | `episode-assembly.md` | Slot matrix, difficulty targeting, prerequisite checks |
 | `generation-algorithm.md` | Deterministic RNG, difficulty scoring, distractor selection |
 | `defillama-api.md` | DefiLlama API reference |

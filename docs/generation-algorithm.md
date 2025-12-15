@@ -171,10 +171,13 @@ function computeDifficulty(signals: DifficultySignals): number {
   return Math.max(0, Math.min(1, score))
 }
 
+// Note: Hard band was relaxed from [0.6, 1.0] to [0.45, 1.0] to reduce
+// FALLBACK frequency. The previous strict bounds caused paradoxically easy
+// fallback questions when no template could hit the 0.6+ threshold.
 const TARGET_BANDS: Record<DifficultyTarget, [number, number]> = {
   easy: [0.00, 0.38],
   medium: [0.30, 0.68],
-  hard: [0.60, 1.00],
+  hard: [0.45, 1.00],
 }
 
 function matchesTarget(score: number, target: DifficultyTarget): boolean {

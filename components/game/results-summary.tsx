@@ -30,7 +30,7 @@ export function ResultsSummary({
   const getMessage = () => {
     if (percentage === 100) return "True Degen!"
     if (percentage >= 80) return "Hell yeah!"
-    if (percentage >= 60) return "Not terrible!"
+    if (percentage >= 60) return "Could be worse!"
     if (percentage >= 40) return "Womp womp!"
     return "Yikes!"
   }

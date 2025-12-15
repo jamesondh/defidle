@@ -192,7 +192,6 @@ function safeFallback(
   seed: number,
   usedPrompts?: Set<string>
 ): QuestionDraft | null {
-  const topicName = ctx.topic.name
   const isProtocol = ctx.episodeType === "protocol"
   const fallbacks = isProtocol ? PROTOCOL_FALLBACKS : CHAIN_FALLBACKS
 
@@ -368,11 +367,13 @@ export function selectQuestionForSlot(
       if (!draft) continue
 
       const score = computeDifficulty(draft.signals)
-      // Accept if score is reasonable (within 0.2 of target band)
+      // Accept if score is reasonable - relaxed bounds to reduce fallback frequency
+      // For hard slot, we accept score >= 0.25 rather than falling back to trivial questions
+      // (score ~0.13 from fallbacks). A medium-difficulty question is better than a trivial one.
       const withinEasyBounds = target === "easy" && score <= 0.5
       const withinMediumBounds =
         target === "medium" && score >= 0.2 && score <= 0.8
-      const withinHardBounds = target === "hard" && score >= 0.4
+      const withinHardBounds = target === "hard" && score >= 0.25
 
       if (withinEasyBounds || withinMediumBounds || withinHardBounds) {
         logEntries.push({

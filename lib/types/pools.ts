@@ -33,6 +33,8 @@ export interface ChainPoolEntry {
   protocolCount: number
   tokenSymbol?: string
   historyDays: number
+  /** 30-day TVL change as a decimal (e.g., 0.15 = +15%, -0.10 = -10%) */
+  change30d?: number
   lastUpdated: string // ISO date string
 }
 

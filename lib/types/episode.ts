@@ -221,6 +221,8 @@ export interface FetchedData {
   chainFees?: import("./defillama").ChainFeesOverview
   /** Chain DEX volume overview */
   chainDexVolume?: import("./defillama").ChainDEXOverview
+  /** Chain pool with pre-computed metrics (for C4 growth ranking) */
+  chainPool?: import("./pools").ChainPoolEntry[]
 }
 
 /**

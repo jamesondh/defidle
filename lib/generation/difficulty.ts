@@ -42,11 +42,15 @@ export const FAMILIARITY_FACTORS: Record<FamiliarityRankBucket, number> = {
 /**
  * Difficulty target bands (min, max)
  * Bands overlap to allow flexibility in matching
+ * 
+ * Note: Hard band was relaxed from [0.6, 1.0] to [0.45, 1.0] to reduce
+ * FALLBACK frequency. The previous strict bounds caused paradoxically easy
+ * fallback questions when no template could hit the 0.6+ threshold.
  */
 export const TARGET_BANDS: Record<DifficultyTarget, [number, number]> = {
   easy: [0.0, 0.38],
   medium: [0.3, 0.68],
-  hard: [0.6, 1.0],
+  hard: [0.45, 1.0],
 }
 
 /**

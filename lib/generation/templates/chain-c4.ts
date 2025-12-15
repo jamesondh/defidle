@@ -2,13 +2,14 @@
  * C4: Chain Growth Ranking
  *
  * Rank chains by recent TVL growth.
+ * Uses pre-computed 30d change data from the chain pool.
  */
 
 import type { QuestionFormat, QuestionDraft, TemplateContext } from "@/lib/types/episode"
 import { ChainTemplate } from "@/lib/types/template"
 import { getRankBucket } from "../difficulty"
 
-import { deterministicShuffle, createRng } from "../rng"
+import { deterministicShuffle } from "../rng"
 import type { ChainPoolEntry } from "@/lib/types/pools"
 
 interface ChainGrowth {
@@ -23,21 +24,22 @@ export class C4ChainGrowthRanking extends ChainTemplate {
   checkPrereqs(ctx: TemplateContext): boolean {
     if (!this.isChainContext(ctx)) return false
 
-    // This template requires actual 30d growth data for multiple chains.
-    // Currently we don't fetch historical TVL for chains other than the topic,
-    // so we cannot accurately compute growth rankings.
-    // 
-    // TODO: To enable this template, we would need to either:
-    // 1. Pre-compute chain growth data in the pools refresh script
-    // 2. Fetch historical data for top N chains during episode generation
-    //
-    // For now, fail prereqs to prevent generating questions with fake data.
-    return false
+    // Need chain pool data with change30d computed
+    const chainPool = ctx.data.chainPool
+    if (!chainPool || chainPool.length < 4) return false
+
+    // Count how many chains have valid change30d data
+    const chainsWithGrowth = chainPool.filter(
+      (c: ChainPoolEntry) => c.change30d !== undefined && c.change30d !== null
+    )
+    
+    // Need at least 4 chains with growth data for mc4 format
+    if (chainsWithGrowth.length < 4) return false
+
+    return true
   }
 
   proposeFormats(_ctx: TemplateContext): QuestionFormat[] {
-    // For ranking questions, we need good separation
-    // Without actual change data, default to safer formats
     return ["mc4", "ab"]
   }
 
@@ -47,32 +49,27 @@ export class C4ChainGrowthRanking extends ChainTemplate {
     seed: number
   ): QuestionDraft | null {
     const topic = ctx.topic as ChainPoolEntry
-    const chainList = ctx.data.chainList!
+    const chainPool = ctx.data.chainPool!
 
-    // Mock growth data - in real implementation, this would come from derived metrics
-    // For now, generate pseudo-random growth based on seed
-    const rng = createRng(seed)
+    // Build growth data from pool
+    const growthData: ChainGrowth[] = chainPool
+      .filter((c: ChainPoolEntry) => c.change30d !== undefined && c.change30d !== null)
+      .map((c: ChainPoolEntry) => ({
+        name: c.name,
+        change30d: c.change30d!,
+      }))
 
-    const growthData: ChainGrowth[] = chainList.slice(0, 20).map((chain) => ({
-      name: chain.name,
-      // Generate pseudo-growth between -30% and +50%
-      change30d: (rng() * 0.8 - 0.3),
-    }))
+    if (growthData.length < 4) return null
 
-    // Sort by growth
+    // Sort by growth descending
     const sorted = [...growthData].sort((a, b) => b.change30d - a.change30d)
-
-    // Ensure topic is in the selection
-    const topicGrowth = sorted.find((c) => c.name === topic.name) ?? {
-      name: topic.name,
-      change30d: rng() * 0.4 - 0.1,
-    }
 
     if (format === "mc4") {
       // "Which chain grew most in the last 30 days?"
       const topGrower = sorted[0]
 
-      // Get 3 distractors from top 10
+      // Get 3 distractors - mix of high and low performers for variety
+      // Take from top 10 to keep choices plausible
       const candidates = sorted.slice(1, 10).filter((c) => c.name !== topGrower.name)
       const shuffledCandidates = deterministicShuffle(candidates, `${seed}:distractors`)
       const distractors = shuffledCandidates.slice(0, 3)
@@ -94,12 +91,6 @@ export class C4ChainGrowthRanking extends ChainTemplate {
         : 0.1
 
       // Build comparison data for all choices
-      const choiceData = allChoices.map((c) => ({
-        name: c.name,
-        change: `${c.change30d > 0 ? "+" : ""}${(c.change30d * 100).toFixed(1)}%`,
-      }))
-      
-      // Find the distractors' data in order
       const distractorData = distractors.map((d) => ({
         name: d.name,
         change: `${d.change30d > 0 ? "+" : ""}${(d.change30d * 100).toFixed(1)}%`,
@@ -132,21 +123,26 @@ export class C4ChainGrowthRanking extends ChainTemplate {
       }
     }
 
-    // AB format - compare two chains
-    const chainA = sorted[0]
-    const chainB = sorted.length > 1 ? sorted[1] : topicGrowth
+    // AB format - compare two chains from different parts of the ranking
+    const chainA = sorted[0] // Top grower
+    // Find topic chain's growth, or use #2 if topic isn't in the list
+    const topicGrowth = sorted.find((c) => c.name === topic.name)
+    const chainB = topicGrowth && topicGrowth !== chainA 
+      ? topicGrowth 
+      : sorted[Math.min(1, sorted.length - 1)]
 
-    const swapped = rng() > 0.5
-    const choices = swapped
-      ? [chainB.name, chainA.name]
-      : [chainA.name, chainB.name]
-    const answerIndex = swapped ? 1 : 0
+    // Determine which is actually higher
+    const winner = chainA.change30d >= chainB.change30d ? chainA : chainB
+    const loser = winner === chainA ? chainB : chainA
+
+    // Randomize order of choices
+    const swapOrder = seed % 2 === 0
+    const choices = swapOrder
+      ? [loser.name, winner.name]
+      : [winner.name, loser.name]
+    const answerIndex = swapOrder ? 1 : 0
 
     const margin = Math.abs(chainA.change30d - chainB.change30d)
-    
-    // Winner is chainA (higher growth), loser is chainB
-    const winner = chainA
-    const loser = chainB
 
     return {
       templateId: this.id,
@@ -165,7 +161,6 @@ export class C4ChainGrowthRanking extends ChainTemplate {
         chainB: chainB.name,
         changeA: `${chainA.change30d > 0 ? "+" : ""}${(chainA.change30d * 100).toFixed(1)}%`,
         changeB: `${chainB.change30d > 0 ? "+" : ""}${(chainB.change30d * 100).toFixed(1)}%`,
-        // Include comparison context
         winnerChain: winner.name,
         winnerChange: `${winner.change30d > 0 ? "+" : ""}${(winner.change30d * 100).toFixed(1)}%`,
         loserChain: loser.name,

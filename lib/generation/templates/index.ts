@@ -4,7 +4,7 @@
  * Exports all template implementations for question generation
  */
 
-// Protocol Templates (P1-P12)
+// Protocol Templates (P1-P15)
 export { p1ProtocolFingerprint, P1ProtocolFingerprint } from "./protocol-p1"
 export { p2CrossChainDominance, P2CrossChainDominance } from "./protocol-p2"
 export { p3TopChainConcentration, P3TopChainConcentration } from "./protocol-p3"
@@ -17,6 +17,9 @@ export { p9TopChainName, P9TopChainName } from "./protocol-p9"
 export { p10TVLBand, P10TVLBand } from "./protocol-p10"
 export { p11FeesTrend, P11FeesTrend } from "./protocol-p11"
 export { p12DEXVolumeTrend, P12DEXVolumeTrend } from "./protocol-p12"
+export { p13TVLRankComparison, P13TVLRankComparison } from "./protocol-p13"
+export { p14CategoryLeaderComparison, P14CategoryLeaderComparison } from "./protocol-p14"
+export { p15RecentTVLDirection, P15RecentTVLDirection } from "./protocol-p15"
 
 // Chain Templates (C1-C9)
 export { c1ChainFingerprint, C1ChainFingerprint } from "./chain-c1"
@@ -31,7 +34,7 @@ export { c9DistanceFromATH, C9DistanceFromATH } from "./chain-c9"
 
 import type { Template, TemplateMatrix } from "@/lib/types/template"
 
-// Protocol Templates (P1-P12)
+// Protocol Templates (P1-P15)
 import { p1ProtocolFingerprint } from "./protocol-p1"
 import { p2CrossChainDominance } from "./protocol-p2"
 import { p3TopChainConcentration } from "./protocol-p3"
@@ -44,6 +47,9 @@ import { p9TopChainName } from "./protocol-p9"
 import { p10TVLBand } from "./protocol-p10"
 import { p11FeesTrend } from "./protocol-p11"
 import { p12DEXVolumeTrend } from "./protocol-p12"
+import { p13TVLRankComparison } from "./protocol-p13"
+import { p14CategoryLeaderComparison } from "./protocol-p14"
+import { p15RecentTVLDirection } from "./protocol-p15"
 
 // Chain Templates (C1-C9)
 import { c1ChainFingerprint } from "./chain-c1"
@@ -72,6 +78,9 @@ export const PROTOCOL_TEMPLATES: Record<string, Template> = {
   P10_TVL_BAND: p10TVLBand,
   P11_FEES_TREND: p11FeesTrend,
   P12_DEX_VOLUME_TREND: p12DEXVolumeTrend,
+  P13_TVL_RANK_COMPARISON: p13TVLRankComparison,
+  P14_CATEGORY_LEADER: p14CategoryLeaderComparison,
+  P15_RECENT_TVL_DIRECTION: p15RecentTVLDirection,
 }
 
 /**
@@ -99,7 +108,12 @@ export const CHAIN_TEMPLATES: Record<string, Template> = {
  * - D (Hard): Skill test with tight margins or precise timing
  * - E (Easy/Wrap-up): Trend or insight question
  *
- * New templates integrated:
+ * Templates P13-P15 are single-chain friendly (don't require multi-chain data):
+ * - P13 (TVL Rank Comparison): Good for slots B, D (compare to similar protocols)
+ * - P14 (Category Leader): Good for slots C, D (category context)
+ * - P15 (Recent TVL Direction): Good for slots C, E (simple trend)
+ *
+ * Previous templates:
  * - P7 (Category): Good for slot B (easy, recognizable)
  * - P8 (Chain Membership): Good for slots B, E (easy chain knowledge)
  * - P9 (Top Chain): Good for slots B, D (difficulty varies by margin)
@@ -109,10 +123,10 @@ export const CHAIN_TEMPLATES: Record<string, Template> = {
  */
 export const PROTOCOL_MATRIX: TemplateMatrix = {
   A: [p1ProtocolFingerprint],
-  B: [p2CrossChainDominance, p3TopChainConcentration, p7CategoryIdentification, p9TopChainName],
-  C: [p5FeesVsRevenue, p4ATHTiming, p11FeesTrend],
-  D: [p4ATHTiming, p5FeesVsRevenue, p2CrossChainDominance, p11FeesTrend, p9TopChainName],
-  E: [p6TVLTrend, p3TopChainConcentration, p10TVLBand, p8ChainMembership, p12DEXVolumeTrend],
+  B: [p2CrossChainDominance, p3TopChainConcentration, p7CategoryIdentification, p9TopChainName, p13TVLRankComparison],
+  C: [p5FeesVsRevenue, p4ATHTiming, p11FeesTrend, p14CategoryLeaderComparison, p15RecentTVLDirection],
+  D: [p4ATHTiming, p5FeesVsRevenue, p2CrossChainDominance, p11FeesTrend, p9TopChainName, p13TVLRankComparison, p14CategoryLeaderComparison],
+  E: [p6TVLTrend, p3TopChainConcentration, p10TVLBand, p8ChainMembership, p12DEXVolumeTrend, p15RecentTVLDirection],
 }
 
 /**

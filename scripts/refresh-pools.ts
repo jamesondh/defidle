@@ -247,9 +247,28 @@ async function refreshChainPool(
 
     // Fetch historical data
     let historyDays = 0
+    let change30d: number | undefined
     try {
       const history = await getChainTVLHistory(chain.name)
       historyDays = getChainHistoryDays(history)
+      
+      // Calculate 30-day change
+      if (history.length >= 30) {
+        const currentTvl = history[history.length - 1].tvl
+        // Find TVL from ~30 days ago
+        const thirtyDaysAgo = Date.now() / 1000 - 30 * 86400
+        let pastTvl = history[0].tvl
+        for (const entry of history) {
+          if (entry.date <= thirtyDaysAgo) {
+            pastTvl = entry.tvl
+          } else {
+            break
+          }
+        }
+        if (pastTvl > 0) {
+          change30d = (currentTvl - pastTvl) / pastTvl
+        }
+      }
     } catch (error) {
       console.warn(`  Failed to fetch history for ${chain.name}:`, error)
     }
@@ -278,6 +297,7 @@ async function refreshChainPool(
       protocolCount,
       tokenSymbol: chain.tokenSymbol,
       historyDays,
+      change30d,
       lastUpdated: formatDate(),
     }
 
