@@ -21,22 +21,22 @@
         "7d change: up 1-10%"
       ],
       "choices": [
-        "Function FBTC",
-        "SolvBTC",
+        "Marinade Native",
+        "Polygon Bridge & Staking",
         "Jupiter Lend",
-        "Tornado Cash"
+        "Lightning Network"
       ],
       "answerIndex": 2,
-      "explanation": "Jupiter Lend is a lending platform operating on the Solana blockchain, with a total value locked (TVL) of $984 million, placing it in the TVL band of $500 million to $1 billion. It currently supports one blockchain.",
+      "explanation": "Jupiter Lend is a lending platform operating on the Solana blockchain, with a total value locked (TVL) of $999M, placing it in the $500M-$1B TVL band. It currently supports one blockchain.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_100",
         "margin": null,
-        "volatility": 0.14803876089106832
+        "volatility": 0.1458353746130241
       },
-      "difficultyScore": 0.3172058141336602
+      "difficultyScore": 0.3168753061919536
     },
     {
       "qid": "q2",
@@ -50,94 +50,95 @@
       ],
       "answerIndex": 1,
       "answerValue": false,
-      "explanation": "Jupiter Lend is currently ranked 78th among DeFi protocols, which places it outside the top 50 threshold. This indicates that it has not yet reached the level of prominence held by the leading DeFi platforms.",
+      "explanation": "Jupiter Lend is currently ranked 78th among DeFi protocols, which places it outside the top 50 threshold. This indicates that it is not among the highest-ranked DeFi lending platforms.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "tf",
         "familiarityRankBucket": "top_100",
-        "margin": 0.28,
+        "margin": 0.56,
         "volatility": 0
       },
-      "difficultyScore": 0.14416666666666664
+      "difficultyScore": 0.1275
     },
     {
       "qid": "q3",
       "slot": "C",
       "templateId": "P15_RECENT_TVL_DIRECTION",
       "format": "ab",
-      "prompt": "Over the past 7 days, did Jupiter Lend's TVL increase or decrease?",
+      "prompt": "Over the past 30 days, did Jupiter Lend's TVL increase or decrease?",
       "choices": [
-        "Decreased",
-        "Increased"
+        "Increase",
+        "Decrease"
       ],
-      "answerIndex": 1,
-      "explanation": "Jupiter Lend's total value locked (TVL) has increased by 2.7% over the past 7 days, bringing its current TVL to $1.0B. This indicates a positive trend in the platform's usage and liquidity.",
+      "answerIndex": 0,
+      "explanation": "Jupiter Lend has experienced a 7.4% increase in its total value locked (TVL), which now stands at $999 million over the past 30 days.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "ab",
         "familiarityRankBucket": "top_100",
-        "margin": 0.027461467682582664,
-        "volatility": 0.14803876089106832
+        "margin": 0.07440857281550284,
+        "volatility": 0.1458353746130241
       },
-      "difficultyScore": 0.42932125773150803
+      "difficultyScore": 0.3898681621790346
     },
     {
       "qid": "q4",
       "slot": "D",
-      "templateId": "FALLBACK_PROTOCOL_CHAINS_ABOVE_3",
+      "templateId": "FALLBACK_PROTOCOL_TVL_DOWN_5PCT",
       "format": "tf",
-      "prompt": "Jupiter Lend is deployed on more than 3 blockchains.",
+      "prompt": "Jupiter Lend's TVL dropped by more than 5% over the past week.",
       "choices": [
         "True",
         "False"
       ],
       "answerIndex": 1,
       "answerValue": false,
-      "explanation": "Jupiter Lend operates on a single blockchain, which is below the threshold of 3 chains. This means it does not meet the criteria for fallback protocols that require connections to 3 or more chains.",
+      "explanation": "Jupiter Lend's total value locked (TVL) increased by 1.1%, which did not meet the 5% threshold for a significant change. Therefore, it is noted that the TVL did not reach the specified benchmark.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "tf",
         "familiarityRankBucket": "top_100",
-        "margin": 0.2,
+        "margin": 0.060525886089449754,
         "volatility": 0
       },
-      "difficultyScore": 0.21083333333333332
+      "difficultyScore": 0.3270617615921252
     },
     {
       "qid": "q5",
       "slot": "E",
       "templateId": "P8_CHAIN_MEMBERSHIP",
-      "format": "tf",
-      "prompt": "Jupiter Lend is deployed on Solana.",
+      "format": "mc4",
+      "prompt": "Which chain is Jupiter Lend deployed on?",
       "choices": [
-        "True",
-        "False"
+        "Solana",
+        "Polygon",
+        "Arbitrum",
+        "Ethereum"
       ],
       "answerIndex": 0,
-      "answerValue": true,
-      "explanation": "Jupiter Lend is a DeFi platform that is deployed on the Solana blockchain, making it a single-chain project focused solely on Solana.",
+      "explanation": "Jupiter Lend operates on the Solana blockchain, which means it is part of a single chain ecosystem. This makes its chain count 1.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
-        "format": "tf",
+        "format": "mc4",
         "familiarityRankBucket": "top_100",
-        "margin": 0.25,
-        "volatility": null
+        "margin": 0.4,
+        "volatility": 0.1458353746130241
       },
-      "difficultyScore": 0.20666666666666667
+      "difficultyScore": 0.2543753061919536
     }
   ],
-  "generatedAt": "2025-12-15T22:21:08.119Z",
+  "generatedAt": "2025-12-16T14:13:16.867Z",
   "buildLog": [
     {
       "slot": "A",
       "template": "P1_FINGERPRINT",
       "format": "mc4",
       "decision": "selected",
-      "score": 0.3172058141336602,
+      "score": 0.3168753061919536,
       "target": "medium"
     },
     {
@@ -184,8 +185,11 @@
     {
       "slot": "C",
       "template": "P4_ATH_TIMING",
-      "decision": "skip",
-      "reason": "prereq_failed"
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.1493753061919536,
+      "target": "medium"
     },
     {
       "slot": "C",
@@ -204,14 +208,17 @@
       "template": "P15_RECENT_TVL_DIRECTION",
       "format": "ab",
       "decision": "selected",
-      "score": 0.42932125773150803,
+      "score": 0.3898681621790346,
       "target": "medium"
     },
     {
       "slot": "D",
       "template": "P4_ATH_TIMING",
-      "decision": "skip",
-      "reason": "prereq_failed"
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.1493753061919536,
+      "target": "hard"
     },
     {
       "slot": "D",
@@ -258,7 +265,7 @@
       "slot": "E",
       "template": "P6_TVL_TREND",
       "decision": "skip",
-      "reason": "semantic_topic_covered:tvl_trend"
+      "reason": "semantic_topic_covered:tvl_trend_7d"
     },
     {
       "slot": "E",
@@ -269,15 +276,18 @@
     {
       "slot": "E",
       "template": "P10_TVL_BAND",
-      "decision": "skip",
-      "reason": "semantic_topic_covered:tvl_absolute"
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.5020526728586203,
+      "target": "easy"
     },
     {
       "slot": "E",
       "template": "P8_CHAIN_MEMBERSHIP",
-      "format": "tf",
+      "format": "mc4",
       "decision": "selected",
-      "score": 0.20666666666666667,
+      "score": 0.2543753061919536,
       "target": "easy"
     },
     {

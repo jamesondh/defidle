@@ -1,0 +1,261 @@
+{
+  "episodeId": "2025-12-16:chain:Aptos",
+  "dateUtc": "2025-12-16",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Aptos",
+    "name": "Aptos"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "TVL: $100M-$500M",
+        "Native token: APT",
+        "30d trend: down >10%"
+      ],
+      "choices": [
+        "Nolus",
+        "Sonic",
+        "Aptos",
+        "Morph",
+        "Saakuru",
+        "Base"
+      ],
+      "answerIndex": 2,
+      "explanation": "Aptos is ranked 13th in total value locked (TVL) with an estimated range of $100M to $500M, and it supports 89 different protocols. Its native token is APT.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.33749999999999997
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C8_30D_DIRECTION",
+      "format": "ab",
+      "prompt": "Over the last 30 days, did Aptos's TVL increase or decrease?",
+      "choices": [
+        "Increase",
+        "Decrease"
+      ],
+      "answerIndex": 1,
+      "explanation": "Aptos has experienced a decrease of 18.2% in value over the past 30 days. This indicates a downward trend in its market performance.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.18178883493605144,
+        "volatility": null
+      },
+      "difficultyScore": 0.28600930421995713
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C5_TOP_BY_FEES",
+      "format": "mc4",
+      "prompt": "Which protocol is #1 by 24h fees on Aptos?",
+      "choices": [
+        "BlueMove Staking",
+        "PancakeSwap AMM",
+        "Ondo Yield Assets",
+        "Aries Markets"
+      ],
+      "answerIndex": 1,
+      "explanation": "On the Aptos blockchain, the top protocol by fees is PancakeSwap AMM, which has generated $0 in fees, similar to other protocols like Aries Markets, BlueMove Staking, and Ondo Yield Assets, all also reporting $0 in fees.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0,
+        "volatility": null
+      },
+      "difficultyScore": 0.49
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C9_DISTANCE_FROM_ATH",
+      "format": "mc4",
+      "prompt": "How far is Aptos from its ATH TVL?",
+      "choices": [
+        "At ATH",
+        "Within 10%",
+        "10-30% below",
+        "30-60% below",
+        ">60% below"
+      ],
+      "answerIndex": 4,
+      "explanation": "Aptos has a current total value locked (TVL) of $454M, which is 65.2% below its all-time high (ATH) value of $1.3B. This indicates a significant decrease in the platform's TVL compared to its peak.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.05177630395247024,
+        "volatility": null
+      },
+      "difficultyScore": 0.4468530800396081
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Aptos?",
+      "choices": [
+        "Tapp Exchange",
+        "ThalaSwap V2",
+        "Hyperion",
+        "ThalaSwap V3"
+      ],
+      "answerIndex": 2,
+      "explanation": "On the Aptos blockchain, the top decentralized exchange (DEX) is Hyperion, with a trading volume of $61M. Other notable DEXes include ThalaSwap V3 at $22M, Tapp Exchange at $11M, and ThalaSwap V2 at $802K.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.6409812890919521,
+        "volatility": null
+      },
+      "difficultyScore": 0.24000000000000002
+    }
+  ],
+  "generatedAt": "2025-12-16T14:11:25.977Z",
+  "buildLog": [
+    {
+      "slot": "A",
+      "template": "C1_FINGERPRINT",
+      "format": "mc6",
+      "decision": "selected",
+      "score": 0.33749999999999997,
+      "target": "medium"
+    },
+    {
+      "slot": "B",
+      "template": "C2_CHAIN_COMPARISON",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_absolute"
+    },
+    {
+      "slot": "B",
+      "template": "C8_30D_DIRECTION",
+      "format": "ab",
+      "decision": "selected",
+      "score": 0.28600930421995713,
+      "target": "easy"
+    },
+    {
+      "slot": "C",
+      "template": "C5_TOP_BY_FEES",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.49,
+      "target": "medium"
+    },
+    {
+      "slot": "D",
+      "template": "C3_ATH_TIMING",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.24000000000000002,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "C3_ATH_TIMING",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.135,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "C4_GROWTH_RANKING",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_trend"
+    },
+    {
+      "slot": "D",
+      "template": "C9_DISTANCE_FROM_ATH",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.135,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "C9_DISTANCE_FROM_ATH",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.4468530800396081,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "C11_TOP_PROTOCOL_TVL",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.24000000000000002,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "C11_TOP_PROTOCOL_TVL",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.1875,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "C12_CATEGORY_DOMINANCE",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.24000000000000002,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "C9_DISTANCE_FROM_ATH",
+      "format": "mc4",
+      "decision": "selected",
+      "reason": "close_enough",
+      "score": 0.4468530800396081,
+      "target": "hard"
+    },
+    {
+      "slot": "E",
+      "template": "C6_TOP_DEX",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.24000000000000002,
+      "target": "easy"
+    },
+    {
+      "decision": "post_balance",
+      "reason": "No hard questions in episode"
+    }
+  ]
+}

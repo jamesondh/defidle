@@ -1,7 +1,6 @@
 "use client"
 
 import { Badge } from "@/components/ui/badge"
-import { SegmentedProgress } from "@/components/ui/segmented-progress"
 import { cn } from "@/lib/utils"
 import type { PlayerAnswer } from "@/lib/client/game-state"
 import type { DifficultyTarget, Question, Topic } from "@/lib/types/episode"
@@ -53,8 +52,6 @@ export function ResultsContent({
         </div>
         <p className="mt-1 text-sm text-muted-foreground">correct answers</p>
       </div>
-
-      <SegmentedProgress total={totalQuestions} completed={correctCount} className="h-3" />
 
       <div className="space-y-2">
         {questions.map((question) => {

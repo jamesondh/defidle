@@ -66,6 +66,7 @@ function DatePicker({ date }: { date?: string }) {
   const [open, setOpen] = React.useState(false)
 
   const today = getTodayDateUtc()
+  const firstEpisodeDate = process.env.NEXT_PUBLIC_FIRST_EPISODE_DATE || "2025-12-15"
   const currentDate = date || today
   const selectedDate = parseDateString(currentDate)
 
@@ -103,10 +104,10 @@ function DatePicker({ date }: { date?: string }) {
           defaultMonth={selectedDate}
           onSelect={handleDateSelect}
           disabled={(date) => {
-            // Disable future dates - compare as YYYY-MM-DD strings to avoid timezone issues
+            // Disable dates outside the valid range (before first episode or after today)
             // Calendar passes local dates, so we format using local methods
             const dateString = formatLocalDateToString(date)
-            return dateString > today
+            return dateString > today || dateString < firstEpisodeDate
           }}
           captionLayout="dropdown"
         />
