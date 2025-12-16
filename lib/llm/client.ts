@@ -33,7 +33,14 @@ Rules:
 - Use plain language accessible to DeFi beginners
 - Format large numbers with appropriate units ($4.2B, not $4,200,000,000)
 - Do not include phrases like "The correct answer is..." or "According to data..."
-- Do not speculate on why the answer is correct, just state the fact directly`
+- Do not speculate on why the answer is correct, just state the fact directly
+
+CRITICAL TERMINOLOGY:
+- TVL (Total Value Locked) is NOT the same as "market capitalization" or "market cap"
+- TVL refers to the total value of assets deposited/locked in a protocol or chain
+- Market cap refers to token price × circulating supply (which is NOT what we measure)
+- Always use "TVL" or "total value locked" - NEVER say "market capitalization" for TVL data
+- ATH means "all-time high" and refers to TVL peaks, not price peaks`
 
 const REPHRASE_SYSTEM_PROMPT = `Rephrase the quiz question while keeping the exact same meaning.
 
@@ -106,6 +113,13 @@ export async function generateExplanation(
 
     // Build user prompt from data
     const dataStr = JSON.stringify(data, null, 2)
+    
+    // Check if comparison data is available for MC questions
+    const hasComparison = "comparison" in data && typeof data.comparison === "string"
+    const comparisonHint = hasComparison
+      ? `\n\nIMPORTANT: Include brief context about the other choices. The "comparison" field shows the alternatives and their values - mention 1-2 of them to help explain why the correct answer stands out.`
+      : ""
+    
     const userPrompt = `Generate a 1-2 sentence explanation for a DeFi quiz answer.
 
 Topic: ${topicName}
@@ -113,7 +127,7 @@ Template: ${templateId}
 Data:
 ${dataStr}
 
-Write a concise explanation using the data above.`
+Write a concise explanation using the data above.${comparisonHint}`
 
     const response = await client.chat.completions.create({
       model: DEFAULT_MODEL,
@@ -139,13 +153,28 @@ Write a concise explanation using the data above.`
       }
     }
 
-    // Validate response (basic sanity checks)
+    // Validate response (sanity checks)
     if (text.length > 500) {
       return {
         text: "",
         model: DEFAULT_MODEL,
         success: false,
         error: "Response too long (>500 chars)",
+      }
+    }
+
+    // Check for terminology errors
+    const lowerText = text.toLowerCase()
+    if (lowerText.includes("market cap") || lowerText.includes("market capitalization")) {
+      // Only reject if we're dealing with TVL data, not actual market cap
+      const dataStr = JSON.stringify(data).toLowerCase()
+      if (dataStr.includes("tvl") && !dataStr.includes("marketcap")) {
+        return {
+          text: "",
+          model: DEFAULT_MODEL,
+          success: false,
+          error: "LLM incorrectly used 'market cap' terminology for TVL data",
+        }
       }
     }
 

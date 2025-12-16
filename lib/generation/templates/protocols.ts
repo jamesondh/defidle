@@ -518,6 +518,8 @@ const P4_ATH_TIMING: TemplateConfig<P4Data> = {
       athValue: formatNumber(data.athValue),
       athMonth: data.athMonth,
       distractorMonths: data.distractorMonths,
+      // Formatted comparison for LLM to reference wrong choices
+      comparison: `The correct answer is ${data.athMonth}. The other choices (${data.distractorMonths.join(", ")}) were not when ${detail.name} reached its ATH.`,
     }
   },
 }
@@ -1568,6 +1570,275 @@ const P15_RECENT_TVL_DIRECTION: TemplateConfig<P15Data> = {
 }
 
 // =============================================================================
+// P16: Category Peer Comparison (MC4 version - good for single-chain protocols)
+// =============================================================================
+
+interface P16Data {
+  categoryPeers: Array<{ name: string; tvl: number }>
+  correctPeer: { name: string; tvl: number }
+  category: string
+  questionType: "highest" | "lowest"
+}
+
+const P16_CATEGORY_PEER: TemplateConfig<P16Data> = {
+  id: "P16_CATEGORY_PEER",
+  name: "Category Peer Comparison",
+  description: "Which protocol has highest/lowest TVL in category",
+  type: "protocol",
+  semanticTopics: ["tvl_absolute", "category_ranking"],
+
+  checkPrereqs(ctx) {
+    if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
+    const catProtocols = ctx.derived.categoryProtocols
+    if (!catProtocols || catProtocols.length < 3) return { passed: false, reason: "need_3_category_peers" }
+    const topic = ctx.topic as ProtocolPoolEntry
+    if (!topic.category) return { passed: false, reason: "no_category" }
+    return { passed: true }
+  },
+
+  getFormats() {
+    return ["mc4"]
+  },
+
+  extract(ctx, seed) {
+    const catProtocols = ctx.derived.categoryProtocols!
+    const topic = ctx.topic as ProtocolPoolEntry
+    const topicTvl = ctx.derived.currentTvl ?? 0
+
+    // Include topic in the pool
+    const allInCategory = [
+      { name: topic.name, tvl: topicTvl, slug: topic.slug, rank: topic.tvlRank },
+      ...catProtocols,
+    ].sort((a, b) => b.tvl - a.tvl)
+
+    // Deterministically choose highest or lowest question
+    const rng = createRng(seed)
+    const questionType = rng() > 0.5 ? "highest" : "lowest"
+
+    // Pick 4 choices including the correct answer
+    const correctPeer = questionType === "highest" ? allInCategory[0] : allInCategory[allInCategory.length - 1]
+    
+    // Get 3 distractors from remaining protocols
+    const distractors = allInCategory
+      .filter((p) => p.name !== correctPeer.name)
+      .slice(0, 5) // Take from top 5 (for highest) or around
+    
+    const shuffledDistractors = deterministicShuffle(distractors, `${seed}:dist`).slice(0, 3)
+    const categoryPeers = [correctPeer, ...shuffledDistractors]
+
+    return { categoryPeers, correctPeer, category: topic.category, questionType }
+  },
+
+  getPrompt(data) {
+    return `Which ${data.category} protocol has the ${data.questionType} TVL?`
+  },
+
+  getChoices(data, _ctx, _format, seed) {
+    return deterministicShuffle(data.categoryPeers, `${seed}:shuffle`).map((p) => p.name)
+  },
+
+  getAnswerIndex(data, _ctx, _format, choices) {
+    return choices.indexOf(data.correctPeer.name)
+  },
+
+  getMargin(data) {
+    // Margin is difference between correct and closest competitor
+    const sorted = [...data.categoryPeers].sort((a, b) => b.tvl - a.tvl)
+    if (data.questionType === "highest") {
+      return abMargin(sorted[0].tvl, sorted[1].tvl) ?? 0
+    } else {
+      return abMargin(sorted[sorted.length - 2].tvl, sorted[sorted.length - 1].tvl) ?? 0
+    }
+  },
+
+  getExplainData(data) {
+    const otherPeers = data.categoryPeers
+      .filter((p) => p.name !== data.correctPeer.name)
+      .map((p) => ({ name: p.name, tvl: formatNumber(p.tvl) }))
+
+    return {
+      category: data.category,
+      questionType: data.questionType,
+      winner: data.correctPeer.name,
+      winnerTvl: formatNumber(data.correctPeer.tvl),
+      otherPeers,
+      comparison: otherPeers.map((p) => `${p.name} (${p.tvl})`).join(", "),
+    }
+  },
+}
+
+// =============================================================================
+// P20: ATH Distance (bucket format)
+// =============================================================================
+
+interface P20Data {
+  athValue: number
+  currentTvl: number
+  distancePercent: number
+  bucketIndex: number
+}
+
+const ATH_DISTANCE_BUCKETS = ["<25% below ATH", "25-50% below ATH", "50-75% below ATH", ">75% below ATH"]
+
+function getAthDistanceBucketIndex(distancePercent: number): number {
+  if (distancePercent < 25) return 0
+  if (distancePercent < 50) return 1
+  if (distancePercent < 75) return 2
+  return 3
+}
+
+const P20_ATH_DISTANCE: TemplateConfig<P20Data> = {
+  id: "P20_ATH_DISTANCE",
+  name: "ATH Distance",
+  description: "How far is the protocol from its all-time high TVL",
+  type: "protocol",
+  semanticTopics: ["ath_history", "tvl_magnitude"],
+
+  checkPrereqs(ctx) {
+    if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
+    if (!ctx.derived.athValue) return { passed: false, reason: "no_ath" }
+    if (!ctx.derived.currentTvl) return { passed: false, reason: "no_current_tvl" }
+    // Only ask if protocol is below ATH
+    const distance = (ctx.derived.athValue - ctx.derived.currentTvl) / ctx.derived.athValue
+    if (distance < 0.1) return { passed: false, reason: "too_close_to_ath" } // Within 10% of ATH
+    return { passed: true }
+  },
+
+  getFormats() {
+    return ["mc4"]
+  },
+
+  extract(ctx) {
+    const athValue = ctx.derived.athValue!
+    const currentTvl = ctx.derived.currentTvl!
+    const distancePercent = ((athValue - currentTvl) / athValue) * 100
+    const bucketIndex = getAthDistanceBucketIndex(distancePercent)
+
+    return { athValue, currentTvl, distancePercent, bucketIndex }
+  },
+
+  getPrompt(_data, ctx) {
+    const detail = ctx.data.protocolDetail!
+    return `How far is ${detail.name}'s current TVL from its all-time high?`
+  },
+
+  getChoices() {
+    return ATH_DISTANCE_BUCKETS
+  },
+
+  getAnswerIndex(data) {
+    return data.bucketIndex
+  },
+
+  getMargin(data) {
+    // Distance to bucket boundaries
+    const boundaries = [25, 50, 75]
+    const minDist = Math.min(...boundaries.map((b) => Math.abs(data.distancePercent - b)))
+    return Math.min(1, minDist / 25) // Normalize to 0-1
+  },
+
+  getExplainData(data, ctx) {
+    const detail = ctx.data.protocolDetail!
+    return {
+      name: detail.name,
+      athValue: formatNumber(data.athValue),
+      currentTvl: formatNumber(data.currentTvl),
+      distancePercent: Math.round(data.distancePercent),
+      bucket: ATH_DISTANCE_BUCKETS[data.bucketIndex],
+    }
+  },
+}
+
+// =============================================================================
+// P22: Category Market Share
+// =============================================================================
+
+interface P22Data {
+  categoryTotal: number
+  protocolTvl: number
+  sharePercent: number
+  bucketIndex: number
+  category: string
+}
+
+const MARKET_SHARE_BUCKETS = ["<10%", "10-25%", "25-50%", ">50%"]
+
+function getMarketShareBucketIndex(sharePercent: number): number {
+  if (sharePercent < 10) return 0
+  if (sharePercent < 25) return 1
+  if (sharePercent < 50) return 2
+  return 3
+}
+
+const P22_CATEGORY_MARKET_SHARE: TemplateConfig<P22Data> = {
+  id: "P22_CATEGORY_MARKET_SHARE",
+  name: "Category Market Share",
+  description: "What percentage of category TVL does this protocol hold",
+  type: "protocol",
+  semanticTopics: ["tvl_absolute", "category_ranking"],
+
+  checkPrereqs(ctx) {
+    if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
+    const catProtocols = ctx.derived.categoryProtocols
+    if (!catProtocols || catProtocols.length < 2) return { passed: false, reason: "need_category_data" }
+    const topic = ctx.topic as ProtocolPoolEntry
+    if (!topic.category) return { passed: false, reason: "no_category" }
+    if (!ctx.derived.currentTvl) return { passed: false, reason: "no_tvl" }
+    return { passed: true }
+  },
+
+  getFormats() {
+    return ["mc4"]
+  },
+
+  extract(ctx) {
+    const catProtocols = ctx.derived.categoryProtocols!
+    const topic = ctx.topic as ProtocolPoolEntry
+    const protocolTvl = ctx.derived.currentTvl!
+
+    // Calculate total category TVL (including topic protocol)
+    const categoryTotal = protocolTvl + catProtocols.reduce((sum, p) => sum + p.tvl, 0)
+    const sharePercent = (protocolTvl / categoryTotal) * 100
+    const bucketIndex = getMarketShareBucketIndex(sharePercent)
+
+    return { categoryTotal, protocolTvl, sharePercent, bucketIndex, category: topic.category }
+  },
+
+  getPrompt(_data, ctx) {
+    const detail = ctx.data.protocolDetail!
+    const topic = ctx.topic as ProtocolPoolEntry
+    return `What share of ${topic.category} TVL does ${detail.name} hold?`
+  },
+
+  getChoices() {
+    return MARKET_SHARE_BUCKETS
+  },
+
+  getAnswerIndex(data) {
+    return data.bucketIndex
+  },
+
+  getMargin(data) {
+    // Distance to bucket boundaries
+    const boundaries = [10, 25, 50]
+    const minDist = Math.min(...boundaries.map((b) => Math.abs(data.sharePercent - b)))
+    return Math.min(1, minDist / 10) // Normalize to 0-1
+  },
+
+  getExplainData(data, ctx) {
+    const detail = ctx.data.protocolDetail!
+    return {
+      name: detail.name,
+      category: data.category,
+      protocolTvl: formatNumber(data.protocolTvl),
+      categoryTotal: formatNumber(data.categoryTotal),
+      sharePercent: Math.round(data.sharePercent),
+      bucket: MARKET_SHARE_BUCKETS[data.bucketIndex],
+    }
+  },
+}
+
+// =============================================================================
 // Export all templates
 // =============================================================================
 
@@ -1587,6 +1858,9 @@ export const PROTOCOL_TEMPLATE_CONFIGS = {
   P13_TVL_RANK_COMPARISON,
   P14_CATEGORY_LEADER,
   P15_RECENT_TVL_DIRECTION,
+  P16_CATEGORY_PEER,
+  P20_ATH_DISTANCE,
+  P22_CATEGORY_MARKET_SHARE,
 }
 
 // Create Template implementations from configs
@@ -1605,3 +1879,6 @@ export const p12DEXVolumeTrend = createTemplate(P12_DEX_VOLUME_TREND)
 export const p13TVLRankComparison = createTemplate(P13_TVL_RANK_COMPARISON)
 export const p14CategoryLeaderComparison = createTemplate(P14_CATEGORY_LEADER)
 export const p15RecentTVLDirection = createTemplate(P15_RECENT_TVL_DIRECTION)
+export const p16CategoryPeer = createTemplate(P16_CATEGORY_PEER)
+export const p20AthDistance = createTemplate(P20_ATH_DISTANCE)
+export const p22CategoryMarketShare = createTemplate(P22_CATEGORY_MARKET_SHARE)

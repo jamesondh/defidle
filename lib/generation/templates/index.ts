@@ -28,6 +28,9 @@ export {
   p13TVLRankComparison,
   p14CategoryLeaderComparison,
   p15RecentTVLDirection,
+  p16CategoryPeer,
+  p20AthDistance,
+  p22CategoryMarketShare,
   // Config objects for documentation generation
   PROTOCOL_TEMPLATE_CONFIGS,
 } from "./protocols"
@@ -111,6 +114,9 @@ import {
   p13TVLRankComparison,
   p14CategoryLeaderComparison,
   p15RecentTVLDirection,
+  p16CategoryPeer,
+  p20AthDistance,
+  p22CategoryMarketShare,
 } from "./protocols"
 
 import {
@@ -153,6 +159,9 @@ export const PROTOCOL_TEMPLATES: Record<string, Template> = {
   P13_TVL_RANK_COMPARISON: p13TVLRankComparison,
   P14_CATEGORY_LEADER: p14CategoryLeaderComparison,
   P15_RECENT_TVL_DIRECTION: p15RecentTVLDirection,
+  P16_CATEGORY_PEER: p16CategoryPeer,
+  P20_ATH_DISTANCE: p20AthDistance,
+  P22_CATEGORY_MARKET_SHARE: p22CategoryMarketShare,
 }
 
 /**
@@ -187,7 +196,7 @@ export const CHAIN_TEMPLATES: Record<string, Template> = {
  * - D (Hard): Skill test with tight margins or precise timing
  * - E (Easy/Wrap-up): Trend or insight question
  *
- * Templates P13-P15 are single-chain friendly (don't require multi-chain data)
+ * Templates P13-P16, P20, P22 are single-chain friendly (don't require multi-chain data)
  */
 export const PROTOCOL_MATRIX: TemplateMatrix = {
   A: [p1ProtocolFingerprint],
@@ -197,6 +206,7 @@ export const PROTOCOL_MATRIX: TemplateMatrix = {
     p7CategoryIdentification,
     p9TopChainName,
     p13TVLRankComparison,
+    p16CategoryPeer, // Good for single-chain protocols
   ],
   C: [
     p5FeesVsRevenue,
@@ -204,6 +214,8 @@ export const PROTOCOL_MATRIX: TemplateMatrix = {
     p11FeesTrend,
     p14CategoryLeaderComparison,
     p15RecentTVLDirection,
+    p20AthDistance, // Single-chain friendly
+    p22CategoryMarketShare, // Single-chain friendly
   ],
   D: [
     p4ATHTiming,
@@ -213,6 +225,8 @@ export const PROTOCOL_MATRIX: TemplateMatrix = {
     p9TopChainName,
     p13TVLRankComparison,
     p14CategoryLeaderComparison,
+    p16CategoryPeer, // Single-chain friendly
+    p20AthDistance, // Single-chain friendly
   ],
   E: [
     p6TVLTrend,
@@ -221,6 +235,7 @@ export const PROTOCOL_MATRIX: TemplateMatrix = {
     p8ChainMembership,
     p12DEXVolumeTrend,
     p15RecentTVLDirection,
+    p22CategoryMarketShare, // Single-chain friendly
   ],
 }
 

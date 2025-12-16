@@ -21,14 +21,14 @@
       ],
       "choices": [
         "Nolus",
-        "Sonic",
+        "Gnosis",
         "Aptos",
-        "Morph",
+        "Cronos zkEVM",
         "Saakuru",
-        "Base"
+        "Celo"
       ],
       "answerIndex": 2,
-      "explanation": "Aptos is ranked 13th in total value locked (TVL) with an estimated range of $100M to $500M, and it supports 89 different protocols. Its native token is APT.",
+      "explanation": "Aptos is ranked 13th in total value locked (TVL), with an estimated TVL between $100 million and $500 million, and it supports 89 different protocols. The native token for Aptos is APT.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
@@ -50,44 +50,20 @@
         "Decrease"
       ],
       "answerIndex": 1,
-      "explanation": "Aptos has experienced a decrease of 18.2% in value over the past 30 days. This indicates a downward trend in its market performance.",
+      "explanation": "Aptos experienced a decrease in TVL of 17.7% over the past 30 days, indicating a reduction in the total value locked in the protocol.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "ab",
         "familiarityRankBucket": "top_25",
-        "margin": 0.18178883493605144,
+        "margin": 0.17665516418223173,
         "volatility": null
       },
-      "difficultyScore": 0.28600930421995713
+      "difficultyScore": 0.2902873631814735
     },
     {
       "qid": "q3",
       "slot": "C",
-      "templateId": "C5_TOP_BY_FEES",
-      "format": "mc4",
-      "prompt": "Which protocol is #1 by 24h fees on Aptos?",
-      "choices": [
-        "BlueMove Staking",
-        "PancakeSwap AMM",
-        "Ondo Yield Assets",
-        "Aries Markets"
-      ],
-      "answerIndex": 1,
-      "explanation": "On the Aptos blockchain, the top protocol by fees is PancakeSwap AMM, which has generated $0 in fees, similar to other protocols like Aries Markets, BlueMove Staking, and Ondo Yield Assets, all also reporting $0 in fees.",
-      "difficulty": "medium",
-      "llmFallback": false,
-      "signals": {
-        "format": "mc4",
-        "familiarityRankBucket": "top_25",
-        "margin": 0,
-        "volatility": null
-      },
-      "difficultyScore": 0.49
-    },
-    {
-      "qid": "q4",
-      "slot": "D",
       "templateId": "C9_DISTANCE_FROM_ATH",
       "format": "mc4",
       "prompt": "How far is Aptos from its ATH TVL?",
@@ -99,7 +75,7 @@
         ">60% below"
       ],
       "answerIndex": 4,
-      "explanation": "Aptos has a current total value locked (TVL) of $454M, which is 65.2% below its all-time high (ATH) value of $1.3B. This indicates a significant decrease in the platform's TVL compared to its peak.",
+      "explanation": "Aptos has a total value locked (TVL) of $454M, which is 65.2% lower than its all-time high (ATH) of $1.3B. This indicates a significant decrease in the value of assets locked in the Aptos protocol compared to its peak.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
@@ -109,6 +85,29 @@
         "volatility": null
       },
       "difficultyScore": 0.4468530800396081
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "FALLBACK_CHAIN_RANK_TOP_20",
+      "format": "tf",
+      "prompt": "Aptos is ranked in the top 20 chains by TVL.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Aptos is ranked 13th in the DeFi space, placing it within the top 20 chains, while other options like Solana and Avalanche rank 5th and 14th, respectively. This ranking indicates Aptos's significant position among leading blockchain protocols based on total value locked (TVL).",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.23333333333333334,
+        "volatility": 0
+      },
+      "difficultyScore": 0.15305555555555556
     },
     {
       "qid": "q5",
@@ -123,7 +122,7 @@
         "ThalaSwap V3"
       ],
       "answerIndex": 2,
-      "explanation": "On the Aptos blockchain, the top decentralized exchange (DEX) is Hyperion, with a trading volume of $61M. Other notable DEXes include ThalaSwap V3 at $22M, Tapp Exchange at $11M, and ThalaSwap V2 at $802K.",
+      "explanation": "On the Aptos chain, Hyperion is the top decentralized exchange (DEX) with a trading volume of $61M, significantly higher than its competitors like ThalaSwap V3 at $22M and Tapp Exchange at $11M. This volume indicates Hyperion's leading position in the Aptos DeFi ecosystem.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
@@ -135,7 +134,7 @@
       "difficultyScore": 0.24000000000000002
     }
   ],
-  "generatedAt": "2025-12-16T14:11:25.977Z",
+  "generatedAt": "2025-12-16T15:54:02.760Z",
   "buildLog": [
     {
       "slot": "A",
@@ -156,34 +155,71 @@
       "template": "C8_30D_DIRECTION",
       "format": "ab",
       "decision": "selected",
-      "score": 0.28600930421995713,
+      "score": 0.2902873631814735,
       "target": "easy"
     },
     {
       "slot": "C",
       "template": "C5_TOP_BY_FEES",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "C6_TOP_DEX",
       "format": "mc4",
-      "decision": "selected",
-      "score": 0.49,
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.24000000000000002,
       "target": "medium"
     },
     {
-      "slot": "D",
+      "slot": "C",
+      "template": "C6_TOP_DEX",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.1875,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
       "template": "C3_ATH_TIMING",
       "format": "mc4",
       "decision": "reject",
       "reason": "difficulty_mismatch",
       "score": 0.24000000000000002,
-      "target": "hard"
+      "target": "medium"
     },
     {
-      "slot": "D",
+      "slot": "C",
       "template": "C3_ATH_TIMING",
       "format": "tf",
       "decision": "reject",
       "reason": "difficulty_mismatch",
       "score": 0.135,
-      "target": "hard"
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "C4_GROWTH_RANKING",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_trend"
+    },
+    {
+      "slot": "C",
+      "template": "C9_DISTANCE_FROM_ATH",
+      "decision": "adjusted",
+      "originalFormat": "tf",
+      "newFormat": "mc4",
+      "score": 0.4468530800396081,
+      "target": "medium"
+    },
+    {
+      "slot": "D",
+      "template": "C3_ATH_TIMING",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:ath_history"
     },
     {
       "slot": "D",
@@ -194,20 +230,8 @@
     {
       "slot": "D",
       "template": "C9_DISTANCE_FROM_ATH",
-      "format": "tf",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.135,
-      "target": "hard"
-    },
-    {
-      "slot": "D",
-      "template": "C9_DISTANCE_FROM_ATH",
-      "format": "mc4",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.4468530800396081,
-      "target": "hard"
+      "decision": "skip",
+      "reason": "already_used"
     },
     {
       "slot": "D",
@@ -238,12 +262,8 @@
     },
     {
       "slot": "D",
-      "template": "C9_DISTANCE_FROM_ATH",
-      "format": "mc4",
-      "decision": "selected",
-      "reason": "close_enough",
-      "score": 0.4468530800396081,
-      "target": "hard"
+      "decision": "fallback",
+      "reason": "no_template_matched"
     },
     {
       "slot": "E",

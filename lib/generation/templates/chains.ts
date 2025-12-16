@@ -462,6 +462,13 @@ const C5_TOP_BY_FEES: TemplateConfig<C5Data> = {
 
     const fees = ctx.data.chainFees!
     if (fees.protocols.length < 4) return { passed: false, reason: "need_4_protocols" }
+    
+    // Check that top protocol has meaningful fees (>$100)
+    // This prevents generating questions where all protocols have $0 fees
+    const sorted = [...fees.protocols].sort((a, b) => (b.fees24h ?? 0) - (a.fees24h ?? 0))
+    const topFees = sorted[0]?.fees24h ?? 0
+    if (topFees < 100) return { passed: false, reason: "top_fees_below_threshold" }
+    
     return { passed: true }
   },
 
@@ -517,14 +524,17 @@ const C5_TOP_BY_FEES: TemplateConfig<C5Data> = {
 
   getExplainData(data, ctx) {
     const topic = ctx.topic as ChainPoolEntry
+    const otherProtocols = data.leaderboard.slice(1, 4).map((p) => ({
+      name: p.name,
+      fees: formatNumber(p.fees),
+    }))
     return {
       chain: topic.name,
       topProtocol: data.topProtocol,
       feesAmount: formatNumber(data.topFees),
-      otherProtocols: data.leaderboard.slice(1, 4).map((p) => ({
-        name: p.name,
-        fees: formatNumber(p.fees),
-      })),
+      otherProtocols,
+      // Formatted comparison string for LLM
+      comparison: otherProtocols.map((p) => `${p.name} (${p.fees})`).join(", "),
     }
   },
 }
@@ -608,14 +618,17 @@ const C6_TOP_DEX: TemplateConfig<C6Data> = {
 
   getExplainData(data, ctx) {
     const topic = ctx.topic as ChainPoolEntry
+    const otherDexes = data.leaderboard.slice(1, 4).map((p) => ({
+      name: p.name,
+      volume: formatNumber(p.volume),
+    }))
     return {
       chain: topic.name,
       topDex: data.topDex,
       volumeAmount: formatNumber(data.topVolume),
-      otherDexes: data.leaderboard.slice(1, 4).map((p) => ({
-        name: p.name,
-        volume: formatNumber(p.volume),
-      })),
+      otherDexes,
+      // Formatted comparison string for LLM
+      comparison: otherDexes.map((d) => `${d.name} (${d.volume})`).join(", "),
     }
   },
 }

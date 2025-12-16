@@ -144,9 +144,9 @@ export function GameCard({ currentQuestion, totalQuestions, difficulty, children
                   <DialogHeader>
                     <DialogTitle>About</DialogTitle>
                     <div className="text-sm text-muted-foreground flex flex-col gap-2">
-                      <p>DeFidle is a daily DeFi quiz where players answer 4-6 questions about a protocol or chain, using real data from DefiLlama.</p>
-                      <p>Created by <Link href="https://jamesonhodge.com" target="_blank" rel="noopener noreferrer" className="underline">Jameson Hodge</Link>.</p>
+                      <p>DeFidle is a daily DeFi quiz where players answer 4-6 questions about a protocol or chain, using real data from <Link href="https://defillama.com" target="_blank" rel="noopener noreferrer" className="underline">DefiLlama</Link>.</p>
                       <p>Problems? Feedback? Suggestions? Create an issue or pull request on <Link href="https://github.com/jamesondh/defidle" target="_blank" rel="noopener noreferrer" className="underline">GitHub</Link>!</p>
+                      <p>Created by <Link href="https://jamesonhodge.com" target="_blank" rel="noopener noreferrer" className="underline">Jameson Hodge</Link>.</p>
                     </div>
                   </DialogHeader>
                 </DialogContent>

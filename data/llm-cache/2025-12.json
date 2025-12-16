@@ -1,77 +1,77 @@
 {
   "2025-12-16|chain|Aptos|A|C1_FINGERPRINT|explanation|1524b724f21e2a10": {
-    "text": "Aptos is ranked 13th in total value locked (TVL) with an estimated range of $100M to $500M, and it supports 89 different protocols. Its native token is APT.",
+    "text": "Aptos is ranked 13th in total value locked (TVL), with an estimated TVL between $100 million and $500 million, and it supports 89 different protocols. The native token for Aptos is APT.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T14:11:18.705Z"
+    "generatedAt": "2025-12-16T15:53:48.132Z"
   },
-  "2025-12-16|chain|Aptos|B|C8_30D_DIRECTION|explanation|bd5c43ca8a5471eb": {
-    "text": "Aptos has experienced a decrease of 18.2% in value over the past 30 days. This indicates a downward trend in its market performance.",
+  "2025-12-16|chain|Aptos|B|C8_30D_DIRECTION|explanation|643d46e7c2a030d5": {
+    "text": "Aptos experienced a decrease in TVL of 17.7% over the past 30 days, indicating a reduction in the total value locked in the protocol.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T14:11:20.750Z"
+    "generatedAt": "2025-12-16T15:53:51.014Z"
   },
-  "2025-12-16|chain|Aptos|C|C5_TOP_BY_FEES|explanation|4fb5be81021bae32": {
-    "text": "On the Aptos blockchain, the top protocol by fees is PancakeSwap AMM, which has generated $0 in fees, similar to other protocols like Aries Markets, BlueMove Staking, and Ondo Yield Assets, all also reporting $0 in fees.",
+  "2025-12-16|chain|Aptos|C|C9_DISTANCE_FROM_ATH|explanation|c473524ae114fa3a": {
+    "text": "Aptos has a total value locked (TVL) of $454M, which is 65.2% lower than its all-time high (ATH) of $1.3B. This indicates a significant decrease in the value of assets locked in the Aptos protocol compared to its peak.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T14:11:22.005Z"
+    "generatedAt": "2025-12-16T15:53:54.268Z"
   },
-  "2025-12-16|chain|Aptos|D|C9_DISTANCE_FROM_ATH|explanation|c473524ae114fa3a": {
-    "text": "Aptos has a current total value locked (TVL) of $454M, which is 65.2% below its all-time high (ATH) value of $1.3B. This indicates a significant decrease in the platform's TVL compared to its peak.",
+  "2025-12-16|chain|Aptos|D|FALLBACK_CHAIN_RANK_TOP_20|explanation|bf31b89d12f7859b": {
+    "text": "Aptos is ranked 13th in the DeFi space, placing it within the top 20 chains, while other options like Solana and Avalanche rank 5th and 14th, respectively. This ranking indicates Aptos's significant position among leading blockchain protocols based on total value locked (TVL).",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T14:11:24.438Z"
+    "generatedAt": "2025-12-16T15:53:56.635Z"
   },
-  "2025-12-16|chain|Aptos|E|C6_TOP_DEX|explanation|2dbb574351b7a182": {
-    "text": "On the Aptos blockchain, the top decentralized exchange (DEX) is Hyperion, with a trading volume of $61M. Other notable DEXes include ThalaSwap V3 at $22M, Tapp Exchange at $11M, and ThalaSwap V2 at $802K.",
+  "2025-12-16|chain|Aptos|E|C6_TOP_DEX|explanation|8f8bfe6e728d9fcb": {
+    "text": "On the Aptos chain, Hyperion is the top decentralized exchange (DEX) with a trading volume of $61M, significantly higher than its competitors like ThalaSwap V3 at $22M and Tapp Exchange at $11M. This volume indicates Hyperion's leading position in the Aptos DeFi ecosystem.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T14:11:25.976Z"
+    "generatedAt": "2025-12-16T15:54:02.759Z"
   },
-  "2025-12-15|protocol|jupiter-lend|A|P1_FINGERPRINT|explanation|5bfc9f77c6fa791b": {
-    "text": "Jupiter Lend is a lending platform operating on the Solana blockchain, with a total value locked (TVL) of $999M, placing it in the $500M-$1B TVL band. It currently supports one blockchain.",
+  "2025-12-15|protocol|jupiter-lend|A|P1_FINGERPRINT|explanation|bbfba3ae28daf967": {
+    "text": "Jupiter Lend is a lending protocol on the Solana blockchain with a total value locked (TVL) of $995M, placing it in the $500M-$1B TVL band. It operates solely on one chain, which is Solana.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T14:13:11.246Z"
+    "generatedAt": "2025-12-16T15:54:12.708Z"
   },
-  "2025-12-15|protocol|jupiter-lend|B|FALLBACK_PROTOCOL_RANK_TOP_50|explanation|d10ea77906ee4223": {
-    "text": "Jupiter Lend is currently ranked 78th among DeFi protocols, which places it outside the top 50 threshold. This indicates that it is not among the highest-ranked DeFi lending platforms.",
+  "2025-12-15|protocol|jupiter-lend|B|FALLBACK_PROTOCOL_CHAINS_ABOVE_3|explanation|532f0e5f5a2dc9ec": {
+    "text": "Jupiter Lend operates on 1 chain, which is fewer than the threshold of 3 chains, making it distinct compared to other protocols that may operate on multiple chains. This sets it apart from options that utilize 3 or more chains, highlighting its more focused approach.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T14:13:12.435Z"
+    "generatedAt": "2025-12-16T15:54:15.516Z"
   },
-  "2025-12-15|protocol|jupiter-lend|C|P15_RECENT_TVL_DIRECTION|explanation|febe2ad62d77d11d": {
-    "text": "Jupiter Lend has experienced a 7.4% increase in its total value locked (TVL), which now stands at $999 million over the past 30 days.",
+  "2025-12-15|protocol|jupiter-lend|C|P15_RECENT_TVL_DIRECTION|explanation|01b8a68dc9ae8c85": {
+    "text": "Jupiter Lend's total value locked (TVL) has increased by 7.1% over the past 30 days, reaching $995 million. This indicates a growing interest and activity in the protocol.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T14:13:13.501Z"
+    "generatedAt": "2025-12-16T15:54:17.824Z"
   },
-  "2025-12-15|protocol|jupiter-lend|D|FALLBACK_PROTOCOL_TVL_DOWN_5PCT|explanation|0d341a20923e4493": {
-    "text": "Jupiter Lend's total value locked (TVL) increased by 1.1%, which did not meet the 5% threshold for a significant change. Therefore, it is noted that the TVL did not reach the specified benchmark.",
+  "2025-12-15|protocol|jupiter-lend|D|FALLBACK_PROTOCOL_TVL_DOWN_5PCT|explanation|9604c312d5e09ca8": {
+    "text": "Jupiter Lend's TVL increased by 0.7%, but it did not reach the 5% threshold for a significant drop compared to other protocols like Aave and Compound, which may have experienced larger fluctuations. This indicates that Jupiter Lend's performance remained relatively stable during the comparison period.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T14:13:15.044Z"
+    "generatedAt": "2025-12-16T15:54:19.878Z"
   },
   "2025-12-15|protocol|jupiter-lend|E|P8_CHAIN_MEMBERSHIP|explanation|12d486f19482dffb": {
-    "text": "Jupiter Lend operates on the Solana blockchain, which means it is part of a single chain ecosystem. This makes its chain count 1.",
+    "text": "Jupiter Lend operates on the Solana blockchain, which is its sole chain, indicating a total chain count of 1. This means all its lending services are focused within the Solana ecosystem.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T14:13:16.866Z"
+    "generatedAt": "2025-12-16T15:54:21.730Z"
   },
   "2025-12-14|protocol|justcryptos|A|P1_FINGERPRINT|explanation|816c030fd254e9d6": {
-    "text": "JustCryptos is a bridge in the DeFi space that operates on the Tron blockchain, with a total value locked (TVL) of $3.0B, placing it within the $1B-$5B TVL band. It currently supports one blockchain.",
+    "text": "JustCryptos is a bridge protocol operating on the Tron blockchain, with a total value locked (TVL) of $3.0B, placing it within the $1B-$5B TVL range. It facilitates asset transfers across different blockchain networks.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T14:16:19.256Z"
+    "generatedAt": "2025-12-16T15:54:52.294Z"
   },
   "2025-12-14|protocol|justcryptos|B|P7_CATEGORY|explanation|1b4ba79c3c462a82": {
-    "text": "JustCryptos operates in the Bridge category, facilitating the transfer of assets between different blockchain networks. This allows users to move cryptocurrencies seamlessly across various platforms.",
+    "text": "JustCryptos operates in the \"Bridge\" category, facilitating the transfer of assets between different blockchain networks. This allows users to move their cryptocurrencies seamlessly across various platforms.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T14:16:20.163Z"
+    "generatedAt": "2025-12-16T15:54:53.317Z"
   },
-  "2025-12-14|protocol|justcryptos|C|P15_RECENT_TVL_DIRECTION|explanation|5e9f8fbcc762c41a": {
-    "text": "JustCryptos experienced a decrease in total value locked (TVL) by 4.6% over the past 7 days, bringing its TVL to $3.0B.",
+  "2025-12-14|protocol|justcryptos|C|P15_RECENT_TVL_DIRECTION|explanation|52da66901157372b": {
+    "text": "JustCryptos experienced a decrease in total value locked (TVL) of 4.8% over the past 7 days, bringing its TVL to $3.0B.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T14:16:21.196Z"
+    "generatedAt": "2025-12-16T15:54:55.137Z"
   },
-  "2025-12-14|protocol|justcryptos|D|P4_ATH_TIMING|explanation|41decd5431fee120": {
-    "text": "JustCryptos reached its all-time high (ATH) market capitalization of $8.3B in March 2024. This peak occurred after the distractor months of December 2023, February 2024, and April 2024.",
+  "2025-12-14|protocol|justcryptos|D|P4_ATH_TIMING|explanation|64aa3dc1ccd880df": {
+    "text": "JustCryptos reached its all-time high (ATH) TVL of $8.3B in March 2024, while the other options, February 2024 and April 2024, did not coincide with this peak. The ATH is a significant milestone indicating the highest total value locked in the protocol.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T14:16:23.655Z"
+    "generatedAt": "2025-12-16T15:54:57.379Z"
   },
   "2025-12-14|protocol|justcryptos|E|P10_TVL_BAND|explanation|7d111697b20b400b": {
-    "text": "JustCryptos has a total value locked (TVL) of $3.0B, which falls within the TVL band of $1B to $5B. This indicates a significant level of assets secured in its platform.",
+    "text": "JustCryptos has a total value locked (TVL) of $3.0B, which falls within the TVL band of $1B-$5B. This indicates a significant amount of assets deposited in the protocol.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T14:16:25.249Z"
+    "generatedAt": "2025-12-16T15:55:00.908Z"
   }
 }

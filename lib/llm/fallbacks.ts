@@ -25,7 +25,7 @@ export const EXPLANATION_TEMPLATES: Record<string, string> = {
   P3_CONCENTRATION:
     "{topChain} holds {sharePercent}% of {name}'s total TVL ({topChainTvl} of {totalTvl}).",
   P4_ATH_TIMING:
-    "{name} reached its all-time high TVL of {athTvl} in {athMonth}.",
+    "{name} reached its all-time high TVL of {athValue} in {athMonth}.",
   P5_FEES_REVENUE:
     "{name} generated {fees7d} in fees over the past 7 days, with {revPercent} going to protocol revenue.",
   P6_TVL_TREND:
@@ -42,6 +42,18 @@ export const EXPLANATION_TEMPLATES: Record<string, string> = {
     "{name}'s fees {trendDirection} by {changePercent}% over the past month, from {pastFees} to {recentFees} weekly.",
   P12_DEX_VOLUME_TREND:
     "{name}'s trading volume {trendDirection} by {changePercent}% over the past 7 days, from {pastVolume} to {recentVolume}.",
+  P13_TVL_RANK_COMPARISON:
+    "{winner} has higher TVL than {loser} ({winnerTvl} vs {loserTvl}, a {marginPercent}% difference).",
+  P14_CATEGORY_LEADER:
+    "In {category}, {winner} leads with {winnerTvl} TVL compared to {loser}'s {loserTvl}.",
+  P15_RECENT_TVL_DIRECTION:
+    "{name}'s TVL {direction} over the past {period} ({change}), now at {tvl}.",
+  P16_CATEGORY_PEER:
+    "{winner} has the {questionType} TVL in {category} with {winnerTvl}. Other {category} protocols: {comparison}.",
+  P20_ATH_DISTANCE:
+    "{name} is currently {distancePercent}% below its all-time high TVL of {athValue}, now at {currentTvl}.",
+  P22_CATEGORY_MARKET_SHARE:
+    "{name} holds {sharePercent}% of {category} TVL ({protocolTvl} of {categoryTotal} total).",
 
   // Chain templates
   C1_FINGERPRINT:

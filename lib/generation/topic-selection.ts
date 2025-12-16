@@ -93,24 +93,40 @@ function tvlRankToScore(rank: number): number {
 
 /**
  * Calculate data quality score for a protocol
+ * 
+ * Multi-chain protocols score higher because they enable more diverse questions:
+ * - Cross-chain comparison (P2)
+ * - Top chain concentration (P3) 
+ * - Top chain name (P9)
+ * 
+ * Single-chain protocols are penalized because they limit question variety.
  */
 function protocolDataQualityScore(protocol: ProtocolPoolEntry): number {
   let score = 0
 
-  // Has fees data: +0.25
-  if (protocol.hasFeesData) score += 0.25
+  // Has fees data: +0.20
+  if (protocol.hasFeesData) score += 0.20
 
-  // Has 90+ days TVL history: +0.25
-  if (protocol.historyDays >= 90) score += 0.25
+  // Has 90+ days TVL history: +0.20
+  if (protocol.historyDays >= 90) score += 0.20
 
-  // Multi-chain (2+ chains): +0.25
-  if (protocol.chains.length >= 2) score += 0.25
+  // Chain count scoring (scaled to reward multi-chain)
+  // Single chain: +0.05 (penalty - limits question variety)
+  // 2-3 chains: +0.20 (enables cross-chain questions)
+  // 4+ chains: +0.30 (best for question variety)
+  if (protocol.chains.length >= 4) {
+    score += 0.30
+  } else if (protocol.chains.length >= 2) {
+    score += 0.20
+  } else {
+    score += 0.05 // Single-chain penalty
+  }
 
   // Has revenue data: +0.15
   if (protocol.hasRevenueData) score += 0.15
 
-  // Has volume data (for DEXes): +0.10
-  if (protocol.hasVolumeData) score += 0.10
+  // Has volume data (for DEXes): +0.15
+  if (protocol.hasVolumeData) score += 0.15
 
   return Math.min(1, score)
 }

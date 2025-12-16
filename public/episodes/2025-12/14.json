@@ -24,21 +24,21 @@
         "JustCryptos",
         "KuCoin",
         "StakeWise V2",
-        "Aster Bridge",
+        "Kinetiq kHYPE",
         "Gauntlet",
         "WBTC"
       ],
       "answerIndex": 0,
-      "explanation": "JustCryptos is a bridge in the DeFi space that operates on the Tron blockchain, with a total value locked (TVL) of $3.0B, placing it within the $1B-$5B TVL band. It currently supports one blockchain.",
+      "explanation": "JustCryptos is a bridge protocol operating on the Tron blockchain, with a total value locked (TVL) of $3.0B, placing it within the $1B-$5B TVL range. It facilitates asset transfers across different blockchain networks.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc6",
         "familiarityRankBucket": "top_100",
         "margin": null,
-        "volatility": 0.19303298810632835
+        "volatility": 0.1929491467208694
       },
-      "difficultyScore": 0.35895494821594925
+      "difficultyScore": 0.35894237200813045
     },
     {
       "qid": "q2",
@@ -53,16 +53,16 @@
         "Foundation"
       ],
       "answerIndex": 0,
-      "explanation": "JustCryptos operates in the Bridge category, facilitating the transfer of assets between different blockchain networks. This allows users to move cryptocurrencies seamlessly across various platforms.",
+      "explanation": "JustCryptos operates in the \"Bridge\" category, facilitating the transfer of assets between different blockchain networks. This allows users to move their cryptocurrencies seamlessly across various platforms.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_100",
         "margin": 0.5,
-        "volatility": 0.19303298810632835
+        "volatility": 0.1929491467208694
       },
-      "difficultyScore": 0.2614549482159492
+      "difficultyScore": 0.2614423720081304
     },
     {
       "qid": "q3",
@@ -75,16 +75,16 @@
         "Increase"
       ],
       "answerIndex": 0,
-      "explanation": "JustCryptos experienced a decrease in total value locked (TVL) by 4.6% over the past 7 days, bringing its TVL to $3.0B.",
+      "explanation": "JustCryptos experienced a decrease in total value locked (TVL) of 4.8% over the past 7 days, bringing its TVL to $3.0B.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "ab",
         "familiarityRankBucket": "top_100",
-        "margin": 0.046200094690333815,
-        "volatility": 0.19303298810632835
+        "margin": 0.04804302692504325,
+        "volatility": 0.1929491467208694
       },
-      "difficultyScore": 0.4204548693073377
+      "difficultyScore": 0.41890651623726105
     },
     {
       "qid": "q4",
@@ -99,16 +99,16 @@
         "Feb 2024"
       ],
       "answerIndex": 0,
-      "explanation": "JustCryptos reached its all-time high (ATH) market capitalization of $8.3B in March 2024. This peak occurred after the distractor months of December 2023, February 2024, and April 2024.",
+      "explanation": "JustCryptos reached its all-time high (ATH) TVL of $8.3B in March 2024, while the other options, February 2024 and April 2024, did not coincide with this peak. The ATH is a significant milestone indicating the highest total value locked in the protocol.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_100",
         "margin": 0.5,
-        "volatility": 0.19303298810632835
+        "volatility": 0.1929491467208694
       },
-      "difficultyScore": 0.2614549482159492
+      "difficultyScore": 0.2614423720081304
     },
     {
       "qid": "q5",
@@ -124,26 +124,26 @@
         ">$5B"
       ],
       "answerIndex": 3,
-      "explanation": "JustCryptos has a total value locked (TVL) of $3.0B, which falls within the TVL band of $1B to $5B. This indicates a significant level of assets secured in its platform.",
+      "explanation": "JustCryptos has a total value locked (TVL) of $3.0B, which falls within the TVL band of $1B-$5B. This indicates a significant amount of assets deposited in the protocol.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_100",
-        "margin": 0.8082347956,
-        "volatility": 0.19303298810632835
+        "margin": 0.8105375244,
+        "volatility": 0.1929491467208694
       },
-      "difficultyScore": 0.2614549482159492
+      "difficultyScore": 0.2614423720081304
     }
   ],
-  "generatedAt": "2025-12-16T14:16:25.249Z",
+  "generatedAt": "2025-12-16T15:55:00.908Z",
   "buildLog": [
     {
       "slot": "A",
       "template": "P1_FINGERPRINT",
       "format": "mc6",
       "decision": "selected",
-      "score": 0.35895494821594925,
+      "score": 0.35894237200813045,
       "target": "medium"
     },
     {
@@ -163,7 +163,7 @@
       "template": "P7_CATEGORY",
       "format": "mc4",
       "decision": "selected",
-      "score": 0.2614549482159492,
+      "score": 0.2614423720081304,
       "target": "easy"
     },
     {
@@ -178,7 +178,7 @@
       "format": "mc4",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.2614549482159492,
+      "score": 0.2614423720081304,
       "target": "medium"
     },
     {
@@ -187,7 +187,7 @@
       "format": "tf",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.15645494821594924,
+      "score": 0.1564423720081304,
       "target": "medium"
     },
     {
@@ -207,7 +207,7 @@
       "template": "P15_RECENT_TVL_DIRECTION",
       "format": "ab",
       "decision": "selected",
-      "score": 0.4204548693073377,
+      "score": 0.41890651623726105,
       "target": "medium"
     },
     {
@@ -216,7 +216,7 @@
       "format": "mc4",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.2614549482159492,
+      "score": 0.2614423720081304,
       "target": "hard"
     },
     {
@@ -225,7 +225,7 @@
       "format": "tf",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.15645494821594924,
+      "score": 0.1564423720081304,
       "target": "hard"
     },
     {
@@ -266,11 +266,26 @@
     },
     {
       "slot": "D",
+      "template": "P16_CATEGORY_PEER",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_absolute"
+    },
+    {
+      "slot": "D",
+      "template": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.2614423720081304,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
       "template": "P4_ATH_TIMING",
       "format": "mc4",
       "decision": "selected",
       "reason": "close_enough",
-      "score": 0.2614549482159492,
+      "score": 0.2614423720081304,
       "target": "hard"
     },
     {
@@ -290,7 +305,7 @@
       "template": "P10_TVL_BAND",
       "format": "mc4",
       "decision": "selected",
-      "score": 0.2614549482159492,
+      "score": 0.2614423720081304,
       "target": "easy"
     },
     {
