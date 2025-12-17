@@ -1617,12 +1617,13 @@ const P16_CATEGORY_PEER: TemplateConfig<P16Data> = {
 
     // Pick 4 choices including the correct answer
     const correctPeer = questionType === "highest" ? allInCategory[0] : allInCategory[allInCategory.length - 1]
-    
+
     // Get 3 distractors from remaining protocols
-    const distractors = allInCategory
-      .filter((p) => p.name !== correctPeer.name)
-      .slice(0, 5) // Take from top 5 (for highest) or around
-    
+    const filtered = allInCategory.filter((p) => p.name !== correctPeer.name)
+    const distractors = questionType === "highest"
+      ? filtered.slice(0, 5) // Take from top 5 (for highest)
+      : filtered.slice(-5) // Take from bottom 5 (for lowest)
+
     const shuffledDistractors = deterministicShuffle(distractors, `${seed}:dist`).slice(0, 3)
     const categoryPeers = [correctPeer, ...shuffledDistractors]
 
@@ -1839,6 +1840,401 @@ const P22_CATEGORY_MARKET_SHARE: TemplateConfig<P22Data> = {
 }
 
 // =============================================================================
+// P27: Derivatives/Perps Ranking
+// =============================================================================
+
+interface P27Data {
+  compareProtocol: { name: string; tvl: number; rank: number }
+  topicTvl: number
+  topicHigher: boolean
+  margin: number
+  derivativesProtocols: Array<{ name: string; tvl: number }>
+}
+
+const P27_DERIVATIVES_RANKING: TemplateConfig<P27Data> = {
+  id: "P27_DERIVATIVES_RANKING",
+  name: "Derivatives Protocol Comparison",
+  description: "Compare TVL between derivatives/perps protocols",
+  type: "protocol",
+  semanticTopics: ["derivatives_ranking", "tvl_absolute"],
+
+  checkPrereqs(ctx) {
+    if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
+    const topic = ctx.topic as ProtocolPoolEntry
+    // Only for derivatives protocols
+    if (topic.category !== "Derivatives") return { passed: false, reason: "not_derivatives" }
+    if (!hasProtocolList(ctx)) return { passed: false, reason: "no_list" }
+    return { passed: true }
+  },
+
+  getFormats() {
+    return ["ab", "mc4", "tf"]
+  },
+
+  extract(ctx, seed) {
+    const topic = ctx.topic as ProtocolPoolEntry
+    const list = ctx.data.protocolList!
+    const topicTvl = ctx.derived.currentTvl ?? 0
+
+    // Get all derivatives protocols
+    const derivativesProtocols = list
+      .filter((p) => p.category === "Derivatives" && p.slug !== topic.slug)
+      .sort((a, b) => (b.tvl ?? 0) - (a.tvl ?? 0))
+      .map((p, idx) => ({ name: p.name, tvl: p.tvl ?? 0, rank: idx + 1 }))
+
+    if (derivativesProtocols.length < 1) return null
+
+    // Pick a comparison protocol deterministically
+    const rng = createRng(seed)
+    const idx = Math.floor(rng() * Math.min(derivativesProtocols.length, 5))
+    const compareProtocol = derivativesProtocols[idx]
+
+    const topicHigher = topicTvl >= compareProtocol.tvl
+    const margin = abMargin(topicTvl, compareProtocol.tvl) ?? 0
+
+    return {
+      compareProtocol,
+      topicTvl,
+      topicHigher,
+      margin,
+      derivativesProtocols: derivativesProtocols.slice(0, 4),
+    }
+  },
+
+  getPrompt(data, ctx, format) {
+    const topic = ctx.topic as ProtocolPoolEntry
+    if (format === "tf") {
+      return `${topic.name} has higher TVL than ${data.compareProtocol.name}.`
+    }
+    if (format === "ab") {
+      return `Which derivatives protocol has higher TVL?`
+    }
+    return `Which derivatives protocol has the highest TVL?`
+  },
+
+  getChoices(data, ctx, format, seed) {
+    const topic = ctx.topic as ProtocolPoolEntry
+    if (format === "tf") return ["True", "False"]
+
+    if (format === "ab") {
+      const rng = createRng(seed)
+      const swapped = rng() > 0.5
+      return swapped
+        ? [data.compareProtocol.name, topic.name]
+        : [topic.name, data.compareProtocol.name]
+    }
+
+    // MC4 format - include topic and top derivatives protocols
+    const allProtocols = [
+      { name: topic.name, tvl: data.topicTvl },
+      ...data.derivativesProtocols.filter((p) => p.name !== topic.name),
+    ]
+      .sort((a, b) => b.tvl - a.tvl)
+      .slice(0, 4)
+
+    return deterministicShuffle(
+      allProtocols.map((p, i) => ({ name: p.name, isCorrect: i === 0 })),
+      `${seed}:shuffle`
+    ).map((x) => x.name)
+  },
+
+  getAnswerIndex(data, ctx, format, choices) {
+    const topic = ctx.topic as ProtocolPoolEntry
+    if (format === "tf") {
+      return data.topicHigher ? 0 : 1
+    }
+    if (format === "ab") {
+      const winner = data.topicHigher ? topic.name : data.compareProtocol.name
+      return choices.indexOf(winner)
+    }
+    // MC4 - find the highest TVL protocol
+    const allProtocols = [
+      { name: topic.name, tvl: data.topicTvl },
+      ...data.derivativesProtocols,
+    ].sort((a, b) => b.tvl - a.tvl)
+    return choices.indexOf(allProtocols[0].name)
+  },
+
+  getAnswerValue(data) {
+    return data.topicHigher
+  },
+
+  getMargin(data) {
+    return data.margin
+  },
+
+  getExplainData(data, ctx) {
+    const topic = ctx.topic as ProtocolPoolEntry
+    const winner = data.topicHigher ? topic.name : data.compareProtocol.name
+    const loser = data.topicHigher ? data.compareProtocol.name : topic.name
+    return {
+      category: "Derivatives",
+      winner,
+      loser,
+      winnerTvl: formatNumber(Math.max(data.topicTvl, data.compareProtocol.tvl)),
+      loserTvl: formatNumber(Math.min(data.topicTvl, data.compareProtocol.tvl)),
+      marginPercent: (data.margin * 100).toFixed(1),
+      otherProtocols: data.derivativesProtocols.slice(0, 3).map((p) => ({
+        name: p.name,
+        tvl: formatNumber(p.tvl),
+      })),
+    }
+  },
+}
+
+// =============================================================================
+// P29: Category TVL Growth Comparison
+// =============================================================================
+
+interface P29Data {
+  topCategory: string
+  topCategoryGrowth: number
+  categoryGrowths: Array<{ category: string; growth: number }>
+  margin: number
+}
+
+const P29_CATEGORY_GROWTH: TemplateConfig<P29Data> = {
+  id: "P29_CATEGORY_GROWTH",
+  name: "Category TVL Growth Comparison",
+  description: "Which protocol category grew the most in TVL",
+  type: "protocol",
+  semanticTopics: ["category_trend"],
+
+  checkPrereqs(ctx) {
+    if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
+    if (!hasProtocolList(ctx)) return { passed: false, reason: "no_list" }
+    return { passed: true }
+  },
+
+  getFormats() {
+    return ["mc4"]
+  },
+
+  extract(ctx, seed) {
+    const list = ctx.data.protocolList!
+
+    // Calculate TVL and change by category
+    const categoryStats = new Map<string, { totalTvl: number; weightedChange: number }>()
+
+    for (const p of list) {
+      if (!p.category || p.tvl === undefined || p.tvl === null) continue
+      const change7d = p.change_7d ?? 0
+
+      const existing = categoryStats.get(p.category)
+      if (existing) {
+        existing.totalTvl += p.tvl
+        // Weighted average of 7d change by TVL
+        existing.weightedChange += change7d * p.tvl
+      } else {
+        categoryStats.set(p.category, {
+          totalTvl: p.tvl,
+          weightedChange: change7d * p.tvl,
+        })
+      }
+    }
+
+    // Convert to growth rates
+    const categoryGrowths: Array<{ category: string; growth: number }> = []
+    for (const [category, stats] of categoryStats.entries()) {
+      if (stats.totalTvl > 100_000_000) {
+        // Only categories with >$100M TVL
+        const growth = stats.totalTvl > 0 ? stats.weightedChange / stats.totalTvl : 0
+        categoryGrowths.push({ category, growth })
+      }
+    }
+
+    categoryGrowths.sort((a, b) => b.growth - a.growth)
+
+    if (categoryGrowths.length < 4) return null
+
+    const topCategory = categoryGrowths[0].category
+    const topCategoryGrowth = categoryGrowths[0].growth
+    const margin =
+      categoryGrowths.length >= 2
+        ? Math.abs(categoryGrowths[0].growth - categoryGrowths[1].growth)
+        : 0.1
+
+    // Pick 3 distractors from top growth categories
+    const distractors = deterministicShuffle(categoryGrowths.slice(1, 10), `${seed}:cats`).slice(
+      0,
+      3
+    )
+
+    return {
+      topCategory,
+      topCategoryGrowth,
+      categoryGrowths: [categoryGrowths[0], ...distractors],
+      margin,
+    }
+  },
+
+  getPrompt() {
+    return "Which DeFi category grew the most in TVL over the past 7 days?"
+  },
+
+  getChoices(data, _ctx, _format, seed) {
+    return deterministicShuffle(
+      data.categoryGrowths.map((c, i) => ({ cat: c.category, isCorrect: i === 0 })),
+      `${seed}:shuffle`
+    ).map((x) => x.cat)
+  },
+
+  getAnswerIndex(data, _ctx, _format, choices) {
+    return choices.indexOf(data.topCategory)
+  },
+
+  getMargin(data) {
+    return Math.min(1, data.margin * 10) // Scale margin for difficulty
+  },
+
+  getExplainData(data) {
+    const otherCategories = data.categoryGrowths.slice(1).map((c) => ({
+      category: c.category,
+      growth: `${c.growth > 0 ? "+" : ""}${(c.growth * 100).toFixed(1)}%`,
+    }))
+
+    return {
+      topCategory: data.topCategory,
+      topGrowth: `${data.topCategoryGrowth > 0 ? "+" : ""}${(data.topCategoryGrowth * 100).toFixed(1)}%`,
+      otherCategories,
+      comparison: otherCategories
+        .map((c) => `${c.category} (${c.growth})`)
+        .join(", "),
+    }
+  },
+}
+
+// =============================================================================
+// P30: Protocol Chain Expansion
+// =============================================================================
+
+interface P30Data {
+  currentChainCount: number
+  hasExpanded: boolean
+  threshold: number
+  recentChains: string[]
+}
+
+const P30_CHAIN_EXPANSION: TemplateConfig<P30Data> = {
+  id: "P30_CHAIN_EXPANSION",
+  name: "Protocol Chain Expansion",
+  description: "Questions about protocol multi-chain deployment growth",
+  type: "protocol",
+  semanticTopics: ["chain_expansion"],
+
+  checkPrereqs(ctx) {
+    if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
+    const detail = ctx.data.protocolDetail
+    if (!detail?.chains || detail.chains.length < 1) {
+      return { passed: false, reason: "no_chains" }
+    }
+    return { passed: true }
+  },
+
+  getFormats(ctx) {
+    const detail = ctx.data.protocolDetail!
+    const chainCount = detail.chains.length
+
+    // Different formats based on chain count
+    if (chainCount <= 3) return ["tf"]
+    if (chainCount <= 10) return ["tf", "mc4"]
+    return ["mc4", "tf"]
+  },
+
+  extract(ctx, seed) {
+    const detail = ctx.data.protocolDetail!
+    const currentChainCount = detail.chains.length
+
+    // Determine thresholds based on current count
+    let threshold: number
+    if (currentChainCount <= 3) {
+      threshold = 3
+    } else if (currentChainCount <= 5) {
+      threshold = 5
+    } else if (currentChainCount <= 10) {
+      threshold = 10
+    } else {
+      threshold = 15
+    }
+
+    const hasExpanded = currentChainCount > threshold
+    const recentChains = detail.chains.slice(0, 5)
+
+    return { currentChainCount, hasExpanded, threshold, recentChains }
+  },
+
+  getPrompt(data, ctx, format) {
+    const detail = ctx.data.protocolDetail!
+    if (format === "tf") {
+      return `${detail.name} is deployed on more than ${data.threshold} blockchains.`
+    }
+    return `How many blockchains is ${detail.name} deployed on?`
+  },
+
+  getChoices(data, _ctx, format) {
+    if (format === "tf") return ["True", "False"]
+
+    // Generate bucket choices based on actual count
+    const count = data.currentChainCount
+    if (count <= 5) {
+      return ["1-2", "3-5", "6-10", ">10"]
+    } else if (count <= 15) {
+      return ["1-5", "6-10", "11-15", ">15"]
+    } else {
+      return ["1-10", "11-20", "21-30", ">30"]
+    }
+  },
+
+  getAnswerIndex(data, _ctx, format, choices) {
+    if (format === "tf") {
+      return data.hasExpanded ? 0 : 1
+    }
+
+    // Find correct bucket
+    const count = data.currentChainCount
+    if (count <= 5) {
+      if (count <= 2) return choices.indexOf("1-2")
+      if (count <= 5) return choices.indexOf("3-5")
+      if (count <= 10) return choices.indexOf("6-10")
+      return choices.indexOf(">10")
+    } else if (count <= 15) {
+      if (count <= 5) return choices.indexOf("1-5")
+      if (count <= 10) return choices.indexOf("6-10")
+      if (count <= 15) return choices.indexOf("11-15")
+      return choices.indexOf(">15")
+    } else {
+      if (count <= 10) return choices.indexOf("1-10")
+      if (count <= 20) return choices.indexOf("11-20")
+      if (count <= 30) return choices.indexOf("21-30")
+      return choices.indexOf(">30")
+    }
+  },
+
+  getAnswerValue(data) {
+    return data.hasExpanded
+  },
+
+  getMargin(data) {
+    // Distance from threshold as margin
+    return Math.abs(data.currentChainCount - data.threshold) / 10
+  },
+
+  getExplainData(data, ctx) {
+    const detail = ctx.data.protocolDetail!
+    return {
+      name: detail.name,
+      chainCount: data.currentChainCount,
+      threshold: data.threshold,
+      hasExpanded: data.hasExpanded,
+      topChains: data.recentChains.join(", "),
+      comparison: data.hasExpanded
+        ? `more than ${data.threshold}`
+        : `${data.threshold} or fewer`,
+    }
+  },
+}
+
+// =============================================================================
 // Export all templates
 // =============================================================================
 
@@ -1861,6 +2257,9 @@ export const PROTOCOL_TEMPLATE_CONFIGS = {
   P16_CATEGORY_PEER,
   P20_ATH_DISTANCE,
   P22_CATEGORY_MARKET_SHARE,
+  P27_DERIVATIVES_RANKING,
+  P29_CATEGORY_GROWTH,
+  P30_CHAIN_EXPANSION,
 }
 
 // Create Template implementations from configs
@@ -1882,3 +2281,6 @@ export const p15RecentTVLDirection = createTemplate(P15_RECENT_TVL_DIRECTION)
 export const p16CategoryPeer = createTemplate(P16_CATEGORY_PEER)
 export const p20AthDistance = createTemplate(P20_ATH_DISTANCE)
 export const p22CategoryMarketShare = createTemplate(P22_CATEGORY_MARKET_SHARE)
+export const p27DerivativesRanking = createTemplate(P27_DERIVATIVES_RANKING)
+export const p29CategoryGrowth = createTemplate(P29_CATEGORY_GROWTH)
+export const p30ChainExpansion = createTemplate(P30_CHAIN_EXPANSION)

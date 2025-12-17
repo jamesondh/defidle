@@ -31,6 +31,9 @@ export {
   p16CategoryPeer,
   p20AthDistance,
   p22CategoryMarketShare,
+  p27DerivativesRanking,
+  p29CategoryGrowth,
+  p30ChainExpansion,
   // Config objects for documentation generation
   PROTOCOL_TEMPLATE_CONFIGS,
 } from "./protocols"
@@ -53,6 +56,8 @@ export {
   c10ProtocolCount,
   c11TopProtocolByTVL,
   c12CategoryDominance,
+  c13LayerType,
+  c14TvlDominance,
   // Config objects for documentation generation
   CHAIN_TEMPLATE_CONFIGS,
 } from "./chains"
@@ -117,6 +122,9 @@ import {
   p16CategoryPeer,
   p20AthDistance,
   p22CategoryMarketShare,
+  p27DerivativesRanking,
+  p29CategoryGrowth,
+  p30ChainExpansion,
 } from "./protocols"
 
 import {
@@ -132,6 +140,8 @@ import {
   c10ProtocolCount,
   c11TopProtocolByTVL,
   c12CategoryDominance,
+  c13LayerType,
+  c14TvlDominance,
 } from "./chains"
 
 import type { TemplateMatrix } from "@/lib/types/template"
@@ -162,6 +172,9 @@ export const PROTOCOL_TEMPLATES: Record<string, Template> = {
   P16_CATEGORY_PEER: p16CategoryPeer,
   P20_ATH_DISTANCE: p20AthDistance,
   P22_CATEGORY_MARKET_SHARE: p22CategoryMarketShare,
+  P27_DERIVATIVES_RANKING: p27DerivativesRanking,
+  P29_CATEGORY_GROWTH: p29CategoryGrowth,
+  P30_CHAIN_EXPANSION: p30ChainExpansion,
 }
 
 /**
@@ -180,6 +193,8 @@ export const CHAIN_TEMPLATES: Record<string, Template> = {
   C10_PROTOCOL_COUNT: c10ProtocolCount,
   C11_TOP_PROTOCOL_TVL: c11TopProtocolByTVL,
   C12_CATEGORY_DOMINANCE: c12CategoryDominance,
+  C13_LAYER_TYPE: c13LayerType,
+  C14_TVL_DOMINANCE: c14TvlDominance,
 }
 
 // =============================================================================
@@ -207,6 +222,8 @@ export const PROTOCOL_MATRIX: TemplateMatrix = {
     p9TopChainName,
     p13TVLRankComparison,
     p16CategoryPeer, // Good for single-chain protocols
+    p27DerivativesRanking, // For derivatives protocols
+    p30ChainExpansion, // Multi-chain deployment questions
   ],
   C: [
     p5FeesVsRevenue,
@@ -216,6 +233,8 @@ export const PROTOCOL_MATRIX: TemplateMatrix = {
     p15RecentTVLDirection,
     p20AthDistance, // Single-chain friendly
     p22CategoryMarketShare, // Single-chain friendly
+    p27DerivativesRanking, // For derivatives protocols
+    p29CategoryGrowth, // Category TVL growth comparison
   ],
   D: [
     p4ATHTiming,
@@ -227,6 +246,8 @@ export const PROTOCOL_MATRIX: TemplateMatrix = {
     p14CategoryLeaderComparison,
     p16CategoryPeer, // Single-chain friendly
     p20AthDistance, // Single-chain friendly
+    p27DerivativesRanking, // For derivatives protocols
+    p29CategoryGrowth, // Category TVL growth comparison
   ],
   E: [
     p6TVLTrend,
@@ -236,6 +257,7 @@ export const PROTOCOL_MATRIX: TemplateMatrix = {
     p12DEXVolumeTrend,
     p15RecentTVLDirection,
     p22CategoryMarketShare, // Single-chain friendly
+    p30ChainExpansion, // Multi-chain deployment questions
   ],
 }
 
@@ -249,6 +271,7 @@ export const CHAIN_MATRIX: TemplateMatrix = {
     c8_30DayDirection,
     c10ProtocolCount,
     c11TopProtocolByTVL,
+    c13LayerType, // Layer 1 vs Layer 2 identification (easy/educational)
   ],
   C: [
     c5TopProtocolByFees,
@@ -258,6 +281,7 @@ export const CHAIN_MATRIX: TemplateMatrix = {
     c9DistanceFromATH,
     c11TopProtocolByTVL,
     c12CategoryDominance,
+    c14TvlDominance, // TVL dominance by top protocol (medium)
   ],
   D: [
     c3ChainATHTiming,
@@ -265,6 +289,7 @@ export const CHAIN_MATRIX: TemplateMatrix = {
     c9DistanceFromATH,
     c11TopProtocolByTVL,
     c12CategoryDominance,
+    c14TvlDominance, // TVL dominance by top protocol (hard)
   ],
   E: [
     c6TopDEXByVolume,
@@ -274,6 +299,7 @@ export const CHAIN_MATRIX: TemplateMatrix = {
     c7ChainTVLBand,
     c8_30DayDirection,
     c10ProtocolCount,
+    c13LayerType, // Layer 1 vs Layer 2 identification (easy/educational)
   ],
 }
 

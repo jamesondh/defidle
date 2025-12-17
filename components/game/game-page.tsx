@@ -55,6 +55,7 @@ export function GamePage({ date }: GamePageProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
 
   const yesterdayDate = getYesterdayDate(date)
+  const isFirstEpisode = date === new Date(process.env.NEXT_PUBLIC_FIRST_EPISODE_DATE!).toISOString().split("T")[0]
 
   const loadEpisode = useCallback(async () => {
     setAppState({ status: "loading" })
@@ -210,14 +211,14 @@ export function GamePage({ date }: GamePageProps) {
             date={date}
             footer={
               <div className="flex gap-2 w-full">
-                <Button
+                {!isFirstEpisode && <Button
                   variant="outline"
                   onClick={() => router.push(`/${yesterdayDate}`)}
                   className="flex-1"
                 >
                   <CalendarDays className="mr-2 size-4" />
                   Yesterday&apos;s Quiz
-                </Button>
+                </Button>}
                 <Button variant="outline" onClick={handlePlayAgain} className="flex-1">
                   <RotateCcw className="mr-2 size-4" />
                   Play Again

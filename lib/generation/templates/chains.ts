@@ -1138,6 +1138,267 @@ const C12_CATEGORY_DOMINANCE: TemplateConfig<C12Data> = {
 }
 
 // =============================================================================
+// C13: Layer Type Identification
+// =============================================================================
+
+interface C13Data {
+  isLayer2: boolean
+  layerType: "Layer 1" | "Layer 2"
+  parentChain?: string
+}
+
+// Known L2 chains - these are derived from well-known blockchain architecture
+const LAYER_2_CHAINS: Set<string> = new Set([
+  // Ethereum L2s
+  "Arbitrum",
+  "Arbitrum One",
+  "Arbitrum Nova",
+  "Optimism",
+  "Base",
+  "zkSync Era",
+  "zkSync",
+  "Scroll",
+  "Linea",
+  "Starknet",
+  "Polygon zkEVM",
+  "Manta",
+  "Mantle",
+  "Blast",
+  "Mode",
+  "Zora",
+  "Fraxtal",
+  "Metis",
+  "Boba",
+  "Loopring",
+  // Other L2-like chains
+  "Op_Bnb",
+  "opBNB",
+])
+
+// Parent chain mapping for L2s
+const L2_PARENT_CHAINS: Record<string, string> = {
+  Arbitrum: "Ethereum",
+  "Arbitrum One": "Ethereum",
+  "Arbitrum Nova": "Ethereum",
+  Optimism: "Ethereum",
+  Base: "Ethereum",
+  "zkSync Era": "Ethereum",
+  zkSync: "Ethereum",
+  Scroll: "Ethereum",
+  Linea: "Ethereum",
+  Starknet: "Ethereum",
+  "Polygon zkEVM": "Ethereum",
+  Manta: "Ethereum",
+  Mantle: "Ethereum",
+  Blast: "Ethereum",
+  Mode: "Ethereum",
+  Zora: "Ethereum",
+  Fraxtal: "Ethereum",
+  Metis: "Ethereum",
+  Boba: "Ethereum",
+  Loopring: "Ethereum",
+  Op_Bnb: "Binance",
+  opBNB: "Binance",
+}
+
+const C13_LAYER_TYPE: TemplateConfig<C13Data> = {
+  id: "C13_LAYER_TYPE",
+  name: "Layer Type Identification",
+  description: "Identify whether a chain is a Layer 1 or Layer 2 blockchain",
+  type: "chain",
+  semanticTopics: ["chain_classification"],
+
+  checkPrereqs(ctx) {
+    if (!isChainContext(ctx)) return { passed: false, reason: "not_chain" }
+    const topic = ctx.topic as ChainPoolEntry
+    // Only ask this for chains we have data about
+    if (!topic.tvl) return { passed: false, reason: "no_tvl" }
+    return { passed: true }
+  },
+
+  getFormats() {
+    return ["ab", "tf"]
+  },
+
+  extract(ctx) {
+    const topic = ctx.topic as ChainPoolEntry
+    const chainName = topic.name
+
+    // Determine if L2
+    const isLayer2 = LAYER_2_CHAINS.has(chainName)
+    const layerType = isLayer2 ? "Layer 2" : "Layer 1"
+    const parentChain = L2_PARENT_CHAINS[chainName]
+
+    return { isLayer2, layerType, parentChain }
+  },
+
+  getPrompt(data, ctx, format) {
+    const topic = ctx.topic as ChainPoolEntry
+    if (format === "tf") {
+      return `${topic.name} is a Layer 2 blockchain.`
+    }
+    return `Is ${topic.name} a Layer 1 or Layer 2 blockchain?`
+  },
+
+  getChoices(_data, _ctx, format, seed) {
+    if (format === "tf") return ["True", "False"]
+    const rng = createRng(seed)
+    return rng() > 0.5 ? ["Layer 2", "Layer 1"] : ["Layer 1", "Layer 2"]
+  },
+
+  getAnswerIndex(data, _ctx, format, choices) {
+    if (format === "tf") {
+      return data.isLayer2 ? 0 : 1
+    }
+    return choices.indexOf(data.layerType)
+  },
+
+  getAnswerValue(data) {
+    return data.isLayer2
+  },
+
+  getMargin() {
+    // This is a factual question, not a numeric comparison
+    return 0.5
+  },
+
+  getExplainData(data, ctx) {
+    const topic = ctx.topic as ChainPoolEntry
+    return {
+      name: topic.name,
+      layerType: data.layerType,
+      isLayer2: data.isLayer2,
+      parentChain: data.parentChain ?? "N/A",
+      explanation: data.isLayer2
+        ? `${topic.name} is a Layer 2 blockchain that scales ${data.parentChain ?? "its parent chain"}.`
+        : `${topic.name} is a Layer 1 blockchain with its own independent consensus mechanism.`,
+    }
+  },
+}
+
+// =============================================================================
+// C14: Chain TVL Dominance (Top Protocol Share)
+// =============================================================================
+
+interface C14Data {
+  topProtocol: string
+  topProtocolTvl: number
+  chainTvl: number
+  dominancePercent: number
+  bucketIndex: number
+}
+
+const DOMINANCE_BUCKETS = ["<25%", "25-50%", "50-75%", ">75%"]
+
+function getDominanceBucketIndex(dominance: number): number {
+  if (dominance < 0.25) return 0
+  if (dominance < 0.5) return 1
+  if (dominance < 0.75) return 2
+  return 3
+}
+
+const C14_TVL_DOMINANCE: TemplateConfig<C14Data> = {
+  id: "C14_TVL_DOMINANCE",
+  name: "Chain TVL Dominance",
+  description: "What share of a chain's TVL is controlled by its top protocol",
+  type: "chain",
+  semanticTopics: ["chain_concentration"],
+
+  checkPrereqs(ctx) {
+    if (!isChainContext(ctx)) return { passed: false, reason: "not_chain" }
+    if (!hasProtocolList(ctx)) return { passed: false, reason: "no_protocol_list" }
+    const topic = ctx.topic as ChainPoolEntry
+    if (!topic.tvl || topic.tvl <= 0) return { passed: false, reason: "no_tvl" }
+    return { passed: true }
+  },
+
+  getFormats(ctx) {
+    const topic = ctx.topic as ChainPoolEntry
+    const list = ctx.data.protocolList!
+
+    // Get top protocol on this chain
+    const onChain = list
+      .filter((p) => p.chains?.some((c) => c.toLowerCase() === topic.slug.toLowerCase()))
+      .sort((a, b) => (b.tvl ?? 0) - (a.tvl ?? 0))
+
+    if (onChain.length < 1) return []
+
+    const topTvl = onChain[0].tvl ?? 0
+    const chainTvl = topic.tvl
+    const dominance = chainTvl > 0 ? topTvl / chainTvl : 0
+
+    // If dominance is near 50%, use TF; otherwise MC4
+    if (Math.abs(dominance - 0.5) < 0.1) return ["tf", "mc4"]
+    return ["mc4", "tf"]
+  },
+
+  extract(ctx) {
+    const topic = ctx.topic as ChainPoolEntry
+    const list = ctx.data.protocolList!
+
+    const onChain = list
+      .filter((p) => p.chains?.some((c) => c.toLowerCase() === topic.slug.toLowerCase()))
+      .sort((a, b) => (b.tvl ?? 0) - (a.tvl ?? 0))
+
+    if (onChain.length < 1) return null
+
+    const topProtocol = onChain[0].name
+    const topProtocolTvl = onChain[0].tvl ?? 0
+    const chainTvl = topic.tvl
+    const dominancePercent = chainTvl > 0 ? (topProtocolTvl / chainTvl) * 100 : 0
+    const bucketIndex = getDominanceBucketIndex(dominancePercent / 100)
+
+    return { topProtocol, topProtocolTvl, chainTvl, dominancePercent, bucketIndex }
+  },
+
+  getPrompt(data, ctx, format) {
+    const topic = ctx.topic as ChainPoolEntry
+    if (format === "tf") {
+      return `The top protocol on ${topic.name} controls more than 50% of the chain's TVL.`
+    }
+    return `What share of ${topic.name}'s TVL does its top protocol (${data.topProtocol}) control?`
+  },
+
+  getChoices(_data, _ctx, format) {
+    if (format === "tf") return ["True", "False"]
+    return DOMINANCE_BUCKETS
+  },
+
+  getAnswerIndex(data, _ctx, format) {
+    if (format === "tf") {
+      return data.dominancePercent >= 50 ? 0 : 1
+    }
+    return data.bucketIndex
+  },
+
+  getAnswerValue(data) {
+    return data.dominancePercent >= 50
+  },
+
+  getMargin(data, _ctx, format) {
+    if (format === "tf") {
+      return Math.abs(data.dominancePercent - 50) / 100
+    }
+    // Distance to bucket boundaries
+    const boundaries = [25, 50, 75]
+    const minDist = Math.min(...boundaries.map((b) => Math.abs(data.dominancePercent - b)))
+    return minDist / 25
+  },
+
+  getExplainData(data, ctx) {
+    const topic = ctx.topic as ChainPoolEntry
+    return {
+      chain: topic.name,
+      topProtocol: data.topProtocol,
+      topProtocolTvl: formatNumber(data.topProtocolTvl),
+      chainTvl: formatNumber(data.chainTvl),
+      dominancePercent: Math.round(data.dominancePercent),
+      bucket: DOMINANCE_BUCKETS[data.bucketIndex],
+    }
+  },
+}
+
+// =============================================================================
 // Export all templates
 // =============================================================================
 
@@ -1154,6 +1415,8 @@ export const CHAIN_TEMPLATE_CONFIGS = {
   C10_PROTOCOL_COUNT,
   C11_TOP_PROTOCOL_TVL,
   C12_CATEGORY_DOMINANCE,
+  C13_LAYER_TYPE,
+  C14_TVL_DOMINANCE,
 }
 
 // Create Template implementations from configs
@@ -1169,3 +1432,5 @@ export const c9DistanceFromATH = createTemplate(C9_DISTANCE_FROM_ATH)
 export const c10ProtocolCount = createTemplate(C10_PROTOCOL_COUNT)
 export const c11TopProtocolByTVL = createTemplate(C11_TOP_PROTOCOL_TVL)
 export const c12CategoryDominance = createTemplate(C12_CATEGORY_DOMINANCE)
+export const c13LayerType = createTemplate(C13_LAYER_TYPE)
+export const c14TvlDominance = createTemplate(C14_TVL_DOMINANCE)

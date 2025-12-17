@@ -3,7 +3,7 @@
 > **Auto-generated from template configs.** Do not edit manually.
 > Run `bun run scripts/generate-template-docs.ts` to regenerate.
 
-This document defines the question templates used in DeFidle: 18 protocol templates (P1-P15), 12 chain templates (C1-C12), and 29 fallback templates.
+This document defines the question templates used in DeFidle: 21 protocol templates (P1-P15), 14 chain templates (C1-C12), and 29 fallback templates.
 
 > **Note**: All templates use **free DefiLlama API endpoints only**. No Pro API key required.
 
@@ -289,6 +289,48 @@ What percentage of category TVL does this protocol hold
 
 ---
 
+### P27_DERIVATIVES_RANKING: Derivatives Protocol Comparison
+
+Compare TVL between derivatives/perps protocols
+
+| Property | Value |
+|----------|-------|
+| **ID** | `P27_DERIVATIVES_RANKING` |
+| **Type** | protocol |
+| **Semantic Topics** | `derivatives_ranking`, `tvl_absolute` |
+| **Slot Assignments** | B, C, D |
+| **Reusable** | No |
+
+---
+
+### P29_CATEGORY_GROWTH: Category TVL Growth Comparison
+
+Which protocol category grew the most in TVL
+
+| Property | Value |
+|----------|-------|
+| **ID** | `P29_CATEGORY_GROWTH` |
+| **Type** | protocol |
+| **Semantic Topics** | `category_trend` |
+| **Slot Assignments** | C, D |
+| **Reusable** | No |
+
+---
+
+### P30_CHAIN_EXPANSION: Protocol Chain Expansion
+
+Questions about protocol multi-chain deployment growth
+
+| Property | Value |
+|----------|-------|
+| **ID** | `P30_CHAIN_EXPANSION` |
+| **Type** | protocol |
+| **Semantic Topics** | `chain_expansion` |
+| **Slot Assignments** | B, E |
+| **Reusable** | No |
+
+---
+
 ## Chain Templates (C1-C12)
 
 ### C1_FINGERPRINT: Chain Fingerprint Guess
@@ -459,6 +501,34 @@ What category has the most TVL on a given chain
 
 ---
 
+### C13_LAYER_TYPE: Layer Type Identification
+
+Identify whether a chain is a Layer 1 or Layer 2 blockchain
+
+| Property | Value |
+|----------|-------|
+| **ID** | `C13_LAYER_TYPE` |
+| **Type** | chain |
+| **Semantic Topics** | `chain_classification` |
+| **Slot Assignments** | B, E |
+| **Reusable** | No |
+
+---
+
+### C14_TVL_DOMINANCE: Chain TVL Dominance
+
+What share of a chain's TVL is controlled by its top protocol
+
+| Property | Value |
+|----------|-------|
+| **ID** | `C14_TVL_DOMINANCE` |
+| **Type** | chain |
+| **Semantic Topics** | `chain_concentration` |
+| **Slot Assignments** | C, D |
+| **Reusable** | No |
+
+---
+
 ## Protocol Fallbacks
 
 Fallback questions provide substantive, data-driven questions when regular templates fail. They use real data comparisons instead of trivial questions.
@@ -599,6 +669,9 @@ Questions comparing TVL between two entities
 | P16_CATEGORY_PEER | Category Peer Comparison | `tvl_absolute`, `category_ranking` | B, D |
 | P20_ATH_DISTANCE | ATH Distance | `ath_history`, `tvl_magnitude` | C, D |
 | P22_CATEGORY_MARKET_SHARE | Category Market Share | `tvl_absolute`, `category_ranking` | C, E |
+| P27_DERIVATIVES_RANKING | Derivatives Protocol Comparison | `derivatives_ranking`, `tvl_absolute` | B, C, D |
+| P29_CATEGORY_GROWTH | Category TVL Growth Comparison | `category_trend` | C, D |
+| P30_CHAIN_EXPANSION | Protocol Chain Expansion | `chain_expansion` | B, E |
 
 ### Chain Templates
 
@@ -616,6 +689,8 @@ Questions comparing TVL between two entities
 | C10_PROTOCOL_COUNT | Protocol Count | None | B, E |
 | C11_TOP_PROTOCOL_TVL | Top Protocol by TVL | None | B, C, D |
 | C12_CATEGORY_DOMINANCE | Category Dominance | None | C, D |
+| C13_LAYER_TYPE | Layer Type Identification | `chain_classification` | B, E |
+| C14_TVL_DOMINANCE | Chain TVL Dominance | `chain_concentration` | C, D |
 
 ### Fallback Summary
 
@@ -630,7 +705,7 @@ Templates and fallbacks with overlapping semantic topics will not both be select
 
 | Semantic Topic | Templates/Fallbacks |
 |----------------|---------------------|
-| `tvl_absolute` | P1_FINGERPRINT, P2_CROSSCHAIN, P3_CONCENTRATION, P13_TVL_RANK_COMPARISON, P14_CATEGORY_LEADER, P16_CATEGORY_PEER, ... (21 total) |
+| `tvl_absolute` | P1_FINGERPRINT, P2_CROSSCHAIN, P3_CONCENTRATION, P13_TVL_RANK_COMPARISON, P14_CATEGORY_LEADER, P16_CATEGORY_PEER, ... (22 total) |
 | `ath_history` | P4_ATH_TIMING, P20_ATH_DISTANCE, C3_ATH_TIMING, C9_DISTANCE_FROM_ATH |
 | `fees_metrics` | P5_FEES_REVENUE, P11_FEES_TREND, C5_TOP_BY_FEES |
 | `tvl_trend_7d` | P6_TVL_TREND, P15_RECENT_TVL_DIRECTION |
@@ -638,6 +713,11 @@ Templates and fallbacks with overlapping semantic topics will not both be select
 | `category_identification` | P7_CATEGORY |
 | `tvl_magnitude` | P10_TVL_BAND, P20_ATH_DISTANCE, C7_CHAIN_TVL_BAND |
 | `category_ranking` | P16_CATEGORY_PEER, P22_CATEGORY_MARKET_SHARE |
+| `derivatives_ranking` | P27_DERIVATIVES_RANKING |
+| `category_trend` | P29_CATEGORY_GROWTH |
+| `chain_expansion` | P30_CHAIN_EXPANSION |
 | `tvl_trend` | C4_GROWTH_RANKING, C8_30D_DIRECTION, FALLBACK_PROTOCOL_TVL_INCREASED_7D, FALLBACK_PROTOCOL_TVL_DECREASED_7D, FALLBACK_PROTOCOL_TVL_UP_5PCT, FALLBACK_PROTOCOL_TVL_DOWN_5PCT, ... (10 total) |
+| `chain_classification` | C13_LAYER_TYPE |
+| `chain_concentration` | C14_TVL_DOMINANCE |
 | `tvl_rank` | FALLBACK_PROTOCOL_RANK_TOP_10, FALLBACK_PROTOCOL_RANK_TOP_25, FALLBACK_PROTOCOL_RANK_TOP_50, FALLBACK_CHAIN_RANK_TOP_5, FALLBACK_CHAIN_RANK_TOP_10, FALLBACK_CHAIN_RANK_TOP_20 |
 | `chain_count` | FALLBACK_PROTOCOL_CHAINS_ABOVE_3, FALLBACK_PROTOCOL_CHAINS_ABOVE_5, FALLBACK_PROTOCOL_CHAINS_ABOVE_10 |

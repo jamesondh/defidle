@@ -80,6 +80,18 @@ export const EXPLANATION_TEMPLATES: Record<string, string> = {
     "{topProtocol} leads {chain} in TVL with {topTvl}, capturing {sharePercent}% of chain TVL. Other top protocols include {comparison}.",
   C12_CATEGORY_DOMINANCE:
     "{topCategory} dominates {chain} with {topCategoryTvl} in TVL ({sharePercent}%), across {protocolCount} protocols. Other categories include {comparison}.",
+  C13_LAYER_TYPE:
+    "{name} is a {layerType} blockchain. {layerExplanation}",
+  C14_TVL_DOMINANCE:
+    "{topProtocol} dominates {chain} with {sharePercent}% of total chain TVL ({topTvl} of {chainTvl}). {comparison}",
+
+  // New Protocol templates
+  P27_DERIVATIVES_RANKING:
+    "{winner} has higher TVL than {loser} in the derivatives/perps category ({winnerTvl} vs {loserTvl}, a {marginPercent}% difference).",
+  P29_CATEGORY_GROWTH:
+    "{topCategory} had the highest TVL growth at {growthPercent}% over the past {period}. {comparison}",
+  P30_CHAIN_EXPANSION:
+    "{name} is deployed on {chainCount} chains, {chainComparison}. Most TVL is on {topChain} ({topChainShare}%).",
 
   // Generic fallback - now more specific based on available data
   FALLBACK:
@@ -279,6 +291,11 @@ export function generateSimpleFallback(
     C10_PROTOCOL_COUNT: "protocol deployment count",
     C11_TOP_PROTOCOL_TVL: "top protocol by TVL",
     C12_CATEGORY_DOMINANCE: "category TVL breakdown",
+    C13_LAYER_TYPE: "layer 1 vs layer 2 classification",
+    C14_TVL_DOMINANCE: "TVL dominance by top protocol",
+    P27_DERIVATIVES_RANKING: "derivatives protocol TVL ranking",
+    P29_CATEGORY_GROWTH: "DeFi category TVL growth",
+    P30_CHAIN_EXPANSION: "multi-chain deployment",
     // Quantitative fallback descriptions
     FALLBACK_PROTOCOL_TVL_ABOVE_100M: "TVL threshold check",
     FALLBACK_PROTOCOL_TVL_ABOVE_500M: "TVL threshold check",
