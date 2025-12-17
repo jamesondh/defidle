@@ -73,5 +73,30 @@
     "text": "JustCryptos has a total value locked (TVL) of $3.0B, which falls within the TVL band of $1B-$5B. This indicates a significant amount of assets deposited in the protocol.",
     "model": "gpt-4o-mini",
     "generatedAt": "2025-12-16T15:55:00.908Z"
+  },
+  "2025-12-17|protocol|okx|A|P1_FINGERPRINT|explanation|2b004be10dbf4fe0": {
+    "text": "OKX is a centralized exchange (CEX) with a total value locked (TVL) of $22.6B across 19 different chains, including zkSync Era, Base, Optimism, Polygon, and Starknet. Its TVL falls within the band of $10B+.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-17T00:23:47.844Z"
+  },
+  "2025-12-17|protocol|okx|B|P7_CATEGORY|explanation|cbc7f935acbe195d": {
+    "text": "OKX is categorized as a centralized exchange (CEX), which means it operates under a central authority that manages transactions and user funds.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-17T00:23:49.800Z"
+  },
+  "2025-12-17|protocol|okx|C|P15_RECENT_TVL_DIRECTION|explanation|fabf46d396f7c34e": {
+    "text": "Over the past 7 days, OKX experienced a decrease in total value locked (TVL) by 2.6%, bringing its current TVL to $22.6B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-17T00:23:51.559Z"
+  },
+  "2025-12-17|protocol|okx|D|P9_TOP_CHAIN|explanation|7a15b35646771667": {
+    "text": "OKX's top chain is Ethereum, which has a total value locked (TVL) of $11.4B, significantly higher than Bitcoin's $9.3B and Solana's $580M, highlighting Ethereum's dominance in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-17T00:23:53.405Z"
+  },
+  "2025-12-17|protocol|okx|E|P10_TVL_BAND|explanation|f4782f7f2addeb94": {
+    "text": "OKX has a total value locked (TVL) of $22.6B, placing it in the TVL band of $10B+. This indicates a significant amount of assets deposited in the OKX protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-17T00:23:55.221Z"
   }
 }

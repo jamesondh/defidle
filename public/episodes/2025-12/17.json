@@ -1,0 +1,140 @@
+{
+  "episodeId": "2025-12-17:protocol:okx",
+  "dateUtc": "2025-12-17",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "okx",
+    "name": "OKX",
+    "category": "CEX"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: CEX",
+        "Chains: 10+ chains",
+        "TVL: $10B+",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "OKX",
+        "Marinade Select",
+        "Phemex",
+        "Fluid Lending",
+        "Aster Bridge",
+        "Gate"
+      ],
+      "answerIndex": 0,
+      "explanation": "OKX is a centralized exchange (CEX) with a total value locked (TVL) of $22.6B across 19 different chains, including zkSync Era, Base, Optimism, Polygon, and Starknet. Its TVL falls within the band of $10B+.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": 0.1434656143290926
+      },
+      "difficultyScore": 0.3015198421493639
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is OKX?",
+      "choices": [
+        "Dexs",
+        "Trading App",
+        "Basis Trading",
+        "CEX"
+      ],
+      "answerIndex": 3,
+      "explanation": "OKX is categorized as a centralized exchange (CEX), which means it operates under a central authority that manages transactions and user funds.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.5,
+        "volatility": 0.1434656143290926
+      },
+      "difficultyScore": 0.2040198421493639
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P15_RECENT_TVL_DIRECTION",
+      "format": "ab",
+      "prompt": "Over the past 7 days, did OKX's TVL increase or decrease?",
+      "choices": [
+        "Decrease",
+        "Increase"
+      ],
+      "answerIndex": 0,
+      "explanation": "Over the past 7 days, OKX experienced a decrease in total value locked (TVL) by 2.6%, bringing its current TVL to $22.6B.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.026321154530664893,
+        "volatility": 0.1434656143290926
+      },
+      "difficultyScore": 0.3795855467071431
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P9_TOP_CHAIN",
+      "format": "mc4",
+      "prompt": "On which chain does OKX have the most TVL?",
+      "choices": [
+        "Solana",
+        "Tron",
+        "Bitcoin",
+        "Ethereum"
+      ],
+      "answerIndex": 3,
+      "explanation": "OKX's top chain is Ethereum, which has a total value locked (TVL) of $11.4B, significantly higher than Bitcoin's $9.3B and Solana's $580M, highlighting Ethereum's dominance in the DeFi space.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.17739054552819625,
+        "volatility": 0.1434656143290926
+      },
+      "difficultyScore": 0.30619438754253364
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P10_TVL_BAND",
+      "format": "mc4",
+      "prompt": "Which TVL range fits OKX?",
+      "choices": [
+        "<$50M",
+        "$50M-$250M",
+        "$250M-$1B",
+        "$1B-$5B",
+        ">$5B"
+      ],
+      "answerIndex": 4,
+      "explanation": "OKX has a total value locked (TVL) of $22.6B, placing it in the TVL band of $10B+. This indicates a significant amount of assets deposited in the OKX protocol.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 1,
+        "volatility": 0.1434656143290926
+      },
+      "difficultyScore": 0.2040198421493639
+    }
+  ],
+  "generatedAt": "2025-12-17T00:23:55.221Z"
+}
