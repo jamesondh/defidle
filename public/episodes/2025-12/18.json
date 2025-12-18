@@ -1,0 +1,141 @@
+{
+  "episodeId": "2025-12-18:chain:Polygon",
+  "dateUtc": "2025-12-18",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Polygon",
+    "name": "Polygon"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "TVL: $1B-$5B",
+        "Native token: POL",
+        "30d trend: down 1-10%"
+      ],
+      "choices": [
+        "Neutron",
+        "Ethereum",
+        "Polygon",
+        "Crescent",
+        "Mantra",
+        "Sei"
+      ],
+      "answerIndex": 2,
+      "explanation": "Polygon has a total value locked (TVL) ranging from $1B to $5B and is ranked 11th in TVL among DeFi protocols, with 690 different protocols operating on its network. The token symbol for Polygon is POL.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.33749999999999997
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C8_30D_DIRECTION",
+      "format": "tf",
+      "prompt": "Polygon's TVL increased over the last 30 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "Polygon's TVL has decreased by 4.7% over the past 30 days, indicating a decline in the total value locked in its protocol.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.04657993169108119,
+        "volatility": null
+      },
+      "difficultyScore": 0.3461833902574323
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Polygon?",
+      "choices": [
+        "Uniswap V4",
+        "Polymarket",
+        "Quickswap Dex",
+        "Uniswap V3"
+      ],
+      "answerIndex": 1,
+      "explanation": "On the Polygon network, the top decentralized exchange (DEX) is Polymarket, with a trading volume of $55M. This significantly surpasses other DEXes like Quickswap Dex at $38M and Uniswap V3 at $24M, highlighting Polymarket's leading position in terms of volume.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.3061631338775451,
+        "volatility": null
+      },
+      "difficultyScore": 0.24000000000000002
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C9_DISTANCE_FROM_ATH",
+      "format": "mc4",
+      "prompt": "How far is Polygon from its ATH TVL?",
+      "choices": [
+        "At ATH",
+        "Within 10%",
+        "10-30% below",
+        "30-60% below",
+        ">60% below"
+      ],
+      "answerIndex": 4,
+      "explanation": "Polygon's total value locked (TVL) is currently $1.2B, which is 88.2% below its all-time high (ATH) of $9.9B. This indicates a significant decrease in the value of assets locked in the protocol compared to its peak.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.281519156513214,
+        "volatility": null
+      },
+      "difficultyScore": 0.255400702905655
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C7_CHAIN_TVL_BAND",
+      "format": "mc4",
+      "prompt": "Which TVL range fits Polygon?",
+      "choices": [
+        "<$100M",
+        "$100M-$500M",
+        "$500M-$2B",
+        "$2B-$10B",
+        ">$10B"
+      ],
+      "answerIndex": 2,
+      "explanation": "Polygon has a total value locked (TVL) of $1.2B, placing it within the TVL band of $1B to $5B. This indicates a significant amount of assets are deposited in the Polygon protocol.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.828199248035733,
+        "volatility": null
+      },
+      "difficultyScore": 0.24000000000000002
+    }
+  ],
+  "generatedAt": "2025-12-18T00:20:59.702Z"
+}

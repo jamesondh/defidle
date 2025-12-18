@@ -98,5 +98,30 @@
     "text": "OKX has a total value locked (TVL) of $22.6B, placing it in the TVL band of $10B+. This indicates a significant amount of assets deposited in the OKX protocol.",
     "model": "gpt-4o-mini",
     "generatedAt": "2025-12-17T00:23:55.221Z"
+  },
+  "2025-12-18|chain|Polygon|A|C1_FINGERPRINT|explanation|939a7481f70e6d27": {
+    "text": "Polygon has a total value locked (TVL) ranging from $1B to $5B and is ranked 11th in TVL among DeFi protocols, with 690 different protocols operating on its network. The token symbol for Polygon is POL.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-18T00:20:51.598Z"
+  },
+  "2025-12-18|chain|Polygon|B|C8_30D_DIRECTION|explanation|5d997186dac2c158": {
+    "text": "Polygon's TVL has decreased by 4.7% over the past 30 days, indicating a decline in the total value locked in its protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-18T00:20:52.836Z"
+  },
+  "2025-12-18|chain|Polygon|C|C6_TOP_DEX|explanation|12bc993258403209": {
+    "text": "On the Polygon network, the top decentralized exchange (DEX) is Polymarket, with a trading volume of $55M. This significantly surpasses other DEXes like Quickswap Dex at $38M and Uniswap V3 at $24M, highlighting Polymarket's leading position in terms of volume.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-18T00:20:55.135Z"
+  },
+  "2025-12-18|chain|Polygon|D|C9_DISTANCE_FROM_ATH|explanation|15c9e599feda375c": {
+    "text": "Polygon's total value locked (TVL) is currently $1.2B, which is 88.2% below its all-time high (ATH) of $9.9B. This indicates a significant decrease in the value of assets locked in the protocol compared to its peak.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-18T00:20:57.407Z"
+  },
+  "2025-12-18|chain|Polygon|E|C7_CHAIN_TVL_BAND|explanation|d1de73a6d1ffedeb": {
+    "text": "Polygon has a total value locked (TVL) of $1.2B, placing it within the TVL band of $1B to $5B. This indicates a significant amount of assets are deposited in the Polygon protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-18T00:20:59.702Z"
   }
 }
