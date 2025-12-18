@@ -61,7 +61,9 @@ const P1_FINGERPRINT: TemplateConfig<P1Data> = {
   name: "Protocol Fingerprint Guess",
   description: "Identify a protocol from a set of clues about its characteristics",
   type: "protocol",
-  semanticTopics: ["tvl_absolute"],
+  // Fingerprint reveals TVL band and trend direction - mark both as covered
+  // so later questions don't ask about the same info
+  semanticTopics: ["tvl_absolute", "fingerprint_tvl_revealed", "fingerprint_trend_revealed"],
 
   checkPrereqs(ctx) {
     if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
@@ -650,7 +652,8 @@ const P6_TVL_TREND: TemplateConfig<P6Data> = {
   name: "TVL Trend",
   description: "Did a protocol's TVL increase or decrease over a given period",
   type: "protocol",
-  semanticTopics: ["tvl_trend_7d", "tvl_direction"],
+  // Share fingerprint_trend_revealed since fingerprint already shows 7d trend direction
+  semanticTopics: ["tvl_trend_7d", "tvl_direction", "fingerprint_trend_revealed"],
 
   checkPrereqs(ctx) {
     if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
@@ -1064,7 +1067,8 @@ const P10_TVL_BAND: TemplateConfig<P10Data> = {
   name: "TVL Band",
   description: "Which TVL range fits a protocol",
   type: "protocol",
-  semanticTopics: ["tvl_magnitude"],
+  // Share topic with fingerprint since fingerprint already reveals TVL band as a clue
+  semanticTopics: ["tvl_magnitude", "fingerprint_tvl_revealed"],
 
   checkPrereqs(ctx) {
     if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
@@ -1496,7 +1500,8 @@ const P15_RECENT_TVL_DIRECTION: TemplateConfig<P15Data> = {
   name: "Recent TVL Direction",
   description: "Simple question about protocol's recent TVL trend",
   type: "protocol",
-  semanticTopics: ["tvl_trend_7d", "tvl_direction"],
+  // Share fingerprint_trend_revealed since fingerprint already shows 7d trend direction
+  semanticTopics: ["tvl_trend_7d", "tvl_direction", "fingerprint_trend_revealed"],
 
   checkPrereqs(ctx) {
     if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
@@ -2235,6 +2240,368 @@ const P30_CHAIN_EXPANSION: TemplateConfig<P30Data> = {
 }
 
 // =============================================================================
+// P31: Precise TVL Rank Position (Hard template)
+// =============================================================================
+
+interface P31Data {
+  tvlRank: number
+  nearbyProtocols: Array<{ name: string; tvl: number; rank: number }>
+  rankBucket: string
+  bucketIndex: number
+}
+
+const RANK_BUCKETS = ["#1-5", "#6-15", "#16-30", "#31-50", "#51-100"]
+
+function getRankBucketIndexForP31(rank: number): number {
+  if (rank <= 5) return 0
+  if (rank <= 15) return 1
+  if (rank <= 30) return 2
+  if (rank <= 50) return 3
+  return 4
+}
+
+const P31_PRECISE_RANK: TemplateConfig<P31Data> = {
+  id: "P31_PRECISE_RANK",
+  name: "Precise TVL Rank Position",
+  description: "What is the protocol's exact TVL rank range",
+  type: "protocol",
+  semanticTopics: ["tvl_rank_precise"],
+
+  checkPrereqs(ctx) {
+    if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
+    if (!hasProtocolList(ctx)) return { passed: false, reason: "no_list" }
+    const topic = ctx.topic as ProtocolPoolEntry
+    if (topic.tvlRank === undefined) return { passed: false, reason: "no_rank" }
+    return { passed: true }
+  },
+
+  getFormats() {
+    // Always mc4 for this template - designed to be harder
+    return ["mc4"]
+  },
+
+  extract(ctx) {
+    const topic = ctx.topic as ProtocolPoolEntry
+    const tvlRank = topic.tvlRank
+    const bucketIndex = getRankBucketIndexForP31(tvlRank)
+    const rankBucket = RANK_BUCKETS[bucketIndex]
+
+    // Get nearby protocols for explain data
+    const list = ctx.data.protocolList!
+    const sorted = [...list].sort((a, b) => (b.tvl ?? 0) - (a.tvl ?? 0))
+    const nearbyProtocols = sorted
+      .slice(Math.max(0, tvlRank - 3), tvlRank + 2)
+      .map((p, idx) => ({
+        name: p.name,
+        tvl: p.tvl ?? 0,
+        rank: Math.max(0, tvlRank - 3) + idx + 1,
+      }))
+
+    return { tvlRank, nearbyProtocols, rankBucket, bucketIndex }
+  },
+
+  getPrompt(_data, ctx) {
+    const detail = ctx.data.protocolDetail!
+    return `What is ${detail.name}'s current TVL rank among all protocols?`
+  },
+
+  getChoices() {
+    return RANK_BUCKETS
+  },
+
+  getAnswerIndex(data) {
+    return data.bucketIndex
+  },
+
+  getMargin(data) {
+    // Distance to nearest bucket boundary - tighter margins for harder questions
+    const boundaries = [5, 15, 30, 50]
+    const distances = boundaries.map((b) => Math.abs(data.tvlRank - b))
+    const minDist = Math.min(...distances)
+    // Normalize: rank exactly at boundary = 0, far from boundary = higher
+    return Math.min(1, minDist / 10)
+  },
+
+  getExplainData(data, ctx) {
+    const detail = ctx.data.protocolDetail!
+    return {
+      name: detail.name,
+      tvlRank: data.tvlRank,
+      rankBucket: data.rankBucket,
+      nearbyProtocols: data.nearbyProtocols.map((p) => ({
+        name: p.name,
+        rank: p.rank,
+        tvl: formatNumber(p.tvl),
+      })),
+    }
+  },
+}
+
+// =============================================================================
+// P32: CEX/DEX Exchange Comparison (Exchange-specific hard template)
+// =============================================================================
+
+interface P32Data {
+  comparisonExchange: { name: string; tvl: number }
+  topicTvl: number
+  topicHigher: boolean
+  margin: number
+  exchangeType: "CEX" | "Dexes"
+}
+
+const P32_EXCHANGE_COMPARISON: TemplateConfig<P32Data> = {
+  id: "P32_EXCHANGE_COMPARISON",
+  name: "Exchange TVL Comparison",
+  description: "Compare TVL between exchanges (CEX or DEX)",
+  type: "protocol",
+  semanticTopics: ["exchange_comparison"],
+
+  checkPrereqs(ctx) {
+    if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
+    const topic = ctx.topic as ProtocolPoolEntry
+    // Only for CEX or DEX protocols
+    if (topic.category !== "CEX" && topic.category !== "Dexes") {
+      return { passed: false, reason: "not_exchange" }
+    }
+    if (!hasProtocolList(ctx)) return { passed: false, reason: "no_list" }
+    return { passed: true }
+  },
+
+  getFormats(ctx) {
+    const topic = ctx.topic as ProtocolPoolEntry
+    const list = ctx.data.protocolList!
+    const topicTvl = ctx.derived.currentTvl ?? 0
+
+    // Find another exchange in same category
+    const sameCategory = list.filter(
+      (p) => p.category === topic.category && p.slug !== topic.slug && p.tvl !== undefined
+    )
+    if (sameCategory.length === 0) return []
+
+    // Sort by TVL distance from topic
+    const sorted = sameCategory.sort(
+      (a, b) => Math.abs((a.tvl ?? 0) - topicTvl) - Math.abs((b.tvl ?? 0) - topicTvl)
+    )
+
+    const comparison = sorted[0]
+    const margin = abMargin(topicTvl, comparison.tvl ?? 0)
+
+    // Use ab for medium margins, tf for tight margins
+    if (margin !== null && margin < 0.15) return ["tf"]
+    return ["ab", "mc4"]
+  },
+
+  extract(ctx, seed) {
+    const topic = ctx.topic as ProtocolPoolEntry
+    const list = ctx.data.protocolList!
+    const topicTvl = ctx.derived.currentTvl ?? 0
+
+    const sameCategory = list.filter(
+      (p) => p.category === topic.category && p.slug !== topic.slug && p.tvl !== undefined
+    )
+    if (sameCategory.length === 0) return null
+
+    // Sort by TVL and pick deterministically
+    const sorted = sameCategory.sort((a, b) => (b.tvl ?? 0) - (a.tvl ?? 0))
+    const rng = createRng(seed)
+    // Pick from top 5 exchanges for more interesting comparisons
+    const idx = Math.floor(rng() * Math.min(5, sorted.length))
+    const comparisonExchange = {
+      name: sorted[idx].name,
+      tvl: sorted[idx].tvl ?? 0,
+    }
+
+    const topicHigher = topicTvl >= comparisonExchange.tvl
+    const margin = abMargin(topicTvl, comparisonExchange.tvl) ?? 0
+    const exchangeType = topic.category as "CEX" | "Dexes"
+
+    return { comparisonExchange, topicTvl, topicHigher, margin, exchangeType }
+  },
+
+  getPrompt(data, ctx, format) {
+    const topic = ctx.topic as ProtocolPoolEntry
+    const typeLabel = data.exchangeType === "CEX" ? "centralized exchange" : "DEX"
+    if (format === "tf") {
+      return `${topic.name} has higher TVL than ${data.comparisonExchange.name}.`
+    }
+    return `Which ${typeLabel} has higher TVL?`
+  },
+
+  getChoices(data, ctx, format, seed) {
+    const topic = ctx.topic as ProtocolPoolEntry
+    if (format === "tf") return ["True", "False"]
+
+    const rng = createRng(seed)
+    const swapped = rng() > 0.5
+    return swapped
+      ? [data.comparisonExchange.name, topic.name]
+      : [topic.name, data.comparisonExchange.name]
+  },
+
+  getAnswerIndex(data, ctx, format, choices) {
+    const topic = ctx.topic as ProtocolPoolEntry
+    if (format === "tf") {
+      return data.topicHigher ? 0 : 1
+    }
+    const winner = data.topicHigher ? topic.name : data.comparisonExchange.name
+    return choices.indexOf(winner)
+  },
+
+  getAnswerValue(data) {
+    return data.topicHigher
+  },
+
+  getMargin(data) {
+    return data.margin
+  },
+
+  getExplainData(data, ctx) {
+    const topic = ctx.topic as ProtocolPoolEntry
+    return {
+      exchangeType: data.exchangeType,
+      winner: data.topicHigher ? topic.name : data.comparisonExchange.name,
+      loser: data.topicHigher ? data.comparisonExchange.name : topic.name,
+      winnerTvl: formatNumber(Math.max(data.topicTvl, data.comparisonExchange.tvl)),
+      loserTvl: formatNumber(Math.min(data.topicTvl, data.comparisonExchange.tvl)),
+      marginPercent: (data.margin * 100).toFixed(1),
+    }
+  },
+}
+
+// =============================================================================
+// P33: Multi-Protocol Ranking (Hard template - rank 3 protocols)
+// =============================================================================
+
+interface P33Data {
+  protocols: Array<{ name: string; tvl: number }>
+  correctOrder: string[]
+  category: string
+}
+
+const P33_MULTI_RANKING: TemplateConfig<P33Data> = {
+  id: "P33_MULTI_RANKING",
+  name: "Multi-Protocol TVL Ranking",
+  description: "Rank 3 protocols by TVL from highest to lowest",
+  type: "protocol",
+  semanticTopics: ["multi_protocol_ranking"],
+
+  checkPrereqs(ctx) {
+    if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
+    const topic = ctx.topic as ProtocolPoolEntry
+    if (!topic.category) return { passed: false, reason: "no_category" }
+    if (!hasProtocolList(ctx)) return { passed: false, reason: "no_list" }
+
+    // Need at least 3 protocols in same category
+    const list = ctx.data.protocolList!
+    const sameCategory = list.filter(
+      (p) => p.category === topic.category && p.tvl !== undefined && p.tvl > 0
+    )
+    if (sameCategory.length < 3) return { passed: false, reason: "need_3_in_category" }
+    return { passed: true }
+  },
+
+  getFormats() {
+    // Always mc4 - this is a ranking question which is harder
+    return ["mc4"]
+  },
+
+  extract(ctx, seed) {
+    const topic = ctx.topic as ProtocolPoolEntry
+    const list = ctx.data.protocolList!
+    const topicTvl = ctx.derived.currentTvl ?? 0
+
+    const sameCategory = list
+      .filter((p) => p.category === topic.category && p.tvl !== undefined && p.tvl > 0)
+      .sort((a, b) => (b.tvl ?? 0) - (a.tvl ?? 0))
+
+    if (sameCategory.length < 3) return null
+
+    // Include topic and 2 others from category
+    const rng = createRng(seed)
+    const topicIndex = sameCategory.findIndex((p) => p.slug === topic.slug)
+
+    // Get 2 other protocols (prefer nearby in ranking for harder question)
+    const others = sameCategory.filter((p) => p.slug !== topic.slug)
+    const selected: Array<{ name: string; tvl: number }> = [
+      { name: topic.name, tvl: topicTvl },
+    ]
+
+    // Pick one higher ranked and one lower ranked if possible
+    if (topicIndex > 0) {
+      const higherIdx = Math.floor(rng() * topicIndex)
+      selected.push({ name: others[higherIdx].name, tvl: others[higherIdx].tvl ?? 0 })
+    } else if (others.length > 0) {
+      selected.push({ name: others[0].name, tvl: others[0].tvl ?? 0 })
+    }
+
+    const remaining = others.filter((p) => !selected.some((s) => s.name === p.name))
+    if (remaining.length > 0) {
+      const idx = Math.floor(rng() * Math.min(5, remaining.length))
+      selected.push({ name: remaining[idx].name, tvl: remaining[idx].tvl ?? 0 })
+    }
+
+    if (selected.length < 3) return null
+
+    // Sort by TVL for correct order
+    const protocols = selected.sort((a, b) => b.tvl - a.tvl)
+    const correctOrder = protocols.map((p) => p.name)
+
+    return { protocols, correctOrder, category: topic.category }
+  },
+
+  getPrompt(data) {
+    return `Rank these ${data.category} protocols from highest to lowest TVL.`
+  },
+
+  getChoices(data, _ctx, _format, seed) {
+    // Generate 4 permutations as choices, one of which is correct
+    const [a, b, c] = data.protocols.map((p) => p.name)
+    const allOrders = [
+      `${a} > ${b} > ${c}`,
+      `${a} > ${c} > ${b}`,
+      `${b} > ${a} > ${c}`,
+      `${b} > ${c} > ${a}`,
+      `${c} > ${a} > ${b}`,
+      `${c} > ${b} > ${a}`,
+    ]
+
+    const correctAnswer = `${data.correctOrder[0]} > ${data.correctOrder[1]} > ${data.correctOrder[2]}`
+    const distractors = allOrders.filter((o) => o !== correctAnswer)
+    const shuffledDistractors = deterministicShuffle(distractors, `${seed}:dist`).slice(0, 3)
+
+    return deterministicShuffle(
+      [correctAnswer, ...shuffledDistractors].map((o, i) => ({ o, isCorrect: i === 0 })),
+      `${seed}:shuffle`
+    ).map((x) => x.o)
+  },
+
+  getAnswerIndex(data, _ctx, _format, choices) {
+    const correctAnswer = `${data.correctOrder[0]} > ${data.correctOrder[1]} > ${data.correctOrder[2]}`
+    return choices.indexOf(correctAnswer)
+  },
+
+  getMargin(data) {
+    // Margin based on TVL differences between protocols
+    const [first, second, third] = data.protocols
+    const margin1 = abMargin(first.tvl, second.tvl) ?? 0
+    const margin2 = abMargin(second.tvl, third.tvl) ?? 0
+    // Use minimum margin - tighter margins = harder question
+    return Math.min(margin1, margin2)
+  },
+
+  getExplainData(data) {
+    return {
+      category: data.category,
+      correctOrder: data.correctOrder,
+      protocols: data.protocols.map((p) => ({
+        name: p.name,
+        tvl: formatNumber(p.tvl),
+      })),
+    }
+  },
+}
+
+// =============================================================================
 // Export all templates
 // =============================================================================
 
@@ -2260,6 +2627,9 @@ export const PROTOCOL_TEMPLATE_CONFIGS = {
   P27_DERIVATIVES_RANKING,
   P29_CATEGORY_GROWTH,
   P30_CHAIN_EXPANSION,
+  P31_PRECISE_RANK,
+  P32_EXCHANGE_COMPARISON,
+  P33_MULTI_RANKING,
 }
 
 // Create Template implementations from configs
@@ -2284,3 +2654,6 @@ export const p22CategoryMarketShare = createTemplate(P22_CATEGORY_MARKET_SHARE)
 export const p27DerivativesRanking = createTemplate(P27_DERIVATIVES_RANKING)
 export const p29CategoryGrowth = createTemplate(P29_CATEGORY_GROWTH)
 export const p30ChainExpansion = createTemplate(P30_CHAIN_EXPANSION)
+export const p31PreciseRank = createTemplate(P31_PRECISE_RANK)
+export const p32ExchangeComparison = createTemplate(P32_EXCHANGE_COMPARISON)
+export const p33MultiRanking = createTemplate(P33_MULTI_RANKING)

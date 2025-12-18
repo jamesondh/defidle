@@ -3,7 +3,7 @@
 > **Auto-generated from template configs.** Do not edit manually.
 > Run `bun run scripts/generate-template-docs.ts` to regenerate.
 
-This document defines the question templates used in DeFidle: 21 protocol templates (P1-P15), 14 chain templates (C1-C12), and 29 fallback templates.
+This document defines the question templates used in DeFidle: 24 protocol templates (P1-P15), 14 chain templates (C1-C12), and 29 fallback templates.
 
 > **Note**: All templates use **free DefiLlama API endpoints only**. No Pro API key required.
 
@@ -45,7 +45,7 @@ Identify a protocol from a set of clues about its characteristics
 |----------|-------|
 | **ID** | `P1_FINGERPRINT` |
 | **Type** | protocol |
-| **Semantic Topics** | `tvl_absolute` |
+| **Semantic Topics** | `tvl_absolute`, `fingerprint_tvl_revealed`, `fingerprint_trend_revealed` |
 | **Slot Assignments** | A |
 | **Reusable** | No |
 
@@ -115,7 +115,7 @@ Did a protocol's TVL increase or decrease over a given period
 |----------|-------|
 | **ID** | `P6_TVL_TREND` |
 | **Type** | protocol |
-| **Semantic Topics** | `tvl_trend_7d`, `tvl_direction` |
+| **Semantic Topics** | `tvl_trend_7d`, `tvl_direction`, `fingerprint_trend_revealed` |
 | **Slot Assignments** | E |
 | **Reusable** | No |
 
@@ -171,7 +171,7 @@ Which TVL range fits a protocol
 |----------|-------|
 | **ID** | `P10_TVL_BAND` |
 | **Type** | protocol |
-| **Semantic Topics** | `tvl_magnitude` |
+| **Semantic Topics** | `tvl_magnitude`, `fingerprint_tvl_revealed` |
 | **Slot Assignments** | E |
 | **Reusable** | No |
 
@@ -241,7 +241,7 @@ Simple question about protocol's recent TVL trend
 |----------|-------|
 | **ID** | `P15_RECENT_TVL_DIRECTION` |
 | **Type** | protocol |
-| **Semantic Topics** | `tvl_trend_7d`, `tvl_direction` |
+| **Semantic Topics** | `tvl_trend_7d`, `tvl_direction`, `fingerprint_trend_revealed` |
 | **Slot Assignments** | C, E |
 | **Reusable** | No |
 
@@ -331,6 +331,48 @@ Questions about protocol multi-chain deployment growth
 
 ---
 
+### P31_PRECISE_RANK: Precise TVL Rank Position
+
+What is the protocol's exact TVL rank range
+
+| Property | Value |
+|----------|-------|
+| **ID** | `P31_PRECISE_RANK` |
+| **Type** | protocol |
+| **Semantic Topics** | `tvl_rank_precise` |
+| **Slot Assignments** | D |
+| **Reusable** | No |
+
+---
+
+### P32_EXCHANGE_COMPARISON: Exchange TVL Comparison
+
+Compare TVL between exchanges (CEX or DEX)
+
+| Property | Value |
+|----------|-------|
+| **ID** | `P32_EXCHANGE_COMPARISON` |
+| **Type** | protocol |
+| **Semantic Topics** | `exchange_comparison` |
+| **Slot Assignments** | D |
+| **Reusable** | No |
+
+---
+
+### P33_MULTI_RANKING: Multi-Protocol TVL Ranking
+
+Rank 3 protocols by TVL from highest to lowest
+
+| Property | Value |
+|----------|-------|
+| **ID** | `P33_MULTI_RANKING` |
+| **Type** | protocol |
+| **Semantic Topics** | `multi_protocol_ranking` |
+| **Slot Assignments** | D |
+| **Reusable** | No |
+
+---
+
 ## Chain Templates (C1-C12)
 
 ### C1_FINGERPRINT: Chain Fingerprint Guess
@@ -341,7 +383,7 @@ Identify a chain from a set of clues
 |----------|-------|
 | **ID** | `C1_FINGERPRINT` |
 | **Type** | chain |
-| **Semantic Topics** | `tvl_absolute` |
+| **Semantic Topics** | `tvl_absolute`, `fingerprint_tvl_revealed`, `fingerprint_trend_revealed` |
 | **Slot Assignments** | A |
 | **Reusable** | No |
 
@@ -425,7 +467,7 @@ Which TVL range fits a chain
 |----------|-------|
 | **ID** | `C7_CHAIN_TVL_BAND` |
 | **Type** | chain |
-| **Semantic Topics** | `tvl_magnitude` |
+| **Semantic Topics** | `tvl_magnitude`, `fingerprint_tvl_revealed` |
 | **Slot Assignments** | E |
 | **Reusable** | No |
 
@@ -439,7 +481,7 @@ Did a chain's TVL increase or decrease over the last 30 days
 |----------|-------|
 | **ID** | `C8_30D_DIRECTION` |
 | **Type** | chain |
-| **Semantic Topics** | `tvl_trend` |
+| **Semantic Topics** | `tvl_trend`, `fingerprint_trend_revealed` |
 | **Slot Assignments** | B, E |
 | **Reusable** | No |
 
@@ -651,40 +693,43 @@ Questions comparing TVL between two entities
 
 | ID | Name | Semantic Topics | Slots |
 |----|------|-----------------|-------|
-| P1_FINGERPRINT | Protocol Fingerprint Guess | `tvl_absolute` | A |
+| P1_FINGERPRINT | Protocol Fingerprint Guess | `tvl_absolute`, `fingerprint_tvl_revealed`, `fingerprint_trend_revealed` | A |
 | P2_CROSSCHAIN | Cross-Chain Dominance | `tvl_absolute` | B, D |
 | P3_CONCENTRATION | Top Chain Concentration | `tvl_absolute` | B, E |
 | P4_ATH_TIMING | ATH Timing | `ath_history` | C, D |
 | P5_FEES_REVENUE | Fees vs Revenue | `fees_metrics` | C, D |
-| P6_TVL_TREND | TVL Trend | `tvl_trend_7d`, `tvl_direction` | E |
+| P6_TVL_TREND | TVL Trend | `tvl_trend_7d`, `tvl_direction`, `fingerprint_trend_revealed` | E |
 | P7_CATEGORY | Category Identification | `category_identification` | B |
 | P8_CHAIN_MEMBERSHIP | Chain Membership | None | E |
 | P9_TOP_CHAIN | Top Chain Name | None | B, D |
-| P10_TVL_BAND | TVL Band | `tvl_magnitude` | E |
+| P10_TVL_BAND | TVL Band | `tvl_magnitude`, `fingerprint_tvl_revealed` | E |
 | P11_FEES_TREND | Fees Trend | `fees_metrics` | C, D |
 | P12_DEX_VOLUME_TREND | DEX Volume Trend | None | E |
 | P13_TVL_RANK_COMPARISON | TVL Rank Comparison | `tvl_absolute` | B, D |
 | P14_CATEGORY_LEADER | Category Leader Comparison | `tvl_absolute` | C, D |
-| P15_RECENT_TVL_DIRECTION | Recent TVL Direction | `tvl_trend_7d`, `tvl_direction` | C, E |
+| P15_RECENT_TVL_DIRECTION | Recent TVL Direction | `tvl_trend_7d`, `tvl_direction`, `fingerprint_trend_revealed` | C, E |
 | P16_CATEGORY_PEER | Category Peer Comparison | `tvl_absolute`, `category_ranking` | B, D |
 | P20_ATH_DISTANCE | ATH Distance | `ath_history`, `tvl_magnitude` | C, D |
 | P22_CATEGORY_MARKET_SHARE | Category Market Share | `tvl_absolute`, `category_ranking` | C, E |
 | P27_DERIVATIVES_RANKING | Derivatives Protocol Comparison | `derivatives_ranking`, `tvl_absolute` | B, C, D |
 | P29_CATEGORY_GROWTH | Category TVL Growth Comparison | `category_trend` | C, D |
 | P30_CHAIN_EXPANSION | Protocol Chain Expansion | `chain_expansion` | B, E |
+| P31_PRECISE_RANK | Precise TVL Rank Position | `tvl_rank_precise` | D |
+| P32_EXCHANGE_COMPARISON | Exchange TVL Comparison | `exchange_comparison` | D |
+| P33_MULTI_RANKING | Multi-Protocol TVL Ranking | `multi_protocol_ranking` | D |
 
 ### Chain Templates
 
 | ID | Name | Semantic Topics | Slots |
 |----|------|-----------------|-------|
-| C1_FINGERPRINT | Chain Fingerprint Guess | `tvl_absolute` | A |
+| C1_FINGERPRINT | Chain Fingerprint Guess | `tvl_absolute`, `fingerprint_tvl_revealed`, `fingerprint_trend_revealed` | A |
 | C2_CHAIN_COMPARISON | Chain TVL Comparison | `tvl_absolute` | B, E |
 | C3_ATH_TIMING | Chain ATH Timing | `ath_history` | C, D |
 | C4_GROWTH_RANKING | Chain Growth Ranking | `tvl_trend` | C, D, E |
 | C5_TOP_BY_FEES | Top Protocol by Fees | `fees_metrics` | C, E |
 | C6_TOP_DEX | Top DEX by Volume | None | C, E |
-| C7_CHAIN_TVL_BAND | Chain TVL Band | `tvl_magnitude` | E |
-| C8_30D_DIRECTION | 30-Day Direction | `tvl_trend` | B, E |
+| C7_CHAIN_TVL_BAND | Chain TVL Band | `tvl_magnitude`, `fingerprint_tvl_revealed` | E |
+| C8_30D_DIRECTION | 30-Day Direction | `tvl_trend`, `fingerprint_trend_revealed` | B, E |
 | C9_DISTANCE_FROM_ATH | Distance from ATH | `ath_history` | C, D |
 | C10_PROTOCOL_COUNT | Protocol Count | None | B, E |
 | C11_TOP_PROTOCOL_TVL | Top Protocol by TVL | None | B, C, D |
@@ -706,6 +751,8 @@ Templates and fallbacks with overlapping semantic topics will not both be select
 | Semantic Topic | Templates/Fallbacks |
 |----------------|---------------------|
 | `tvl_absolute` | P1_FINGERPRINT, P2_CROSSCHAIN, P3_CONCENTRATION, P13_TVL_RANK_COMPARISON, P14_CATEGORY_LEADER, P16_CATEGORY_PEER, ... (22 total) |
+| `fingerprint_tvl_revealed` | P1_FINGERPRINT, P10_TVL_BAND, C1_FINGERPRINT, C7_CHAIN_TVL_BAND |
+| `fingerprint_trend_revealed` | P1_FINGERPRINT, P6_TVL_TREND, P15_RECENT_TVL_DIRECTION, C1_FINGERPRINT, C8_30D_DIRECTION |
 | `ath_history` | P4_ATH_TIMING, P20_ATH_DISTANCE, C3_ATH_TIMING, C9_DISTANCE_FROM_ATH |
 | `fees_metrics` | P5_FEES_REVENUE, P11_FEES_TREND, C5_TOP_BY_FEES |
 | `tvl_trend_7d` | P6_TVL_TREND, P15_RECENT_TVL_DIRECTION |
@@ -716,6 +763,9 @@ Templates and fallbacks with overlapping semantic topics will not both be select
 | `derivatives_ranking` | P27_DERIVATIVES_RANKING |
 | `category_trend` | P29_CATEGORY_GROWTH |
 | `chain_expansion` | P30_CHAIN_EXPANSION |
+| `tvl_rank_precise` | P31_PRECISE_RANK |
+| `exchange_comparison` | P32_EXCHANGE_COMPARISON |
+| `multi_protocol_ranking` | P33_MULTI_RANKING |
 | `tvl_trend` | C4_GROWTH_RANKING, C8_30D_DIRECTION, FALLBACK_PROTOCOL_TVL_INCREASED_7D, FALLBACK_PROTOCOL_TVL_DECREASED_7D, FALLBACK_PROTOCOL_TVL_UP_5PCT, FALLBACK_PROTOCOL_TVL_DOWN_5PCT, ... (10 total) |
 | `chain_classification` | C13_LAYER_TYPE |
 | `chain_concentration` | C14_TVL_DOMINANCE |

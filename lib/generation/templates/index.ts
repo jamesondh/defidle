@@ -34,6 +34,9 @@ export {
   p27DerivativesRanking,
   p29CategoryGrowth,
   p30ChainExpansion,
+  p31PreciseRank,
+  p32ExchangeComparison,
+  p33MultiRanking,
   // Config objects for documentation generation
   PROTOCOL_TEMPLATE_CONFIGS,
 } from "./protocols"
@@ -125,6 +128,9 @@ import {
   p27DerivativesRanking,
   p29CategoryGrowth,
   p30ChainExpansion,
+  p31PreciseRank,
+  p32ExchangeComparison,
+  p33MultiRanking,
 } from "./protocols"
 
 import {
@@ -175,6 +181,9 @@ export const PROTOCOL_TEMPLATES: Record<string, Template> = {
   P27_DERIVATIVES_RANKING: p27DerivativesRanking,
   P29_CATEGORY_GROWTH: p29CategoryGrowth,
   P30_CHAIN_EXPANSION: p30ChainExpansion,
+  P31_PRECISE_RANK: p31PreciseRank,
+  P32_EXCHANGE_COMPARISON: p32ExchangeComparison,
+  P33_MULTI_RANKING: p33MultiRanking,
 }
 
 /**
@@ -237,6 +246,9 @@ export const PROTOCOL_MATRIX: TemplateMatrix = {
     p29CategoryGrowth, // Category TVL growth comparison
   ],
   D: [
+    p31PreciseRank, // Hard: exact TVL rank range (high priority for hard slot)
+    p32ExchangeComparison, // Hard: CEX/DEX specific comparison
+    p33MultiRanking, // Hard: rank 3 protocols by TVL
     p4ATHTiming,
     p5FeesVsRevenue,
     p2CrossChainDominance,

@@ -52,7 +52,8 @@ const C1_FINGERPRINT: TemplateConfig<C1Data> = {
   name: "Chain Fingerprint Guess",
   description: "Identify a chain from a set of clues",
   type: "chain",
-  semanticTopics: ["tvl_absolute"],
+  // Fingerprint reveals TVL band and 30d trend direction - mark both as covered
+  semanticTopics: ["tvl_absolute", "fingerprint_tvl_revealed", "fingerprint_trend_revealed"],
 
   checkPrereqs(ctx) {
     if (!isChainContext(ctx)) return { passed: false, reason: "not_chain" }
@@ -648,7 +649,8 @@ const C7_CHAIN_TVL_BAND: TemplateConfig<C7Data> = {
   name: "Chain TVL Band",
   description: "Which TVL range fits a chain",
   type: "chain",
-  semanticTopics: ["tvl_magnitude"],
+  // Share topic with fingerprint since fingerprint already reveals TVL band as a clue
+  semanticTopics: ["tvl_magnitude", "fingerprint_tvl_revealed"],
 
   checkPrereqs(ctx) {
     if (!isChainContext(ctx)) return { passed: false, reason: "not_chain" }
@@ -717,7 +719,8 @@ const C8_30D_DIRECTION: TemplateConfig<C8Data> = {
   name: "30-Day Direction",
   description: "Did a chain's TVL increase or decrease over the last 30 days",
   type: "chain",
-  semanticTopics: ["tvl_trend"],
+  // Share fingerprint_trend_revealed since fingerprint already shows 30d trend direction
+  semanticTopics: ["tvl_trend", "fingerprint_trend_revealed"],
 
   checkPrereqs(ctx) {
     if (!isChainContext(ctx)) return { passed: false, reason: "not_chain" }

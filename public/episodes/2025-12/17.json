@@ -22,23 +22,23 @@
       ],
       "choices": [
         "OKX",
-        "Marinade Select",
-        "Phemex",
-        "Fluid Lending",
+        "Core Bitcoin Bridge",
+        "CIAN Yield Layer",
+        "Obol",
         "Aster Bridge",
         "Gate"
       ],
       "answerIndex": 0,
-      "explanation": "OKX is a centralized exchange (CEX) with a total value locked (TVL) of $22.6B across 19 different chains, including zkSync Era, Base, Optimism, Polygon, and Starknet. Its TVL falls within the band of $10B+.",
+      "explanation": "OKX is a centralized exchange (CEX) with a total value locked (TVL) of $22.2B, indicating significant assets deposited in its protocols. It operates across 19 chains, including Base, Scroll, zkSync Era, Starknet, and Optimism.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc6",
         "familiarityRankBucket": "top_10",
         "margin": null,
-        "volatility": 0.1434656143290926
+        "volatility": 0.14181285740165314
       },
-      "difficultyScore": 0.3015198421493639
+      "difficultyScore": 0.301271928610248
     },
     {
       "qid": "q2",
@@ -47,7 +47,7 @@
       "format": "mc4",
       "prompt": "What category is OKX?",
       "choices": [
-        "Dexs",
+        "Chain",
         "Trading App",
         "Basis Trading",
         "CEX"
@@ -60,81 +60,315 @@
         "format": "mc4",
         "familiarityRankBucket": "top_10",
         "margin": 0.5,
-        "volatility": 0.1434656143290926
+        "volatility": 0.14181285740165314
       },
-      "difficultyScore": 0.2040198421493639
+      "difficultyScore": 0.20377192861024795
     },
     {
       "qid": "q3",
       "slot": "C",
-      "templateId": "P15_RECENT_TVL_DIRECTION",
-      "format": "ab",
-      "prompt": "Over the past 7 days, did OKX's TVL increase or decrease?",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is OKX's current TVL from its all-time high?",
       "choices": [
-        "Decrease",
-        "Increase"
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
       ],
-      "answerIndex": 0,
-      "explanation": "Over the past 7 days, OKX experienced a decrease in total value locked (TVL) by 2.6%, bringing its current TVL to $22.6B.",
+      "answerIndex": 1,
+      "explanation": "OKX has a total value locked (TVL) of $22.2B, which is 28% below its all-time high (ATH) of $30.8B, placing it in the 25-50% below ATH category.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
-        "format": "ab",
+        "format": "mc4",
         "familiarityRankBucket": "top_10",
-        "margin": 0.026321154530664893,
-        "volatility": 0.1434656143290926
+        "margin": 0.11156239994934197,
+        "volatility": 0.14181285740165314
       },
-      "difficultyScore": 0.3795855467071431
+      "difficultyScore": 0.3608032619857963
     },
     {
       "qid": "q4",
       "slot": "D",
-      "templateId": "P9_TOP_CHAIN",
+      "templateId": "P31_PRECISE_RANK",
       "format": "mc4",
-      "prompt": "On which chain does OKX have the most TVL?",
+      "prompt": "What is OKX's current TVL rank among all protocols?",
       "choices": [
-        "Solana",
-        "Tron",
-        "Bitcoin",
-        "Ethereum"
+        "#1-5",
+        "#6-15",
+        "#16-30",
+        "#31-50",
+        "#51-100"
       ],
-      "answerIndex": 3,
-      "explanation": "OKX's top chain is Ethereum, which has a total value locked (TVL) of $11.4B, significantly higher than Bitcoin's $9.3B and Solana's $580M, highlighting Ethereum's dominance in the DeFi space.",
-      "difficulty": "easy",
+      "answerIndex": 0,
+      "explanation": "OKX ranks 4th in total value locked (TVL) with $22.2B, placing it within the top 5 protocols. Nearby protocols include Aave V3 at $31.5B and Lido at $24.5B.",
+      "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_10",
-        "margin": 0.17739054552819625,
-        "volatility": 0.1434656143290926
+        "margin": 0.1,
+        "volatility": 0.14181285740165314
       },
-      "difficultyScore": 0.30619438754253364
+      "difficultyScore": 0.3704385952769146
     },
     {
       "qid": "q5",
       "slot": "E",
-      "templateId": "P10_TVL_BAND",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
       "format": "mc4",
-      "prompt": "Which TVL range fits OKX?",
+      "prompt": "Which chain is OKX deployed on?",
       "choices": [
-        "<$50M",
-        "$50M-$250M",
-        "$250M-$1B",
-        "$1B-$5B",
-        ">$5B"
+        "Fantom",
+        "Scroll",
+        "Optimism",
+        "BSC"
       ],
-      "answerIndex": 4,
-      "explanation": "OKX has a total value locked (TVL) of $22.6B, placing it in the TVL band of $10B+. This indicates a significant amount of assets deposited in the OKX protocol.",
+      "answerIndex": 2,
+      "explanation": "OKX is a DeFi platform that supports a total of 19 chains, including Base, Scroll, zkSync Era, Starknet, and Optimism. This diverse chain membership allows users to interact with various blockchain ecosystems.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_10",
-        "margin": 1,
-        "volatility": 0.1434656143290926
+        "margin": 0.4,
+        "volatility": 0.14181285740165314
       },
-      "difficultyScore": 0.2040198421493639
+      "difficultyScore": 0.20377192861024795
     }
   ],
-  "generatedAt": "2025-12-17T00:23:55.221Z"
+  "generatedAt": "2025-12-17T20:41:44.990Z",
+  "buildLog": [
+    {
+      "slot": "A",
+      "template": "P1_FINGERPRINT",
+      "format": "mc6",
+      "decision": "selected",
+      "score": 0.301271928610248,
+      "target": "medium"
+    },
+    {
+      "slot": "B",
+      "template": "P2_CROSSCHAIN",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_absolute"
+    },
+    {
+      "slot": "B",
+      "template": "P3_CONCENTRATION",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_absolute"
+    },
+    {
+      "slot": "B",
+      "template": "P7_CATEGORY",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.20377192861024795,
+      "target": "easy"
+    },
+    {
+      "slot": "C",
+      "template": "P5_FEES_REVENUE",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "P4_ATH_TIMING",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.20377192861024795,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P4_ATH_TIMING",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.09877192861024797,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P11_FEES_TREND",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "P14_CATEGORY_LEADER",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_absolute"
+    },
+    {
+      "slot": "C",
+      "template": "P15_RECENT_TVL_DIRECTION",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:fingerprint_trend_revealed"
+    },
+    {
+      "slot": "C",
+      "template": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.3608032619857963,
+      "target": "medium"
+    },
+    {
+      "slot": "D",
+      "template": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.3704385952769146,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P32_EXCHANGE_COMPARISON",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.21562670214382712,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.20377192861024795,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P4_ATH_TIMING",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:ath_history"
+    },
+    {
+      "slot": "D",
+      "template": "P5_FEES_REVENUE",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P2_CROSSCHAIN",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_absolute"
+    },
+    {
+      "slot": "D",
+      "template": "P11_FEES_TREND",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P9_TOP_CHAIN",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.2864867652805976,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P9_TOP_CHAIN",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.1814867652805976,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P13_TVL_RANK_COMPARISON",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_absolute"
+    },
+    {
+      "slot": "D",
+      "template": "P14_CATEGORY_LEADER",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_absolute"
+    },
+    {
+      "slot": "D",
+      "template": "P16_CATEGORY_PEER",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_absolute"
+    },
+    {
+      "slot": "D",
+      "template": "P20_ATH_DISTANCE",
+      "decision": "skip",
+      "reason": "already_used"
+    },
+    {
+      "slot": "D",
+      "template": "P27_DERIVATIVES_RANKING",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_absolute"
+    },
+    {
+      "slot": "D",
+      "template": "P29_CATEGORY_GROWTH",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.20377192861024795,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "decision": "selected",
+      "reason": "close_enough",
+      "score": 0.3704385952769146,
+      "target": "hard"
+    },
+    {
+      "slot": "E",
+      "template": "P6_TVL_TREND",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:fingerprint_trend_revealed"
+    },
+    {
+      "slot": "E",
+      "template": "P3_CONCENTRATION",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_absolute"
+    },
+    {
+      "slot": "E",
+      "template": "P10_TVL_BAND",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_magnitude"
+    },
+    {
+      "slot": "E",
+      "template": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.20377192861024795,
+      "target": "easy"
+    },
+    {
+      "qid": "q2",
+      "decision": "post_balance",
+      "reason": "redundant_with_fingerprint:P7_CATEGORY"
+    },
+    {
+      "decision": "post_balance",
+      "reason": "No hard questions in episode"
+    }
+  ]
 }

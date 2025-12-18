@@ -5,6 +5,7 @@
  * - Max 1 high-volatility question per episode
  * - Proper difficulty distribution
  * - No question quality issues
+ * - No questions that are redundant with fingerprint clues
  */
 
 import type {
@@ -14,6 +15,25 @@ import type {
 } from "@/lib/types/episode"
 import { getChangeBucketChoices, getChangeBucketIndex } from "./distractors"
 import { computeDifficulty } from "./difficulty"
+
+/**
+ * Templates that are conceptually redundant with fingerprint clues
+ * These questions ask about information already revealed in the fingerprint
+ */
+const FINGERPRINT_REDUNDANT_TEMPLATES: Record<string, string[]> = {
+  // Protocol fingerprint reveals: category, chain count bucket, TVL band, 7d change bucket
+  P1_FINGERPRINT: [
+    "P10_TVL_BAND",       // TVL band is revealed as a clue
+    "P6_TVL_TREND",       // 7d change is revealed as a clue  
+    "P15_RECENT_TVL_DIRECTION", // Also asks about recent trend
+    "P7_CATEGORY",        // Category is revealed as a clue (though category question can be interesting)
+  ],
+  // Chain fingerprint reveals: TVL rank bucket, TVL band, token symbol, 30d trend bucket
+  C1_FINGERPRINT: [
+    "C7_CHAIN_TVL_BAND",  // TVL band is revealed as a clue
+    "C8_30D_DIRECTION",   // 30d trend is revealed as a clue
+  ],
+}
 
 /**
  * High volatility threshold - questions above this are considered high-vol
@@ -103,12 +123,26 @@ function validateDifficultyMix(drafts: QuestionDraft[]): {
 }
 
 /**
+ * Check if a question is redundant with the fingerprint clues
+ * Returns true if the question asks about something already revealed in fingerprint
+ */
+function isRedundantWithFingerprint(
+  fingerprintTemplateId: string | null,
+  questionTemplateId: string
+): boolean {
+  if (!fingerprintTemplateId) return false
+  const redundantTemplates = FINGERPRINT_REDUNDANT_TEMPLATES[fingerprintTemplateId]
+  return redundantTemplates?.includes(questionTemplateId) ?? false
+}
+
+/**
  * Post-balance pass on selected questions
  *
  * Ensures:
  * 1. Max 1 high-volatility question per episode
  * 2. Reasonable difficulty distribution
  * 3. No duplicate prompts (safety check)
+ * 4. No questions redundant with fingerprint clues
  */
 export function postBalancePass(
   drafts: QuestionDraft[],
@@ -116,6 +150,28 @@ export function postBalancePass(
   buildLog: BuildLogEntry[]
 ): QuestionDraft[] {
   const result = [...drafts]
+
+  // 0. Check for fingerprint redundancy
+  // Find the fingerprint question (usually slot A / first question)
+  const fingerprintDraft = result.find(d => 
+    d.templateId === "P1_FINGERPRINT" || d.templateId === "C1_FINGERPRINT"
+  )
+  const fingerprintTemplateId = fingerprintDraft?.templateId ?? null
+  
+  // Flag any questions that are redundant with fingerprint clues
+  // Note: We don't remove them here because semantic topics should have already
+  // prevented selection. This is a safety check and logging mechanism.
+  for (let i = 0; i < result.length; i++) {
+    const draft = result[i]
+    if (draft.templateId !== fingerprintTemplateId && 
+        isRedundantWithFingerprint(fingerprintTemplateId, draft.templateId)) {
+      buildLog.push({
+        qid: `q${i + 1}`,
+        decision: "post_balance",
+        reason: `redundant_with_fingerprint:${draft.templateId}`,
+      })
+    }
+  }
 
   // 1. Handle high-volatility questions
   const highVolIndices: number[] = []
