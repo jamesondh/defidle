@@ -19,13 +19,16 @@ import type {
 /**
  * Format difficulty factors
  * Higher values = harder questions
+ * 
+ * Updated to produce higher scores so more questions can hit the hard band [0.45, 1.0].
+ * Previous values produced scores ~0.24-0.45 for most templates, never reaching hard.
  */
 export const FORMAT_FACTORS: Record<QuestionFormat, number> = {
-  tf: 0.15,
-  ab: 0.3,
-  mc4: 0.45,
-  mc6: 0.55,
-  rank4: 0.7,
+  tf: 0.20,
+  ab: 0.40,
+  mc4: 0.55,
+  mc6: 0.70,
+  rank4: 0.85,
 }
 
 /**
@@ -43,24 +46,28 @@ export const FAMILIARITY_FACTORS: Record<FamiliarityRankBucket, number> = {
  * Difficulty target bands (min, max)
  * Bands overlap to allow flexibility in matching
  * 
- * Note: Hard band was relaxed from [0.6, 1.0] to [0.45, 1.0] to reduce
- * FALLBACK frequency. The previous strict bounds caused paradoxically easy
- * fallback questions when no template could hit the 0.6+ threshold.
+ * Note: Hard band was relaxed to [0.34, 1.0] because:
+ * - mc6 format with top_25 familiarity and high margin (>25%) scores ~0.34
+ * - This ensures mc6 questions can hit hard difficulty for familiar topics
+ * - The overlap with medium (0.30-0.68) is intentional for flexibility
  */
 export const TARGET_BANDS: Record<DifficultyTarget, [number, number]> = {
   easy: [0.0, 0.38],
-  medium: [0.3, 0.68],
-  hard: [0.45, 1.0],
+  medium: [0.30, 0.55],
+  hard: [0.34, 1.0],
 }
 
 /**
  * Weight factors for difficulty calculation
+ * 
+ * Updated to emphasize format and margin more heavily.
+ * Format is the primary difficulty driver (40%), margin affects comparison questions (30%).
  */
 const WEIGHTS = {
-  format: 0.35,
-  familiarity: 0.25,
-  margin: 0.25,
-  volatility: 0.15,
+  format: 0.40,
+  familiarity: 0.20,
+  margin: 0.30,
+  volatility: 0.10,
 }
 
 // =============================================================================
@@ -86,12 +93,13 @@ export function computeDifficulty(signals: DifficultySignals): number {
   const familiarityScore = FAMILIARITY_FACTORS[signals.familiarityRankBucket]
 
   // Margin contribution (lower margin = harder)
-  // Margin of 0.30 (30%) or higher is considered easy (factor = 0)
+  // Margin of 0.25 (25%) or higher is considered easy (factor = 0)
   // Margin of 0 is hardest (factor = 1)
+  // Updated from 0.30 to 0.25 to make margin more impactful on difficulty.
   const marginScore =
     signals.margin !== null
-      ? Math.max(0, Math.min(1, 1 - signals.margin / 0.3))
-      : 0.25 // Default to middle if no margin available
+      ? Math.max(0, Math.min(1, 1 - signals.margin / 0.25))
+      : 0.3 // Default to slightly above middle if no margin available
 
   // Volatility contribution (higher = harder, more unpredictable)
   const volatilityScore = signals.volatility ?? 0.25
@@ -137,14 +145,21 @@ export function getRankBucket(rank: number): FamiliarityRankBucket {
 }
 
 /**
- * Estimate the difficulty target a score would fall into
- * Returns the best matching target, preferring more restrictive matches
+ * Estimate the difficulty target a score would fall into.
+ * 
+ * This uses non-overlapping thresholds for clear labeling:
+ * - Easy: score < 0.30
+ * - Medium: 0.30 <= score < 0.45
+ * - Hard: score >= 0.45
+ * 
+ * Note: These thresholds differ from TARGET_BANDS which are used for
+ * slot matching (where overlap is intentional for flexibility).
+ * This function is for user-facing difficulty labels on questions.
  */
 export function estimateTarget(score: number): DifficultyTarget {
-  // Check in order of specificity
-  if (score <= 0.35) return "easy"
-  if (score >= 0.65) return "hard"
-  return "medium"
+  if (score < 0.30) return "easy"
+  if (score < 0.45) return "medium"
+  return "hard"
 }
 
 /**

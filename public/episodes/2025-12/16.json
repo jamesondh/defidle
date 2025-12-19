@@ -15,21 +15,19 @@
       "prompt": "Which chain matches these clues?",
       "clues": [
         "TVL rank: top 20",
-        "TVL: $100M-$500M",
-        "Native token: APT",
-        "30d trend: down >10%"
+        "Native token: APT"
       ],
       "choices": [
         "Nolus",
-        "Gnosis",
+        "Sonic",
         "Aptos",
-        "Cronos zkEVM",
+        "zkLink Nova",
         "Saakuru",
-        "Celo"
+        "X Layer"
       ],
       "answerIndex": 2,
-      "explanation": "Aptos is ranked 13th in total value locked (TVL), with an estimated TVL between $100 million and $500 million, and it supports 89 different protocols. The native token for Aptos is APT.",
-      "difficulty": "easy",
+      "explanation": "Aptos is ranked 13th in total value locked (TVL) with an estimated range of $100M to $500M, and it has 89 protocols operating on its network. The native token for Aptos is APT.",
+      "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc6",
@@ -37,77 +35,81 @@
         "margin": null,
         "volatility": null
       },
-      "difficultyScore": 0.33749999999999997
+      "difficultyScore": 0.43099999999999994
     },
     {
       "qid": "q2",
       "slot": "B",
-      "templateId": "C8_30D_DIRECTION",
+      "templateId": "C2_CHAIN_COMPARISON",
       "format": "ab",
-      "prompt": "Over the last 30 days, did Aptos's TVL increase or decrease?",
+      "prompt": "Which chain has higher TVL: Aptos or Hyperliquid L1?",
       "choices": [
-        "Increase",
-        "Decrease"
+        "Aptos",
+        "Hyperliquid L1"
       ],
       "answerIndex": 1,
-      "explanation": "Aptos experienced a decrease in TVL of 17.7% over the past 30 days, indicating a reduction in the total value locked in the protocol.",
+      "explanation": "Hyperliquid L1 has 72.3% more TVL than Aptos ($1.6B vs $454M).",
       "difficulty": "easy",
-      "llmFallback": false,
+      "llmFallback": true,
       "signals": {
         "format": "ab",
         "familiarityRankBucket": "top_25",
-        "margin": 0.17665516418223173,
+        "margin": 0.7227320240286198,
         "volatility": null
       },
-      "difficultyScore": 0.2902873631814735
+      "difficultyScore": 0.22100000000000003
     },
     {
       "qid": "q3",
       "slot": "C",
-      "templateId": "C9_DISTANCE_FROM_ATH",
-      "format": "mc4",
-      "prompt": "How far is Aptos from its ATH TVL?",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Aptos hit its all-time high TVL?",
       "choices": [
-        "At ATH",
-        "Within 10%",
-        "10-30% below",
-        "30-60% below",
-        ">60% below"
+        "Sep 2024",
+        "Feb 2025",
+        "Jan 2025",
+        "Nov 2024",
+        "Mar 2025",
+        "Dec 2024"
       ],
-      "answerIndex": 4,
-      "explanation": "Aptos has a total value locked (TVL) of $454M, which is 65.2% lower than its all-time high (ATH) of $1.3B. This indicates a significant decrease in the value of assets locked in the Aptos protocol compared to its peak.",
+      "answerIndex": 5,
+      "explanation": "Aptos's historical TVL peak is based on DefiLlama data as of 2025-12-16.",
       "difficulty": "medium",
-      "llmFallback": false,
+      "llmFallback": true,
       "signals": {
-        "format": "mc4",
+        "format": "mc6",
         "familiarityRankBucket": "top_25",
-        "margin": 0.05177630395247024,
+        "margin": 0.5,
         "volatility": null
       },
-      "difficultyScore": 0.4468530800396081
+      "difficultyScore": 0.34099999999999997
     },
     {
       "qid": "q4",
       "slot": "D",
-      "templateId": "FALLBACK_CHAIN_RANK_TOP_20",
-      "format": "tf",
-      "prompt": "Aptos is ranked in the top 20 chains by TVL.",
+      "templateId": "C11_TOP_PROTOCOL_TVL",
+      "format": "mc6",
+      "prompt": "Which protocol has the most TVL on Aptos?",
       "choices": [
-        "True",
-        "False"
+        "Binance CEX",
+        "MEXC",
+        "OKX",
+        "Bitfinex",
+        "Gate",
+        "Bybit"
       ],
       "answerIndex": 0,
-      "answerValue": true,
-      "explanation": "Aptos is ranked 13th in the DeFi space, placing it within the top 20 chains, while other options like Solana and Avalanche rank 5th and 14th, respectively. This ranking indicates Aptos's significant position among leading blockchain protocols based on total value locked (TVL).",
-      "difficulty": "easy",
-      "llmFallback": false,
+      "explanation": "Aptos's top protocol by TVL is based on DefiLlama data as of 2025-12-16.",
+      "difficulty": "medium",
+      "llmFallback": true,
       "signals": {
-        "format": "tf",
+        "format": "mc6",
         "familiarityRankBucket": "top_25",
-        "margin": 0.23333333333333334,
-        "volatility": 0
+        "margin": 0.8602884480322928,
+        "volatility": null
       },
-      "difficultyScore": 0.15305555555555556
+      "difficultyScore": 0.34099999999999997
     },
     {
       "qid": "q5",
@@ -122,40 +124,34 @@
         "ThalaSwap V3"
       ],
       "answerIndex": 2,
-      "explanation": "On the Aptos chain, Hyperion is the top decentralized exchange (DEX) with a trading volume of $61M, significantly higher than its competitors like ThalaSwap V3 at $22M and Tapp Exchange at $11M. This volume indicates Hyperion's leading position in the Aptos DeFi ecosystem.",
+      "explanation": "On the Aptos blockchain, Hyperion is the top decentralized exchange (DEX) with a trading volume of $54M, significantly higher than its closest competitor, ThalaSwap V3, which has a volume of $18M. Other DEXes like Tapp Exchange and ThalaSwap V2 have even lower volumes of $9M and $220K, respectively.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_25",
-        "margin": 0.6409812890919521,
+        "margin": 0.6570907770148569,
         "volatility": null
       },
-      "difficultyScore": 0.24000000000000002
+      "difficultyScore": 0.281
     }
   ],
-  "generatedAt": "2025-12-16T15:54:02.760Z",
+  "generatedAt": "2025-12-19T13:27:50.153Z",
   "buildLog": [
     {
       "slot": "A",
       "template": "C1_FINGERPRINT",
       "format": "mc6",
       "decision": "selected",
-      "score": 0.33749999999999997,
+      "score": 0.43099999999999994,
       "target": "medium"
     },
     {
       "slot": "B",
       "template": "C2_CHAIN_COMPARISON",
-      "decision": "skip",
-      "reason": "semantic_topic_covered:tvl_absolute"
-    },
-    {
-      "slot": "B",
-      "template": "C8_30D_DIRECTION",
       "format": "ab",
       "decision": "selected",
-      "score": 0.2902873631814735,
+      "score": 0.22100000000000003,
       "target": "easy"
     },
     {
@@ -170,7 +166,7 @@
       "format": "mc4",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.24000000000000002,
+      "score": 0.281,
       "target": "medium"
     },
     {
@@ -179,103 +175,50 @@
       "format": "ab",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.1875,
+      "score": 0.22100000000000003,
       "target": "medium"
     },
     {
       "slot": "C",
       "template": "C3_ATH_TIMING",
-      "format": "mc4",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.24000000000000002,
-      "target": "medium"
-    },
-    {
-      "slot": "C",
-      "template": "C3_ATH_TIMING",
-      "format": "tf",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.135,
-      "target": "medium"
-    },
-    {
-      "slot": "C",
-      "template": "C4_GROWTH_RANKING",
-      "decision": "skip",
-      "reason": "semantic_topic_covered:tvl_trend"
-    },
-    {
-      "slot": "C",
-      "template": "C9_DISTANCE_FROM_ATH",
-      "decision": "adjusted",
-      "originalFormat": "tf",
-      "newFormat": "mc4",
-      "score": 0.4468530800396081,
+      "format": "mc6",
+      "decision": "selected",
+      "score": 0.34099999999999997,
       "target": "medium"
     },
     {
       "slot": "D",
       "template": "C3_ATH_TIMING",
-      "decision": "skip",
-      "reason": "semantic_topic_covered:ath_history"
-    },
-    {
-      "slot": "D",
-      "template": "C4_GROWTH_RANKING",
-      "decision": "skip",
-      "reason": "semantic_topic_covered:tvl_trend"
-    },
-    {
-      "slot": "D",
-      "template": "C9_DISTANCE_FROM_ATH",
       "decision": "skip",
       "reason": "already_used"
     },
     {
       "slot": "D",
-      "template": "C11_TOP_PROTOCOL_TVL",
-      "format": "mc4",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.24000000000000002,
-      "target": "hard"
+      "template": "C4_GROWTH_RANKING",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "C9_DISTANCE_FROM_ATH",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:ath_history"
     },
     {
       "slot": "D",
       "template": "C11_TOP_PROTOCOL_TVL",
-      "format": "ab",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.1875,
+      "format": "mc6",
+      "decision": "selected",
+      "score": 0.34099999999999997,
       "target": "hard"
-    },
-    {
-      "slot": "D",
-      "template": "C12_CATEGORY_DOMINANCE",
-      "format": "mc4",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.24000000000000002,
-      "target": "hard"
-    },
-    {
-      "slot": "D",
-      "decision": "fallback",
-      "reason": "no_template_matched"
     },
     {
       "slot": "E",
       "template": "C6_TOP_DEX",
       "format": "mc4",
       "decision": "selected",
-      "score": 0.24000000000000002,
+      "score": 0.281,
       "target": "easy"
-    },
-    {
-      "decision": "post_balance",
-      "reason": "No hard questions in episode"
     }
   ]
 }

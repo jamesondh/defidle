@@ -488,14 +488,14 @@ export async function generateEpisode(
 
   // 7. Select questions for each slot
   console.log("Selecting questions...")
-  const { drafts, buildLog } = selectAllQuestions(slots, matrix, ctx, baseSeed)
+  const { drafts, buildLog, usedSemanticTopics } = selectAllQuestions(slots, matrix, ctx, baseSeed)
   console.log(`Selected ${drafts.length} questions`)
 
   // 8. Run post-balance pass
   if (verbose) {
     console.log("Running post-balance pass...")
   }
-  const balancedDrafts = postBalancePass(drafts, ctx, buildLog)
+  const balancedDrafts = postBalancePass(drafts, ctx, buildLog, usedSemanticTopics)
 
   // 9. Generate LLM text for questions
   console.log("Generating explanations...")

@@ -16,24 +16,9 @@ import type {
 import { getChangeBucketChoices, getChangeBucketIndex } from "./distractors"
 import { computeDifficulty } from "./difficulty"
 
-/**
- * Templates that are conceptually redundant with fingerprint clues
- * These questions ask about information already revealed in the fingerprint
- */
-const FINGERPRINT_REDUNDANT_TEMPLATES: Record<string, string[]> = {
-  // Protocol fingerprint reveals: category, chain count bucket, TVL band, 7d change bucket
-  P1_FINGERPRINT: [
-    "P10_TVL_BAND",       // TVL band is revealed as a clue
-    "P6_TVL_TREND",       // 7d change is revealed as a clue  
-    "P15_RECENT_TVL_DIRECTION", // Also asks about recent trend
-    "P7_CATEGORY",        // Category is revealed as a clue (though category question can be interesting)
-  ],
-  // Chain fingerprint reveals: TVL rank bucket, TVL band, token symbol, 30d trend bucket
-  C1_FINGERPRINT: [
-    "C7_CHAIN_TVL_BAND",  // TVL band is revealed as a clue
-    "C8_30D_DIRECTION",   // 30d trend is revealed as a clue
-  ],
-}
+// Note: Fingerprint redundancy checking has been removed in favor of the
+// semantic topic system which handles this during slot selection.
+// See the comment on postBalancePass() for details.
 
 /**
  * High volatility threshold - questions above this are considered high-vol
@@ -100,15 +85,23 @@ function validateDifficultyMix(drafts: QuestionDraft[]): {
   const issues: string[] = []
 
   const scores = drafts.map((d) => computeDifficulty(d.signals))
-  const easyCount = scores.filter((s) => s <= 0.38).length
-  const hardCount = scores.filter((s) => s >= 0.6).length
+  // Use consistent thresholds with estimateTarget() in difficulty.ts
+  const easyCount = scores.filter((s) => s < 0.30).length
+  const hardCount = scores.filter((s) => s >= 0.45).length
 
   if (easyCount === 0) {
     issues.push("No easy questions in episode")
   }
 
-  if (hardCount === 0 && drafts.length >= 4) {
-    issues.push("No hard questions in episode")
+  // Only warn about missing hard questions if we have 5 questions
+  // and slot D (hard target) didn't get a challenging enough question
+  if (hardCount === 0 && drafts.length >= 5) {
+    // Check if slot D got at least a medium question (score >= 0.34)
+    // This is acceptable since mc6 format with high margins scores ~0.34-0.43
+    const slotDScore = scores.length >= 4 ? scores[3] : 0
+    if (slotDScore < 0.34) {
+      issues.push("No challenging questions in episode")
+    }
   }
 
   // Check for too many hard questions
@@ -122,18 +115,7 @@ function validateDifficultyMix(drafts: QuestionDraft[]): {
   }
 }
 
-/**
- * Check if a question is redundant with the fingerprint clues
- * Returns true if the question asks about something already revealed in fingerprint
- */
-function isRedundantWithFingerprint(
-  fingerprintTemplateId: string | null,
-  questionTemplateId: string
-): boolean {
-  if (!fingerprintTemplateId) return false
-  const redundantTemplates = FINGERPRINT_REDUNDANT_TEMPLATES[fingerprintTemplateId]
-  return redundantTemplates?.includes(questionTemplateId) ?? false
-}
+// isRedundantWithFingerprint() removed - redundancy is now handled by semantic topics
 
 /**
  * Post-balance pass on selected questions
@@ -142,36 +124,22 @@ function isRedundantWithFingerprint(
  * 1. Max 1 high-volatility question per episode
  * 2. Reasonable difficulty distribution
  * 3. No duplicate prompts (safety check)
- * 4. No questions redundant with fingerprint clues
+ * 
+ * Note: Fingerprint redundancy checking has been removed because:
+ * - The semantic topic system already prevents selecting questions that would be
+ *   redundant with fingerprint clues during slot selection
+ * - The dynamic semantic topics on fingerprint templates (P1, C1) only add
+ *   "fingerprint_tvl_revealed" or "fingerprint_trend_revealed" when those clues
+ *   are actually shown (for unfamiliar topics)
+ * - This prevents false positives where familiar topics get flagged as redundant
  */
 export function postBalancePass(
   drafts: QuestionDraft[],
   ctx: TemplateContext,
-  buildLog: BuildLogEntry[]
+  buildLog: BuildLogEntry[],
+  _usedSemanticTopics?: Set<string>  // Kept for API compatibility but not used
 ): QuestionDraft[] {
   const result = [...drafts]
-
-  // 0. Check for fingerprint redundancy
-  // Find the fingerprint question (usually slot A / first question)
-  const fingerprintDraft = result.find(d => 
-    d.templateId === "P1_FINGERPRINT" || d.templateId === "C1_FINGERPRINT"
-  )
-  const fingerprintTemplateId = fingerprintDraft?.templateId ?? null
-  
-  // Flag any questions that are redundant with fingerprint clues
-  // Note: We don't remove them here because semantic topics should have already
-  // prevented selection. This is a safety check and logging mechanism.
-  for (let i = 0; i < result.length; i++) {
-    const draft = result[i]
-    if (draft.templateId !== fingerprintTemplateId && 
-        isRedundantWithFingerprint(fingerprintTemplateId, draft.templateId)) {
-      buildLog.push({
-        qid: `q${i + 1}`,
-        decision: "post_balance",
-        reason: `redundant_with_fingerprint:${draft.templateId}`,
-      })
-    }
-  }
 
   // 1. Handle high-volatility questions
   const highVolIndices: number[] = []

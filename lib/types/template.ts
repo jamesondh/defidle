@@ -40,8 +40,22 @@ export interface Template {
    * - "category_identification" - what category is the protocol
    * - "chain_tvl_comparison" - comparing TVL across chains
    * - "ath_timing" - when did ATH occur
+   * 
+   * Note: For dynamic semantic topics (e.g., fingerprint that reveals different
+   * info based on topic familiarity), use getSemanticTopics() method instead.
    */
   semanticTopics?: string[]
+
+  /**
+   * Compute semantic topics dynamically based on context.
+   * 
+   * This is called after instantiation to determine which semantic topics
+   * were actually covered by this question. Used for templates like fingerprint
+   * that reveal different information based on topic familiarity.
+   * 
+   * If not provided, falls back to the static semanticTopics array.
+   */
+  getSemanticTopics?(ctx: TemplateContext): string[]
 
   /**
    * Check if template prerequisites are met

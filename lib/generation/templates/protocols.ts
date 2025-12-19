@@ -54,6 +54,9 @@ interface P1Data {
   changeBucket: string | undefined
   chains: string[]
   distractors: string[]
+  // Track what clues were revealed (for dynamic semantic topics)
+  revealedTvlBand: boolean
+  revealedTrend: boolean
 }
 
 const P1_FINGERPRINT: TemplateConfig<P1Data> = {
@@ -61,9 +64,26 @@ const P1_FINGERPRINT: TemplateConfig<P1Data> = {
   name: "Protocol Fingerprint Guess",
   description: "Identify a protocol from a set of clues about its characteristics",
   type: "protocol",
-  // Fingerprint reveals TVL band and trend direction - mark both as covered
-  // so later questions don't ask about the same info
-  semanticTopics: ["tvl_absolute", "fingerprint_tvl_revealed", "fingerprint_trend_revealed"],
+  // Base semantic topic - fingerprint always covers fingerprint identification
+  // Dynamic topics are added based on what clues were actually revealed
+  semanticTopics: ["fingerprint_base"],
+  
+  // Dynamic semantic topics based on what was actually revealed in clues
+  getDynamicSemanticTopics(data) {
+    const topics = ["fingerprint_base"]
+    
+    // Only block tvl_band_revealed if we actually showed the TVL band
+    if (data.revealedTvlBand) {
+      topics.push("fingerprint_tvl_revealed")
+    }
+    
+    // Only block trend topics if we actually showed the trend
+    if (data.revealedTrend) {
+      topics.push("fingerprint_trend_revealed")
+    }
+    
+    return topics
+  },
 
   checkPrereqs(ctx) {
     if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
@@ -136,6 +156,13 @@ const P1_FINGERPRINT: TemplateConfig<P1Data> = {
 
     if (!distractors) return null
 
+    // Determine which clues to reveal based on topic familiarity
+    // For well-known protocols (top 25), use simpler clues to preserve TVL/trend for later questions
+    // For less familiar protocols, include TVL band and trend to help with identification
+    const isFamiliar = topic.tvlRank <= 25
+    const revealedTvlBand = !isFamiliar
+    const revealedTrend = !isFamiliar && changeBucket !== undefined
+
     return {
       category: detail.category,
       chainCount,
@@ -146,6 +173,8 @@ const P1_FINGERPRINT: TemplateConfig<P1Data> = {
       changeBucket,
       chains: detail.chains.slice(0, 5),
       distractors,
+      revealedTvlBand,
+      revealedTrend,
     }
   },
 
@@ -153,15 +182,34 @@ const P1_FINGERPRINT: TemplateConfig<P1Data> = {
     return "Which protocol matches these clues?"
   },
 
-  getClues(data) {
-    const clues = [
-      `Category: ${data.category}`,
-      `Chains: ${data.chainBucket}`,
-      `TVL: ${data.tvlBand}`,
-    ]
-    if (data.changeBucket) {
+  getClues(data, ctx) {
+    const topic = ctx.topic as ProtocolPoolEntry
+    const clues: string[] = []
+    
+    // Always include category and chain count
+    clues.push(`Category: ${data.category}`)
+    clues.push(`Chains: ${data.chainBucket}`)
+    
+    // For less familiar protocols (rank > 25), include TVL band and trend
+    // For familiar protocols, omit these to allow later questions about them
+    if (data.revealedTvlBand) {
+      clues.push(`TVL: ${data.tvlBand}`)
+    }
+    if (data.revealedTrend && data.changeBucket) {
       clues.push(`7d change: ${data.changeBucket}`)
     }
+    
+    // If we didn't reveal TVL/trend for familiar protocols, add alternative clues
+    if (!data.revealedTvlBand && !data.revealedTrend) {
+      // For top-25 protocols, the category + chain count should be enough
+      // since they're well-known
+      if (topic.tvlRank <= 10) {
+        clues.push(`TVL rank: top 10`)
+      } else {
+        clues.push(`TVL rank: top 25`)
+      }
+    }
+    
     return clues
   },
 
@@ -216,7 +264,8 @@ const P2_CROSSCHAIN: TemplateConfig<P2Data> = {
   name: "Cross-Chain Dominance",
   description: "Compare a protocol's TVL across two chains",
   type: "protocol",
-  semanticTopics: ["tvl_absolute"],
+  // Uses tvl_comparison - compares TVL between chains, doesn't reveal absolute TVL band
+  semanticTopics: ["tvl_comparison", "cross_chain_dominance"],
 
   checkPrereqs(ctx) {
     if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
@@ -334,7 +383,8 @@ const P3_CONCENTRATION: TemplateConfig<P3Data> = {
   name: "Top Chain Concentration",
   description: "What share of a protocol's TVL is on its dominant chain",
   type: "protocol",
-  semanticTopics: ["tvl_absolute"],
+  // Reveals concentration percentage, not absolute TVL
+  semanticTopics: ["tvl_concentration"],
 
   checkPrereqs(ctx) {
     if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
@@ -1310,7 +1360,8 @@ const P13_TVL_RANK_COMPARISON: TemplateConfig<P13Data> = {
   name: "TVL Rank Comparison",
   description: "Compare a protocol's TVL to another similar protocol",
   type: "protocol",
-  semanticTopics: ["tvl_absolute"],
+  // Compares TVL between protocols, doesn't reveal absolute TVL band
+  semanticTopics: ["tvl_comparison"],
 
   checkPrereqs(ctx) {
     if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
@@ -1402,7 +1453,8 @@ const P14_CATEGORY_LEADER: TemplateConfig<P14Data> = {
   name: "Category Leader Comparison",
   description: "Compare protocol to others in the same category",
   type: "protocol",
-  semanticTopics: ["tvl_absolute"],
+  // Compares TVL within category, doesn't reveal absolute TVL band
+  semanticTopics: ["tvl_comparison", "category_ranking"],
 
   checkPrereqs(ctx) {
     if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
@@ -1590,7 +1642,8 @@ const P16_CATEGORY_PEER: TemplateConfig<P16Data> = {
   name: "Category Peer Comparison",
   description: "Which protocol has highest/lowest TVL in category",
   type: "protocol",
-  semanticTopics: ["tvl_absolute", "category_ranking"],
+  // Compares TVL within category, doesn't reveal absolute TVL band
+  semanticTopics: ["tvl_comparison", "category_ranking"],
 
   checkPrereqs(ctx) {
     if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
@@ -1781,7 +1834,8 @@ const P22_CATEGORY_MARKET_SHARE: TemplateConfig<P22Data> = {
   name: "Category Market Share",
   description: "What percentage of category TVL does this protocol hold",
   type: "protocol",
-  semanticTopics: ["tvl_absolute", "category_ranking"],
+  // Reveals market share percentage, doesn't reveal absolute TVL band
+  semanticTopics: ["category_market_share", "category_ranking"],
 
   checkPrereqs(ctx) {
     if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
@@ -1861,7 +1915,8 @@ const P27_DERIVATIVES_RANKING: TemplateConfig<P27Data> = {
   name: "Derivatives Protocol Comparison",
   description: "Compare TVL between derivatives/perps protocols",
   type: "protocol",
-  semanticTopics: ["derivatives_ranking", "tvl_absolute"],
+  // Compares TVL between derivatives protocols
+  semanticTopics: ["derivatives_ranking", "tvl_comparison"],
 
   checkPrereqs(ctx) {
     if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }

@@ -154,6 +154,20 @@ export interface TemplateConfig<T extends Record<string, any> = Record<string, a
     ctx: TemplateContext,
     format: QuestionFormat
   ) => string[]
+
+  /**
+   * Compute dynamic semantic topics based on extracted data.
+   * 
+   * Called after instantiation to determine which semantic topics were actually
+   * covered by this question. Used for templates like fingerprint that reveal
+   * different information based on topic familiarity.
+   * 
+   * If not provided, returns the static semanticTopics array.
+   */
+  getDynamicSemanticTopics?: (
+    data: T,
+    ctx: TemplateContext
+  ) => string[]
 }
 
 // =============================================================================
@@ -170,6 +184,10 @@ export interface TemplateConfig<T extends Record<string, any> = Record<string, a
 export function createTemplate<T extends Record<string, any>>(
   config: TemplateConfig<T>
 ): Template {
+  // Cache for the most recently extracted data, keyed by seed
+  // This allows getSemanticTopics to access the extracted data after instantiation
+  let lastExtractedData: { seed: number; data: T } | null = null
+
   return {
     id: config.id,
     name: config.name,
@@ -198,6 +216,9 @@ export function createTemplate<T extends Record<string, any>>(
       // Extract data
       const data = config.extract(ctx, seed)
       if (!data) return null
+
+      // Cache extracted data for getSemanticTopics
+      lastExtractedData = { seed, data }
 
       // Generate question components
       const prompt = config.getPrompt(data, ctx, format)
@@ -239,6 +260,16 @@ export function createTemplate<T extends Record<string, any>>(
       if (answerValue !== undefined) draft.answerValue = answerValue
 
       return draft
+    },
+
+    // Dynamic semantic topics support
+    getSemanticTopics(ctx: TemplateContext): string[] {
+      // If template has dynamic semantic topics function and we have extracted data
+      if (config.getDynamicSemanticTopics && lastExtractedData) {
+        return config.getDynamicSemanticTopics(lastExtractedData.data, ctx)
+      }
+      // Fall back to static semantic topics
+      return config.semanticTopics ?? []
     },
   }
 }

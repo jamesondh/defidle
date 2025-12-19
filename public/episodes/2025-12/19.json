@@ -17,125 +17,294 @@
       "clues": [
         "Category: Bridge",
         "Chains: single-chain",
-        "TVL: $1B-$5B",
-        "7d change: down 1-10%"
+        "TVL rank: top 25"
       ],
       "choices": [
-        "Tether Gold",
+        "Kamino Lend",
         "EigenCloud",
-        "HTX",
-        "Maple",
-        "Falcon Finance",
+        "Sky Lending",
+        "Crypto-com",
+        "Polygon Bridge & Staking",
         "USDT0"
       ],
       "answerIndex": 5,
-      "explanation": "USDT0 is a bridge protocol operating on the Ethereum blockchain, with a total value locked (TVL) of $4.3B, placing it within the TVL band of $1B-$5B. It facilitates the transfer of assets across different networks.",
-      "difficulty": "easy",
+      "explanation": "USDT0 is a bridge protocol operating on the Ethereum chain, with a total value locked (TVL) of $4.2B, which falls within the TVL band of $1B-$5B.",
+      "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc6",
         "familiarityRankBucket": "top_25",
         "margin": null,
-        "volatility": 0.19142134615706938
+        "volatility": 0.18779966758415842
       },
-      "difficultyScore": 0.3287132019235604
+      "difficultyScore": 0.4247799667584158
     },
     {
       "qid": "q2",
       "slot": "B",
-      "templateId": "P7_CATEGORY",
-      "format": "mc4",
-      "prompt": "What category is USDT0?",
+      "templateId": "P3_CONCENTRATION",
+      "format": "tf",
+      "prompt": "More than 90% of USDT0's TVL is on Ethereum.",
       "choices": [
-        "Bridge",
-        "CEX",
-        "Canonical Bridge",
-        "Privacy"
+        "True",
+        "False"
       ],
       "answerIndex": 0,
-      "explanation": "USDT0 is categorized as a bridge in the DeFi space, facilitating the transfer of assets between different blockchain networks. Bridges play a crucial role in enhancing interoperability among various protocols.",
-      "difficulty": "easy",
-      "llmFallback": false,
+      "answerValue": true,
+      "explanation": "Ethereum holds 100% of USDT0's total TVL ($4.2B of $4.2B).",
+      "difficulty": "medium",
+      "llmFallback": true,
       "signals": {
-        "format": "mc4",
+        "format": "tf",
         "familiarityRankBucket": "top_25",
-        "margin": 0.5,
-        "volatility": 0.19142134615706938
+        "margin": 0.09999999999999998,
+        "volatility": 0.18779966758415842
       },
-      "difficultyScore": 0.23121320192356043
+      "difficultyScore": 0.3147799667584159
     },
     {
       "qid": "q3",
       "slot": "C",
-      "templateId": "P20_ATH_DISTANCE",
-      "format": "mc4",
-      "prompt": "How far is USDT0's current TVL from its all-time high?",
+      "templateId": "P15_RECENT_TVL_DIRECTION",
+      "format": "ab",
+      "prompt": "Over the past 7 days, did USDT0's TVL increase or decrease?",
       "choices": [
-        "<25% below ATH",
-        "25-50% below ATH",
-        "50-75% below ATH",
-        ">75% below ATH"
+        "Increase",
+        "Decrease"
       ],
       "answerIndex": 1,
-      "explanation": "USDT0 has a total value locked (TVL) of $4.3B, which is 45% below its all-time high (ATH) of $7.8B, placing it in the 25-50% below ATH category.",
-      "difficulty": "easy",
-      "llmFallback": false,
+      "explanation": "USDT0's TVL decreased over the past 7 days (-9.3%), now at $4.2B.",
+      "difficulty": "medium",
+      "llmFallback": true,
       "signals": {
-        "format": "mc4",
+        "format": "ab",
         "familiarityRankBucket": "top_25",
-        "margin": 0.1923492372531848,
-        "volatility": 0.19142134615706938
+        "margin": 0.09300943691570578,
+        "volatility": 0.18779966758415842
       },
-      "difficultyScore": 0.32092217087923974
+      "difficultyScore": 0.40316864245956896
     },
     {
       "qid": "q4",
       "slot": "D",
-      "templateId": "P33_MULTI_RANKING",
-      "format": "mc4",
-      "prompt": "Rank these Bridge protocols from highest to lowest TVL.",
+      "templateId": "P13_TVL_RANK_COMPARISON",
+      "format": "ab",
+      "prompt": "Which protocol has higher TVL?",
       "choices": [
-        "Binance Bitcoin > Portal > USDT0",
-        "USDT0 > Binance Bitcoin > Portal",
-        "Binance Bitcoin > USDT0 > Portal",
-        "Portal > Binance Bitcoin > USDT0"
+        "MEXC",
+        "USDT0"
       ],
-      "answerIndex": 2,
-      "explanation": "USDT0 has a total value locked (TVL) of $4.3B, making it the second largest bridge protocol after Binance Bitcoin, which has a TVL of $5.8B. Portal follows with a TVL of $1.5B.",
-      "difficulty": "easy",
-      "llmFallback": false,
+      "answerIndex": 0,
+      "explanation": "MEXC has higher TVL than USDT0 ($4.8B vs $4.2B, a 12.3% difference).",
+      "difficulty": "medium",
+      "llmFallback": true,
       "signals": {
-        "format": "mc4",
+        "format": "ab",
         "familiarityRankBucket": "top_25",
-        "margin": 0.2713616179091841,
-        "volatility": 0.19142134615706938
+        "margin": 0.12322330354567408,
+        "volatility": 0.18779966758415842
       },
-      "difficultyScore": 0.25507852033257367
+      "difficultyScore": 0.366912002503607
     },
     {
       "qid": "q5",
       "slot": "E",
-      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "templateId": "P10_TVL_BAND",
       "format": "mc4",
-      "prompt": "Which chain is USDT0 deployed on?",
+      "prompt": "Which TVL range fits USDT0?",
       "choices": [
-        "Polygon",
-        "Ethereum",
-        "Arbitrum",
-        "Optimism"
+        "<$50M",
+        "$50M-$250M",
+        "$250M-$1B",
+        "$1B-$5B",
+        ">$5B"
       ],
-      "answerIndex": 1,
-      "explanation": "USDT0 is a stablecoin that operates on the Ethereum blockchain, with a total of 1 chain supporting it.",
+      "answerIndex": 3,
+      "explanation": "USDT0 has $4.2B in TVL, placing it in the $1B-$5B range.",
       "difficulty": "easy",
-      "llmFallback": false,
+      "llmFallback": true,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_25",
-        "margin": 0.4,
-        "volatility": 0.19142134615706938
+        "margin": 0.3050980828,
+        "volatility": 0.18779966758415842
       },
-      "difficultyScore": 0.23121320192356043
+      "difficultyScore": 0.2747799667584159
     }
   ],
-  "generatedAt": "2025-12-19T00:24:44.718Z"
+  "generatedAt": "2025-12-19T13:27:32.890Z",
+  "buildLog": [
+    {
+      "slot": "A",
+      "template": "P1_FINGERPRINT",
+      "format": "mc6",
+      "decision": "selected",
+      "score": 0.4247799667584158,
+      "target": "medium"
+    },
+    {
+      "slot": "B",
+      "template": "P2_CROSSCHAIN",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "B",
+      "template": "P3_CONCENTRATION",
+      "format": "tf",
+      "decision": "selected",
+      "score": 0.3147799667584159,
+      "target": "easy"
+    },
+    {
+      "slot": "C",
+      "template": "P5_FEES_REVENUE",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "P4_ATH_TIMING",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.2747799667584159,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P4_ATH_TIMING",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.13477996675841586,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P11_FEES_TREND",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "P14_CATEGORY_LEADER",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.21477996675841587,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P14_CATEGORY_LEADER",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.13477996675841586,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P15_RECENT_TVL_DIRECTION",
+      "format": "ab",
+      "decision": "selected",
+      "score": 0.40316864245956896,
+      "target": "medium"
+    },
+    {
+      "slot": "D",
+      "template": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.2747799667584159,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P32_EXCHANGE_COMPARISON",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.2747799667584159,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P4_ATH_TIMING",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.2747799667584159,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P4_ATH_TIMING",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.13477996675841586,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P5_FEES_REVENUE",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P2_CROSSCHAIN",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P11_FEES_TREND",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P9_TOP_CHAIN",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P13_TVL_RANK_COMPARISON",
+      "format": "ab",
+      "decision": "selected",
+      "score": 0.366912002503607,
+      "target": "hard"
+    },
+    {
+      "slot": "E",
+      "template": "P6_TVL_TREND",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_trend_7d"
+    },
+    {
+      "slot": "E",
+      "template": "P3_CONCENTRATION",
+      "decision": "skip",
+      "reason": "already_used"
+    },
+    {
+      "slot": "E",
+      "template": "P10_TVL_BAND",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.2747799667584159,
+      "target": "easy"
+    }
+  ]
 }

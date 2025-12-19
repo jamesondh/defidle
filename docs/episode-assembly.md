@@ -25,30 +25,30 @@ Default mix for 5-question episode: **1 easy, 2 medium, 1 hard, 1 easy**
 | Target | Score Range | Characteristics |
 |--------|-------------|-----------------|
 | Easy | 0.00 - 0.38 | Large margins (>25%), familiar topics, simple formats |
-| Medium | 0.30 - 0.68 | Moderate margins (10-25%), standard formats |
-| Hard | 0.45 - 1.00 | Tight margins (5-15%), precise timing, complex formats |
+| Medium | 0.30 - 0.55 | Moderate margins (10-25%), standard formats |
+| Hard | 0.34 - 1.00 | mc6 format, any margin, challenging identification |
 
-Note: Ranges overlap intentionally to allow flexibility in slot assignment. The hard threshold was relaxed from 0.60 to 0.45 to reduce fallback frequency - a medium-difficulty question is better than a trivial fallback.
+Note: Ranges overlap intentionally to allow flexibility in slot assignment. The hard band starts at 0.34 because mc6 questions with top-25 familiarity and high margins score ~0.34. This ensures episodes can have genuinely challenging questions rather than falling back to trivial ones.
 
 ### Difficulty Scoring
 
 Each question's difficulty is computed from four signals:
 
 ```
-score = 0.35 × formatFactor 
-      + 0.25 × familiarityFactor 
-      + 0.25 × marginFactor 
-      + 0.15 × volatilityFactor
+score = 0.40 × formatFactor 
+      + 0.20 × familiarityFactor 
+      + 0.30 × marginFactor 
+      + 0.10 × volatilityFactor
 ```
 
 **Format Factor** (lower = easier):
 | Format | Factor |
 |--------|--------|
-| tf | 0.15 |
-| ab | 0.30 |
-| mc4 | 0.45 |
-| mc6 | 0.55 |
-| rank4 | 0.70 |
+| tf | 0.20 |
+| ab | 0.40 |
+| mc4 | 0.55 |
+| mc6 | 0.70 |
+| rank4 | 0.85 |
 
 > **Note**: `write_in` format is deferred to v2+. See SPEC.md for rationale.
 
@@ -62,10 +62,10 @@ score = 0.35 × formatFactor
 
 **Margin Factor** (smaller margin = harder):
 ```
-marginFactor = clamp(1 - (margin / 0.30), 0, 1)
+marginFactor = clamp(1 - (margin / 0.25), 0, 1)
 ```
-- 30%+ margin → 0.0 (easy)
-- 15% margin → 0.5 (medium)
+- 25%+ margin → 0.0 (easy)
+- 12.5% margin → 0.5 (medium)
 - 0% margin → 1.0 (hard)
 
 **Volatility Factor**: 0.0 - 1.0 based on daily series variance (see generation-algorithm.md)

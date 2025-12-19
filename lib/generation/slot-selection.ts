@@ -243,10 +243,12 @@ export function selectQuestionForSlot(
           score,
           target,
         })
+        // Use dynamic semantic topics if available, otherwise fall back to static
+        const selectedTopics = template.getSemanticTopics?.(ctx) ?? template.semanticTopics
         return {
           draft: { ...draft, buildNotes: [...draft.buildNotes, `Score: ${score.toFixed(2)}`] },
           logEntries,
-          selectedTopics: template.semanticTopics,
+          selectedTopics,
         }
       }
 
@@ -264,6 +266,8 @@ export function selectQuestionForSlot(
             score: adjScore,
             target,
           })
+          // Use dynamic semantic topics if available, otherwise fall back to static
+          const adjustedTopics = template.getSemanticTopics?.(ctx) ?? template.semanticTopics
           return {
             draft: {
               ...adjusted,
@@ -274,7 +278,7 @@ export function selectQuestionForSlot(
               ],
             },
             logEntries,
-            selectedTopics: template.semanticTopics,
+            selectedTopics: adjustedTopics,
           }
         }
       }
@@ -325,6 +329,8 @@ export function selectQuestionForSlot(
           score,
           target,
         })
+        // Use dynamic semantic topics if available, otherwise fall back to static
+        const closeEnoughSelectedTopics = template.getSemanticTopics?.(ctx) ?? template.semanticTopics
         return {
           draft: {
             ...draft,
@@ -334,7 +340,7 @@ export function selectQuestionForSlot(
             ],
           },
           logEntries,
-          selectedTopics: template.semanticTopics,
+          selectedTopics: closeEnoughSelectedTopics,
         }
       }
     }
@@ -365,7 +371,7 @@ export function selectAllQuestions(
   matrix: Record<string, Template[]>,
   ctx: TemplateContext,
   baseSeed: number
-): { drafts: QuestionDraft[]; buildLog: BuildLogEntry[] } {
+): { drafts: QuestionDraft[]; buildLog: BuildLogEntry[]; usedSemanticTopics: Set<string> } {
   const drafts: QuestionDraft[] = []
   const buildLog: BuildLogEntry[] = []
   const usedTemplates = new Set<string>()
@@ -402,5 +408,5 @@ export function selectAllQuestions(
     }
   }
 
-  return { drafts, buildLog }
+  return { drafts, buildLog, usedSemanticTopics }
 }

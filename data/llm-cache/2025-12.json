@@ -1,152 +1,102 @@
 {
-  "2025-12-16|chain|Aptos|A|C1_FINGERPRINT|explanation|1524b724f21e2a10": {
-    "text": "Aptos is ranked 13th in total value locked (TVL), with an estimated TVL between $100 million and $500 million, and it supports 89 different protocols. The native token for Aptos is APT.",
+  "2025-12-19|protocol|usdt0|A|P1_FINGERPRINT|explanation|1efb1e20d4368015": {
+    "text": "USDT0 is a bridge protocol operating on the Ethereum chain, with a total value locked (TVL) of $4.2B, which falls within the TVL band of $1B-$5B.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T15:53:48.132Z"
+    "generatedAt": "2025-12-19T12:58:25.457Z"
   },
-  "2025-12-16|chain|Aptos|B|C8_30D_DIRECTION|explanation|643d46e7c2a030d5": {
-    "text": "Aptos experienced a decrease in TVL of 17.7% over the past 30 days, indicating a reduction in the total value locked in the protocol.",
+  "2025-12-19|protocol|usdt0|B|P7_CATEGORY|explanation|8a4082e5aa5b71b9": {
+    "text": "USDT0 is categorized as a \"Bridge,\" which typically refers to a protocol that facilitates the transfer of assets between different blockchain networks. This allows users to move their assets seamlessly across various platforms.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T15:53:51.014Z"
+    "generatedAt": "2025-12-19T12:58:27.565Z"
+  },
+  "2025-12-19|protocol|usdt0|C|P20_ATH_DISTANCE|explanation|736dd86e025aad44": {
+    "text": "USDT0 has a total value locked (TVL) of $4.2B, which is 45% below its all-time high (ATH) of $7.8B, placing it in the 25-50% below ATH category.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-19T12:58:29.462Z"
+  },
+  "2025-12-19|protocol|usdt0|D|FALLBACK_PROTOCOL_RANK_TOP_25|explanation|3afd78939971234d": {
+    "text": "USDT0 is ranked 23rd among DeFi protocols, placing it within the top 25, which is a notable achievement compared to alternatives like protocols ranked 26th or lower. This ranking indicates that USDT0 has a significant total value locked (TVL) relative to its peers.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-19T12:58:31.036Z"
+  },
+  "2025-12-19|protocol|usdt0|E|P8_CHAIN_MEMBERSHIP|explanation|2581d4dbcd88b92a": {
+    "text": "USDT0 is a stablecoin that operates on the Ethereum blockchain, representing a single chain membership. It is designed to maintain a stable value, typically pegged to the US dollar.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-19T12:58:32.109Z"
+  },
+  "2025-12-18|chain|Polygon|A|C1_FINGERPRINT|explanation|939a7481f70e6d27": {
+    "text": "Polygon has a total value locked (TVL) between $1B and $5B and ranks 11th in TVL among DeFi protocols, with 690 different protocols operating on its network. Its token symbol is POL.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-19T12:58:40.262Z"
+  },
+  "2025-12-18|chain|Polygon|B|C10_PROTOCOL_COUNT|explanation|0f059566812a87cb": {
+    "text": "Polygon hosts a total of 690 protocols, showcasing its extensive ecosystem within the DeFi space. This diverse range of protocols contributes to its functionality and user engagement.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-19T12:58:41.521Z"
+  },
+  "2025-12-18|chain|Polygon|C|C6_TOP_DEX|explanation|991488aa3e2e6024": {
+    "text": "On the Polygon chain, the top decentralized exchange (DEX) is Polymarket, with a trading volume of $67M, significantly higher than other DEXes like Uniswap V4 at $40M and Quickswap Dex at $37M. This shows Polymarket's leading position in terms of volume among Polygon DEXes.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-19T12:58:44.397Z"
+  },
+  "2025-12-18|chain|Polygon|D|C9_DISTANCE_FROM_ATH|explanation|15c9e599feda375c": {
+    "text": "Polygon's total value locked (TVL) is currently $1.2B, which is 88.2% lower than its all-time high (ATH) of $9.9B. This indicates a significant decrease in the value of assets locked in the Polygon protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-19T12:58:46.766Z"
+  },
+  "2025-12-18|chain|Polygon|E|C13_LAYER_TYPE|explanation|3f392dcc6c02638b": {
+    "text": "Polygon is a Layer 1 blockchain that operates independently with its own consensus mechanism, rather than being a Layer 2 solution built on another chain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-19T12:58:47.919Z"
+  },
+  "2025-12-17|protocol|okx|A|P1_FINGERPRINT|explanation|de9cc96d19ae03f0": {
+    "text": "OKX is a centralized exchange (CEX) with a total value locked (TVL) of $22.8B, indicating significant assets deposited in its protocols. It operates across 19 chains, including zkSync Era, Base, Scroll, Starknet, and Ripple.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-19T12:58:54.086Z"
+  },
+  "2025-12-17|protocol|okx|B|P7_CATEGORY|explanation|cbc7f935acbe195d": {
+    "text": "OKX is categorized as a centralized exchange (CEX), which means it operates under a central authority that manages transactions and user accounts.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-19T12:58:54.851Z"
+  },
+  "2025-12-17|protocol|okx|C|P20_ATH_DISTANCE|explanation|5fa1be1913e0e5e2": {
+    "text": "OKX has a total value locked (TVL) of $22.8B, which is 26% below its all-time high (ATH) of $30.8B, placing it in the 25-50% range below its ATH.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-19T12:58:56.005Z"
+  },
+  "2025-12-17|protocol|okx|D|P31_PRECISE_RANK|explanation|c227f58d87f48476": {
+    "text": "OKX has a TVL of $22.8B, ranking 4th among DeFi protocols, just behind Lido at $26.0B and Aave V3 at $32.9B. It is part of the top rank bucket (#1-5), with Bitfinex and Bybit following at 5th and 6th ranks, respectively.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-19T12:58:58.242Z"
+  },
+  "2025-12-17|protocol|okx|E|P8_CHAIN_MEMBERSHIP|explanation|c5160032f6c31233": {
+    "text": "OKX is a DeFi platform that supports 19 different chains, including zkSync Era, Base, Scroll, Starknet, and Ripple. This diverse chain membership allows users to interact with various blockchain ecosystems.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-19T12:59:00.060Z"
+  },
+  "2025-12-16|chain|Aptos|A|C1_FINGERPRINT|explanation|1524b724f21e2a10": {
+    "text": "Aptos is ranked 13th in total value locked (TVL) with an estimated range of $100M to $500M, and it has 89 protocols operating on its network. The native token for Aptos is APT.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-19T12:59:06.560Z"
+  },
+  "2025-12-16|chain|Aptos|B|C10_PROTOCOL_COUNT|explanation|6d8c44049dbd45ae": {
+    "text": "Aptos has a total of 89 protocols built on its blockchain, reflecting its growing ecosystem in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-19T12:59:07.562Z"
   },
   "2025-12-16|chain|Aptos|C|C9_DISTANCE_FROM_ATH|explanation|c473524ae114fa3a": {
     "text": "Aptos has a total value locked (TVL) of $454M, which is 65.2% lower than its all-time high (ATH) of $1.3B. This indicates a significant decrease in the value of assets locked in the Aptos protocol compared to its peak.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T15:53:54.268Z"
+    "generatedAt": "2025-12-19T12:59:09.066Z"
   },
-  "2025-12-16|chain|Aptos|D|FALLBACK_CHAIN_RANK_TOP_20|explanation|bf31b89d12f7859b": {
-    "text": "Aptos is ranked 13th in the DeFi space, placing it within the top 20 chains, while other options like Solana and Avalanche rank 5th and 14th, respectively. This ranking indicates Aptos's significant position among leading blockchain protocols based on total value locked (TVL).",
+  "2025-12-16|chain|Aptos|D|FALLBACK_CHAIN_TVL_DOWN_10PCT|explanation|bc537aba609facf3": {
+    "text": "Aptos has experienced a TVL drop of 14.0%, which is more than the 10% threshold set for this comparison. This decline is notable compared to other chains like Ethereum, which has seen a smaller decrease in TVL.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T15:53:56.635Z"
+    "generatedAt": "2025-12-19T12:59:10.626Z"
   },
-  "2025-12-16|chain|Aptos|E|C6_TOP_DEX|explanation|8f8bfe6e728d9fcb": {
-    "text": "On the Aptos chain, Hyperion is the top decentralized exchange (DEX) with a trading volume of $61M, significantly higher than its competitors like ThalaSwap V3 at $22M and Tapp Exchange at $11M. This volume indicates Hyperion's leading position in the Aptos DeFi ecosystem.",
+  "2025-12-16|chain|Aptos|E|C6_TOP_DEX|explanation|01bbb2f55edaa6c8": {
+    "text": "On the Aptos blockchain, Hyperion is the top decentralized exchange (DEX) with a trading volume of $54M, significantly higher than its closest competitor, ThalaSwap V3, which has a volume of $18M. Other DEXes like Tapp Exchange and ThalaSwap V2 have even lower volumes of $9M and $220K, respectively.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T15:54:02.759Z"
-  },
-  "2025-12-15|protocol|jupiter-lend|A|P1_FINGERPRINT|explanation|bbfba3ae28daf967": {
-    "text": "Jupiter Lend is a lending protocol on the Solana blockchain with a total value locked (TVL) of $995M, placing it in the $500M-$1B TVL band. It operates solely on one chain, which is Solana.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T15:54:12.708Z"
-  },
-  "2025-12-15|protocol|jupiter-lend|B|FALLBACK_PROTOCOL_CHAINS_ABOVE_3|explanation|532f0e5f5a2dc9ec": {
-    "text": "Jupiter Lend operates on 1 chain, which is fewer than the threshold of 3 chains, making it distinct compared to other protocols that may operate on multiple chains. This sets it apart from options that utilize 3 or more chains, highlighting its more focused approach.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T15:54:15.516Z"
-  },
-  "2025-12-15|protocol|jupiter-lend|C|P15_RECENT_TVL_DIRECTION|explanation|01b8a68dc9ae8c85": {
-    "text": "Jupiter Lend's total value locked (TVL) has increased by 7.1% over the past 30 days, reaching $995 million. This indicates a growing interest and activity in the protocol.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T15:54:17.824Z"
-  },
-  "2025-12-15|protocol|jupiter-lend|D|FALLBACK_PROTOCOL_TVL_DOWN_5PCT|explanation|9604c312d5e09ca8": {
-    "text": "Jupiter Lend's TVL increased by 0.7%, but it did not reach the 5% threshold for a significant drop compared to other protocols like Aave and Compound, which may have experienced larger fluctuations. This indicates that Jupiter Lend's performance remained relatively stable during the comparison period.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T15:54:19.878Z"
-  },
-  "2025-12-15|protocol|jupiter-lend|E|P8_CHAIN_MEMBERSHIP|explanation|12d486f19482dffb": {
-    "text": "Jupiter Lend operates on the Solana blockchain, which is its sole chain, indicating a total chain count of 1. This means all its lending services are focused within the Solana ecosystem.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T15:54:21.730Z"
-  },
-  "2025-12-14|protocol|justcryptos|A|P1_FINGERPRINT|explanation|816c030fd254e9d6": {
-    "text": "JustCryptos is a bridge protocol operating on the Tron blockchain, with a total value locked (TVL) of $3.0B, placing it within the $1B-$5B TVL range. It facilitates asset transfers across different blockchain networks.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T15:54:52.294Z"
-  },
-  "2025-12-14|protocol|justcryptos|B|P7_CATEGORY|explanation|1b4ba79c3c462a82": {
-    "text": "JustCryptos operates in the \"Bridge\" category, facilitating the transfer of assets between different blockchain networks. This allows users to move their cryptocurrencies seamlessly across various platforms.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T15:54:53.317Z"
-  },
-  "2025-12-14|protocol|justcryptos|C|P15_RECENT_TVL_DIRECTION|explanation|52da66901157372b": {
-    "text": "JustCryptos experienced a decrease in total value locked (TVL) of 4.8% over the past 7 days, bringing its TVL to $3.0B.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T15:54:55.137Z"
-  },
-  "2025-12-14|protocol|justcryptos|D|P4_ATH_TIMING|explanation|64aa3dc1ccd880df": {
-    "text": "JustCryptos reached its all-time high (ATH) TVL of $8.3B in March 2024, while the other options, February 2024 and April 2024, did not coincide with this peak. The ATH is a significant milestone indicating the highest total value locked in the protocol.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T15:54:57.379Z"
-  },
-  "2025-12-14|protocol|justcryptos|E|P10_TVL_BAND|explanation|7d111697b20b400b": {
-    "text": "JustCryptos has a total value locked (TVL) of $3.0B, which falls within the TVL band of $1B-$5B. This indicates a significant amount of assets deposited in the protocol.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-16T15:55:00.908Z"
-  },
-  "2025-12-17|protocol|okx|A|P1_FINGERPRINT|explanation|2b004be10dbf4fe0": {
-    "text": "OKX is a centralized exchange (CEX) with a total value locked (TVL) of $22.6B across 19 different chains, including zkSync Era, Base, Optimism, Polygon, and Starknet. Its TVL falls within the band of $10B+.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-17T00:23:47.844Z"
-  },
-  "2025-12-17|protocol|okx|B|P7_CATEGORY|explanation|cbc7f935acbe195d": {
-    "text": "OKX is categorized as a centralized exchange (CEX), which means it operates under a central authority that manages transactions and user funds.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-17T00:23:49.800Z"
-  },
-  "2025-12-17|protocol|okx|C|P15_RECENT_TVL_DIRECTION|explanation|fabf46d396f7c34e": {
-    "text": "Over the past 7 days, OKX experienced a decrease in total value locked (TVL) by 2.6%, bringing its current TVL to $22.6B.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-17T00:23:51.559Z"
-  },
-  "2025-12-17|protocol|okx|D|P9_TOP_CHAIN|explanation|7a15b35646771667": {
-    "text": "OKX's top chain is Ethereum, which has a total value locked (TVL) of $11.4B, significantly higher than Bitcoin's $9.3B and Solana's $580M, highlighting Ethereum's dominance in the DeFi space.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-17T00:23:53.405Z"
-  },
-  "2025-12-17|protocol|okx|E|P10_TVL_BAND|explanation|f4782f7f2addeb94": {
-    "text": "OKX has a total value locked (TVL) of $22.6B, placing it in the TVL band of $10B+. This indicates a significant amount of assets deposited in the OKX protocol.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-17T00:23:55.221Z"
-  },
-  "2025-12-18|chain|Polygon|A|C1_FINGERPRINT|explanation|939a7481f70e6d27": {
-    "text": "Polygon has a total value locked (TVL) ranging from $1B to $5B and is ranked 11th in TVL among DeFi protocols, with 690 different protocols operating on its network. The token symbol for Polygon is POL.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-18T00:20:51.598Z"
-  },
-  "2025-12-18|chain|Polygon|B|C8_30D_DIRECTION|explanation|5d997186dac2c158": {
-    "text": "Polygon's TVL has decreased by 4.7% over the past 30 days, indicating a decline in the total value locked in its protocol.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-18T00:20:52.836Z"
-  },
-  "2025-12-18|chain|Polygon|C|C6_TOP_DEX|explanation|12bc993258403209": {
-    "text": "On the Polygon network, the top decentralized exchange (DEX) is Polymarket, with a trading volume of $55M. This significantly surpasses other DEXes like Quickswap Dex at $38M and Uniswap V3 at $24M, highlighting Polymarket's leading position in terms of volume.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-18T00:20:55.135Z"
-  },
-  "2025-12-18|chain|Polygon|D|C9_DISTANCE_FROM_ATH|explanation|15c9e599feda375c": {
-    "text": "Polygon's total value locked (TVL) is currently $1.2B, which is 88.2% below its all-time high (ATH) of $9.9B. This indicates a significant decrease in the value of assets locked in the protocol compared to its peak.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-18T00:20:57.407Z"
-  },
-  "2025-12-18|chain|Polygon|E|C7_CHAIN_TVL_BAND|explanation|d1de73a6d1ffedeb": {
-    "text": "Polygon has a total value locked (TVL) of $1.2B, placing it within the TVL band of $1B to $5B. This indicates a significant amount of assets are deposited in the Polygon protocol.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-18T00:20:59.702Z"
-  },
-  "2025-12-19|protocol|usdt0|A|P1_FINGERPRINT|explanation|027bf7bf88c02c08": {
-    "text": "USDT0 is a bridge protocol operating on the Ethereum blockchain, with a total value locked (TVL) of $4.3B, placing it within the TVL band of $1B-$5B. It facilitates the transfer of assets across different networks.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-19T00:24:33.953Z"
-  },
-  "2025-12-19|protocol|usdt0|B|P7_CATEGORY|explanation|8a4082e5aa5b71b9": {
-    "text": "USDT0 is categorized as a bridge in the DeFi space, facilitating the transfer of assets between different blockchain networks. Bridges play a crucial role in enhancing interoperability among various protocols.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-19T00:24:36.302Z"
-  },
-  "2025-12-19|protocol|usdt0|C|P20_ATH_DISTANCE|explanation|3d277ce60dc5be9a": {
-    "text": "USDT0 has a total value locked (TVL) of $4.3B, which is 45% below its all-time high (ATH) of $7.8B, placing it in the 25-50% below ATH category.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-19T00:24:39.279Z"
-  },
-  "2025-12-19|protocol|usdt0|D|P33_MULTI_RANKING|explanation|0c495f91e816d2bc": {
-    "text": "USDT0 has a total value locked (TVL) of $4.3B, making it the second largest bridge protocol after Binance Bitcoin, which has a TVL of $5.8B. Portal follows with a TVL of $1.5B.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-19T00:24:42.122Z"
-  },
-  "2025-12-19|protocol|usdt0|E|P8_CHAIN_MEMBERSHIP|explanation|2581d4dbcd88b92a": {
-    "text": "USDT0 is a stablecoin that operates on the Ethereum blockchain, with a total of 1 chain supporting it.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-19T00:24:44.717Z"
+    "generatedAt": "2025-12-19T12:59:12.689Z"
   }
 }

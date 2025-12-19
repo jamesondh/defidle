@@ -45,6 +45,9 @@ interface C1Data {
   change30d: number | null
   trendBucket: string | undefined
   distractors: string[]
+  // Track what clues were revealed (for dynamic semantic topics)
+  revealedTvlBand: boolean
+  revealedTrend: boolean
 }
 
 const C1_FINGERPRINT: TemplateConfig<C1Data> = {
@@ -52,8 +55,26 @@ const C1_FINGERPRINT: TemplateConfig<C1Data> = {
   name: "Chain Fingerprint Guess",
   description: "Identify a chain from a set of clues",
   type: "chain",
-  // Fingerprint reveals TVL band and 30d trend direction - mark both as covered
-  semanticTopics: ["tvl_absolute", "fingerprint_tvl_revealed", "fingerprint_trend_revealed"],
+  // Base semantic topic - fingerprint always covers fingerprint identification
+  // Dynamic topics are added based on what clues were actually revealed
+  semanticTopics: ["fingerprint_base"],
+  
+  // Dynamic semantic topics based on what was actually revealed in clues
+  getDynamicSemanticTopics(data) {
+    const topics = ["fingerprint_base"]
+    
+    // Only block tvl topics if we actually showed the TVL band
+    if (data.revealedTvlBand) {
+      topics.push("fingerprint_tvl_revealed")
+    }
+    
+    // Only block trend topics if we actually showed the trend
+    if (data.revealedTrend) {
+      topics.push("fingerprint_trend_revealed")
+    }
+    
+    return topics
+  },
 
   checkPrereqs(ctx) {
     if (!isChainContext(ctx)) return { passed: false, reason: "not_chain" }
@@ -99,6 +120,13 @@ const C1_FINGERPRINT: TemplateConfig<C1Data> = {
 
     if (!distractors) return null
 
+    // Determine which clues to reveal based on topic familiarity
+    // For well-known chains (top 25), use simpler clues to preserve TVL/trend for later questions
+    // For less familiar chains, include TVL band and trend to help with identification
+    const isFamiliar = topic.tvlRank <= 25
+    const revealedTvlBand = !isFamiliar
+    const revealedTrend = !isFamiliar && trendBucket !== undefined
+
     return {
       tvlRank: topic.tvlRank,
       rankBucket,
@@ -107,6 +135,8 @@ const C1_FINGERPRINT: TemplateConfig<C1Data> = {
       change30d,
       trendBucket,
       distractors,
+      revealedTvlBand,
+      revealedTrend,
     }
   },
 
@@ -115,13 +145,27 @@ const C1_FINGERPRINT: TemplateConfig<C1Data> = {
   },
 
   getClues(data) {
-    const clues = [`TVL rank: ${data.rankBucket}`, `TVL: ${data.tvlBand}`]
+    const clues: string[] = []
+    
+    // Always include rank bucket
+    clues.push(`TVL rank: ${data.rankBucket}`)
+    
+    // For less familiar chains (rank > 25), include TVL band
+    // For familiar chains, omit to allow later questions about it
+    if (data.revealedTvlBand) {
+      clues.push(`TVL: ${data.tvlBand}`)
+    }
+    
+    // Always include native token if available
     if (data.tokenSymbol) {
       clues.push(`Native token: ${data.tokenSymbol}`)
     }
-    if (data.trendBucket) {
+    
+    // For less familiar chains, include trend direction
+    if (data.revealedTrend && data.trendBucket) {
       clues.push(`30d trend: ${data.trendBucket}`)
     }
+    
     return clues
   },
 
@@ -172,7 +216,9 @@ const C2_CHAIN_COMPARISON: TemplateConfig<C2Data> = {
   name: "Chain TVL Comparison",
   description: "Compare TVL between two chains",
   type: "chain",
-  semanticTopics: ["tvl_absolute"],
+  // Use tvl_comparison instead of tvl_absolute so fingerprint doesn't block this
+  // Comparison questions are complementary to knowing absolute TVL magnitude
+  semanticTopics: ["tvl_comparison"],
 
   checkPrereqs(ctx) {
     if (!isChainContext(ctx)) return { passed: false, reason: "not_chain" }
@@ -286,7 +332,8 @@ const C3_ATH_TIMING: TemplateConfig<C3Data> = {
     const now = Date.now() / 1000
     if ((now - athTs) / 86400 < 30) return ["tf"]
 
-    return ["mc4", "tf"]
+    // Add mc6 for harder difficulty - 6 months to choose from is challenging
+    return ["mc6", "mc4", "tf"]
   },
 
   extract(ctx) {
@@ -311,7 +358,9 @@ const C3_ATH_TIMING: TemplateConfig<C3Data> = {
 
   getChoices(data, _ctx, format, seed) {
     if (format === "tf") return ["True", "False"]
-    const timing = makeTimingDistractors(data.athYYYYMM, 3, seed)
+    // mc6 gets 6 months to choose from (harder), mc4 gets 4
+    const distractorCount = format === "mc6" ? 5 : 3
+    const timing = makeTimingDistractors(data.athYYYYMM, distractorCount, seed)
     return timing.choices
   },
 
@@ -983,6 +1032,8 @@ const C11_TOP_PROTOCOL_TVL: TemplateConfig<C11Data> = {
 
     const margin = abMargin(onChain[0].tvl ?? 0, onChain[1].tvl ?? 0)
     if (margin !== null && margin < 0.1) return ["ab"]
+    // Add mc6 for harder difficulty when there are enough protocols
+    if (onChain.length >= 6) return ["mc6", "mc4", "ab"]
     return ["mc4", "ab"]
   },
 
@@ -1013,8 +1064,10 @@ const C11_TOP_PROTOCOL_TVL: TemplateConfig<C11Data> = {
     return `Which protocol has the most TVL on ${topic.name}?`
   },
 
-  getChoices(data, _ctx, _format, seed) {
-    const allChoices = data.leaderboard.slice(0, 4).map((p) => p.name)
+  getChoices(data, _ctx, format, seed) {
+    // mc6 gets 6 protocols, mc4/ab gets 4
+    const count = format === "mc6" ? 6 : 4
+    const allChoices = data.leaderboard.slice(0, count).map((p) => p.name)
     const shuffled = deterministicShuffle(
       allChoices.map((name, i) => ({ name, isCorrect: i === 0 })),
       `${seed}:shuffle`
@@ -1150,9 +1203,9 @@ interface C13Data {
   parentChain?: string
 }
 
-// Known L2 chains - these are derived from well-known blockchain architecture
+// Known L2 chains - these are unambiguously Layer 2 (rollups that settle on another chain)
 const LAYER_2_CHAINS: Set<string> = new Set([
-  // Ethereum L2s
+  // Ethereum L2s (rollups)
   "Arbitrum",
   "Arbitrum One",
   "Arbitrum Nova",
@@ -1173,9 +1226,31 @@ const LAYER_2_CHAINS: Set<string> = new Set([
   "Metis",
   "Boba",
   "Loopring",
-  // Other L2-like chains
+  "Ink",
+  "Unichain",
+  // BNB Chain L2s
   "Op_Bnb",
   "opBNB",
+])
+
+// Chains where L1/L2 classification is ambiguous or debated
+// These should be skipped for the layer type question
+const AMBIGUOUS_LAYER_CHAINS: Set<string> = new Set([
+  // Sidechains - have their own consensus but bridge to another chain
+  "Polygon",        // Often called L2 but technically a sidechain with its own PoS
+  "Polygon POS",
+  "BSC",            // EVM-compatible but independent chain
+  "Gnosis",         // xDai sidechain
+  "Ronin",          // Axie Infinity sidechain
+  // Plasma-based chains
+  "Plasma",
+  // App-specific chains that don't fit neatly
+  "Hyperliquid L1", // Called L1 but purpose-built for one app
+  // Cosmos ecosystem chains (IBC-connected, debatable classification)
+  "Osmosis",
+  "Injective",
+  "Kujira",
+  "Neutron",
 ])
 
 // Parent chain mapping for L2s
@@ -1200,8 +1275,10 @@ const L2_PARENT_CHAINS: Record<string, string> = {
   Metis: "Ethereum",
   Boba: "Ethereum",
   Loopring: "Ethereum",
-  Op_Bnb: "Binance",
-  opBNB: "Binance",
+  Ink: "Ethereum",
+  Unichain: "Ethereum",
+  Op_Bnb: "BNB Chain",
+  opBNB: "BNB Chain",
 }
 
 const C13_LAYER_TYPE: TemplateConfig<C13Data> = {
@@ -1216,6 +1293,10 @@ const C13_LAYER_TYPE: TemplateConfig<C13Data> = {
     const topic = ctx.topic as ChainPoolEntry
     // Only ask this for chains we have data about
     if (!topic.tvl) return { passed: false, reason: "no_tvl" }
+    // Skip chains where L1/L2 classification is ambiguous or debated
+    if (AMBIGUOUS_LAYER_CHAINS.has(topic.name)) {
+      return { passed: false, reason: "ambiguous_layer_classification" }
+    }
     return { passed: true }
   },
 

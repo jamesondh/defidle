@@ -15,21 +15,19 @@
       "prompt": "Which chain matches these clues?",
       "clues": [
         "TVL rank: top 20",
-        "TVL: $1B-$5B",
-        "Native token: POL",
-        "30d trend: down 1-10%"
+        "Native token: POL"
       ],
       "choices": [
         "Neutron",
-        "Ethereum",
+        "Moonbeam",
         "Polygon",
         "Crescent",
         "Mantra",
-        "Sei"
+        "Morph"
       ],
       "answerIndex": 2,
-      "explanation": "Polygon has a total value locked (TVL) ranging from $1B to $5B and is ranked 11th in TVL among DeFi protocols, with 690 different protocols operating on its network. The token symbol for Polygon is POL.",
-      "difficulty": "easy",
+      "explanation": "Polygon has a total value locked (TVL) between $1B and $5B and ranks 11th in TVL among DeFi protocols, with 690 different protocols operating on its network. Its token symbol is POL.",
+      "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc6",
@@ -37,105 +35,190 @@
         "margin": null,
         "volatility": null
       },
-      "difficultyScore": 0.33749999999999997
+      "difficultyScore": 0.43099999999999994
     },
     {
       "qid": "q2",
       "slot": "B",
-      "templateId": "C8_30D_DIRECTION",
-      "format": "tf",
-      "prompt": "Polygon's TVL increased over the last 30 days.",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Polygon or Sui?",
       "choices": [
-        "True",
-        "False"
+        "Sui",
+        "Polygon"
       ],
       "answerIndex": 1,
-      "answerValue": false,
-      "explanation": "Polygon's TVL has decreased by 4.7% over the past 30 days, indicating a decline in the total value locked in its protocol.",
+      "explanation": "Polygon has 21.5% more TVL than Sui ($1.2B vs $920M).",
       "difficulty": "easy",
-      "llmFallback": false,
+      "llmFallback": true,
       "signals": {
-        "format": "tf",
+        "format": "ab",
         "familiarityRankBucket": "top_25",
-        "margin": 0.04657993169108119,
+        "margin": 0.21515478076554592,
         "volatility": null
       },
-      "difficultyScore": 0.3461833902574323
+      "difficultyScore": 0.2628142630813449
     },
     {
       "qid": "q3",
       "slot": "C",
-      "templateId": "C6_TOP_DEX",
-      "format": "mc4",
-      "prompt": "Which DEX is #1 by 24h volume on Polygon?",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Polygon hit its all-time high TVL?",
       "choices": [
-        "Uniswap V4",
-        "Polymarket",
-        "Quickswap Dex",
-        "Uniswap V3"
+        "Aug 2021",
+        "Jul 2021",
+        "May 2021",
+        "Mar 2021",
+        "Sep 2021",
+        "Jun 2021"
       ],
-      "answerIndex": 1,
-      "explanation": "On the Polygon network, the top decentralized exchange (DEX) is Polymarket, with a trading volume of $55M. This significantly surpasses other DEXes like Quickswap Dex at $38M and Uniswap V3 at $24M, highlighting Polymarket's leading position in terms of volume.",
-      "difficulty": "easy",
-      "llmFallback": false,
+      "answerIndex": 5,
+      "explanation": "Polygon's historical TVL peak is based on DefiLlama data as of 2025-12-18.",
+      "difficulty": "medium",
+      "llmFallback": true,
       "signals": {
-        "format": "mc4",
+        "format": "mc6",
         "familiarityRankBucket": "top_25",
-        "margin": 0.3061631338775451,
+        "margin": 0.5,
         "volatility": null
       },
-      "difficultyScore": 0.24000000000000002
+      "difficultyScore": 0.34099999999999997
     },
     {
       "qid": "q4",
       "slot": "D",
-      "templateId": "C9_DISTANCE_FROM_ATH",
-      "format": "mc4",
-      "prompt": "How far is Polygon from its ATH TVL?",
+      "templateId": "C11_TOP_PROTOCOL_TVL",
+      "format": "mc6",
+      "prompt": "Which protocol has the most TVL on Polygon?",
       "choices": [
-        "At ATH",
-        "Within 10%",
-        "10-30% below",
-        "30-60% below",
-        ">60% below"
+        "Aave V3",
+        "OKX",
+        "Bitfinex",
+        "Binance CEX",
+        "Robinhood",
+        "Bybit"
       ],
-      "answerIndex": 4,
-      "explanation": "Polygon's total value locked (TVL) is currently $1.2B, which is 88.2% below its all-time high (ATH) of $9.9B. This indicates a significant decrease in the value of assets locked in the protocol compared to its peak.",
-      "difficulty": "easy",
-      "llmFallback": false,
+      "answerIndex": 3,
+      "explanation": "Polygon's top protocol by TVL is based on DefiLlama data as of 2025-12-18.",
+      "difficulty": "medium",
+      "llmFallback": true,
       "signals": {
-        "format": "mc4",
+        "format": "mc6",
         "familiarityRankBucket": "top_25",
-        "margin": 0.281519156513214,
+        "margin": 0.7984137338785218,
         "volatility": null
       },
-      "difficultyScore": 0.255400702905655
+      "difficultyScore": 0.34099999999999997
     },
     {
       "qid": "q5",
       "slot": "E",
-      "templateId": "C7_CHAIN_TVL_BAND",
+      "templateId": "C6_TOP_DEX",
       "format": "mc4",
-      "prompt": "Which TVL range fits Polygon?",
+      "prompt": "Which DEX is #1 by 24h volume on Polygon?",
       "choices": [
-        "<$100M",
-        "$100M-$500M",
-        "$500M-$2B",
-        "$2B-$10B",
-        ">$10B"
+        "Uniswap V3",
+        "Uniswap V4",
+        "Polymarket",
+        "Quickswap Dex"
       ],
       "answerIndex": 2,
-      "explanation": "Polygon has a total value locked (TVL) of $1.2B, placing it within the TVL band of $1B to $5B. This indicates a significant amount of assets are deposited in the Polygon protocol.",
+      "explanation": "Polymarket is the top DEX on Polygon with $67M in 24h volume, ahead of Uniswap V4 ($40M), Quickswap Dex ($37M), Uniswap V3 ($27M).",
       "difficulty": "easy",
-      "llmFallback": false,
+      "llmFallback": true,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_25",
-        "margin": 0.828199248035733,
+        "margin": 0.40237613950906576,
         "volatility": null
       },
-      "difficultyScore": 0.24000000000000002
+      "difficultyScore": 0.281
     }
   ],
-  "generatedAt": "2025-12-18T00:20:59.702Z"
+  "generatedAt": "2025-12-19T13:23:04.202Z",
+  "buildLog": [
+    {
+      "slot": "A",
+      "template": "C1_FINGERPRINT",
+      "format": "mc6",
+      "decision": "selected",
+      "score": 0.43099999999999994,
+      "target": "medium"
+    },
+    {
+      "slot": "B",
+      "template": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "decision": "selected",
+      "score": 0.2628142630813449,
+      "target": "easy"
+    },
+    {
+      "slot": "C",
+      "template": "C5_TOP_BY_FEES",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "C6_TOP_DEX",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.281,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "C6_TOP_DEX",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.22100000000000003,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "C3_ATH_TIMING",
+      "format": "mc6",
+      "decision": "selected",
+      "score": 0.34099999999999997,
+      "target": "medium"
+    },
+    {
+      "slot": "D",
+      "template": "C3_ATH_TIMING",
+      "decision": "skip",
+      "reason": "already_used"
+    },
+    {
+      "slot": "D",
+      "template": "C4_GROWTH_RANKING",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "C9_DISTANCE_FROM_ATH",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:ath_history"
+    },
+    {
+      "slot": "D",
+      "template": "C11_TOP_PROTOCOL_TVL",
+      "format": "mc6",
+      "decision": "selected",
+      "score": 0.34099999999999997,
+      "target": "hard"
+    },
+    {
+      "slot": "E",
+      "template": "C6_TOP_DEX",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.281,
+      "target": "easy"
+    }
+  ]
 }
