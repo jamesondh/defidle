@@ -123,5 +123,30 @@
     "text": "Polygon has a total value locked (TVL) of $1.2B, placing it within the TVL band of $1B to $5B. This indicates a significant amount of assets are deposited in the Polygon protocol.",
     "model": "gpt-4o-mini",
     "generatedAt": "2025-12-18T00:20:59.702Z"
+  },
+  "2025-12-19|protocol|usdt0|A|P1_FINGERPRINT|explanation|027bf7bf88c02c08": {
+    "text": "USDT0 is a bridge protocol operating on the Ethereum blockchain, with a total value locked (TVL) of $4.3B, placing it within the TVL band of $1B-$5B. It facilitates the transfer of assets across different networks.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-19T00:24:33.953Z"
+  },
+  "2025-12-19|protocol|usdt0|B|P7_CATEGORY|explanation|8a4082e5aa5b71b9": {
+    "text": "USDT0 is categorized as a bridge in the DeFi space, facilitating the transfer of assets between different blockchain networks. Bridges play a crucial role in enhancing interoperability among various protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-19T00:24:36.302Z"
+  },
+  "2025-12-19|protocol|usdt0|C|P20_ATH_DISTANCE|explanation|3d277ce60dc5be9a": {
+    "text": "USDT0 has a total value locked (TVL) of $4.3B, which is 45% below its all-time high (ATH) of $7.8B, placing it in the 25-50% below ATH category.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-19T00:24:39.279Z"
+  },
+  "2025-12-19|protocol|usdt0|D|P33_MULTI_RANKING|explanation|0c495f91e816d2bc": {
+    "text": "USDT0 has a total value locked (TVL) of $4.3B, making it the second largest bridge protocol after Binance Bitcoin, which has a TVL of $5.8B. Portal follows with a TVL of $1.5B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-19T00:24:42.122Z"
+  },
+  "2025-12-19|protocol|usdt0|E|P8_CHAIN_MEMBERSHIP|explanation|2581d4dbcd88b92a": {
+    "text": "USDT0 is a stablecoin that operates on the Ethereum blockchain, with a total of 1 chain supporting it.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-19T00:24:44.717Z"
   }
 }

@@ -1,0 +1,141 @@
+{
+  "episodeId": "2025-12-19:protocol:usdt0",
+  "dateUtc": "2025-12-19",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "usdt0",
+    "name": "USDT0",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: single-chain",
+        "TVL: $1B-$5B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Tether Gold",
+        "EigenCloud",
+        "HTX",
+        "Maple",
+        "Falcon Finance",
+        "USDT0"
+      ],
+      "answerIndex": 5,
+      "explanation": "USDT0 is a bridge protocol operating on the Ethereum blockchain, with a total value locked (TVL) of $4.3B, placing it within the TVL band of $1B-$5B. It facilitates the transfer of assets across different networks.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.19142134615706938
+      },
+      "difficultyScore": 0.3287132019235604
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is USDT0?",
+      "choices": [
+        "Bridge",
+        "CEX",
+        "Canonical Bridge",
+        "Privacy"
+      ],
+      "answerIndex": 0,
+      "explanation": "USDT0 is categorized as a bridge in the DeFi space, facilitating the transfer of assets between different blockchain networks. Bridges play a crucial role in enhancing interoperability among various protocols.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.5,
+        "volatility": 0.19142134615706938
+      },
+      "difficultyScore": 0.23121320192356043
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is USDT0's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 1,
+      "explanation": "USDT0 has a total value locked (TVL) of $4.3B, which is 45% below its all-time high (ATH) of $7.8B, placing it in the 25-50% below ATH category.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.1923492372531848,
+        "volatility": 0.19142134615706938
+      },
+      "difficultyScore": 0.32092217087923974
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Bridge protocols from highest to lowest TVL.",
+      "choices": [
+        "Binance Bitcoin > Portal > USDT0",
+        "USDT0 > Binance Bitcoin > Portal",
+        "Binance Bitcoin > USDT0 > Portal",
+        "Portal > Binance Bitcoin > USDT0"
+      ],
+      "answerIndex": 2,
+      "explanation": "USDT0 has a total value locked (TVL) of $4.3B, making it the second largest bridge protocol after Binance Bitcoin, which has a TVL of $5.8B. Portal follows with a TVL of $1.5B.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.2713616179091841,
+        "volatility": 0.19142134615706938
+      },
+      "difficultyScore": 0.25507852033257367
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which chain is USDT0 deployed on?",
+      "choices": [
+        "Polygon",
+        "Ethereum",
+        "Arbitrum",
+        "Optimism"
+      ],
+      "answerIndex": 1,
+      "explanation": "USDT0 is a stablecoin that operates on the Ethereum blockchain, with a total of 1 chain supporting it.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.4,
+        "volatility": 0.19142134615706938
+      },
+      "difficultyScore": 0.23121320192356043
+    }
+  ],
+  "generatedAt": "2025-12-19T00:24:44.718Z"
+}
