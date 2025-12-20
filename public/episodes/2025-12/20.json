@@ -1,0 +1,140 @@
+{
+  "episodeId": "2025-12-20:chain:Solana",
+  "dateUtc": "2025-12-20",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Solana",
+    "name": "Solana"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 5",
+        "Native token: SOL"
+      ],
+      "choices": [
+        "Solana",
+        "Hemi",
+        "ThunderCore",
+        "DeFiChain EVM",
+        "Chihuahua",
+        "Celo"
+      ],
+      "answerIndex": 0,
+      "explanation": "Solana has a total value locked (TVL) between $5B and $10B, ranking it 2nd among DeFi platforms, and supports 329 different protocols. Its native token is SOL.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.41500000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Solana or Base?",
+      "choices": [
+        "Base",
+        "Solana"
+      ],
+      "answerIndex": 1,
+      "explanation": "Solana has a total value locked (TVL) of $8.7B, which is 49.2% higher than Base's TVL of $4.4B. This indicates that Solana has significantly more assets deposited in its protocol compared to Base.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.49214620311109014,
+        "volatility": null
+      },
+      "difficultyScore": 0.20500000000000004
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Solana hit its all-time high TVL?",
+      "choices": [
+        "Dec 2025",
+        "Nov 2025",
+        "Jun 2025",
+        "Sep 2025",
+        "Jul 2025",
+        "Aug 2025"
+      ],
+      "answerIndex": 3,
+      "explanation": "Solana reached its all-time high (ATH) total value locked (TVL) of $13.2B in September 2025. This figure represents the peak amount of assets deposited in the Solana protocol.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.5,
+        "volatility": null
+      },
+      "difficultyScore": 0.325
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C11_TOP_PROTOCOL_TVL",
+      "format": "mc6",
+      "prompt": "Which protocol has the most TVL on Solana?",
+      "choices": [
+        "Bybit",
+        "Bitget",
+        "OKX",
+        "Binance CEX",
+        "Bitfinex",
+        "Lido"
+      ],
+      "answerIndex": 3,
+      "explanation": "On the Solana blockchain, the top protocol by total value locked (TVL) is Binance CEX, with a TVL of $165.0B. Other notable protocols include Lido at $26.2B, OKX at $22.7B, and Bitfinex at $19.7B.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.8411214310817893,
+        "volatility": null
+      },
+      "difficultyScore": 0.325
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Solana?",
+      "choices": [
+        "HumidiFi",
+        "Meteora DAMM V2",
+        "Raydium AMM",
+        "PumpSwap"
+      ],
+      "answerIndex": 0,
+      "explanation": "On the Solana blockchain, HumidiFi is the top decentralized exchange (DEX) with a trading volume of $1.2B, significantly higher than its closest competitors, PumpSwap at $371M and Raydium AMM at $366M. This large volume indicates HumidiFi's leading position in the Solana DEX ecosystem.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.6936456614426738,
+        "volatility": null
+      },
+      "difficultyScore": 0.26500000000000007
+    }
+  ],
+  "generatedAt": "2025-12-20T00:23:35.916Z"
+}

@@ -98,5 +98,30 @@
     "text": "On the Aptos blockchain, Hyperion is the top decentralized exchange (DEX) with a trading volume of $54M, significantly higher than its closest competitor, ThalaSwap V3, which has a volume of $18M. Other DEXes like Tapp Exchange and ThalaSwap V2 have even lower volumes of $9M and $220K, respectively.",
     "model": "gpt-4o-mini",
     "generatedAt": "2025-12-19T12:59:12.689Z"
+  },
+  "2025-12-20|chain|Solana|A|C1_FINGERPRINT|explanation|e263fea893ef80fe": {
+    "text": "Solana has a total value locked (TVL) between $5B and $10B, ranking it 2nd among DeFi platforms, and supports 329 different protocols. Its native token is SOL.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-20T00:23:27.525Z"
+  },
+  "2025-12-20|chain|Solana|B|C2_CHAIN_COMPARISON|explanation|8764894cc33a7b11": {
+    "text": "Solana has a total value locked (TVL) of $8.7B, which is 49.2% higher than Base's TVL of $4.4B. This indicates that Solana has significantly more assets deposited in its protocol compared to Base.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-20T00:23:29.428Z"
+  },
+  "2025-12-20|chain|Solana|C|C3_ATH_TIMING|explanation|4935712cbbaa30f9": {
+    "text": "Solana reached its all-time high (ATH) total value locked (TVL) of $13.2B in September 2025. This figure represents the peak amount of assets deposited in the Solana protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-20T00:23:31.365Z"
+  },
+  "2025-12-20|chain|Solana|D|C11_TOP_PROTOCOL_TVL|explanation|7ae7d9ce0dd74263": {
+    "text": "On the Solana blockchain, the top protocol by total value locked (TVL) is Binance CEX, with a TVL of $165.0B. Other notable protocols include Lido at $26.2B, OKX at $22.7B, and Bitfinex at $19.7B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-20T00:23:34.078Z"
+  },
+  "2025-12-20|chain|Solana|E|C6_TOP_DEX|explanation|c0efab90a59c0be7": {
+    "text": "On the Solana blockchain, HumidiFi is the top decentralized exchange (DEX) with a trading volume of $1.2B, significantly higher than its closest competitors, PumpSwap at $371M and Raydium AMM at $366M. This large volume indicates HumidiFi's leading position in the Solana DEX ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-20T00:23:35.916Z"
   }
 }
