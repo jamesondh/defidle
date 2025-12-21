@@ -83,7 +83,7 @@
       "name": "Lido",
       "category": "Liquid Staking",
       "tvlRank": 3,
-      "tvl": 26330403427.552963,
+      "tvl": 26267293472.36073,
       "chains": [
         "Ethereum",
         "Solana",
@@ -102,7 +102,7 @@
       "name": "OKX",
       "category": "CEX",
       "tvlRank": 4,
-      "tvl": 22702772849.848297,
+      "tvl": 22611930681.501137,
       "chains": [
         "Ethereum",
         "Bitcoin",
@@ -112,8 +112,8 @@
         "Litecoin",
         "Ripple",
         "Aptos",
-        "Arbitrum",
         "Linea",
+        "Arbitrum",
         "Optimism",
         "TON",
         "Base",
@@ -169,7 +169,7 @@
       "name": "Bybit",
       "category": "CEX",
       "tvlRank": 6,
-      "tvl": 19494606635.20175,
+      "tvl": 19462175394.403477,
       "chains": [
         "Ethereum",
         "Bitcoin",
@@ -217,7 +217,7 @@
       "name": "Robinhood",
       "category": "CEX",
       "tvlRank": 7,
-      "tvl": 16490838208.93177,
+      "tvl": 16458682658.335117,
       "chains": [
         "Bitcoin",
         "Ethereum",
@@ -235,7 +235,7 @@
       "name": "EigenCloud",
       "category": "Restaking",
       "tvlRank": 8,
-      "tvl": 12607564123.61425,
+      "tvl": 12617409909.318632,
       "chains": [
         "Ethereum"
       ],
@@ -298,7 +298,7 @@
       "name": "Gemini",
       "category": "CEX",
       "tvlRank": 12,
-      "tvl": 7343791881.590752,
+      "tvl": 7329959789.769151,
       "chains": [
         "Bitcoin",
         "Ethereum"
@@ -351,7 +351,7 @@
       "name": "Gate",
       "category": "CEX",
       "tvlRank": 14,
-      "tvl": 6739894829.834062,
+      "tvl": 6728569346.91887,
       "chains": [
         "Ethereum",
         "Bitcoin",
@@ -454,17 +454,17 @@
         "AirDAO",
         "EOS EVM",
         "Kroma",
-        "OKExChain",
         "Fuel",
-        "Polkadot",
         "HAQQ",
-        "GoChain",
+        "Polkadot",
         "Naka",
+        "GoChain",
+        "OKExChain",
+        "Tenet",
+        "TomoChain",
         "Kardia",
         "HPB",
-        "Tenet",
-        "Songbird",
-        "TomoChain"
+        "Songbird"
       ],
       "hasFeesData": false,
       "hasRevenueData": false,
@@ -492,7 +492,7 @@
       "name": "Sky Lending",
       "category": "CDP",
       "tvlRank": 16,
-      "tvl": 6323227892.573821,
+      "tvl": 6318996295.86408,
       "chains": [
         "Ethereum"
       ],
@@ -526,7 +526,7 @@
       "name": "HTX",
       "category": "CEX",
       "tvlRank": 18,
-      "tvl": 6214131244.873673,
+      "tvl": 6218298132.646059,
       "chains": [
         "Tron",
         "Ethereum",
@@ -559,7 +559,7 @@
       "name": "Binance Bitcoin",
       "category": "Bridge",
       "tvlRank": 19,
-      "tvl": 6056380796.711332,
+      "tvl": 6043111125.344245,
       "chains": [
         "Bitcoin"
       ],
@@ -618,7 +618,7 @@
       "name": "Babylon Protocol",
       "category": "Restaking",
       "tvlRank": 21,
-      "tvl": 5466017770.968253,
+      "tvl": 5456933149.162572,
       "chains": [
         "Bitcoin"
       ],
@@ -633,7 +633,7 @@
       "name": "MEXC",
       "category": "CEX",
       "tvlRank": 22,
-      "tvl": 4853308157.345417,
+      "tvl": 4850682726.887728,
       "chains": [
         "Ethereum",
         "Bitcoin",
@@ -662,7 +662,7 @@
       "name": "USDT0",
       "category": "Bridge",
       "tvlRank": 23,
-      "tvl": 4300000447.925836,
+      "tvl": 4303821968.306941,
       "chains": [
         "Ethereum"
       ],
@@ -677,7 +677,7 @@
       "name": "Deribit",
       "category": "CEX",
       "tvlRank": 24,
-      "tvl": 4205567146.347865,
+      "tvl": 4199538481.9029684,
       "chains": [
         "Bitcoin",
         "Ethereum",
@@ -697,7 +697,7 @@
       "name": "Arbitrum Bridge",
       "category": "Canonical Bridge",
       "tvlRank": 25,
-      "tvl": 4193568850.4184604,
+      "tvl": 4194651191.2025743,
       "chains": [
         "Ethereum"
       ],
@@ -764,7 +764,7 @@
       "name": "JustLend",
       "category": "Lending",
       "tvlRank": 28,
-      "tvl": 3789348116.766717,
+      "tvl": 3792170698.1202025,
       "chains": [
         "Tron"
       ],
@@ -779,7 +779,7 @@
       "name": "Pendle",
       "category": "Yield",
       "tvlRank": 29,
-      "tvl": 3695906799.276117,
+      "tvl": 3694908641.9326973,
       "chains": [
         "Ethereum",
         "Plasma",
@@ -804,7 +804,7 @@
       "name": "Base Bridge",
       "category": "Canonical Bridge",
       "tvlRank": 30,
-      "tvl": 3309922632.6457396,
+      "tvl": 3295780863.2867904,
       "chains": [
         "Ethereum"
       ],
@@ -819,7 +819,7 @@
       "name": "SparkLend",
       "category": "Lending",
       "tvlRank": 31,
-      "tvl": 3283772344.3082924,
+      "tvl": 3276458188.2816744,
       "chains": [
         "Ethereum",
         "xDai"
@@ -835,7 +835,7 @@
       "name": "JustCryptos",
       "category": "Bridge",
       "tvlRank": 32,
-      "tvl": 3037674034,
+      "tvl": 3024395040,
       "chains": [
         "Tron"
       ],
@@ -850,7 +850,7 @@
       "name": "Crypto-com",
       "category": "CEX",
       "tvlRank": 33,
-      "tvl": 2802327095.270661,
+      "tvl": 2800036700.9679804,
       "chains": [
         "Bitcoin",
         "Ethereum",
@@ -872,7 +872,7 @@
       "name": "Maple",
       "category": "Lending",
       "tvlRank": 34,
-      "tvl": 2742029640.929847,
+      "tvl": 2735876145.339487,
       "chains": [
         "Ethereum",
         "Solana"
@@ -888,12 +888,12 @@
       "name": "Spark Liquidity Layer",
       "category": "Onchain Capital Allocator",
       "tvlRank": 36,
-      "tvl": 2313048072.5187907,
+      "tvl": 2311982060.455531,
       "chains": [
         "Ethereum",
         "Base",
-        "Optimism",
         "Arbitrum",
+        "Optimism",
         "Unichain",
         "Avalanche"
       ],
@@ -908,7 +908,7 @@
       "name": "Tether Gold",
       "category": "RWA",
       "tvlRank": 37,
-      "tvl": 2286271654.842275,
+      "tvl": 2286890828.8707957,
       "chains": [
         "Ethereum",
         "Plasma",
@@ -989,7 +989,7 @@
       "name": "Polygon Bridge & Staking",
       "category": "Chain",
       "tvlRank": 40,
-      "tvl": 2125715967.5336292,
+      "tvl": 2125858915.4461036,
       "chains": [
         "Polygon"
       ],
@@ -1004,7 +1004,7 @@
       "name": "Falcon Finance",
       "category": "Basis Trading",
       "tvlRank": 41,
-      "tvl": 2108111029.0806763,
+      "tvl": 2108456798.49248,
       "chains": [
         "Ethereum"
       ],
@@ -1139,7 +1139,7 @@
       "name": "Jito Liquid Staking",
       "category": "Liquid Staking",
       "tvlRank": 46,
-      "tvl": 1814757416.7464087,
+      "tvl": 1808714823.4799168,
       "chains": [
         "Solana"
       ],
@@ -1154,7 +1154,7 @@
       "name": "Rocket Pool",
       "category": "Liquid Staking",
       "tvlRank": 47,
-      "tvl": 1772982780.1333454,
+      "tvl": 1774287560.5029714,
       "chains": [
         "Ethereum"
       ],
@@ -1247,7 +1247,7 @@
       "name": "HashKey Exchange",
       "category": "CEX",
       "tvlRank": 52,
-      "tvl": 1650955202.8391335,
+      "tvl": 1648952558.4217136,
       "chains": [
         "Bitcoin",
         "Ethereum",
@@ -1274,7 +1274,7 @@
       "name": "Compound V3",
       "category": "Lending",
       "tvlRank": 53,
-      "tvl": 1644341690.7109792,
+      "tvl": 1639704350.692905,
       "chains": [
         "Ethereum",
         "Arbitrum",
@@ -1316,7 +1316,7 @@
       "name": "Portal",
       "category": "Bridge",
       "tvlRank": 55,
-      "tvl": 1556598676.0046957,
+      "tvl": 1548581436.8704388,
       "chains": [
         "Ethereum",
         "Solana",
@@ -1339,8 +1339,8 @@
         "Injective",
         "Terra2",
         "XPLA",
-        "Acala",
         "Karura",
+        "Acala",
         "Optimism"
       ],
       "hasFeesData": true,
@@ -1354,7 +1354,7 @@
       "name": "Paxos Gold",
       "category": "RWA",
       "tvlRank": 56,
-      "tvl": 1527844788.8443995,
+      "tvl": 1528839015.6390886,
       "chains": [
         "Ethereum"
       ],
@@ -1369,7 +1369,7 @@
       "name": "Ondo Yield Assets",
       "category": "RWA",
       "tvlRank": 57,
-      "tvl": 1523203162.4401805,
+      "tvl": 1515553214.2987783,
       "chains": [
         "Ethereum",
         "Solana",
@@ -1393,7 +1393,7 @@
       "name": "Venus Core Pool",
       "category": "Lending",
       "tvlRank": 58,
-      "tvl": 1511738987.1177385,
+      "tvl": 1508621216.9775448,
       "chains": [
         "Binance",
         "Ethereum",
@@ -1415,7 +1415,7 @@
       "name": "Bitkub",
       "category": "CEX",
       "tvlRank": 59,
-      "tvl": 1499237492.628052,
+      "tvl": 1495590214.0579965,
       "chains": [
         "Bitcoin",
         "Ethereum",
@@ -1471,7 +1471,7 @@
       "name": "Sanctum Validator LSTs",
       "category": "Liquid Staking",
       "tvlRank": 61,
-      "tvl": 1487859058.997149,
+      "tvl": 1482907194.2911446,
       "chains": [
         "Solana"
       ],
@@ -1535,7 +1535,7 @@
       "name": "Steakhouse Financial",
       "category": "Risk Curators",
       "tvlRank": 65,
-      "tvl": 1399698586.2715006,
+      "tvl": 1399616784.0199058,
       "chains": [
         "Ethereum",
         "Base",
@@ -1577,7 +1577,7 @@
       "name": "Gauntlet",
       "category": "Risk Curators",
       "tvlRank": 67,
-      "tvl": 1268277175.012479,
+      "tvl": 1265712656.408446,
       "chains": [
         "Ethereum",
         "Base",
@@ -1681,7 +1681,7 @@
       "name": "Binance Staked SOL",
       "category": "Liquid Staking",
       "tvlRank": 71,
-      "tvl": 1196602638.2643332,
+      "tvl": 1192971659.2722516,
       "chains": [
         "Solana"
       ],
@@ -1696,7 +1696,7 @@
       "name": "Jupiter Perpetual Exchange",
       "category": "Derivatives",
       "tvlRank": 72,
-      "tvl": 1157932883.5472689,
+      "tvl": 1155282248.6643863,
       "chains": [
         "Solana"
       ],
@@ -1808,7 +1808,7 @@
       "name": "Lista Liquid Staking",
       "category": "Liquid Staking",
       "tvlRank": 77,
-      "tvl": 1021135538.5493382,
+      "tvl": 1022985719.9142456,
       "chains": [
         "Binance"
       ],
@@ -1838,7 +1838,7 @@
       "name": "SolvBTC",
       "category": "Bridge",
       "tvlRank": 79,
-      "tvl": 1007613317.7483313,
+      "tvl": 1005900126.9418122,
       "chains": [
         "Bitcoin",
         "Binance",
@@ -1913,7 +1913,7 @@
       "name": "Liquid Collective",
       "category": "Liquid Staking",
       "tvlRank": 83,
-      "tvl": 936998399.4673828,
+      "tvl": 934745743.9418075,
       "chains": [
         "Ethereum"
       ],
@@ -1946,7 +1946,7 @@
       "name": "M0",
       "category": "Stablecoin Issuer",
       "tvlRank": 85,
-      "tvl": 891653062.2587721,
+      "tvl": 891514382.7952257,
       "chains": [
         "Ethereum"
       ],
@@ -2043,7 +2043,7 @@
       "name": "Lista Lending",
       "category": "Lending",
       "tvlRank": 91,
-      "tvl": 705896553.0785496,
+      "tvl": 705392203.4013445,
       "chains": [
         "Binance",
         "Ethereum"
@@ -2059,7 +2059,7 @@
       "name": "Linea Bridge",
       "category": "Canonical Bridge",
       "tvlRank": 92,
-      "tvl": 701126212.1154593,
+      "tvl": 700237717.5174545,
       "chains": [
         "Ethereum"
       ],
@@ -2111,7 +2111,7 @@
       "name": "Starknet Bridge",
       "category": "Canonical Bridge",
       "tvlRank": 95,
-      "tvl": 683063319.5545493,
+      "tvl": 679776385.8663348,
       "chains": [
         "Ethereum"
       ],
@@ -2197,11 +2197,26 @@
       "lastUpdated": "2025-12-21"
     },
     {
+      "slug": "kinetiq-khype",
+      "name": "Kinetiq kHYPE",
+      "category": "Liquid Staking",
+      "tvlRank": 100,
+      "tvl": 631429464.3443462,
+      "chains": [
+        "Hyperliquid L1"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 157,
+      "lastUpdated": "2025-12-21"
+    },
+    {
       "slug": "renzo",
       "name": "Renzo",
       "category": "Liquid Restaking",
-      "tvlRank": 100,
-      "tvl": 633012321.3852729,
+      "tvlRank": 101,
+      "tvl": 630377928.3708596,
       "chains": [
         "Ethereum",
         "Arbitrum",
@@ -2221,22 +2236,7 @@
       "hasVolumeData": false,
       "historyDays": 733,
       "lastUpdated": "2025-12-21"
-    },
-    {
-      "slug": "kinetiq-khype",
-      "name": "Kinetiq kHYPE",
-      "category": "Liquid Staking",
-      "tvlRank": 101,
-      "tvl": 631429464.3443462,
-      "chains": [
-        "Hyperliquid L1"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 157,
-      "lastUpdated": "2025-12-21"
     }
   ],
-  "generatedAt": "2025-12-21T11:47:11.427Z"
+  "generatedAt": "2025-12-21T12:04:31.913Z"
 }
