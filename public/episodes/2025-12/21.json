@@ -1,0 +1,137 @@
+{
+  "episodeId": "2025-12-21:protocol:gemini",
+  "dateUtc": "2025-12-21",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "gemini",
+    "name": "Gemini",
+    "category": "CEX"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: CEX",
+        "Chains: 2-5 chains",
+        "TVL rank: top 25"
+      ],
+      "choices": [
+        "Raydium AMM",
+        "Binance CEX",
+        "Gemini",
+        "Veda",
+        "BlackRock BUIDL",
+        "Lombard BTC.b"
+      ],
+      "answerIndex": 2,
+      "explanation": "Gemini is a centralized exchange (CEX) that operates on two chains: Ethereum and Bitcoin, with a total value locked (TVL) of $7.3B, falling within the range of $5B-$10B.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.14333611354995066
+      },
+      "difficultyScore": 0.420333611354995
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Gemini have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Bitcoin"
+      ],
+      "answerIndex": 1,
+      "explanation": "Gemini's total value locked (TVL) on Bitcoin is $5.6B, significantly higher than Ethereum's TVL of $1.7B, resulting in a margin percentage of 69%. This indicates a strong preference for Bitcoin over Ethereum in terms of locked assets.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.6891607465033093,
+        "volatility": 0.14333611354995066
+      },
+      "difficultyScore": 0.2103336113549951
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P15_RECENT_TVL_DIRECTION",
+      "format": "ab",
+      "prompt": "Over the past 7 days, did Gemini's TVL increase or decrease?",
+      "choices": [
+        "Decrease",
+        "Increase"
+      ],
+      "answerIndex": 0,
+      "explanation": "Gemini's total value locked (TVL) decreased by 3.0% over the past 7 days, bringing its current TVL to $7.3B.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.030364810910381474,
+        "volatility": 0.14333611354995066
+      },
+      "difficultyScore": 0.4738958382625373
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these CEX protocols from highest to lowest TVL.",
+      "choices": [
+        "Bitget > Gemini > Bitfinex",
+        "Bitfinex > Gemini > Bitget",
+        "Bitget > Bitfinex > Gemini",
+        "Gemini > Bitget > Bitfinex"
+      ],
+      "answerIndex": 1,
+      "explanation": "Bitfinex has the highest total value locked (TVL) at $20.2B, followed by Gemini with a TVL of $7.3B, and Bitget with a TVL of $7.1B. This ranking reflects the amount of assets deposited in each centralized exchange.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.02681574422710385,
+        "volatility": 0.14333611354995066
+      },
+      "difficultyScore": 0.5381547182824705
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P10_TVL_BAND",
+      "format": "mc4",
+      "prompt": "Which TVL range fits Gemini?",
+      "choices": [
+        "<$50M",
+        "$50M-$250M",
+        "$250M-$1B",
+        "$1B-$5B",
+        ">$5B"
+      ],
+      "answerIndex": 4,
+      "explanation": "Gemini has a total value locked (TVL) of $7.3B, which falls within the TVL band of $5B to $10B. This indicates a significant amount of assets deposited in the Gemini protocol.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.629385167077687,
+        "volatility": 0.14333611354995066
+      },
+      "difficultyScore": 0.27033361135499506
+    }
+  ],
+  "generatedAt": "2025-12-21T00:26:29.186Z"
+}

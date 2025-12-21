@@ -123,5 +123,30 @@
     "text": "On the Solana blockchain, HumidiFi is the top decentralized exchange (DEX) with a trading volume of $1.2B, significantly higher than its closest competitors, PumpSwap at $371M and Raydium AMM at $366M. This large volume indicates HumidiFi's leading position in the Solana DEX ecosystem.",
     "model": "gpt-4o-mini",
     "generatedAt": "2025-12-20T00:23:35.916Z"
+  },
+  "2025-12-21|protocol|gemini|A|P1_FINGERPRINT|explanation|700ad51aa57dc136": {
+    "text": "Gemini is a centralized exchange (CEX) that operates on two chains: Ethereum and Bitcoin, with a total value locked (TVL) of $7.3B, falling within the range of $5B-$10B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-21T00:26:19.282Z"
+  },
+  "2025-12-21|protocol|gemini|B|P2_CROSSCHAIN|explanation|5a9599ab28689ee3": {
+    "text": "Gemini's total value locked (TVL) on Bitcoin is $5.6B, significantly higher than Ethereum's TVL of $1.7B, resulting in a margin percentage of 69%. This indicates a strong preference for Bitcoin over Ethereum in terms of locked assets.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-21T00:26:21.254Z"
+  },
+  "2025-12-21|protocol|gemini|C|P15_RECENT_TVL_DIRECTION|explanation|0886b5714b7d2354": {
+    "text": "Gemini's total value locked (TVL) decreased by 3.0% over the past 7 days, bringing its current TVL to $7.3B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-21T00:26:23.141Z"
+  },
+  "2025-12-21|protocol|gemini|D|P33_MULTI_RANKING|explanation|d376e256e0fcc583": {
+    "text": "Bitfinex has the highest total value locked (TVL) at $20.2B, followed by Gemini with a TVL of $7.3B, and Bitget with a TVL of $7.1B. This ranking reflects the amount of assets deposited in each centralized exchange.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-21T00:26:25.797Z"
+  },
+  "2025-12-21|protocol|gemini|E|P10_TVL_BAND|explanation|079610b7272e52ec": {
+    "text": "Gemini has a total value locked (TVL) of $7.3B, which falls within the TVL band of $5B to $10B. This indicates a significant amount of assets deposited in the Gemini protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-21T00:26:29.186Z"
   }
 }
