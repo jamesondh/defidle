@@ -2,8 +2,8 @@ name: Refresh Topic Pools
 
 on:
   schedule:
-    # Run every Sunday at 00:00 UTC (before the week's episodes generate)
-    - cron: '0 0 * * 0'
+    # Run every Sunday at 12:00 UTC (staggered from daily episode generation at 00:00 UTC)
+    - cron: '0 12 * * 0'
   workflow_dispatch:
     # Allow manual trigger from GitHub Actions UI
 
