@@ -1,11 +1,11 @@
 {
-  "episodeId": "2025-12-22:protocol:bitget",
+  "episodeId": "2025-12-22:protocol:usdt0",
   "dateUtc": "2025-12-22",
   "episodeType": "protocol",
   "topic": {
-    "slug": "bitget",
-    "name": "Bitget",
-    "category": "CEX"
+    "slug": "usdt0",
+    "name": "USDT0",
+    "category": "Bridge"
   },
   "questions": [
     {
@@ -15,122 +15,373 @@
       "format": "mc6",
       "prompt": "Which protocol matches these clues?",
       "clues": [
-        "Category: CEX",
-        "Chains: 10+ chains",
+        "Category: Bridge",
+        "Chains: single-chain",
         "TVL rank: top 25"
       ],
       "choices": [
-        "Venus Core Pool",
+        "Marinade Native",
+        "GMX V2 Perps",
+        "Liquid Collective",
+        "Lista Lending",
         "USDT0",
-        "Phemex",
-        "PancakeSwap AMM V3",
-        "Falcon Finance",
-        "Bitget"
+        "Rocket Pool"
       ],
-      "answerIndex": 5,
-      "explanation": "Bitget is a centralized exchange (CEX) with a total value locked (TVL) of $7.1B, which falls within the range of $5B-$10B, and it operates across 23 different chains, including Metis, Base, zkSync Era, Sui, and Avalanche.",
+      "answerIndex": 4,
+      "explanation": "USDT0 is a bridge protocol operating on the Ethereum chain, with a total value locked (TVL) of $4.3B, placing it within the TVL band of $1B-$5B.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc6",
         "familiarityRankBucket": "top_25",
         "margin": null,
-        "volatility": 0.12457028109592007
+        "volatility": 0.1820546357330983
       },
-      "difficultyScore": 0.4184570281095919
+      "difficultyScore": 0.42420546357330974
     },
     {
       "qid": "q2",
       "slot": "B",
-      "templateId": "P2_CROSSCHAIN",
-      "format": "ab",
-      "prompt": "Where does Bitget have higher TVL?",
+      "templateId": "P3_CONCENTRATION",
+      "format": "tf",
+      "prompt": "More than 90% of USDT0's TVL is on Ethereum.",
       "choices": [
-        "Bitcoin",
-        "Ethereum"
+        "True",
+        "False"
       ],
       "answerIndex": 0,
-      "explanation": "Bitget's total value locked (TVL) on Bitcoin is $3.0B, while Ethereum has a TVL of $2.3B, indicating that Bitcoin has a significantly higher value locked in its DeFi protocols. The margin percentage of 25% reflects the difference in TVL between the two chains.",
-      "difficulty": "easy",
+      "answerValue": true,
+      "explanation": "USDT0 has a total value locked (TVL) of $4.3B, with 100% of its TVL concentrated on the Ethereum blockchain, which also has a TVL of $4.3B.",
+      "difficulty": "medium",
       "llmFallback": false,
       "signals": {
-        "format": "ab",
+        "format": "tf",
         "familiarityRankBucket": "top_25",
-        "margin": 0.24502172808920997,
-        "volatility": 0.12457028109592007
+        "margin": 0.09999999999999998,
+        "volatility": 0.1820546357330983
       },
-      "difficultyScore": 0.2144309544025401
+      "difficultyScore": 0.31420546357330986
     },
     {
       "qid": "q3",
       "slot": "C",
       "templateId": "P15_RECENT_TVL_DIRECTION",
       "format": "ab",
-      "prompt": "Over the past 30 days, did Bitget's TVL increase or decrease?",
+      "prompt": "Over the past 7 days, did USDT0's TVL increase or decrease?",
       "choices": [
         "Increase",
         "Decrease"
       ],
-      "answerIndex": 0,
-      "explanation": "Bitget's total value locked (TVL) has increased by 6.6% over the past 30 days, reaching $7.1 billion. This indicates a growing interest and investment in the platform during this period.",
+      "answerIndex": 1,
+      "explanation": "USDT0 experienced a decrease in total value locked (TVL) of 5.8% over the past 7 days, bringing its current TVL to $4.3B.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "ab",
         "familiarityRankBucket": "top_25",
-        "margin": 0.0662579582608134,
-        "volatility": 0.12457028109592007
+        "margin": 0.05806309601283319,
+        "volatility": 0.1820546357330983
       },
-      "difficultyScore": 0.42894747819661594
+      "difficultyScore": 0.44452974835791
     },
     {
       "qid": "q4",
       "slot": "D",
-      "templateId": "P33_MULTI_RANKING",
+      "templateId": "P31_PRECISE_RANK",
       "format": "mc4",
-      "prompt": "Rank these CEX protocols from highest to lowest TVL.",
+      "prompt": "What is USDT0's current TVL rank among all protocols?",
       "choices": [
-        "OKX > Gemini > Bitget",
-        "OKX > Bitget > Gemini",
-        "Gemini > OKX > Bitget",
-        "Bitget > Gemini > OKX"
+        "#1-5",
+        "#6-15",
+        "#16-30",
+        "#31-50",
+        "#51-100"
       ],
-      "answerIndex": 0,
-      "explanation": "In the centralized exchange (CEX) category, OKX has the highest total value locked (TVL) at $22.5B, followed by Gemini with $7.3B, and Bitget with $7.1B. This ranking reflects the amount of assets deposited in each platform.",
-      "difficulty": "hard",
+      "answerIndex": 1,
+      "explanation": "USDT0 holds the 13th rank in total value locked (TVL) among DeFi protocols, with a TVL of $7.2B. It is positioned within the rank bucket of #6-15, close to ether.fi Stake at $8.4B and Gemini at $7.4B.",
+      "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_25",
-        "margin": 0.02586526462273114,
-        "volatility": 0.12457028109592007
+        "margin": 0.2,
+        "volatility": 0.1820546357330983
       },
-      "difficultyScore": 0.5374187105623146
+      "difficultyScore": 0.3342054635733098
     },
     {
       "qid": "q5",
       "slot": "E",
-      "templateId": "P3_CONCENTRATION",
+      "templateId": "P10_TVL_BAND",
       "format": "mc4",
-      "prompt": "What share of Bitget's TVL is on its top chain (Bitcoin)?",
+      "prompt": "Which TVL range fits USDT0?",
       "choices": [
-        "<25%",
-        "25-50%",
-        "50-75%",
-        ">75%"
+        "<$50M",
+        "$50M-$250M",
+        "$250M-$1B",
+        "$1B-$5B",
+        ">$5B"
       ],
-      "answerIndex": 1,
-      "explanation": "Bitget has a total value locked (TVL) of $7.1B, with Bitcoin being the top chain, accounting for 42% of the total TVL at $3.0B.",
+      "answerIndex": 3,
+      "explanation": "USDT0 has a total value locked (TVL) of $4.3B, which falls within the TVL band of $1B-$5B. This indicates a significant amount of assets are deposited in the USDT0 protocol.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_25",
-        "margin": 0.3003964242832169,
-        "volatility": 0.12457028109592007
+        "margin": 0.2692407704,
+        "volatility": 0.1820546357330983
       },
-      "difficultyScore": 0.268457028109592
+      "difficultyScore": 0.2742054635733098
     }
   ],
-  "generatedAt": "2025-12-22T00:25:55.499Z"
+  "generatedAt": "2025-12-22T12:24:10.176Z",
+  "buildLog": [
+    {
+      "slot": "A",
+      "template": "P1_FINGERPRINT",
+      "format": "mc6",
+      "decision": "selected",
+      "score": 0.42420546357330974,
+      "target": "medium"
+    },
+    {
+      "slot": "B",
+      "template": "P2_CROSSCHAIN",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "B",
+      "template": "P3_CONCENTRATION",
+      "format": "tf",
+      "decision": "selected",
+      "score": 0.31420546357330986,
+      "target": "easy"
+    },
+    {
+      "slot": "C",
+      "template": "P5_FEES_REVENUE",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "P4_ATH_TIMING",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.2742054635733098,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P4_ATH_TIMING",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.13420546357330984,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P11_FEES_TREND",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "P14_CATEGORY_LEADER",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.21420546357330986,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P14_CATEGORY_LEADER",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.13420546357330984,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P15_RECENT_TVL_DIRECTION",
+      "format": "ab",
+      "decision": "selected",
+      "score": 0.44452974835791,
+      "target": "medium"
+    },
+    {
+      "slot": "D",
+      "template": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.3342054635733098,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P32_EXCHANGE_COMPARISON",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.2742054635733098,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P4_ATH_TIMING",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.2742054635733098,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P4_ATH_TIMING",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.13420546357330984,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P5_FEES_REVENUE",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P2_CROSSCHAIN",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P11_FEES_TREND",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P9_TOP_CHAIN",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P13_TVL_RANK_COMPARISON",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.21420546357330986,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P13_TVL_RANK_COMPARISON",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.13420546357330984,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P14_CATEGORY_LEADER",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.21420546357330986,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P14_CATEGORY_LEADER",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.13420546357330984,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P16_CATEGORY_PEER",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.30775443587381107,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.2987439296227046,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P27_DERIVATIVES_RANKING",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P29_CATEGORY_GROWTH",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.2742054635733098,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "decision": "selected",
+      "reason": "close_enough",
+      "score": 0.3342054635733098,
+      "target": "hard"
+    },
+    {
+      "slot": "E",
+      "template": "P6_TVL_TREND",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_trend_7d"
+    },
+    {
+      "slot": "E",
+      "template": "P3_CONCENTRATION",
+      "decision": "skip",
+      "reason": "already_used"
+    },
+    {
+      "slot": "E",
+      "template": "P10_TVL_BAND",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.2742054635733098,
+      "target": "easy"
+    },
+    {
+      "decision": "post_balance",
+      "reason": "No challenging questions in episode"
+    }
+  ]
 }

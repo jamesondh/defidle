@@ -27,6 +27,10 @@ import type {
   ProtocolPool,
   ChainPool,
 } from "@/lib/types/pools"
+import {
+  isExcludedCategory,
+  EXCLUDED_PROTOCOL_CATEGORIES,
+} from "@/lib/generation/constants"
 
 const POOLS_DIR = "./data/pools"
 const OVERRIDES_PATH = "./data/overrides.json"
@@ -72,9 +76,30 @@ async function refreshProtocolPool(
   console.log("Fetching protocols list...")
   const allProtocols = await getProtocols()
 
-  // Sort by TVL descending
+  // Filter out excluded categories (CEXs) and sort by TVL descending
+  const excludedProtocols = allProtocols.filter((p) =>
+    isExcludedCategory(p.category)
+  )
+  if (excludedProtocols.length > 0) {
+    console.log(
+      `\nExcluding ${excludedProtocols.length} protocols with non-DeFi categories (${EXCLUDED_PROTOCOL_CATEGORIES.join(", ")}):`
+    )
+    // Log first 10 excluded for visibility
+    excludedProtocols
+      .sort((a, b) => b.tvl - a.tvl)
+      .slice(0, 10)
+      .forEach((p) => {
+        console.log(`  - ${p.name} (${p.category}, $${(p.tvl / 1e9).toFixed(1)}B TVL)`)
+      })
+    if (excludedProtocols.length > 10) {
+      console.log(`  ... and ${excludedProtocols.length - 10} more`)
+    }
+    console.log()
+  }
+
   const sortedProtocols = allProtocols
     .filter((p) => p.tvl > 0)
+    .filter((p) => !isExcludedCategory(p.category))
     .sort((a, b) => b.tvl - a.tvl)
     .slice(0, TOP_PROTOCOLS_TO_FETCH)
 

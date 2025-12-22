@@ -6,6 +6,7 @@
 
 import { deterministicShuffle, createRng } from "./rng"
 import { abMargin } from "./metrics"
+import { EXCLUDED_PROTOCOL_CATEGORIES } from "./constants"
 
 // =============================================================================
 // Types
@@ -72,6 +73,11 @@ export interface DistractorConstraints {
    * When set, distractors will be sorted by proximity to this rank before selection.
    */
   preferNearRank?: number
+  /**
+   * Categories to exclude from distractor candidates.
+   * Used to filter out non-DeFi protocols (e.g., CEXs) from appearing as wrong answers.
+   */
+  excludeCategories?: readonly string[]
 }
 
 // =============================================================================
@@ -168,6 +174,13 @@ export function pickEntityDistractors<T extends Entity>(
         return false
       }
     }
+    // Exclude certain categories (e.g., CEXs are not DeFi)
+    if (constraints.excludeCategories && constraints.excludeCategories.length > 0) {
+      const category = (item as unknown as ProtocolEntity).category
+      if (category && constraints.excludeCategories.includes(category)) {
+        return false
+      }
+    }
     return true
   })
 
@@ -255,12 +268,13 @@ export function pickProtocolDistractors(
 ): string[] | null {
   const correct = pool.find((p) => p.slug === correctSlug)
   
-  // Apply default maxTvlRank to ensure recognizable distractors
+  // Apply default constraints to ensure recognizable, DeFi-only distractors
   // Can be overridden via constraints
   const fullConstraints: DistractorConstraints = {
     count,
     maxTvlRank: 150, // Default: only top 150 protocols as distractors
     preferNearRank: correct?.tvlRank, // Prefer protocols of similar size
+    excludeCategories: EXCLUDED_PROTOCOL_CATEGORIES, // Default: exclude CEXs
     ...constraints,
   }
 

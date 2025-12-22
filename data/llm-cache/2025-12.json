@@ -173,5 +173,100 @@
     "text": "Bitget has a total value locked (TVL) of $7.1B, with Bitcoin being the top chain, accounting for 42% of the total TVL at $3.0B.",
     "model": "gpt-4o-mini",
     "generatedAt": "2025-12-22T00:25:55.499Z"
+  },
+  "2025-12-17|protocol|eigencloud|A|P1_FINGERPRINT|explanation|3023da356b89e889": {
+    "text": "EigenCloud is a restaking protocol on the Ethereum blockchain with a total value locked (TVL) of $12.7B, placing it in the $10B+ TVL band. It operates on a single chain, which is Ethereum.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T12:23:32.792Z"
+  },
+  "2025-12-17|protocol|eigencloud|B|P3_CONCENTRATION|explanation|11d27a180712bbdf": {
+    "text": "EigenCloud has a total value locked (TVL) of $12.7B, with 100% of this value concentrated on the Ethereum chain, which also has a TVL of $12.7B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T12:23:34.615Z"
+  },
+  "2025-12-17|protocol|eigencloud|C|P11_FEES_TREND|explanation|fa43d0eee25e3b73": {
+    "text": "EigenCloud's fees have increased by 17.8%, with the current fees for the past week at $1M, unchanged from the previous week.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T12:23:39.512Z"
+  },
+  "2025-12-17|protocol|eigencloud|D|P31_PRECISE_RANK|explanation|805d8e7fd9eb84c1": {
+    "text": "EigenCloud ranks 3rd in total value locked (TVL) among DeFi protocols, with a TVL of $26.6B, placing it in the top 5 alongside Binance CEX ($165.8B) and Aave V3 ($33.5B).",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T12:23:41.811Z"
+  },
+  "2025-12-17|protocol|eigencloud|E|P10_TVL_BAND|explanation|25011d106604c7c3": {
+    "text": "EigenCloud has a total value locked (TVL) of $12.7B, which places it in the TVL band of $10B or more. This indicates a significant amount of assets deposited in the protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T12:23:44.272Z"
+  },
+  "2025-12-21|protocol|babylon-protocol|A|P1_FINGERPRINT|explanation|9c65098cb1fbdf2b": {
+    "text": "Babylon Protocol is a restaking platform operating on the Bitcoin chain, with a total value locked (TVL) of $5.5B, placing it within the $5B-$10B TVL band.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T12:23:50.488Z"
+  },
+  "2025-12-21|protocol|babylon-protocol|B|P3_CONCENTRATION|explanation|8fd8b0d380792a01": {
+    "text": "Babylon Protocol has a total value locked (TVL) of $5.5B, with Bitcoin being the top chain, representing 100% of its TVL. This indicates that all assets in Babylon Protocol are currently locked in Bitcoin.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T12:23:52.665Z"
+  },
+  "2025-12-21|protocol|babylon-protocol|C|P15_RECENT_TVL_DIRECTION|explanation|62545dbbd045aad8": {
+    "text": "Babylon Protocol's total value locked (TVL) has increased by 15.1% over the past 30 days, reaching $5.5B. This indicates a growing interest and investment in the protocol during this period.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T12:23:54.917Z"
+  },
+  "2025-12-21|protocol|babylon-protocol|D|P20_ATH_DISTANCE|explanation|ede8908952f51542": {
+    "text": "Babylon Protocol has a total value locked (TVL) of $5.5B, which is 22% below its all-time high (ATH) of $7.1B, placing it in the category of being less than 25% below its ATH.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T12:23:56.558Z"
+  },
+  "2025-12-21|protocol|babylon-protocol|E|P8_CHAIN_MEMBERSHIP|explanation|bc82702c88e77793": {
+    "text": "Babylon Protocol operates on the Bitcoin blockchain, making it a single-chain protocol with a total of 1 chain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T12:23:57.581Z"
+  },
+  "2025-12-22|protocol|usdt0|A|P1_FINGERPRINT|explanation|027bf7bf88c02c08": {
+    "text": "USDT0 is a bridge protocol operating on the Ethereum chain, with a total value locked (TVL) of $4.3B, placing it within the TVL band of $1B-$5B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T12:24:04.953Z"
+  },
+  "2025-12-22|protocol|usdt0|B|P3_CONCENTRATION|explanation|afcc905ccbb98db3": {
+    "text": "USDT0 has a total value locked (TVL) of $4.3B, with 100% of its TVL concentrated on the Ethereum blockchain, which also has a TVL of $4.3B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T12:24:06.226Z"
+  },
+  "2025-12-22|protocol|usdt0|C|P15_RECENT_TVL_DIRECTION|explanation|b2f0929ac637d6c3": {
+    "text": "USDT0 experienced a decrease in total value locked (TVL) of 5.8% over the past 7 days, bringing its current TVL to $4.3B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T12:24:07.212Z"
+  },
+  "2025-12-22|protocol|usdt0|D|P31_PRECISE_RANK|explanation|87680ba9e2118c62": {
+    "text": "USDT0 holds the 13th rank in total value locked (TVL) among DeFi protocols, with a TVL of $7.2B. It is positioned within the rank bucket of #6-15, close to ether.fi Stake at $8.4B and Gemini at $7.4B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T12:24:08.948Z"
+  },
+  "2025-12-22|protocol|usdt0|E|P10_TVL_BAND|explanation|e754b33db5c99d90": {
+    "text": "USDT0 has a total value locked (TVL) of $4.3B, which falls within the TVL band of $1B-$5B. This indicates a significant amount of assets are deposited in the USDT0 protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T12:24:10.176Z"
+  },
+  "2025-12-20|chain|Solana|A|C1_FINGERPRINT|explanation|e0c92a7a51a3285c": {
+    "text": "Solana is ranked 2nd in total value locked (TVL) with a range of $5B to $10B, and it supports 331 different protocols. Its native token is SOL.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T15:55:32.069Z"
+  },
+  "2025-12-20|chain|Solana|B|C2_CHAIN_COMPARISON|explanation|22cde841c96c62de": {
+    "text": "Solana has a total value locked (TVL) of $8.6B, which is 48% higher than Base's TVL of $4.5B. This indicates that Solana has significantly more assets deposited in its protocol compared to Base.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T15:55:34.095Z"
+  },
+  "2025-12-20|chain|Solana|D|C4_GROWTH_RANKING|explanation|fdec12b003a800ac": {
+    "text": "Monad achieved a remarkable growth of 86,035,918.0%, significantly outpacing other chains like Plasma, which grew by 18.6%, and Bitcoin and Base, both at 10.8%. This exceptional increase in total value locked highlights Monad's dominance in growth compared to its peers.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T15:55:35.697Z"
+  },
+  "2025-12-20|chain|Solana|E|C6_TOP_DEX|explanation|e5db720d5e9d7938": {
+    "text": "On the Solana blockchain, HumidiFi is the top decentralized exchange (DEX) with a trading volume of $915M, significantly higher than other DEXes like PumpSwap at $398M and Raydium AMM at $266M. This large volume indicates HumidiFi's leading position in the Solana DeFi ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T15:55:38.566Z"
   }
 }

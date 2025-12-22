@@ -1,11 +1,11 @@
 {
-  "episodeId": "2025-12-21:protocol:gemini",
+  "episodeId": "2025-12-21:protocol:babylon-protocol",
   "dateUtc": "2025-12-21",
   "episodeType": "protocol",
   "topic": {
-    "slug": "gemini",
-    "name": "Gemini",
-    "category": "CEX"
+    "slug": "babylon-protocol",
+    "name": "Babylon Protocol",
+    "category": "Restaking"
   },
   "questions": [
     {
@@ -15,123 +15,348 @@
       "format": "mc6",
       "prompt": "Which protocol matches these clues?",
       "clues": [
-        "Category: CEX",
-        "Chains: 2-5 chains",
+        "Category: Restaking",
+        "Chains: single-chain",
         "TVL rank: top 25"
       ],
       "choices": [
-        "Raydium AMM",
-        "Binance CEX",
-        "Gemini",
-        "Veda",
-        "BlackRock BUIDL",
-        "Lombard BTC.b"
+        "Portal",
+        "Sanctum Validator LSTs",
+        "Symbiotic",
+        "Babylon Protocol",
+        "Unit",
+        "Rocket Pool"
       ],
-      "answerIndex": 2,
-      "explanation": "Gemini is a centralized exchange (CEX) that operates on two chains: Ethereum and Bitcoin, with a total value locked (TVL) of $7.3B, falling within the range of $5B-$10B.",
+      "answerIndex": 3,
+      "explanation": "Babylon Protocol is a restaking platform operating on the Bitcoin chain, with a total value locked (TVL) of $5.5B, placing it within the $5B-$10B TVL band.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc6",
         "familiarityRankBucket": "top_25",
         "margin": null,
-        "volatility": 0.14333611354995066
+        "volatility": 0.1375384437733834
       },
-      "difficultyScore": 0.420333611354995
+      "difficultyScore": 0.41975384437733826
     },
     {
       "qid": "q2",
       "slot": "B",
-      "templateId": "P2_CROSSCHAIN",
-      "format": "ab",
-      "prompt": "Where does Gemini have higher TVL?",
+      "templateId": "P3_CONCENTRATION",
+      "format": "tf",
+      "prompt": "More than 90% of Babylon Protocol's TVL is on Bitcoin.",
       "choices": [
-        "Ethereum",
-        "Bitcoin"
+        "True",
+        "False"
       ],
-      "answerIndex": 1,
-      "explanation": "Gemini's total value locked (TVL) on Bitcoin is $5.6B, significantly higher than Ethereum's TVL of $1.7B, resulting in a margin percentage of 69%. This indicates a strong preference for Bitcoin over Ethereum in terms of locked assets.",
-      "difficulty": "easy",
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Babylon Protocol has a total value locked (TVL) of $5.5B, with Bitcoin being the top chain, representing 100% of its TVL. This indicates that all assets in Babylon Protocol are currently locked in Bitcoin.",
+      "difficulty": "medium",
       "llmFallback": false,
       "signals": {
-        "format": "ab",
+        "format": "tf",
         "familiarityRankBucket": "top_25",
-        "margin": 0.6891607465033093,
-        "volatility": 0.14333611354995066
+        "margin": 0.09999999999999998,
+        "volatility": 0.1375384437733834
       },
-      "difficultyScore": 0.2103336113549951
+      "difficultyScore": 0.3097538443773384
     },
     {
       "qid": "q3",
       "slot": "C",
       "templateId": "P15_RECENT_TVL_DIRECTION",
       "format": "ab",
-      "prompt": "Over the past 7 days, did Gemini's TVL increase or decrease?",
+      "prompt": "Over the past 30 days, did Babylon Protocol's TVL increase or decrease?",
       "choices": [
-        "Decrease",
-        "Increase"
+        "Increase",
+        "Decrease"
       ],
       "answerIndex": 0,
-      "explanation": "Gemini's total value locked (TVL) decreased by 3.0% over the past 7 days, bringing its current TVL to $7.3B.",
-      "difficulty": "hard",
+      "explanation": "Babylon Protocol's total value locked (TVL) has increased by 15.1% over the past 30 days, reaching $5.5B. This indicates a growing interest and investment in the protocol during this period.",
+      "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "ab",
         "familiarityRankBucket": "top_25",
-        "margin": 0.030364810910381474,
-        "volatility": 0.14333611354995066
+        "margin": 0.15067496242699177,
+        "volatility": 0.1375384437733834
       },
-      "difficultyScore": 0.4738958382625373
+      "difficultyScore": 0.32894388946494824
     },
     {
       "qid": "q4",
       "slot": "D",
-      "templateId": "P33_MULTI_RANKING",
+      "templateId": "P20_ATH_DISTANCE",
       "format": "mc4",
-      "prompt": "Rank these CEX protocols from highest to lowest TVL.",
+      "prompt": "How far is Babylon Protocol's current TVL from its all-time high?",
       "choices": [
-        "Bitget > Gemini > Bitfinex",
-        "Bitfinex > Gemini > Bitget",
-        "Bitget > Bitfinex > Gemini",
-        "Gemini > Bitget > Bitfinex"
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
       ],
-      "answerIndex": 1,
-      "explanation": "Bitfinex has the highest total value locked (TVL) at $20.2B, followed by Gemini with a TVL of $7.3B, and Bitget with a TVL of $7.1B. This ranking reflects the amount of assets deposited in each centralized exchange.",
-      "difficulty": "hard",
+      "answerIndex": 0,
+      "explanation": "Babylon Protocol has a total value locked (TVL) of $5.5B, which is 22% below its all-time high (ATH) of $7.1B, placing it in the category of being less than 25% below its ATH.",
+      "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_25",
-        "margin": 0.02681574422710385,
-        "volatility": 0.14333611354995066
+        "margin": 0.10245924028814173,
+        "volatility": 0.1375384437733834
       },
-      "difficultyScore": 0.5381547182824705
+      "difficultyScore": 0.4468027560315682
     },
     {
       "qid": "q5",
       "slot": "E",
-      "templateId": "P10_TVL_BAND",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
       "format": "mc4",
-      "prompt": "Which TVL range fits Gemini?",
+      "prompt": "Which chain is Babylon Protocol deployed on?",
       "choices": [
-        "<$50M",
-        "$50M-$250M",
-        "$250M-$1B",
-        "$1B-$5B",
-        ">$5B"
+        "Polygon",
+        "Bitcoin",
+        "Ethereum",
+        "Arbitrum"
       ],
-      "answerIndex": 4,
-      "explanation": "Gemini has a total value locked (TVL) of $7.3B, which falls within the TVL band of $5B to $10B. This indicates a significant amount of assets deposited in the Gemini protocol.",
+      "answerIndex": 1,
+      "explanation": "Babylon Protocol operates on the Bitcoin blockchain, making it a single-chain protocol with a total of 1 chain.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_25",
-        "margin": 0.629385167077687,
-        "volatility": 0.14333611354995066
+        "margin": 0.4,
+        "volatility": 0.1375384437733834
       },
-      "difficultyScore": 0.27033361135499506
+      "difficultyScore": 0.26975384437733835
     }
   ],
-  "generatedAt": "2025-12-21T00:26:29.186Z"
+  "generatedAt": "2025-12-22T12:23:57.582Z",
+  "buildLog": [
+    {
+      "slot": "A",
+      "template": "P1_FINGERPRINT",
+      "format": "mc6",
+      "decision": "selected",
+      "score": 0.41975384437733826,
+      "target": "medium"
+    },
+    {
+      "slot": "B",
+      "template": "P2_CROSSCHAIN",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "B",
+      "template": "P3_CONCENTRATION",
+      "format": "tf",
+      "decision": "selected",
+      "score": 0.3097538443773384,
+      "target": "easy"
+    },
+    {
+      "slot": "C",
+      "template": "P5_FEES_REVENUE",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "P4_ATH_TIMING",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.26975384437733835,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P4_ATH_TIMING",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.12975384437733836,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P11_FEES_TREND",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "P14_CATEGORY_LEADER",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.20975384437733838,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P14_CATEGORY_LEADER",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.12975384437733836,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P15_RECENT_TVL_DIRECTION",
+      "format": "ab",
+      "decision": "selected",
+      "score": 0.32894388946494824,
+      "target": "medium"
+    },
+    {
+      "slot": "D",
+      "template": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.26975384437733835,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P32_EXCHANGE_COMPARISON",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.26975384437733835,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P4_ATH_TIMING",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.26975384437733835,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P4_ATH_TIMING",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.12975384437733836,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P5_FEES_REVENUE",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P2_CROSSCHAIN",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P11_FEES_TREND",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P9_TOP_CHAIN",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P13_TVL_RANK_COMPARISON",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.20975384437733838,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P13_TVL_RANK_COMPARISON",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.12975384437733836,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P14_CATEGORY_LEADER",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.20975384437733838,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P14_CATEGORY_LEADER",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.12975384437733836,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P16_CATEGORY_PEER",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.26975384437733835,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.4468027560315682,
+      "target": "hard"
+    },
+    {
+      "slot": "E",
+      "template": "P6_TVL_TREND",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_trend_7d"
+    },
+    {
+      "slot": "E",
+      "template": "P3_CONCENTRATION",
+      "decision": "skip",
+      "reason": "already_used"
+    },
+    {
+      "slot": "E",
+      "template": "P10_TVL_BAND",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_magnitude"
+    },
+    {
+      "slot": "E",
+      "template": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.26975384437733835,
+      "target": "easy"
+    }
+  ]
 }

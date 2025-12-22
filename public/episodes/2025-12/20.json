@@ -19,14 +19,14 @@
       ],
       "choices": [
         "Solana",
-        "Hemi",
-        "ThunderCore",
-        "DeFiChain EVM",
-        "Chihuahua",
-        "Celo"
+        "Ancient8",
+        "Kava",
+        "Prom",
+        "Zora",
+        "Somnia"
       ],
       "answerIndex": 0,
-      "explanation": "Solana has a total value locked (TVL) between $5B and $10B, ranking it 2nd among DeFi platforms, and supports 329 different protocols. Its native token is SOL.",
+      "explanation": "Solana is ranked 2nd in total value locked (TVL) with a range of $5B to $10B, and it supports 331 different protocols. Its native token is SOL.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
@@ -48,13 +48,13 @@
         "Solana"
       ],
       "answerIndex": 1,
-      "explanation": "Solana has a total value locked (TVL) of $8.7B, which is 49.2% higher than Base's TVL of $4.4B. This indicates that Solana has significantly more assets deposited in its protocol compared to Base.",
+      "explanation": "Solana has a total value locked (TVL) of $8.6B, which is 48% higher than Base's TVL of $4.5B. This indicates that Solana has significantly more assets deposited in its protocol compared to Base.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "ab",
         "familiarityRankBucket": "top_10",
-        "margin": 0.49214620311109014,
+        "margin": 0.47967738417146183,
         "volatility": null
       },
       "difficultyScore": 0.20500000000000004
@@ -88,28 +88,26 @@
     {
       "qid": "q4",
       "slot": "D",
-      "templateId": "C11_TOP_PROTOCOL_TVL",
-      "format": "mc6",
-      "prompt": "Which protocol has the most TVL on Solana?",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
       "choices": [
-        "Bybit",
-        "Bitget",
-        "OKX",
-        "Binance CEX",
-        "Bitfinex",
-        "Lido"
+        "Base",
+        "Monad",
+        "Bitcoin",
+        "Plasma"
       ],
-      "answerIndex": 3,
-      "explanation": "On the Solana blockchain, the top protocol by total value locked (TVL) is Binance CEX, with a TVL of $165.0B. Other notable protocols include Lido at $26.2B, OKX at $22.7B, and Bitfinex at $19.7B.",
-      "difficulty": "medium",
+      "answerIndex": 1,
+      "explanation": "Monad achieved a remarkable growth of 86,035,918.0%, significantly outpacing other chains like Plasma, which grew by 18.6%, and Bitcoin and Base, both at 10.8%. This exceptional increase in total value locked highlights Monad's dominance in growth compared to its peers.",
+      "difficulty": "easy",
       "llmFallback": false,
       "signals": {
-        "format": "mc6",
+        "format": "mc4",
         "familiarityRankBucket": "top_10",
-        "margin": 0.8411214310817893,
+        "margin": 1,
         "volatility": null
       },
-      "difficultyScore": 0.325
+      "difficultyScore": 0.26500000000000007
     },
     {
       "qid": "q5",
@@ -119,22 +117,177 @@
       "prompt": "Which DEX is #1 by 24h volume on Solana?",
       "choices": [
         "HumidiFi",
-        "Meteora DAMM V2",
+        "Orca DEX",
         "Raydium AMM",
         "PumpSwap"
       ],
       "answerIndex": 0,
-      "explanation": "On the Solana blockchain, HumidiFi is the top decentralized exchange (DEX) with a trading volume of $1.2B, significantly higher than its closest competitors, PumpSwap at $371M and Raydium AMM at $366M. This large volume indicates HumidiFi's leading position in the Solana DEX ecosystem.",
+      "explanation": "On the Solana blockchain, HumidiFi is the top decentralized exchange (DEX) with a trading volume of $915M, significantly higher than other DEXes like PumpSwap at $398M and Raydium AMM at $266M. This large volume indicates HumidiFi's leading position in the Solana DeFi ecosystem.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_10",
-        "margin": 0.6936456614426738,
+        "margin": 0.5648197632230971,
         "volatility": null
       },
       "difficultyScore": 0.26500000000000007
     }
   ],
-  "generatedAt": "2025-12-20T00:23:35.916Z"
+  "generatedAt": "2025-12-22T15:55:38.567Z",
+  "buildLog": [
+    {
+      "slot": "A",
+      "template": "C1_FINGERPRINT",
+      "format": "mc6",
+      "decision": "selected",
+      "score": 0.41500000000000004,
+      "target": "medium"
+    },
+    {
+      "slot": "B",
+      "template": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "decision": "selected",
+      "score": 0.20500000000000004,
+      "target": "easy"
+    },
+    {
+      "slot": "C",
+      "template": "C5_TOP_BY_FEES",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "C6_TOP_DEX",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.26500000000000007,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "C6_TOP_DEX",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.20500000000000004,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "C3_ATH_TIMING",
+      "format": "mc6",
+      "decision": "selected",
+      "score": 0.325,
+      "target": "medium"
+    },
+    {
+      "slot": "D",
+      "template": "C3_ATH_TIMING",
+      "decision": "skip",
+      "reason": "already_used"
+    },
+    {
+      "slot": "D",
+      "template": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.26500000000000007,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "C4_GROWTH_RANKING",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.20500000000000004,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "C9_DISTANCE_FROM_ATH",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:ath_history"
+    },
+    {
+      "slot": "D",
+      "template": "C11_TOP_PROTOCOL_TVL",
+      "format": "mc6",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.325,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "C11_TOP_PROTOCOL_TVL",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.26500000000000007,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "C11_TOP_PROTOCOL_TVL",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.20500000000000004,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "C12_CATEGORY_DOMINANCE",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.26500000000000007,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "C14_TVL_DOMINANCE",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.26500000000000007,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "C14_TVL_DOMINANCE",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.12500000000000003,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "decision": "selected",
+      "reason": "close_enough",
+      "score": 0.26500000000000007,
+      "target": "hard"
+    },
+    {
+      "slot": "E",
+      "template": "C6_TOP_DEX",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.26500000000000007,
+      "target": "easy"
+    },
+    {
+      "decision": "post_balance",
+      "reason": "No challenging questions in episode"
+    }
+  ]
 }

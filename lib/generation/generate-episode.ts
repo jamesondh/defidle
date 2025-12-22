@@ -394,6 +394,50 @@ export interface EpisodeGenerationOptions {
   verbose?: boolean
 }
 
+/**
+ * Log warnings about topic data quality issues.
+ * Helps identify protocols with limited data that may produce lower quality questions.
+ */
+function logDataQualityWarnings(topic: ProtocolPoolEntry | ChainPoolEntry): void {
+  if ("hasFeesData" in topic) {
+    // Protocol topic
+    const protocol = topic as ProtocolPoolEntry
+
+    if (!protocol.hasFeesData && !protocol.hasRevenueData) {
+      console.warn(
+        `  Data quality: Protocol "${protocol.name}" has no fees/revenue data`
+      )
+    }
+
+    if (protocol.historyDays < 90) {
+      console.warn(
+        `  Data quality: Protocol "${protocol.name}" has limited history (${protocol.historyDays} days)`
+      )
+    }
+
+    if (protocol.chains.length === 1) {
+      console.log(
+        `  Note: Protocol "${protocol.name}" is single-chain only (limits cross-chain questions)`
+      )
+    }
+  } else {
+    // Chain topic
+    const chain = topic as ChainPoolEntry
+
+    if (chain.historyDays < 90) {
+      console.warn(
+        `  Data quality: Chain "${chain.name}" has limited history (${chain.historyDays} days)`
+      )
+    }
+
+    if (chain.protocolCount < 50) {
+      console.log(
+        `  Note: Chain "${chain.name}" has limited protocols (${chain.protocolCount})`
+      )
+    }
+  }
+}
+
 
 
 // =============================================================================
@@ -440,6 +484,7 @@ export async function generateEpisode(
   try {
     topic = await selectTopic(date, episodeType)
     console.log(`Selected topic: ${topic.name} (${topic.slug})`)
+    logDataQualityWarnings(topic)
   } catch (error) {
     console.error("Failed to select topic:", error)
     return null

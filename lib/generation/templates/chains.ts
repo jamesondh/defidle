@@ -6,6 +6,7 @@
 
 import type { QuestionFormat, TemplateContext } from "@/lib/types/episode"
 import type { ChainPoolEntry } from "@/lib/types/pools"
+import { isExcludedCategory } from "../constants"
 import {
   type TemplateConfig,
   createTemplate,
@@ -953,9 +954,10 @@ const C10_PROTOCOL_COUNT: TemplateConfig<C10Data> = {
     const topic = ctx.topic as ChainPoolEntry
     const list = ctx.data.protocolList!
 
-    // Count protocols on this chain
+    // Count DeFi protocols on this chain (exclude CEXs for accurate DeFi count)
     const protocolCount = list.filter((p) =>
-      p.chains?.some((c) => c.toLowerCase() === topic.slug.toLowerCase())
+      p.chains?.some((c) => c.toLowerCase() === topic.slug.toLowerCase()) &&
+      !isExcludedCategory(p.category)
     ).length
 
     let bucketIndex: number
@@ -969,7 +971,7 @@ const C10_PROTOCOL_COUNT: TemplateConfig<C10Data> = {
 
   getPrompt(_data, ctx) {
     const topic = ctx.topic as ChainPoolEntry
-    return `How many protocols are deployed on ${topic.name}?`
+    return `How many DeFi protocols are deployed on ${topic.name}?`
   },
 
   getChoices() {
@@ -1023,9 +1025,10 @@ const C11_TOP_PROTOCOL_TVL: TemplateConfig<C11Data> = {
     const topic = ctx.topic as ChainPoolEntry
     const list = ctx.data.protocolList!
 
-    // Get protocols on this chain sorted by TVL
+    // Get DeFi protocols on this chain sorted by TVL (exclude CEXs)
     const onChain = list
       .filter((p) => p.chains?.some((c) => c.toLowerCase() === topic.slug.toLowerCase()))
+      .filter((p) => !isExcludedCategory(p.category))
       .sort((a, b) => (b.tvl ?? 0) - (a.tvl ?? 0))
 
     if (onChain.length < 2) return ["ab"]
@@ -1041,8 +1044,10 @@ const C11_TOP_PROTOCOL_TVL: TemplateConfig<C11Data> = {
     const topic = ctx.topic as ChainPoolEntry
     const list = ctx.data.protocolList!
 
+    // Filter to DeFi protocols only (exclude CEXs) - we want actual DeFi protocols on chain
     const onChain = list
       .filter((p) => p.chains?.some((c) => c.toLowerCase() === topic.slug.toLowerCase()))
+      .filter((p) => !isExcludedCategory(p.category))
       .sort((a, b) => (b.tvl ?? 0) - (a.tvl ?? 0))
 
     if (onChain.length < 2) return null
@@ -1400,9 +1405,10 @@ const C14_TVL_DOMINANCE: TemplateConfig<C14Data> = {
     const topic = ctx.topic as ChainPoolEntry
     const list = ctx.data.protocolList!
 
-    // Get top protocol on this chain
+    // Get top DeFi protocol on this chain (exclude CEXs)
     const onChain = list
       .filter((p) => p.chains?.some((c) => c.toLowerCase() === topic.slug.toLowerCase()))
+      .filter((p) => !isExcludedCategory(p.category))
       .sort((a, b) => (b.tvl ?? 0) - (a.tvl ?? 0))
 
     if (onChain.length < 1) return []
@@ -1420,8 +1426,10 @@ const C14_TVL_DOMINANCE: TemplateConfig<C14Data> = {
     const topic = ctx.topic as ChainPoolEntry
     const list = ctx.data.protocolList!
 
+    // Filter to DeFi protocols only (exclude CEXs)
     const onChain = list
       .filter((p) => p.chains?.some((c) => c.toLowerCase() === topic.slug.toLowerCase()))
+      .filter((p) => !isExcludedCategory(p.category))
       .sort((a, b) => (b.tvl ?? 0) - (a.tvl ?? 0))
 
     if (onChain.length < 1) return null

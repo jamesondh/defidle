@@ -1,11 +1,11 @@
 {
-  "episodeId": "2025-12-17:protocol:okx",
+  "episodeId": "2025-12-17:protocol:eigencloud",
   "dateUtc": "2025-12-17",
   "episodeType": "protocol",
   "topic": {
-    "slug": "okx",
-    "name": "OKX",
-    "category": "CEX"
+    "slug": "eigencloud",
+    "name": "EigenCloud",
+    "category": "Restaking"
   },
   "questions": [
     {
@@ -15,80 +15,84 @@
       "format": "mc6",
       "prompt": "Which protocol matches these clues?",
       "clues": [
-        "Category: CEX",
-        "Chains: 10+ chains",
+        "Category: Restaking",
+        "Chains: single-chain",
         "TVL rank: top 10"
       ],
       "choices": [
-        "OKX",
-        "Core Bitcoin Bridge",
-        "World Chain",
-        "HashKey Exchange",
-        "Aster Bridge",
-        "Gate"
+        "Gauntlet",
+        "PancakeSwap AMM V3",
+        "EigenCloud",
+        "BlackRock BUIDL",
+        "Ondo Global Markets",
+        "Binance Bitcoin"
       ],
-      "answerIndex": 0,
-      "explanation": "OKX is a CEX protocol deployed on 19 chains with $22.8B TVL.",
+      "answerIndex": 2,
+      "explanation": "EigenCloud is a restaking protocol on the Ethereum blockchain with a total value locked (TVL) of $12.7B, placing it in the $10B+ TVL band. It operates on a single chain, which is Ethereum.",
       "difficulty": "medium",
-      "llmFallback": true,
+      "llmFallback": false,
       "signals": {
         "format": "mc6",
         "familiarityRankBucket": "top_10",
         "margin": null,
-        "volatility": 0.16074651502565807
+        "volatility": 0.2392775697395371
       },
-      "difficultyScore": 0.40607465150256583
+      "difficultyScore": 0.41392775697395373
     },
     {
       "qid": "q2",
       "slot": "B",
-      "templateId": "P2_CROSSCHAIN",
-      "format": "ab",
-      "prompt": "Where does OKX have higher TVL?",
+      "templateId": "P3_CONCENTRATION",
+      "format": "tf",
+      "prompt": "More than 90% of EigenCloud's TVL is on Ethereum.",
       "choices": [
-        "Ethereum",
-        "Bitcoin"
+        "True",
+        "False"
       ],
       "answerIndex": 0,
-      "explanation": "OKX has 20% more TVL on Ethereum ($11.7B) compared to Bitcoin ($9.4B).",
-      "difficulty": "easy",
-      "llmFallback": true,
+      "answerValue": true,
+      "explanation": "EigenCloud has a total value locked (TVL) of $12.7B, with 100% of this value concentrated on the Ethereum chain, which also has a TVL of $12.7B.",
+      "difficulty": "medium",
+      "llmFallback": false,
       "signals": {
-        "format": "ab",
+        "format": "tf",
         "familiarityRankBucket": "top_10",
-        "margin": 0.2013847436604994,
-        "volatility": 0.16074651502565807
+        "margin": 0.09999999999999998,
+        "volatility": 0.2392775697395371
       },
-      "difficultyScore": 0.2544129591099666
+      "difficultyScore": 0.30392775697395374
     },
     {
       "qid": "q3",
       "slot": "C",
-      "templateId": "P15_RECENT_TVL_DIRECTION",
-      "format": "ab",
-      "prompt": "Over the past 7 days, did OKX's TVL increase or decrease?",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did EigenCloud's weekly fees change compared to the previous week?",
       "choices": [
-        "Decrease",
-        "Increase"
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
       ],
-      "answerIndex": 0,
-      "explanation": "OKX's TVL decreased over the past 7 days (-3.3%), now at $22.8B.",
-      "difficulty": "hard",
-      "llmFallback": true,
+      "answerIndex": 3,
+      "explanation": "EigenCloud's fees have increased by 17.8%, with the current fees for the past week at $1M, unchanged from the previous week.",
+      "difficulty": "medium",
+      "llmFallback": false,
       "signals": {
-        "format": "ab",
+        "format": "mc4",
         "familiarityRankBucket": "top_10",
-        "margin": 0.03341375004079471,
-        "volatility": 0.16074651502565807
+        "margin": 0.17778963730218256,
+        "volatility": 0.2392775697395371
       },
-      "difficultyScore": 0.4559781514536122
+      "difficultyScore": 0.3505801922113347
     },
     {
       "qid": "q4",
       "slot": "D",
       "templateId": "P31_PRECISE_RANK",
       "format": "mc4",
-      "prompt": "What is OKX's current TVL rank among all protocols?",
+      "prompt": "What is EigenCloud's current TVL rank among all protocols?",
       "choices": [
         "#1-5",
         "#6-15",
@@ -97,23 +101,23 @@
         "#51-100"
       ],
       "answerIndex": 0,
-      "explanation": "OKX has a TVL of $22.8B, ranking 4th among DeFi protocols, just behind Lido at $26.0B and Aave V3 at $32.9B. It is part of the top rank bucket (#1-5), with Bitfinex and Bybit following at 5th and 6th ranks, respectively.",
+      "explanation": "EigenCloud ranks 3rd in total value locked (TVL) among DeFi protocols, with a TVL of $26.6B, placing it in the top 5 alongside Binance CEX ($165.8B) and Aave V3 ($33.5B).",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_10",
-        "margin": 0.1,
-        "volatility": 0.16074651502565807
+        "margin": 0.2,
+        "volatility": 0.2392775697395371
       },
-      "difficultyScore": 0.43607465150256586
+      "difficultyScore": 0.32392775697395376
     },
     {
       "qid": "q5",
       "slot": "E",
       "templateId": "P10_TVL_BAND",
       "format": "mc4",
-      "prompt": "Which TVL range fits OKX?",
+      "prompt": "Which TVL range fits EigenCloud?",
       "choices": [
         "<$50M",
         "$50M-$250M",
@@ -122,41 +126,50 @@
         ">$5B"
       ],
       "answerIndex": 4,
-      "explanation": "OKX has $22.8B in TVL, placing it in the $10B+ range.",
+      "explanation": "EigenCloud has a total value locked (TVL) of $12.7B, which places it in the TVL band of $10B or more. This indicates a significant amount of assets deposited in the protocol.",
       "difficulty": "easy",
-      "llmFallback": true,
+      "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_10",
         "margin": 1,
-        "volatility": 0.16074651502565807
+        "volatility": 0.2392775697395371
       },
-      "difficultyScore": 0.25607465150256586
+      "difficultyScore": 0.26392775697395376
     }
   ],
-  "generatedAt": "2025-12-19T13:27:53.432Z",
+  "generatedAt": "2025-12-22T12:23:44.273Z",
   "buildLog": [
     {
       "slot": "A",
       "template": "P1_FINGERPRINT",
       "format": "mc6",
       "decision": "selected",
-      "score": 0.40607465150256583,
+      "score": 0.41392775697395373,
       "target": "medium"
     },
     {
       "slot": "B",
       "template": "P2_CROSSCHAIN",
-      "format": "ab",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "B",
+      "template": "P3_CONCENTRATION",
+      "format": "tf",
       "decision": "selected",
-      "score": 0.2544129591099666,
+      "score": 0.30392775697395374,
       "target": "easy"
     },
     {
       "slot": "C",
       "template": "P5_FEES_REVENUE",
-      "decision": "skip",
-      "reason": "prereq_failed"
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.12392775697395372,
+      "target": "medium"
     },
     {
       "slot": "C",
@@ -164,7 +177,7 @@
       "format": "mc4",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.25607465150256586,
+      "score": 0.26392775697395376,
       "target": "medium"
     },
     {
@@ -173,59 +186,188 @@
       "format": "tf",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.11607465150256582,
+      "score": 0.12392775697395372,
       "target": "medium"
     },
     {
       "slot": "C",
       "template": "P11_FEES_TREND",
-      "decision": "skip",
-      "reason": "prereq_failed"
-    },
-    {
-      "slot": "C",
-      "template": "P14_CATEGORY_LEADER",
-      "decision": "skip",
-      "reason": "semantic_topic_covered:tvl_comparison"
-    },
-    {
-      "slot": "C",
-      "template": "P15_RECENT_TVL_DIRECTION",
-      "format": "ab",
-      "decision": "selected",
-      "score": 0.4559781514536122,
+      "decision": "adjusted",
+      "originalFormat": "tf",
+      "newFormat": "mc4",
+      "score": 0.3505801922113347,
       "target": "medium"
     },
     {
       "slot": "D",
       "template": "P31_PRECISE_RANK",
       "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.32392775697395376,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P32_EXCHANGE_COMPARISON",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.26392775697395376,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P4_ATH_TIMING",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.26392775697395376,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P4_ATH_TIMING",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.12392775697395372,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P5_FEES_REVENUE",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:fees_metrics"
+    },
+    {
+      "slot": "D",
+      "template": "P2_CROSSCHAIN",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P11_FEES_TREND",
+      "decision": "skip",
+      "reason": "already_used"
+    },
+    {
+      "slot": "D",
+      "template": "P9_TOP_CHAIN",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P13_TVL_RANK_COMPARISON",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.20392775697395377,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P13_TVL_RANK_COMPARISON",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.12392775697395372,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P14_CATEGORY_LEADER",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.20392775697395377,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P14_CATEGORY_LEADER",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.12392775697395372,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P16_CATEGORY_PEER",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.26392775697395376,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.26392775697395376,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P27_DERIVATIVES_RANKING",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P29_CATEGORY_GROWTH",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.26392775697395376,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P31_PRECISE_RANK",
+      "format": "mc4",
       "decision": "selected",
-      "score": 0.43607465150256586,
+      "reason": "close_enough",
+      "score": 0.32392775697395376,
       "target": "hard"
     },
     {
       "slot": "E",
       "template": "P6_TVL_TREND",
-      "decision": "skip",
-      "reason": "semantic_topic_covered:tvl_trend_7d"
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.4047654777361106,
+      "target": "easy"
     },
     {
       "slot": "E",
       "template": "P3_CONCENTRATION",
-      "format": "mc4",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.48985541162674223,
-      "target": "easy"
+      "decision": "skip",
+      "reason": "already_used"
     },
     {
       "slot": "E",
       "template": "P10_TVL_BAND",
       "format": "mc4",
       "decision": "selected",
-      "score": 0.25607465150256586,
+      "score": 0.26392775697395376,
       "target": "easy"
+    },
+    {
+      "decision": "post_balance",
+      "reason": "No challenging questions in episode"
     }
   ]
 }
