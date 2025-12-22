@@ -1,0 +1,136 @@
+{
+  "episodeId": "2025-12-22:protocol:bitget",
+  "dateUtc": "2025-12-22",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "bitget",
+    "name": "Bitget",
+    "category": "CEX"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: CEX",
+        "Chains: 10+ chains",
+        "TVL rank: top 25"
+      ],
+      "choices": [
+        "Venus Core Pool",
+        "USDT0",
+        "Phemex",
+        "PancakeSwap AMM V3",
+        "Falcon Finance",
+        "Bitget"
+      ],
+      "answerIndex": 5,
+      "explanation": "Bitget is a centralized exchange (CEX) with a total value locked (TVL) of $7.1B, which falls within the range of $5B-$10B, and it operates across 23 different chains, including Metis, Base, zkSync Era, Sui, and Avalanche.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.12457028109592007
+      },
+      "difficultyScore": 0.4184570281095919
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Bitget have higher TVL?",
+      "choices": [
+        "Bitcoin",
+        "Ethereum"
+      ],
+      "answerIndex": 0,
+      "explanation": "Bitget's total value locked (TVL) on Bitcoin is $3.0B, while Ethereum has a TVL of $2.3B, indicating that Bitcoin has a significantly higher value locked in its DeFi protocols. The margin percentage of 25% reflects the difference in TVL between the two chains.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.24502172808920997,
+        "volatility": 0.12457028109592007
+      },
+      "difficultyScore": 0.2144309544025401
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P15_RECENT_TVL_DIRECTION",
+      "format": "ab",
+      "prompt": "Over the past 30 days, did Bitget's TVL increase or decrease?",
+      "choices": [
+        "Increase",
+        "Decrease"
+      ],
+      "answerIndex": 0,
+      "explanation": "Bitget's total value locked (TVL) has increased by 6.6% over the past 30 days, reaching $7.1 billion. This indicates a growing interest and investment in the platform during this period.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.0662579582608134,
+        "volatility": 0.12457028109592007
+      },
+      "difficultyScore": 0.42894747819661594
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these CEX protocols from highest to lowest TVL.",
+      "choices": [
+        "OKX > Gemini > Bitget",
+        "OKX > Bitget > Gemini",
+        "Gemini > OKX > Bitget",
+        "Bitget > Gemini > OKX"
+      ],
+      "answerIndex": 0,
+      "explanation": "In the centralized exchange (CEX) category, OKX has the highest total value locked (TVL) at $22.5B, followed by Gemini with $7.3B, and Bitget with $7.1B. This ranking reflects the amount of assets deposited in each platform.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.02586526462273114,
+        "volatility": 0.12457028109592007
+      },
+      "difficultyScore": 0.5374187105623146
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Bitget's TVL is on its top chain (Bitcoin)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 1,
+      "explanation": "Bitget has a total value locked (TVL) of $7.1B, with Bitcoin being the top chain, accounting for 42% of the total TVL at $3.0B.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.3003964242832169,
+        "volatility": 0.12457028109592007
+      },
+      "difficultyScore": 0.268457028109592
+    }
+  ],
+  "generatedAt": "2025-12-22T00:25:55.499Z"
+}

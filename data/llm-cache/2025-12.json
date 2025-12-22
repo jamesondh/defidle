@@ -148,5 +148,30 @@
     "text": "Gemini has a total value locked (TVL) of $7.3B, which falls within the TVL band of $5B to $10B. This indicates a significant amount of assets deposited in the Gemini protocol.",
     "model": "gpt-4o-mini",
     "generatedAt": "2025-12-21T00:26:29.186Z"
+  },
+  "2025-12-22|protocol|bitget|A|P1_FINGERPRINT|explanation|64697fef8b62545a": {
+    "text": "Bitget is a centralized exchange (CEX) with a total value locked (TVL) of $7.1B, which falls within the range of $5B-$10B, and it operates across 23 different chains, including Metis, Base, zkSync Era, Sui, and Avalanche.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T00:25:49.132Z"
+  },
+  "2025-12-22|protocol|bitget|B|P2_CROSSCHAIN|explanation|e2ba42ac8db1772e": {
+    "text": "Bitget's total value locked (TVL) on Bitcoin is $3.0B, while Ethereum has a TVL of $2.3B, indicating that Bitcoin has a significantly higher value locked in its DeFi protocols. The margin percentage of 25% reflects the difference in TVL between the two chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T00:25:51.554Z"
+  },
+  "2025-12-22|protocol|bitget|C|P15_RECENT_TVL_DIRECTION|explanation|191cb22205a417e1": {
+    "text": "Bitget's total value locked (TVL) has increased by 6.6% over the past 30 days, reaching $7.1 billion. This indicates a growing interest and investment in the platform during this period.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T00:25:53.307Z"
+  },
+  "2025-12-22|protocol|bitget|D|P33_MULTI_RANKING|explanation|a7f88ce5f2f2c5a9": {
+    "text": "In the centralized exchange (CEX) category, OKX has the highest total value locked (TVL) at $22.5B, followed by Gemini with $7.3B, and Bitget with $7.1B. This ranking reflects the amount of assets deposited in each platform.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T00:25:54.591Z"
+  },
+  "2025-12-22|protocol|bitget|E|P3_CONCENTRATION|explanation|1414034c7e06b523": {
+    "text": "Bitget has a total value locked (TVL) of $7.1B, with Bitcoin being the top chain, accounting for 42% of the total TVL at $3.0B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-22T00:25:55.499Z"
   }
 }
