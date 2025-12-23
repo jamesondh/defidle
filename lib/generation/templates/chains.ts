@@ -42,13 +42,25 @@ interface C1Data {
   tvlRank: number
   rankBucket: string
   tvlBand: string
-  tokenSymbol: string | undefined
+  protocolCount: number
+  protocolCountBucket: string
   change30d: number | null
   trendBucket: string | undefined
   distractors: string[]
   // Track what clues were revealed (for dynamic semantic topics)
   revealedTvlBand: boolean
   revealedTrend: boolean
+}
+
+/**
+ * Get a human-readable bucket for protocol count
+ */
+function getProtocolCountBucket(count: number): string {
+  if (count >= 200) return "200+"
+  if (count >= 100) return "100-200"
+  if (count >= 50) return "50-100"
+  if (count >= 20) return "20-50"
+  return "<20"
 }
 
 const C1_FINGERPRINT: TemplateConfig<C1Data> = {
@@ -108,16 +120,24 @@ const C1_FINGERPRINT: TemplateConfig<C1Data> = {
       }
     }
 
-    // Build distractor pool
+    // Build distractor pool with rank information
+    // Sort chains by TVL to compute ranks
+    const sortedChains = [...chainList].sort((a, b) => (b.tvl ?? 0) - (a.tvl ?? 0))
+    const rankMap = new Map<string, number>()
+    sortedChains.forEach((c, idx) => rankMap.set(c.name, idx + 1))
+
     const pool: ChainEntity[] = chainList.map((c) => ({
       id: c.name,
       slug: c.name,
       name: c.name,
       tvl: c.tvl,
+      tvlRank: rankMap.get(c.name),
     }))
 
     const distractorCount = topic.tvlRank > 20 ? 3 : 5
-    const distractors = pickChainDistractors(topic.slug, pool, distractorCount, seed)
+    const distractors = pickChainDistractors(topic.slug, pool, distractorCount, seed, {
+      preferNearRank: topic.tvlRank,
+    })
 
     if (!distractors) return null
 
@@ -132,7 +152,8 @@ const C1_FINGERPRINT: TemplateConfig<C1Data> = {
       tvlRank: topic.tvlRank,
       rankBucket,
       tvlBand,
-      tokenSymbol: topic.tokenSymbol,
+      protocolCount: topic.protocolCount,
+      protocolCountBucket: getProtocolCountBucket(topic.protocolCount),
       change30d,
       trendBucket,
       distractors,
@@ -147,26 +168,24 @@ const C1_FINGERPRINT: TemplateConfig<C1Data> = {
 
   getClues(data) {
     const clues: string[] = []
-    
+
     // Always include rank bucket
     clues.push(`TVL rank: ${data.rankBucket}`)
-    
+
+    // Always include protocol count - this is informative without revealing identity
+    clues.push(`Protocols: ${data.protocolCountBucket}`)
+
     // For less familiar chains (rank > 25), include TVL band
     // For familiar chains, omit to allow later questions about it
     if (data.revealedTvlBand) {
       clues.push(`TVL: ${data.tvlBand}`)
     }
-    
-    // Always include native token if available
-    if (data.tokenSymbol) {
-      clues.push(`Native token: ${data.tokenSymbol}`)
-    }
-    
+
     // For less familiar chains, include trend direction
     if (data.revealedTrend && data.trendBucket) {
       clues.push(`30d trend: ${data.trendBucket}`)
     }
-    
+
     return clues
   },
 
@@ -195,8 +214,8 @@ const C1_FINGERPRINT: TemplateConfig<C1Data> = {
       name: topic.name,
       tvlRank: data.tvlRank,
       tvlFormatted: data.tvlBand,
-      tokenSymbol: data.tokenSymbol ?? "N/A",
-      protocolCount: topic.protocolCount,
+      protocolCount: data.protocolCount,
+      protocolCountBucket: data.protocolCountBucket,
     }
   },
 }
@@ -498,7 +517,10 @@ const C4_GROWTH_RANKING: TemplateConfig<C4Data> = {
 
   getExplainData(data) {
     return {
-      topChain: data.topGrower.name,
+      // IMPORTANT: The explanation should be about answerChain, NOT the episode topic
+      // The episode topic is different from the question's subject in growth ranking questions
+      answerChain: data.topGrower.name,
+      topChain: data.topGrower.name, // Kept for backward compatibility
       topGrowth: (data.topGrower.change30d * 100).toFixed(1),
       topChange: `${data.topGrower.change30d > 0 ? "+" : ""}${(data.topGrower.change30d * 100).toFixed(1)}%`,
       otherChains: data.distractors.map((d) => ({
@@ -508,6 +530,8 @@ const C4_GROWTH_RANKING: TemplateConfig<C4Data> = {
       comparison: data.distractors
         .map((d) => `${d.name} (${d.change30d > 0 ? "+" : ""}${(d.change30d * 100).toFixed(1)}%)`)
         .join(", "),
+      // Explicit note for LLM: use answerChain, not the episode topic
+      _note: "Write about answerChain as the subject. Do NOT use the episode topic name.",
     }
   },
 }

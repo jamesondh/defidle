@@ -42,6 +42,8 @@ export interface ChainEntity extends Entity {
   slug: string
   name: string
   tvl: number
+  /** TVL rank (1 = highest TVL). Used to filter out obscure chains as distractors. */
+  tvlRank?: number
 }
 
 /**
@@ -290,19 +292,41 @@ export function pickProtocolDistractors(
 }
 
 /**
- * Pick chain distractors with name display
+ * Pick chain distractors with name display.
+ *
+ * By default, applies a maxTvlRank of 30 to ensure distractors are
+ * recognizable chains. Override with constraints.maxTvlRank if needed.
+ *
+ * @param correctSlug - Slug of the correct chain
+ * @param pool - Pool of chain candidates
+ * @param count - Number of distractors needed
+ * @param seed - Seed for deterministic selection
+ * @param constraints - Optional constraints (maxTvlRank defaults to 30)
  */
 export function pickChainDistractors(
   correctSlug: string,
   pool: ChainEntity[],
   count: number,
-  seed: number
+  seed: number,
+  constraints?: Partial<DistractorConstraints>
 ): string[] | null {
+  const correct = pool.find((c) => c.slug === correctSlug)
+
+  // Apply default constraints to ensure recognizable chains as distractors
+  // Can be overridden via constraints
+  const fullConstraints: DistractorConstraints = {
+    count,
+    maxTvlRank: 30, // Default: only top 30 chains as distractors
+    preferNearRank: correct?.tvlRank, // Prefer chains of similar size
+    ...constraints,
+  }
+
   const distractors = pickEntityDistractors(
     correctSlug,
     pool,
-    { count },
-    seed
+    fullConstraints,
+    seed,
+    correct?.tvl
   )
 
   return distractors?.map((d) => d.name) ?? null
