@@ -268,5 +268,30 @@
     "text": "On the Solana blockchain, HumidiFi is the top decentralized exchange (DEX) with a trading volume of $915M, significantly higher than other DEXes like PumpSwap at $398M and Raydium AMM at $266M. This large volume indicates HumidiFi's leading position in the Solana DeFi ecosystem.",
     "model": "gpt-4o-mini",
     "generatedAt": "2025-12-22T15:55:38.566Z"
+  },
+  "2025-12-23|chain|Sei|A|C1_FINGERPRINT|explanation|2d3f51f355082965": {
+    "text": "Sei is ranked 25th in total value locked (TVL), with a TVL ranging from $100M to $500M, and it supports 66 different protocols. The native token for Sei is represented by the symbol SEI.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-23T00:24:16.046Z"
+  },
+  "2025-12-23|chain|Sei|B|C2_CHAIN_COMPARISON|explanation|1ab888bcfe7e5526": {
+    "text": "Linea has a TVL of $222M, surpassing Sei's TVL of $208M by 6.5%. This indicates that more assets are locked in Linea compared to Sei.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-23T00:24:17.923Z"
+  },
+  "2025-12-23|chain|Sei|C|C6_TOP_DEX|explanation|0f212194f65c6e60": {
+    "text": "On the Sei chain, the top decentralized exchange (DEX) is Dragon Swap V3 Sei, with a trading volume of $14M. This is significantly higher than its closest competitor, Sailor, which has a volume of $11M, and far exceeds Oxium at $8M and Uniswap V3 at $356K.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-23T00:24:20.386Z"
+  },
+  "2025-12-23|chain|Sei|D|C3_ATH_TIMING|explanation|d9b8d0e9d553c114": {
+    "text": "Sei reached its all-time high (ATH) in total value locked (TVL) of $688M in July 2025. This figure represents the peak amount of assets deposited in the Sei protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-23T00:24:22.275Z"
+  },
+  "2025-12-23|chain|Sei|E|C4_GROWTH_RANKING|explanation|ca935e14ca00cd36": {
+    "text": "Monad achieved a remarkable growth rate of +86,035,918.0%, significantly outpacing other chains like Plasma at +18.6% and Scroll at +9.5%. This extraordinary increase highlights Monad's exceptional performance in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-23T00:24:24.256Z"
   }
 }

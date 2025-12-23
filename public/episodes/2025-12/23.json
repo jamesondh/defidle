@@ -1,0 +1,137 @@
+{
+  "episodeId": "2025-12-23:chain:Sei",
+  "dateUtc": "2025-12-23",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Sei",
+    "name": "Sei"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Native token: SEI"
+      ],
+      "choices": [
+        "Vaulta",
+        "GodwokenV1",
+        "Comdex",
+        "Sei"
+      ],
+      "answerIndex": 3,
+      "explanation": "Sei is ranked 25th in total value locked (TVL), with a TVL ranging from $100M to $500M, and it supports 66 different protocols. The native token for Sei is represented by the symbol SEI.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.371
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "prompt": "Sei has higher TVL than Linea.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "Linea has a TVL of $222M, surpassing Sei's TVL of $208M by 6.5%. This indicates that more assets are locked in Linea compared to Sei.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.06516069900238664,
+        "volatility": null
+      },
+      "difficultyScore": 0.3628071611971361
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Sei?",
+      "choices": [
+        "Sailor",
+        "Uniswap V3",
+        "Dragon Swap V3 Sei",
+        "Oxium"
+      ],
+      "answerIndex": 2,
+      "explanation": "On the Sei chain, the top decentralized exchange (DEX) is Dragon Swap V3 Sei, with a trading volume of $14M. This is significantly higher than its closest competitor, Sailor, which has a volume of $11M, and far exceeds Oxium at $8M and Uniswap V3 at $356K.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.21701148604355155,
+        "volatility": null
+      },
+      "difficultyScore": 0.3205862167477382
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Sei hit its all-time high TVL?",
+      "choices": [
+        "May 2025",
+        "Aug 2025",
+        "Jul 2025",
+        "Sep 2025",
+        "Apr 2025",
+        "Oct 2025"
+      ],
+      "answerIndex": 2,
+      "explanation": "Sei reached its all-time high (ATH) in total value locked (TVL) of $688M in July 2025. This figure represents the peak amount of assets deposited in the Sei protocol.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.5,
+        "volatility": null
+      },
+      "difficultyScore": 0.34099999999999997
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Scroll",
+        "Plasma",
+        "Ethereum",
+        "Monad"
+      ],
+      "answerIndex": 3,
+      "explanation": "Monad achieved a remarkable growth rate of +86,035,918.0%, significantly outpacing other chains like Plasma at +18.6% and Scroll at +9.5%. This extraordinary increase highlights Monad's exceptional performance in the DeFi space.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 1,
+        "volatility": null
+      },
+      "difficultyScore": 0.281
+    }
+  ],
+  "generatedAt": "2025-12-23T00:24:24.257Z"
+}
