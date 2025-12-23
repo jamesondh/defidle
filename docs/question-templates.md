@@ -45,7 +45,7 @@ Identify a protocol from a set of clues about its characteristics
 |----------|-------|
 | **ID** | `P1_FINGERPRINT` |
 | **Type** | protocol |
-| **Semantic Topics** | `tvl_absolute`, `fingerprint_tvl_revealed`, `fingerprint_trend_revealed` |
+| **Semantic Topics** | `fingerprint_base` |
 | **Slot Assignments** | A |
 | **Reusable** | No |
 
@@ -59,7 +59,7 @@ Compare a protocol's TVL across two chains
 |----------|-------|
 | **ID** | `P2_CROSSCHAIN` |
 | **Type** | protocol |
-| **Semantic Topics** | `tvl_absolute` |
+| **Semantic Topics** | `tvl_comparison`, `cross_chain_dominance` |
 | **Slot Assignments** | B, D |
 | **Reusable** | No |
 
@@ -73,7 +73,7 @@ What share of a protocol's TVL is on its dominant chain
 |----------|-------|
 | **ID** | `P3_CONCENTRATION` |
 | **Type** | protocol |
-| **Semantic Topics** | `tvl_absolute` |
+| **Semantic Topics** | `tvl_concentration` |
 | **Slot Assignments** | B, E |
 | **Reusable** | No |
 
@@ -88,7 +88,7 @@ When did a protocol reach its all-time high TVL
 | **ID** | `P4_ATH_TIMING` |
 | **Type** | protocol |
 | **Semantic Topics** | `ath_history` |
-| **Slot Assignments** | C, D |
+| **Slot Assignments** | D |
 | **Reusable** | No |
 
 ---
@@ -109,13 +109,13 @@ Compare a protocol's fees and revenue metrics
 
 ### P6_TVL_TREND: TVL Trend
 
-Did a protocol's TVL increase or decrease over a given period
+Did a protocol's TVL increase or decrease over the past 30 days
 
 | Property | Value |
 |----------|-------|
 | **ID** | `P6_TVL_TREND` |
 | **Type** | protocol |
-| **Semantic Topics** | `tvl_trend_7d`, `tvl_direction`, `fingerprint_trend_revealed` |
+| **Semantic Topics** | `tvl_trend_30d`, `tvl_direction`, `fingerprint_trend_revealed` |
 | **Slot Assignments** | E |
 | **Reusable** | No |
 
@@ -143,7 +143,7 @@ Check if a protocol is deployed on a specific chain
 |----------|-------|
 | **ID** | `P8_CHAIN_MEMBERSHIP` |
 | **Type** | protocol |
-| **Semantic Topics** | None |
+| **Semantic Topics** | `chain_identity` |
 | **Slot Assignments** | E |
 | **Reusable** | No |
 
@@ -213,7 +213,7 @@ Compare a protocol's TVL to another similar protocol
 |----------|-------|
 | **ID** | `P13_TVL_RANK_COMPARISON` |
 | **Type** | protocol |
-| **Semantic Topics** | `tvl_absolute` |
+| **Semantic Topics** | `tvl_comparison` |
 | **Slot Assignments** | B, D |
 | **Reusable** | No |
 
@@ -227,7 +227,7 @@ Compare protocol to others in the same category
 |----------|-------|
 | **ID** | `P14_CATEGORY_LEADER` |
 | **Type** | protocol |
-| **Semantic Topics** | `tvl_absolute` |
+| **Semantic Topics** | `tvl_comparison`, `category_ranking` |
 | **Slot Assignments** | C, D |
 | **Reusable** | No |
 
@@ -235,13 +235,13 @@ Compare protocol to others in the same category
 
 ### P15_RECENT_TVL_DIRECTION: Recent TVL Direction
 
-Simple question about protocol's recent TVL trend
+Simple question about protocol's recent TVL trend (30-day minimum)
 
 | Property | Value |
 |----------|-------|
 | **ID** | `P15_RECENT_TVL_DIRECTION` |
 | **Type** | protocol |
-| **Semantic Topics** | `tvl_trend_7d`, `tvl_direction`, `fingerprint_trend_revealed` |
+| **Semantic Topics** | `tvl_trend_30d`, `tvl_direction`, `fingerprint_trend_revealed` |
 | **Slot Assignments** | C, E |
 | **Reusable** | No |
 
@@ -255,7 +255,7 @@ Which protocol has highest/lowest TVL in category
 |----------|-------|
 | **ID** | `P16_CATEGORY_PEER` |
 | **Type** | protocol |
-| **Semantic Topics** | `tvl_absolute`, `category_ranking` |
+| **Semantic Topics** | `tvl_comparison`, `category_ranking` |
 | **Slot Assignments** | B, D |
 | **Reusable** | No |
 
@@ -283,7 +283,7 @@ What percentage of category TVL does this protocol hold
 |----------|-------|
 | **ID** | `P22_CATEGORY_MARKET_SHARE` |
 | **Type** | protocol |
-| **Semantic Topics** | `tvl_absolute`, `category_ranking` |
+| **Semantic Topics** | `category_market_share`, `category_ranking` |
 | **Slot Assignments** | C, E |
 | **Reusable** | No |
 
@@ -297,7 +297,7 @@ Compare TVL between derivatives/perps protocols
 |----------|-------|
 | **ID** | `P27_DERIVATIVES_RANKING` |
 | **Type** | protocol |
-| **Semantic Topics** | `derivatives_ranking`, `tvl_absolute` |
+| **Semantic Topics** | `derivatives_ranking`, `tvl_comparison` |
 | **Slot Assignments** | B, C, D |
 | **Reusable** | No |
 
@@ -383,7 +383,7 @@ Identify a chain from a set of clues
 |----------|-------|
 | **ID** | `C1_FINGERPRINT` |
 | **Type** | chain |
-| **Semantic Topics** | `tvl_absolute`, `fingerprint_tvl_revealed`, `fingerprint_trend_revealed` |
+| **Semantic Topics** | `fingerprint_base` |
 | **Slot Assignments** | A |
 | **Reusable** | No |
 
@@ -397,7 +397,7 @@ Compare TVL between two chains
 |----------|-------|
 | **ID** | `C2_CHAIN_COMPARISON` |
 | **Type** | chain |
-| **Semantic Topics** | `tvl_absolute` |
+| **Semantic Topics** | `tvl_comparison` |
 | **Slot Assignments** | B, E |
 | **Reusable** | No |
 
@@ -412,7 +412,7 @@ When did a chain reach its ATH TVL
 | **ID** | `C3_ATH_TIMING` |
 | **Type** | chain |
 | **Semantic Topics** | `ath_history` |
-| **Slot Assignments** | C, D |
+| **Slot Assignments** | D |
 | **Reusable** | No |
 
 ---
@@ -592,8 +592,8 @@ Questions about TVL movement over time periods
 
 | ID | Format | Difficulty | Semantic Topics |
 |----|--------|------------|-----------------|
-| `protocol_tvl_increased_7d` | True/False | Easy | `tvl_trend` |
-| `protocol_tvl_decreased_7d` | True/False | Easy | `tvl_trend` |
+| `protocol_tvl_increased_30d` | True/False | Easy | `tvl_trend` |
+| `protocol_tvl_decreased_30d` | True/False | Easy | `tvl_trend` |
 
 ### Trend Threshold
 
@@ -601,8 +601,8 @@ Questions about whether TVL changed by more than a threshold
 
 | ID | Format | Difficulty | Semantic Topics |
 |----|--------|------------|-----------------|
-| `protocol_tvl_up_5pct` | True/False | Medium | `tvl_trend` |
-| `protocol_tvl_down_5pct` | True/False | Medium | `tvl_trend` |
+| `protocol_tvl_up_10pct` | True/False | Medium | `tvl_trend` |
+| `protocol_tvl_down_10pct` | True/False | Medium | `tvl_trend` |
 
 ### Rank Position
 
@@ -693,25 +693,25 @@ Questions comparing TVL between two entities
 
 | ID | Name | Semantic Topics | Slots |
 |----|------|-----------------|-------|
-| P1_FINGERPRINT | Protocol Fingerprint Guess | `tvl_absolute`, `fingerprint_tvl_revealed`, `fingerprint_trend_revealed` | A |
-| P2_CROSSCHAIN | Cross-Chain Dominance | `tvl_absolute` | B, D |
-| P3_CONCENTRATION | Top Chain Concentration | `tvl_absolute` | B, E |
-| P4_ATH_TIMING | ATH Timing | `ath_history` | C, D |
+| P1_FINGERPRINT | Protocol Fingerprint Guess | `fingerprint_base` | A |
+| P2_CROSSCHAIN | Cross-Chain Dominance | `tvl_comparison`, `cross_chain_dominance` | B, D |
+| P3_CONCENTRATION | Top Chain Concentration | `tvl_concentration` | B, E |
+| P4_ATH_TIMING | ATH Timing | `ath_history` | D |
 | P5_FEES_REVENUE | Fees vs Revenue | `fees_metrics` | C, D |
-| P6_TVL_TREND | TVL Trend | `tvl_trend_7d`, `tvl_direction`, `fingerprint_trend_revealed` | E |
+| P6_TVL_TREND | TVL Trend | `tvl_trend_30d`, `tvl_direction`, `fingerprint_trend_revealed` | E |
 | P7_CATEGORY | Category Identification | `category_identification` | B |
-| P8_CHAIN_MEMBERSHIP | Chain Membership | None | E |
+| P8_CHAIN_MEMBERSHIP | Chain Membership | `chain_identity` | E |
 | P9_TOP_CHAIN | Top Chain Name | None | B, D |
 | P10_TVL_BAND | TVL Band | `tvl_magnitude`, `fingerprint_tvl_revealed` | E |
 | P11_FEES_TREND | Fees Trend | `fees_metrics` | C, D |
 | P12_DEX_VOLUME_TREND | DEX Volume Trend | None | E |
-| P13_TVL_RANK_COMPARISON | TVL Rank Comparison | `tvl_absolute` | B, D |
-| P14_CATEGORY_LEADER | Category Leader Comparison | `tvl_absolute` | C, D |
-| P15_RECENT_TVL_DIRECTION | Recent TVL Direction | `tvl_trend_7d`, `tvl_direction`, `fingerprint_trend_revealed` | C, E |
-| P16_CATEGORY_PEER | Category Peer Comparison | `tvl_absolute`, `category_ranking` | B, D |
+| P13_TVL_RANK_COMPARISON | TVL Rank Comparison | `tvl_comparison` | B, D |
+| P14_CATEGORY_LEADER | Category Leader Comparison | `tvl_comparison`, `category_ranking` | C, D |
+| P15_RECENT_TVL_DIRECTION | Recent TVL Direction | `tvl_trend_30d`, `tvl_direction`, `fingerprint_trend_revealed` | C, E |
+| P16_CATEGORY_PEER | Category Peer Comparison | `tvl_comparison`, `category_ranking` | B, D |
 | P20_ATH_DISTANCE | ATH Distance | `ath_history`, `tvl_magnitude` | C, D |
-| P22_CATEGORY_MARKET_SHARE | Category Market Share | `tvl_absolute`, `category_ranking` | C, E |
-| P27_DERIVATIVES_RANKING | Derivatives Protocol Comparison | `derivatives_ranking`, `tvl_absolute` | B, C, D |
+| P22_CATEGORY_MARKET_SHARE | Category Market Share | `category_market_share`, `category_ranking` | C, E |
+| P27_DERIVATIVES_RANKING | Derivatives Protocol Comparison | `derivatives_ranking`, `tvl_comparison` | B, C, D |
 | P29_CATEGORY_GROWTH | Category TVL Growth Comparison | `category_trend` | C, D |
 | P30_CHAIN_EXPANSION | Protocol Chain Expansion | `chain_expansion` | B, E |
 | P31_PRECISE_RANK | Precise TVL Rank Position | `tvl_rank_precise` | D |
@@ -722,9 +722,9 @@ Questions comparing TVL between two entities
 
 | ID | Name | Semantic Topics | Slots |
 |----|------|-----------------|-------|
-| C1_FINGERPRINT | Chain Fingerprint Guess | `tvl_absolute`, `fingerprint_tvl_revealed`, `fingerprint_trend_revealed` | A |
-| C2_CHAIN_COMPARISON | Chain TVL Comparison | `tvl_absolute` | B, E |
-| C3_ATH_TIMING | Chain ATH Timing | `ath_history` | C, D |
+| C1_FINGERPRINT | Chain Fingerprint Guess | `fingerprint_base` | A |
+| C2_CHAIN_COMPARISON | Chain TVL Comparison | `tvl_comparison` | B, E |
+| C3_ATH_TIMING | Chain ATH Timing | `ath_history` | D |
 | C4_GROWTH_RANKING | Chain Growth Ranking | `tvl_trend` | C, D, E |
 | C5_TOP_BY_FEES | Top Protocol by Fees | `fees_metrics` | C, E |
 | C6_TOP_DEX | Top DEX by Volume | None | C, E |
@@ -750,24 +750,30 @@ Templates and fallbacks with overlapping semantic topics will not both be select
 
 | Semantic Topic | Templates/Fallbacks |
 |----------------|---------------------|
-| `tvl_absolute` | P1_FINGERPRINT, P2_CROSSCHAIN, P3_CONCENTRATION, P13_TVL_RANK_COMPARISON, P14_CATEGORY_LEADER, P16_CATEGORY_PEER, ... (22 total) |
-| `fingerprint_tvl_revealed` | P1_FINGERPRINT, P10_TVL_BAND, C1_FINGERPRINT, C7_CHAIN_TVL_BAND |
-| `fingerprint_trend_revealed` | P1_FINGERPRINT, P6_TVL_TREND, P15_RECENT_TVL_DIRECTION, C1_FINGERPRINT, C8_30D_DIRECTION |
+| `fingerprint_base` | P1_FINGERPRINT, C1_FINGERPRINT |
+| `tvl_comparison` | P2_CROSSCHAIN, P13_TVL_RANK_COMPARISON, P14_CATEGORY_LEADER, P16_CATEGORY_PEER, P27_DERIVATIVES_RANKING, C2_CHAIN_COMPARISON |
+| `cross_chain_dominance` | P2_CROSSCHAIN |
+| `tvl_concentration` | P3_CONCENTRATION |
 | `ath_history` | P4_ATH_TIMING, P20_ATH_DISTANCE, C3_ATH_TIMING, C9_DISTANCE_FROM_ATH |
 | `fees_metrics` | P5_FEES_REVENUE, P11_FEES_TREND, C5_TOP_BY_FEES |
-| `tvl_trend_7d` | P6_TVL_TREND, P15_RECENT_TVL_DIRECTION |
+| `tvl_trend_30d` | P6_TVL_TREND, P15_RECENT_TVL_DIRECTION |
 | `tvl_direction` | P6_TVL_TREND, P15_RECENT_TVL_DIRECTION |
+| `fingerprint_trend_revealed` | P6_TVL_TREND, P15_RECENT_TVL_DIRECTION, C8_30D_DIRECTION |
 | `category_identification` | P7_CATEGORY |
+| `chain_identity` | P8_CHAIN_MEMBERSHIP |
 | `tvl_magnitude` | P10_TVL_BAND, P20_ATH_DISTANCE, C7_CHAIN_TVL_BAND |
-| `category_ranking` | P16_CATEGORY_PEER, P22_CATEGORY_MARKET_SHARE |
+| `fingerprint_tvl_revealed` | P10_TVL_BAND, C7_CHAIN_TVL_BAND |
+| `category_ranking` | P14_CATEGORY_LEADER, P16_CATEGORY_PEER, P22_CATEGORY_MARKET_SHARE |
+| `category_market_share` | P22_CATEGORY_MARKET_SHARE |
 | `derivatives_ranking` | P27_DERIVATIVES_RANKING |
 | `category_trend` | P29_CATEGORY_GROWTH |
 | `chain_expansion` | P30_CHAIN_EXPANSION |
 | `tvl_rank_precise` | P31_PRECISE_RANK |
 | `exchange_comparison` | P32_EXCHANGE_COMPARISON |
 | `multi_protocol_ranking` | P33_MULTI_RANKING |
-| `tvl_trend` | C4_GROWTH_RANKING, C8_30D_DIRECTION, FALLBACK_PROTOCOL_TVL_INCREASED_7D, FALLBACK_PROTOCOL_TVL_DECREASED_7D, FALLBACK_PROTOCOL_TVL_UP_5PCT, FALLBACK_PROTOCOL_TVL_DOWN_5PCT, ... (10 total) |
+| `tvl_trend` | C4_GROWTH_RANKING, C8_30D_DIRECTION, FALLBACK_PROTOCOL_TVL_INCREASED_30D, FALLBACK_PROTOCOL_TVL_DECREASED_30D, FALLBACK_PROTOCOL_TVL_UP_10PCT, FALLBACK_PROTOCOL_TVL_DOWN_10PCT, ... (10 total) |
 | `chain_classification` | C13_LAYER_TYPE |
 | `chain_concentration` | C14_TVL_DOMINANCE |
+| `tvl_absolute` | FALLBACK_PROTOCOL_TVL_ABOVE_100M, FALLBACK_PROTOCOL_TVL_ABOVE_500M, FALLBACK_PROTOCOL_TVL_ABOVE_1B, FALLBACK_PROTOCOL_TVL_ABOVE_5B, FALLBACK_PROTOCOL_COMPARE_NEARBY, FALLBACK_PROTOCOL_COMPARE_CATEGORY, ... (12 total) |
 | `tvl_rank` | FALLBACK_PROTOCOL_RANK_TOP_10, FALLBACK_PROTOCOL_RANK_TOP_25, FALLBACK_PROTOCOL_RANK_TOP_50, FALLBACK_CHAIN_RANK_TOP_5, FALLBACK_CHAIN_RANK_TOP_10, FALLBACK_CHAIN_RANK_TOP_20 |
 | `chain_count` | FALLBACK_PROTOCOL_CHAINS_ABOVE_3, FALLBACK_PROTOCOL_CHAINS_ABOVE_5, FALLBACK_PROTOCOL_CHAINS_ABOVE_10 |

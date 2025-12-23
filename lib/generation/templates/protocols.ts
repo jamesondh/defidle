@@ -384,6 +384,8 @@ const P3_CONCENTRATION: TemplateConfig<P3Data> = {
   description: "What share of a protocol's TVL is on its dominant chain",
   type: "protocol",
   // Reveals concentration percentage, not absolute TVL
+  // Note: For single-chain protocols, this would reveal chain identity (conflicts with P8),
+  // but we skip single-chain protocols in checkPrereqs since the question would be trivial.
   semanticTopics: ["tvl_concentration"],
 
   checkPrereqs(ctx) {
@@ -391,15 +393,15 @@ const P3_CONCENTRATION: TemplateConfig<P3Data> = {
     const detail = ctx.data.protocolDetail
     if (!detail?.currentChainTvls) return { passed: false, reason: "no_chain_tvls" }
     const chains = filterToActualChains(detail.currentChainTvls)
-    if (chains.length < 1) return { passed: false, reason: "no_chains" }
+    // Require at least 2 chains - single-chain protocols make this question trivial
+    // ("More than 90% on X" is always true at 100% for single-chain)
+    // This also prevents semantic overlap with P8_CHAIN_MEMBERSHIP for single-chain protocols
+    if (chains.length < 2) return { passed: false, reason: "single_chain_trivial" }
     return { passed: true }
   },
 
-  getFormats(ctx) {
-    const detail = ctx.data.protocolDetail!
-    const chains = filterToActualChains(detail.currentChainTvls)
-    // Single chain = TF format ("Is >90% on {chain}?")
-    if (chains.length === 1) return ["tf"]
+  getFormats() {
+    // Multi-chain protocols always get MC4 format (bucket selection)
     return ["mc4"]
   },
 
@@ -418,35 +420,23 @@ const P3_CONCENTRATION: TemplateConfig<P3Data> = {
     return { topChain, topChainTvl, totalTvl, topShare, bucketIndex }
   },
 
-  getPrompt(data, ctx, format) {
+  getPrompt(data, ctx) {
     const detail = ctx.data.protocolDetail!
-    if (format === "tf") {
-      return `More than 90% of ${detail.name}'s TVL is on ${data.topChain}.`
-    }
     return `What share of ${detail.name}'s TVL is on its top chain (${data.topChain})?`
   },
 
-  getChoices(_data, _ctx, format) {
-    if (format === "tf") return ["True", "False"]
+  getChoices() {
     return getConcentrationBucketChoices()
   },
 
-  getAnswerIndex(data, _ctx, format) {
-    if (format === "tf") {
-      return data.topShare >= 0.9 ? 0 : 1
-    }
+  getAnswerIndex(data) {
     return data.bucketIndex
   },
 
-  getAnswerValue(data) {
-    return data.topShare >= 0.9
-  },
+  // No getAnswerValue needed - MC format only
 
-  getMargin(data, _ctx, format) {
-    if (format === "tf") {
-      return Math.abs(data.topShare - 0.9)
-    }
-    // For bucket format, margin is distance to bucket boundaries
+  getMargin(data) {
+    // Margin is distance to bucket boundaries
     const boundaries = [0.25, 0.5, 0.75]
     const minDist = Math.min(...boundaries.map((b) => Math.abs(data.topShare - b)))
     return Math.min(1, minDist * 4)
@@ -473,7 +463,7 @@ interface P4Data {
   athTs: number
   athMonth: string
   athYYYYMM: string
-  newHighIn90d: boolean
+  historyStartYYYYMM: string
   distractorMonths: string[]
 }
 
@@ -486,24 +476,18 @@ const P4_ATH_TIMING: TemplateConfig<P4Data> = {
 
   checkPrereqs(ctx) {
     if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
-    if (!hasMinProtocolHistory(ctx, 90)) return { passed: false, reason: "need_90d_history" }
+    // Require at least 6 months of history for this to be a meaningful hard question
+    if (!hasMinProtocolHistory(ctx, 180)) return { passed: false, reason: "need_180d_history" }
     if (!ctx.derived.athValue || !ctx.derived.athDate) {
       return { passed: false, reason: "no_ath_data" }
     }
     return { passed: true }
   },
 
-  getFormats(ctx) {
-    // If history < 6 months or ATH very recent, use TF
-    const historyDays = ctx.data.protocolDetail?.tvl?.length ?? 0
-    if (historyDays < 180) return ["tf"]
-
-    const athTs = ctx.derived.athDate!
-    const now = Date.now() / 1000
-    const daysSinceAth = (now - athTs) / 86400
-    if (daysSinceAth < 30) return ["tf"]
-
-    return ["mc4", "tf"]
+  getFormats() {
+    // Always use mc6 (hardest) or mc4 for ATH timing - never TF
+    // This template is now hard-only and should only be in slot D
+    return ["mc6", "mc4"]
   },
 
   extract(ctx, seed) {
@@ -512,55 +496,53 @@ const P4_ATH_TIMING: TemplateConfig<P4Data> = {
     const athMonth = formatMonth(athTs)
     const athYYYYMM = formatYYYYMM(athTs)
 
-    // Check if new high in last 90 days
-    const now = Date.now() / 1000
-    const newHighIn90d = (now - athTs) / 86400 < 90
+    // Get the history start date from protocol TVL data
+    const tvlHistory = ctx.data.protocolDetail?.tvl ?? []
+    let historyStartYYYYMM: string
+    if (tvlHistory.length > 0) {
+      const firstDataPoint = tvlHistory[0]
+      const startTs = firstDataPoint.date
+      historyStartYYYYMM = formatYYYYMM(startTs)
+    } else {
+      // Fallback: use 2 years ago
+      const twoYearsAgo = Date.now() / 1000 - 365 * 2 * 86400
+      historyStartYYYYMM = formatYYYYMM(twoYearsAgo)
+    }
 
-    // Generate distractor months
-    const timing = makeTimingDistractors(athYYYYMM, 3, seed)
+    // Generate distractor months from full history (5 distractors for mc6)
+    const timing = makeTimingDistractors(athYYYYMM, 5, seed, historyStartYYYYMM)
 
     return {
       athValue,
       athTs,
       athMonth,
       athYYYYMM,
-      newHighIn90d,
+      historyStartYYYYMM,
       distractorMonths: timing.distractorMonths,
     }
   },
 
-  getPrompt(data, ctx, format) {
+  getPrompt(data, ctx) {
     const detail = ctx.data.protocolDetail!
-    if (format === "tf") {
-      return `${detail.name} set a new 90-day TVL high this month.`
-    }
     return `In what month did ${detail.name} hit its all-time high TVL?`
   },
 
   getChoices(data, _ctx, format, seed) {
-    if (format === "tf") return ["True", "False"]
-    const timing = makeTimingDistractors(data.athYYYYMM, 3, seed)
+    // Use full history for distractors (harder question)
+    const count = format === "mc6" ? 5 : 3
+    const timing = makeTimingDistractors(data.athYYYYMM, count, seed, data.historyStartYYYYMM)
     return timing.choices
   },
 
   getAnswerIndex(data, _ctx, format, choices) {
-    if (format === "tf") {
-      return data.newHighIn90d ? 0 : 1
-    }
     return choices.indexOf(data.athMonth)
   },
 
-  getAnswerValue(data) {
-    return data.newHighIn90d
-  },
+  // No getAnswerValue needed - MC format only
 
-  getMargin(data, _ctx, format) {
-    if (format === "tf") {
-      const now = Date.now() / 1000
-      const daysSinceAth = (now - data.athTs) / 86400
-      return daysSinceAth < 45 ? 0.3 : 0.6
-    }
-    return 0.5 // MC timing questions have medium difficulty
+  getMargin() {
+    // Lower margin = harder question. Full history makes this genuinely difficult.
+    return 0.25
   },
 
   getExplainData(data, ctx) {
@@ -690,8 +672,7 @@ const P5_FEES_REVENUE: TemplateConfig<P5Data> = {
 // =============================================================================
 
 interface P6Data {
-  change7d: number
-  change30d: number | undefined
+  change30d: number
   trendDirection: "increased" | "decreased" | "flat"
   changeBucket: string
   bucketIndex: number
@@ -700,48 +681,48 @@ interface P6Data {
 const P6_TVL_TREND: TemplateConfig<P6Data> = {
   id: "P6_TVL_TREND",
   name: "TVL Trend",
-  description: "Did a protocol's TVL increase or decrease over a given period",
+  description: "Did a protocol's TVL increase or decrease over the past 30 days",
   type: "protocol",
-  // Share fingerprint_trend_revealed since fingerprint already shows 7d trend direction
-  semanticTopics: ["tvl_trend_7d", "tvl_direction", "fingerprint_trend_revealed"],
+  // Use 30-day trend (not 7-day) for more stable/meaningful questions
+  semanticTopics: ["tvl_trend_30d", "tvl_direction", "fingerprint_trend_revealed"],
 
   checkPrereqs(ctx) {
     if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
-    if (ctx.derived.change7d === undefined) return { passed: false, reason: "no_change7d" }
+    // Require 30-day data (minimum period for meaningful trend questions)
+    if (ctx.derived.change30d === undefined) return { passed: false, reason: "no_change30d" }
     return { passed: true }
   },
 
   getFormats(ctx) {
-    const change = ctx.derived.change7d ?? 0
+    const change = ctx.derived.change30d ?? 0
     // If near bucket boundary, prefer TF
     if (Math.abs(change) < 0.02) return ["tf"]
     return ["tf", "mc4", "ab"]
   },
 
   extract(ctx) {
-    const change7d = ctx.derived.change7d!
-    const change30d = ctx.derived.change30d
+    const change30d = ctx.derived.change30d!
 
     let trendDirection: "increased" | "decreased" | "flat"
-    if (change7d > 0.01) trendDirection = "increased"
-    else if (change7d < -0.01) trendDirection = "decreased"
+    if (change30d > 0.01) trendDirection = "increased"
+    else if (change30d < -0.01) trendDirection = "decreased"
     else trendDirection = "flat"
 
-    const changeBucket = getChangeBucket(change7d)
-    const bucketIndex = getChangeBucketIndex(change7d)
+    const changeBucket = getChangeBucket(change30d)
+    const bucketIndex = getChangeBucketIndex(change30d)
 
-    return { change7d, change30d, trendDirection, changeBucket, bucketIndex }
+    return { change30d, trendDirection, changeBucket, bucketIndex }
   },
 
   getPrompt(data, ctx, format) {
     const detail = ctx.data.protocolDetail!
     if (format === "tf") {
-      return `${detail.name}'s TVL increased over the past 7 days.`
+      return `${detail.name}'s TVL increased over the past 30 days.`
     }
     if (format === "ab") {
-      return `Over the past 7 days, did ${detail.name}'s TVL increase or decrease?`
+      return `Over the past 30 days, did ${detail.name}'s TVL increase or decrease?`
     }
-    return `What was ${detail.name}'s approximate TVL change over the past 7 days?`
+    return `What was ${detail.name}'s approximate TVL change over the past 30 days?`
   },
 
   getChoices(_data, _ctx, format, seed) {
@@ -768,15 +749,15 @@ const P6_TVL_TREND: TemplateConfig<P6Data> = {
   },
 
   getMargin(data) {
-    return Math.abs(data.change7d)
+    return Math.abs(data.change30d)
   },
 
   getExplainData(data, ctx) {
     const detail = ctx.data.protocolDetail!
     const changeStr =
-      data.change7d >= 0
-        ? `+${(data.change7d * 100).toFixed(1)}%`
-        : `${(data.change7d * 100).toFixed(1)}%`
+      data.change30d >= 0
+        ? `+${(data.change30d * 100).toFixed(1)}%`
+        : `${(data.change30d * 100).toFixed(1)}%`
 
     return {
       name: detail.name,
@@ -900,7 +881,8 @@ const P8_CHAIN_MEMBERSHIP: TemplateConfig<P8Data> = {
   name: "Chain Membership",
   description: "Check if a protocol is deployed on a specific chain",
   type: "protocol",
-  semanticTopics: [],
+  // Reveals which chain(s) a protocol is on - conflicts with P3_CONCENTRATION for single-chain protocols
+  semanticTopics: ["chain_identity"],
 
   checkPrereqs(ctx) {
     if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
@@ -1544,22 +1526,22 @@ const P14_CATEGORY_LEADER: TemplateConfig<P14Data> = {
 interface P15Data {
   change: number
   direction: "increased" | "decreased"
-  period: "7 days" | "30 days"
+  period: "30 days"
 }
 
 const P15_RECENT_TVL_DIRECTION: TemplateConfig<P15Data> = {
   id: "P15_RECENT_TVL_DIRECTION",
   name: "Recent TVL Direction",
-  description: "Simple question about protocol's recent TVL trend",
+  description: "Simple question about protocol's recent TVL trend (30-day minimum)",
   type: "protocol",
-  // Share fingerprint_trend_revealed since fingerprint already shows 7d trend direction
-  semanticTopics: ["tvl_trend_7d", "tvl_direction", "fingerprint_trend_revealed"],
+  // Use 30-day trend (not 7-day) for more stable/meaningful questions
+  semanticTopics: ["tvl_trend_30d", "tvl_direction", "fingerprint_trend_revealed"],
 
   checkPrereqs(ctx) {
     if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
-    const has7d = ctx.derived.change7d !== undefined && Math.abs(ctx.derived.change7d) > 0.02
+    // Require 30-day data (minimum period for meaningful trend questions)
     const has30d = ctx.derived.change30d !== undefined && Math.abs(ctx.derived.change30d) > 0.02
-    if (!has7d && !has30d) return { passed: false, reason: "no_clear_trend" }
+    if (!has30d) return { passed: false, reason: "no_clear_30d_trend" }
     return { passed: true }
   },
 
@@ -1568,29 +1550,19 @@ const P15_RECENT_TVL_DIRECTION: TemplateConfig<P15Data> = {
   },
 
   extract(ctx) {
-    // Prefer 7d data, fall back to 30d
-    let change: number
-    let period: "7 days" | "30 days"
-
-    if (ctx.derived.change7d !== undefined && Math.abs(ctx.derived.change7d) > 0.02) {
-      change = ctx.derived.change7d
-      period = "7 days"
-    } else {
-      change = ctx.derived.change30d!
-      period = "30 days"
-    }
-
+    // Always use 30-day data (more stable than 7-day)
+    const change = ctx.derived.change30d!
     const direction = change > 0 ? "increased" : "decreased"
 
-    return { change, direction, period }
+    return { change, direction, period: "30 days" as const }
   },
 
   getPrompt(data, ctx, format) {
     const detail = ctx.data.protocolDetail!
     if (format === "tf") {
-      return `${detail.name}'s TVL has increased over the past ${data.period}.`
+      return `${detail.name}'s TVL has increased over the past 30 days.`
     }
-    return `Over the past ${data.period}, did ${detail.name}'s TVL increase or decrease?`
+    return `Over the past 30 days, did ${detail.name}'s TVL increase or decrease?`
   },
 
   getChoices(_data, _ctx, format, seed) {
@@ -2379,8 +2351,11 @@ const P31_PRECISE_RANK: TemplateConfig<P31Data> = {
 
   getExplainData(data, ctx) {
     const detail = ctx.data.protocolDetail!
+    // Include topic's TVL to prevent LLM hallucination
+    const topicTvl = ctx.derived.currentTvl ?? 0
     return {
       name: detail.name,
+      tvl: formatNumber(topicTvl),
       tvlRank: data.tvlRank,
       rankBucket: data.rankBucket,
       nearbyProtocols: data.nearbyProtocols.map((p) => ({

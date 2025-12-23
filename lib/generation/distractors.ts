@@ -426,24 +426,42 @@ export function formatMonthDisplay(yyyyMm: string): string {
  * @param correctMonth - Correct month in YYYY-MM format
  * @param count - Number of distractors needed
  * @param seed - Seed for deterministic selection
+ * @param historyStartMonth - Optional start of history range (YYYY-MM format). If provided, distractors come from full history.
+ * @param historyEndMonth - Optional end of history range (YYYY-MM format). Defaults to current month.
  * @returns Object with choices array, answer index, and distractor months for explanations
  */
 export function makeTimingDistractors(
   correctMonth: string,
   count: number,
-  seed: number
+  seed: number,
+  historyStartMonth?: string,
+  historyEndMonth?: string
 ): { choices: string[]; answerIndex: number; distractorMonths: string[] } {
-  // Generate adjacent months (+-1 to +-3 from correct)
   const candidates: string[] = []
-  for (let offset = -3; offset <= 3; offset++) {
-    if (offset === 0) continue
-    candidates.push(addMonths(correctMonth, offset))
+
+  if (historyStartMonth) {
+    // Use full history range for distractors (makes the question harder)
+    const endMonth = historyEndMonth ?? getCurrentYYYYMM()
+    const allMonths = generateMonthRange(historyStartMonth, endMonth)
+
+    // Filter out the correct month and ensure we have enough candidates
+    for (const month of allMonths) {
+      if (month !== correctMonth) {
+        candidates.push(month)
+      }
+    }
+  } else {
+    // Legacy behavior: generate adjacent months (+-1 to +-3 from correct)
+    for (let offset = -3; offset <= 3; offset++) {
+      if (offset === 0) continue
+      candidates.push(addMonths(correctMonth, offset))
+    }
   }
 
   // Deterministically select distractors
   const shuffled = deterministicShuffle(candidates, seed.toString())
   const distractors = shuffled.slice(0, count)
-  
+
   // Store formatted distractor months for explanations
   const distractorMonths = distractors.map((m) => formatMonthDisplay(m))
 
@@ -460,6 +478,34 @@ export function makeTimingDistractors(
   const answerIndex = shuffledFinal.findIndex((x) => x.isCorrect)
 
   return { choices, answerIndex, distractorMonths }
+}
+
+/**
+ * Get current month in YYYY-MM format
+ */
+function getCurrentYYYYMM(): string {
+  const now = new Date()
+  return `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, "0")}`
+}
+
+/**
+ * Generate all months between start and end (inclusive)
+ */
+function generateMonthRange(startYYYYMM: string, endYYYYMM: string): string[] {
+  const months: string[] = []
+  let current = startYYYYMM
+
+  // Safety limit to prevent infinite loops
+  const maxMonths = 240 // 20 years
+  let count = 0
+
+  while (current <= endYYYYMM && count < maxMonths) {
+    months.push(current)
+    current = addMonths(current, 1)
+    count++
+  }
+
+  return months
 }
 
 /**

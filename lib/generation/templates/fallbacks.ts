@@ -8,7 +8,7 @@
  * - Questions have variable True/False answers based on actual data
  * - TVL threshold questions at different levels ($100M, $1B, $5B)
  * - A/B comparisons against nearby protocols/chains
- * - Trend-based questions using change7d data
+ * - Trend-based questions using 30-day data (minimum period for stability)
  * - Rank-based questions (top 10, top 25, etc.)
  * - Chain count questions for protocols
  * - Semantic topics for deduplication
@@ -62,40 +62,40 @@ const PROTOCOL_TVL_THRESHOLDS: FallbackConfig[] = [
 ]
 
 /**
- * Trend-Based Fallbacks - TVL direction over time
+ * Trend-Based Fallbacks - TVL direction over time (30-day minimum)
  */
 const PROTOCOL_TRENDS: FallbackConfig[] = [
   createTrendFallback({
-    id: "protocol_tvl_increased_7d",
+    id: "protocol_tvl_increased_30d",
     difficulty: "easy",
-    trendField: "change7d",
+    trendField: "change30d",
     direction: "increased",
-    periodLabel: "the past 7 days",
+    periodLabel: "the past 30 days",
   }),
   createTrendFallback({
-    id: "protocol_tvl_decreased_7d",
+    id: "protocol_tvl_decreased_30d",
     difficulty: "easy",
-    trendField: "change7d",
+    trendField: "change30d",
     direction: "decreased",
-    periodLabel: "the past 7 days",
+    periodLabel: "the past 30 days",
   }),
   createTrendThresholdFallback({
-    id: "protocol_tvl_up_5pct",
+    id: "protocol_tvl_up_10pct",
     difficulty: "medium",
-    trendField: "change7d",
-    threshold: 0.05,
+    trendField: "change30d",
+    threshold: 0.1,
     direction: "up",
-    thresholdLabel: "5%",
-    periodLabel: "the past week",
+    thresholdLabel: "10%",
+    periodLabel: "the past month",
   }),
   createTrendThresholdFallback({
-    id: "protocol_tvl_down_5pct",
+    id: "protocol_tvl_down_10pct",
     difficulty: "medium",
-    trendField: "change7d",
-    threshold: 0.05,
+    trendField: "change30d",
+    threshold: 0.1,
     direction: "down",
-    thresholdLabel: "5%",
-    periodLabel: "the past week",
+    thresholdLabel: "10%",
+    periodLabel: "the past month",
   }),
 ]
 

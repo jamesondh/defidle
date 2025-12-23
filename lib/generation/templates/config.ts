@@ -556,7 +556,7 @@ export function createRankThresholdFallback(options: {
 export function createTrendFallback(options: {
   id: string
   difficulty: FallbackDifficulty
-  trendField: "change7d" | "chainChange30d"
+  trendField: "change7d" | "change30d" | "chainChange30d"
   direction: "increased" | "decreased"
   semanticTopics?: string[]
   /** Time period description for the prompt */
@@ -612,7 +612,7 @@ export function createTrendFallback(options: {
 export function createTrendThresholdFallback(options: {
   id: string
   difficulty: FallbackDifficulty
-  trendField: "change7d" | "chainChange30d"
+  trendField: "change7d" | "change30d" | "chainChange30d"
   threshold: number
   direction: "up" | "down"
   thresholdLabel: string

@@ -20,47 +20,48 @@
         "TVL rank: top 25"
       ],
       "choices": [
+        "Fluid Lending",
         "Portal",
-        "Sanctum Validator LSTs",
-        "Symbiotic",
+        "Merlins Seal",
         "Babylon Protocol",
-        "Unit",
-        "Rocket Pool"
+        "Mantle Bridge",
+        "Jito Liquid Staking"
       ],
       "answerIndex": 3,
-      "explanation": "Babylon Protocol is a restaking platform operating on the Bitcoin chain, with a total value locked (TVL) of $5.5B, placing it within the $5B-$10B TVL band.",
+      "explanation": "Babylon Protocol is a restaking platform operating on the Bitcoin chain, with a total value locked (TVL) of $5.4B, placing it within the $5B-$10B TVL band.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc6",
         "familiarityRankBucket": "top_25",
         "margin": null,
-        "volatility": 0.1375384437733834
+        "volatility": 0.1374486885912518
       },
-      "difficultyScore": 0.41975384437733826
+      "difficultyScore": 0.4197448688591251
     },
     {
       "qid": "q2",
       "slot": "B",
-      "templateId": "P3_CONCENTRATION",
-      "format": "tf",
-      "prompt": "More than 90% of Babylon Protocol's TVL is on Bitcoin.",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Babylon Protocol?",
       "choices": [
-        "True",
-        "False"
+        "Decentralized AI",
+        "Decentralized BTC",
+        "RWA",
+        "Restaking"
       ],
-      "answerIndex": 0,
-      "answerValue": true,
-      "explanation": "Babylon Protocol has a total value locked (TVL) of $5.5B, with Bitcoin being the top chain, representing 100% of its TVL. This indicates that all assets in Babylon Protocol are currently locked in Bitcoin.",
-      "difficulty": "medium",
+      "answerIndex": 3,
+      "explanation": "Babylon Protocol operates within the \"Restaking\" category, allowing users to earn additional rewards by restaking their assets in the DeFi ecosystem. This process enhances the utility of staked tokens while contributing to network security and efficiency.",
+      "difficulty": "easy",
       "llmFallback": false,
       "signals": {
-        "format": "tf",
+        "format": "mc4",
         "familiarityRankBucket": "top_25",
-        "margin": 0.09999999999999998,
-        "volatility": 0.1375384437733834
+        "margin": 0.5,
+        "volatility": 0.1374486885912518
       },
-      "difficultyScore": 0.3097538443773384
+      "difficultyScore": 0.2697448688591252
     },
     {
       "qid": "q3",
@@ -73,16 +74,16 @@
         "Decrease"
       ],
       "answerIndex": 0,
-      "explanation": "Babylon Protocol's total value locked (TVL) has increased by 15.1% over the past 30 days, reaching $5.5B. This indicates a growing interest and investment in the protocol during this period.",
+      "explanation": "Babylon Protocol's total value locked (TVL) increased by 11.4% over the past 30 days, reaching $5.4B. This indicates a growing interest and investment in the protocol during this period.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "ab",
         "familiarityRankBucket": "top_25",
-        "margin": 0.15067496242699177,
-        "volatility": 0.1375384437733834
+        "margin": 0.1138860497254879,
+        "volatility": 0.1374486885912518
       },
-      "difficultyScore": 0.32894388946494824
+      "difficultyScore": 0.3730816091885397
     },
     {
       "qid": "q4",
@@ -96,17 +97,17 @@
         "50-75% below ATH",
         ">75% below ATH"
       ],
-      "answerIndex": 0,
-      "explanation": "Babylon Protocol has a total value locked (TVL) of $5.5B, which is 22% below its all-time high (ATH) of $7.1B, placing it in the category of being less than 25% below its ATH.",
-      "difficulty": "medium",
+      "answerIndex": 1,
+      "explanation": "Babylon Protocol has a total value locked (TVL) of $5.4B, which is 25% below its all-time high (ATH) of $7.1B, placing it in the 25-50% below ATH category.",
+      "difficulty": "hard",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_25",
-        "margin": 0.10245924028814173,
-        "volatility": 0.1375384437733834
+        "margin": 0.0030962576436589016,
+        "volatility": 0.1374486885912518
       },
-      "difficultyScore": 0.4468027560315682
+      "difficultyScore": 0.5660293596867345
     },
     {
       "qid": "q5",
@@ -128,19 +129,19 @@
         "format": "mc4",
         "familiarityRankBucket": "top_25",
         "margin": 0.4,
-        "volatility": 0.1375384437733834
+        "volatility": 0.1374486885912518
       },
-      "difficultyScore": 0.26975384437733835
+      "difficultyScore": 0.2697448688591252
     }
   ],
-  "generatedAt": "2025-12-22T12:23:57.582Z",
+  "generatedAt": "2025-12-23T16:02:28.498Z",
   "buildLog": [
     {
       "slot": "A",
       "template": "P1_FINGERPRINT",
       "format": "mc6",
       "decision": "selected",
-      "score": 0.41975384437733826,
+      "score": 0.4197448688591251,
       "target": "medium"
     },
     {
@@ -152,9 +153,15 @@
     {
       "slot": "B",
       "template": "P3_CONCENTRATION",
-      "format": "tf",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "B",
+      "template": "P7_CATEGORY",
+      "format": "mc4",
       "decision": "selected",
-      "score": 0.3097538443773384,
+      "score": 0.2697448688591252,
       "target": "easy"
     },
     {
@@ -162,24 +169,6 @@
       "template": "P5_FEES_REVENUE",
       "decision": "skip",
       "reason": "prereq_failed"
-    },
-    {
-      "slot": "C",
-      "template": "P4_ATH_TIMING",
-      "format": "mc4",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.26975384437733835,
-      "target": "medium"
-    },
-    {
-      "slot": "C",
-      "template": "P4_ATH_TIMING",
-      "format": "tf",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.12975384437733836,
-      "target": "medium"
     },
     {
       "slot": "C",
@@ -193,7 +182,7 @@
       "format": "ab",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.20975384437733838,
+      "score": 0.20974486885912522,
       "target": "medium"
     },
     {
@@ -202,7 +191,7 @@
       "format": "tf",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.12975384437733836,
+      "score": 0.1297448688591252,
       "target": "medium"
     },
     {
@@ -210,7 +199,7 @@
       "template": "P15_RECENT_TVL_DIRECTION",
       "format": "ab",
       "decision": "selected",
-      "score": 0.32894388946494824,
+      "score": 0.3730816091885397,
       "target": "medium"
     },
     {
@@ -219,7 +208,7 @@
       "format": "mc4",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.26975384437733835,
+      "score": 0.2697448688591252,
       "target": "hard"
     },
     {
@@ -234,7 +223,16 @@
       "format": "mc4",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.26975384437733835,
+      "score": 0.2697448688591252,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P4_ATH_TIMING",
+      "format": "mc6",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.32974486885912513,
       "target": "hard"
     },
     {
@@ -243,16 +241,7 @@
       "format": "mc4",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.26975384437733835,
-      "target": "hard"
-    },
-    {
-      "slot": "D",
-      "template": "P4_ATH_TIMING",
-      "format": "tf",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.12975384437733836,
+      "score": 0.2697448688591252,
       "target": "hard"
     },
     {
@@ -285,7 +274,7 @@
       "format": "ab",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.20975384437733838,
+      "score": 0.20974486885912522,
       "target": "hard"
     },
     {
@@ -294,7 +283,7 @@
       "format": "tf",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.12975384437733836,
+      "score": 0.1297448688591252,
       "target": "hard"
     },
     {
@@ -303,7 +292,7 @@
       "format": "ab",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.20975384437733838,
+      "score": 0.20974486885912522,
       "target": "hard"
     },
     {
@@ -312,7 +301,7 @@
       "format": "tf",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.12975384437733836,
+      "score": 0.1297448688591252,
       "target": "hard"
     },
     {
@@ -321,7 +310,7 @@
       "format": "mc4",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.26975384437733835,
+      "score": 0.2697448688591252,
       "target": "hard"
     },
     {
@@ -329,20 +318,20 @@
       "template": "P20_ATH_DISTANCE",
       "format": "mc4",
       "decision": "selected",
-      "score": 0.4468027560315682,
+      "score": 0.5660293596867345,
       "target": "hard"
     },
     {
       "slot": "E",
       "template": "P6_TVL_TREND",
       "decision": "skip",
-      "reason": "semantic_topic_covered:tvl_trend_7d"
+      "reason": "semantic_topic_covered:tvl_trend_30d"
     },
     {
       "slot": "E",
       "template": "P3_CONCENTRATION",
       "decision": "skip",
-      "reason": "already_used"
+      "reason": "prereq_failed"
     },
     {
       "slot": "E",
@@ -355,7 +344,7 @@
       "template": "P8_CHAIN_MEMBERSHIP",
       "format": "mc4",
       "decision": "selected",
-      "score": 0.26975384437733835,
+      "score": 0.2697448688591252,
       "target": "easy"
     }
   ]

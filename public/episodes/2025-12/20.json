@@ -19,14 +19,14 @@
       ],
       "choices": [
         "Solana",
-        "Ancient8",
-        "Kava",
-        "Prom",
-        "Zora",
-        "Somnia"
+        "REI",
+        "Unichain",
+        "Mayachain",
+        "Genesys",
+        "OntologyEVM"
       ],
       "answerIndex": 0,
-      "explanation": "Solana is ranked 2nd in total value locked (TVL) with a range of $5B to $10B, and it supports 331 different protocols. Its native token is SOL.",
+      "explanation": "Solana ranks 2nd in TVL with a total value locked between $5B and $10B, and it supports 331 different protocols. Its native token is SOL.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
@@ -48,7 +48,7 @@
         "Solana"
       ],
       "answerIndex": 1,
-      "explanation": "Solana has a total value locked (TVL) of $8.6B, which is 48% higher than Base's TVL of $4.5B. This indicates that Solana has significantly more assets deposited in its protocol compared to Base.",
+      "explanation": "Solana has a total value locked (TVL) of $8.6B, which is 48% higher than Base's TVL of $4.5B, making Solana the leading chain in this comparison.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
@@ -62,52 +62,51 @@
     {
       "qid": "q3",
       "slot": "C",
-      "templateId": "C3_ATH_TIMING",
-      "format": "mc6",
-      "prompt": "In what month did Solana hit its all-time high TVL?",
-      "choices": [
-        "Dec 2025",
-        "Nov 2025",
-        "Jun 2025",
-        "Sep 2025",
-        "Jul 2025",
-        "Aug 2025"
-      ],
-      "answerIndex": 3,
-      "explanation": "Solana reached its all-time high (ATH) total value locked (TVL) of $13.2B in September 2025. This figure represents the peak amount of assets deposited in the Solana protocol.",
-      "difficulty": "medium",
-      "llmFallback": false,
-      "signals": {
-        "format": "mc6",
-        "familiarityRankBucket": "top_10",
-        "margin": 0.5,
-        "volatility": null
-      },
-      "difficultyScore": 0.325
-    },
-    {
-      "qid": "q4",
-      "slot": "D",
       "templateId": "C4_GROWTH_RANKING",
       "format": "mc4",
       "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
       "choices": [
-        "Base",
-        "Monad",
-        "Bitcoin",
-        "Plasma"
+        "Tron",
+        "Ink",
+        "Arbitrum",
+        "Flare"
       ],
       "answerIndex": 1,
-      "explanation": "Monad achieved a remarkable growth of 86,035,918.0%, significantly outpacing other chains like Plasma, which grew by 18.6%, and Bitcoin and Base, both at 10.8%. This exceptional increase in total value locked highlights Monad's dominance in growth compared to its peers.",
-      "difficulty": "easy",
+      "explanation": "Solana achieved a top growth ranking of 21.0%, reflecting a significant increase of +21.0%. In comparison, other chains like Flare and Arbitrum saw smaller growths of +8.1% and +7.9%, respectively.",
+      "difficulty": "hard",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_10",
-        "margin": 1,
+        "margin": 0.02346326073050331,
         "volatility": null
       },
-      "difficultyScore": 0.26500000000000007
+      "difficultyScore": 0.536844087123396
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C9_DISTANCE_FROM_ATH",
+      "format": "mc4",
+      "prompt": "How far is Solana from its ATH TVL?",
+      "choices": [
+        "At ATH",
+        "Within 10%",
+        "10-30% below",
+        "30-60% below",
+        ">60% below"
+      ],
+      "answerIndex": 3,
+      "explanation": "Solana's all-time high (ATH) total value locked (TVL) is $13.2B, while its current TVL stands at $8.6B, indicating it is 35.1% away from reaching its ATH.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.05075687909005522,
+        "volatility": null
+      },
+      "difficultyScore": 0.5040917450919338
     },
     {
       "qid": "q5",
@@ -117,24 +116,24 @@
       "prompt": "Which DEX is #1 by 24h volume on Solana?",
       "choices": [
         "HumidiFi",
-        "Orca DEX",
         "Raydium AMM",
-        "PumpSwap"
+        "PumpSwap",
+        "Meteora DAMM V2"
       ],
       "answerIndex": 0,
-      "explanation": "On the Solana blockchain, HumidiFi is the top decentralized exchange (DEX) with a trading volume of $915M, significantly higher than other DEXes like PumpSwap at $398M and Raydium AMM at $266M. This large volume indicates HumidiFi's leading position in the Solana DeFi ecosystem.",
+      "explanation": "On the Solana blockchain, the top decentralized exchange (DEX) is HumidiFi, with a trading volume of $1.1B, significantly higher than other DEXes like Meteora DAMM V2 at $480M and PumpSwap at $367M. This positions HumidiFi as the leading platform in terms of trading activity on Solana.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_10",
-        "margin": 0.5648197632230971,
+        "margin": 0.5649501099506263,
         "volatility": null
       },
       "difficultyScore": 0.26500000000000007
     }
   ],
-  "generatedAt": "2025-12-22T15:55:38.567Z",
+  "generatedAt": "2025-12-23T16:03:00.646Z",
   "buildLog": [
     {
       "slot": "A",
@@ -178,45 +177,15 @@
     },
     {
       "slot": "C",
-      "template": "C3_ATH_TIMING",
-      "format": "mc6",
+      "template": "C4_GROWTH_RANKING",
+      "format": "mc4",
       "decision": "selected",
-      "score": 0.325,
+      "score": 0.536844087123396,
       "target": "medium"
     },
     {
       "slot": "D",
       "template": "C3_ATH_TIMING",
-      "decision": "skip",
-      "reason": "already_used"
-    },
-    {
-      "slot": "D",
-      "template": "C4_GROWTH_RANKING",
-      "format": "mc4",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.26500000000000007,
-      "target": "hard"
-    },
-    {
-      "slot": "D",
-      "template": "C4_GROWTH_RANKING",
-      "format": "ab",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.20500000000000004,
-      "target": "hard"
-    },
-    {
-      "slot": "D",
-      "template": "C9_DISTANCE_FROM_ATH",
-      "decision": "skip",
-      "reason": "semantic_topic_covered:ath_history"
-    },
-    {
-      "slot": "D",
-      "template": "C11_TOP_PROTOCOL_TVL",
       "format": "mc6",
       "decision": "reject",
       "reason": "difficulty_mismatch",
@@ -225,56 +194,26 @@
     },
     {
       "slot": "D",
-      "template": "C11_TOP_PROTOCOL_TVL",
+      "template": "C3_ATH_TIMING",
       "format": "mc4",
       "decision": "reject",
       "reason": "difficulty_mismatch",
       "score": 0.26500000000000007,
-      "target": "hard"
-    },
-    {
-      "slot": "D",
-      "template": "C11_TOP_PROTOCOL_TVL",
-      "format": "ab",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.20500000000000004,
-      "target": "hard"
-    },
-    {
-      "slot": "D",
-      "template": "C12_CATEGORY_DOMINANCE",
-      "format": "mc4",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.26500000000000007,
-      "target": "hard"
-    },
-    {
-      "slot": "D",
-      "template": "C14_TVL_DOMINANCE",
-      "format": "mc4",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.26500000000000007,
-      "target": "hard"
-    },
-    {
-      "slot": "D",
-      "template": "C14_TVL_DOMINANCE",
-      "format": "tf",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.12500000000000003,
       "target": "hard"
     },
     {
       "slot": "D",
       "template": "C4_GROWTH_RANKING",
-      "format": "mc4",
-      "decision": "selected",
-      "reason": "close_enough",
-      "score": 0.26500000000000007,
+      "decision": "skip",
+      "reason": "already_used"
+    },
+    {
+      "slot": "D",
+      "template": "C9_DISTANCE_FROM_ATH",
+      "decision": "adjusted",
+      "originalFormat": "tf",
+      "newFormat": "mc4",
+      "score": 0.5040917450919338,
       "target": "hard"
     },
     {
@@ -284,10 +223,6 @@
       "decision": "selected",
       "score": 0.26500000000000007,
       "target": "easy"
-    },
-    {
-      "decision": "post_balance",
-      "reason": "No challenging questions in episode"
     }
   ]
 }

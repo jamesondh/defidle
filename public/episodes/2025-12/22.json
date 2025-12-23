@@ -20,129 +20,128 @@
         "TVL rank: top 25"
       ],
       "choices": [
-        "Marinade Native",
-        "GMX V2 Perps",
-        "Liquid Collective",
-        "Lista Lending",
+        "BounceBit CeDeFi Yield",
+        "Stacks sBTC",
+        "Convex Finance",
+        "WisdomTree",
         "USDT0",
-        "Rocket Pool"
+        "Jito Liquid Staking"
       ],
       "answerIndex": 4,
-      "explanation": "USDT0 is a bridge protocol operating on the Ethereum chain, with a total value locked (TVL) of $4.3B, placing it within the TVL band of $1B-$5B.",
+      "explanation": "USDT0 is a bridge protocol on the Ethereum blockchain with a total value locked (TVL) of $4.2B, placing it within the $1B-$5B TVL band. It operates across one chain, facilitating asset transfers.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc6",
         "familiarityRankBucket": "top_25",
         "margin": null,
-        "volatility": 0.1820546357330983
+        "volatility": 0.2030685036068102
       },
-      "difficultyScore": 0.42420546357330974
+      "difficultyScore": 0.42630685036068094
     },
     {
       "qid": "q2",
       "slot": "B",
-      "templateId": "P3_CONCENTRATION",
-      "format": "tf",
-      "prompt": "More than 90% of USDT0's TVL is on Ethereum.",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is USDT0?",
       "choices": [
-        "True",
-        "False"
+        "OTC Marketplace",
+        "Derivatives",
+        "Bridge",
+        "Synthetics"
       ],
-      "answerIndex": 0,
-      "answerValue": true,
-      "explanation": "USDT0 has a total value locked (TVL) of $4.3B, with 100% of its TVL concentrated on the Ethereum blockchain, which also has a TVL of $4.3B.",
-      "difficulty": "medium",
+      "answerIndex": 2,
+      "explanation": "USDT0 is categorized as a \"Bridge,\" which typically facilitates the transfer of assets between different blockchain networks. This allows users to move their USDT (Tether) across various platforms seamlessly.",
+      "difficulty": "easy",
       "llmFallback": false,
       "signals": {
-        "format": "tf",
+        "format": "mc4",
         "familiarityRankBucket": "top_25",
-        "margin": 0.09999999999999998,
-        "volatility": 0.1820546357330983
+        "margin": 0.5,
+        "volatility": 0.2030685036068102
       },
-      "difficultyScore": 0.31420546357330986
+      "difficultyScore": 0.27630685036068103
     },
     {
       "qid": "q3",
       "slot": "C",
       "templateId": "P15_RECENT_TVL_DIRECTION",
       "format": "ab",
-      "prompt": "Over the past 7 days, did USDT0's TVL increase or decrease?",
+      "prompt": "Over the past 30 days, did USDT0's TVL increase or decrease?",
       "choices": [
         "Increase",
         "Decrease"
       ],
-      "answerIndex": 1,
-      "explanation": "USDT0 experienced a decrease in total value locked (TVL) of 5.8% over the past 7 days, bringing its current TVL to $4.3B.",
-      "difficulty": "medium",
+      "answerIndex": 0,
+      "explanation": "USDT0 experienced a 5.0% increase in total value locked (TVL) over the past 30 days, bringing its TVL to $4.2B.",
+      "difficulty": "hard",
       "llmFallback": false,
       "signals": {
         "format": "ab",
         "familiarityRankBucket": "top_25",
-        "margin": 0.05806309601283319,
-        "volatility": 0.1820546357330983
+        "margin": 0.05042220701383765,
+        "volatility": 0.2030685036068102
       },
-      "difficultyScore": 0.44452974835791
+      "difficultyScore": 0.4558002019440759
     },
     {
       "qid": "q4",
       "slot": "D",
-      "templateId": "P31_PRECISE_RANK",
+      "templateId": "P20_ATH_DISTANCE",
       "format": "mc4",
-      "prompt": "What is USDT0's current TVL rank among all protocols?",
+      "prompt": "How far is USDT0's current TVL from its all-time high?",
       "choices": [
-        "#1-5",
-        "#6-15",
-        "#16-30",
-        "#31-50",
-        "#51-100"
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
       ],
       "answerIndex": 1,
-      "explanation": "USDT0 holds the 13th rank in total value locked (TVL) among DeFi protocols, with a TVL of $7.2B. It is positioned within the rank bucket of #6-15, close to ether.fi Stake at $8.4B and Gemini at $7.4B.",
+      "explanation": "USDT0 has a total value locked (TVL) of $4.2B, which is 46% below its all-time high (ATH) of $7.8B, placing it in the 25-50% below ATH category.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_25",
-        "margin": 0.2,
-        "volatility": 0.1820546357330983
+        "margin": 0.14278073713439768,
+        "volatility": 0.2030685036068102
       },
-      "difficultyScore": 0.3342054635733098
+      "difficultyScore": 0.4049699657994038
     },
     {
       "qid": "q5",
       "slot": "E",
-      "templateId": "P10_TVL_BAND",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
       "format": "mc4",
-      "prompt": "Which TVL range fits USDT0?",
+      "prompt": "Which chain is USDT0 deployed on?",
       "choices": [
-        "<$50M",
-        "$50M-$250M",
-        "$250M-$1B",
-        "$1B-$5B",
-        ">$5B"
+        "Arbitrum",
+        "Ethereum",
+        "Polygon",
+        "Optimism"
       ],
-      "answerIndex": 3,
-      "explanation": "USDT0 has a total value locked (TVL) of $4.3B, which falls within the TVL band of $1B-$5B. This indicates a significant amount of assets are deposited in the USDT0 protocol.",
+      "answerIndex": 1,
+      "explanation": "USDT0 is a stablecoin that operates on the Ethereum blockchain, making it part of a single chain ecosystem. It is designed to maintain a stable value, typically pegged to the US dollar.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_25",
-        "margin": 0.2692407704,
-        "volatility": 0.1820546357330983
+        "margin": 0.4,
+        "volatility": 0.2030685036068102
       },
-      "difficultyScore": 0.2742054635733098
+      "difficultyScore": 0.27630685036068103
     }
   ],
-  "generatedAt": "2025-12-22T12:24:10.176Z",
+  "generatedAt": "2025-12-23T16:02:19.582Z",
   "buildLog": [
     {
       "slot": "A",
       "template": "P1_FINGERPRINT",
       "format": "mc6",
       "decision": "selected",
-      "score": 0.42420546357330974,
+      "score": 0.42630685036068094,
       "target": "medium"
     },
     {
@@ -154,9 +153,15 @@
     {
       "slot": "B",
       "template": "P3_CONCENTRATION",
-      "format": "tf",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "B",
+      "template": "P7_CATEGORY",
+      "format": "mc4",
       "decision": "selected",
-      "score": 0.31420546357330986,
+      "score": 0.27630685036068103,
       "target": "easy"
     },
     {
@@ -164,24 +169,6 @@
       "template": "P5_FEES_REVENUE",
       "decision": "skip",
       "reason": "prereq_failed"
-    },
-    {
-      "slot": "C",
-      "template": "P4_ATH_TIMING",
-      "format": "mc4",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.2742054635733098,
-      "target": "medium"
-    },
-    {
-      "slot": "C",
-      "template": "P4_ATH_TIMING",
-      "format": "tf",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.13420546357330984,
-      "target": "medium"
     },
     {
       "slot": "C",
@@ -195,7 +182,7 @@
       "format": "ab",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.21420546357330986,
+      "score": 0.21630685036068106,
       "target": "medium"
     },
     {
@@ -204,7 +191,7 @@
       "format": "tf",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.13420546357330984,
+      "score": 0.13630685036068105,
       "target": "medium"
     },
     {
@@ -212,7 +199,7 @@
       "template": "P15_RECENT_TVL_DIRECTION",
       "format": "ab",
       "decision": "selected",
-      "score": 0.44452974835791,
+      "score": 0.4558002019440759,
       "target": "medium"
     },
     {
@@ -221,7 +208,7 @@
       "format": "mc4",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.3342054635733098,
+      "score": 0.33630685036068103,
       "target": "hard"
     },
     {
@@ -236,7 +223,16 @@
       "format": "mc4",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.2742054635733098,
+      "score": 0.27630685036068103,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P4_ATH_TIMING",
+      "format": "mc6",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.336306850360681,
       "target": "hard"
     },
     {
@@ -245,16 +241,7 @@
       "format": "mc4",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.2742054635733098,
-      "target": "hard"
-    },
-    {
-      "slot": "D",
-      "template": "P4_ATH_TIMING",
-      "format": "tf",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.13420546357330984,
+      "score": 0.27630685036068103,
       "target": "hard"
     },
     {
@@ -287,7 +274,7 @@
       "format": "ab",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.21420546357330986,
+      "score": 0.21630685036068106,
       "target": "hard"
     },
     {
@@ -296,7 +283,7 @@
       "format": "tf",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.13420546357330984,
+      "score": 0.13630685036068105,
       "target": "hard"
     },
     {
@@ -305,7 +292,7 @@
       "format": "ab",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.21420546357330986,
+      "score": 0.21630685036068106,
       "target": "hard"
     },
     {
@@ -314,7 +301,7 @@
       "format": "tf",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.13420546357330984,
+      "score": 0.13630685036068105,
       "target": "hard"
     },
     {
@@ -323,65 +310,42 @@
       "format": "mc4",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.30775443587381107,
+      "score": 0.3291918620433825,
       "target": "hard"
     },
     {
       "slot": "D",
       "template": "P20_ATH_DISTANCE",
       "format": "mc4",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.2987439296227046,
-      "target": "hard"
-    },
-    {
-      "slot": "D",
-      "template": "P27_DERIVATIVES_RANKING",
-      "decision": "skip",
-      "reason": "prereq_failed"
-    },
-    {
-      "slot": "D",
-      "template": "P29_CATEGORY_GROWTH",
-      "format": "mc4",
-      "decision": "reject",
-      "reason": "difficulty_mismatch",
-      "score": 0.2742054635733098,
-      "target": "hard"
-    },
-    {
-      "slot": "D",
-      "template": "P31_PRECISE_RANK",
-      "format": "mc4",
       "decision": "selected",
-      "reason": "close_enough",
-      "score": 0.3342054635733098,
+      "score": 0.4049699657994038,
       "target": "hard"
     },
     {
       "slot": "E",
       "template": "P6_TVL_TREND",
       "decision": "skip",
-      "reason": "semantic_topic_covered:tvl_trend_7d"
+      "reason": "semantic_topic_covered:tvl_trend_30d"
     },
     {
       "slot": "E",
       "template": "P3_CONCENTRATION",
       "decision": "skip",
-      "reason": "already_used"
+      "reason": "prereq_failed"
     },
     {
       "slot": "E",
       "template": "P10_TVL_BAND",
-      "format": "mc4",
-      "decision": "selected",
-      "score": 0.2742054635733098,
-      "target": "easy"
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_magnitude"
     },
     {
-      "decision": "post_balance",
-      "reason": "No challenging questions in episode"
+      "slot": "E",
+      "template": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.27630685036068103,
+      "target": "easy"
     }
   ]
 }

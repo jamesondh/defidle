@@ -236,7 +236,7 @@ export const PROTOCOL_MATRIX: TemplateMatrix = {
   ],
   C: [
     p5FeesVsRevenue,
-    p4ATHTiming,
+    // Note: p4ATHTiming removed from slot C - now hard-only (slot D)
     p11FeesTrend,
     p14CategoryLeaderComparison,
     p15RecentTVLDirection,
@@ -288,7 +288,7 @@ export const CHAIN_MATRIX: TemplateMatrix = {
   C: [
     c5TopProtocolByFees,
     c6TopDEXByVolume,
-    c3ChainATHTiming,
+    // Note: c3ChainATHTiming removed from slot C - now hard-only (slot D)
     c4ChainGrowthRanking,
     c9DistanceFromATH,
     c11TopProtocolByTVL,

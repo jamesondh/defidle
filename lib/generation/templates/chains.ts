@@ -306,7 +306,8 @@ interface C3Data {
   athTs: number
   athMonth: string
   athYYYYMM: string
-  newHighIn90d: boolean
+  historyStartYYYYMM: string
+  distractorMonths: string[]
 }
 
 const C3_ATH_TIMING: TemplateConfig<C3Data> = {
@@ -318,71 +319,73 @@ const C3_ATH_TIMING: TemplateConfig<C3Data> = {
 
   checkPrereqs(ctx) {
     if (!isChainContext(ctx)) return { passed: false, reason: "not_chain" }
-    if (!hasMinChainHistory(ctx, 90)) return { passed: false, reason: "need_90d_history" }
+    // Require at least 6 months of history for this to be a meaningful hard question
+    if (!hasMinChainHistory(ctx, 180)) return { passed: false, reason: "need_180d_history" }
     if (!ctx.derived.chainAthValue || !ctx.derived.chainAthDate) {
       return { passed: false, reason: "no_ath_data" }
     }
     return { passed: true }
   },
 
-  getFormats(ctx) {
-    const history = ctx.data.chainHistory
-    if (!history || history.length < 180) return ["tf"]
-
-    const athTs = ctx.derived.chainAthDate!
-    const now = Date.now() / 1000
-    if ((now - athTs) / 86400 < 30) return ["tf"]
-
-    // Add mc6 for harder difficulty - 6 months to choose from is challenging
-    return ["mc6", "mc4", "tf"]
+  getFormats() {
+    // Always use mc6 (hardest) or mc4 for ATH timing - never TF
+    // This template is now hard-only and should only be in slot D
+    return ["mc6", "mc4"]
   },
 
-  extract(ctx) {
+  extract(ctx, seed) {
     const athValue = ctx.derived.chainAthValue!
     const athTs = ctx.derived.chainAthDate!
     const athMonth = formatMonth(athTs)
     const athYYYYMM = formatYYYYMM(athTs)
 
-    const now = Date.now() / 1000
-    const newHighIn90d = (now - athTs) / 86400 < 90
+    // Get the history start date from chain history
+    const history = ctx.data.chainHistory ?? []
+    let historyStartYYYYMM: string
+    if (history.length > 0) {
+      const firstDataPoint = history[0]
+      const startTs = firstDataPoint.date
+      historyStartYYYYMM = formatYYYYMM(startTs)
+    } else {
+      // Fallback: use 2 years ago
+      const twoYearsAgo = Date.now() / 1000 - 365 * 2 * 86400
+      historyStartYYYYMM = formatYYYYMM(twoYearsAgo)
+    }
 
-    return { athValue, athTs, athMonth, athYYYYMM, newHighIn90d }
+    // Generate distractor months from full history (5 distractors for mc6)
+    const timing = makeTimingDistractors(athYYYYMM, 5, seed, historyStartYYYYMM)
+
+    return {
+      athValue,
+      athTs,
+      athMonth,
+      athYYYYMM,
+      historyStartYYYYMM,
+      distractorMonths: timing.distractorMonths,
+    }
   },
 
-  getPrompt(data, ctx, format) {
+  getPrompt(data, ctx) {
     const topic = ctx.topic as ChainPoolEntry
-    if (format === "tf") {
-      return `${topic.name} set a new 90-day TVL high this month.`
-    }
     return `In what month did ${topic.name} hit its all-time high TVL?`
   },
 
   getChoices(data, _ctx, format, seed) {
-    if (format === "tf") return ["True", "False"]
-    // mc6 gets 6 months to choose from (harder), mc4 gets 4
-    const distractorCount = format === "mc6" ? 5 : 3
-    const timing = makeTimingDistractors(data.athYYYYMM, distractorCount, seed)
+    // Use full history for distractors (harder question)
+    const count = format === "mc6" ? 5 : 3
+    const timing = makeTimingDistractors(data.athYYYYMM, count, seed, data.historyStartYYYYMM)
     return timing.choices
   },
 
   getAnswerIndex(data, _ctx, format, choices) {
-    if (format === "tf") {
-      return data.newHighIn90d ? 0 : 1
-    }
     return choices.indexOf(data.athMonth)
   },
 
-  getAnswerValue(data) {
-    return data.newHighIn90d
-  },
+  // No getAnswerValue needed - MC format only
 
-  getMargin(data, _ctx, format) {
-    if (format === "tf") {
-      const now = Date.now() / 1000
-      const daysSinceAth = (now - data.athTs) / 86400
-      return daysSinceAth < 45 ? 0.3 : 0.6
-    }
-    return 0.5
+  getMargin() {
+    // Lower margin = harder question. Full history makes this genuinely difficult.
+    return 0.25
   },
 
   getExplainData(data, ctx) {
@@ -391,6 +394,8 @@ const C3_ATH_TIMING: TemplateConfig<C3Data> = {
       name: topic.name,
       athValue: formatNumber(data.athValue),
       athMonth: data.athMonth,
+      distractorMonths: data.distractorMonths,
+      comparison: `The correct answer is ${data.athMonth}. The other choices (${data.distractorMonths.join(", ")}) were not when ${topic.name} reached its ATH.`,
     }
   },
 }
@@ -399,10 +404,24 @@ const C3_ATH_TIMING: TemplateConfig<C3Data> = {
 // C4: Chain Growth Ranking
 // =============================================================================
 
+// Maximum growth percentage to consider valid (filters out newly launched chains with absurd growth)
+// e.g., Monad showing +86 million percent growth should be filtered out
+const MAX_GROWTH_PERCENT = 10 // 1000% = 10x
+
 interface C4Data {
   topGrower: { name: string; change30d: number }
   distractors: Array<{ name: string; change30d: number }>
   margin: number
+}
+
+/**
+ * Filter chains to only include those with reasonable growth values.
+ * This removes newly launched chains with absurd growth percentages.
+ */
+function hasReasonableGrowth(change30d: number | undefined | null): boolean {
+  if (change30d === undefined || change30d === null) return false
+  // Filter out chains with more than 1000% growth (likely new chains)
+  return Math.abs(change30d) <= MAX_GROWTH_PERCENT
 }
 
 const C4_GROWTH_RANKING: TemplateConfig<C4Data> = {
@@ -417,8 +436,9 @@ const C4_GROWTH_RANKING: TemplateConfig<C4Data> = {
     if (!hasChainPool(ctx, 4)) return { passed: false, reason: "need_4_chains" }
 
     const pool = ctx.data.chainPool!
-    const withGrowth = pool.filter((c) => c.change30d !== undefined && c.change30d !== null)
-    if (withGrowth.length < 4) return { passed: false, reason: "need_4_with_growth" }
+    // Filter to chains with reasonable growth (excludes newly launched chains with absurd values)
+    const withReasonableGrowth = pool.filter((c) => hasReasonableGrowth(c.change30d))
+    if (withReasonableGrowth.length < 4) return { passed: false, reason: "need_4_with_reasonable_growth" }
 
     return { passed: true }
   },
@@ -429,15 +449,18 @@ const C4_GROWTH_RANKING: TemplateConfig<C4Data> = {
 
   extract(ctx, seed) {
     const pool = ctx.data.chainPool!
+    // Filter to chains with reasonable growth values and sort by growth
     const withGrowth = pool
-      .filter((c): c is ChainPoolEntry & { change30d: number } => c.change30d !== undefined && c.change30d !== null)
+      .filter((c): c is ChainPoolEntry & { change30d: number } =>
+        c.change30d !== undefined && c.change30d !== null && hasReasonableGrowth(c.change30d)
+      )
       .sort((a, b) => b.change30d - a.change30d)
 
     if (withGrowth.length < 4) return null
 
     const topGrower = { name: withGrowth[0].name, change30d: withGrowth[0].change30d }
 
-    // Get distractors from top 10
+    // Get distractors from top 10 (all with reasonable growth)
     const candidates = withGrowth.slice(1, 10)
     const shuffled = deterministicShuffle(candidates, `${seed}:distractors`)
     const distractors = shuffled.slice(0, 3).map((c) => ({ name: c.name, change30d: c.change30d }))
