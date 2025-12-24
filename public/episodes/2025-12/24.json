@@ -1,0 +1,141 @@
+{
+  "episodeId": "2025-12-24:protocol:jito-liquid-staking",
+  "dateUtc": "2025-12-24",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "jito-liquid-staking",
+    "name": "Jito Liquid Staking",
+    "category": "Liquid Staking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Liquid Staking",
+        "Chains: single-chain",
+        "TVL: $1B-$5B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "DoubleZero Staked SOL",
+        "Jito Liquid Staking",
+        "Sanctum Validator LSTs",
+        "Hyperliquid Bridge",
+        "Orca DEX",
+        "USDD"
+      ],
+      "answerIndex": 1,
+      "explanation": "Jito Liquid Staking is a liquid staking protocol on the Solana blockchain with a total value locked (TVL) of $1.8B, placing it within the $1B-$5B TVL range. It allows users to stake their assets while maintaining liquidity.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.2059078530803461
+      },
+      "difficultyScore": 0.45059078530803454
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Jito Liquid Staking?",
+      "choices": [
+        "Telegram Bot",
+        "Meme",
+        "Domains",
+        "Liquid Staking"
+      ],
+      "answerIndex": 3,
+      "explanation": "Jito Liquid Staking falls under the category of Liquid Staking, which allows users to stake their assets while still maintaining liquidity. This enables users to earn staking rewards without locking up their tokens completely.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.2059078530803461
+      },
+      "difficultyScore": 0.3005907853080346
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Jito Liquid Staking's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 2,
+      "explanation": "Jito Liquid Staking has a current TVL of $1.8B, which is 55% below its all-time high (ATH) of $3.9B, placing it in the 50-75% below ATH category.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.19163642621180033,
+        "volatility": 0.2059078530803461
+      },
+      "difficultyScore": 0.3706270738538742
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Liquid Staking protocols from highest to lowest TVL.",
+      "choices": [
+        "DoubleZero Staked SOL > Jito Liquid Staking > Binance staked ETH",
+        "Binance staked ETH > Jito Liquid Staking > DoubleZero Staked SOL",
+        "Jito Liquid Staking > Binance staked ETH > DoubleZero Staked SOL",
+        "Binance staked ETH > DoubleZero Staked SOL > Jito Liquid Staking"
+      ],
+      "answerIndex": 1,
+      "explanation": "Binance staked ETH has the highest total value locked (TVL) at $10.5B, followed by Jito Liquid Staking with a TVL of $1.8B, and DoubleZero Staked SOL at $1.6B. This ranking reflects the amount of assets locked in each protocol.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.0757446515254375,
+        "volatility": 0.2059078530803461
+      },
+      "difficultyScore": 0.5096972034775097
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which chain is Jito Liquid Staking deployed on?",
+      "choices": [
+        "Arbitrum",
+        "Ethereum",
+        "Polygon",
+        "Solana"
+      ],
+      "answerIndex": 3,
+      "explanation": "Jito Liquid Staking operates on the Solana blockchain, making it a single-chain protocol focused on liquid staking. It allows users to stake their assets while maintaining liquidity.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.2059078530803461
+      },
+      "difficultyScore": 0.3005907853080346
+    }
+  ],
+  "generatedAt": "2025-12-24T00:24:12.293Z"
+}

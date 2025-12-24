@@ -123,5 +123,30 @@
     "text": "Tether Gold primarily operates on the Ethereum blockchain, holding a 99% share of its total value locked (TVL) of $2.4B, with Ethereum itself contributing $2.3B to that total.",
     "model": "gpt-4o-mini",
     "generatedAt": "2025-12-23T16:04:32.914Z"
+  },
+  "2025-12-24|protocol|jito-liquid-staking|A|P1_FINGERPRINT|explanation|5b00cf15d3350aed": {
+    "text": "Jito Liquid Staking is a liquid staking protocol on the Solana blockchain with a total value locked (TVL) of $1.8B, placing it within the $1B-$5B TVL range. It allows users to stake their assets while maintaining liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-24T00:24:05.673Z"
+  },
+  "2025-12-24|protocol|jito-liquid-staking|B|P7_CATEGORY|explanation|fa2bdb3eba2f4e6b": {
+    "text": "Jito Liquid Staking falls under the category of Liquid Staking, which allows users to stake their assets while still maintaining liquidity. This enables users to earn staking rewards without locking up their tokens completely.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-24T00:24:07.162Z"
+  },
+  "2025-12-24|protocol|jito-liquid-staking|C|P20_ATH_DISTANCE|explanation|c42e391061aef150": {
+    "text": "Jito Liquid Staking has a current TVL of $1.8B, which is 55% below its all-time high (ATH) of $3.9B, placing it in the 50-75% below ATH category.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-24T00:24:09.333Z"
+  },
+  "2025-12-24|protocol|jito-liquid-staking|D|P33_MULTI_RANKING|explanation|f1afcaa307c6a14e": {
+    "text": "Binance staked ETH has the highest total value locked (TVL) at $10.5B, followed by Jito Liquid Staking with a TVL of $1.8B, and DoubleZero Staked SOL at $1.6B. This ranking reflects the amount of assets locked in each protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-24T00:24:10.530Z"
+  },
+  "2025-12-24|protocol|jito-liquid-staking|E|P8_CHAIN_MEMBERSHIP|explanation|37ca5fb4c53dad3a": {
+    "text": "Jito Liquid Staking operates on the Solana blockchain, making it a single-chain protocol focused on liquid staking. It allows users to stake their assets while maintaining liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-24T00:24:12.293Z"
   }
 }
