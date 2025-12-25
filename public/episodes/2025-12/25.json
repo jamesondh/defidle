@@ -1,0 +1,137 @@
+{
+  "episodeId": "2025-12-25:chain:Cardano",
+  "dateUtc": "2025-12-25",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Cardano",
+    "name": "Cardano"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Protocols: 50-100",
+        "TVL: $100M-$500M",
+        "30d trend: down 1-10%"
+      ],
+      "choices": [
+        "Sei",
+        "Mantle",
+        "Rootstock",
+        "Cardano"
+      ],
+      "answerIndex": 3,
+      "explanation": "Cardano ranks 29th in total value locked (TVL) with an estimated TVL between $100M and $500M, and it hosts 77 protocols, placing it in the 50-100 protocol count bucket.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.395
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "prompt": "Cardano has higher TVL than Stellar.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Cardano has a total value locked (TVL) of $179M, surpassing Stellar's TVL of $166M by 7.1%. This indicates that more assets are currently deposited in Cardano's DeFi protocols compared to Stellar's.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.07124190747231086,
+        "volatility": null
+      },
+      "difficultyScore": 0.379509711033227
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Cardano?",
+      "choices": [
+        "Minswap",
+        "SundaeSwap V2",
+        "WingRiders",
+        "Splash Protocol"
+      ],
+      "answerIndex": 0,
+      "explanation": "Minswap is the top decentralized exchange (DEX) on the Cardano chain, with a trading volume of $9M, significantly higher than its closest competitor, SundaeSwap V2, which has a volume of $2M. Other DEXes like WingRiders and Splash Protocol have even lower volumes at $1M and $18K, respectively.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.796141659809718,
+        "volatility": null
+      },
+      "difficultyScore": 0.30500000000000005
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Cardano hit its all-time high TVL?",
+      "choices": [
+        "Dec 2024",
+        "Feb 2025",
+        "Jul 2024",
+        "Mar 2022",
+        "Sep 2022",
+        "Mar 2023"
+      ],
+      "answerIndex": 0,
+      "explanation": "Cardano reached its all-time high (ATH) TVL of $721M in December 2024, while other months like July 2024 and March 2023 did not see this peak. The ATH timing is significant as it highlights the growth of Cardano compared to these earlier dates.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.365
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C13_LAYER_TYPE",
+      "format": "ab",
+      "prompt": "Is Cardano a Layer 1 or Layer 2 blockchain?",
+      "choices": [
+        "Layer 1",
+        "Layer 2"
+      ],
+      "answerIndex": 0,
+      "explanation": "Cardano is a Layer 1 blockchain, meaning it operates independently with its own consensus mechanism and is not built on top of another chain.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": null
+      },
+      "difficultyScore": 0.24500000000000002
+    }
+  ],
+  "generatedAt": "2025-12-25T00:24:25.321Z"
+}

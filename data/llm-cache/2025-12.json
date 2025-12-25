@@ -148,5 +148,30 @@
     "text": "Jito Liquid Staking operates on the Solana blockchain, making it a single-chain protocol focused on liquid staking. It allows users to stake their assets while maintaining liquidity.",
     "model": "gpt-4o-mini",
     "generatedAt": "2025-12-24T00:24:12.293Z"
+  },
+  "2025-12-25|chain|Cardano|A|C1_FINGERPRINT|explanation|fb4df25285be6cf9": {
+    "text": "Cardano ranks 29th in total value locked (TVL) with an estimated TVL between $100M and $500M, and it hosts 77 protocols, placing it in the 50-100 protocol count bucket.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-25T00:24:17.438Z"
+  },
+  "2025-12-25|chain|Cardano|B|C2_CHAIN_COMPARISON|explanation|2a62a6e62bd72c6e": {
+    "text": "Cardano has a total value locked (TVL) of $179M, surpassing Stellar's TVL of $166M by 7.1%. This indicates that more assets are currently deposited in Cardano's DeFi protocols compared to Stellar's.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-25T00:24:19.380Z"
+  },
+  "2025-12-25|chain|Cardano|C|C6_TOP_DEX|explanation|71a36cfdcb50a7c0": {
+    "text": "Minswap is the top decentralized exchange (DEX) on the Cardano chain, with a trading volume of $9M, significantly higher than its closest competitor, SundaeSwap V2, which has a volume of $2M. Other DEXes like WingRiders and Splash Protocol have even lower volumes at $1M and $18K, respectively.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-25T00:24:21.780Z"
+  },
+  "2025-12-25|chain|Cardano|D|C3_ATH_TIMING|explanation|7b8e6fff1dc11d2e": {
+    "text": "Cardano reached its all-time high (ATH) TVL of $721M in December 2024, while other months like July 2024 and March 2023 did not see this peak. The ATH timing is significant as it highlights the growth of Cardano compared to these earlier dates.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-25T00:24:24.021Z"
+  },
+  "2025-12-25|chain|Cardano|E|C13_LAYER_TYPE|explanation|8a42bbdbdb412fb3": {
+    "text": "Cardano is a Layer 1 blockchain, meaning it operates independently with its own consensus mechanism and is not built on top of another chain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-25T00:24:25.321Z"
   }
 }
