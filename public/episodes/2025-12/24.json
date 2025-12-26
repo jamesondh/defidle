@@ -21,24 +21,24 @@
         "7d change: down 1-10%"
       ],
       "choices": [
-        "DoubleZero Staked SOL",
+        "USDT0",
         "Jito Liquid Staking",
-        "Sanctum Validator LSTs",
-        "Hyperliquid Bridge",
-        "Orca DEX",
-        "USDD"
+        "Curve DEX",
+        "Pendle",
+        "TriggerX",
+        "Spark Savings"
       ],
       "answerIndex": 1,
-      "explanation": "Jito Liquid Staking is a liquid staking protocol on the Solana blockchain with a total value locked (TVL) of $1.8B, placing it within the $1B-$5B TVL range. It allows users to stake their assets while maintaining liquidity.",
-      "difficulty": "hard",
+      "explanation": "Jito Liquid Staking is a liquid staking protocol on the Solana blockchain with a total value locked (TVL) of $1.7B, placing it within the $1B-$5B range. Its focus on a single chain allows for optimized staking solutions tailored specifically for Solana users.",
+      "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc6",
         "familiarityRankBucket": "top_100",
         "margin": null,
-        "volatility": 0.2059078530803461
+        "volatility": 0.19151420727724225
       },
-      "difficultyScore": 0.45059078530803454
+      "difficultyScore": 0.4491514207277242
     },
     {
       "qid": "q2",
@@ -53,16 +53,16 @@
         "Liquid Staking"
       ],
       "answerIndex": 3,
-      "explanation": "Jito Liquid Staking falls under the category of Liquid Staking, which allows users to stake their assets while still maintaining liquidity. This enables users to earn staking rewards without locking up their tokens completely.",
-      "difficulty": "medium",
+      "explanation": "Jito Liquid Staking is a protocol that allows users to stake their assets while still maintaining liquidity, enabling them to earn rewards without locking up their funds. This category of liquid staking enhances flexibility for users in the DeFi ecosystem.",
+      "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_100",
         "margin": 0.5,
-        "volatility": 0.2059078530803461
+        "volatility": 0.19151420727724225
       },
-      "difficultyScore": 0.3005907853080346
+      "difficultyScore": 0.29915142072772427
     },
     {
       "qid": "q3",
@@ -77,16 +77,16 @@
         ">75% below ATH"
       ],
       "answerIndex": 2,
-      "explanation": "Jito Liquid Staking has a current TVL of $1.8B, which is 55% below its all-time high (ATH) of $3.9B, placing it in the 50-75% below ATH category.",
+      "explanation": "Jito Liquid Staking has a current TVL of $1.7B, which is 55% below its all-time high of $3.9B, placing it in the 50-75% range below its peak. This indicates a significant drop in total value locked compared to its highest point.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_100",
-        "margin": 0.19163642621180033,
-        "volatility": 0.2059078530803461
+        "margin": 0.21467813157024068,
+        "volatility": 0.19151420727724225
       },
-      "difficultyScore": 0.3706270738538742
+      "difficultyScore": 0.34153766284343545
     },
     {
       "qid": "q4",
@@ -101,16 +101,16 @@
         "Binance staked ETH > DoubleZero Staked SOL > Jito Liquid Staking"
       ],
       "answerIndex": 1,
-      "explanation": "Binance staked ETH has the highest total value locked (TVL) at $10.5B, followed by Jito Liquid Staking with a TVL of $1.8B, and DoubleZero Staked SOL at $1.6B. This ranking reflects the amount of assets locked in each protocol.",
+      "explanation": "Binance staked ETH leads with a TVL of $10.4B, significantly higher than Jito Liquid Staking at $1.7B and DoubleZero Staked SOL at $1.6B. This highlights Binance's dominance in the liquid staking category.",
       "difficulty": "hard",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_100",
-        "margin": 0.0757446515254375,
-        "volatility": 0.2059078530803461
+        "margin": 0.07496411392328986,
+        "volatility": 0.19151420727724225
       },
-      "difficultyScore": 0.5096972034775097
+      "difficultyScore": 0.5091944840197764
     },
     {
       "qid": "q5",
@@ -125,17 +125,140 @@
         "Solana"
       ],
       "answerIndex": 3,
-      "explanation": "Jito Liquid Staking operates on the Solana blockchain, making it a single-chain protocol focused on liquid staking. It allows users to stake their assets while maintaining liquidity.",
-      "difficulty": "medium",
+      "explanation": "Jito Liquid Staking operates exclusively on the Solana blockchain, making it a single-chain protocol focused on enhancing staking efficiency within that ecosystem.",
+      "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_100",
         "margin": 0.4,
-        "volatility": 0.2059078530803461
+        "volatility": 0.19151420727724225
       },
-      "difficultyScore": 0.3005907853080346
+      "difficultyScore": 0.29915142072772427
     }
   ],
-  "generatedAt": "2025-12-24T00:24:12.293Z"
+  "generatedAt": "2025-12-24T14:22:23.661Z",
+  "buildLog": [
+    {
+      "slot": "A",
+      "template": "P1_FINGERPRINT",
+      "format": "mc6",
+      "decision": "selected",
+      "score": 0.4491514207277242,
+      "target": "medium"
+    },
+    {
+      "slot": "B",
+      "template": "P2_CROSSCHAIN",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "B",
+      "template": "P3_CONCENTRATION",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "B",
+      "template": "P7_CATEGORY",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.29915142072772427,
+      "target": "easy"
+    },
+    {
+      "slot": "C",
+      "template": "P5_FEES_REVENUE",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "P11_FEES_TREND",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "P14_CATEGORY_LEADER",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.23915142072772425,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P14_CATEGORY_LEADER",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.15915142072772423,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P15_RECENT_TVL_DIRECTION",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:fingerprint_trend_revealed"
+    },
+    {
+      "slot": "C",
+      "template": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.34153766284343545,
+      "target": "medium"
+    },
+    {
+      "slot": "D",
+      "template": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.29915142072772427,
+      "target": "hard"
+    },
+    {
+      "slot": "D",
+      "template": "P32_EXCHANGE_COMPARISON",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "D",
+      "template": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.5091944840197764,
+      "target": "hard"
+    },
+    {
+      "slot": "E",
+      "template": "P6_TVL_TREND",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:fingerprint_trend_revealed"
+    },
+    {
+      "slot": "E",
+      "template": "P3_CONCENTRATION",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "E",
+      "template": "P10_TVL_BAND",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_magnitude"
+    },
+    {
+      "slot": "E",
+      "template": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.29915142072772427,
+      "target": "easy"
+    }
+  ]
 }

@@ -15,18 +15,19 @@
       "prompt": "Which chain matches these clues?",
       "clues": [
         "TVL rank: top 5",
-        "Native token: SOL"
+        "Native token: SOL",
+        "Most protocols by count"
       ],
       "choices": [
         "Solana",
-        "REI",
-        "Unichain",
-        "Mayachain",
-        "Genesys",
-        "OntologyEVM"
+        "Avalanche",
+        "Ethereum",
+        "Arbitrum",
+        "Sui",
+        "Base"
       ],
       "answerIndex": 0,
-      "explanation": "Solana ranks 2nd in TVL with a total value locked between $5B and $10B, and it supports 331 different protocols. Its native token is SOL.",
+      "explanation": "Solana ranks 2nd in total value locked (TVL) with between $5B and $10B, and it hosts over 331 protocols, showcasing its robust ecosystem and popularity in the DeFi space.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
@@ -48,7 +49,7 @@
         "Solana"
       ],
       "answerIndex": 1,
-      "explanation": "Solana has a total value locked (TVL) of $8.6B, which is 48% higher than Base's TVL of $4.5B, making Solana the leading chain in this comparison.",
+      "explanation": "Solana leads with a TVL of $8.6B, surpassing Base's $4.5B by 48%. This significant difference highlights Solana's stronger adoption and usage in the DeFi space.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
@@ -72,7 +73,7 @@
         "Flare"
       ],
       "answerIndex": 1,
-      "explanation": "Solana achieved a top growth ranking of 21.0%, reflecting a significant increase of +21.0%. In comparison, other chains like Flare and Arbitrum saw smaller growths of +8.1% and +7.9%, respectively.",
+      "explanation": "Ink leads in growth with a remarkable 21.0% increase, significantly outpacing Flare's 8.1% and Arbitrum's 7.9%. This strong performance highlights Ink's rapid adoption and development compared to other emerging chains.",
       "difficulty": "hard",
       "llmFallback": false,
       "signals": {
@@ -97,7 +98,7 @@
         ">60% below"
       ],
       "answerIndex": 3,
-      "explanation": "Solana's all-time high (ATH) total value locked (TVL) is $13.2B, while its current TVL stands at $8.6B, indicating it is 35.1% away from reaching its ATH.",
+      "explanation": "Solana's current total value locked (TVL) is $8.6B, which is 35.1% below its all-time high (ATH) of $13.2B. This indicates a significant decrease in the amount of assets locked in the Solana network compared to its peak.",
       "difficulty": "hard",
       "llmFallback": false,
       "signals": {
@@ -117,23 +118,23 @@
       "choices": [
         "HumidiFi",
         "Raydium AMM",
-        "PumpSwap",
-        "Meteora DAMM V2"
+        "Meteora DAMM V2",
+        "PumpSwap"
       ],
       "answerIndex": 0,
-      "explanation": "On the Solana blockchain, the top decentralized exchange (DEX) is HumidiFi, with a trading volume of $1.1B, significantly higher than other DEXes like Meteora DAMM V2 at $480M and PumpSwap at $367M. This positions HumidiFi as the leading platform in terms of trading activity on Solana.",
+      "explanation": "HumidiFi is the leading decentralized exchange (DEX) on Solana with a trading volume of $1.1B, significantly outperforming its closest competitors, PumpSwap at $531M and Meteora DAMM V2 at $498M. This high volume indicates strong user activity and liquidity on HumidiFi compared to other DEXs on the chain.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_10",
-        "margin": 0.5649501099506263,
+        "margin": 0.5195533389965016,
         "volatility": null
       },
       "difficultyScore": 0.26500000000000007
     }
   ],
-  "generatedAt": "2025-12-23T16:03:00.646Z",
+  "generatedAt": "2025-12-24T14:23:19.469Z",
   "buildLog": [
     {
       "slot": "A",

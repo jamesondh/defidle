@@ -20,24 +20,24 @@
         "TVL rank: top 25"
       ],
       "choices": [
-        "BounceBit CeDeFi Yield",
-        "Stacks sBTC",
-        "Convex Finance",
-        "WisdomTree",
+        "Babylon Protocol",
+        "Ethena USDe",
+        "Morpho V1",
+        "Sky Lending",
         "USDT0",
-        "Jito Liquid Staking"
+        "Lido"
       ],
       "answerIndex": 4,
-      "explanation": "USDT0 is a bridge protocol on the Ethereum blockchain with a total value locked (TVL) of $4.2B, placing it within the $1B-$5B TVL band. It operates across one chain, facilitating asset transfers.",
+      "explanation": "USDT0 is a bridge protocol on Ethereum with a total value locked (TVL) of $4.1B, placing it within the $1B-$5B range. Its significant TVL highlights its importance in facilitating asset transfers across the Ethereum network.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc6",
         "familiarityRankBucket": "top_25",
         "margin": null,
-        "volatility": 0.2030685036068102
+        "volatility": 0.20129752183701125
       },
-      "difficultyScore": 0.42630685036068094
+      "difficultyScore": 0.426129752183701
     },
     {
       "qid": "q2",
@@ -52,16 +52,16 @@
         "Synthetics"
       ],
       "answerIndex": 2,
-      "explanation": "USDT0 is categorized as a \"Bridge,\" which typically facilitates the transfer of assets between different blockchain networks. This allows users to move their USDT (Tether) across various platforms seamlessly.",
+      "explanation": "USDT0 is categorized as a bridge, facilitating the transfer of USDT across different blockchain networks, enhancing interoperability in the DeFi ecosystem.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_25",
         "margin": 0.5,
-        "volatility": 0.2030685036068102
+        "volatility": 0.20129752183701125
       },
-      "difficultyScore": 0.27630685036068103
+      "difficultyScore": 0.2761297521837011
     },
     {
       "qid": "q3",
@@ -74,16 +74,16 @@
         "Decrease"
       ],
       "answerIndex": 0,
-      "explanation": "USDT0 experienced a 5.0% increase in total value locked (TVL) over the past 30 days, bringing its TVL to $4.2B.",
+      "explanation": "USDT0's total value locked (TVL) increased by 2.7% over the past 30 days, reaching $4.1B, indicating growing confidence and usage within the protocol.",
       "difficulty": "hard",
       "llmFallback": false,
       "signals": {
         "format": "ab",
         "familiarityRankBucket": "top_25",
-        "margin": 0.05042220701383765,
-        "volatility": 0.2030685036068102
+        "margin": 0.027257069380625443,
+        "volatility": 0.20129752183701125
       },
-      "difficultyScore": 0.4558002019440759
+      "difficultyScore": 0.48342126892695064
     },
     {
       "qid": "q4",
@@ -98,16 +98,16 @@
         ">75% below ATH"
       ],
       "answerIndex": 1,
-      "explanation": "USDT0 has a total value locked (TVL) of $4.2B, which is 46% below its all-time high (ATH) of $7.8B, placing it in the 25-50% below ATH category.",
+      "explanation": "USDT0 has a current TVL of $4.1B, which is 47% below its all-time high of $7.8B, placing it in the 25-50% below ATH category. This indicates a significant drop in the total value locked compared to its peak performance.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_25",
-        "margin": 0.14278073713439768,
-        "volatility": 0.2030685036068102
+        "margin": 0.11613565984789745,
+        "volatility": 0.20129752183701125
       },
-      "difficultyScore": 0.4049699657994038
+      "difficultyScore": 0.43676696036622414
     },
     {
       "qid": "q5",
@@ -122,26 +122,26 @@
         "Optimism"
       ],
       "answerIndex": 1,
-      "explanation": "USDT0 is a stablecoin that operates on the Ethereum blockchain, making it part of a single chain ecosystem. It is designed to maintain a stable value, typically pegged to the US dollar.",
+      "explanation": "USDT0 operates exclusively on the Ethereum blockchain, making it a single-chain protocol with a focus on leveraging Ethereum's robust ecosystem. This limited chain membership allows for streamlined transactions within that specific network.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_25",
         "margin": 0.4,
-        "volatility": 0.2030685036068102
+        "volatility": 0.20129752183701125
       },
-      "difficultyScore": 0.27630685036068103
+      "difficultyScore": 0.2761297521837011
     }
   ],
-  "generatedAt": "2025-12-23T16:02:19.582Z",
+  "generatedAt": "2025-12-24T14:22:57.247Z",
   "buildLog": [
     {
       "slot": "A",
       "template": "P1_FINGERPRINT",
       "format": "mc6",
       "decision": "selected",
-      "score": 0.42630685036068094,
+      "score": 0.426129752183701,
       "target": "medium"
     },
     {
@@ -161,7 +161,7 @@
       "template": "P7_CATEGORY",
       "format": "mc4",
       "decision": "selected",
-      "score": 0.27630685036068103,
+      "score": 0.2761297521837011,
       "target": "easy"
     },
     {
@@ -182,7 +182,7 @@
       "format": "ab",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.21630685036068106,
+      "score": 0.21612975218370117,
       "target": "medium"
     },
     {
@@ -191,7 +191,7 @@
       "format": "tf",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.13630685036068105,
+      "score": 0.13612975218370116,
       "target": "medium"
     },
     {
@@ -199,7 +199,7 @@
       "template": "P15_RECENT_TVL_DIRECTION",
       "format": "ab",
       "decision": "selected",
-      "score": 0.4558002019440759,
+      "score": 0.48342126892695064,
       "target": "medium"
     },
     {
@@ -208,7 +208,7 @@
       "format": "mc4",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.33630685036068103,
+      "score": 0.3361297521837011,
       "target": "hard"
     },
     {
@@ -223,7 +223,7 @@
       "format": "mc4",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.27630685036068103,
+      "score": 0.2761297521837011,
       "target": "hard"
     },
     {
@@ -232,7 +232,7 @@
       "format": "mc6",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.336306850360681,
+      "score": 0.33612975218370106,
       "target": "hard"
     },
     {
@@ -241,7 +241,7 @@
       "format": "mc4",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.27630685036068103,
+      "score": 0.2761297521837011,
       "target": "hard"
     },
     {
@@ -274,7 +274,7 @@
       "format": "ab",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.21630685036068106,
+      "score": 0.21612975218370117,
       "target": "hard"
     },
     {
@@ -283,7 +283,7 @@
       "format": "tf",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.13630685036068105,
+      "score": 0.13612975218370116,
       "target": "hard"
     },
     {
@@ -292,7 +292,7 @@
       "format": "ab",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.21630685036068106,
+      "score": 0.21612975218370117,
       "target": "hard"
     },
     {
@@ -301,7 +301,7 @@
       "format": "tf",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.13630685036068105,
+      "score": 0.13612975218370116,
       "target": "hard"
     },
     {
@@ -310,7 +310,7 @@
       "format": "mc4",
       "decision": "reject",
       "reason": "difficulty_mismatch",
-      "score": 0.3291918620433825,
+      "score": 0.32145954871270893,
       "target": "hard"
     },
     {
@@ -318,7 +318,7 @@
       "template": "P20_ATH_DISTANCE",
       "format": "mc4",
       "decision": "selected",
-      "score": 0.4049699657994038,
+      "score": 0.43676696036622414,
       "target": "hard"
     },
     {
@@ -344,7 +344,7 @@
       "template": "P8_CHAIN_MEMBERSHIP",
       "format": "mc4",
       "decision": "selected",
-      "score": 0.27630685036068103,
+      "score": 0.2761297521837011,
       "target": "easy"
     }
   ]

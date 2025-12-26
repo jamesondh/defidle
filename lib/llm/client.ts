@@ -26,14 +26,22 @@ const SKIP_LLM = process.env.SKIP_LLM === "true"
 
 const EXPLANATION_SYSTEM_PROMPT = `You generate concise, educational explanations for DeFi quiz answers.
 
-Rules:
+RULES:
 - 1-2 sentences maximum
 - Include the specific numbers/data provided
 - Be factual, not promotional
 - Use plain language accessible to DeFi beginners
 - Format large numbers with appropriate units ($4.2B, not $4,200,000,000)
-- Do not include phrases like "The correct answer is..." or "According to data..."
-- Do not speculate on why the answer is correct, just state the fact directly
+- Go straight to the insight - do NOT restate the question
+- For comparison questions, briefly mention why the winner stands out over alternatives
+- Add interesting context when relevant (e.g., why a protocol is significant)
+
+AVOID:
+- "The correct answer is..." or "According to data..."
+- Tautological statements like "This makes it a single-chain protocol" (the user already knows)
+- Restating what the clues already revealed
+- Generic descriptions that lack numbers or specifics
+- Speculation on why something is true - just state the fact
 
 CRITICAL TERMINOLOGY:
 - TVL (Total Value Locked) is NOT the same as "market capitalization" or "market cap"

@@ -3,7 +3,7 @@
 > **Auto-generated from template configs.** Do not edit manually.
 > Run `bun run scripts/generate-template-docs.ts` to regenerate.
 
-This document defines the question templates used in DeFidle: 24 protocol templates (P1-P15), 14 chain templates (C1-C12), and 29 fallback templates.
+This document defines the question templates used in DeFidle: 26 protocol templates (P1-P15), 14 chain templates (C1-C12), and 29 fallback templates.
 
 > **Note**: All templates use **free DefiLlama API endpoints only**. No Pro API key required.
 
@@ -257,6 +257,34 @@ Which protocol has highest/lowest TVL in category
 | **Type** | protocol |
 | **Semantic Topics** | `tvl_comparison`, `category_ranking` |
 | **Slot Assignments** | B, D |
+| **Reusable** | No |
+
+---
+
+### P17_CATEGORY_RANK: Category Rank
+
+Where does the protocol rank within its category by TVL
+
+| Property | Value |
+|----------|-------|
+| **ID** | `P17_CATEGORY_RANK` |
+| **Type** | protocol |
+| **Semantic Topics** | `category_ranking` |
+| **Slot Assignments** | None |
+| **Reusable** | No |
+
+---
+
+### P18_PEER_COMPARISON: Peer Comparison
+
+Compare TVL with a peer protocol in same category
+
+| Property | Value |
+|----------|-------|
+| **ID** | `P18_PEER_COMPARISON` |
+| **Type** | protocol |
+| **Semantic Topics** | `tvl_comparison` |
+| **Slot Assignments** | None |
 | **Reusable** | No |
 
 ---
@@ -709,6 +737,8 @@ Questions comparing TVL between two entities
 | P14_CATEGORY_LEADER | Category Leader Comparison | `tvl_comparison`, `category_ranking` | C, D |
 | P15_RECENT_TVL_DIRECTION | Recent TVL Direction | `tvl_trend_30d`, `tvl_direction`, `fingerprint_trend_revealed` | C, E |
 | P16_CATEGORY_PEER | Category Peer Comparison | `tvl_comparison`, `category_ranking` | B, D |
+| P17_CATEGORY_RANK | Category Rank | `category_ranking` |  |
+| P18_PEER_COMPARISON | Peer Comparison | `tvl_comparison` |  |
 | P20_ATH_DISTANCE | ATH Distance | `ath_history`, `tvl_magnitude` | C, D |
 | P22_CATEGORY_MARKET_SHARE | Category Market Share | `category_market_share`, `category_ranking` | C, E |
 | P27_DERIVATIVES_RANKING | Derivatives Protocol Comparison | `derivatives_ranking`, `tvl_comparison` | B, C, D |
@@ -751,7 +781,7 @@ Templates and fallbacks with overlapping semantic topics will not both be select
 | Semantic Topic | Templates/Fallbacks |
 |----------------|---------------------|
 | `fingerprint_base` | P1_FINGERPRINT, C1_FINGERPRINT |
-| `tvl_comparison` | P2_CROSSCHAIN, P13_TVL_RANK_COMPARISON, P14_CATEGORY_LEADER, P16_CATEGORY_PEER, P27_DERIVATIVES_RANKING, C2_CHAIN_COMPARISON |
+| `tvl_comparison` | P2_CROSSCHAIN, P13_TVL_RANK_COMPARISON, P14_CATEGORY_LEADER, P16_CATEGORY_PEER, P18_PEER_COMPARISON, P27_DERIVATIVES_RANKING, C2_CHAIN_COMPARISON |
 | `cross_chain_dominance` | P2_CROSSCHAIN |
 | `tvl_concentration` | P3_CONCENTRATION |
 | `ath_history` | P4_ATH_TIMING, P20_ATH_DISTANCE, C3_ATH_TIMING, C9_DISTANCE_FROM_ATH |
@@ -763,7 +793,7 @@ Templates and fallbacks with overlapping semantic topics will not both be select
 | `chain_identity` | P8_CHAIN_MEMBERSHIP |
 | `tvl_magnitude` | P10_TVL_BAND, P20_ATH_DISTANCE, C7_CHAIN_TVL_BAND |
 | `fingerprint_tvl_revealed` | P10_TVL_BAND, C7_CHAIN_TVL_BAND |
-| `category_ranking` | P14_CATEGORY_LEADER, P16_CATEGORY_PEER, P22_CATEGORY_MARKET_SHARE |
+| `category_ranking` | P14_CATEGORY_LEADER, P16_CATEGORY_PEER, P17_CATEGORY_RANK, P22_CATEGORY_MARKET_SHARE |
 | `category_market_share` | P22_CATEGORY_MARKET_SHARE |
 | `derivatives_ranking` | P27_DERIVATIVES_RANKING |
 | `category_trend` | P29_CATEGORY_GROWTH |

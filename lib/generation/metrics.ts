@@ -452,3 +452,126 @@ export function getTvlRankBucket(rank: number): string {
   if (rank <= 50) return "top 50"
   return "top 100"
 }
+
+// =============================================================================
+// Fingerprint Clue Helpers
+// =============================================================================
+
+interface ProtocolInfo {
+  slug: string
+  name: string
+  category: string
+  tvl: number
+}
+
+/**
+ * Check if a protocol is the category leader (highest TVL in its category)
+ *
+ * @param slug - Protocol slug to check
+ * @param category - Category to check leadership in
+ * @param allProtocols - List of all protocols with TVL data
+ * @returns true if this protocol has the highest TVL in the category
+ */
+export function isCategoryLeader(
+  slug: string,
+  category: string,
+  allProtocols: ProtocolInfo[]
+): boolean {
+  // Filter to same category
+  const categoryProtocols = allProtocols.filter(
+    (p) => p.category === category && p.tvl > 0
+  )
+
+  if (categoryProtocols.length === 0) return false
+
+  // Find the highest TVL protocol in this category
+  const leader = categoryProtocols.reduce((max, p) =>
+    p.tvl > max.tvl ? p : max
+  )
+
+  return leader.slug === slug
+}
+
+/**
+ * Get the TVL share of the top chain for a protocol
+ *
+ * @param currentChainTvls - Object mapping chain names to TVL values
+ * @returns Share of total TVL on the top chain (0-1), or null if no data
+ */
+export function getTopChainShare(
+  currentChainTvls: Record<string, number> | undefined
+): number | null {
+  if (!currentChainTvls) return null
+
+  // Filter to actual chains (exclude borrowed, staking, pool2, etc.)
+  const chainTvls: number[] = []
+  for (const [key, value] of Object.entries(currentChainTvls)) {
+    // Skip meta categories
+    if (
+      key === "staking" ||
+      key === "pool2" ||
+      key === "borrowed" ||
+      key === "vesting" ||
+      key === "treasury" ||
+      key === "ownTokens" ||
+      key.endsWith("-staking") ||
+      key.endsWith("-pool2") ||
+      key.endsWith("-borrowed")
+    ) {
+      continue
+    }
+    if (typeof value === "number" && value > 0) {
+      chainTvls.push(value)
+    }
+  }
+
+  if (chainTvls.length === 0) return null
+
+  const total = chainTvls.reduce((sum, v) => sum + v, 0)
+  if (total <= 0) return null
+
+  const max = Math.max(...chainTvls)
+  return max / total
+}
+
+/**
+ * Get the launch year of a protocol from its TVL history
+ *
+ * @param tvlHistory - Array of TVL history points with date timestamps
+ * @returns Launch year as number (e.g., 2020), or null if no history
+ */
+export function getLaunchYear(
+  tvlHistory: Array<{ date: number; totalLiquidityUSD: number }> | undefined
+): number | null {
+  if (!tvlHistory || tvlHistory.length === 0) return null
+
+  // Sort by date ascending and find the first point
+  const sorted = [...tvlHistory].sort((a, b) => a.date - b.date)
+  const firstDate = sorted[0].date
+
+  // Convert Unix timestamp (seconds) to year
+  const date = new Date(firstDate * 1000)
+  return date.getUTCFullYear()
+}
+
+/**
+ * Get the category rank of a protocol (1 = highest TVL in category)
+ *
+ * @param slug - Protocol slug to check
+ * @param category - Category to rank within
+ * @param allProtocols - List of all protocols with TVL data
+ * @returns Rank within category (1-based), or null if not found
+ */
+export function getCategoryRank(
+  slug: string,
+  category: string,
+  allProtocols: ProtocolInfo[]
+): number | null {
+  // Filter to same category and sort by TVL descending
+  const categoryProtocols = allProtocols
+    .filter((p) => p.category === category && p.tvl > 0)
+    .sort((a, b) => b.tvl - a.tvl)
+
+  const index = categoryProtocols.findIndex((p) => p.slug === slug)
+  return index >= 0 ? index + 1 : null
+}

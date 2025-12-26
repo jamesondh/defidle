@@ -36,6 +36,9 @@ import {
   abMargin,
   formatYYYYMM,
   formatMonth,
+  isCategoryLeader,
+  getTopChainShare,
+  getLaunchYear,
 } from "../metrics"
 import { deterministicShuffle, createRng } from "../rng"
 import { filterToActualChains, sumActualChainTvl } from "../chain-filter"
@@ -57,6 +60,11 @@ interface P1Data {
   // Track what clues were revealed (for dynamic semantic topics)
   revealedTvlBand: boolean
   revealedTrend: boolean
+  // New clue data
+  launchYear: number | null
+  isCategoryLeader: boolean
+  topChainShare: number | null
+  parentProtocol: string | undefined
 }
 
 const P1_FINGERPRINT: TemplateConfig<P1Data> = {
@@ -130,26 +138,31 @@ const P1_FINGERPRINT: TemplateConfig<P1Data> = {
     }))
 
     // Try to get distractors - multiple fallback strategies
+    // Prefer same-category distractors first, then fall back to any category
     const distractorCount = ctx.topic.tvlRank > 50 ? 3 : 5
     let distractors = pickProtocolDistractors(detail.slug, pool, distractorCount, seed, {
       mustMatch: { category: detail.category },
-      maxTvlRank: 150,
+      maxTvlRank: 75,
       preferNearRank: topic.tvlRank,
     })
 
+    // Fallback 1: same category, slightly wider rank range
     if (!distractors) {
       distractors = pickProtocolDistractors(detail.slug, pool, distractorCount, seed, {
         mustMatch: { category: detail.category },
-        maxTvlRank: 200,
+        maxTvlRank: 100,
       })
     }
 
+    // Fallback 2: any category, tighter rank range
     if (!distractors) {
       distractors = pickProtocolDistractors(detail.slug, pool, distractorCount, seed, {
-        maxTvlRank: 150,
+        maxTvlRank: 75,
+        preferNearRank: topic.tvlRank,
       })
     }
 
+    // Fallback 3: any recognizable protocol
     if (!distractors) {
       distractors = pickProtocolDistractors(detail.slug, pool, distractorCount, seed)
     }
@@ -163,6 +176,13 @@ const P1_FINGERPRINT: TemplateConfig<P1Data> = {
     const revealedTvlBand = !isFamiliar
     const revealedTrend = !isFamiliar && changeBucket !== undefined
 
+    // Compute new clue data
+    const launchYear = getLaunchYear(detail.tvl)
+    const categoryLeader = isCategoryLeader(detail.slug, detail.category, list)
+    const topChainShare = getTopChainShare(detail.currentChainTvls)
+    // parentProtocol is not currently available in the API response
+    const parentProtocol = undefined
+
     return {
       category: detail.category,
       chainCount,
@@ -175,6 +195,10 @@ const P1_FINGERPRINT: TemplateConfig<P1Data> = {
       distractors,
       revealedTvlBand,
       revealedTrend,
+      launchYear,
+      isCategoryLeader: categoryLeader,
+      topChainShare,
+      parentProtocol,
     }
   },
 
@@ -185,11 +209,37 @@ const P1_FINGERPRINT: TemplateConfig<P1Data> = {
   getClues(data, ctx) {
     const topic = ctx.topic as ProtocolPoolEntry
     const clues: string[] = []
-    
-    // Always include category and chain count
+
+    // Always include category
     clues.push(`Category: ${data.category}`)
+
+    // Add "claim to fame" clue for category leaders (most distinctive)
+    if (data.isCategoryLeader) {
+      clues.push(`#1 in ${data.category} by TVL`)
+    }
+
+    // Add parent protocol clue if available (helps identify protocol families)
+    if (data.parentProtocol) {
+      clues.push(`Part of: ${data.parentProtocol}`)
+    }
+
+    // Add chain count bucket
     clues.push(`Chains: ${data.chainBucket}`)
-    
+
+    // Add TVL concentration clue for multi-chain protocols (interesting insight)
+    if (data.chainCount > 1 && data.topChainShare !== null) {
+      if (data.topChainShare > 0.9) {
+        clues.push(`>90% TVL on single chain`)
+      } else if (data.topChainShare < 0.5 && data.chainCount >= 3) {
+        clues.push(`TVL spread across chains (no chain >50%)`)
+      }
+    }
+
+    // Add launch year for protocols with significant history (narrows options)
+    if (data.launchYear && data.launchYear <= 2021) {
+      clues.push(`Active since: ${data.launchYear}`)
+    }
+
     // For less familiar protocols (rank > 25), include TVL band and trend
     // For familiar protocols, omit these to allow later questions about them
     if (data.revealedTvlBand) {
@@ -198,18 +248,16 @@ const P1_FINGERPRINT: TemplateConfig<P1Data> = {
     if (data.revealedTrend && data.changeBucket) {
       clues.push(`7d change: ${data.changeBucket}`)
     }
-    
-    // If we didn't reveal TVL/trend for familiar protocols, add alternative clues
-    if (!data.revealedTvlBand && !data.revealedTrend) {
-      // For top-25 protocols, the category + chain count should be enough
-      // since they're well-known
+
+    // If we have very few clues for familiar protocols, add TVL rank
+    if (clues.length <= 3 && !data.revealedTvlBand && !data.isCategoryLeader) {
       if (topic.tvlRank <= 10) {
         clues.push(`TVL rank: top 10`)
-      } else {
+      } else if (topic.tvlRank <= 25) {
         clues.push(`TVL rank: top 25`)
       }
     }
-    
+
     return clues
   },
 
@@ -1699,6 +1747,257 @@ const P16_CATEGORY_PEER: TemplateConfig<P16Data> = {
 }
 
 // =============================================================================
+// P17: Category Rank (single-chain friendly)
+// =============================================================================
+
+interface P17Data {
+  category: string
+  categoryRank: number
+  categorySize: number
+  rankBucket: string
+  categoryPeers: Array<{ name: string; tvl: number; rank: number }>
+}
+
+const CATEGORY_RANK_BUCKETS = ["Top 3", "#4-10", "#11-25", "Below #25"]
+
+function getCategoryRankBucketIndex(rank: number): number {
+  if (rank <= 3) return 0
+  if (rank <= 10) return 1
+  if (rank <= 25) return 2
+  return 3
+}
+
+function getCategoryRankBucket(rank: number): string {
+  return CATEGORY_RANK_BUCKETS[getCategoryRankBucketIndex(rank)]
+}
+
+const P17_CATEGORY_RANK: TemplateConfig<P17Data> = {
+  id: "P17_CATEGORY_RANK",
+  name: "Category Rank",
+  description: "Where does the protocol rank within its category by TVL",
+  type: "protocol",
+  // Uses category_ranking - asks about relative position, not absolute TVL
+  semanticTopics: ["category_ranking"],
+
+  checkPrereqs(ctx) {
+    if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
+    const catProtocols = ctx.derived.categoryProtocols
+    // Need at least 4 protocols in category to make ranking meaningful
+    if (!catProtocols || catProtocols.length < 3) return { passed: false, reason: "need_4_category_peers" }
+    const topic = ctx.topic as ProtocolPoolEntry
+    if (!topic.category) return { passed: false, reason: "no_category" }
+    return { passed: true }
+  },
+
+  getFormats() {
+    return ["mc4"]
+  },
+
+  extract(ctx, _seed) {
+    const catProtocols = ctx.derived.categoryProtocols!
+    const topic = ctx.topic as ProtocolPoolEntry
+    const topicTvl = ctx.derived.currentTvl ?? 0
+
+    // Include topic in the pool and sort by TVL
+    const allInCategory = [
+      { name: topic.name, tvl: topicTvl, slug: topic.slug, rank: 0 },
+      ...catProtocols.map((p) => ({ ...p, rank: 0 })),
+    ].sort((a, b) => b.tvl - a.tvl)
+
+    // Assign ranks
+    allInCategory.forEach((p, idx) => {
+      p.rank = idx + 1
+    })
+
+    // Find topic's rank
+    const topicEntry = allInCategory.find((p) => p.slug === topic.slug)
+    if (!topicEntry) return null
+
+    const categoryRank = topicEntry.rank
+    const rankBucket = getCategoryRankBucket(categoryRank)
+
+    return {
+      category: topic.category,
+      categoryRank,
+      categorySize: allInCategory.length,
+      rankBucket,
+      categoryPeers: allInCategory.slice(0, 5),
+    }
+  },
+
+  getPrompt(data, ctx) {
+    const topic = ctx.topic as ProtocolPoolEntry
+    return `Where does ${topic.name} rank in ${data.category} by TVL?`
+  },
+
+  getChoices() {
+    return CATEGORY_RANK_BUCKETS
+  },
+
+  getAnswerIndex(data) {
+    return getCategoryRankBucketIndex(data.categoryRank)
+  },
+
+  getMargin(data) {
+    // Margin based on how close to bucket boundary
+    // E.g., rank 3 is close to boundary with 4-10, so lower margin
+    const rank = data.categoryRank
+    if (rank <= 3) {
+      return (3 - rank) / 3 // 0 for rank 3, 0.67 for rank 1
+    }
+    if (rank <= 10) {
+      const distFromEdge = Math.min(rank - 4, 10 - rank)
+      return distFromEdge / 6
+    }
+    if (rank <= 25) {
+      const distFromEdge = Math.min(rank - 11, 25 - rank)
+      return distFromEdge / 14
+    }
+    return (rank - 25) / 25 // Higher margin for ranks well below 25
+  },
+
+  getExplainData(data, ctx) {
+    const topic = ctx.topic as ProtocolPoolEntry
+    return {
+      name: topic.name,
+      category: data.category,
+      rank: data.categoryRank,
+      totalInCategory: data.categorySize,
+      topPeers: data.categoryPeers.map((p) => `#${p.rank} ${p.name}`).join(", "),
+    }
+  },
+}
+
+// =============================================================================
+// P18: Peer Comparison (single-chain friendly)
+// =============================================================================
+
+interface P18Data {
+  peer: { name: string; tvl: number; slug: string }
+  topicTvl: number
+  topicHigher: boolean
+  margin: number
+  category: string
+}
+
+const P18_PEER_COMPARISON: TemplateConfig<P18Data> = {
+  id: "P18_PEER_COMPARISON",
+  name: "Peer Comparison",
+  description: "Compare TVL with a peer protocol in same category",
+  type: "protocol",
+  // Uses tvl_comparison - relative comparison, doesn't reveal absolute TVL
+  semanticTopics: ["tvl_comparison"],
+
+  checkPrereqs(ctx) {
+    if (!isProtocolContext(ctx)) return { passed: false, reason: "not_protocol" }
+    const catProtocols = ctx.derived.categoryProtocols
+    // Need at least 1 peer in the same category
+    if (!catProtocols || catProtocols.length < 1) return { passed: false, reason: "need_category_peer" }
+    const topic = ctx.topic as ProtocolPoolEntry
+    if (!topic.category) return { passed: false, reason: "no_category" }
+    return { passed: true }
+  },
+
+  getFormats(ctx) {
+    const catProtocols = ctx.derived.categoryProtocols
+    if (!catProtocols || catProtocols.length === 0) return []
+    const topicTvl = ctx.derived.currentTvl ?? 0
+
+    // Find the closest peer by TVL
+    let closestPeer = catProtocols[0]
+    let minDiff = Math.abs(closestPeer.tvl - topicTvl)
+
+    for (const peer of catProtocols) {
+      const diff = Math.abs(peer.tvl - topicTvl)
+      if (diff < minDiff && diff > 0) {
+        minDiff = diff
+        closestPeer = peer
+      }
+    }
+
+    const margin = abMargin(topicTvl, closestPeer.tvl) ?? 0
+
+    // Only offer tf format if margin is < 15% (close call)
+    return margin < 0.15 ? ["tf", "ab"] : ["ab"]
+  },
+
+  extract(ctx, seed) {
+    const catProtocols = ctx.derived.categoryProtocols!
+    const topic = ctx.topic as ProtocolPoolEntry
+    const topicTvl = ctx.derived.currentTvl ?? 0
+
+    // Find a peer with similar TVL for an interesting question
+    // Sort by absolute difference from topic TVL
+    const sorted = [...catProtocols]
+      .filter((p) => p.slug !== topic.slug && p.tvl > 0)
+      .sort((a, b) => Math.abs(a.tvl - topicTvl) - Math.abs(b.tvl - topicTvl))
+
+    if (sorted.length === 0) return null
+
+    // Use seed to pick from the closest few peers (for variety)
+    const rng = createRng(seed)
+    const candidateCount = Math.min(3, sorted.length)
+    const peerIdx = Math.floor(rng() * candidateCount)
+    const peer = sorted[peerIdx]
+
+    const margin = abMargin(topicTvl, peer.tvl) ?? 0
+    const topicHigher = topicTvl > peer.tvl
+
+    return {
+      peer: { name: peer.name, tvl: peer.tvl, slug: peer.slug },
+      topicTvl,
+      topicHigher,
+      margin,
+      category: topic.category,
+    }
+  },
+
+  getPrompt(data, ctx) {
+    const topic = ctx.topic as ProtocolPoolEntry
+    return `Which ${data.category} protocol has higher TVL: ${topic.name} or ${data.peer.name}?`
+  },
+
+  getChoices(data, ctx, format, seed) {
+    const topic = ctx.topic as ProtocolPoolEntry
+
+    if (format === "tf") {
+      return [`${topic.name} has higher TVL`, `${data.peer.name} has higher TVL`]
+    }
+
+    // For ab format, randomize order
+    const choices = [topic.name, data.peer.name]
+    return deterministicShuffle(choices, `${seed}:order`)
+  },
+
+  getAnswerIndex(data, ctx, format, choices) {
+    const topic = ctx.topic as ProtocolPoolEntry
+    const winner = data.topicHigher ? topic.name : data.peer.name
+
+    if (format === "tf") {
+      return data.topicHigher ? 0 : 1
+    }
+
+    return choices.indexOf(winner)
+  },
+
+  getMargin(data) {
+    return data.margin
+  },
+
+  getExplainData(data, ctx) {
+    const topic = ctx.topic as ProtocolPoolEntry
+    return {
+      name: topic.name,
+      topicTvl: formatNumber(data.topicTvl),
+      peerName: data.peer.name,
+      peerTvl: formatNumber(data.peer.tvl),
+      category: data.category,
+      marginPercent: Math.round(data.margin * 100),
+    }
+  },
+}
+
+// =============================================================================
 // P20: ATH Distance (bucket format)
 // =============================================================================
 
@@ -2652,6 +2951,8 @@ export const PROTOCOL_TEMPLATE_CONFIGS = {
   P14_CATEGORY_LEADER,
   P15_RECENT_TVL_DIRECTION,
   P16_CATEGORY_PEER,
+  P17_CATEGORY_RANK,
+  P18_PEER_COMPARISON,
   P20_ATH_DISTANCE,
   P22_CATEGORY_MARKET_SHARE,
   P27_DERIVATIVES_RANKING,
@@ -2679,6 +2980,8 @@ export const p13TVLRankComparison = createTemplate(P13_TVL_RANK_COMPARISON)
 export const p14CategoryLeaderComparison = createTemplate(P14_CATEGORY_LEADER)
 export const p15RecentTVLDirection = createTemplate(P15_RECENT_TVL_DIRECTION)
 export const p16CategoryPeer = createTemplate(P16_CATEGORY_PEER)
+export const p17CategoryRank = createTemplate(P17_CATEGORY_RANK)
+export const p18PeerComparison = createTemplate(P18_PEER_COMPARISON)
 export const p20AthDistance = createTemplate(P20_ATH_DISTANCE)
 export const p22CategoryMarketShare = createTemplate(P22_CATEGORY_MARKET_SHARE)
 export const p27DerivativesRanking = createTemplate(P27_DERIVATIVES_RANKING)

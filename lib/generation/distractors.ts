@@ -251,15 +251,15 @@ function shuffleWithRankPreference<T extends Entity>(
 
 /**
  * Pick protocol distractors with name display.
- * 
- * By default, applies a maxTvlRank of 150 to ensure distractors are
+ *
+ * By default, applies a maxTvlRank of 75 to ensure distractors are
  * recognizable protocols. Override with constraints.maxTvlRank if needed.
- * 
+ *
  * @param correctSlug - Slug of the correct protocol
  * @param pool - Pool of protocol candidates
  * @param count - Number of distractors needed
  * @param seed - Seed for deterministic selection
- * @param constraints - Optional constraints (maxTvlRank defaults to 150)
+ * @param constraints - Optional constraints (maxTvlRank defaults to 75)
  */
 export function pickProtocolDistractors(
   correctSlug: string,
@@ -269,12 +269,12 @@ export function pickProtocolDistractors(
   constraints?: Partial<DistractorConstraints>
 ): string[] | null {
   const correct = pool.find((p) => p.slug === correctSlug)
-  
+
   // Apply default constraints to ensure recognizable, DeFi-only distractors
   // Can be overridden via constraints
   const fullConstraints: DistractorConstraints = {
     count,
-    maxTvlRank: 150, // Default: only top 150 protocols as distractors
+    maxTvlRank: 75, // Default: only top 75 protocols as distractors
     preferNearRank: correct?.tvlRank, // Prefer protocols of similar size
     excludeCategories: EXCLUDED_PROTOCOL_CATEGORIES, // Default: exclude CEXs
     ...constraints,

@@ -15,18 +15,19 @@
       "prompt": "Which chain matches these clues?",
       "clues": [
         "TVL rank: top 50",
+        "Native token: SEI",
         "Protocols: 50-100"
       ],
       "choices": [
-        "Katana",
-        "OP Mainnet",
         "Vaulta",
+        "OP Mainnet",
+        "Katana",
         "Sei"
       ],
       "answerIndex": 3,
-      "explanation": "Sei is ranked #25 by TVL with $100M-$500M locked across 66 protocols.",
+      "explanation": "Sei ranks 25th in total value locked (TVL) with between $100M and $500M, indicating a solid position in the DeFi space. It hosts 66 protocols, placing it in the 50-100 range for protocol count, showcasing its diverse offerings.",
       "difficulty": "medium",
-      "llmFallback": true,
+      "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_25",
@@ -47,7 +48,7 @@
       ],
       "answerIndex": 1,
       "answerValue": false,
-      "explanation": "Linea has a total value locked (TVL) of $222M, surpassing Sei's TVL of $208M by a margin of 6.5%. This indicates that Linea has more assets deposited in its protocol compared to Sei.",
+      "explanation": "Linea outperforms Sei with a TVL of $222M compared to Sei's $208M, giving Linea a 6.5% advantage. This indicates stronger user confidence and asset deposits in Linea's protocol.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
@@ -71,9 +72,9 @@
         "Flare"
       ],
       "answerIndex": 2,
-      "explanation": "Ink had the highest 30-day TVL growth at 21.0%, outpacing Ethereum (+8.8%), Flare (+8.1%), Plasma (+18.6%).",
+      "explanation": "Ink achieved a remarkable growth rate of 21.0%, significantly outpacing Ethereum's 8.8% and Flare's 8.1%. This strong performance highlights Ink's rapid adoption and development compared to other chains in the DeFi space.",
       "difficulty": "hard",
-      "llmFallback": true,
+      "llmFallback": false,
       "signals": {
         "format": "ab",
         "familiarityRankBucket": "top_25",
@@ -97,7 +98,7 @@
         "Jan 2024"
       ],
       "answerIndex": 2,
-      "explanation": "Sei reached its all-time high (ATH) TVL of $688M in July 2025, while other options like April 2024 and December 2023 did not mark this peak. The ATH timing indicates when Sei had its highest total value locked, distinguishing it from the other months listed.",
+      "explanation": "Sei reached its all-time high (ATH) TVL of $688M in July 2025, which is notable compared to earlier months like December 2023 and January 2024, when its TVL was significantly lower. This timing highlights Sei's growth trajectory leading up to its peak.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
@@ -116,24 +117,24 @@
       "prompt": "Which DEX is #1 by 24h volume on Sei?",
       "choices": [
         "Dragon Swap V3 Sei",
-        "Oxium",
+        "Sailor",
         "Uniswap V3",
-        "Sailor"
+        "Oxium"
       ],
       "answerIndex": 3,
-      "explanation": "On the Sei chain, the top decentralized exchange (DEX) is Sailor, with a trading volume of $11M. This significantly surpasses other DEXes like Dragon Swap V3 Sei at $7M and Oxium at $4M, highlighting Sailor's leading position in volume.",
+      "explanation": "Oxium is the top DEX on the Sei chain with a trading volume of $9M, significantly outperforming its closest competitor, Dragon Swap V3 Sei, which has $6M. Other DEXes like Sailor and Uniswap V3 lag far behind, with volumes of $5M and $259K, respectively.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_25",
-        "margin": 0.30545135135311247,
+        "margin": 0.2948338367642449,
         "volatility": null
       },
       "difficultyScore": 0.281
     }
   ],
-  "generatedAt": "2025-12-23T16:17:06.767Z",
+  "generatedAt": "2025-12-24T14:22:46.701Z",
   "buildLog": [
     {
       "slot": "A",

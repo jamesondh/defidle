@@ -50,6 +50,10 @@ interface C1Data {
   // Track what clues were revealed (for dynamic semantic topics)
   revealedTvlBand: boolean
   revealedTrend: boolean
+  // New clue data
+  tokenSymbol: string | undefined
+  launchYear: number | null
+  isTopByProtocols: boolean
 }
 
 /**
@@ -148,6 +152,22 @@ const C1_FINGERPRINT: TemplateConfig<C1Data> = {
     const revealedTvlBand = !isFamiliar
     const revealedTrend = !isFamiliar && trendBucket !== undefined
 
+    // Compute new clue data
+    const tokenSymbol = topic.tokenSymbol
+
+    // Get launch year from chain history
+    let launchYear: number | null = null
+    if (ctx.data.chainHistory && ctx.data.chainHistory.length > 0) {
+      const sorted = [...ctx.data.chainHistory].sort((a, b) => a.date - b.date)
+      const firstDate = sorted[0].date
+      launchYear = new Date(firstDate * 1000).getUTCFullYear()
+    }
+
+    // Check if this chain has a very high protocol count (distinctive fact)
+    // We can't compare with chainList entries since they don't have protocolCount
+    // Instead, we check if this is a top-tier chain by protocol count (200+ is very high)
+    const isTopByProtocols = topic.protocolCount >= 200
+
     return {
       tvlRank: topic.tvlRank,
       rankBucket,
@@ -159,6 +179,9 @@ const C1_FINGERPRINT: TemplateConfig<C1Data> = {
       distractors,
       revealedTvlBand,
       revealedTrend,
+      tokenSymbol,
+      launchYear,
+      isTopByProtocols,
     }
   },
 
@@ -172,8 +195,23 @@ const C1_FINGERPRINT: TemplateConfig<C1Data> = {
     // Always include rank bucket
     clues.push(`TVL rank: ${data.rankBucket}`)
 
-    // Always include protocol count - this is informative without revealing identity
-    clues.push(`Protocols: ${data.protocolCountBucket}`)
+    // Add native token clue - distinctive and helpful for identification
+    if (data.tokenSymbol) {
+      clues.push(`Native token: ${data.tokenSymbol}`)
+    }
+
+    // Add "claim to fame" clue for chains with most protocols
+    if (data.isTopByProtocols && data.protocolCount >= 100) {
+      clues.push(`Most protocols by count`)
+    } else {
+      // Otherwise include protocol count bucket
+      clues.push(`Protocols: ${data.protocolCountBucket}`)
+    }
+
+    // Add launch year for older chains (narrows options)
+    if (data.launchYear && data.launchYear <= 2020) {
+      clues.push(`Active since: ${data.launchYear}`)
+    }
 
     // For less familiar chains (rank > 25), include TVL band
     // For familiar chains, omit to allow later questions about it
