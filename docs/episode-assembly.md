@@ -32,25 +32,42 @@ Note: Ranges overlap intentionally to allow flexibility in slot assignment. The 
 
 ### Difficulty Scoring
 
-Each question's difficulty is computed from four signals:
+Each question's difficulty is computed from four signals plus an optional template complexity bonus:
 
 ```
-score = 0.40 × formatFactor 
-      + 0.20 × familiarityFactor 
+score = 0.45 × formatFactor 
+      + 0.15 × familiarityFactor 
       + 0.30 × marginFactor 
       + 0.10 × volatilityFactor
+      + templateComplexityBonus
 ```
 
 **Format Factor** (lower = easier):
 | Format | Factor |
 |--------|--------|
-| tf | 0.20 |
-| ab | 0.40 |
+| tf | 0.15 |
+| ab | 0.35 |
 | mc4 | 0.55 |
-| mc6 | 0.70 |
-| rank4 | 0.85 |
+| mc6 | 0.75 |
+| rank4 | 0.90 |
 
 > **Note**: `write_in` format is deferred to v2+. See SPEC.md for rationale.
+
+**Template Complexity Bonus**:
+
+Some question types are inherently harder regardless of numeric margins. These templates receive a complexity bonus to help them hit the hard difficulty band:
+
+| Template | Bonus | Rationale |
+|----------|-------|-----------|
+| P4_ATH_TIMING | +0.10 | Requires historical knowledge |
+| C3_ATH_TIMING | +0.10 | Requires historical knowledge |
+| P33_MULTI_RANKING | +0.10 | Requires ordering 3 protocols |
+| P31_PRECISE_RANK | +0.08 | Requires exact rank knowledge |
+| P32_EXCHANGE_COMPARISON | +0.08 | Requires CEX/DEX landscape knowledge |
+| P20_ATH_DISTANCE | +0.06 | Requires knowing both current and ATH |
+| C9_DISTANCE_FROM_ATH | +0.06 | Requires knowing both current and ATH |
+| P29_CATEGORY_GROWTH | +0.06 | Requires knowing sector trends |
+| C4_GROWTH_RANKING | +0.06 | Requires comparing multiple chains |
 
 **Familiarity Factor** (based on TVL rank):
 | Rank Bucket | Factor |

@@ -21,22 +21,22 @@
         "7d change: down 1-10%"
       ],
       "choices": [
-        "Drift Trade",
+        "Sanctum Validator LSTs",
         "Aster Bridge",
-        "Arbitrum Bridge",
-        "Lighter Bridge"
+        "StakeWise V2",
+        "Gauntlet"
       ],
       "answerIndex": 1,
-      "explanation": "Aster Bridge is a bridge protocol that connects five chains: Ethereum, Solana, Arbitrum, Scroll, and Binance, with a total value locked (TVL) of $762M, placing it in the TVL band of $500M-$1B.",
+      "explanation": "Aster Bridge is a cross-chain bridge that connects five different blockchains: Solana, Ethereum, Arbitrum, Binance, and Scroll, with a total value locked (TVL) of $756M, placing it in the $500M-$1B TVL band. Its significant TVL indicates strong user trust and adoption across multiple networks.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_100",
         "margin": null,
-        "volatility": 0.06603465558714425
+        "volatility": 0.0652997644711328
       },
-      "difficultyScore": 0.37660346555871443
+      "difficultyScore": 0.38902997644711335
     },
     {
       "qid": "q2",
@@ -49,40 +49,40 @@
         "Binance"
       ],
       "answerIndex": 1,
-      "explanation": "Aster Bridge connects Binance, which has a TVL of $578M, to Arbitrum with a TVL of $56M, resulting in a margin of 90% favoring Binance. This indicates a significant disparity in the total value locked between the two chains.",
+      "explanation": "Aster Bridge has a total value locked (TVL) of $574M on Binance, significantly outperforming Arbitrum's $56M TVL, making it a preferred choice for cross-chain transactions with a margin of 90%. This highlights Binance's dominance in the cross-chain space compared to Arbitrum.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "ab",
         "familiarityRankBucket": "top_100",
-        "margin": 0.9038604634045881,
-        "volatility": 0.06603465558714425
+        "margin": 0.9030705894910771,
+        "volatility": 0.0652997644711328
       },
-      "difficultyScore": 0.22660346555871447
+      "difficultyScore": 0.2090299764471133
     },
     {
       "qid": "q3",
       "slot": "C",
-      "templateId": "P20_ATH_DISTANCE",
+      "templateId": "P29_CATEGORY_GROWTH",
       "format": "mc4",
-      "prompt": "How far is Aster Bridge's current TVL from its all-time high?",
+      "prompt": "Which DeFi category grew the most in TVL over the past 7 days?",
       "choices": [
-        "<25% below ATH",
-        "25-50% below ATH",
-        "50-75% below ATH",
-        ">75% below ATH"
+        "Derivatives",
+        "Chain",
+        "Payments",
+        "Yield"
       ],
-      "answerIndex": 2,
-      "explanation": "Aster Bridge has a total value locked (TVL) of $762 million, which is 51% below its all-time high (ATH) of $1.6 billion, placing it in the 50-75% below ATH category.",
-      "difficulty": "hard",
+      "answerIndex": 0,
+      "explanation": "Aster Bridge's derivatives category experienced a remarkable growth of +40,886.3%, significantly outpacing other categories like Chain at +238.1% and Yield at +274.8%. This explosive growth highlights its dominance in the derivatives space compared to more modest increases in other areas.",
+      "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_100",
-        "margin": 0.053750990761107856,
-        "volatility": 0.06603465558714425
+        "margin": 1,
+        "volatility": 0.0652997644711328
       },
-      "difficultyScore": 0.522102276645385
+      "difficultyScore": 0.3590299764471133
     },
     {
       "qid": "q4",
@@ -98,16 +98,16 @@
         "#51-100"
       ],
       "answerIndex": 4,
-      "explanation": "Aster Bridge has a total value locked (TVL) of $762M, ranking it 69th among DeFi protocols. It is positioned in the rank bucket of #51-100, with nearby protocols like Uniswap V2 and Binance Staked SOL both having a TVL of $1.2B.",
+      "explanation": "Aster Bridge has a total value locked (TVL) of $756M, placing it at rank 69 among DeFi protocols. It is closely positioned within a competitive range, with nearby protocols like Uniswap V2 and Binance Staked SOL both holding $1.2B in TVL.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_100",
         "margin": 1,
-        "volatility": 0.06603465558714425
+        "volatility": 0.0652997644711328
       },
-      "difficultyScore": 0.28660346555871447
+      "difficultyScore": 0.37902997644711334
     },
     {
       "qid": "q5",
@@ -117,22 +117,137 @@
       "prompt": "Which chain is Aster Bridge deployed on?",
       "choices": [
         "BSC",
-        "Solana",
-        "Scroll",
+        "Ethereum",
+        "Binance",
         "Arbitrum"
       ],
       "answerIndex": 2,
-      "explanation": "Aster Bridge connects five different chains: Ethereum, Solana, Arbitrum, Scroll, and Binance. This multi-chain capability allows for greater interoperability within the DeFi ecosystem.",
+      "explanation": "Aster Bridge connects five different chains: Solana, Ethereum, Arbitrum, Binance, and Scroll, facilitating cross-chain transactions and interoperability within the DeFi ecosystem. This multi-chain support enhances its utility compared to single-chain protocols.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_100",
         "margin": 0.4,
-        "volatility": 0.06603465558714425
+        "volatility": 0.0652997644711328
       },
-      "difficultyScore": 0.28660346555871447
+      "difficultyScore": 0.2990299764471133
     }
   ],
-  "generatedAt": "2025-12-26T00:24:32.524Z"
+  "generatedAt": "2025-12-26T11:56:28.845Z",
+  "buildLog": [
+    {
+      "slot": "A",
+      "template": "P1_FINGERPRINT",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.38902997644711335,
+      "target": "medium"
+    },
+    {
+      "slot": "B",
+      "template": "P2_CROSSCHAIN",
+      "format": "ab",
+      "decision": "selected",
+      "score": 0.2090299764471133,
+      "target": "easy"
+    },
+    {
+      "slot": "C",
+      "template": "P5_FEES_REVENUE",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "P11_FEES_TREND",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "P14_CATEGORY_LEADER",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_comparison"
+    },
+    {
+      "slot": "C",
+      "template": "P15_RECENT_TVL_DIRECTION",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:fingerprint_trend_revealed"
+    },
+    {
+      "slot": "C",
+      "template": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.575856135411219,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P22_CATEGORY_MARKET_SHARE",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.2990299764471133,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P27_DERIVATIVES_RANKING",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_comparison"
+    },
+    {
+      "slot": "C",
+      "template": "P29_CATEGORY_GROWTH",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.3590299764471133,
+      "target": "medium"
+    },
+    {
+      "slot": "D",
+      "template": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.37902997644711334,
+      "target": "hard"
+    },
+    {
+      "slot": "E",
+      "template": "P6_TVL_TREND",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:fingerprint_trend_revealed"
+    },
+    {
+      "slot": "E",
+      "template": "P3_CONCENTRATION",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.5546419269805871,
+      "target": "easy"
+    },
+    {
+      "slot": "E",
+      "template": "P10_TVL_BAND",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:fingerprint_tvl_revealed"
+    },
+    {
+      "slot": "E",
+      "template": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.2990299764471133,
+      "target": "easy"
+    },
+    {
+      "decision": "post_balance",
+      "reason": "No challenging questions in episode"
+    }
+  ]
 }

@@ -80,6 +80,11 @@ export interface DistractorConstraints {
    * Used to filter out non-DeFi protocols (e.g., CEXs) from appearing as wrong answers.
    */
   excludeCategories?: readonly string[]
+  /**
+   * Name of the correct answer to exclude (case-insensitive).
+   * This is a safety net to prevent duplicates when id/slug don't match the display name.
+   */
+  correctName?: string
 }
 
 // =============================================================================
@@ -157,10 +162,21 @@ export function pickEntityDistractors<T extends Entity>(
   seed: number,
   correctTvl?: number
 ): T[] | null {
+  // Normalize correct name for case-insensitive comparison
+  const correctNameLower = constraints.correctName?.toLowerCase()
+  
   // Filter candidates
   let candidates = pool.filter((item) => {
     if (item.id === correctId) return false
     if (constraints.avoid?.has(item.id)) return false
+    
+    // Also filter by name (case-insensitive) to prevent duplicates
+    // This handles cases where id/slug don't match the display name
+    if (correctNameLower) {
+      const itemName = (item as unknown as ProtocolEntity).name?.toLowerCase()
+      if (itemName === correctNameLower) return false
+    }
+    
     if (constraints.mustMatch && !matchesBands(item, constraints.mustMatch)) {
       return false
     }
@@ -277,6 +293,7 @@ export function pickProtocolDistractors(
     maxTvlRank: 75, // Default: only top 75 protocols as distractors
     preferNearRank: correct?.tvlRank, // Prefer protocols of similar size
     excludeCategories: EXCLUDED_PROTOCOL_CATEGORIES, // Default: exclude CEXs
+    correctName: correct?.name, // Prevent duplicates via name matching
     ...constraints,
   }
 
@@ -318,6 +335,7 @@ export function pickChainDistractors(
     count,
     maxTvlRank: 30, // Default: only top 30 chains as distractors
     preferNearRank: correct?.tvlRank, // Prefer chains of similar size
+    correctName: correct?.name, // Prevent duplicates via name matching
     ...constraints,
   }
 

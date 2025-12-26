@@ -1,202 +1,242 @@
 {
-  "2025-12-23|chain|Sei|A|C1_FINGERPRINT|explanation|2d3f51f355082965": {
-    "text": "Sei is ranked 25th in total value locked (TVL), with a TVL ranging between $100M and $500M. The protocol supports 66 different protocols and operates with the token symbol SEI.",
+  "2025-12-19|protocol|tether-gold|A|P1_FINGERPRINT|explanation|52a2695b48b67435": {
+    "text": "Tether Gold is a real-world asset (RWA) protocol with a total value locked (TVL) of $2.4B, placing it within the $1B-$5B range. It operates across 8 chains, including Ethereum and Polygon, highlighting its broad accessibility in the DeFi space.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:01:53.891Z"
-  },
-  "2025-12-23|chain|Sei|B|C2_CHAIN_COMPARISON|explanation|1ab888bcfe7e5526": {
-    "text": "Linea has a total value locked (TVL) of $222M, surpassing Sei's TVL of $208M by a margin of 6.5%. This indicates that Linea has more assets deposited in its protocol compared to Sei.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:01:55.831Z"
-  },
-  "2025-12-23|chain|Sei|C|C4_GROWTH_RANKING|explanation|d08011c554141a3f": {
-    "text": "Sei achieved a top growth ranking with a change of +21.0%, significantly outpacing other chains like Ethereum at +8.8% and Plasma at +18.6%. This indicates a strong performance in total value locked compared to its peers.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:01:57.570Z"
-  },
-  "2025-12-23|chain|Sei|D|C3_ATH_TIMING|explanation|1c8c8c9cfc4b8aa7": {
-    "text": "Sei reached its all-time high (ATH) TVL of $688M in July 2025, while other options like April 2024 and December 2023 did not mark this peak. The ATH timing indicates when Sei had its highest total value locked, distinguishing it from the other months listed.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:01:59.926Z"
-  },
-  "2025-12-23|chain|Sei|E|C6_TOP_DEX|explanation|3de163a3f7bceee7": {
-    "text": "On the Sei chain, the top decentralized exchange (DEX) is Sailor, with a trading volume of $11M. This significantly surpasses other DEXes like Dragon Swap V3 Sei at $7M and Oxium at $4M, highlighting Sailor's leading position in volume.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:02:02.280Z"
-  },
-  "2025-12-22|protocol|usdt0|A|P1_FINGERPRINT|explanation|1efb1e20d4368015": {
-    "text": "USDT0 is a bridge protocol on the Ethereum blockchain with a total value locked (TVL) of $4.2B, placing it within the $1B-$5B TVL band. It operates across one chain, facilitating asset transfers.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:02:13.039Z"
-  },
-  "2025-12-22|protocol|usdt0|B|P7_CATEGORY|explanation|8a4082e5aa5b71b9": {
-    "text": "USDT0 is categorized as a \"Bridge,\" which typically facilitates the transfer of assets between different blockchain networks. This allows users to move their USDT (Tether) across various platforms seamlessly.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:02:13.990Z"
-  },
-  "2025-12-22|protocol|usdt0|C|P15_RECENT_TVL_DIRECTION|explanation|12c4c63fe4964a91": {
-    "text": "USDT0 experienced a 5.0% increase in total value locked (TVL) over the past 30 days, bringing its TVL to $4.2B.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:02:15.083Z"
-  },
-  "2025-12-22|protocol|usdt0|D|P20_ATH_DISTANCE|explanation|19fb7240ee548c2a": {
-    "text": "USDT0 has a total value locked (TVL) of $4.2B, which is 46% below its all-time high (ATH) of $7.8B, placing it in the 25-50% below ATH category.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:02:17.334Z"
-  },
-  "2025-12-22|protocol|usdt0|E|P8_CHAIN_MEMBERSHIP|explanation|2581d4dbcd88b92a": {
-    "text": "USDT0 is a stablecoin that operates on the Ethereum blockchain, making it part of a single chain ecosystem. It is designed to maintain a stable value, typically pegged to the US dollar.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:02:19.582Z"
-  },
-  "2025-12-21|protocol|babylon-protocol|A|P1_FINGERPRINT|explanation|7a47e2d4201ae88c": {
-    "text": "Babylon Protocol is a restaking platform operating on the Bitcoin chain, with a total value locked (TVL) of $5.4B, placing it within the $5B-$10B TVL band.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:02:23.706Z"
-  },
-  "2025-12-21|protocol|babylon-protocol|B|P7_CATEGORY|explanation|ceb80359d5976b00": {
-    "text": "Babylon Protocol operates within the \"Restaking\" category, allowing users to earn additional rewards by restaking their assets in the DeFi ecosystem. This process enhances the utility of staked tokens while contributing to network security and efficiency.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:02:25.015Z"
-  },
-  "2025-12-21|protocol|babylon-protocol|C|P15_RECENT_TVL_DIRECTION|explanation|3d324de71bb20b64": {
-    "text": "Babylon Protocol's total value locked (TVL) increased by 11.4% over the past 30 days, reaching $5.4B. This indicates a growing interest and investment in the protocol during this period.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:02:26.450Z"
-  },
-  "2025-12-21|protocol|babylon-protocol|D|P20_ATH_DISTANCE|explanation|20a797528df54e27": {
-    "text": "Babylon Protocol has a total value locked (TVL) of $5.4B, which is 25% below its all-time high (ATH) of $7.1B, placing it in the 25-50% below ATH category.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:02:27.735Z"
-  },
-  "2025-12-21|protocol|babylon-protocol|E|P8_CHAIN_MEMBERSHIP|explanation|bc82702c88e77793": {
-    "text": "Babylon Protocol operates on the Bitcoin blockchain, making it a single-chain protocol with a total of 1 chain.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:02:28.497Z"
-  },
-  "2025-12-20|chain|Solana|A|C1_FINGERPRINT|explanation|e0c92a7a51a3285c": {
-    "text": "Solana ranks 2nd in TVL with a total value locked between $5B and $10B, and it supports 331 different protocols. Its native token is SOL.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:02:54.509Z"
-  },
-  "2025-12-20|chain|Solana|B|C2_CHAIN_COMPARISON|explanation|22cde841c96c62de": {
-    "text": "Solana has a total value locked (TVL) of $8.6B, which is 48% higher than Base's TVL of $4.5B, making Solana the leading chain in this comparison.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:02:55.735Z"
-  },
-  "2025-12-20|chain|Solana|C|C4_GROWTH_RANKING|explanation|78074b03744613d0": {
-    "text": "Solana achieved a top growth ranking of 21.0%, reflecting a significant increase of +21.0%. In comparison, other chains like Flare and Arbitrum saw smaller growths of +8.1% and +7.9%, respectively.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:02:57.476Z"
-  },
-  "2025-12-20|chain|Solana|D|C9_DISTANCE_FROM_ATH|explanation|cb722f4f1b0bcc09": {
-    "text": "Solana's all-time high (ATH) total value locked (TVL) is $13.2B, while its current TVL stands at $8.6B, indicating it is 35.1% away from reaching its ATH.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:02:58.499Z"
-  },
-  "2025-12-20|chain|Solana|E|C6_TOP_DEX|explanation|0fdf526c4e765795": {
-    "text": "On the Solana blockchain, the top decentralized exchange (DEX) is HumidiFi, with a trading volume of $1.1B, significantly higher than other DEXes like Meteora DAMM V2 at $480M and PumpSwap at $367M. This positions HumidiFi as the leading platform in terms of trading activity on Solana.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:03:00.646Z"
-  },
-  "2025-12-19|protocol|tether-gold|A|P1_FINGERPRINT|explanation|6baebd296129525c": {
-    "text": "Tether Gold is a real-world asset (RWA) protocol with a total value locked (TVL) of $2.4B across 8 different chains, including Plasma, Avalanche, Arbitrum, and Polygon. Its TVL falls within the range of $1B to $5B.",
-    "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:04:28.523Z"
+    "generatedAt": "2025-12-26T11:36:12.820Z"
   },
   "2025-12-19|protocol|tether-gold|B|P2_CROSSCHAIN|explanation|3ddd50f253f96949": {
-    "text": "Tether Gold has a total value locked (TVL) of $2.3B on the Ethereum chain, compared to just $12M on the Plasma chain, resulting in a margin of 99% between the two. This indicates a significant preference for Ethereum over Plasma for Tether Gold transactions.",
+    "text": "Tether Gold has a total value locked (TVL) of $2.3B on Ethereum, significantly outpacing Plasma's $12M TVL, highlighting Ethereum's dominance in DeFi with a margin of 99%. This vast difference underscores Ethereum's robust ecosystem and user adoption compared to Plasma.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:04:29.796Z"
+    "generatedAt": "2025-12-26T11:36:15.130Z"
   },
-  "2025-12-19|protocol|tether-gold|C|P15_RECENT_TVL_DIRECTION|explanation|c2f80a68d29edfae": {
-    "text": "Tether Gold's total value locked (TVL) has increased by 11.5% over the past 30 days, reaching $2.4B. This indicates a growing interest and investment in the Tether Gold protocol.",
+  "2025-12-19|protocol|tether-gold|C|P15_RECENT_TVL_DIRECTION|explanation|032f8d565dada5cc": {
+    "text": "Tether Gold's total value locked (TVL) has increased by 10.2% over the past 30 days, reaching $2.4B, indicating growing interest in this gold-backed stablecoin.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:04:30.763Z"
+    "generatedAt": "2025-12-26T11:36:17.217Z"
   },
   "2025-12-19|protocol|tether-gold|D|P33_MULTI_RANKING|explanation|de0ccd0a9cf01929": {
-    "text": "Tether Gold has a total value locked (TVL) of $2.4B, making it the highest among the listed protocols, followed by BlackRock BUIDL with $2.0B and Centrifuge Protocol with $1.3B.",
+    "text": "Tether Gold leads in the RWA category with a TVL of $2.4B, outperforming BlackRock BUIDL at $2.0B and Centrifuge Protocol at $1.3B, highlighting its strong position in the market for real-world asset tokenization.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:04:31.890Z"
+    "generatedAt": "2025-12-26T11:36:18.631Z"
   },
   "2025-12-19|protocol|tether-gold|E|P3_CONCENTRATION|explanation|0d9a5da84a75054b": {
-    "text": "Tether Gold primarily operates on the Ethereum blockchain, holding a 99% share of its total value locked (TVL) of $2.4B, with Ethereum itself contributing $2.3B to that total.",
+    "text": "Tether Gold primarily operates on Ethereum, accounting for 99% of its total value locked (TVL) of $2.4B, with Ethereum itself holding a TVL of $2.3B. This high concentration indicates Tether Gold's strong reliance on the Ethereum network for its liquidity and user base.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-23T16:04:32.914Z"
+    "generatedAt": "2025-12-26T11:36:21.263Z"
+  },
+  "2025-12-20|chain|Solana|A|C1_FINGERPRINT|explanation|56b1f16ddb4e26eb": {
+    "text": "Solana ranks 2nd in total value locked (TVL) with between $5B and $10B, showcasing its popularity and robust ecosystem of 331 protocols, which exceeds 200+. This strong TVL indicates significant user trust and engagement within its DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:36:26.835Z"
+  },
+  "2025-12-20|chain|Solana|B|C2_CHAIN_COMPARISON|explanation|22cde841c96c62de": {
+    "text": "Solana leads with a TVL of $8.6B, surpassing Base's $4.5B by 48%. This significant difference highlights Solana's stronger adoption and usage in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:36:27.978Z"
+  },
+  "2025-12-20|chain|Solana|C|C4_GROWTH_RANKING|explanation|603abb6708ba9b15": {
+    "text": "Ink achieved a remarkable growth rate of 21.0%, significantly outpacing other chains like Flare at +8.1% and Arbitrum at +7.9%. This strong performance highlights Ink's rapid adoption and increasing total value locked compared to its competitors.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:36:30.551Z"
+  },
+  "2025-12-20|chain|Solana|D|C9_DISTANCE_FROM_ATH|explanation|cb722f4f1b0bcc09": {
+    "text": "Solana's current total value locked (TVL) is $8.6B, which is 35.1% below its all-time high (ATH) of $13.2B. This indicates a significant decrease in the amount of assets locked in the protocol compared to its peak.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:36:32.482Z"
+  },
+  "2025-12-20|chain|Solana|E|C6_TOP_DEX|explanation|6c0be9aebb9d0327": {
+    "text": "HumidiFi is the top DEX on Solana, with a trading volume of $1.0B, significantly outpacing other platforms like Meteora DAMM V2 at $712M and PumpSwap at $651M. This high volume indicates strong user activity and liquidity on HumidiFi compared to its competitors.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:36:34.311Z"
+  },
+  "2025-12-21|protocol|babylon-protocol|A|P1_FINGERPRINT|explanation|7a47e2d4201ae88c": {
+    "text": "Babylon Protocol is a restaking platform on the Bitcoin chain with a total value locked (TVL) of $5.4B, placing it within the $5B-$10B range. Its focus on restaking allows users to maximize their staking rewards while leveraging Bitcoin's security.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:36:38.184Z"
+  },
+  "2025-12-21|protocol|babylon-protocol|B|P7_CATEGORY|explanation|ceb80359d5976b00": {
+    "text": "Babylon Protocol operates in the Restaking category, allowing users to earn additional rewards by reusing their staked assets across different protocols. This innovative approach enhances capital efficiency in the DeFi ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:36:39.439Z"
+  },
+  "2025-12-21|protocol|babylon-protocol|C|P15_RECENT_TVL_DIRECTION|explanation|807f02134c43d975": {
+    "text": "Babylon Protocol's total value locked (TVL) has increased by 9.6% over the past 30 days, reaching $5.4B. This growth indicates rising confidence and activity within the protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:36:41.794Z"
+  },
+  "2025-12-21|protocol|babylon-protocol|D|P20_ATH_DISTANCE|explanation|93aaa1929e7f1295": {
+    "text": "Babylon Protocol's current TVL is $5.4B, which is 24% below its all-time high of $7.1B, placing it in the category of being less than 25% below its peak. This indicates a strong position relative to its historical performance, suggesting resilience in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:36:43.500Z"
+  },
+  "2025-12-21|protocol|babylon-protocol|E|P8_CHAIN_MEMBERSHIP|explanation|bc82702c88e77793": {
+    "text": "Babylon Protocol operates exclusively on the Bitcoin blockchain, making it a single-chain protocol with a focus on leveraging Bitcoin's security and stability. This unique positioning allows it to cater specifically to Bitcoin users within the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:36:44.660Z"
+  },
+  "2025-12-22|protocol|usdt0|A|P1_FINGERPRINT|explanation|027bf7bf88c02c08": {
+    "text": "USDT0 is a bridge protocol on Ethereum with a total value locked (TVL) of $4.3B, placing it within the $1B-$5B range. Its significant TVL indicates strong usage and trust within the DeFi ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:36:49.882Z"
+  },
+  "2025-12-22|protocol|usdt0|B|P7_CATEGORY|explanation|8a4082e5aa5b71b9": {
+    "text": "USDT0 is categorized as a bridge, facilitating the transfer of USDT across different blockchain networks. This functionality enhances interoperability and allows users to move their assets seamlessly between chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:36:51.419Z"
+  },
+  "2025-12-22|protocol|usdt0|C|P15_RECENT_TVL_DIRECTION|explanation|57355d9f900ed977": {
+    "text": "USDT0's total value locked (TVL) increased by 8.9% over the past 30 days, reaching $4.3B, indicating growing user confidence and activity within the protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:36:53.877Z"
+  },
+  "2025-12-22|protocol|usdt0|D|P31_PRECISE_RANK|explanation|f78696576f642be2": {
+    "text": "USDT0 has a total value locked (TVL) of $4.3B, placing it at rank 13 among DeFi protocols. It stands out in the #6-15 rank bucket, with nearby competitors like ether.fi Stake at $8.1B and Gemini at $7.3B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:36:55.128Z"
+  },
+  "2025-12-22|protocol|usdt0|E|P10_TVL_BAND|explanation|e754b33db5c99d90": {
+    "text": "USDT0 has a total value locked (TVL) of $4.3B, placing it within the $1B-$5B range, indicating significant liquidity and usage in the DeFi space. This level of TVL suggests strong user confidence and adoption of the protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:36:56.335Z"
+  },
+  "2025-12-23|chain|Sei|A|C1_FINGERPRINT|explanation|3e44f8c5967fd0ce": {
+    "text": "Sei ranks 25th in total value locked (TVL) with between $100M and $500M, indicating a solid presence in the DeFi space. It hosts 66 protocols, placing it in the 50-100 range for protocol count, showcasing its diverse ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:37:00.473Z"
+  },
+  "2025-12-23|chain|Sei|B|C2_CHAIN_COMPARISON|explanation|1ab888bcfe7e5526": {
+    "text": "Linea leads with a TVL of $222M, surpassing Sei's $208M by 6.5%. This indicates stronger asset deposits in Linea, highlighting its appeal among users compared to Sei.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:37:01.454Z"
+  },
+  "2025-12-23|chain|Sei|C|C4_GROWTH_RANKING|explanation|ae06154ad955da02": {
+    "text": "Ink achieved a remarkable growth rate of 21.0%, significantly outpacing Ethereum's 8.8% and Flare's 8.1%. This strong performance highlights Ink's rapid adoption and increasing total value locked compared to other chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:37:03.085Z"
+  },
+  "2025-12-23|chain|Sei|D|C3_ATH_TIMING|explanation|1c8c8c9cfc4b8aa7": {
+    "text": "Sei reached its all-time high (ATH) TVL of $688M in July 2025, which is significant compared to earlier months like December 2023 and January 2024, when it had not yet peaked. The other dates listed did not coincide with this peak, highlighting July 2025 as a key moment for Sei's growth.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:37:05.099Z"
+  },
+  "2025-12-23|chain|Sei|E|C6_TOP_DEX|explanation|9252ff7939bd4c59": {
+    "text": "Oxium is the top DEX on the Sei chain, with a trading volume of $11M, significantly outperforming its closest competitor, Sailor, which has a volume of $7M. Other DEXes like Dragon Swap V3 Sei and Uniswap V3 show much lower volumes at $2M and $162K, respectively, highlighting Oxium's dominance in the Sei ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:37:06.779Z"
   },
   "2025-12-24|protocol|jito-liquid-staking|A|P1_FINGERPRINT|explanation|5b00cf15d3350aed": {
-    "text": "Jito Liquid Staking is a liquid staking protocol on the Solana blockchain with a total value locked (TVL) of $1.8B, placing it within the $1B-$5B TVL range. It allows users to stake their assets while maintaining liquidity.",
+    "text": "Jito Liquid Staking operates exclusively on the Solana blockchain and has a total value locked (TVL) of $1.8B, placing it within the $1B-$5B range. This significant TVL highlights its prominence in the liquid staking category.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-24T00:24:05.673Z"
+    "generatedAt": "2025-12-26T11:37:11.150Z"
   },
   "2025-12-24|protocol|jito-liquid-staking|B|P7_CATEGORY|explanation|fa2bdb3eba2f4e6b": {
-    "text": "Jito Liquid Staking falls under the category of Liquid Staking, which allows users to stake their assets while still maintaining liquidity. This enables users to earn staking rewards without locking up their tokens completely.",
+    "text": "Jito Liquid Staking falls under the Liquid Staking category, allowing users to stake their assets while still maintaining liquidity, enabling them to earn rewards without locking up their funds. This approach enhances flexibility for users in the DeFi ecosystem.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-24T00:24:07.162Z"
+    "generatedAt": "2025-12-26T11:37:12.400Z"
   },
   "2025-12-24|protocol|jito-liquid-staking|C|P20_ATH_DISTANCE|explanation|c42e391061aef150": {
-    "text": "Jito Liquid Staking has a current TVL of $1.8B, which is 55% below its all-time high (ATH) of $3.9B, placing it in the 50-75% below ATH category.",
+    "text": "Jito Liquid Staking has a current TVL of $1.8B, which is 55% below its all-time high of $3.9B, placing it in the 50-75% range below ATH. This indicates a significant decrease in the total value locked compared to its peak performance.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-24T00:24:09.333Z"
+    "generatedAt": "2025-12-26T11:37:13.960Z"
   },
   "2025-12-24|protocol|jito-liquid-staking|D|P33_MULTI_RANKING|explanation|f1afcaa307c6a14e": {
-    "text": "Binance staked ETH has the highest total value locked (TVL) at $10.5B, followed by Jito Liquid Staking with a TVL of $1.8B, and DoubleZero Staked SOL at $1.6B. This ranking reflects the amount of assets locked in each protocol.",
+    "text": "Binance staked ETH leads with a TVL of $10.5B, making it the largest liquid staking protocol. Jito Liquid Staking follows with a TVL of $1.8B, surpassing DoubleZero Staked SOL, which has a TVL of $1.6B.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-24T00:24:10.530Z"
+    "generatedAt": "2025-12-26T11:37:15.381Z"
   },
   "2025-12-24|protocol|jito-liquid-staking|E|P8_CHAIN_MEMBERSHIP|explanation|37ca5fb4c53dad3a": {
-    "text": "Jito Liquid Staking operates on the Solana blockchain, making it a single-chain protocol focused on liquid staking. It allows users to stake their assets while maintaining liquidity.",
+    "text": "Jito Liquid Staking operates exclusively on the Solana blockchain, making it a single-chain protocol focused on enhancing staking efficiency within that ecosystem.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-24T00:24:12.293Z"
+    "generatedAt": "2025-12-26T11:37:16.815Z"
   },
   "2025-12-25|chain|Cardano|A|C1_FINGERPRINT|explanation|fb4df25285be6cf9": {
-    "text": "Cardano ranks 29th in total value locked (TVL) with an estimated TVL between $100M and $500M, and it hosts 77 protocols, placing it in the 50-100 protocol count bucket.",
+    "text": "Cardano ranks 29th in total value locked (TVL) with between $100M and $500M, supporting 77 protocols, which places it in the 50-100 range for protocol count. This diverse ecosystem highlights its growing adoption in the DeFi space.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-25T00:24:17.438Z"
+    "generatedAt": "2025-12-26T11:37:21.627Z"
   },
   "2025-12-25|chain|Cardano|B|C2_CHAIN_COMPARISON|explanation|2a62a6e62bd72c6e": {
-    "text": "Cardano has a total value locked (TVL) of $179M, surpassing Stellar's TVL of $166M by 7.1%. This indicates that more assets are currently deposited in Cardano's DeFi protocols compared to Stellar's.",
+    "text": "Cardano leads with a TVL of $179M, outperforming Stellar's $166M by 7.1%. This indicates a stronger utilization of Cardano's DeFi ecosystem compared to Stellar's offerings.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-25T00:24:19.380Z"
+    "generatedAt": "2025-12-26T11:37:23.469Z"
   },
-  "2025-12-25|chain|Cardano|C|C6_TOP_DEX|explanation|71a36cfdcb50a7c0": {
-    "text": "Minswap is the top decentralized exchange (DEX) on the Cardano chain, with a trading volume of $9M, significantly higher than its closest competitor, SundaeSwap V2, which has a volume of $2M. Other DEXes like WingRiders and Splash Protocol have even lower volumes at $1M and $18K, respectively.",
+  "2025-12-25|chain|Cardano|C|C6_TOP_DEX|explanation|bc292a7e12f6e407": {
+    "text": "Minswap is the leading decentralized exchange (DEX) on Cardano, with a trading volume of $3M, significantly higher than its closest competitor, WingRiders, which has a volume of $525K. Other DEXes like SundaeSwap V2 and Splash Protocol also lag behind, with volumes of $487K and $23K, respectively, highlighting Minswap's dominance in the Cardano ecosystem.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-25T00:24:21.780Z"
+    "generatedAt": "2025-12-26T11:37:25.871Z"
   },
   "2025-12-25|chain|Cardano|D|C3_ATH_TIMING|explanation|7b8e6fff1dc11d2e": {
-    "text": "Cardano reached its all-time high (ATH) TVL of $721M in December 2024, while other months like July 2024 and March 2023 did not see this peak. The ATH timing is significant as it highlights the growth of Cardano compared to these earlier dates.",
+    "text": "Cardano reached its all-time high (ATH) TVL of $721M in December 2024, significantly later than other options like March 2023 and September 2022, when its TVL was notably lower. This timing highlights Cardano's growth trajectory and increasing adoption in the DeFi space.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-25T00:24:24.021Z"
+    "generatedAt": "2025-12-26T11:37:27.984Z"
   },
   "2025-12-25|chain|Cardano|E|C13_LAYER_TYPE|explanation|8a42bbdbdb412fb3": {
-    "text": "Cardano is a Layer 1 blockchain, meaning it operates independently with its own consensus mechanism and is not built on top of another chain.",
+    "text": "Cardano is a Layer 1 blockchain that operates independently with its own consensus mechanism, distinguishing it from Layer 2 solutions that rely on other blockchains.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-25T00:24:25.321Z"
+    "generatedAt": "2025-12-26T11:37:29.410Z"
   },
-  "2025-12-26|protocol|aster-bridge|A|P1_FINGERPRINT|explanation|249a958d1e1bb106": {
-    "text": "Aster Bridge is a bridge protocol that connects five chains: Ethereum, Solana, Arbitrum, Scroll, and Binance, with a total value locked (TVL) of $762M, placing it in the TVL band of $500M-$1B.",
+  "2025-12-26|protocol|aster-bridge|A|P1_FINGERPRINT|explanation|9f8b060ca777f69d": {
+    "text": "Aster Bridge is a cross-chain bridge that connects five different blockchains: Solana, Ethereum, Arbitrum, Binance, and Scroll, with a total value locked (TVL) of $756M, placing it in the $500M-$1B TVL band. Its significant TVL indicates strong user trust and adoption across multiple networks.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-26T00:24:25.630Z"
+    "generatedAt": "2025-12-26T11:37:34.416Z"
   },
-  "2025-12-26|protocol|aster-bridge|B|P2_CROSSCHAIN|explanation|b274397a1752c3e7": {
-    "text": "Aster Bridge connects Binance, which has a TVL of $578M, to Arbitrum with a TVL of $56M, resulting in a margin of 90% favoring Binance. This indicates a significant disparity in the total value locked between the two chains.",
+  "2025-12-26|protocol|aster-bridge|B|P2_CROSSCHAIN|explanation|d6459c46882e3464": {
+    "text": "Aster Bridge has a total value locked (TVL) of $574M on Binance, significantly outperforming Arbitrum's $56M TVL, making it a preferred choice for cross-chain transactions with a margin of 90%. This highlights Binance's dominance in the cross-chain space compared to Arbitrum.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-26T00:24:27.833Z"
+    "generatedAt": "2025-12-26T11:37:35.862Z"
   },
-  "2025-12-26|protocol|aster-bridge|C|P20_ATH_DISTANCE|explanation|a5a17dfe51ab97d5": {
-    "text": "Aster Bridge has a total value locked (TVL) of $762 million, which is 51% below its all-time high (ATH) of $1.6 billion, placing it in the 50-75% below ATH category.",
+  "2025-12-26|protocol|aster-bridge|C|P20_ATH_DISTANCE|explanation|ab96b2d9c8d436d6": {
+    "text": "Aster Bridge has a current TVL of $756M, which is 52% below its all-time high of $1.6B, placing it in the 50-75% below ATH category. This indicates a significant decrease in the total value locked compared to its peak performance.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-26T00:24:28.848Z"
+    "generatedAt": "2025-12-26T11:37:37.397Z"
   },
-  "2025-12-26|protocol|aster-bridge|D|P31_PRECISE_RANK|explanation|892f558d2d7bbf28": {
-    "text": "Aster Bridge has a total value locked (TVL) of $762M, ranking it 69th among DeFi protocols. It is positioned in the rank bucket of #51-100, with nearby protocols like Uniswap V2 and Binance Staked SOL both having a TVL of $1.2B.",
+  "2025-12-26|protocol|aster-bridge|D|P31_PRECISE_RANK|explanation|8e8fe80399b7e2ed": {
+    "text": "Aster Bridge has a total value locked (TVL) of $756M, placing it at rank 69 among DeFi protocols. It is closely positioned within a competitive range, with nearby protocols like Uniswap V2 and Binance Staked SOL both holding $1.2B in TVL.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-26T00:24:30.718Z"
+    "generatedAt": "2025-12-26T11:37:39.035Z"
   },
-  "2025-12-26|protocol|aster-bridge|E|P8_CHAIN_MEMBERSHIP|explanation|d47e6aa582a21021": {
-    "text": "Aster Bridge connects five different chains: Ethereum, Solana, Arbitrum, Scroll, and Binance. This multi-chain capability allows for greater interoperability within the DeFi ecosystem.",
+  "2025-12-26|protocol|aster-bridge|E|P8_CHAIN_MEMBERSHIP|explanation|db7327f62ef2f6c1": {
+    "text": "Aster Bridge connects five different chains: Solana, Ethereum, Arbitrum, Binance, and Scroll, facilitating cross-chain transactions and interoperability within the DeFi ecosystem. This multi-chain support enhances its utility compared to single-chain protocols.",
     "model": "gpt-4o-mini",
-    "generatedAt": "2025-12-26T00:24:32.524Z"
+    "generatedAt": "2025-12-26T11:37:40.156Z"
+  },
+  "2025-12-19|protocol|tether-gold|D|P31_PRECISE_RANK|explanation|30a78e92d649ba6e": {
+    "text": "Tether Gold has a total value locked (TVL) of $2.4B, ranking 24th among DeFi protocols. It stands out in its rank bucket (#16-30) as it has a significantly lower TVL compared to nearby protocols like MEXC at $4.8B and USDT0 at $4.2B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:55:07.413Z"
+  },
+  "2025-12-20|chain|Solana|C|C4_GROWTH_RANKING|explanation|1192477b1aada2db": {
+    "text": "Ink achieved the highest growth rate at +21.0%, significantly outperforming Bitcoin's +10.8% and Arbitrum's +7.9%. In contrast, Solana experienced a decline of -2.5%, highlighting Ink's strong performance in comparison to other chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:55:10.199Z"
+  },
+  "2025-12-20|chain|Solana|D|C3_ATH_TIMING|explanation|dd7f803ef9c1e280": {
+    "text": "Solana reached its all-time high (ATH) TVL of $13.2B in September 2025, which is notable compared to earlier months like September 2024 and July 2023, when its TVL was significantly lower. This timing highlights Solana's growth trajectory and increasing adoption in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:55:11.698Z"
+  },
+  "2025-12-21|protocol|babylon-protocol|D|P31_PRECISE_RANK|explanation|8461fa763219a9c8": {
+    "text": "Babylon Protocol has a total value locked (TVL) of $5.4B, ranking it 12th among DeFi protocols. It stands out in a competitive range, with nearby protocols like Binance staked ETH at $10.5B and ether.fi Stake at $8.1B, highlighting its significant presence in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:55:13.703Z"
+  },
+  "2025-12-23|chain|Sei|C|C9_DISTANCE_FROM_ATH|explanation|77f90f8246c9e236": {
+    "text": "Sei's current total value locked (TVL) is $208M, which is 69.8% below its all-time high (ATH) of $688M, indicating a significant decrease in the amount of assets locked in the protocol. This distance from ATH highlights the challenges Sei faces in regaining its previous peak.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:55:15.835Z"
+  },
+  "2025-12-23|chain|Sei|D|C4_GROWTH_RANKING|explanation|144aa6ac1a3e3c12": {
+    "text": "Base leads in growth with a 10.8% increase, matching Bitcoin's growth, while Ethereum follows with 8.8%. In contrast, Sei's growth is much lower at 1.9%, highlighting its slower performance relative to the top chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:55:17.728Z"
+  },
+  "2025-12-24|protocol|jito-liquid-staking|D|P31_PRECISE_RANK|explanation|dc852256ae11056a": {
+    "text": "Jito Liquid Staking has a total value locked (TVL) of $1.8B, placing it at rank 33 among DeFi protocols. It stands out in the #31-50 rank bucket, with nearby protocols like Base Bridge at $3.2B and JustCryptos at $3.0B, highlighting its competitive position in the liquid staking space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:55:20.303Z"
+  },
+  "2025-12-26|protocol|aster-bridge|C|P29_CATEGORY_GROWTH|explanation|862aa2a70b09c9c1": {
+    "text": "Aster Bridge's derivatives category experienced a remarkable growth of +40,886.3%, significantly outpacing other categories like Chain at +238.1% and Yield at +274.8%. This explosive growth highlights its dominance in the derivatives space compared to more modest increases in other areas.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T11:55:22.973Z"
   }
 }

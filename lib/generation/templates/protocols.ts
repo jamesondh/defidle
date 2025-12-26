@@ -264,8 +264,18 @@ const P1_FINGERPRINT: TemplateConfig<P1Data> = {
   getChoices(data, ctx, _format, seed) {
     const detail = ctx.data.protocolDetail!
     const allChoices = [detail.name, ...data.distractors]
+    
+    // Safety net: remove any duplicates (case-insensitive) that might have slipped through
+    const seen = new Set<string>()
+    const uniqueChoices = allChoices.filter((name) => {
+      const lower = name.toLowerCase()
+      if (seen.has(lower)) return false
+      seen.add(lower)
+      return true
+    })
+    
     const shuffled = deterministicShuffle(
-      allChoices.map((name, i) => ({ name, isCorrect: i === 0 })),
+      uniqueChoices.map((name, i) => ({ name, isCorrect: i === 0 })),
       `${seed}:shuffle`
     )
     return shuffled.map((x) => x.name)

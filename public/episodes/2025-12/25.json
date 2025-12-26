@@ -15,6 +15,7 @@
       "prompt": "Which chain matches these clues?",
       "clues": [
         "TVL rank: top 50",
+        "Native token: ADA",
         "Protocols: 50-100",
         "TVL: $100M-$500M",
         "30d trend: down 1-10%"
@@ -26,7 +27,7 @@
         "Cardano"
       ],
       "answerIndex": 3,
-      "explanation": "Cardano ranks 29th in total value locked (TVL) with an estimated TVL between $100M and $500M, and it hosts 77 protocols, placing it in the 50-100 protocol count bucket.",
+      "explanation": "Cardano ranks 29th in total value locked (TVL) with between $100M and $500M, supporting 77 protocols, which places it in the 50-100 range for protocol count. This diverse ecosystem highlights its growing adoption in the DeFi space.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
@@ -35,7 +36,7 @@
         "margin": null,
         "volatility": null
       },
-      "difficultyScore": 0.395
+      "difficultyScore": 0.4075000000000001
     },
     {
       "qid": "q2",
@@ -49,7 +50,7 @@
       ],
       "answerIndex": 0,
       "answerValue": true,
-      "explanation": "Cardano has a total value locked (TVL) of $179M, surpassing Stellar's TVL of $166M by 7.1%. This indicates that more assets are currently deposited in Cardano's DeFi protocols compared to Stellar's.",
+      "explanation": "Cardano leads with a TVL of $179M, outperforming Stellar's $166M by 7.1%. This indicates a stronger utilization of Cardano's DeFi ecosystem compared to Stellar's offerings.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
@@ -58,7 +59,7 @@
         "margin": 0.07124190747231086,
         "volatility": null
       },
-      "difficultyScore": 0.379509711033227
+      "difficultyScore": 0.352009711033227
     },
     {
       "qid": "q3",
@@ -68,21 +69,21 @@
       "prompt": "Which DEX is #1 by 24h volume on Cardano?",
       "choices": [
         "Minswap",
-        "SundaeSwap V2",
         "WingRiders",
+        "SundaeSwap V2",
         "Splash Protocol"
       ],
       "answerIndex": 0,
-      "explanation": "Minswap is the top decentralized exchange (DEX) on the Cardano chain, with a trading volume of $9M, significantly higher than its closest competitor, SundaeSwap V2, which has a volume of $2M. Other DEXes like WingRiders and Splash Protocol have even lower volumes at $1M and $18K, respectively.",
+      "explanation": "Minswap is the leading decentralized exchange (DEX) on Cardano, with a trading volume of $3M, significantly higher than its closest competitor, WingRiders, which has a volume of $525K. Other DEXes like SundaeSwap V2 and Splash Protocol also lag behind, with volumes of $487K and $23K, respectively, highlighting Minswap's dominance in the Cardano ecosystem.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
         "format": "mc4",
         "familiarityRankBucket": "top_100",
-        "margin": 0.796141659809718,
+        "margin": 0.8128022164439959,
         "volatility": null
       },
-      "difficultyScore": 0.30500000000000005
+      "difficultyScore": 0.31750000000000006
     },
     {
       "qid": "q4",
@@ -99,7 +100,7 @@
         "Mar 2023"
       ],
       "answerIndex": 0,
-      "explanation": "Cardano reached its all-time high (ATH) TVL of $721M in December 2024, while other months like July 2024 and March 2023 did not see this peak. The ATH timing is significant as it highlights the growth of Cardano compared to these earlier dates.",
+      "explanation": "Cardano reached its all-time high (ATH) TVL of $721M in December 2024, significantly later than other options like March 2023 and September 2022, when its TVL was notably lower. This timing highlights Cardano's growth trajectory and increasing adoption in the DeFi space.",
       "difficulty": "medium",
       "llmFallback": false,
       "signals": {
@@ -108,7 +109,7 @@
         "margin": 0.25,
         "volatility": null
       },
-      "difficultyScore": 0.365
+      "difficultyScore": 0.5075000000000001
     },
     {
       "qid": "q5",
@@ -121,7 +122,7 @@
         "Layer 2"
       ],
       "answerIndex": 0,
-      "explanation": "Cardano is a Layer 1 blockchain, meaning it operates independently with its own consensus mechanism and is not built on top of another chain.",
+      "explanation": "Cardano is a Layer 1 blockchain that operates independently with its own consensus mechanism, distinguishing it from Layer 2 solutions that rely on other blockchains.",
       "difficulty": "easy",
       "llmFallback": false,
       "signals": {
@@ -130,8 +131,113 @@
         "margin": 0.5,
         "volatility": null
       },
-      "difficultyScore": 0.24500000000000002
+      "difficultyScore": 0.2275
     }
   ],
-  "generatedAt": "2025-12-25T00:24:25.321Z"
+  "generatedAt": "2025-12-26T11:56:28.541Z",
+  "buildLog": [
+    {
+      "slot": "A",
+      "template": "C1_FINGERPRINT",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.4075000000000001,
+      "target": "medium"
+    },
+    {
+      "slot": "B",
+      "template": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "decision": "selected",
+      "score": 0.352009711033227,
+      "target": "easy"
+    },
+    {
+      "slot": "C",
+      "template": "C5_TOP_BY_FEES",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "C6_TOP_DEX",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.31750000000000006,
+      "target": "medium"
+    },
+    {
+      "slot": "D",
+      "template": "C3_ATH_TIMING",
+      "format": "mc6",
+      "decision": "selected",
+      "score": 0.5075000000000001,
+      "target": "hard"
+    },
+    {
+      "slot": "E",
+      "template": "C6_TOP_DEX",
+      "decision": "skip",
+      "reason": "already_used"
+    },
+    {
+      "slot": "E",
+      "template": "C5_TOP_BY_FEES",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "E",
+      "template": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.5549423472356643,
+      "target": "easy"
+    },
+    {
+      "slot": "E",
+      "template": "C4_GROWTH_RANKING",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.4649423472356643,
+      "target": "easy"
+    },
+    {
+      "slot": "E",
+      "template": "C2_CHAIN_COMPARISON",
+      "decision": "skip",
+      "reason": "already_used"
+    },
+    {
+      "slot": "E",
+      "template": "C7_CHAIN_TVL_BAND",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:fingerprint_tvl_revealed"
+    },
+    {
+      "slot": "E",
+      "template": "C8_30D_DIRECTION",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:fingerprint_trend_revealed"
+    },
+    {
+      "slot": "E",
+      "template": "C10_PROTOCOL_COUNT",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.39931818181818185,
+      "target": "easy"
+    },
+    {
+      "slot": "E",
+      "template": "C13_LAYER_TYPE",
+      "format": "ab",
+      "decision": "selected",
+      "score": 0.2275,
+      "target": "easy"
+    }
+  ]
 }

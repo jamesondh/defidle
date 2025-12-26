@@ -1,0 +1,204 @@
+{
+  "episodeId": "2025-12-19:protocol:tether-gold",
+  "dateUtc": "2025-12-19",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "tether-gold",
+    "name": "Tether Gold",
+    "category": "RWA"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: RWA",
+        "Chains: 6-10 chains",
+        ">90% TVL on single chain",
+        "TVL rank: top 25"
+      ],
+      "choices": [
+        "Pendle",
+        "Coinbase Bridge",
+        "Tether Gold",
+        "JustCryptos",
+        "Arbitrum Bridge",
+        "JustLend"
+      ],
+      "answerIndex": 2,
+      "explanation": "Tether Gold is a real-world asset (RWA) protocol with a total value locked (TVL) of $2.4B, placing it within the $1B-$5B range. It operates across 8 chains, including Ethereum and Polygon, highlighting its broad accessibility in the DeFi space.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.04052692418147741
+      },
+      "difficultyScore": 0.4585526924181478
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Tether Gold have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Plasma"
+      ],
+      "answerIndex": 0,
+      "explanation": "Tether Gold has a total value locked (TVL) of $2.3B on Ethereum, significantly outpacing Plasma's $12M TVL, highlighting Ethereum's dominance in DeFi with a margin of 99%. This vast difference underscores Ethereum's robust ecosystem and user adoption compared to Plasma.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.994772755593195,
+        "volatility": 0.04052692418147741
+      },
+      "difficultyScore": 0.18855269241814773
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P15_RECENT_TVL_DIRECTION",
+      "format": "ab",
+      "prompt": "Over the past 30 days, did Tether Gold's TVL increase or decrease?",
+      "choices": [
+        "Increase",
+        "Decrease"
+      ],
+      "answerIndex": 0,
+      "explanation": "Tether Gold's total value locked (TVL) has increased by 10.2% over the past 30 days, reaching $2.4B, indicating growing interest in this gold-backed stablecoin.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.10217556298498727,
+        "volatility": 0.04052692418147741
+      },
+      "difficultyScore": 0.365942016836163
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "prompt": "What is Tether Gold's current TVL rank among all protocols?",
+      "choices": [
+        "#1-5",
+        "#6-15",
+        "#16-30",
+        "#31-50",
+        "#51-100"
+      ],
+      "answerIndex": 2,
+      "explanation": "Tether Gold has a total value locked (TVL) of $2.4B, ranking 24th among DeFi protocols. It stands out in its rank bucket (#16-30) as it has a significantly lower TVL compared to nearby protocols like MEXC at $4.8B and USDT0 at $4.2B.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.6,
+        "volatility": 0.04052692418147741
+      },
+      "difficultyScore": 0.3585526924181478
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Tether Gold's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Tether Gold primarily operates on Ethereum, accounting for 99% of its total value locked (TVL) of $2.4B, with Ethereum itself holding a TVL of $2.3B. This high concentration indicates Tether Gold's strong reliance on the Ethereum network for its liquidity and user base.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.9714452018928399,
+        "volatility": 0.04052692418147741
+      },
+      "difficultyScore": 0.2785526924181478
+    }
+  ],
+  "generatedAt": "2025-12-26T11:56:25.991Z",
+  "buildLog": [
+    {
+      "slot": "A",
+      "template": "P1_FINGERPRINT",
+      "format": "mc6",
+      "decision": "selected",
+      "score": 0.4585526924181478,
+      "target": "medium"
+    },
+    {
+      "slot": "B",
+      "template": "P2_CROSSCHAIN",
+      "format": "ab",
+      "decision": "selected",
+      "score": 0.18855269241814773,
+      "target": "easy"
+    },
+    {
+      "slot": "C",
+      "template": "P5_FEES_REVENUE",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "P11_FEES_TREND",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "P14_CATEGORY_LEADER",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_comparison"
+    },
+    {
+      "slot": "C",
+      "template": "P15_RECENT_TVL_DIRECTION",
+      "format": "ab",
+      "decision": "selected",
+      "score": 0.365942016836163,
+      "target": "medium"
+    },
+    {
+      "slot": "D",
+      "template": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.3585526924181478,
+      "target": "hard"
+    },
+    {
+      "slot": "E",
+      "template": "P6_TVL_TREND",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_trend_30d"
+    },
+    {
+      "slot": "E",
+      "template": "P3_CONCENTRATION",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.2785526924181478,
+      "target": "easy"
+    }
+  ]
+}

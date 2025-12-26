@@ -2,7 +2,7 @@
  * Difficulty Scoring System
  *
  * Computes difficulty scores for questions based on format, familiarity,
- * margin, and volatility factors.
+ * margin, volatility factors, and template-specific complexity bonuses.
  */
 
 import type {
@@ -20,15 +20,15 @@ import type {
  * Format difficulty factors
  * Higher values = harder questions
  * 
- * Updated to produce higher scores so more questions can hit the hard band [0.45, 1.0].
- * Previous values produced scores ~0.24-0.45 for most templates, never reaching hard.
+ * Spread increased to ensure mc6/rank4 can reliably hit the hard band.
+ * The gap between formats matters more than absolute values.
  */
 export const FORMAT_FACTORS: Record<QuestionFormat, number> = {
-  tf: 0.20,
-  ab: 0.40,
-  mc4: 0.55,
-  mc6: 0.70,
-  rank4: 0.85,
+  tf: 0.15,    // Reduced from 0.20 - true/false is easiest
+  ab: 0.35,    // Reduced from 0.40 - binary choice is easy
+  mc4: 0.55,   // Same - 4-choice is medium
+  mc6: 0.75,   // Increased from 0.70 - 6-choice is harder
+  rank4: 0.90, // Increased from 0.85 - ranking is hardest
 }
 
 /**
@@ -43,13 +43,39 @@ export const FAMILIARITY_FACTORS: Record<FamiliarityRankBucket, number> = {
 }
 
 /**
+ * Template-specific complexity bonuses
+ * 
+ * Some question types are inherently harder regardless of numeric margins.
+ * ATH timing requires historical knowledge, precise rank requires exact knowledge, etc.
+ * These bonuses help these templates hit the hard band more reliably.
+ */
+export const TEMPLATE_COMPLEXITY_BONUS: Record<string, number> = {
+  // ATH timing questions require knowing historical data points
+  "P4_ATH_TIMING": 0.10,
+  "C3_ATH_TIMING": 0.10,
+  // Precise rank requires exact knowledge of protocol rankings
+  "P31_PRECISE_RANK": 0.08,
+  // Multi-ranking requires comparing and ordering 3 protocols
+  "P33_MULTI_RANKING": 0.10,
+  // ATH distance requires knowing both current and ATH values
+  "P20_ATH_DISTANCE": 0.06,
+  "C9_DISTANCE_FROM_ATH": 0.06,
+  // Exchange comparison requires knowing CEX/DEX landscape
+  "P32_EXCHANGE_COMPARISON": 0.08,
+  // Category growth requires knowing sector trends
+  "P29_CATEGORY_GROWTH": 0.06,
+  // Chain growth ranking requires knowing multiple chains' trends
+  "C4_GROWTH_RANKING": 0.06,
+}
+
+/**
  * Difficulty target bands (min, max)
  * Bands overlap to allow flexibility in matching
  * 
  * Note: Hard band was relaxed to [0.34, 1.0] because:
  * - mc6 format with top_25 familiarity and high margin (>25%) scores ~0.34
  * - This ensures mc6 questions can hit hard difficulty for familiar topics
- * - The overlap with medium (0.30-0.68) is intentional for flexibility
+ * - The overlap with medium (0.30-0.55) is intentional for flexibility
  */
 export const TARGET_BANDS: Record<DifficultyTarget, [number, number]> = {
   easy: [0.0, 0.38],
@@ -60,14 +86,14 @@ export const TARGET_BANDS: Record<DifficultyTarget, [number, number]> = {
 /**
  * Weight factors for difficulty calculation
  * 
- * Updated to emphasize format and margin more heavily.
- * Format is the primary difficulty driver (40%), margin affects comparison questions (30%).
+ * Format is the primary driver (45%), margin affects comparison questions (30%).
+ * Familiarity reduced to 15% since we already have template bonuses.
  */
 const WEIGHTS = {
-  format: 0.40,
-  familiarity: 0.20,
-  margin: 0.30,
-  volatility: 0.10,
+  format: 0.45,     // Increased from 0.40 - format is primary driver
+  familiarity: 0.15, // Reduced from 0.20 - less impact
+  margin: 0.30,     // Same - margin still matters for comparisons
+  volatility: 0.10, // Same - volatility is minor factor
 }
 
 // =============================================================================
@@ -78,14 +104,18 @@ const WEIGHTS = {
  * Compute difficulty score from signals
  *
  * Score is a weighted combination of:
- * - Format factor (35%)
- * - Familiarity factor (25%)
- * - Margin factor (25%) - lower margin = harder
- * - Volatility factor (15%) - higher volatility = harder
+ * - Format factor (45%) - primary difficulty driver
+ * - Familiarity factor (15%) - how well-known the topic is
+ * - Margin factor (30%) - lower margin = harder
+ * - Volatility factor (10%) - higher volatility = harder
+ * 
+ * Plus optional template complexity bonus for inherently harder question types.
  *
+ * @param signals - The difficulty signals (format, familiarity, margin, volatility)
+ * @param templateId - Optional template ID to apply complexity bonus
  * @returns Difficulty score in range [0, 1]
  */
-export function computeDifficulty(signals: DifficultySignals): number {
+export function computeDifficulty(signals: DifficultySignals, templateId?: string): number {
   // Format contribution
   const formatScore = FORMAT_FACTORS[signals.format]
 
@@ -95,7 +125,6 @@ export function computeDifficulty(signals: DifficultySignals): number {
   // Margin contribution (lower margin = harder)
   // Margin of 0.25 (25%) or higher is considered easy (factor = 0)
   // Margin of 0 is hardest (factor = 1)
-  // Updated from 0.30 to 0.25 to make margin more impactful on difficulty.
   const marginScore =
     signals.margin !== null
       ? Math.max(0, Math.min(1, 1 - signals.margin / 0.25))
@@ -104,13 +133,19 @@ export function computeDifficulty(signals: DifficultySignals): number {
   // Volatility contribution (higher = harder, more unpredictable)
   const volatilityScore = signals.volatility ?? 0.25
 
-  // Weighted sum, clamped to [0, 1]
-  const score =
+  // Weighted sum
+  let score =
     WEIGHTS.format * formatScore +
     WEIGHTS.familiarity * familiarityScore +
     WEIGHTS.margin * marginScore +
     WEIGHTS.volatility * volatilityScore
 
+  // Apply template complexity bonus for inherently harder question types
+  if (templateId && TEMPLATE_COMPLEXITY_BONUS[templateId]) {
+    score += TEMPLATE_COMPLEXITY_BONUS[templateId]
+  }
+
+  // Clamp to [0, 1]
   return Math.max(0, Math.min(1, score))
 }
 
@@ -186,18 +221,24 @@ export function targetMatchQuality(
 /**
  * Find the format that would best match a target difficulty
  * given other signals
+ * 
+ * @param availableFormats - List of formats to try
+ * @param target - Target difficulty level
+ * @param baseSignals - Signals without format
+ * @param templateId - Optional template ID for complexity bonus
  */
 export function findBestFormat(
   availableFormats: QuestionFormat[],
   target: DifficultyTarget,
-  baseSignals: Omit<DifficultySignals, "format">
+  baseSignals: Omit<DifficultySignals, "format">,
+  templateId?: string
 ): QuestionFormat | null {
   let bestFormat: QuestionFormat | null = null
   let bestQuality = Infinity
 
   for (const format of availableFormats) {
     const signals: DifficultySignals = { ...baseSignals, format }
-    const score = computeDifficulty(signals)
+    const score = computeDifficulty(signals, templateId)
     const quality = targetMatchQuality(score, target)
 
     if (quality < bestQuality) {

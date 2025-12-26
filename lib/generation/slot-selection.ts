@@ -44,12 +44,12 @@ function tryAdjustDifficulty(
   // Get all available formats for this template
   const formats = template.proposeFormats(ctx)
 
-  // Find the format that best matches the target
+  // Find the format that best matches the target (pass templateId for complexity bonus)
   const bestFormat = findBestFormat(formats, target, {
     familiarityRankBucket: originalDraft.signals.familiarityRankBucket,
     margin: originalDraft.signals.margin,
     volatility: originalDraft.signals.volatility,
-  })
+  }, template.id)
 
   if (!bestFormat || bestFormat === originalDraft.format) {
     return null
@@ -232,7 +232,7 @@ export function selectQuestionForSlot(
         continue
       }
 
-      const score = computeDifficulty(draft.signals)
+      const score = computeDifficulty(draft.signals, template.id)
 
       if (matchesTarget(score, target)) {
         logEntries.push({
@@ -255,7 +255,7 @@ export function selectQuestionForSlot(
       // Try adjusting format to match target
       const adjusted = tryAdjustDifficulty(template, ctx, draft, target, seed)
       if (adjusted) {
-        const adjScore = computeDifficulty(adjusted.signals)
+        const adjScore = computeDifficulty(adjusted.signals, template.id)
         if (matchesTarget(adjScore, target)) {
           logEntries.push({
             slot,
@@ -310,7 +310,7 @@ export function selectQuestionForSlot(
       const draft = template.instantiate(ctx, format, seed)
       if (!draft) continue
 
-      const score = computeDifficulty(draft.signals)
+      const score = computeDifficulty(draft.signals, template.id)
       // Accept if score is reasonable - relaxed bounds to reduce fallback frequency
       // For hard slot, we accept score >= 0.25 rather than falling back to trivial questions
       // (score ~0.13 from fallbacks). A medium-difficulty question is better than a trivial one.

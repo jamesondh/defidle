@@ -556,9 +556,12 @@ export async function generateEpisode(
     textOptions
   )
 
-  // Add difficulty scores to questions
+  // Add difficulty scores to questions (pass templateId for complexity bonus)
   for (let i = 0; i < questions.length; i++) {
-    questions[i].difficultyScore = computeDifficulty(balancedDrafts[i].signals)
+    questions[i].difficultyScore = computeDifficulty(
+      balancedDrafts[i].signals,
+      balancedDrafts[i].templateId
+    )
   }
 
   // 10. Assemble episode

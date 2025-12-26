@@ -143,12 +143,13 @@ interface DifficultySignals {
 }
 
 // Note: write_in format is deferred to v2+ (see SPEC.md)
+// Format factors have increased spread to ensure mc6/rank4 can reliably hit the hard band
 const FORMAT_FACTORS: Record<QuestionFormat, number> = {
-  tf: 0.15,
-  ab: 0.30,
-  mc4: 0.45,
-  mc6: 0.55,
-  rank4: 0.70,
+  tf: 0.15,     // True/False is easiest
+  ab: 0.35,     // Binary choice is easy
+  mc4: 0.55,    // 4-choice is medium
+  mc6: 0.75,    // 6-choice is harder (increased from 0.70)
+  rank4: 0.90,  // Ranking is hardest (increased from 0.85)
 }
 
 const FAMILIARITY_FACTORS: Record<string, number> = {
@@ -158,26 +159,49 @@ const FAMILIARITY_FACTORS: Record<string, number> = {
   long_tail: 0.45,
 }
 
-function computeDifficulty(signals: DifficultySignals): number {
+// Template-specific complexity bonuses for inherently harder question types
+const TEMPLATE_COMPLEXITY_BONUS: Record<string, number> = {
+  "P4_ATH_TIMING": 0.10,      // Requires historical knowledge
+  "C3_ATH_TIMING": 0.10,      // Requires historical knowledge
+  "P33_MULTI_RANKING": 0.10,  // Requires ordering 3 protocols
+  "P31_PRECISE_RANK": 0.08,   // Requires exact rank knowledge
+  "P32_EXCHANGE_COMPARISON": 0.08,  // Requires CEX/DEX landscape knowledge
+  "P20_ATH_DISTANCE": 0.06,   // Requires knowing current and ATH
+  "C9_DISTANCE_FROM_ATH": 0.06,
+  "P29_CATEGORY_GROWTH": 0.06,
+  "C4_GROWTH_RANKING": 0.06,  // Requires comparing multiple chains
+}
+
+function computeDifficulty(signals: DifficultySignals, templateId?: string): number {
   const f = FORMAT_FACTORS[signals.format]
   const fam = FAMILIARITY_FACTORS[signals.familiarityRankBucket]
   const mar = signals.margin !== null 
-    ? Math.max(0, Math.min(1, 1 - signals.margin / 0.30))
-    : 0.25
+    ? Math.max(0, Math.min(1, 1 - signals.margin / 0.25))  // Normalized to 25% threshold
+    : 0.30  // Default to slightly above middle
   const vol = signals.volatility ?? 0.25
 
-  // Weighted sum
-  const score = 0.35 * f + 0.25 * fam + 0.25 * mar + 0.15 * vol
+  // Weighted sum with adjusted weights:
+  // - Format is primary driver (45%)
+  // - Margin matters for comparisons (30%)
+  // - Familiarity reduced (15%) since we have template bonuses
+  // - Volatility is minor factor (10%)
+  let score = 0.45 * f + 0.15 * fam + 0.30 * mar + 0.10 * vol
+  
+  // Apply template complexity bonus for inherently harder question types
+  if (templateId && TEMPLATE_COMPLEXITY_BONUS[templateId]) {
+    score += TEMPLATE_COMPLEXITY_BONUS[templateId]
+  }
+  
   return Math.max(0, Math.min(1, score))
 }
 
-// Note: Hard band was relaxed from [0.6, 1.0] to [0.45, 1.0] to reduce
-// FALLBACK frequency. The previous strict bounds caused paradoxically easy
-// fallback questions when no template could hit the 0.6+ threshold.
+// Note: Hard band starts at 0.34 because mc6 questions with top-25 familiarity 
+// and high margins score ~0.34. This ensures episodes can have genuinely 
+// challenging questions rather than falling back to trivial ones.
 const TARGET_BANDS: Record<DifficultyTarget, [number, number]> = {
   easy: [0.00, 0.38],
-  medium: [0.30, 0.68],
-  hard: [0.45, 1.00],
+  medium: [0.30, 0.55],
+  hard: [0.34, 1.00],
 }
 
 function matchesTarget(score: number, target: DifficultyTarget): boolean {
@@ -497,17 +521,18 @@ function selectQuestionForSlot(
         continue
       }
       
-      const score = computeDifficulty(draft.signals)
+      // Pass templateId to apply complexity bonus for inherently harder templates
+      const score = computeDifficulty(draft.signals, template.id)
       
       if (matchesTarget(score, target)) {
         buildLog.push({ slot, template: template.id, format, decision: "selected", score })
         return { ...draft, difficultyScore: score }
       }
       
-      // Try adjusting format to match target
+      // Try adjusting format to match target (also passes templateId)
       const adjusted = tryAdjustDifficulty(template, ctx, draft, target, seed)
       if (adjusted) {
-        const adjScore = computeDifficulty(adjusted.signals)
+        const adjScore = computeDifficulty(adjusted.signals, template.id)
         if (matchesTarget(adjScore, target)) {
           buildLog.push({ slot, template: template.id, decision: "adjusted", originalFormat: format, newFormat: adjusted.format, score: adjScore })
           return { ...adjusted, difficultyScore: adjScore }

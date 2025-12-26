@@ -230,8 +230,18 @@ const C1_FINGERPRINT: TemplateConfig<C1Data> = {
   getChoices(data, ctx, _format, seed) {
     const topic = ctx.topic as ChainPoolEntry
     const allChoices = [topic.name, ...data.distractors]
+    
+    // Safety net: remove any duplicates (case-insensitive) that might have slipped through
+    const seen = new Set<string>()
+    const uniqueChoices = allChoices.filter((name) => {
+      const lower = name.toLowerCase()
+      if (seen.has(lower)) return false
+      seen.add(lower)
+      return true
+    })
+    
     const shuffled = deterministicShuffle(
-      allChoices.map((name, i) => ({ name, isCorrect: i === 0 })),
+      uniqueChoices.map((name, i) => ({ name, isCorrect: i === 0 })),
       `${seed}:shuffle`
     )
     return shuffled.map((x) => x.name)
@@ -469,6 +479,10 @@ interface C4Data {
   topGrower: { name: string; change30d: number }
   distractors: Array<{ name: string; change30d: number }>
   margin: number
+  /** Whether the episode topic is included in the choices */
+  topicIncluded: boolean
+  /** The episode topic's growth data */
+  topicGrowth: { name: string; change30d: number } | null
 }
 
 /**
@@ -492,10 +506,16 @@ const C4_GROWTH_RANKING: TemplateConfig<C4Data> = {
     if (!isChainContext(ctx)) return { passed: false, reason: "not_chain" }
     if (!hasChainPool(ctx, 4)) return { passed: false, reason: "need_4_chains" }
 
+    const topic = ctx.topic as ChainPoolEntry
     const pool = ctx.data.chainPool!
+    
     // Filter to chains with reasonable growth (excludes newly launched chains with absurd values)
     const withReasonableGrowth = pool.filter((c) => hasReasonableGrowth(c.change30d))
     if (withReasonableGrowth.length < 4) return { passed: false, reason: "need_4_with_reasonable_growth" }
+    
+    // Require the topic to have reasonable growth data so it can be included
+    const topicInPool = withReasonableGrowth.find((c) => c.slug === topic.slug)
+    if (!topicInPool) return { passed: false, reason: "topic_missing_growth_data" }
 
     return { passed: true }
   },
@@ -505,7 +525,9 @@ const C4_GROWTH_RANKING: TemplateConfig<C4Data> = {
   },
 
   extract(ctx, seed) {
+    const topic = ctx.topic as ChainPoolEntry
     const pool = ctx.data.chainPool!
+    
     // Filter to chains with reasonable growth values and sort by growth
     const withGrowth = pool
       .filter((c): c is ChainPoolEntry & { change30d: number } =>
@@ -514,26 +536,50 @@ const C4_GROWTH_RANKING: TemplateConfig<C4Data> = {
       .sort((a, b) => b.change30d - a.change30d)
 
     if (withGrowth.length < 4) return null
+    
+    // Find the topic in the growth list
+    const topicData = withGrowth.find((c) => c.slug === topic.slug)
+    if (!topicData) return null
+    
+    const topicGrowth = { name: topicData.name, change30d: topicData.change30d }
+    
+    // Build candidate pool: always include the topic, plus other chains
+    // We need to ensure the topic is one of the 4 choices
+    const otherChains = withGrowth.filter((c) => c.slug !== topic.slug)
+    
+    // Get 3 other chains to include (prioritize top growers for difficulty)
+    const shuffledOthers = deterministicShuffle(otherChains.slice(0, 10), `${seed}:distractors`)
+    const selectedOthers = shuffledOthers.slice(0, 3).map((c) => ({ 
+      name: c.name, 
+      change30d: c.change30d 
+    }))
+    
+    if (selectedOthers.length < 3) return null
+    
+    // Combine topic + 3 others and determine top grower
+    const allContenders = [topicGrowth, ...selectedOthers]
+    allContenders.sort((a, b) => b.change30d - a.change30d)
+    
+    const topGrower = allContenders[0]
+    const distractors = allContenders.filter((c) => c.name !== topGrower.name)
+    
+    // Margin is the gap between #1 and #2
+    const margin = allContenders.length >= 2
+      ? Math.abs(allContenders[0].change30d - allContenders[1].change30d)
+      : 0.1
 
-    const topGrower = { name: withGrowth[0].name, change30d: withGrowth[0].change30d }
-
-    // Get distractors from top 10 (all with reasonable growth)
-    const candidates = withGrowth.slice(1, 10)
-    const shuffled = deterministicShuffle(candidates, `${seed}:distractors`)
-    const distractors = shuffled.slice(0, 3).map((c) => ({ name: c.name, change30d: c.change30d }))
-
-    if (distractors.length < 3) return null
-
-    const margin =
-      withGrowth.length >= 2
-        ? Math.abs(withGrowth[0].change30d - withGrowth[1].change30d)
-        : 0.1
-
-    return { topGrower, distractors, margin }
+    return { 
+      topGrower, 
+      distractors, 
+      margin, 
+      topicIncluded: true,
+      topicGrowth,
+    }
   },
 
-  getPrompt() {
-    return "Which of these chains grew the most in TVL over the past 30 days?"
+  getPrompt(_data, ctx) {
+    const topic = ctx.topic as ChainPoolEntry
+    return `Which of these chains grew the most in TVL over the past 30 days?`
   },
 
   getChoices(data, _ctx, _format, seed) {
@@ -553,14 +599,19 @@ const C4_GROWTH_RANKING: TemplateConfig<C4Data> = {
     return Math.min(1, data.margin)
   },
 
-  getExplainData(data) {
+  getExplainData(data, ctx) {
+    const topic = ctx.topic as ChainPoolEntry
+    const topicChange = data.topicGrowth 
+      ? `${data.topicGrowth.change30d > 0 ? "+" : ""}${(data.topicGrowth.change30d * 100).toFixed(1)}%`
+      : "N/A"
+    
     return {
-      // IMPORTANT: The explanation should be about answerChain, NOT the episode topic
-      // The episode topic is different from the question's subject in growth ranking questions
+      // Answer chain is the top grower (which may or may not be the topic)
       answerChain: data.topGrower.name,
-      topChain: data.topGrower.name, // Kept for backward compatibility
+      topChain: data.topGrower.name,
       topGrowth: (data.topGrower.change30d * 100).toFixed(1),
       topChange: `${data.topGrower.change30d > 0 ? "+" : ""}${(data.topGrower.change30d * 100).toFixed(1)}%`,
+      // Include all other chains (distractors) for comparison
       otherChains: data.distractors.map((d) => ({
         name: d.name,
         change: `${d.change30d > 0 ? "+" : ""}${(d.change30d * 100).toFixed(1)}%`,
@@ -568,8 +619,11 @@ const C4_GROWTH_RANKING: TemplateConfig<C4Data> = {
       comparison: data.distractors
         .map((d) => `${d.name} (${d.change30d > 0 ? "+" : ""}${(d.change30d * 100).toFixed(1)}%)`)
         .join(", "),
-      // Explicit note for LLM: use answerChain, not the episode topic
-      _note: "Write about answerChain as the subject. Do NOT use the episode topic name.",
+      // Episode topic context
+      episodeTopic: topic.name,
+      episodeTopicChange: topicChange,
+      // Whether the topic was the answer
+      topicIsAnswer: data.topGrower.name === topic.name,
     }
   },
 }
