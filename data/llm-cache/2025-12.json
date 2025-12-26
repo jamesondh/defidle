@@ -173,5 +173,30 @@
     "text": "Cardano is a Layer 1 blockchain, meaning it operates independently with its own consensus mechanism and is not built on top of another chain.",
     "model": "gpt-4o-mini",
     "generatedAt": "2025-12-25T00:24:25.321Z"
+  },
+  "2025-12-26|protocol|aster-bridge|A|P1_FINGERPRINT|explanation|249a958d1e1bb106": {
+    "text": "Aster Bridge is a bridge protocol that connects five chains: Ethereum, Solana, Arbitrum, Scroll, and Binance, with a total value locked (TVL) of $762M, placing it in the TVL band of $500M-$1B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T00:24:25.630Z"
+  },
+  "2025-12-26|protocol|aster-bridge|B|P2_CROSSCHAIN|explanation|b274397a1752c3e7": {
+    "text": "Aster Bridge connects Binance, which has a TVL of $578M, to Arbitrum with a TVL of $56M, resulting in a margin of 90% favoring Binance. This indicates a significant disparity in the total value locked between the two chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T00:24:27.833Z"
+  },
+  "2025-12-26|protocol|aster-bridge|C|P20_ATH_DISTANCE|explanation|a5a17dfe51ab97d5": {
+    "text": "Aster Bridge has a total value locked (TVL) of $762 million, which is 51% below its all-time high (ATH) of $1.6 billion, placing it in the 50-75% below ATH category.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T00:24:28.848Z"
+  },
+  "2025-12-26|protocol|aster-bridge|D|P31_PRECISE_RANK|explanation|892f558d2d7bbf28": {
+    "text": "Aster Bridge has a total value locked (TVL) of $762M, ranking it 69th among DeFi protocols. It is positioned in the rank bucket of #51-100, with nearby protocols like Uniswap V2 and Binance Staked SOL both having a TVL of $1.2B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T00:24:30.718Z"
+  },
+  "2025-12-26|protocol|aster-bridge|E|P8_CHAIN_MEMBERSHIP|explanation|d47e6aa582a21021": {
+    "text": "Aster Bridge connects five different chains: Ethereum, Solana, Arbitrum, Scroll, and Binance. This multi-chain capability allows for greater interoperability within the DeFi ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-26T00:24:32.524Z"
   }
 }

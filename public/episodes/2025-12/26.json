@@ -1,0 +1,138 @@
+{
+  "episodeId": "2025-12-26:protocol:aster-bridge",
+  "dateUtc": "2025-12-26",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "aster-bridge",
+    "name": "Aster Bridge",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: 2-5 chains",
+        "TVL: $500M-$1B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Drift Trade",
+        "Aster Bridge",
+        "Arbitrum Bridge",
+        "Lighter Bridge"
+      ],
+      "answerIndex": 1,
+      "explanation": "Aster Bridge is a bridge protocol that connects five chains: Ethereum, Solana, Arbitrum, Scroll, and Binance, with a total value locked (TVL) of $762M, placing it in the TVL band of $500M-$1B.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.06603465558714425
+      },
+      "difficultyScore": 0.37660346555871443
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Aster Bridge have higher TVL?",
+      "choices": [
+        "Arbitrum",
+        "Binance"
+      ],
+      "answerIndex": 1,
+      "explanation": "Aster Bridge connects Binance, which has a TVL of $578M, to Arbitrum with a TVL of $56M, resulting in a margin of 90% favoring Binance. This indicates a significant disparity in the total value locked between the two chains.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9038604634045881,
+        "volatility": 0.06603465558714425
+      },
+      "difficultyScore": 0.22660346555871447
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Aster Bridge's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 2,
+      "explanation": "Aster Bridge has a total value locked (TVL) of $762 million, which is 51% below its all-time high (ATH) of $1.6 billion, placing it in the 50-75% below ATH category.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.053750990761107856,
+        "volatility": 0.06603465558714425
+      },
+      "difficultyScore": 0.522102276645385
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "prompt": "What is Aster Bridge's current TVL rank among all protocols?",
+      "choices": [
+        "#1-5",
+        "#6-15",
+        "#16-30",
+        "#31-50",
+        "#51-100"
+      ],
+      "answerIndex": 4,
+      "explanation": "Aster Bridge has a total value locked (TVL) of $762M, ranking it 69th among DeFi protocols. It is positioned in the rank bucket of #51-100, with nearby protocols like Uniswap V2 and Binance Staked SOL both having a TVL of $1.2B.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0.06603465558714425
+      },
+      "difficultyScore": 0.28660346555871447
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which chain is Aster Bridge deployed on?",
+      "choices": [
+        "BSC",
+        "Solana",
+        "Scroll",
+        "Arbitrum"
+      ],
+      "answerIndex": 2,
+      "explanation": "Aster Bridge connects five different chains: Ethereum, Solana, Arbitrum, Scroll, and Binance. This multi-chain capability allows for greater interoperability within the DeFi ecosystem.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.06603465558714425
+      },
+      "difficultyScore": 0.28660346555871447
+    }
+  ],
+  "generatedAt": "2025-12-26T00:24:32.524Z"
+}
