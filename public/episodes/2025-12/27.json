@@ -1,0 +1,138 @@
+{
+  "episodeId": "2025-12-27:chain:Linea",
+  "dateUtc": "2025-12-27",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Linea",
+    "name": "Linea"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Native token: LINEA",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "Movement",
+        "Aptos",
+        "Linea",
+        "Sei"
+      ],
+      "answerIndex": 2,
+      "explanation": "Linea has a TVL between $100M and $500M, ranking 24th among DeFi protocols, and supports 158 different protocols, placing it in the 100-200 range for protocol count. This diverse ecosystem contributes to its growing significance in the DeFi space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.38950000000000007
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "prompt": "Linea has higher TVL than Cardano.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Linea has a total value locked (TVL) of $222M, surpassing Cardano's $179M by 19.4%, indicating stronger user engagement and asset deposits in Linea's ecosystem. This difference highlights Linea's growing popularity in the DeFi space compared to Cardano.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.1935843451396036,
+        "volatility": null
+      },
+      "difficultyScore": 0.18719878583247568
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "ab",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Plasma",
+        "Bitcoin",
+        "Ink",
+        "Linea"
+      ],
+      "answerIndex": 2,
+      "explanation": "Ink leads with a growth rate of 21.0%, significantly outperforming Plasma at +18.6% and Bitcoin at +10.8%. In contrast, Linea experienced a decline of 35.7%, highlighting its struggles compared to the other chains.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.02346326073050331,
+        "volatility": null
+      },
+      "difficultyScore": 0.5413440871233961
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Linea hit its all-time high TVL?",
+      "choices": [
+        "Sep 2024",
+        "Sep 2025",
+        "Aug 2023",
+        "Aug 2024",
+        "Jul 2025",
+        "Dec 2024"
+      ],
+      "answerIndex": 1,
+      "explanation": "Linea achieved its all-time high (ATH) TVL of $1.7B in September 2025, surpassing earlier months like August 2024 and July 2025, which did not reflect its peak performance. This timing highlights Linea's growth trajectory leading up to its record TVL.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Linea?",
+      "choices": [
+        "Lynex V2",
+        "Etherex CL",
+        "Etherex Legacy",
+        "WOOFi Swap"
+      ],
+      "answerIndex": 1,
+      "explanation": "Etherex CL is the top DEX on Linea with a trading volume of $3M, significantly outperforming other options like WOOFi Swap at $543K and Lynex V2 at $412K. This high volume indicates strong user activity and liquidity on Etherex CL compared to its competitors.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.8271558473703265,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2025-12-27T00:24:00.676Z"
+}

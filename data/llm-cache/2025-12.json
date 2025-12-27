@@ -238,5 +238,30 @@
     "text": "Aster Bridge's derivatives category experienced a remarkable growth of +40,886.3%, significantly outpacing other categories like Chain at +238.1% and Yield at +274.8%. This explosive growth highlights its dominance in the derivatives space compared to more modest increases in other areas.",
     "model": "gpt-4o-mini",
     "generatedAt": "2025-12-26T11:55:22.973Z"
+  },
+  "2025-12-27|chain|Linea|A|C1_FINGERPRINT|explanation|3e0569596991ac70": {
+    "text": "Linea has a TVL between $100M and $500M, ranking 24th among DeFi protocols, and supports 158 different protocols, placing it in the 100-200 range for protocol count. This diverse ecosystem contributes to its growing significance in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-27T00:23:53.000Z"
+  },
+  "2025-12-27|chain|Linea|B|C2_CHAIN_COMPARISON|explanation|e8a2dd5873b6b2db": {
+    "text": "Linea has a total value locked (TVL) of $222M, surpassing Cardano's $179M by 19.4%, indicating stronger user engagement and asset deposits in Linea's ecosystem. This difference highlights Linea's growing popularity in the DeFi space compared to Cardano.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-27T00:23:54.817Z"
+  },
+  "2025-12-27|chain|Linea|C|C4_GROWTH_RANKING|explanation|9178d2f9f31ef756": {
+    "text": "Ink leads with a growth rate of 21.0%, significantly outperforming Plasma at +18.6% and Bitcoin at +10.8%. In contrast, Linea experienced a decline of 35.7%, highlighting its struggles compared to the other chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-27T00:23:56.749Z"
+  },
+  "2025-12-27|chain|Linea|D|C3_ATH_TIMING|explanation|860c5799ef97aa9d": {
+    "text": "Linea achieved its all-time high (ATH) TVL of $1.7B in September 2025, surpassing earlier months like August 2024 and July 2025, which did not reflect its peak performance. This timing highlights Linea's growth trajectory leading up to its record TVL.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-27T00:23:58.024Z"
+  },
+  "2025-12-27|chain|Linea|E|C6_TOP_DEX|explanation|db1b9b9998899812": {
+    "text": "Etherex CL is the top DEX on Linea with a trading volume of $3M, significantly outperforming other options like WOOFi Swap at $543K and Lynex V2 at $412K. This high volume indicates strong user activity and liquidity on Etherex CL compared to its competitors.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-27T00:24:00.676Z"
   }
 }
