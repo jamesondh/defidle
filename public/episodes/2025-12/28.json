@@ -1,0 +1,137 @@
+{
+  "episodeId": "2025-12-28:protocol:aave-v3",
+  "dateUtc": "2025-12-28",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "aave-v3",
+    "name": "Aave V3",
+    "category": "Lending"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Lending",
+        "Chains: 10+ chains",
+        "TVL rank: top 10"
+      ],
+      "choices": [
+        "EigenCloud",
+        "ether.fi Stake",
+        "Lido",
+        "Aave V3",
+        "Binance staked ETH"
+      ],
+      "answerIndex": 3,
+      "explanation": "Aave V3 is a leading lending protocol with a total value locked (TVL) of $32.6B, making it one of the largest in DeFi. It operates across 18 chains, including Scroll, zkSync Era, Base, Sonic, and Binance, which enhances its accessibility and user base.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": 0.13590695070015196
+      },
+      "difficultyScore": 0.4560906950700152
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Aave V3 have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Plasma"
+      ],
+      "answerIndex": 0,
+      "explanation": "Aave V3 has a total value locked (TVL) of $26.9B on Ethereum, significantly outperforming Plasma's $2.4B TVL by a margin of 91%. This highlights Aave V3's dominance in the DeFi space, particularly on the Ethereum network.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.9118445632668547,
+        "volatility": 0.13590695070015196
+      },
+      "difficultyScore": 0.1860906950700152
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Aave V3's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 1,
+      "explanation": "Aave V3 generated $2M in revenue over the past week, representing 12% of its total fees of $13M. This indicates a healthy income stream from its lending and borrowing activities.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.09872552929275707,
+        "volatility": 0.13590695070015196
+      },
+      "difficultyScore": 0.4576200599187067
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "prompt": "What is Aave V3's current TVL rank among all protocols?",
+      "choices": [
+        "#1-5",
+        "#6-15",
+        "#16-30",
+        "#31-50",
+        "#51-100"
+      ],
+      "answerIndex": 0,
+      "explanation": "Aave V3 leads the DeFi space with a total value locked (TVL) of $32.6B, ranking it as the top protocol in its category. This significant TVL positions it well ahead of competitors like Lido, which has a TVL of $25.8B.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.4,
+        "volatility": 0.13590695070015196
+      },
+      "difficultyScore": 0.35609069507001523
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "Aave V3's TVL increased over the past 30 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Aave V3 has experienced a 2.7% increase in total value locked (TVL), bringing its current TVL to $32.6B, indicating growing confidence and usage in the protocol.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.02743937315388193,
+        "volatility": 0.13590695070015196
+      },
+      "difficultyScore": 0.3631634472853569
+    }
+  ],
+  "generatedAt": "2025-12-28T00:28:02.932Z"
+}

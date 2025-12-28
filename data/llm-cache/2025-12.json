@@ -263,5 +263,30 @@
     "text": "Etherex CL is the top DEX on Linea with a trading volume of $3M, significantly outperforming other options like WOOFi Swap at $543K and Lynex V2 at $412K. This high volume indicates strong user activity and liquidity on Etherex CL compared to its competitors.",
     "model": "gpt-4o-mini",
     "generatedAt": "2025-12-27T00:24:00.676Z"
+  },
+  "2025-12-28|protocol|aave-v3|A|P1_FINGERPRINT|explanation|4ac69976aa738353": {
+    "text": "Aave V3 is a leading lending protocol with a total value locked (TVL) of $32.6B, making it one of the largest in DeFi. It operates across 18 chains, including Scroll, zkSync Era, Base, Sonic, and Binance, which enhances its accessibility and user base.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-28T00:27:57.113Z"
+  },
+  "2025-12-28|protocol|aave-v3|B|P2_CROSSCHAIN|explanation|7cb668477d1b7e69": {
+    "text": "Aave V3 has a total value locked (TVL) of $26.9B on Ethereum, significantly outperforming Plasma's $2.4B TVL by a margin of 91%. This highlights Aave V3's dominance in the DeFi space, particularly on the Ethereum network.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-28T00:27:59.127Z"
+  },
+  "2025-12-28|protocol|aave-v3|C|P5_FEES_REVENUE|explanation|668a2341d360a389": {
+    "text": "Aave V3 generated $2M in revenue over the past week, representing 12% of its total fees of $13M. This indicates a healthy income stream from its lending and borrowing activities.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-28T00:27:59.973Z"
+  },
+  "2025-12-28|protocol|aave-v3|D|P31_PRECISE_RANK|explanation|9ee5845736e3465e": {
+    "text": "Aave V3 leads the DeFi space with a total value locked (TVL) of $32.6B, ranking it as the top protocol in its category. This significant TVL positions it well ahead of competitors like Lido, which has a TVL of $25.8B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-28T00:28:01.843Z"
+  },
+  "2025-12-28|protocol|aave-v3|E|P6_TVL_TREND|explanation|e9297a4559cf7848": {
+    "text": "Aave V3 has experienced a 2.7% increase in total value locked (TVL), bringing its current TVL to $32.6B, indicating growing confidence and usage in the protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-28T00:28:02.932Z"
   }
 }
