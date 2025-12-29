@@ -1,0 +1,141 @@
+{
+  "episodeId": "2025-12-29:protocol:justcryptos",
+  "dateUtc": "2025-12-29",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "justcryptos",
+    "name": "JustCryptos",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: single-chain",
+        "Active since: 2021",
+        "TVL rank: top 25"
+      ],
+      "choices": [
+        "Coinbase Bridge",
+        "Pendle",
+        "Ethena USDe",
+        "Binance staked ETH",
+        "Morpho V1",
+        "JustCryptos"
+      ],
+      "answerIndex": 5,
+      "explanation": "JustCryptos is a bridge protocol operating solely on the Tron blockchain, with a total value locked (TVL) of $3.0B, placing it within the $1B-$5B TVL range. Its significant TVL indicates strong user adoption and liquidity for cross-chain transactions.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.17767547527003
+      },
+      "difficultyScore": 0.472267547527003
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is JustCryptos?",
+      "choices": [
+        "OTC Marketplace",
+        "DAO Service Provider",
+        "CeDeFi",
+        "Bridge"
+      ],
+      "answerIndex": 3,
+      "explanation": "JustCryptos operates as a bridge in the DeFi space, facilitating the transfer of assets between different blockchains, which enhances interoperability and liquidity across networks.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.5,
+        "volatility": 0.17767547527003
+      },
+      "difficultyScore": 0.292267547527003
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P15_RECENT_TVL_DIRECTION",
+      "format": "ab",
+      "prompt": "Over the past 30 days, did JustCryptos's TVL increase or decrease?",
+      "choices": [
+        "Increase",
+        "Decrease"
+      ],
+      "answerIndex": 1,
+      "explanation": "JustCryptos experienced a 3.0% decrease in total value locked (TVL) over the past 30 days, bringing its current TVL to $3.0B. This decline indicates a reduction in user deposits or activity within the protocol during this period.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.030179216512420205,
+        "volatility": 0.17767547527003
+      },
+      "difficultyScore": 0.46605248771209873
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "prompt": "What is JustCryptos's current TVL rank among all protocols?",
+      "choices": [
+        "#1-5",
+        "#6-15",
+        "#16-30",
+        "#31-50",
+        "#51-100"
+      ],
+      "answerIndex": 2,
+      "explanation": "JustCryptos has a total value locked (TVL) of $3.0B, placing it at rank 20 among DeFi protocols. It stands out in its rank bucket (#16-30) as it competes closely with nearby protocols like Binance Bitcoin and Coinbase Bridge, both at $6.0B TVL.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.5,
+        "volatility": 0.17767547527003
+      },
+      "difficultyScore": 0.37226754752700303
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P10_TVL_BAND",
+      "format": "mc4",
+      "prompt": "Which TVL range fits JustCryptos?",
+      "choices": [
+        "<$50M",
+        "$50M-$250M",
+        "$250M-$1B",
+        "$1B-$5B",
+        ">$5B"
+      ],
+      "answerIndex": 3,
+      "explanation": "JustCryptos has a total value locked (TVL) of $3.0B, placing it within the $1B-$5B TVL band, indicating significant user trust and asset deposits in the platform. This level of TVL reflects its growing importance in the DeFi ecosystem.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.8041641964,
+        "volatility": 0.17767547527003
+      },
+      "difficultyScore": 0.292267547527003
+    }
+  ],
+  "generatedAt": "2025-12-29T00:26:49.308Z"
+}

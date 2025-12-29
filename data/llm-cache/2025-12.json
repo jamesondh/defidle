@@ -288,5 +288,30 @@
     "text": "Aave V3 has experienced a 2.7% increase in total value locked (TVL), bringing its current TVL to $32.6B, indicating growing confidence and usage in the protocol.",
     "model": "gpt-4o-mini",
     "generatedAt": "2025-12-28T00:28:02.932Z"
+  },
+  "2025-12-29|protocol|justcryptos|A|P1_FINGERPRINT|explanation|816c030fd254e9d6": {
+    "text": "JustCryptos is a bridge protocol operating solely on the Tron blockchain, with a total value locked (TVL) of $3.0B, placing it within the $1B-$5B TVL range. Its significant TVL indicates strong user adoption and liquidity for cross-chain transactions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-29T00:26:42.276Z"
+  },
+  "2025-12-29|protocol|justcryptos|B|P7_CATEGORY|explanation|1b4ba79c3c462a82": {
+    "text": "JustCryptos operates as a bridge in the DeFi space, facilitating the transfer of assets between different blockchains, which enhances interoperability and liquidity across networks.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-29T00:26:43.959Z"
+  },
+  "2025-12-29|protocol|justcryptos|C|P15_RECENT_TVL_DIRECTION|explanation|06cfbffb8f5c9747": {
+    "text": "JustCryptos experienced a 3.0% decrease in total value locked (TVL) over the past 30 days, bringing its current TVL to $3.0B. This decline indicates a reduction in user deposits or activity within the protocol during this period.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-29T00:26:45.962Z"
+  },
+  "2025-12-29|protocol|justcryptos|D|P31_PRECISE_RANK|explanation|de584ada5732644f": {
+    "text": "JustCryptos has a total value locked (TVL) of $3.0B, placing it at rank 20 among DeFi protocols. It stands out in its rank bucket (#16-30) as it competes closely with nearby protocols like Binance Bitcoin and Coinbase Bridge, both at $6.0B TVL.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-29T00:26:48.230Z"
+  },
+  "2025-12-29|protocol|justcryptos|E|P10_TVL_BAND|explanation|7d111697b20b400b": {
+    "text": "JustCryptos has a total value locked (TVL) of $3.0B, placing it within the $1B-$5B TVL band, indicating significant user trust and asset deposits in the platform. This level of TVL reflects its growing importance in the DeFi ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-29T00:26:49.307Z"
   }
 }
