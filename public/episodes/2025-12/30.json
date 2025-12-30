@@ -1,0 +1,140 @@
+{
+  "episodeId": "2025-12-30:chain:Arbitrum",
+  "dateUtc": "2025-12-30",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Arbitrum",
+    "name": "Arbitrum"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 10",
+        "Native token: ARB",
+        "Most protocols by count"
+      ],
+      "choices": [
+        "Solana",
+        "Vaulta",
+        "Arbitrum",
+        "Base",
+        "Plasma",
+        "Provenance"
+      ],
+      "answerIndex": 2,
+      "explanation": "Arbitrum ranks 8th in total value locked (TVL) with between $1B and $5B, showcasing its significant adoption in the DeFi space. It supports a robust ecosystem with 938 protocols, indicating a diverse range of applications available for users.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4675
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Arbitrum or Bitcoin?",
+      "choices": [
+        "Arbitrum",
+        "Bitcoin"
+      ],
+      "answerIndex": 1,
+      "explanation": "Bitcoin leads with a TVL of $6.8B, significantly higher than Arbitrum's $2.8B, giving it a margin of 58.4%. This indicates Bitcoin's stronger position in the DeFi space compared to Arbitrum.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.5841803498583966,
+        "volatility": null
+      },
+      "difficultyScore": 0.19749999999999998
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Arbitrum?",
+      "choices": [
+        "Fluid DEX",
+        "Uniswap V3",
+        "PancakeSwap AMM V3",
+        "Uniswap V4"
+      ],
+      "answerIndex": 1,
+      "explanation": "Uniswap V3 is the leading DEX on Arbitrum with a trading volume of $74M, outperforming Uniswap V4 at $63M and Fluid DEX at $46M. This significant volume indicates Uniswap V3's strong user adoption and liquidity compared to its competitors.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.1485368273402285,
+        "volatility": null
+      },
+      "difficultyScore": 0.40925580719172583
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Arbitrum hit its all-time high TVL?",
+      "choices": [
+        "Jun 2021",
+        "Aug 2025",
+        "Oct 2025",
+        "Jun 2022",
+        "May 2024",
+        "Oct 2022"
+      ],
+      "answerIndex": 2,
+      "explanation": "Arbitrum reached its ATH of $4.2B in October 2025, significantly surpassing earlier values like June 2022, when it was still developing its ecosystem. This timing highlights the protocol's growth and adoption in the DeFi space compared to earlier months when it had not yet achieved such high total value locked.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.47750000000000004
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C7_CHAIN_TVL_BAND",
+      "format": "mc4",
+      "prompt": "Which TVL range fits Arbitrum?",
+      "choices": [
+        "<$100M",
+        "$100M-$500M",
+        "$500M-$2B",
+        "$2B-$10B",
+        ">$10B"
+      ],
+      "answerIndex": 3,
+      "explanation": "Arbitrum has a total value locked (TVL) of $2.8B, placing it within the $1B-$5B TVL band, indicating strong adoption and usage in the DeFi ecosystem. This significant TVL reflects its role as a leading Layer 2 scaling solution for Ethereum.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.5912072678648733,
+        "volatility": null
+      },
+      "difficultyScore": 0.28750000000000003
+    }
+  ],
+  "generatedAt": "2025-12-30T00:24:38.644Z"
+}

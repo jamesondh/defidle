@@ -313,5 +313,30 @@
     "text": "JustCryptos has a total value locked (TVL) of $3.0B, placing it within the $1B-$5B TVL band, indicating significant user trust and asset deposits in the platform. This level of TVL reflects its growing importance in the DeFi ecosystem.",
     "model": "gpt-4o-mini",
     "generatedAt": "2025-12-29T00:26:49.307Z"
+  },
+  "2025-12-30|chain|Arbitrum|A|C1_FINGERPRINT|explanation|1c6ed2d168e11563": {
+    "text": "Arbitrum ranks 8th in total value locked (TVL) with between $1B and $5B, showcasing its significant adoption in the DeFi space. It supports a robust ecosystem with 938 protocols, indicating a diverse range of applications available for users.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-30T00:24:28.933Z"
+  },
+  "2025-12-30|chain|Arbitrum|B|C2_CHAIN_COMPARISON|explanation|a1205a38fd27dfd7": {
+    "text": "Bitcoin leads with a TVL of $6.8B, significantly higher than Arbitrum's $2.8B, giving it a margin of 58.4%. This indicates Bitcoin's stronger position in the DeFi space compared to Arbitrum.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-30T00:24:31.124Z"
+  },
+  "2025-12-30|chain|Arbitrum|C|C6_TOP_DEX|explanation|3c67d21ac3868bdb": {
+    "text": "Uniswap V3 is the leading DEX on Arbitrum with a trading volume of $74M, outperforming Uniswap V4 at $63M and Fluid DEX at $46M. This significant volume indicates Uniswap V3's strong user adoption and liquidity compared to its competitors.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-30T00:24:32.777Z"
+  },
+  "2025-12-30|chain|Arbitrum|D|C3_ATH_TIMING|explanation|c0e7a66a27c86c2f": {
+    "text": "Arbitrum reached its ATH of $4.2B in October 2025, significantly surpassing earlier values like June 2022, when it was still developing its ecosystem. This timing highlights the protocol's growth and adoption in the DeFi space compared to earlier months when it had not yet achieved such high total value locked.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-30T00:24:35.687Z"
+  },
+  "2025-12-30|chain|Arbitrum|E|C7_CHAIN_TVL_BAND|explanation|a6de8df9758a172c": {
+    "text": "Arbitrum has a total value locked (TVL) of $2.8B, placing it within the $1B-$5B TVL band, indicating strong adoption and usage in the DeFi ecosystem. This significant TVL reflects its role as a leading Layer 2 scaling solution for Ethereum.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-30T00:24:38.643Z"
   }
 }
