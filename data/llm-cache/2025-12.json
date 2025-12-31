@@ -338,5 +338,30 @@
     "text": "Arbitrum has a total value locked (TVL) of $2.8B, placing it within the $1B-$5B TVL band, indicating strong adoption and usage in the DeFi ecosystem. This significant TVL reflects its role as a leading Layer 2 scaling solution for Ethereum.",
     "model": "gpt-4o-mini",
     "generatedAt": "2025-12-30T00:24:38.643Z"
+  },
+  "2025-12-31|protocol|pancakeswap-amm|A|P1_FINGERPRINT|explanation|ff974b18003dd2fb": {
+    "text": "PancakeSwap AMM operates across 10 chains, including Binance and Ethereum, with a total value locked (TVL) of $1.8B, placing it within the $1B-$5B range. Its multi-chain support enhances liquidity and accessibility for users in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-31T00:25:04.017Z"
+  },
+  "2025-12-31|protocol|pancakeswap-amm|B|P2_CROSSCHAIN|explanation|e4a88d81155675f7": {
+    "text": "PancakeSwap AMM on Binance has a total value locked (TVL) of $1.8B, significantly outperforming Ethereum's $2M TVL, highlighting its dominance in the decentralized exchange space. The 100% margin indicates that PancakeSwap's TVL is vastly greater than that of its Ethereum counterpart.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-31T00:25:06.263Z"
+  },
+  "2025-12-31|protocol|pancakeswap-amm|C|P5_FEES_REVENUE|explanation|4da12593a6a1396a": {
+    "text": "PancakeSwap AMM generated $393K in fees over the past week, with $126K of that amount contributing to its revenue, representing 32% of the total fees. This indicates a healthy revenue generation model for the platform.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-31T00:25:08.351Z"
+  },
+  "2025-12-31|protocol|pancakeswap-amm|D|P31_PRECISE_RANK|explanation|5727c90b473239a8": {
+    "text": "PancakeSwap AMM has a total value locked (TVL) of $1.8B, ranking it 32nd among DeFi protocols. It stands out in the #31-50 rank bucket, with nearby protocols like Base Bridge and SparkLend both holding $3.2B in TVL, indicating a competitive landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-31T00:25:11.016Z"
+  },
+  "2025-12-31|protocol|pancakeswap-amm|E|P3_CONCENTRATION|explanation|32429427a81aac81": {
+    "text": "PancakeSwap AMM dominates the Binance chain with a 99% share of its total TVL, which stands at $1.8B. This concentration highlights PancakeSwap's significant role in the DeFi ecosystem on Binance.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2025-12-31T00:25:13.659Z"
   }
 }
