@@ -51,7 +51,11 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          git diff --quiet public/episodes/ data/llm-cache/ || echo "changed=true" >> $GITHUB_OUTPUT
+          # Check for both modified files and new untracked files
+          if ! git diff --quiet public/episodes/ data/llm-cache/ 2>/dev/null || \
+             [ -n "$(git ls-files --others --exclude-standard public/episodes/ data/llm-cache/)" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
 
       - name: Commit and push changes
         if: steps.changes.outputs.changed == 'true'

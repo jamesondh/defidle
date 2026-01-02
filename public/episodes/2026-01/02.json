@@ -1,0 +1,255 @@
+{
+  "episodeId": "2026-01-02:protocol:polygon-bridge-&-staking",
+  "dateUtc": "2026-01-02",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "polygon-bridge-&-staking",
+    "name": "Polygon Bridge & Staking",
+    "category": "Chain"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Chain",
+        "Chains: single-chain",
+        "Active since: 2021",
+        "TVL: $1B-$5B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Sky Lending",
+        "Arbitrum Bridge",
+        "USDT0",
+        "Polygon Bridge & Staking",
+        "Maple",
+        "JustLend"
+      ],
+      "answerIndex": 3,
+      "explanation": "Polygon Bridge & Staking has a total value locked (TVL) of $2.2B, placing it within the $1B-$5B range, and operates solely on the Polygon chain. This significant TVL highlights its popularity and utility in facilitating asset transfers and staking on the Polygon network.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.08793848673596372
+      },
+      "difficultyScore": 0.4812938486735964
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Polygon Bridge & Staking?",
+      "choices": [
+        "Payments",
+        "Chain",
+        "DCA Tools",
+        "Interface"
+      ],
+      "answerIndex": 1,
+      "explanation": "Polygon Bridge & Staking enables users to transfer assets between the Ethereum mainnet and the Polygon network, enhancing interoperability and scalability for decentralized applications. This functionality is crucial for optimizing transaction speeds and reducing costs in DeFi activities.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.08793848673596372
+      },
+      "difficultyScore": 0.30129384867359643
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Polygon Bridge & Staking's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 3,
+      "explanation": "Polygon Bridge & Staking currently has a TVL of $2.2B, which is 85% below its all-time high of $14.8B, placing it in the category of protocols that are more than 75% below their peak value. This significant drop indicates a substantial decrease in user activity or asset deposits compared to its peak.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.40791853276363954,
+        "volatility": 0.08793848673596372
+      },
+      "difficultyScore": 0.36129384867359643
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "prompt": "What is Polygon Bridge & Staking's current TVL rank among all protocols?",
+      "choices": [
+        "#1-5",
+        "#6-15",
+        "#16-30",
+        "#31-50",
+        "#51-100"
+      ],
+      "answerIndex": 2,
+      "explanation": "Polygon Bridge & Staking has a total value locked (TVL) of $2.2B, ranking it 26th among DeFi protocols. It stands out in its rank bucket (#16-30) with a TVL significantly lower than nearby protocols like Arbitrum Bridge at $4.2B and Deribit at $4.0B.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.08793848673596372
+      },
+      "difficultyScore": 0.38129384867359645
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which chain is Polygon Bridge & Staking deployed on?",
+      "choices": [
+        "Polygon",
+        "Arbitrum",
+        "Ethereum",
+        "Optimism"
+      ],
+      "answerIndex": 0,
+      "explanation": "Polygon Bridge & Staking operates solely on the Polygon chain, which allows users to transfer assets and stake tokens within a single blockchain environment. This focused approach enhances efficiency and reduces complexity for users engaging with the protocol.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.08793848673596372
+      },
+      "difficultyScore": 0.30129384867359643
+    }
+  ],
+  "generatedAt": "2026-01-02T20:52:42.404Z",
+  "buildLog": [
+    {
+      "slot": "A",
+      "template": "P1_FINGERPRINT",
+      "format": "mc6",
+      "decision": "selected",
+      "score": 0.4812938486735964,
+      "target": "medium"
+    },
+    {
+      "slot": "B",
+      "template": "P2_CROSSCHAIN",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "B",
+      "template": "P3_CONCENTRATION",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "B",
+      "template": "P7_CATEGORY",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.30129384867359643,
+      "target": "easy"
+    },
+    {
+      "slot": "C",
+      "template": "P5_FEES_REVENUE",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "P11_FEES_TREND",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "P14_CATEGORY_LEADER",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.21129384867359638,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P14_CATEGORY_LEADER",
+      "format": "tf",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.12129384867359637,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "P15_RECENT_TVL_DIRECTION",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:fingerprint_trend_revealed"
+    },
+    {
+      "slot": "C",
+      "template": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.36129384867359643,
+      "target": "medium"
+    },
+    {
+      "slot": "D",
+      "template": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.38129384867359645,
+      "target": "hard"
+    },
+    {
+      "slot": "E",
+      "template": "P6_TVL_TREND",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:fingerprint_trend_revealed"
+    },
+    {
+      "slot": "E",
+      "template": "P3_CONCENTRATION",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "E",
+      "template": "P10_TVL_BAND",
+      "decision": "skip",
+      "reason": "semantic_topic_covered:tvl_magnitude"
+    },
+    {
+      "slot": "E",
+      "template": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.30129384867359643,
+      "target": "easy"
+    },
+    {
+      "decision": "post_balance",
+      "reason": "No easy questions in episode"
+    }
+  ]
+}
