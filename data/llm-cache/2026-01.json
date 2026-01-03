@@ -48,5 +48,30 @@
     "text": "Polygon Bridge & Staking operates solely on the Polygon chain, which allows users to transfer assets and stake tokens within a single blockchain environment. This focused approach enhances efficiency and reduces complexity for users engaging with the protocol.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-02T20:52:42.403Z"
+  },
+  "2026-01-03|chain|Unichain|A|C1_FINGERPRINT|explanation|eb29349321287c78": {
+    "text": "Unichain ranks 38th in TVL with between $100M and $500M locked in its ecosystem, which includes 56 protocols, placing it in the 50-100 range for protocol count. This diversity of protocols contributes to its overall functionality and user engagement within the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-03T00:23:43.336Z"
+  },
+  "2026-01-03|chain|Unichain|B|C10_PROTOCOL_COUNT|explanation|03148c74cfd7be1b": {
+    "text": "Unichain supports a total of 56 protocols, making it a versatile platform for various decentralized finance applications. This diverse ecosystem allows users to access a wide range of financial services within a single framework.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-03T00:23:44.980Z"
+  },
+  "2026-01-03|chain|Unichain|C|C6_TOP_DEX|explanation|3fa8a454b2505b36": {
+    "text": "Uniswap V4 leads on Unichain with a trading volume of $17M, significantly outperforming other DEXs like Velodrome V3 at $1M and Uniswap V3 at $82K. This dominance highlights Uniswap V4's strong liquidity and user preference within the ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-03T00:23:46.981Z"
+  },
+  "2026-01-03|chain|Unichain|D|C3_ATH_TIMING|explanation|75f911593bc57c35": {
+    "text": "Unichain reached its all-time high (ATH) TVL of $903M in July 2025, making it the peak month for the protocol. Other months like June 2025 and October 2025 did not see this level of total value locked, highlighting July's significance in Unichain's growth.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-03T00:23:49.289Z"
+  },
+  "2026-01-03|chain|Unichain|E|C4_GROWTH_RANKING|explanation|6e623784dd8dde19": {
+    "text": "Ink achieved a remarkable growth rate of 51.2%, significantly outpacing other chains like Starknet at +6.2% and Stellar at +5.0%. This substantial increase highlights Ink's strong performance in the DeFi space compared to Unichain's more modest growth of +3.3%.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-03T00:23:51.434Z"
   }
 }

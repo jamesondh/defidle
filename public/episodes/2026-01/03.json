@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-01-03:chain:Unichain",
+  "dateUtc": "2026-01-03",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Unichain",
+    "name": "Unichain"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Native token: -",
+        "Protocols: 50-100",
+        "TVL: $100M-$500M",
+        "30d trend: down 1-10%"
+      ],
+      "choices": [
+        "Unichain",
+        "Berachain",
+        "Stellar",
+        "Cardano"
+      ],
+      "answerIndex": 0,
+      "explanation": "Unichain ranks 38th in TVL with between $100M and $500M locked in its ecosystem, which includes 56 protocols, placing it in the 50-100 range for protocol count. This diversity of protocols contributes to its overall functionality and user engagement within the DeFi space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4075000000000001
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C10_PROTOCOL_COUNT",
+      "format": "mc4",
+      "prompt": "How many DeFi protocols are deployed on Unichain?",
+      "choices": [
+        "<50",
+        "50-100",
+        "100-250",
+        ">250"
+      ],
+      "answerIndex": 1,
+      "explanation": "Unichain supports a total of 56 protocols, making it a versatile platform for various decentralized finance applications. This diverse ecosystem allows users to access a wide range of financial services within a single framework.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.21428571428571427,
+        "volatility": null
+      },
+      "difficultyScore": 0.36035714285714293
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Unichain?",
+      "choices": [
+        "Velodrome V3",
+        "Uniswap V3",
+        "Uniswap V4",
+        "EulerSwap"
+      ],
+      "answerIndex": 2,
+      "explanation": "Uniswap V4 leads on Unichain with a trading volume of $17M, significantly outperforming other DEXs like Velodrome V3 at $1M and Uniswap V3 at $82K. This dominance highlights Uniswap V4's strong liquidity and user preference within the ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9335723674664422,
+        "volatility": null
+      },
+      "difficultyScore": 0.31750000000000006
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Unichain hit its all-time high TVL?",
+      "choices": [
+        "Jul 2025",
+        "Sep 2025",
+        "Oct 2025",
+        "Jun 2025",
+        "Mar 2025",
+        "Dec 2024"
+      ],
+      "answerIndex": 0,
+      "explanation": "Unichain reached its all-time high (ATH) TVL of $903M in July 2025, making it the peak month for the protocol. Other months like June 2025 and October 2025 did not see this level of total value locked, highlighting July's significance in Unichain's growth.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.5075000000000001
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Starknet",
+        "Stellar",
+        "Unichain",
+        "Ink"
+      ],
+      "answerIndex": 3,
+      "explanation": "Ink achieved a remarkable growth rate of 51.2%, significantly outpacing other chains like Starknet at +6.2% and Stellar at +5.0%. This substantial increase highlights Ink's strong performance in the DeFi space compared to Unichain's more modest growth of +3.3%.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.44974004053401495,
+        "volatility": null
+      },
+      "difficultyScore": 0.37750000000000006
+    }
+  ],
+  "generatedAt": "2026-01-03T00:23:51.434Z"
+}
