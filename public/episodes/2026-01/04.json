@@ -1,0 +1,137 @@
+{
+  "episodeId": "2026-01-04:protocol:spark-savings",
+  "dateUtc": "2026-01-04",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "spark-savings",
+    "name": "Spark Savings",
+    "category": "Yield"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Yield",
+        "Chains: 6-10 chains",
+        "TVL rank: top 25"
+      ],
+      "choices": [
+        "Babylon Protocol",
+        "Ethena USDe",
+        "Maple",
+        "Spark Savings",
+        "JustCryptos",
+        "Arbitrum Bridge"
+      ],
+      "answerIndex": 3,
+      "explanation": "Spark Savings is a yield protocol with a total value locked (TVL) of $2.1B, operating across six chains including Arbitrum, Ethereum, and Optimism. Its significant TVL places it within the $1B-$5B range, highlighting its popularity and trust among users.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.09424178608735674
+      },
+      "difficultyScore": 0.4639241786087357
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Spark Savings have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Avalanche"
+      ],
+      "answerIndex": 0,
+      "explanation": "Spark Savings on Ethereum has a TVL of $1.8B, significantly outperforming Avalanche's $198M TVL, highlighting Ethereum's dominance in the DeFi space with an 89% margin.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.8875272992898071,
+        "volatility": 0.09424178608735674
+      },
+      "difficultyScore": 0.19392417860873568
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P15_RECENT_TVL_DIRECTION",
+      "format": "ab",
+      "prompt": "Over the past 30 days, did Spark Savings's TVL increase or decrease?",
+      "choices": [
+        "Decrease",
+        "Increase"
+      ],
+      "answerIndex": 1,
+      "explanation": "Spark Savings has seen a 14.4% increase in total value locked (TVL) over the past 30 days, bringing its current TVL to $2.1B. This upward trend indicates growing interest and confidence in the platform.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.14437892172767497,
+        "volatility": 0.09424178608735674
+      },
+      "difficultyScore": 0.3206694725355257
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "prompt": "What is Spark Savings's current TVL rank among all protocols?",
+      "choices": [
+        "#1-5",
+        "#6-15",
+        "#16-30",
+        "#31-50",
+        "#51-100"
+      ],
+      "answerIndex": 2,
+      "explanation": "Spark Savings has a total value locked (TVL) of $2.1B, ranking it 25th among DeFi protocols, within the #16-30 rank bucket. It stands out in this range with a significant TVL, although it is lower than nearby protocols like USDT0 at $4.5B and Arbitrum Bridge at $4.2B.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.5,
+        "volatility": 0.09424178608735674
+      },
+      "difficultyScore": 0.3639241786087357
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Spark Savings's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Spark Savings has a total value locked (TVL) of $2.1B, with 82% of that, or approximately $1.8B, concentrated on the Ethereum chain, highlighting its dominance in the DeFi space.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.28038413317950317,
+        "volatility": 0.09424178608735674
+      },
+      "difficultyScore": 0.2839241786087357
+    }
+  ],
+  "generatedAt": "2026-01-04T00:27:55.381Z"
+}
