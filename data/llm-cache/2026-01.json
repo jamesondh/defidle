@@ -98,5 +98,30 @@
     "text": "Spark Savings has a total value locked (TVL) of $2.1B, with 82% of that, or approximately $1.8B, concentrated on the Ethereum chain, highlighting its dominance in the DeFi space.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-04T00:27:55.381Z"
+  },
+  "2026-01-05|protocol|pendle|A|P1_FINGERPRINT|explanation|7255bbed9c597646": {
+    "text": "Pendle is a yield-focused DeFi protocol with a total value locked (TVL) of $3.7B, operating across 11 chains including Avalanche, Ethereum, and Optimism. Its significant TVL places it within the $1B-$5B range, highlighting its popularity and utility in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-05T00:27:04.583Z"
+  },
+  "2026-01-05|protocol|pendle|B|P2_CROSSCHAIN|explanation|9e5cd50031737d95": {
+    "text": "Pendle has a TVL of $1.7B on Ethereum, surpassing Plasma's $1.3B by 23%, highlighting its stronger adoption and liquidity in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-05T00:27:07.077Z"
+  },
+  "2026-01-05|protocol|pendle|C|P5_FEES_REVENUE|explanation|4015506d00f065af": {
+    "text": "Pendle generated $119K in fees over the past week, with $117K of that amount translating into revenue, resulting in a revenue retention rate of 98%. This indicates a strong efficiency in converting fees into revenue within the protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-05T00:27:08.103Z"
+  },
+  "2026-01-05|protocol|pendle|D|P31_PRECISE_RANK|explanation|952bf783ac6c7bdc": {
+    "text": "Pendle has a total value locked (TVL) of $3.7B, ranking it 17th among DeFi protocols. It stands out in the #16-30 rank bucket, with nearby protocols like Sky Lending and Ethena USDe both at $6.3B TVL, highlighting a competitive landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-05T00:27:09.502Z"
+  },
+  "2026-01-05|protocol|pendle|E|P6_TVL_TREND|explanation|a67774288cb9dd57": {
+    "text": "Pendle's total value locked (TVL) has increased by 4.6%, reaching $3.7B, indicating growing interest and investment in its tokenized yield protocol. This upward trend reflects the platform's expanding role in the DeFi ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-05T00:27:11.595Z"
   }
 }

@@ -1,0 +1,137 @@
+{
+  "episodeId": "2026-01-05:protocol:pendle",
+  "dateUtc": "2026-01-05",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "pendle",
+    "name": "Pendle",
+    "category": "Yield"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Yield",
+        "Chains: 10+ chains",
+        "TVL spread across chains (no chain >50%)",
+        "Active since: 2021"
+      ],
+      "choices": [
+        "Binance Bitcoin",
+        "Babylon Protocol",
+        "Arbitrum Bridge",
+        "Sky Lending",
+        "Pendle",
+        "USDT0"
+      ],
+      "answerIndex": 4,
+      "explanation": "Pendle is a yield-focused DeFi protocol with a total value locked (TVL) of $3.7B, operating across 11 chains including Avalanche, Ethereum, and Optimism. Its significant TVL places it within the $1B-$5B range, highlighting its popularity and utility in the DeFi space.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.07532594582592955
+      },
+      "difficultyScore": 0.462032594582593
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Pendle have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Plasma"
+      ],
+      "answerIndex": 0,
+      "explanation": "Pendle has a TVL of $1.7B on Ethereum, surpassing Plasma's $1.3B by 23%, highlighting its stronger adoption and liquidity in the DeFi space.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.2324656954578453,
+        "volatility": 0.07532594582592955
+      },
+      "difficultyScore": 0.2130737600331786
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "ab",
+      "prompt": "Over the last 7 days, did Pendle generate more in fees or revenue?",
+      "choices": [
+        "Fees",
+        "Revenue"
+      ],
+      "answerIndex": 0,
+      "explanation": "Pendle generated $119K in fees over the past week, with $117K of that amount translating into revenue, resulting in a revenue retention rate of 98%. This indicates a strong efficiency in converting fees into revenue within the protocol.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.02156004093891042,
+        "volatility": 0.07532594582592955
+      },
+      "difficultyScore": 0.46616054545590047
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "prompt": "What is Pendle's current TVL rank among all protocols?",
+      "choices": [
+        "#1-5",
+        "#6-15",
+        "#16-30",
+        "#31-50",
+        "#51-100"
+      ],
+      "answerIndex": 2,
+      "explanation": "Pendle has a total value locked (TVL) of $3.7B, ranking it 17th among DeFi protocols. It stands out in the #16-30 rank bucket, with nearby protocols like Sky Lending and Ethena USDe both at $6.3B TVL, highlighting a competitive landscape.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.2,
+        "volatility": 0.07532594582592955
+      },
+      "difficultyScore": 0.422032594582593
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "Pendle's TVL increased over the past 30 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Pendle's total value locked (TVL) has increased by 4.6%, reaching $3.7B, indicating growing interest and investment in its tokenized yield protocol. This upward trend reflects the platform's expanding role in the DeFi ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.045692223000368556,
+        "volatility": 0.07532594582592955
+      },
+      "difficultyScore": 0.3472019269821507
+    }
+  ],
+  "generatedAt": "2026-01-05T00:27:11.595Z"
+}
