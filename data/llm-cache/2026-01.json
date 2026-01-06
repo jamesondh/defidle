@@ -123,5 +123,30 @@
     "text": "Pendle's total value locked (TVL) has increased by 4.6%, reaching $3.7B, indicating growing interest and investment in its tokenized yield protocol. This upward trend reflects the platform's expanding role in the DeFi ecosystem.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-05T00:27:11.595Z"
+  },
+  "2026-01-06|chain|Katana|A|C1_FINGERPRINT|explanation|208c28e7f199bd37": {
+    "text": "Katana ranks 18th in TVL with a total value locked between $100M and $500M, and it supports 21 protocols, placing it in the \"20-50\" protocol count bucket. This indicates a robust ecosystem for users seeking diverse DeFi options.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-06T00:24:59.520Z"
+  },
+  "2026-01-06|chain|Katana|B|C8_30D_DIRECTION|explanation|7ce8a6e061729e7a": {
+    "text": "Katana's TVL has decreased by 5.6%, indicating a reduction in the total value locked within the protocol over the past 30 days. This decline may reflect changing user interest or market conditions affecting DeFi platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-06T00:25:00.774Z"
+  },
+  "2026-01-06|chain|Katana|C|C11_TOP_PROTOCOL_TVL|explanation|0c9880afac3ce829": {
+    "text": "Morpho V1 leads Katana with a total value locked (TVL) of $6.4B, significantly surpassing other protocols like Steakhouse Financial at $1.6B, Gauntlet at $1.2B, and Concrete at $1.0B, highlighting its dominance in the ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-06T00:25:03.627Z"
+  },
+  "2026-01-06|chain|Katana|D|C3_ATH_TIMING|explanation|4cee75f19158b5cd": {
+    "text": "Katana reached its all-time high (ATH) TVL of $607M in October 2025, distinguishing it from other months like September and November 2025, when it did not achieve this peak. This timing highlights a significant growth period for Katana compared to the alternatives.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-06T00:25:06.575Z"
+  },
+  "2026-01-06|chain|Katana|E|C6_TOP_DEX|explanation|1b764b3128a44a4e": {
+    "text": "SushiSwap V3 is the top DEX on Katana with a trading volume of $7M, significantly outperforming other options like Spectra V2 at $269K and Kensei with just $54. This highlights SushiSwap V3's dominance in liquidity and trading activity on the chain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-06T00:25:08.917Z"
   }
 }
