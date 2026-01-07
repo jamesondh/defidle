@@ -148,5 +148,30 @@
     "text": "SushiSwap V3 is the top DEX on Katana with a trading volume of $7M, significantly outperforming other options like Spectra V2 at $269K and Kensei with just $54. This highlights SushiSwap V3's dominance in liquidity and trading activity on the chain.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-06T00:25:08.917Z"
+  },
+  "2026-01-07|protocol|free-protocol|A|P1_FINGERPRINT|explanation|a01f8e4a374384b7": {
+    "text": "Free Protocol is a bridge protocol operating across 8 chains, including Kroma, Ethereum, and Binance, with a total value locked (TVL) of $564M, placing it in the $500M-$1B TVL band. Its multi-chain capability enhances interoperability in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-07T00:24:09.835Z"
+  },
+  "2026-01-07|protocol|free-protocol|B|P2_CROSSCHAIN|explanation|c626ebd97d84d892": {
+    "text": "Free Protocol, operating on the Merlin chain, has a TVL of $563M, significantly outperforming the Binance chain's TVL of only $618K, highlighting its dominance in the cross-chain DeFi space with a margin of 100%.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-07T00:24:11.756Z"
+  },
+  "2026-01-07|protocol|free-protocol|C|P20_ATH_DISTANCE|explanation|82a4ff9c2d060169": {
+    "text": "Free Protocol's current TVL is $564M, which is 54% below its all-time high of $1.2B, placing it in the 50-75% range below ATH. This indicates a significant decline in total value locked compared to its peak performance.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-07T00:24:13.676Z"
+  },
+  "2026-01-07|protocol|free-protocol|D|P31_PRECISE_RANK|explanation|f33e42eb7e958635": {
+    "text": "Free Protocol has a total value locked (TVL) of $564M, placing it at rank 88 among DeFi protocols. It stands out in the #51-100 rank bucket, with nearby protocols like mETH Protocol and Ethena USDtb having significantly higher TVLs of $856M and $843M, respectively.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-07T00:24:15.582Z"
+  },
+  "2026-01-07|protocol|free-protocol|E|P3_CONCENTRATION|explanation|b0ea6c2c7014f413": {
+    "text": "Free Protocol has achieved a remarkable 100% share of the total value locked (TVL) on the Merlin chain, which stands at $563M, contributing to its overall TVL of $564M. This indicates that nearly all assets on Merlin are locked within Free Protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-07T00:24:17.661Z"
   }
 }

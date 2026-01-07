@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-01-07:protocol:free-protocol",
+  "dateUtc": "2026-01-07",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "free-protocol",
+    "name": "Free Protocol",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: 6-10 chains",
+        ">90% TVL on single chain",
+        "TVL: $500M-$1B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Lighter Bridge",
+        "Kelp",
+        "Free Protocol",
+        "StakeWise V2"
+      ],
+      "answerIndex": 2,
+      "explanation": "Free Protocol is a bridge protocol operating across 8 chains, including Kroma, Ethereum, and Binance, with a total value locked (TVL) of $564M, placing it in the $500M-$1B TVL band. Its multi-chain capability enhances interoperability in the DeFi space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.1237949051944414
+      },
+      "difficultyScore": 0.3948794905194442
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Free Protocol have higher TVL?",
+      "choices": [
+        "Binance",
+        "Merlin"
+      ],
+      "answerIndex": 1,
+      "explanation": "Free Protocol, operating on the Merlin chain, has a TVL of $563M, significantly outperforming the Binance chain's TVL of only $618K, highlighting its dominance in the cross-chain DeFi space with a margin of 100%.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9989021868043495,
+        "volatility": 0.1237949051944414
+      },
+      "difficultyScore": 0.21487949051944416
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Free Protocol's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 2,
+      "explanation": "Free Protocol's current TVL is $564M, which is 54% below its all-time high of $1.2B, placing it in the 50-75% range below ATH. This indicates a significant decline in total value locked compared to its peak performance.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.15642852636639532,
+        "volatility": 0.1237949051944414
+      },
+      "difficultyScore": 0.4771652588797698
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "prompt": "What is Free Protocol's current TVL rank among all protocols?",
+      "choices": [
+        "#1-5",
+        "#6-15",
+        "#16-30",
+        "#31-50",
+        "#51-100"
+      ],
+      "answerIndex": 4,
+      "explanation": "Free Protocol has a total value locked (TVL) of $564M, placing it at rank 88 among DeFi protocols. It stands out in the #51-100 rank bucket, with nearby protocols like mETH Protocol and Ethena USDtb having significantly higher TVLs of $856M and $843M, respectively.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0.1237949051944414
+      },
+      "difficultyScore": 0.3848794905194442
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Free Protocol's TVL is on its top chain (Merlin)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Free Protocol has achieved a remarkable 100% share of the total value locked (TVL) on the Merlin chain, which stands at $563M, contributing to its overall TVL of $564M. This indicates that nearly all assets on Merlin are locked within Free Protocol.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9884803792491903,
+        "volatility": 0.1237949051944414
+      },
+      "difficultyScore": 0.3048794905194442
+    }
+  ],
+  "generatedAt": "2026-01-07T00:24:17.662Z"
+}
