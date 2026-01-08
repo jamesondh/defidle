@@ -173,5 +173,30 @@
     "text": "Free Protocol has achieved a remarkable 100% share of the total value locked (TVL) on the Merlin chain, which stands at $563M, contributing to its overall TVL of $564M. This indicates that nearly all assets on Merlin are locked within Free Protocol.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-07T00:24:17.661Z"
+  },
+  "2026-01-08|chain|Cardano|A|C1_FINGERPRINT|explanation|b9c6f9ae4bcd2edc": {
+    "text": "Cardano ranks 27th in TVL with a total value locked between $100M and $500M, supporting 77 protocols, which places it in the 50-100 range for protocol count. This diverse ecosystem highlights Cardano's growing presence in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-08T00:25:09.190Z"
+  },
+  "2026-01-08|chain|Cardano|B|C2_CHAIN_COMPARISON|explanation|c6c418b4e7829c6c": {
+    "text": "Cardano leads with a TVL of $191M, surpassing Stacks' $128M by 33.2%. This significant difference highlights Cardano's stronger adoption and utilization in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-08T00:25:10.446Z"
+  },
+  "2026-01-08|chain|Cardano|C|C6_TOP_DEX|explanation|23d2d13aedd6dd20": {
+    "text": "Minswap is the leading DEX on Cardano with a trading volume of $6M, significantly outpacing its closest competitor, SundaeSwap V2, which has a volume of $738K. This highlights Minswap's dominance in the Cardano ecosystem compared to other platforms like WingRiders and Splash Protocol, which have even lower volumes of $403K and $22K, respectively.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-08T00:25:13.859Z"
+  },
+  "2026-01-08|chain|Cardano|D|C3_ATH_TIMING|explanation|93142f98ddd99a43": {
+    "text": "Cardano reached its all-time high (ATH) TVL of $721M in December 2024, significantly surpassing earlier months like October and September 2022, when its TVL was much lower. This timing highlights the protocol's growth and development leading up to that peak.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-08T00:25:16.442Z"
+  },
+  "2026-01-08|chain|Cardano|E|C13_LAYER_TYPE|explanation|8a42bbdbdb412fb3": {
+    "text": "Cardano is a Layer 1 blockchain that operates independently with its own consensus mechanism, distinguishing it from Layer 2 solutions that rely on other blockchains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-08T00:25:17.333Z"
   }
 }
