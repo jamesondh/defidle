@@ -1,0 +1,142 @@
+{
+  "episodeId": "2026-01-09:protocol:paxos-gold",
+  "dateUtc": "2026-01-09",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "paxos-gold",
+    "name": "Paxos Gold",
+    "category": "RWA"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: RWA",
+        "Chains: single-chain",
+        "TVL: $1B-$5B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Paxos Gold",
+        "BlackRock BUIDL",
+        "Spark Liquidity Layer",
+        "Tether Gold",
+        "JustCryptos",
+        "Rocket Pool"
+      ],
+      "answerIndex": 0,
+      "explanation": "Paxos Gold is a real-world asset (RWA) protocol on Ethereum, with a total value locked (TVL) of $1.7B, placing it within the $1B-$5B range. It uniquely represents gold in a digital format, allowing users to hold and trade gold-backed tokens on the blockchain.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.0469629922731003
+      },
+      "difficultyScore": 0.47719629922731005
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Paxos Gold?",
+      "choices": [
+        "Liquidity Automation",
+        "RWA",
+        "Gamified Mining",
+        "AI Agents"
+      ],
+      "answerIndex": 1,
+      "explanation": "Paxos Gold is categorized as a Real World Asset (RWA) in DeFi, representing a digital asset backed by physical gold, allowing users to hold and trade gold in a blockchain format. This integration of tangible assets into the digital space enhances liquidity and accessibility for investors.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.0469629922731003
+      },
+      "difficultyScore": 0.29719629922731006
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P29_CATEGORY_GROWTH",
+      "format": "mc4",
+      "prompt": "Which DeFi category grew the most in TVL over the past 7 days?",
+      "choices": [
+        "Token Locker",
+        "Liquidity manager",
+        "RWA",
+        "Leveraged Farming"
+      ],
+      "answerIndex": 2,
+      "explanation": "Paxos Gold leads the Real World Assets (RWA) category with an astonishing growth of +2,606,448.3%, significantly outpacing other categories like Token Locker at +602.4% and Liquidity Manager at +724.8%. This remarkable growth highlights the increasing interest in asset-backed tokens within the DeFi space.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0.0469629922731003
+      },
+      "difficultyScore": 0.35719629922731005
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "prompt": "What is Paxos Gold's current TVL rank among all protocols?",
+      "choices": [
+        "#1-5",
+        "#6-15",
+        "#16-30",
+        "#31-50",
+        "#51-100"
+      ],
+      "answerIndex": 3,
+      "explanation": "Paxos Gold has a total value locked (TVL) of $1.7B, ranking it 40th among DeFi protocols. It stands out in the #31-50 rank bucket, closely trailing Uniswap V3 and Curve DEX, both at $2.2B TVL.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0.0469629922731003
+      },
+      "difficultyScore": 0.3771962992273101
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which chain is Paxos Gold deployed on?",
+      "choices": [
+        "Arbitrum",
+        "Ethereum",
+        "Optimism",
+        "Polygon"
+      ],
+      "answerIndex": 1,
+      "explanation": "Paxos Gold operates solely on the Ethereum blockchain, making it a single-chain protocol. This focus allows for streamlined transactions and integration within the Ethereum ecosystem.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.0469629922731003
+      },
+      "difficultyScore": 0.29719629922731006
+    }
+  ],
+  "generatedAt": "2026-01-09T00:24:50.352Z"
+}

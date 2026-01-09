@@ -198,5 +198,30 @@
     "text": "Cardano is a Layer 1 blockchain that operates independently with its own consensus mechanism, distinguishing it from Layer 2 solutions that rely on other blockchains.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-08T00:25:17.333Z"
+  },
+  "2026-01-09|protocol|paxos-gold|A|P1_FINGERPRINT|explanation|ca42427be0522542": {
+    "text": "Paxos Gold is a real-world asset (RWA) protocol on Ethereum, with a total value locked (TVL) of $1.7B, placing it within the $1B-$5B range. It uniquely represents gold in a digital format, allowing users to hold and trade gold-backed tokens on the blockchain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-09T00:24:42.759Z"
+  },
+  "2026-01-09|protocol|paxos-gold|B|P7_CATEGORY|explanation|68604a342941fa6a": {
+    "text": "Paxos Gold is categorized as a Real World Asset (RWA) in DeFi, representing a digital asset backed by physical gold, allowing users to hold and trade gold in a blockchain format. This integration of tangible assets into the digital space enhances liquidity and accessibility for investors.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-09T00:24:45.112Z"
+  },
+  "2026-01-09|protocol|paxos-gold|C|P29_CATEGORY_GROWTH|explanation|9853ad05b4d7de37": {
+    "text": "Paxos Gold leads the Real World Assets (RWA) category with an astonishing growth of +2,606,448.3%, significantly outpacing other categories like Token Locker at +602.4% and Liquidity Manager at +724.8%. This remarkable growth highlights the increasing interest in asset-backed tokens within the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-09T00:24:46.709Z"
+  },
+  "2026-01-09|protocol|paxos-gold|D|P31_PRECISE_RANK|explanation|720709b84565fb1c": {
+    "text": "Paxos Gold has a total value locked (TVL) of $1.7B, ranking it 40th among DeFi protocols. It stands out in the #31-50 rank bucket, closely trailing Uniswap V3 and Curve DEX, both at $2.2B TVL.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-09T00:24:48.979Z"
+  },
+  "2026-01-09|protocol|paxos-gold|E|P8_CHAIN_MEMBERSHIP|explanation|4f13c5dcaf6d568d": {
+    "text": "Paxos Gold operates solely on the Ethereum blockchain, making it a single-chain protocol. This focus allows for streamlined transactions and integration within the Ethereum ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-09T00:24:50.352Z"
   }
 }
