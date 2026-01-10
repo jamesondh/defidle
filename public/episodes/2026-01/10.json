@@ -1,0 +1,138 @@
+{
+  "episodeId": "2026-01-10:chain:Katana",
+  "dateUtc": "2026-01-10",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Katana",
+    "name": "Katana"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Protocols: 20-50"
+      ],
+      "choices": [
+        "Hyperliquid L1",
+        "OP Mainnet",
+        "Movement",
+        "Stellar",
+        "Cronos",
+        "Katana"
+      ],
+      "answerIndex": 5,
+      "explanation": "Katana ranks 18th in TVL with a total value locked between $100M and $500M, indicating a solid presence in the DeFi space. It supports 21 protocols, placing it in the 20-50 range for protocol count, showcasing its versatility and ecosystem diversity.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Katana or Starknet?",
+      "choices": [
+        "Starknet",
+        "Katana"
+      ],
+      "answerIndex": 1,
+      "explanation": "Katana leads with a TVL of $381M, surpassing Starknet's $263M by 30.9%, indicating stronger user confidence and asset deposits in its ecosystem. This significant difference highlights Katana's competitive edge in the DeFi space.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.3089322845672602,
+        "volatility": null
+      },
+      "difficultyScore": 0.2095
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Starknet",
+        "Base",
+        "Ink",
+        "Katana"
+      ],
+      "answerIndex": 2,
+      "explanation": "Ink achieved the highest growth rate at +32.1%, significantly outperforming other chains like Starknet (+18.1%) and Base (+3.7%), while Katana saw a decline of -11.0%. This strong performance indicates Ink's increasing popularity and adoption in the DeFi space compared to the others.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.14073553730715666,
+        "volatility": null
+      },
+      "difficultyScore": 0.4906173552314121
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Katana hit its all-time high TVL?",
+      "choices": [
+        "Nov 2025",
+        "Sep 2025",
+        "Jun 2025",
+        "Aug 2025",
+        "Jul 2025",
+        "Oct 2025"
+      ],
+      "answerIndex": 5,
+      "explanation": "Katana reached its all-time high (ATH) TVL of $607M in October 2025, making it a significant milestone for the protocol. In contrast, the other months like November 2025 and September 2025 did not see this peak, highlighting October as the standout month for Katana's growth.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Katana?",
+      "choices": [
+        "SushiSwap V3",
+        "SushiSwap",
+        "Spectra V2",
+        "Kensei"
+      ],
+      "answerIndex": 0,
+      "explanation": "SushiSwap V3 is the top DEX on Katana, with a trading volume of $19M, significantly outperforming other options like Spectra V2 at $184K and SushiSwap at just $6. This highlights SushiSwap V3's dominance in liquidity and trading activity on the chain.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.9902429085052563,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-01-10T00:24:30.566Z"
+}

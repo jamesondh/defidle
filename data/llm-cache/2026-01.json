@@ -223,5 +223,30 @@
     "text": "Paxos Gold operates solely on the Ethereum blockchain, making it a single-chain protocol. This focus allows for streamlined transactions and integration within the Ethereum ecosystem.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-09T00:24:50.352Z"
+  },
+  "2026-01-10|chain|Katana|A|C1_FINGERPRINT|explanation|208c28e7f199bd37": {
+    "text": "Katana ranks 18th in TVL with a total value locked between $100M and $500M, indicating a solid presence in the DeFi space. It supports 21 protocols, placing it in the 20-50 range for protocol count, showcasing its versatility and ecosystem diversity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-10T00:24:22.924Z"
+  },
+  "2026-01-10|chain|Katana|B|C2_CHAIN_COMPARISON|explanation|042f7702086e94e5": {
+    "text": "Katana leads with a TVL of $381M, surpassing Starknet's $263M by 30.9%, indicating stronger user confidence and asset deposits in its ecosystem. This significant difference highlights Katana's competitive edge in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-10T00:24:24.967Z"
+  },
+  "2026-01-10|chain|Katana|C|C4_GROWTH_RANKING|explanation|2b6692ae07235043": {
+    "text": "Ink achieved the highest growth rate at +32.1%, significantly outperforming other chains like Starknet (+18.1%) and Base (+3.7%), while Katana saw a decline of -11.0%. This strong performance indicates Ink's increasing popularity and adoption in the DeFi space compared to the others.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-10T00:24:27.387Z"
+  },
+  "2026-01-10|chain|Katana|D|C3_ATH_TIMING|explanation|04293d4397fe731d": {
+    "text": "Katana reached its all-time high (ATH) TVL of $607M in October 2025, making it a significant milestone for the protocol. In contrast, the other months like November 2025 and September 2025 did not see this peak, highlighting October as the standout month for Katana's growth.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-10T00:24:28.785Z"
+  },
+  "2026-01-10|chain|Katana|E|C6_TOP_DEX|explanation|dff465e526babe17": {
+    "text": "SushiSwap V3 is the top DEX on Katana, with a trading volume of $19M, significantly outperforming other options like Spectra V2 at $184K and SushiSwap at just $6. This highlights SushiSwap V3's dominance in liquidity and trading activity on the chain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-10T00:24:30.566Z"
   }
 }
