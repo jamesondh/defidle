@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-01-11:protocol:solvbtc",
+  "dateUtc": "2026-01-11",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "solvbtc",
+    "name": "SolvBTC",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: 10+ chains",
+        ">90% TVL on single chain",
+        "TVL: $500M-$1B",
+        "7d change: roughly flat"
+      ],
+      "choices": [
+        "Gauntlet",
+        "SolvBTC",
+        "Paxos Gold",
+        "Circle USYC"
+      ],
+      "answerIndex": 1,
+      "explanation": "SolvBTC is a bridge protocol operating across 11 chains, including Polygon, Arbitrum, and Ethereum, with a total value locked (TVL) of $997M, placing it in the $500M-$1B range. Its significant TVL highlights its popularity and utility in facilitating cross-chain transactions.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.11272395494237082
+      },
+      "difficultyScore": 0.39377239549423715
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does SolvBTC have higher TVL?",
+      "choices": [
+        "Bitcoin",
+        "Binance"
+      ],
+      "answerIndex": 0,
+      "explanation": "SolvBTC has a total value locked (TVL) of $947M on Bitcoin, significantly outperforming Binance's $31M TVL, making it a dominant choice for cross-chain solutions with a margin of 97%. This highlights Bitcoin's strong position in the DeFi space compared to Binance.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9676933088463658,
+        "volatility": 0.11272395494237082
+      },
+      "difficultyScore": 0.2137723954942371
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of SolvBTC's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 2,
+      "explanation": "In the past week, SolvBTC generated $688K in revenue, which is 48% of its $1M in fees, indicating a strong efficiency in converting fees into revenue. This performance highlights SolvBTC's effective business model within the DeFi space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4938125245941616,
+        "volatility": 0.11272395494237082
+      },
+      "difficultyScore": 0.3037723954942371
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "prompt": "What is SolvBTC's current TVL rank among all protocols?",
+      "choices": [
+        "#1-5",
+        "#6-15",
+        "#16-30",
+        "#31-50",
+        "#51-100"
+      ],
+      "answerIndex": 4,
+      "explanation": "SolvBTC has a total value locked (TVL) of $997M, placing it at rank 59 among DeFi protocols. It stands out in its rank bucket (#51-100) with a TVL close to nearby competitors like Bitkub and Sanctum Validator LSTs, both at $1.7B.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9,
+        "volatility": 0.11272395494237082
+      },
+      "difficultyScore": 0.38377239549423714
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of SolvBTC's TVL is on its top chain (Bitcoin)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "SolvBTC has a total value locked (TVL) of $997M, with 95% of its assets concentrated in Bitcoin, which itself has a TVL of $947M. This high concentration indicates SolvBTC's strong reliance on Bitcoin as its primary asset.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.8007592207937324,
+        "volatility": 0.11272395494237082
+      },
+      "difficultyScore": 0.3037723954942371
+    }
+  ],
+  "generatedAt": "2026-01-11T00:27:36.203Z"
+}

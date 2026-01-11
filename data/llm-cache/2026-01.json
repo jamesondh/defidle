@@ -248,5 +248,30 @@
     "text": "SushiSwap V3 is the top DEX on Katana, with a trading volume of $19M, significantly outperforming other options like Spectra V2 at $184K and SushiSwap at just $6. This highlights SushiSwap V3's dominance in liquidity and trading activity on the chain.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-10T00:24:30.566Z"
+  },
+  "2026-01-11|protocol|solvbtc|A|P1_FINGERPRINT|explanation|23217462633f21f3": {
+    "text": "SolvBTC is a bridge protocol operating across 11 chains, including Polygon, Arbitrum, and Ethereum, with a total value locked (TVL) of $997M, placing it in the $500M-$1B range. Its significant TVL highlights its popularity and utility in facilitating cross-chain transactions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-11T00:27:25.228Z"
+  },
+  "2026-01-11|protocol|solvbtc|B|P2_CROSSCHAIN|explanation|15d292732a82f1f5": {
+    "text": "SolvBTC has a total value locked (TVL) of $947M on Bitcoin, significantly outperforming Binance's $31M TVL, making it a dominant choice for cross-chain solutions with a margin of 97%. This highlights Bitcoin's strong position in the DeFi space compared to Binance.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-11T00:27:28.474Z"
+  },
+  "2026-01-11|protocol|solvbtc|C|P5_FEES_REVENUE|explanation|a514b3e58103440e": {
+    "text": "In the past week, SolvBTC generated $688K in revenue, which is 48% of its $1M in fees, indicating a strong efficiency in converting fees into revenue. This performance highlights SolvBTC's effective business model within the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-11T00:27:32.675Z"
+  },
+  "2026-01-11|protocol|solvbtc|D|P31_PRECISE_RANK|explanation|3af5ed9ca0a33188": {
+    "text": "SolvBTC has a total value locked (TVL) of $997M, placing it at rank 59 among DeFi protocols. It stands out in its rank bucket (#51-100) with a TVL close to nearby competitors like Bitkub and Sanctum Validator LSTs, both at $1.7B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-11T00:27:34.179Z"
+  },
+  "2026-01-11|protocol|solvbtc|E|P3_CONCENTRATION|explanation|d1edebed814a6b24": {
+    "text": "SolvBTC has a total value locked (TVL) of $997M, with 95% of its assets concentrated in Bitcoin, which itself has a TVL of $947M. This high concentration indicates SolvBTC's strong reliance on Bitcoin as its primary asset.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-11T00:27:36.202Z"
   }
 }
