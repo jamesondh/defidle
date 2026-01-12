@@ -273,5 +273,30 @@
     "text": "SolvBTC has a total value locked (TVL) of $997M, with 95% of its assets concentrated in Bitcoin, which itself has a TVL of $947M. This high concentration indicates SolvBTC's strong reliance on Bitcoin as its primary asset.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-11T00:27:36.202Z"
+  },
+  "2026-01-12|protocol|uniswap-v2|A|P1_FINGERPRINT|explanation|93f7bdaa8a64859a": {
+    "text": "Uniswap V2 is a decentralized exchange (DEX) with a total value locked (TVL) of $1.3B, placing it within the $1B-$5B range. It operates across 11 chains, including Ethereum and Base, highlighting its broad accessibility in the DeFi ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-12T00:26:10.308Z"
+  },
+  "2026-01-12|protocol|uniswap-v2|B|P2_CROSSCHAIN|explanation|58a1ae19d867e7c7": {
+    "text": "Uniswap V2 on Ethereum has a TVL of $1.1B, significantly outpacing Arbitrum's $12M TVL, highlighting its dominance in the DeFi space with a margin of 99%. This stark difference underscores Ethereum's established infrastructure and user base compared to Arbitrum.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-12T00:26:12.640Z"
+  },
+  "2026-01-12|protocol|uniswap-v2|C|P11_FEES_TREND|explanation|3ec0f36b5dc5ed61": {
+    "text": "Uniswap V2 has seen a 13% decrease in fees over the past week, dropping from $1M to $883K. This decline may indicate reduced trading activity or lower transaction volumes on the platform.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-12T00:26:14.741Z"
+  },
+  "2026-01-12|protocol|uniswap-v2|D|P31_PRECISE_RANK|explanation|a54545ba6aedd3ee": {
+    "text": "Uniswap V2 has a total value locked (TVL) of $1.3B, ranking it 50th among DeFi protocols. It stands out in the #31-50 rank bucket, with nearby protocols like Obol and Rocket Pool both at $1.8B TVL, highlighting a competitive space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-12T00:26:17.142Z"
+  },
+  "2026-01-12|protocol|uniswap-v2|E|P3_CONCENTRATION|explanation|2ac699d155e01720": {
+    "text": "Uniswap V2 holds an impressive 86% of its total TVL of $1.3B on Ethereum, which amounts to $1.1B. This concentration highlights Ethereum's dominance in the DeFi space, particularly for decentralized exchanges.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-12T00:26:18.961Z"
   }
 }
