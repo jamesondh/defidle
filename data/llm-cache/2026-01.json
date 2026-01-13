@@ -298,5 +298,30 @@
     "text": "Uniswap V2 holds an impressive 86% of its total TVL of $1.3B on Ethereum, which amounts to $1.1B. This concentration highlights Ethereum's dominance in the DeFi space, particularly for decentralized exchanges.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-12T00:26:18.961Z"
+  },
+  "2026-01-13|chain|Sei|A|C1_FINGERPRINT|explanation|9b4b98f6f19b3273": {
+    "text": "Sei ranks 26th in total value locked (TVL) with between $100M and $500M, supporting 68 different protocols, which places it in the 50-100 range for protocol count. This indicates a growing ecosystem within the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-13T00:21:18.060Z"
+  },
+  "2026-01-13|chain|Sei|B|C2_CHAIN_COMPARISON|explanation|e107ae9e92b8966a": {
+    "text": "Sei has a total value locked (TVL) of $199M, which is 9.7% higher than Linea's TVL of $179M, highlighting Sei's stronger position in terms of asset deposits within its protocol. This difference indicates Sei's growing adoption and usage compared to Linea.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-13T00:21:20.311Z"
+  },
+  "2026-01-13|chain|Sei|C|C6_TOP_DEX|explanation|de2f6afdd11f80d9": {
+    "text": "Sailor is the top DEX on the Sei chain, with a trading volume of $9M, significantly outperforming its closest competitor, Oxium, which has $7M, and Dragon Swap V3 Sei at $4M. This highlights Sailor's dominance in the Sei ecosystem compared to other DEX options.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-13T00:21:22.468Z"
+  },
+  "2026-01-13|chain|Sei|D|C3_ATH_TIMING|explanation|81b691ca85e3b59b": {
+    "text": "Sei reached its all-time high (ATH) TVL of $647M in July 2025, which is significant compared to later dates like October 2025 and earlier ones like September 2023, when it had not yet achieved this peak. This timing highlights Sei's growth trajectory leading up to its ATH.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-13T00:21:23.933Z"
+  },
+  "2026-01-13|chain|Sei|E|C10_PROTOCOL_COUNT|explanation|bb9ae2c7755d7351": {
+    "text": "Sei has a total of 65 protocols built on its platform, showcasing its growing ecosystem in the DeFi space. This diversity allows users to access a wide range of financial services and applications.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-13T00:21:25.782Z"
   }
 }
