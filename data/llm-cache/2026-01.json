@@ -323,5 +323,30 @@
     "text": "Sei has a total of 65 protocols built on its platform, showcasing its growing ecosystem in the DeFi space. This diversity allows users to access a wide range of financial services and applications.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-13T00:21:25.782Z"
+  },
+  "2026-01-14|protocol|lighter-bridge|A|P1_FINGERPRINT|explanation|bc3ff72cfc33a80f": {
+    "text": "Lighter Bridge is a cross-chain bridge connecting Ethereum and Arbitrum, with a total value locked (TVL) of $1.2B, placing it within the $1B-$5B range. Its significant TVL indicates strong user adoption and trust in facilitating asset transfers between these two chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-14T00:25:29.303Z"
+  },
+  "2026-01-14|protocol|lighter-bridge|B|P2_CROSSCHAIN|explanation|b9b07709e0ebf8a9": {
+    "text": "Lighter Bridge stands out on Ethereum with a TVL of $1.2B, significantly surpassing Arbitrum's $2K TVL, showcasing its dominance in cross-chain functionality with a margin of 100%.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-14T00:25:30.490Z"
+  },
+  "2026-01-14|protocol|lighter-bridge|C|P20_ATH_DISTANCE|explanation|87985603056d0ecd": {
+    "text": "Lighter Bridge has a current TVL of $1.2B, which is 19% below its all-time high of $1.5B, placing it in the category of being less than 25% below its ATH. This indicates a relatively strong position in the market, as it remains close to its peak value.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-14T00:25:32.734Z"
+  },
+  "2026-01-14|protocol|lighter-bridge|D|P31_PRECISE_RANK|explanation|260f93739f366b0f": {
+    "text": "Lighter Bridge has a TVL of $1.2B, placing it at rank 52 among DeFi protocols. It stands out in a competitive range where nearby protocols like Sanctum Validator LSTs and HashKey Exchange both have a TVL of $1.8B, highlighting the close competition within this rank bucket.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-14T00:25:34.984Z"
+  },
+  "2026-01-14|protocol|lighter-bridge|E|P3_CONCENTRATION|explanation|907a4ea6cbfaf47c": {
+    "text": "Lighter Bridge operates exclusively on Ethereum, holding a total value locked (TVL) of $1.2B, which represents 100% of its total TVL. This complete concentration on a single chain highlights its focused utility within the Ethereum ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-14T00:25:36.789Z"
   }
 }

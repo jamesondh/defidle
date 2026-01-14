@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-01-14:protocol:lighter-bridge",
+  "dateUtc": "2026-01-14",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "lighter-bridge",
+    "name": "Lighter Bridge",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: 2-5 chains",
+        ">90% TVL on single chain",
+        "TVL: $1B-$5B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Circle USYC",
+        "Lighter Bridge",
+        "DoubleZero Staked SOL",
+        "Spark Liquidity Layer"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lighter Bridge is a cross-chain bridge connecting Ethereum and Arbitrum, with a total value locked (TVL) of $1.2B, placing it within the $1B-$5B range. Its significant TVL indicates strong user adoption and trust in facilitating asset transfers between these two chains.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.06573411515355823
+      },
+      "difficultyScore": 0.3890734115153559
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Lighter Bridge have higher TVL?",
+      "choices": [
+        "Arbitrum",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lighter Bridge stands out on Ethereum with a TVL of $1.2B, significantly surpassing Arbitrum's $2K TVL, showcasing its dominance in cross-chain functionality with a margin of 100%.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9999983130421423,
+        "volatility": 0.06573411515355823
+      },
+      "difficultyScore": 0.20907341151535583
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Lighter Bridge's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 0,
+      "explanation": "Lighter Bridge has a current TVL of $1.2B, which is 19% below its all-time high of $1.5B, placing it in the category of being less than 25% below its ATH. This indicates a relatively strong position in the market, as it remains close to its peak value.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.2383288599939533,
+        "volatility": 0.06573411515355823
+      },
+      "difficultyScore": 0.3730787795226119
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "prompt": "What is Lighter Bridge's current TVL rank among all protocols?",
+      "choices": [
+        "#1-5",
+        "#6-15",
+        "#16-30",
+        "#31-50",
+        "#51-100"
+      ],
+      "answerIndex": 4,
+      "explanation": "Lighter Bridge has a TVL of $1.2B, placing it at rank 52 among DeFi protocols. It stands out in a competitive range where nearby protocols like Sanctum Validator LSTs and HashKey Exchange both have a TVL of $1.8B, highlighting the close competition within this rank bucket.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.2,
+        "volatility": 0.06573411515355823
+      },
+      "difficultyScore": 0.4390734115153559
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Lighter Bridge's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Lighter Bridge operates exclusively on Ethereum, holding a total value locked (TVL) of $1.2B, which represents 100% of its total TVL. This complete concentration on a single chain highlights its focused utility within the Ethereum ecosystem.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9999932521799524,
+        "volatility": 0.06573411515355823
+      },
+      "difficultyScore": 0.2990734115153559
+    }
+  ],
+  "generatedAt": "2026-01-14T00:25:36.789Z"
+}
