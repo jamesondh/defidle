@@ -348,5 +348,30 @@
     "text": "Lighter Bridge operates exclusively on Ethereum, holding a total value locked (TVL) of $1.2B, which represents 100% of its total TVL. This complete concentration on a single chain highlights its focused utility within the Ethereum ecosystem.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-14T00:25:36.789Z"
+  },
+  "2026-01-15|chain|Bitcoin|A|C1_FINGERPRINT|explanation|4a1249711f3a01a8": {
+    "text": "Bitcoin ranks 3rd in total value locked (TVL) with between $5B and $10B, supporting 156 protocols, which places it in the 100-200 range for protocol count. Its significant TVL highlights its foundational role in the DeFi ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-15T00:23:18.328Z"
+  },
+  "2026-01-15|chain|Bitcoin|B|C2_CHAIN_COMPARISON|explanation|a3e93a14117a2a7e": {
+    "text": "Bitcoin leads with a TVL of $7.0B, surpassing Arbitrum's $3.0B by 56.3%. This significant difference highlights Bitcoin's dominance and foundational role in the DeFi ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-15T00:23:19.327Z"
+  },
+  "2026-01-15|chain|Bitcoin|C|C4_GROWTH_RANKING|explanation|d7266bb2fd2df888": {
+    "text": "Starknet led with a growth rate of 27.0%, significantly outperforming other chains like Flare at +8.4% and Bitcoin at +4.2%. This highlights Starknet's strong momentum in the DeFi space compared to the more modest increases seen with Bitcoin and Arbitrum, which only grew by +1.4%.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-15T00:23:21.570Z"
+  },
+  "2026-01-15|chain|Bitcoin|D|C3_ATH_TIMING|explanation|733d2e98df4fea25": {
+    "text": "Bitcoin reached its all-time high (ATH) TVL of $9.1B in October 2025, significantly surpassing earlier months like June 2023 and April 2022, which did not see such high values. This peak highlights Bitcoin's continued growth and adoption in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-15T00:23:22.778Z"
+  },
+  "2026-01-15|chain|Bitcoin|E|C6_TOP_DEX|explanation|33065292ddfa1599": {
+    "text": "LN Exchange Spot leads Bitcoin DEXs with a trading volume of $927K, significantly outperforming alternatives like Permute at $4K and Bisq and Garden, which both had no volume. This highlights LN Exchange Spot's dominance in the Bitcoin decentralized exchange market.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-15T00:23:23.965Z"
   }
 }

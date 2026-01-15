@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-01-15:chain:Bitcoin",
+  "dateUtc": "2026-01-15",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Bitcoin",
+    "name": "Bitcoin"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 5",
+        "Native token: BTC",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "Avalanche",
+        "Provenance",
+        "Ethereum",
+        "Bitcoin",
+        "Sui",
+        "Plasma"
+      ],
+      "answerIndex": 3,
+      "explanation": "Bitcoin ranks 3rd in total value locked (TVL) with between $5B and $10B, supporting 156 protocols, which places it in the 100-200 range for protocol count. Its significant TVL highlights its foundational role in the DeFi ecosystem.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4675
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Bitcoin or Arbitrum?",
+      "choices": [
+        "Arbitrum",
+        "Bitcoin"
+      ],
+      "answerIndex": 1,
+      "explanation": "Bitcoin leads with a TVL of $7.0B, surpassing Arbitrum's $3.0B by 56.3%. This significant difference highlights Bitcoin's dominance and foundational role in the DeFi ecosystem.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.5627520472086213,
+        "volatility": null
+      },
+      "difficultyScore": 0.19749999999999998
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Starknet",
+        "Bitcoin",
+        "Arbitrum",
+        "Flare"
+      ],
+      "answerIndex": 0,
+      "explanation": "Starknet led with a growth rate of 27.0%, significantly outperforming other chains like Flare at +8.4% and Bitcoin at +4.2%. This highlights Starknet's strong momentum in the DeFi space compared to the more modest increases seen with Bitcoin and Arbitrum, which only grew by +1.4%.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.18616891302638366,
+        "volatility": null
+      },
+      "difficultyScore": 0.42409730436833964
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Bitcoin hit its all-time high TVL?",
+      "choices": [
+        "Jun 2023",
+        "Feb 2023",
+        "Sep 2024",
+        "Oct 2025",
+        "Apr 2022",
+        "Jun 2021"
+      ],
+      "answerIndex": 3,
+      "explanation": "Bitcoin reached its all-time high (ATH) TVL of $9.1B in October 2025, significantly surpassing earlier months like June 2023 and April 2022, which did not see such high values. This peak highlights Bitcoin's continued growth and adoption in the DeFi space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.47750000000000004
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Bitcoin?",
+      "choices": [
+        "Permute",
+        "Garden",
+        "LN Exchange Spot",
+        "Bisq"
+      ],
+      "answerIndex": 2,
+      "explanation": "LN Exchange Spot leads Bitcoin DEXs with a trading volume of $927K, significantly outperforming alternatives like Permute at $4K and Bisq and Garden, which both had no volume. This highlights LN Exchange Spot's dominance in the Bitcoin decentralized exchange market.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.9962075221434731,
+        "volatility": null
+      },
+      "difficultyScore": 0.28750000000000003
+    }
+  ],
+  "generatedAt": "2026-01-15T00:23:23.965Z"
+}
