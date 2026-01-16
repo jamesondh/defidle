@@ -373,5 +373,30 @@
     "text": "LN Exchange Spot leads Bitcoin DEXs with a trading volume of $927K, significantly outperforming alternatives like Permute at $4K and Bisq and Garden, which both had no volume. This highlights LN Exchange Spot's dominance in the Bitcoin decentralized exchange market.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-15T00:23:23.965Z"
+  },
+  "2026-01-16|protocol|function-fbtc|A|P1_FINGERPRINT|explanation|dc9b7ab5a8c746a3": {
+    "text": "Function FBTC is a bridge protocol operating solely on the Bitcoin chain, with a total value locked (TVL) of $1.0B, placing it within the $1B-$5B range. Its significant TVL highlights its role in facilitating cross-chain transactions for Bitcoin users.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-16T00:25:20.500Z"
+  },
+  "2026-01-16|protocol|function-fbtc|B|P7_CATEGORY|explanation|ce9fc48394e155ac": {
+    "text": "Function FBTC is categorized as a bridge, facilitating the transfer of assets between different blockchain networks, enhancing interoperability within the DeFi ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-16T00:25:22.516Z"
+  },
+  "2026-01-16|protocol|function-fbtc|C|P20_ATH_DISTANCE|explanation|e1ac0d211c537594": {
+    "text": "Function FBTC has a current TVL of $1.0B, which is 36% below its all-time high of $1.6B, placing it in the 25-50% below ATH category. This indicates a significant decrease in total value locked compared to its peak performance.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-16T00:25:25.031Z"
+  },
+  "2026-01-16|protocol|function-fbtc|D|P31_PRECISE_RANK|explanation|8f788ed48f111206": {
+    "text": "Function FBTC has a total value locked (TVL) of $1.0B, placing it at rank 62 among DeFi protocols. It stands out in the #51-100 rank bucket, with nearby protocols like Gauntlet and Bitmex both at $1.6B, indicating a competitive landscape in that range.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-16T00:25:27.263Z"
+  },
+  "2026-01-16|protocol|function-fbtc|E|P8_CHAIN_MEMBERSHIP|explanation|7d70fa37bb0b7f99": {
+    "text": "Function FBTC operates exclusively on the Bitcoin blockchain, making it a single-chain protocol focused on leveraging Bitcoin's network for its functionalities. With its sole presence on one chain, it emphasizes the unique attributes and security of Bitcoin.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-16T00:25:29.640Z"
   }
 }

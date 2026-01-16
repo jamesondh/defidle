@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-01-16:protocol:function-fbtc",
+  "dateUtc": "2026-01-16",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "function-fbtc",
+    "name": "Function FBTC",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: single-chain",
+        "TVL: $1B-$5B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Spark Savings",
+        "Paxos Gold",
+        "Function FBTC",
+        "Jupiter Staked SOL"
+      ],
+      "answerIndex": 2,
+      "explanation": "Function FBTC is a bridge protocol operating solely on the Bitcoin chain, with a total value locked (TVL) of $1.0B, placing it within the $1B-$5B range. Its significant TVL highlights its role in facilitating cross-chain transactions for Bitcoin users.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.09852109210708654
+      },
+      "difficultyScore": 0.39235210921070873
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Function FBTC?",
+      "choices": [
+        "Portfolio Tracker",
+        "Bridge",
+        "Treasury Manager",
+        "Services"
+      ],
+      "answerIndex": 1,
+      "explanation": "Function FBTC is categorized as a bridge, facilitating the transfer of assets between different blockchain networks, enhancing interoperability within the DeFi ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.09852109210708654
+      },
+      "difficultyScore": 0.3023521092107087
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Function FBTC's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 1,
+      "explanation": "Function FBTC has a current TVL of $1.0B, which is 36% below its all-time high of $1.6B, placing it in the 25-50% below ATH category. This indicates a significant decrease in total value locked compared to its peak performance.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4308840265207482,
+        "volatility": 0.09852109210708654
+      },
+      "difficultyScore": 0.3623521092107087
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "prompt": "What is Function FBTC's current TVL rank among all protocols?",
+      "choices": [
+        "#1-5",
+        "#6-15",
+        "#16-30",
+        "#31-50",
+        "#51-100"
+      ],
+      "answerIndex": 4,
+      "explanation": "Function FBTC has a total value locked (TVL) of $1.0B, placing it at rank 62 among DeFi protocols. It stands out in the #51-100 rank bucket, with nearby protocols like Gauntlet and Bitmex both at $1.6B, indicating a competitive landscape in that range.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0.09852109210708654
+      },
+      "difficultyScore": 0.3823521092107087
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which chain is Function FBTC deployed on?",
+      "choices": [
+        "Ethereum",
+        "Polygon",
+        "Arbitrum",
+        "Bitcoin"
+      ],
+      "answerIndex": 3,
+      "explanation": "Function FBTC operates exclusively on the Bitcoin blockchain, making it a single-chain protocol focused on leveraging Bitcoin's network for its functionalities. With its sole presence on one chain, it emphasizes the unique attributes and security of Bitcoin.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.09852109210708654
+      },
+      "difficultyScore": 0.3023521092107087
+    }
+  ],
+  "generatedAt": "2026-01-16T00:25:29.640Z"
+}
