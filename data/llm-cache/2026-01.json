@@ -398,5 +398,30 @@
     "text": "Function FBTC operates exclusively on the Bitcoin blockchain, making it a single-chain protocol focused on leveraging Bitcoin's network for its functionalities. With its sole presence on one chain, it emphasizes the unique attributes and security of Bitcoin.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-16T00:25:29.640Z"
+  },
+  "2026-01-17|chain|Sui|A|C1_FINGERPRINT|explanation|63e702ad04889305": {
+    "text": "Sui ranks 12th in total value locked (TVL) with between $1B and $5B, and hosts 105 protocols, placing it in the 100-200 protocol range. Its significant TVL indicates a robust ecosystem for decentralized applications.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-17T00:23:47.007Z"
+  },
+  "2026-01-17|chain|Sui|B|C2_CHAIN_COMPARISON|explanation|4645705ee940baec": {
+    "text": "Avalanche leads with a TVL of $1.3B, surpassing Sui's $1.0B by 20.5%. This indicates greater user trust and asset locking in Avalanche compared to Sui.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-17T00:23:48.947Z"
+  },
+  "2026-01-17|chain|Sui|C|C4_GROWTH_RANKING|explanation|c806b1c921c3246d": {
+    "text": "Monad leads in growth with a remarkable increase of 42.7%, significantly outpacing Sui's 12.3% and Stellar's 6.9%. This strong performance highlights Monad's rapid adoption and development compared to its peers.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-17T00:23:51.701Z"
+  },
+  "2026-01-17|chain|Sui|D|C3_ATH_TIMING|explanation|f4dbfb66d6ed6e9c": {
+    "text": "Sui reached its all-time high (ATH) TVL of $2.6B in October 2025, distinguishing it from earlier dates like March 2024 and October 2023, which did not see such high values. This timing highlights Sui's growth and adoption in the DeFi space leading up to that peak.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-17T00:23:54.175Z"
+  },
+  "2026-01-17|chain|Sui|E|C6_TOP_DEX|explanation|c47946c743792f1a": {
+    "text": "Bluefin Spot is the leading DEX on the Sui blockchain, with a trading volume of $65M, significantly outperforming its closest competitor, Cetus CLMM, which has a volume of $47M. This highlights Bluefin Spot's dominance in the Sui ecosystem compared to other DEXs like DeepBook V3 ($27M) and Momentum ($23M).",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-17T00:23:56.618Z"
   }
 }

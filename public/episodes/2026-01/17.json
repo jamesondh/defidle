@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-01-17:chain:Sui",
+  "dateUtc": "2026-01-17",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Sui",
+    "name": "Sui"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: SUI",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "OP Mainnet",
+        "Cronos",
+        "Sui",
+        "Avalanche",
+        "Hyperliquid L1",
+        "Aptos"
+      ],
+      "answerIndex": 2,
+      "explanation": "Sui ranks 12th in total value locked (TVL) with between $1B and $5B, and hosts 105 protocols, placing it in the 100-200 protocol range. Its significant TVL indicates a robust ecosystem for decentralized applications.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Sui or Avalanche?",
+      "choices": [
+        "Sui",
+        "Avalanche"
+      ],
+      "answerIndex": 1,
+      "explanation": "Avalanche leads with a TVL of $1.3B, surpassing Sui's $1.0B by 20.5%. This indicates greater user trust and asset locking in Avalanche compared to Sui.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.20482873012942066,
+        "volatility": null
+      },
+      "difficultyScore": 0.2637055238446952
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Stacks",
+        "Sui",
+        "Monad",
+        "Stellar"
+      ],
+      "answerIndex": 2,
+      "explanation": "Monad leads in growth with a remarkable increase of 42.7%, significantly outpacing Sui's 12.3% and Stellar's 6.9%. This strong performance highlights Monad's rapid adoption and development compared to its peers.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.3041499563205528,
+        "volatility": null
+      },
+      "difficultyScore": 0.35950000000000004
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Sui hit its all-time high TVL?",
+      "choices": [
+        "Dec 2025",
+        "Mar 2024",
+        "Nov 2024",
+        "Oct 2025",
+        "Oct 2023",
+        "May 2023"
+      ],
+      "answerIndex": 3,
+      "explanation": "Sui reached its all-time high (ATH) TVL of $2.6B in October 2025, distinguishing it from earlier dates like March 2024 and October 2023, which did not see such high values. This timing highlights Sui's growth and adoption in the DeFi space leading up to that peak.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Sui?",
+      "choices": [
+        "DeepBook V3",
+        "Cetus CLMM",
+        "Momentum",
+        "Bluefin Spot"
+      ],
+      "answerIndex": 3,
+      "explanation": "Bluefin Spot is the leading DEX on the Sui blockchain, with a trading volume of $65M, significantly outperforming its closest competitor, Cetus CLMM, which has a volume of $47M. This highlights Bluefin Spot's dominance in the Sui ecosystem compared to other DEXs like DeepBook V3 ($27M) and Momentum ($23M).",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.2757196894225602,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-01-17T00:23:56.619Z"
+}
