@@ -1,0 +1,138 @@
+{
+  "episodeId": "2026-01-18:protocol:jupiter-perpetual-exchange",
+  "dateUtc": "2026-01-18",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "jupiter-perpetual-exchange",
+    "name": "Jupiter Perpetual Exchange",
+    "category": "Derivatives"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Derivatives",
+        "Chains: single-chain",
+        "TVL: $1B-$5B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Jupiter Perpetual Exchange",
+        "Raydium AMM",
+        "Binance Staked SOL",
+        "Portal"
+      ],
+      "answerIndex": 0,
+      "explanation": "Jupiter Perpetual Exchange, operating on the Solana blockchain, has a total value locked (TVL) of $1.2B, positioning it within the $1B-$5B range. As a derivatives platform, it stands out for its significant liquidity and focus on perpetual contracts.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.08758740765397738
+      },
+      "difficultyScore": 0.3912587407653978
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P13_TVL_RANK_COMPARISON",
+      "format": "ab",
+      "prompt": "Which protocol has higher TVL?",
+      "choices": [
+        "Jupiter Perpetual Exchange",
+        "Veda"
+      ],
+      "answerIndex": 1,
+      "explanation": "Veda leads with a TVL of $1.9B, surpassing Jupiter Perpetual Exchange's $1.2B by 58.3%. Veda's higher TVL indicates stronger user confidence and engagement in its platform compared to Jupiter.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.32463604785026046,
+        "volatility": 0.08758740765397738
+      },
+      "difficultyScore": 0.21125874076539775
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Jupiter Perpetual Exchange's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 1,
+      "explanation": "Jupiter Perpetual Exchange generated $2M in revenue over the past week, which is 25% of the $9M in fees collected. This indicates a strong fee-to-revenue conversion, reflecting effective monetization of trading activities.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.1999994261350273,
+        "volatility": 0.08758740765397738
+      },
+      "difficultyScore": 0.361259429403365
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "prompt": "What is Jupiter Perpetual Exchange's current TVL rank among all protocols?",
+      "choices": [
+        "#1-5",
+        "#6-15",
+        "#16-30",
+        "#31-50",
+        "#51-100"
+      ],
+      "answerIndex": 4,
+      "explanation": "Jupiter Perpetual Exchange has a total value locked (TVL) of $1.2B, ranking it 53rd among DeFi protocols. It stands out in its rank bucket (#51-100) but is lower than nearby protocols like Compound V3 and HashKey Exchange, both with a TVL of $1.8B.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.3,
+        "volatility": 0.08758740765397738
+      },
+      "difficultyScore": 0.3812587407653978
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which chain is Jupiter Perpetual Exchange deployed on?",
+      "choices": [
+        "Solana",
+        "Arbitrum",
+        "Polygon",
+        "Ethereum"
+      ],
+      "answerIndex": 0,
+      "explanation": "Jupiter Perpetual Exchange operates solely on the Solana blockchain, making it a single-chain protocol focused on providing perpetual trading services. Its integration with Solana allows for fast and efficient transactions.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.08758740765397738
+      },
+      "difficultyScore": 0.30125874076539777
+    }
+  ],
+  "generatedAt": "2026-01-18T00:27:14.235Z"
+}

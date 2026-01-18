@@ -423,5 +423,30 @@
     "text": "Bluefin Spot is the leading DEX on the Sui blockchain, with a trading volume of $65M, significantly outperforming its closest competitor, Cetus CLMM, which has a volume of $47M. This highlights Bluefin Spot's dominance in the Sui ecosystem compared to other DEXs like DeepBook V3 ($27M) and Momentum ($23M).",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-17T00:23:56.618Z"
+  },
+  "2026-01-18|protocol|jupiter-perpetual-exchange|A|P1_FINGERPRINT|explanation|e9d659ce1f4bb8f1": {
+    "text": "Jupiter Perpetual Exchange, operating on the Solana blockchain, has a total value locked (TVL) of $1.2B, positioning it within the $1B-$5B range. As a derivatives platform, it stands out for its significant liquidity and focus on perpetual contracts.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-18T00:27:05.847Z"
+  },
+  "2026-01-18|protocol|jupiter-perpetual-exchange|B|P13_TVL_RANK_COMPARISON|explanation|1ac768201943e885": {
+    "text": "Veda leads with a TVL of $1.9B, surpassing Jupiter Perpetual Exchange's $1.2B by 58.3%. Veda's higher TVL indicates stronger user confidence and engagement in its platform compared to Jupiter.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-18T00:27:07.744Z"
+  },
+  "2026-01-18|protocol|jupiter-perpetual-exchange|C|P5_FEES_REVENUE|explanation|22915cebcce879d0": {
+    "text": "Jupiter Perpetual Exchange generated $2M in revenue over the past week, which is 25% of the $9M in fees collected. This indicates a strong fee-to-revenue conversion, reflecting effective monetization of trading activities.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-18T00:27:09.843Z"
+  },
+  "2026-01-18|protocol|jupiter-perpetual-exchange|D|P31_PRECISE_RANK|explanation|26150e294b26cdee": {
+    "text": "Jupiter Perpetual Exchange has a total value locked (TVL) of $1.2B, ranking it 53rd among DeFi protocols. It stands out in its rank bucket (#51-100) but is lower than nearby protocols like Compound V3 and HashKey Exchange, both with a TVL of $1.8B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-18T00:27:12.263Z"
+  },
+  "2026-01-18|protocol|jupiter-perpetual-exchange|E|P8_CHAIN_MEMBERSHIP|explanation|00d41a9b74e239ce": {
+    "text": "Jupiter Perpetual Exchange operates solely on the Solana blockchain, making it a single-chain protocol focused on providing perpetual trading services. Its integration with Solana allows for fast and efficient transactions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-18T00:27:14.235Z"
   }
 }
