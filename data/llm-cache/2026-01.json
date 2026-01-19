@@ -448,5 +448,30 @@
     "text": "Jupiter Perpetual Exchange operates solely on the Solana blockchain, making it a single-chain protocol focused on providing perpetual trading services. Its integration with Solana allows for fast and efficient transactions.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-18T00:27:14.235Z"
+  },
+  "2026-01-19|protocol|compound-v3|A|P1_FINGERPRINT|explanation|426451e8d10ad032": {
+    "text": "Compound V3 is a lending protocol with a total value locked (TVL) of $1.8B, operating across 9 chains, including Ethereum and Polygon. Its TVL places it within the $1B-$5B range, highlighting its significant presence in the DeFi lending space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-19T00:26:57.559Z"
+  },
+  "2026-01-19|protocol|compound-v3|B|P2_CROSSCHAIN|explanation|f716c9195c661541": {
+    "text": "Compound V3 has a total value locked (TVL) of $1.5B on Ethereum, significantly outpacing Base's $51M TVL, highlighting its dominance in the DeFi space with a margin of 97%. This substantial difference underscores Ethereum's established infrastructure and user base compared to newer chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-19T00:26:59.270Z"
+  },
+  "2026-01-19|protocol|compound-v3|C|P11_FEES_TREND|explanation|4e5b1663c3989ad5": {
+    "text": "Compound V3's fees decreased by 1.6% over the past week, dropping from $624K to $614K in total fees generated. This trend indicates a slight reduction in activity or usage on the platform.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-19T00:27:01.155Z"
+  },
+  "2026-01-19|protocol|compound-v3|D|P31_PRECISE_RANK|explanation|b06fa71dd39b0bb1": {
+    "text": "Compound V3 has a total value locked (TVL) of $1.8B, placing it at rank 37 among DeFi protocols. It stands out in the #31-50 rank bucket, with nearby protocols like Kamino Lend at $2.4B and Polygon Bridge & Staking at $2.3B, highlighting a competitive landscape in that range.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-19T00:27:03.056Z"
+  },
+  "2026-01-19|protocol|compound-v3|E|P3_CONCENTRATION|explanation|6ff95549267db553": {
+    "text": "Compound V3 operates primarily on Ethereum, holding 87% of its total value locked (TVL) of $1.8B, which amounts to approximately $1.5B on the Ethereum chain. This concentration highlights Ethereum's dominance in the Compound ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-19T00:27:03.924Z"
   }
 }

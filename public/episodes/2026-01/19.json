@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-01-19:protocol:compound-v3",
+  "dateUtc": "2026-01-19",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "compound-v3",
+    "name": "Compound V3",
+    "category": "Lending"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Lending",
+        "Chains: 6-10 chains",
+        "TVL: $1B-$5B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Tether Gold",
+        "Falcon Finance",
+        "Compound V3",
+        "Maple",
+        "Rocket Pool",
+        "JustCryptos"
+      ],
+      "answerIndex": 2,
+      "explanation": "Compound V3 is a lending protocol with a total value locked (TVL) of $1.8B, operating across 9 chains, including Ethereum and Polygon. Its TVL places it within the $1B-$5B range, highlighting its significant presence in the DeFi lending space.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.08192521133683833
+      },
+      "difficultyScore": 0.4806925211336839
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Compound V3 have higher TVL?",
+      "choices": [
+        "Base",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Compound V3 has a total value locked (TVL) of $1.5B on Ethereum, significantly outpacing Base's $51M TVL, highlighting its dominance in the DeFi space with a margin of 97%. This substantial difference underscores Ethereum's established infrastructure and user base compared to newer chains.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9669707927595237,
+        "volatility": 0.08192521133683833
+      },
+      "difficultyScore": 0.21069252113368384
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "tf",
+      "prompt": "Compound V3's fees increased over the past week compared to the week before.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "Compound V3's fees decreased by 1.6% over the past week, dropping from $624K to $614K in total fees generated. This trend indicates a slight reduction in activity or usage on the platform.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.01573154741104318,
+        "volatility": 0.08192521133683833
+      },
+      "difficultyScore": 0.401814664240432
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "prompt": "What is Compound V3's current TVL rank among all protocols?",
+      "choices": [
+        "#1-5",
+        "#6-15",
+        "#16-30",
+        "#31-50",
+        "#51-100"
+      ],
+      "answerIndex": 3,
+      "explanation": "Compound V3 has a total value locked (TVL) of $1.8B, placing it at rank 37 among DeFi protocols. It stands out in the #31-50 rank bucket, with nearby protocols like Kamino Lend at $2.4B and Polygon Bridge & Staking at $2.3B, highlighting a competitive landscape in that range.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.7,
+        "volatility": 0.08192521133683833
+      },
+      "difficultyScore": 0.3806925211336839
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Compound V3's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Compound V3 operates primarily on Ethereum, holding 87% of its total value locked (TVL) of $1.8B, which amounts to approximately $1.5B on the Ethereum chain. This concentration highlights Ethereum's dominance in the Compound ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4886943120971541,
+        "volatility": 0.08192521133683833
+      },
+      "difficultyScore": 0.3006925211336839
+    }
+  ],
+  "generatedAt": "2026-01-19T00:27:03.925Z"
+}
