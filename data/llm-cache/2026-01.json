@@ -473,5 +473,30 @@
     "text": "Compound V3 operates primarily on Ethereum, holding 87% of its total value locked (TVL) of $1.8B, which amounts to approximately $1.5B on the Ethereum chain. This concentration highlights Ethereum's dominance in the Compound ecosystem.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-19T00:27:03.924Z"
+  },
+  "2026-01-20|chain|Starknet|A|C1_FINGERPRINT|explanation|67d957490353791a": {
+    "text": "Starknet ranks 20th in total value locked (TVL) with between $100M and $500M, hosting 52 protocols, which places it in the 50-100 range for protocol count. This demonstrates its growing ecosystem and adoption within the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-20T00:24:08.130Z"
+  },
+  "2026-01-20|chain|Starknet|B|C2_CHAIN_COMPARISON|explanation|1d5775f0f532ce8e": {
+    "text": "Mantle leads with a TVL of $348M, surpassing Starknet's $321M by 8%. This indicates stronger asset deposits in Mantle, highlighting its growing adoption in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-20T00:24:10.418Z"
+  },
+  "2026-01-20|chain|Starknet|C|C4_GROWTH_RANKING|explanation|aa8a98156f2f2211": {
+    "text": "Starknet achieved a remarkable growth rate of +38.3%, significantly outpacing other chains like Cardano at +26.9% and Base at +22.3%. This strong performance highlights Starknet's increasing adoption and development within the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-20T00:24:12.465Z"
+  },
+  "2026-01-20|chain|Starknet|D|C3_ATH_TIMING|explanation|0d7ecf846fc9b230": {
+    "text": "Starknet reached its all-time high (ATH) TVL of $331M in March 2024, which is significant compared to earlier months like March 2023, when its TVL was lower. The other options, such as December 2022 and September 2024, do not reflect the peak performance of Starknet's TVL.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-20T00:24:14.979Z"
+  },
+  "2026-01-20|chain|Starknet|E|C6_TOP_DEX|explanation|342cbee29c9cdcd8": {
+    "text": "Ekubo is the leading DEX on Starknet with a trading volume of $8M, significantly outperforming mySwap CL at $945K and StarkDeFI at just $3K. This substantial volume indicates Ekubo's dominance in the Starknet ecosystem, showcasing its popularity and user engagement compared to other platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-20T00:24:17.532Z"
   }
 }

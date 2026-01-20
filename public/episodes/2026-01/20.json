@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-01-20:chain:Starknet",
+  "dateUtc": "2026-01-20",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Starknet",
+    "name": "Starknet"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: STRK",
+        "Protocols: 50-100"
+      ],
+      "choices": [
+        "Monad",
+        "Stellar",
+        "Berachain",
+        "Starknet",
+        "Provenance",
+        "Avalanche"
+      ],
+      "answerIndex": 3,
+      "explanation": "Starknet ranks 20th in total value locked (TVL) with between $100M and $500M, hosting 52 protocols, which places it in the 50-100 range for protocol count. This demonstrates its growing ecosystem and adoption within the DeFi space.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "prompt": "Starknet has higher TVL than Mantle.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "Mantle leads with a TVL of $348M, surpassing Starknet's $321M by 8%. This indicates stronger asset deposits in Mantle, highlighting its growing adoption in the DeFi space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.07975759791712195,
+        "volatility": null
+      },
+      "difficultyScore": 0.32379088249945365
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Tron",
+        "Starknet",
+        "Base",
+        "Cardano"
+      ],
+      "answerIndex": 1,
+      "explanation": "Starknet achieved a remarkable growth rate of +38.3%, significantly outpacing other chains like Cardano at +26.9% and Base at +22.3%. This strong performance highlights Starknet's increasing adoption and development within the DeFi space.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.11403344631653761,
+        "volatility": null
+      },
+      "difficultyScore": 0.522659864420155
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Starknet hit its all-time high TVL?",
+      "choices": [
+        "Sep 2024",
+        "Mar 2024",
+        "Mar 2023",
+        "Dec 2022",
+        "May 2024",
+        "Aug 2024"
+      ],
+      "answerIndex": 1,
+      "explanation": "Starknet reached its all-time high (ATH) TVL of $331M in March 2024, which is significant compared to earlier months like March 2023, when its TVL was lower. The other options, such as December 2022 and September 2024, do not reflect the peak performance of Starknet's TVL.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Starknet?",
+      "choices": [
+        "mySwap CL",
+        "10KSwap",
+        "StarkDeFI",
+        "Ekubo"
+      ],
+      "answerIndex": 3,
+      "explanation": "Ekubo is the leading DEX on Starknet with a trading volume of $8M, significantly outperforming mySwap CL at $945K and StarkDeFI at just $3K. This substantial volume indicates Ekubo's dominance in the Starknet ecosystem, showcasing its popularity and user engagement compared to other platforms.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.8878919057966664,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-01-20T00:24:17.533Z"
+}
