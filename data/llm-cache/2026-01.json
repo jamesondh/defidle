@@ -498,5 +498,30 @@
     "text": "Ekubo is the leading DEX on Starknet with a trading volume of $8M, significantly outperforming mySwap CL at $945K and StarkDeFI at just $3K. This substantial volume indicates Ekubo's dominance in the Starknet ecosystem, showcasing its popularity and user engagement compared to other platforms.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-20T00:24:17.532Z"
+  },
+  "2026-01-21|protocol|figure-markets-exchange|A|P1_FINGERPRINT|explanation|6f4f0927c5d35465": {
+    "text": "Figure Markets Exchange is an OTC marketplace on the Provenance blockchain, with a total value locked (TVL) of $918M, placing it in the $500M-$1B range. Its significant TVL highlights its role in facilitating large-scale transactions in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-21T00:25:58.344Z"
+  },
+  "2026-01-21|protocol|figure-markets-exchange|B|P7_CATEGORY|explanation|d1108c361207f63a": {
+    "text": "Figure Markets Exchange operates as an OTC (over-the-counter) marketplace, facilitating direct trades between parties without the need for a centralized exchange. This model allows for greater privacy and potentially better pricing for participants.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-21T00:26:00.705Z"
+  },
+  "2026-01-21|protocol|figure-markets-exchange|C|P5_FEES_REVENUE|explanation|599b54e2da2a8369": {
+    "text": "Figure Markets Exchange generated $36K in fees over the past week, with revenue matching fees at 100%, indicating that all collected fees were converted into revenue. This reflects a fully efficient fee structure for the platform.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-21T00:26:02.637Z"
+  },
+  "2026-01-21|protocol|figure-markets-exchange|D|P31_PRECISE_RANK|explanation|7f55e3913b37cefb": {
+    "text": "Figure Markets Exchange has a total value locked (TVL) of $918M, placing it at rank 64 among DeFi protocols. It stands out in the #51-100 rank bucket, with nearby protocols like Bitmex at $1.5B and Raydium AMM at $1.4B, highlighting a competitive landscape in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-21T00:26:05.098Z"
+  },
+  "2026-01-21|protocol|figure-markets-exchange|E|P8_CHAIN_MEMBERSHIP|explanation|c2b2ab569faeddaa": {
+    "text": "Figure Markets Exchange operates exclusively on the Provenance blockchain, making it a single-chain platform focused on specific financial services within that ecosystem. This specialization allows for tailored solutions and efficient transactions on Provenance.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-21T00:26:07.065Z"
   }
 }

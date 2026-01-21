@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-01-21:protocol:figure-markets-exchange",
+  "dateUtc": "2026-01-21",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "figure-markets-exchange",
+    "name": "Figure Markets Exchange",
+    "category": "OTC Marketplace"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: OTC Marketplace",
+        "Chains: single-chain",
+        "TVL: $500M-$1B",
+        "7d change: up >10%"
+      ],
+      "choices": [
+        "Jupiter Lend",
+        "Venus Core Pool",
+        "Figure Markets Exchange",
+        "Raydium AMM"
+      ],
+      "answerIndex": 2,
+      "explanation": "Figure Markets Exchange is an OTC marketplace on the Provenance blockchain, with a total value locked (TVL) of $918M, placing it in the $500M-$1B range. Its significant TVL highlights its role in facilitating large-scale transactions in the DeFi space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.2511307938458682
+      },
+      "difficultyScore": 0.4076130793845869
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Figure Markets Exchange?",
+      "choices": [
+        "OTC Marketplace",
+        "Canonical Bridge",
+        "Restaked BTC",
+        "Domains"
+      ],
+      "answerIndex": 0,
+      "explanation": "Figure Markets Exchange operates as an OTC (over-the-counter) marketplace, facilitating direct trades between parties without the need for a centralized exchange. This model allows for greater privacy and potentially better pricing for participants.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.2511307938458682
+      },
+      "difficultyScore": 0.3176130793845869
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Figure Markets Exchange's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Figure Markets Exchange generated $36K in fees over the past week, with revenue matching fees at 100%, indicating that all collected fees were converted into revenue. This reflects a fully efficient fee structure for the platform.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0.2511307938458682
+      },
+      "difficultyScore": 0.3176130793845869
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "prompt": "What is Figure Markets Exchange's current TVL rank among all protocols?",
+      "choices": [
+        "#1-5",
+        "#6-15",
+        "#16-30",
+        "#31-50",
+        "#51-100"
+      ],
+      "answerIndex": 4,
+      "explanation": "Figure Markets Exchange has a total value locked (TVL) of $918M, placing it at rank 64 among DeFi protocols. It stands out in the #51-100 rank bucket, with nearby protocols like Bitmex at $1.5B and Raydium AMM at $1.4B, highlighting a competitive landscape in the DeFi space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0.2511307938458682
+      },
+      "difficultyScore": 0.3976130793845869
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which chain is Figure Markets Exchange deployed on?",
+      "choices": [
+        "Ethereum",
+        "Arbitrum",
+        "Provenance",
+        "Polygon"
+      ],
+      "answerIndex": 2,
+      "explanation": "Figure Markets Exchange operates exclusively on the Provenance blockchain, making it a single-chain platform focused on specific financial services within that ecosystem. This specialization allows for tailored solutions and efficient transactions on Provenance.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.2511307938458682
+      },
+      "difficultyScore": 0.3176130793845869
+    }
+  ],
+  "generatedAt": "2026-01-21T00:26:07.066Z"
+}
