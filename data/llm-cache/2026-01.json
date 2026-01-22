@@ -523,5 +523,30 @@
     "text": "Figure Markets Exchange operates exclusively on the Provenance blockchain, making it a single-chain platform focused on specific financial services within that ecosystem. This specialization allows for tailored solutions and efficient transactions on Provenance.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-21T00:26:07.065Z"
+  },
+  "2026-01-22|chain|Unichain|A|C1_FINGERPRINT|explanation|eb29349321287c78": {
+    "text": "Unichain ranks 38th in total value locked (TVL) with an estimated range of $100M to $500M, hosting 56 protocols, which places it in the 50-100 protocol count category. This indicates a diverse ecosystem that supports various DeFi applications.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-22T00:26:37.573Z"
+  },
+  "2026-01-22|chain|Unichain|B|C10_PROTOCOL_COUNT|explanation|03148c74cfd7be1b": {
+    "text": "Unichain supports 56 protocols, making it a versatile platform for various decentralized finance applications. This wide range of protocols enhances its utility and user engagement within the DeFi ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-22T00:26:39.363Z"
+  },
+  "2026-01-22|chain|Unichain|C|C6_TOP_DEX|explanation|1bba47852fa712a0": {
+    "text": "Uniswap V4 leads on Unichain with a trading volume of $37M, significantly outperforming other DEXs like Velodrome V3 at $3M and Uniswap V3 at $344K. This dominance highlights Uniswap V4's popularity and liquidity in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-22T00:26:41.297Z"
+  },
+  "2026-01-22|chain|Unichain|D|C3_ATH_TIMING|explanation|eefc070228472d02": {
+    "text": "Unichain reached its all-time high (ATH) TVL of $903M in July 2025, which stands out compared to other months like December 2024 and August 2025, when it did not achieve this peak. This timing highlights Unichain's growth trajectory during that period.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-22T00:26:43.598Z"
+  },
+  "2026-01-22|chain|Unichain|E|C4_GROWTH_RANKING|explanation|b33bafcc5992be60": {
+    "text": "Starknet leads with a growth rate of 38.3%, significantly outperforming other chains like Scroll at +20.7% and Sui at +16.8%. In contrast, Unichain experienced a decline of 10.6%, highlighting its underperformance relative to the top contenders.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-22T00:26:46.114Z"
   }
 }
