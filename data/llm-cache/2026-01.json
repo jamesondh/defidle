@@ -548,5 +548,30 @@
     "text": "Starknet leads with a growth rate of 38.3%, significantly outperforming other chains like Scroll at +20.7% and Sui at +16.8%. In contrast, Unichain experienced a decline of 10.6%, highlighting its underperformance relative to the top contenders.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-22T00:26:46.114Z"
+  },
+  "2026-01-23|protocol|usd-ai|A|P1_FINGERPRINT|explanation|36b3f35d080d32d4": {
+    "text": "USD AI is a real-world asset lending protocol on Arbitrum, with a total value locked (TVL) of $670M, placing it in the $500M-$1B TVL band. Its focus on RWA lending distinguishes it within the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-23T00:25:41.765Z"
+  },
+  "2026-01-23|protocol|usd-ai|B|P7_CATEGORY|explanation|be30899fc2753493": {
+    "text": "USD AI operates in the RWA (Real World Asset) Lending category, focusing on providing loans backed by tangible assets, bridging the gap between traditional finance and decentralized finance. This approach enhances liquidity and accessibility for borrowers using real-world collateral.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-23T00:25:43.645Z"
+  },
+  "2026-01-23|protocol|usd-ai|C|P11_FEES_TREND|explanation|ee23139e1c697393": {
+    "text": "USD AI's fees increased by 0.4% over the past week, rising from $446K to $448K, indicating a slight uptick in user activity or transaction volume.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-23T00:25:45.136Z"
+  },
+  "2026-01-23|protocol|usd-ai|D|P31_PRECISE_RANK|explanation|ac644c7a256c6769": {
+    "text": "USD AI has a total value locked (TVL) of $670M, placing it at rank 78 among DeFi protocols. It stands out in the #51-100 rank bucket, with nearby protocols like Function FBTC at $978M and SolvBTC at $965M, indicating a competitive landscape in this TVL range.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-23T00:25:47.564Z"
+  },
+  "2026-01-23|protocol|usd-ai|E|P8_CHAIN_MEMBERSHIP|explanation|1ad736fb45552668": {
+    "text": "USD AI operates exclusively on Arbitrum, making it a single-chain protocol with a focus on leveraging the benefits of that specific blockchain for its services. This specialization can enhance transaction efficiency and reduce costs for users.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-23T00:25:49.067Z"
   }
 }

@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-01-23:protocol:usd-ai",
+  "dateUtc": "2026-01-23",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "usd-ai",
+    "name": "USD AI",
+    "category": "RWA Lending"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: RWA Lending",
+        "Chains: single-chain",
+        "TVL: $500M-$1B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Jupiter Perpetual Exchange",
+        "USD AI",
+        "StakeWise V2",
+        "Jupiter Lend"
+      ],
+      "answerIndex": 1,
+      "explanation": "USD AI is a real-world asset lending protocol on Arbitrum, with a total value locked (TVL) of $670M, placing it in the $500M-$1B TVL band. Its focus on RWA lending distinguishes it within the DeFi landscape.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.01897401435701979
+      },
+      "difficultyScore": 0.38439740143570206
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is USD AI?",
+      "choices": [
+        "ve-Incentive Automator",
+        "RWA Lending",
+        "Options Vault",
+        "Options"
+      ],
+      "answerIndex": 1,
+      "explanation": "USD AI operates in the RWA (Real World Asset) Lending category, focusing on providing loans backed by tangible assets, bridging the gap between traditional finance and decentralized finance. This approach enhances liquidity and accessibility for borrowers using real-world collateral.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.01897401435701979
+      },
+      "difficultyScore": 0.29439740143570203
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "tf",
+      "prompt": "USD AI's fees increased over the past week compared to the week before.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "USD AI's fees increased by 0.4% over the past week, rising from $446K to $448K, indicating a slight uptick in user activity or transaction volume.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.0043651363628202594,
+        "volatility": 0.01897401435701979
+      },
+      "difficultyScore": 0.40915923780031765
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "prompt": "What is USD AI's current TVL rank among all protocols?",
+      "choices": [
+        "#1-5",
+        "#6-15",
+        "#16-30",
+        "#31-50",
+        "#51-100"
+      ],
+      "answerIndex": 4,
+      "explanation": "USD AI has a total value locked (TVL) of $670M, placing it at rank 78 among DeFi protocols. It stands out in the #51-100 rank bucket, with nearby protocols like Function FBTC at $978M and SolvBTC at $965M, indicating a competitive landscape in this TVL range.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0.01897401435701979
+      },
+      "difficultyScore": 0.37439740143570205
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which chain is USD AI deployed on?",
+      "choices": [
+        "Ethereum",
+        "Polygon",
+        "Arbitrum",
+        "Optimism"
+      ],
+      "answerIndex": 2,
+      "explanation": "USD AI operates exclusively on Arbitrum, making it a single-chain protocol with a focus on leveraging the benefits of that specific blockchain for its services. This specialization can enhance transaction efficiency and reduce costs for users.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.01897401435701979
+      },
+      "difficultyScore": 0.29439740143570203
+    }
+  ],
+  "generatedAt": "2026-01-23T00:25:49.067Z"
+}
