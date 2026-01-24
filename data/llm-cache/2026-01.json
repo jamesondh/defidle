@@ -573,5 +573,30 @@
     "text": "USD AI operates exclusively on Arbitrum, making it a single-chain protocol with a focus on leveraging the benefits of that specific blockchain for its services. This specialization can enhance transaction efficiency and reduce costs for users.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-23T00:25:49.067Z"
+  },
+  "2026-01-24|chain|Avalanche|A|C1_FINGERPRINT|explanation|46196236c45087ad": {
+    "text": "Avalanche ranks 10th in TVL with a total value locked between $1B and $5B, and it hosts over 534 protocols, indicating a robust ecosystem for decentralized applications. This diverse range of protocols contributes to its growing popularity in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-24T00:24:16.655Z"
+  },
+  "2026-01-24|chain|Avalanche|B|C2_CHAIN_COMPARISON|explanation|cddf958d480158af": {
+    "text": "Hyperliquid L1 leads with a TVL of $1.3B, surpassing Avalanche's $1.2B by 8.6%. This indicates that Hyperliquid L1 has attracted more assets for decentralized finance activities compared to Avalanche.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-24T00:24:18.711Z"
+  },
+  "2026-01-24|chain|Avalanche|C|C4_GROWTH_RANKING|explanation|0831a05944b2bcff": {
+    "text": "Base leads in growth with a 22.3% increase, significantly outpacing other chains like Scroll at 20.7% and Tron at 20.4%. In contrast, Avalanche only saw a growth of 4.7%, highlighting its slower performance compared to these emerging protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-24T00:24:20.791Z"
+  },
+  "2026-01-24|chain|Avalanche|D|C3_ATH_TIMING|explanation|c6c8b114441d7513": {
+    "text": "Avalanche reached its all-time high (ATH) TVL of $11.5B in December 2021, significantly surpassing its values in other months like January 2022 and February 2021, when its TVL was notably lower. This peak reflects the protocol's rapid growth and adoption during that period.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-24T00:24:23.042Z"
+  },
+  "2026-01-24|chain|Avalanche|E|C6_TOP_DEX|explanation|f4981dd263a47088": {
+    "text": "Blackhole CLMM leads Avalanche's decentralized exchanges with a trading volume of $57M, significantly outperforming Joe V2.2 at $35M and Pharaoh V3 at $33M. This high volume indicates strong user activity and liquidity on Blackhole CLMM compared to its competitors.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-24T00:24:25.133Z"
   }
 }
