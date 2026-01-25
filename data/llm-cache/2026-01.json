@@ -598,5 +598,30 @@
     "text": "Blackhole CLMM leads Avalanche's decentralized exchanges with a trading volume of $57M, significantly outperforming Joe V2.2 at $35M and Pharaoh V3 at $33M. This high volume indicates strong user activity and liquidity on Blackhole CLMM compared to its competitors.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-24T00:24:25.133Z"
+  },
+  "2026-01-25|protocol|jupiter-perpetual-exchange|A|P1_FINGERPRINT|explanation|e9d659ce1f4bb8f1": {
+    "text": "Jupiter Perpetual Exchange is a derivatives platform on the Solana blockchain with a total value locked (TVL) of $1.2B, placing it within the $1B-$5B range. Its significant TVL highlights its popularity and usage in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-25T00:28:05.100Z"
+  },
+  "2026-01-25|protocol|jupiter-perpetual-exchange|B|P13_TVL_RANK_COMPARISON|explanation|0c3667cbf605e245": {
+    "text": "Obol leads with a TVL of $1.7B, surpassing Jupiter Perpetual Exchange's $1.2B by 30.7%. This significant difference highlights Obol's stronger asset retention and user engagement in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-25T00:28:08.365Z"
+  },
+  "2026-01-25|protocol|jupiter-perpetual-exchange|C|P5_FEES_REVENUE|explanation|54aaf5e7b335083b": {
+    "text": "Jupiter Perpetual Exchange generated $2M in revenue over the past week, which is 25% of its $10M in fees. This indicates a strong fee-to-revenue conversion, highlighting its effective fee structure.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-25T00:28:10.549Z"
+  },
+  "2026-01-25|protocol|jupiter-perpetual-exchange|D|P31_PRECISE_RANK|explanation|4229e930daff0234": {
+    "text": "Jupiter Perpetual Exchange has a total value locked (TVL) of $1.2B, ranking it 51st among DeFi protocols. It stands out in a competitive group where nearby protocols like Rocket Pool and DoubleZero Staked SOL each have a TVL of $1.7B, highlighting the close competition in this rank bucket.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-25T00:28:13.028Z"
+  },
+  "2026-01-25|protocol|jupiter-perpetual-exchange|E|P8_CHAIN_MEMBERSHIP|explanation|00d41a9b74e239ce": {
+    "text": "Jupiter Perpetual Exchange operates exclusively on the Solana blockchain, making it a single-chain protocol with a focus on leveraging Solana's high-speed and low-cost transactions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-25T00:28:13.784Z"
   }
 }
