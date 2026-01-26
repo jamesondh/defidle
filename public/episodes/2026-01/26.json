@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-01-26:protocol:lista-lending",
+  "dateUtc": "2026-01-26",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "lista-lending",
+    "name": "Lista Lending",
+    "category": "Lending"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Lending",
+        "Chains: 2-5 chains",
+        ">90% TVL on single chain",
+        "TVL: $500M-$1B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Lista Lending",
+        "Lighter Bridge",
+        "Uniswap V2",
+        "Raydium AMM"
+      ],
+      "answerIndex": 0,
+      "explanation": "Lista Lending operates on two chains, Ethereum and Binance, with a total value locked (TVL) of $732M, placing it in the $500M-$1B TVL band. This significant TVL highlights its popularity and utility in the lending sector of DeFi.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.12864193878154467
+      },
+      "difficultyScore": 0.3953641938781545
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Lista Lending have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Binance"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lista Lending on Binance has a TVL of $732M, significantly outperforming Ethereum's $309, marking a 100% margin difference. This highlights Binance's dominance in the lending space compared to Ethereum.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.999999577341786,
+        "volatility": 0.12864193878154467
+      },
+      "difficultyScore": 0.21536419387815448
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Lista Lending's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Lista Lending generated $51K in fees over the past week, with revenue matching that amount, indicating a 100% revenue rate from its fees. This demonstrates the platform's effective monetization of its lending services.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0.12864193878154467
+      },
+      "difficultyScore": 0.3053641938781545
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "prompt": "What is Lista Lending's current TVL rank among all protocols?",
+      "choices": [
+        "#1-5",
+        "#6-15",
+        "#16-30",
+        "#31-50",
+        "#51-100"
+      ],
+      "answerIndex": 4,
+      "explanation": "Lista Lending has a total value locked (TVL) of $732M, placing it at rank 69 among DeFi protocols. It is positioned within a competitive range, with nearby protocols like Jupiter Perpetual Exchange and Uniswap V2 both holding $1.2B in TVL.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0.12864193878154467
+      },
+      "difficultyScore": 0.3853641938781545
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Lista Lending's TVL is on its top chain (Binance)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Lista Lending operates exclusively on the Binance chain, holding a total value locked (TVL) of $732M, which represents a 100% share of the TVL on that chain. This concentration highlights its dominance within the Binance ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9999983093678586,
+        "volatility": 0.12864193878154467
+      },
+      "difficultyScore": 0.3053641938781545
+    }
+  ],
+  "generatedAt": "2026-01-26T00:27:31.222Z"
+}

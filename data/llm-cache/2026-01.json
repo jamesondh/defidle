@@ -623,5 +623,30 @@
     "text": "Jupiter Perpetual Exchange operates exclusively on the Solana blockchain, making it a single-chain protocol with a focus on leveraging Solana's high-speed and low-cost transactions.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-25T00:28:13.784Z"
+  },
+  "2026-01-26|protocol|lista-lending|A|P1_FINGERPRINT|explanation|6f68d50aae86ff49": {
+    "text": "Lista Lending operates on two chains, Ethereum and Binance, with a total value locked (TVL) of $732M, placing it in the $500M-$1B TVL band. This significant TVL highlights its popularity and utility in the lending sector of DeFi.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-26T00:27:24.051Z"
+  },
+  "2026-01-26|protocol|lista-lending|B|P2_CROSSCHAIN|explanation|8910bebe8afc7697": {
+    "text": "Lista Lending on Binance has a TVL of $732M, significantly outperforming Ethereum's $309, marking a 100% margin difference. This highlights Binance's dominance in the lending space compared to Ethereum.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-26T00:27:25.973Z"
+  },
+  "2026-01-26|protocol|lista-lending|C|P5_FEES_REVENUE|explanation|ffa0bfe2178aad48": {
+    "text": "Lista Lending generated $51K in fees over the past week, with revenue matching that amount, indicating a 100% revenue rate from its fees. This demonstrates the platform's effective monetization of its lending services.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-26T00:27:27.817Z"
+  },
+  "2026-01-26|protocol|lista-lending|D|P31_PRECISE_RANK|explanation|3cc6592756235de1": {
+    "text": "Lista Lending has a total value locked (TVL) of $732M, placing it at rank 69 among DeFi protocols. It is positioned within a competitive range, with nearby protocols like Jupiter Perpetual Exchange and Uniswap V2 both holding $1.2B in TVL.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-26T00:27:30.066Z"
+  },
+  "2026-01-26|protocol|lista-lending|E|P3_CONCENTRATION|explanation|29ed9bff508a96e9": {
+    "text": "Lista Lending operates exclusively on the Binance chain, holding a total value locked (TVL) of $732M, which represents a 100% share of the TVL on that chain. This concentration highlights its dominance within the Binance ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-26T00:27:31.222Z"
   }
 }
