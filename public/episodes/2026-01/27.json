@@ -1,0 +1,138 @@
+{
+  "episodeId": "2026-01-27:chain:Mantle",
+  "dateUtc": "2026-01-27",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Mantle",
+    "name": "Mantle"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: MNT",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "Cronos",
+        "Vaulta",
+        "Polygon",
+        "Starknet",
+        "Movement",
+        "Mantle"
+      ],
+      "answerIndex": 5,
+      "explanation": "Mantle ranks 19th in total value locked (TVL) with between $100M and $500M, hosting 135 protocols, which places it in the 100-200 range for protocol count. This indicates a growing ecosystem within the DeFi space.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Mantle or Scroll?",
+      "choices": [
+        "Scroll",
+        "Mantle"
+      ],
+      "answerIndex": 1,
+      "explanation": "Mantle leads with a TVL of $321M, surpassing Scroll's $229M by 28.7%. This higher total value locked indicates greater user confidence and adoption in Mantle's ecosystem compared to Scroll.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.28729912383896206,
+        "volatility": null
+      },
+      "difficultyScore": 0.2095
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C9_DISTANCE_FROM_ATH",
+      "format": "mc4",
+      "prompt": "How far is Mantle from its ATH TVL?",
+      "choices": [
+        "At ATH",
+        "Within 10%",
+        "10-30% below",
+        "30-60% below",
+        ">60% below"
+      ],
+      "answerIndex": 3,
+      "explanation": "Mantle's current TVL is $321M, which is 50.2% lower than its all-time high (ATH) of $645M, indicating a significant drop in the total value locked in the protocol. This distance from ATH highlights the challenges in maintaining high liquidity levels.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.0983538926815204,
+        "volatility": null
+      },
+      "difficultyScore": 0.5414753287821756
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Tron",
+        "Starknet",
+        "Ink",
+        "Mantle"
+      ],
+      "answerIndex": 1,
+      "explanation": "Starknet led with a growth rate of 33.6%, significantly outperforming other chains like Ink at +12.2% and Tron at +9.0%. In contrast, Mantle saw a decline of 3.2%, highlighting its underperformance compared to the top chains.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.21408777898524414,
+        "volatility": null
+      },
+      "difficultyScore": 0.4025946652177071
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Mantle?",
+      "choices": [
+        "Fluxion Network",
+        "Agni Finance",
+        "Uniswap V3",
+        "Merchant Moe Liquidity Book"
+      ],
+      "answerIndex": 3,
+      "explanation": "Merchant Moe Liquidity Book is the top DEX on the Mantle chain, with a trading volume of $7M, significantly surpassing Agni Finance at $2M and Uniswap V3 at $156K. This high volume indicates strong user activity and liquidity compared to its competitors.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.6588391831831082,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-01-27T00:26:51.813Z"
+}

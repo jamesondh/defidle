@@ -648,5 +648,30 @@
     "text": "Lista Lending operates exclusively on the Binance chain, holding a total value locked (TVL) of $732M, which represents a 100% share of the TVL on that chain. This concentration highlights its dominance within the Binance ecosystem.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-26T00:27:31.222Z"
+  },
+  "2026-01-27|chain|Mantle|A|C1_FINGERPRINT|explanation|dfefa30bff45b7ba": {
+    "text": "Mantle ranks 19th in total value locked (TVL) with between $100M and $500M, hosting 135 protocols, which places it in the 100-200 range for protocol count. This indicates a growing ecosystem within the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-27T00:26:44.017Z"
+  },
+  "2026-01-27|chain|Mantle|B|C2_CHAIN_COMPARISON|explanation|14b633afc51bad0b": {
+    "text": "Mantle leads with a TVL of $321M, surpassing Scroll's $229M by 28.7%. This higher total value locked indicates greater user confidence and adoption in Mantle's ecosystem compared to Scroll.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-27T00:26:45.989Z"
+  },
+  "2026-01-27|chain|Mantle|C|C9_DISTANCE_FROM_ATH|explanation|61a2fe002a0eba57": {
+    "text": "Mantle's current TVL is $321M, which is 50.2% lower than its all-time high (ATH) of $645M, indicating a significant drop in the total value locked in the protocol. This distance from ATH highlights the challenges in maintaining high liquidity levels.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-27T00:26:47.827Z"
+  },
+  "2026-01-27|chain|Mantle|D|C4_GROWTH_RANKING|explanation|5dc26336942432f8": {
+    "text": "Starknet led with a growth rate of 33.6%, significantly outperforming other chains like Ink at +12.2% and Tron at +9.0%. In contrast, Mantle saw a decline of 3.2%, highlighting its underperformance compared to the top chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-27T00:26:49.863Z"
+  },
+  "2026-01-27|chain|Mantle|E|C6_TOP_DEX|explanation|9ae34344ba457f59": {
+    "text": "Merchant Moe Liquidity Book is the top DEX on the Mantle chain, with a trading volume of $7M, significantly surpassing Agni Finance at $2M and Uniswap V3 at $156K. This high volume indicates strong user activity and liquidity compared to its competitors.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-27T00:26:51.813Z"
   }
 }
