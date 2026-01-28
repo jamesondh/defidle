@@ -673,5 +673,30 @@
     "text": "Merchant Moe Liquidity Book is the top DEX on the Mantle chain, with a trading volume of $7M, significantly surpassing Agni Finance at $2M and Uniswap V3 at $156K. This high volume indicates strong user activity and liquidity compared to its competitors.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-27T00:26:51.813Z"
+  },
+  "2026-01-28|protocol|spark-savings|A|P1_FINGERPRINT|explanation|70c0ad82a49c5d0e": {
+    "text": "Spark Savings is a yield protocol with a total value locked (TVL) of $1.0B, operating across six chains, including Arbitrum, Optimism, and Ethereum. Its significant TVL places it in the $1B-$5B range, highlighting its popularity in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-28T00:25:38.938Z"
+  },
+  "2026-01-28|protocol|spark-savings|B|P2_CROSSCHAIN|explanation|da7f2feddcffab87": {
+    "text": "Spark Savings on Ethereum has a TVL of $681M, significantly higher than Avalanche's $166M, making it 76% more valuable in terms of total assets locked. This demonstrates Ethereum's dominance in the DeFi space compared to Avalanche.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-28T00:25:40.700Z"
+  },
+  "2026-01-28|protocol|spark-savings|C|P20_ATH_DISTANCE|explanation|6e9cbf4b23ba776c": {
+    "text": "Spark Savings has a current TVL of $1.0B, which is 54% below its all-time high of $2.2B, placing it in the 50-75% below ATH range. This indicates a significant decrease in the total value locked compared to its peak performance.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-28T00:25:43.348Z"
+  },
+  "2026-01-28|protocol|spark-savings|D|P31_PRECISE_RANK|explanation|6f58d070cd33908c": {
+    "text": "Spark Savings has a total value locked (TVL) of $1.0B, placing it at rank 54 among DeFi protocols. It stands out in its rank bucket (#51-100) compared to nearby protocols like DoubleZero Staked SOL and Portal, both with a TVL of $1.7B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-28T00:25:45.710Z"
+  },
+  "2026-01-28|protocol|spark-savings|E|P3_CONCENTRATION|explanation|dce94a1b2be95a14": {
+    "text": "Spark Savings holds a dominant position in the DeFi space with 66% of its total value locked (TVL) of $1.0B on Ethereum, which itself has a TVL of $681M. This concentration highlights Spark Savings' reliance on Ethereum for its liquidity and user base.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-28T00:25:46.913Z"
   }
 }
