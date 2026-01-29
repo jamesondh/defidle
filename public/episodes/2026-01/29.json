@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-01-29:chain:Katana",
+  "dateUtc": "2026-01-29",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Katana",
+    "name": "Katana"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Protocols: 20-50"
+      ],
+      "choices": [
+        "Katana",
+        "Aptos",
+        "Cronos",
+        "Starknet",
+        "Ink",
+        "Arbitrum"
+      ],
+      "answerIndex": 0,
+      "explanation": "Katana ranks 16th in TVL with between $100M and $500M locked in the protocol, which supports 21 different protocols, placing it in the 20-50 range for protocol count. This indicates a diverse ecosystem within a significant TVL range.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "prompt": "Katana has higher TVL than Cronos.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Katana leads with a TVL of $395M, surpassing Cronos, which has a TVL of $365M, by 7.6%. This indicates Katana's stronger position in attracting and retaining user assets within its protocol.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.07572809155446328,
+        "volatility": null
+      },
+      "difficultyScore": 0.32862629013464406
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C11_TOP_PROTOCOL_TVL",
+      "format": "mc6",
+      "prompt": "Which protocol has the most TVL on Katana?",
+      "choices": [
+        "Concrete",
+        "Yearn Finance",
+        "Steakhouse Financial",
+        "Gauntlet",
+        "Midas RWA",
+        "Morpho V1"
+      ],
+      "answerIndex": 5,
+      "explanation": "Morpho V1 leads Katana with a total value locked (TVL) of $6.9B, significantly surpassing other protocols like Steakhouse Financial at $2.0B and Gauntlet at $1.6B, highlighting its dominance in the ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.7109248415137541,
+        "volatility": null
+      },
+      "difficultyScore": 0.38950000000000007
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Katana hit its all-time high TVL?",
+      "choices": [
+        "Jul 2025",
+        "Oct 2025",
+        "May 2025",
+        "Jan 2026",
+        "Dec 2025",
+        "Aug 2025"
+      ],
+      "answerIndex": 1,
+      "explanation": "Katana reached its all-time high (ATH) TVL of $607M in October 2025, distinguishing it from other months like May 2025 and December 2025, when it did not achieve this peak. This timing highlights the protocol's growth trajectory leading up to its ATH.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Katana?",
+      "choices": [
+        "Kensei",
+        "SushiSwap",
+        "SushiSwap V3",
+        "Spectra V2"
+      ],
+      "answerIndex": 2,
+      "explanation": "SushiSwap V3 leads the Katana chain with a trading volume of $19M, significantly outperforming other DEXs like Spectra V2 at $2M and SushiSwap at just $3. This substantial volume indicates SushiSwap V3's dominance and popularity among users on the Katana chain.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.9174511473266025,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-01-29T00:28:56.035Z"
+}

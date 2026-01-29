@@ -698,5 +698,30 @@
     "text": "Spark Savings holds a dominant position in the DeFi space with 66% of its total value locked (TVL) of $1.0B on Ethereum, which itself has a TVL of $681M. This concentration highlights Spark Savings' reliance on Ethereum for its liquidity and user base.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-01-28T00:25:46.913Z"
+  },
+  "2026-01-29|chain|Katana|A|C1_FINGERPRINT|explanation|9e153ada2119dac6": {
+    "text": "Katana ranks 16th in TVL with between $100M and $500M locked in the protocol, which supports 21 different protocols, placing it in the 20-50 range for protocol count. This indicates a diverse ecosystem within a significant TVL range.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-29T00:28:47.602Z"
+  },
+  "2026-01-29|chain|Katana|B|C2_CHAIN_COMPARISON|explanation|4b8dca60f2766c57": {
+    "text": "Katana leads with a TVL of $395M, surpassing Cronos, which has a TVL of $365M, by 7.6%. This indicates Katana's stronger position in attracting and retaining user assets within its protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-29T00:28:49.891Z"
+  },
+  "2026-01-29|chain|Katana|C|C11_TOP_PROTOCOL_TVL|explanation|603437c00c2a20af": {
+    "text": "Morpho V1 leads Katana with a total value locked (TVL) of $6.9B, significantly surpassing other protocols like Steakhouse Financial at $2.0B and Gauntlet at $1.6B, highlighting its dominance in the ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-29T00:28:52.018Z"
+  },
+  "2026-01-29|chain|Katana|D|C3_ATH_TIMING|explanation|c3327f393cf1f7da": {
+    "text": "Katana reached its all-time high (ATH) TVL of $607M in October 2025, distinguishing it from other months like May 2025 and December 2025, when it did not achieve this peak. This timing highlights the protocol's growth trajectory leading up to its ATH.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-29T00:28:54.568Z"
+  },
+  "2026-01-29|chain|Katana|E|C6_TOP_DEX|explanation|9faf6eecafc66335": {
+    "text": "SushiSwap V3 leads the Katana chain with a trading volume of $19M, significantly outperforming other DEXs like Spectra V2 at $2M and SushiSwap at just $3. This substantial volume indicates SushiSwap V3's dominance and popularity among users on the Katana chain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-01-29T00:28:56.034Z"
   }
 }
