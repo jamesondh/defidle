@@ -1,0 +1,138 @@
+{
+  "episodeId": "2026-01-31:chain:Monad",
+  "dateUtc": "2026-01-31",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Monad",
+    "name": "Monad"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Native token: MON",
+        "Protocols: 50-100"
+      ],
+      "choices": [
+        "OP Mainnet",
+        "Monad",
+        "Stellar",
+        "Starknet"
+      ],
+      "answerIndex": 1,
+      "explanation": "Monad ranks 23rd in total value locked (TVL) with between $100M and $500M, and it supports around 70 protocols, placing it in the 50-100 protocol count range. This indicates a robust ecosystem for users and developers within the DeFi space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.38950000000000007
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "prompt": "Monad has higher TVL than Scroll.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "Scroll leads with a TVL of $229M, surpassing Monad's $219M by 4.3%. This slight edge indicates Scroll's stronger position in attracting and retaining user assets within the DeFi space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.04261462379017505,
+        "volatility": null
+      },
+      "difficultyScore": 0.3683624514517899
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Monad",
+        "Starknet",
+        "Katana",
+        "Stacks"
+      ],
+      "answerIndex": 1,
+      "explanation": "Starknet leads with a 33.6% growth, significantly outperforming other chains like Stacks at +7.0% and Katana at +4.4%. In contrast, Monad experienced a decline of 7.8%, highlighting its underperformance relative to the top contenders.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.2665771920203047,
+        "volatility": null
+      },
+      "difficultyScore": 0.35950000000000004
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C11_TOP_PROTOCOL_TVL",
+      "format": "mc6",
+      "prompt": "Which protocol has the most TVL on Monad?",
+      "choices": [
+        "Morpho V1",
+        "Steakhouse Financial",
+        "PancakeSwap AMM",
+        "Uniswap V3",
+        "Curve DEX",
+        "Tether Gold"
+      ],
+      "answerIndex": 0,
+      "explanation": "Morpho V1 leads Monad with a total value locked (TVL) of $6.6B, significantly surpassing other protocols like Tether Gold at $2.6B and Curve DEX and Steakhouse Financial, both at $2.0B. This highlights Morpho V1's dominance in the Monad ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.6129999857234247,
+        "volatility": null
+      },
+      "difficultyScore": 0.38950000000000007
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Monad?",
+      "choices": [
+        "Kuru CLOB",
+        "PancakeSwap AMM V3",
+        "Uniswap V4",
+        "Hanji Protocol"
+      ],
+      "answerIndex": 2,
+      "explanation": "Uniswap V4 leads the Monad chain with a trading volume of $63M, significantly outperforming other DEXs like Kuru CLOB at $20M and Hanji Protocol at $13M. This dominance highlights Uniswap V4's popularity and liquidity compared to its competitors.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.6792310673167115,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-01-31T00:28:11.557Z"
+}
