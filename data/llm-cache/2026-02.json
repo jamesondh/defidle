@@ -1,0 +1,27 @@
+{
+  "2026-02-01|protocol|steakhouse-financial|A|P1_FINGERPRINT|explanation|01514d42bee7c62a": {
+    "text": "Steakhouse Financial is a Risk Curators protocol with a total value locked (TVL) of $1.9B, placing it within the $1B-$5B range. It operates across 8 chains, including Polygon and Arbitrum, highlighting its multi-chain capabilities.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-01T00:34:29.222Z"
+  },
+  "2026-02-01|protocol|steakhouse-financial|B|P2_CROSSCHAIN|explanation|8076d65a424a0907": {
+    "text": "Steakhouse Financial has a TVL of $900M on Ethereum, significantly outpacing Arbitrum's $116M, resulting in an 87% margin. This highlights Ethereum's dominance in total value locked compared to Arbitrum in this context.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-01T00:34:31.312Z"
+  },
+  "2026-02-01|protocol|steakhouse-financial|C|P5_FEES_REVENUE|explanation|f5d313f8990c099e": {
+    "text": "Steakhouse Financial generated $1M in fees over the past week, with a revenue of $67K, indicating a revenue rate of 5.0%. This shows that a significant portion of the fees collected is being converted into revenue.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-01T00:34:33.178Z"
+  },
+  "2026-02-01|protocol|steakhouse-financial|D|P31_PRECISE_RANK|explanation|f2127d79e98731bd": {
+    "text": "Steakhouse Financial has a total value locked (TVL) of $1.9B, placing it at rank 30 among DeFi protocols. It stands out within its rank bucket (#16-30) as it has a significantly lower TVL compared to nearby protocols like Tether Gold at $3.5B and JustLend at $3.4B.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-01T00:34:34.745Z"
+  },
+  "2026-02-01|protocol|steakhouse-financial|E|P8_CHAIN_MEMBERSHIP|explanation|d3ca4bbb5c7dc07d": {
+    "text": "Steakhouse Financial operates on 8 different chains, including Polygon, Arbitrum, and Katana, which enhances its accessibility and user engagement across various DeFi ecosystems. This multi-chain approach allows it to tap into diverse liquidity sources and user bases.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-01T00:34:36.119Z"
+  }
+}

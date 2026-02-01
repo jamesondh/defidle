@@ -1,0 +1,142 @@
+{
+  "episodeId": "2026-02-01:protocol:steakhouse-financial",
+  "dateUtc": "2026-02-01",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "steakhouse-financial",
+    "name": "Steakhouse Financial",
+    "category": "Risk Curators"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Risk Curators",
+        "Chains: 6-10 chains",
+        "TVL spread across chains (no chain >50%)",
+        "TVL: $1B-$5B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Falcon Finance",
+        "Steakhouse Financial",
+        "Maple",
+        "Arbitrum Bridge",
+        "Ondo Yield Assets",
+        "Babylon Protocol"
+      ],
+      "answerIndex": 1,
+      "explanation": "Steakhouse Financial is a Risk Curators protocol with a total value locked (TVL) of $1.9B, placing it within the $1B-$5B range. It operates across 8 chains, including Polygon and Arbitrum, highlighting its multi-chain capabilities.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.1842048697036527
+      },
+      "difficultyScore": 0.4909204869703653
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "tf",
+      "prompt": "Steakhouse Financial has higher TVL on Ethereum than on Arbitrum.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Steakhouse Financial has a TVL of $900M on Ethereum, significantly outpacing Arbitrum's $116M, resulting in an 87% margin. This highlights Ethereum's dominance in total value locked compared to Arbitrum in this context.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.8712442284262611,
+        "volatility": 0.1842048697036527
+      },
+      "difficultyScore": 0.13092048697036526
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Steakhouse Financial's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Steakhouse Financial generated $1M in fees over the past week, with a revenue of $67K, indicating a revenue rate of 5.0%. This shows that a significant portion of the fees collected is being converted into revenue.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.20157616243633925,
+        "volatility": 0.1842048697036527
+      },
+      "difficultyScore": 0.36902909204675816
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P31_PRECISE_RANK",
+      "format": "mc4",
+      "prompt": "What is Steakhouse Financial's current TVL rank among all protocols?",
+      "choices": [
+        "#1-5",
+        "#6-15",
+        "#16-30",
+        "#31-50",
+        "#51-100"
+      ],
+      "answerIndex": 2,
+      "explanation": "Steakhouse Financial has a total value locked (TVL) of $1.9B, placing it at rank 30 among DeFi protocols. It stands out within its rank bucket (#16-30) as it has a significantly lower TVL compared to nearby protocols like Tether Gold at $3.5B and JustLend at $3.4B.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0,
+        "volatility": 0.1842048697036527
+      },
+      "difficultyScore": 0.6909204869703652
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which chain is Steakhouse Financial deployed on?",
+      "choices": [
+        "Optimism",
+        "Corn",
+        "Ethereum",
+        "Avalanche"
+      ],
+      "answerIndex": 2,
+      "explanation": "Steakhouse Financial operates on 8 different chains, including Polygon, Arbitrum, and Katana, which enhances its accessibility and user engagement across various DeFi ecosystems. This multi-chain approach allows it to tap into diverse liquidity sources and user bases.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.1842048697036527
+      },
+      "difficultyScore": 0.3109204869703653
+    }
+  ],
+  "generatedAt": "2026-02-01T00:34:36.119Z"
+}
