@@ -23,5 +23,30 @@
     "text": "Steakhouse Financial operates on 8 different chains, including Polygon, Arbitrum, and Katana, which enhances its accessibility and user engagement across various DeFi ecosystems. This multi-chain approach allows it to tap into diverse liquidity sources and user bases.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-02-01T00:34:36.119Z"
+  },
+  "2026-02-02|protocol|optimism-bridge|A|P1_FINGERPRINT|explanation|2bdfa20a3bcdcdef": {
+    "text": "Optimism Bridge is a canonical bridge with a total value locked (TVL) of $579M, connecting three chains: Base, PGN, and Ethereum. Its significant TVL places it in the $500M-$1B range, highlighting its importance in cross-chain transactions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-02T00:30:49.439Z"
+  },
+  "2026-02-02|protocol|optimism-bridge|B|P7_CATEGORY|explanation|c876ed272205082c": {
+    "text": "Optimism Bridge is classified as a Canonical Bridge, which means it facilitates the transfer of assets between the Ethereum mainnet and the Optimism Layer 2 network, enhancing scalability and reducing transaction costs.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-02T00:30:52.071Z"
+  },
+  "2026-02-02|protocol|optimism-bridge|C|P20_ATH_DISTANCE|explanation|e82de8cc8b7935d4": {
+    "text": "The Optimism Bridge has a current TVL of $579M, which is 90% below its all-time high of $5.5B, placing it in the category of being over 75% below its ATH. This significant drop indicates a substantial reduction in the assets locked within the protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-02T00:30:55.209Z"
+  },
+  "2026-02-02|protocol|optimism-bridge|D|P31_PRECISE_RANK|explanation|302269b208796d01": {
+    "text": "Optimism Bridge has a total value locked (TVL) of $579M, placing it at rank 79 among DeFi protocols. It stands out in the #51-100 rank bucket, with nearby protocols like Spiko at $909M and Lombard LBTC at $875M, highlighting its competitive position in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-02T00:30:57.982Z"
+  },
+  "2026-02-02|protocol|optimism-bridge|E|P8_CHAIN_MEMBERSHIP|explanation|962ec0d348448fd4": {
+    "text": "Optimism Bridge connects three chains: Base, PGN, and Ethereum, facilitating seamless asset transfers between them. This multi-chain capability enhances interoperability within the DeFi ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-02T00:30:59.377Z"
   }
 }
