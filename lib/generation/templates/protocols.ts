@@ -138,23 +138,47 @@ const P1_FINGERPRINT: TemplateConfig<P1Data> = {
     }))
 
     // Try to get distractors - multiple fallback strategies
-    // Prefer same-category distractors first, then fall back to any category
+    // Goal: at least 1-2 distractors should share the category to make elimination harder
     const distractorCount = ctx.topic.tvlRank > 50 ? 3 : 5
+
+    // Strategy 1: All same-category distractors (ideal)
     let distractors = pickProtocolDistractors(detail.slug, pool, distractorCount, seed, {
       mustMatch: { category: detail.category },
       maxTvlRank: 75,
       preferNearRank: topic.tvlRank,
     })
 
-    // Fallback 1: same category, slightly wider rank range
+    // Strategy 2: Same category, wider rank range
     if (!distractors) {
       distractors = pickProtocolDistractors(detail.slug, pool, distractorCount, seed, {
         mustMatch: { category: detail.category },
-        maxTvlRank: 100,
+        maxTvlRank: 150, // Much wider to find enough same-category protocols
       })
     }
 
-    // Fallback 2: any category, tighter rank range
+    // Strategy 3: Mix — get as many same-category as possible, fill rest with any category
+    if (!distractors) {
+      // Try to get at least 1-2 same-category distractors
+      const sameCat = pickProtocolDistractors(detail.slug, pool, Math.min(2, distractorCount), seed, {
+        mustMatch: { category: detail.category },
+        maxTvlRank: 150,
+      })
+      const needed = distractorCount - (sameCat?.length ?? 0)
+      const avoidSet = new Set([detail.slug, ...(sameCat ?? []).map(n => {
+        const found = pool.find(p => p.name === n)
+        return found?.slug ?? n
+      })])
+      const otherCat = pickProtocolDistractors(detail.slug, pool, needed, seed + 1, {
+        maxTvlRank: 75,
+        preferNearRank: topic.tvlRank,
+        avoid: avoidSet,
+      })
+      if (sameCat && otherCat && sameCat.length + otherCat.length === distractorCount) {
+        distractors = [...sameCat, ...otherCat]
+      }
+    }
+
+    // Strategy 4: Any recognizable protocol (last resort)
     if (!distractors) {
       distractors = pickProtocolDistractors(detail.slug, pool, distractorCount, seed, {
         maxTvlRank: 75,
@@ -162,7 +186,7 @@ const P1_FINGERPRINT: TemplateConfig<P1Data> = {
       })
     }
 
-    // Fallback 3: any recognizable protocol
+    // Strategy 5: Anything at all
     if (!distractors) {
       distractors = pickProtocolDistractors(detail.slug, pool, distractorCount, seed)
     }
@@ -956,8 +980,9 @@ const P8_CHAIN_MEMBERSHIP: TemplateConfig<P8Data> = {
   extract(ctx, seed) {
     const detail = ctx.data.protocolDetail!
     const chains = detail.chains
+    const chainsLower = chains.map((c) => c.toLowerCase())
 
-    // Common chains for distractors
+    // Common chains for distractors — only use chains the protocol is NOT on
     const commonChains = [
       "Ethereum",
       "Arbitrum",
@@ -970,20 +995,29 @@ const P8_CHAIN_MEMBERSHIP: TemplateConfig<P8Data> = {
       "Fantom",
       "zkSync Era",
     ]
-
-    const presentChain = chains[Math.floor(createRng(seed)() * chains.length)]
     const absentChains = commonChains.filter(
-      (c) => !chains.map((ch) => ch.toLowerCase()).includes(c.toLowerCase())
+      (c) => !chainsLower.includes(c.toLowerCase())
     )
+
+    // For the correct answer, pick the dominant chain (highest TVL) for a clear answer,
+    // or the first chain if no TVL data
+    let presentChain: string
+    if (detail.currentChainTvls && Object.keys(detail.currentChainTvls).length > 0) {
+      const sortedByTvl = Object.entries(detail.currentChainTvls)
+        .sort(([, a], [, b]) => b - a)
+      presentChain = sortedByTvl[0][0]
+    } else {
+      presentChain = chains[0]
+    }
+
     const absentChain = absentChains.length > 0 ? absentChains[0] : null
 
-    // Distractors: mix of present and absent chains
-    const distractorPool = [...chains.slice(0, 3), ...absentChains.slice(0, 3)]
-    const shuffled = deterministicShuffle(
-      distractorPool.filter((c) => c !== presentChain),
-      `${seed}:distractors`
-    )
+    // For MC: distractors are all chains the protocol is NOT on (no ambiguity)
+    const shuffled = deterministicShuffle(absentChains, `${seed}:distractors`)
     const distractorChains = shuffled.slice(0, 3)
+
+    // Need at least 3 absent chains for MC format to work
+    if (distractorChains.length < 3) return null
 
     return { chains, presentChain, absentChain, distractorChains }
   },
@@ -991,10 +1025,11 @@ const P8_CHAIN_MEMBERSHIP: TemplateConfig<P8Data> = {
   getPrompt(data, ctx, format) {
     const detail = ctx.data.protocolDetail!
     if (format === "tf") {
-      const chain = createRng(Date.now())() > 0.5 ? data.presentChain : data.absentChain
+      const rng = createRng(Date.now())
+      const chain = rng() > 0.5 ? data.presentChain : data.absentChain
       return `${detail.name} is deployed on ${chain ?? data.presentChain}.`
     }
-    return `Which chain is ${detail.name} deployed on?`
+    return `Which of these chains is ${detail.name} deployed on?`
   },
 
   getChoices(data, _ctx, format, seed) {
@@ -1242,8 +1277,21 @@ const P11_FEES_TREND: TemplateConfig<P11Data> = {
     return { passed: true }
   },
 
-  getFormats() {
-    return ["tf", "mc4"]
+  getFormats(ctx) {
+    const chart = ctx.data.protocolFees?.totalDataChart
+    if (!chart || chart.length < 14) return ["mc4"]
+
+    // Check the trend magnitude to decide formats
+    const last7 = chart.slice(-7)
+    const prev7 = chart.slice(-14, -7)
+    const fees7dNow = last7.reduce((sum, [, v]) => sum + v, 0)
+    const fees7dAgo = prev7.reduce((sum, [, v]) => sum + v, 0)
+    if (fees7dAgo === 0) return ["mc4"]
+
+    const feesTrend = Math.abs((fees7dNow - fees7dAgo) / fees7dAgo)
+    // Only allow T/F when the change is clear (>5%), otherwise MC only
+    if (feesTrend > 0.05) return ["tf", "mc4"]
+    return ["mc4"]
   },
 
   extract(ctx) {
@@ -1272,6 +1320,8 @@ const P11_FEES_TREND: TemplateConfig<P11Data> = {
   getPrompt(data, ctx, format) {
     const detail = ctx.data.protocolDetail!
     if (format === "tf") {
+      // Always claim "increased" — the answer is True if fees actually went up, False if down.
+      // Only use T/F format when there's a clear signal (not flat), which getFormats enforces.
       return `${detail.name}'s fees increased over the past week compared to the week before.`
     }
     return `How did ${detail.name}'s weekly fees change compared to the previous week?`
@@ -1284,9 +1334,11 @@ const P11_FEES_TREND: TemplateConfig<P11Data> = {
 
   getAnswerIndex(data, _ctx, format) {
     if (format === "tf") {
-      return data.trendDirection === "increased" ? 0 : 1
+      // "fees increased" is True if the raw change is positive, False if negative.
+      // We skip flat changes by only allowing T/F when |feesTrend| > 0.05 (see getFormats).
+      return data.feesTrend > 0 ? 0 : 1
     }
-    // Bucket index
+    // MC bucket index
     if (data.feesTrend > 0.2) return 4
     if (data.feesTrend > 0.05) return 3
     if (data.feesTrend >= -0.05) return 2
@@ -1295,7 +1347,7 @@ const P11_FEES_TREND: TemplateConfig<P11Data> = {
   },
 
   getAnswerValue(data) {
-    return data.trendDirection === "increased"
+    return data.feesTrend > 0
   },
 
   getMargin(data) {

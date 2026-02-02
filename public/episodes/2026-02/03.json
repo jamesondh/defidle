@@ -1,0 +1,205 @@
+{
+  "episodeId": "2026-02-03:chain:Arbitrum",
+  "dateUtc": "2026-02-03",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Arbitrum",
+    "name": "Arbitrum"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 10",
+        "Native token: ARB",
+        "Most protocols by count"
+      ],
+      "choices": [
+        "Aptos",
+        "Arbitrum",
+        "Ink",
+        "Cronos",
+        "Base",
+        "Provenance"
+      ],
+      "answerIndex": 1,
+      "explanation": "Arbitrum ranks 8th in TVL with between $1B and $5B, reflecting its robust ecosystem that supports 941 different protocols, which is significant for a Layer 2 solution. This high protocol count indicates strong developer interest and a diverse range of applications, contributing to its competitive position in the DeFi landscape.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4675
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Arbitrum or Hyperliquid L1?",
+      "choices": [
+        "Hyperliquid L1",
+        "Arbitrum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Arbitrum's $2.5B TVL outpaces Hyperliquid L1 by 42.2%, reflecting its established position and broader adoption among users and developers in the DeFi space. This significant difference often stems from Arbitrum's robust ecosystem and liquidity incentives that attract more capital compared to newer or less popular chains.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.4224310886159329,
+        "volatility": null
+      },
+      "difficultyScore": 0.19749999999999998
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Starknet",
+        "Stellar",
+        "Base",
+        "Arbitrum"
+      ],
+      "answerIndex": 0,
+      "explanation": "Starknet's impressive growth of 20.4% contrasts sharply with Arbitrum's decline of 14.6%, which reflects a challenging environment for Arbitrum compared to Stellar and Base, both of which also saw negative changes but less severe at -4.1% and -5.3%, respectively. This highlights Starknet's ability to attract users and liquidity while Arbitrum struggles to maintain its position amidst increasing competition.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.24539063340712503,
+        "volatility": null
+      },
+      "difficultyScore": 0.35303123991145
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Arbitrum hit its all-time high TVL?",
+      "choices": [
+        "Oct 2025",
+        "Feb 2025",
+        "Mar 2023",
+        "Aug 2025",
+        "Sep 2025",
+        "Jan 2024"
+      ],
+      "answerIndex": 0,
+      "explanation": "Arbitrum reached its all-time high (ATH) of $4.2B in October 2025, a significant milestone that came well after earlier peaks like March 2023, when its TVL was much lower. The timing of this ATH reflects the growing adoption and scaling of Layer 2 solutions, which gained momentum as Ethereum's gas fees remained high.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.47750000000000004
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Arbitrum?",
+      "choices": [
+        "Uniswap V4",
+        "PancakeSwap AMM V3",
+        "Uniswap V3",
+        "Fluid DEX"
+      ],
+      "answerIndex": 2,
+      "explanation": "Uniswap V3 dominates Arbitrum with $401M in volume, significantly outpacing its closest competitor, Uniswap V4, which only reached $97M. This stark difference illustrates Uniswap V3's strong liquidity and user preference on the chain, while other DEXs like Fluid DEX and PancakeSwap AMM V3 trail even further behind at $64M and $43M, respectively.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.7576103409874038,
+        "volatility": null
+      },
+      "difficultyScore": 0.28750000000000003
+    }
+  ],
+  "generatedAt": "2026-02-02T13:31:29.242Z",
+  "buildLog": [
+    {
+      "slot": "A",
+      "template": "C1_FINGERPRINT",
+      "format": "mc6",
+      "decision": "selected",
+      "score": 0.4675,
+      "target": "medium"
+    },
+    {
+      "slot": "B",
+      "template": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "decision": "selected",
+      "score": 0.19749999999999998,
+      "target": "easy"
+    },
+    {
+      "slot": "C",
+      "template": "C5_TOP_BY_FEES",
+      "decision": "skip",
+      "reason": "prereq_failed"
+    },
+    {
+      "slot": "C",
+      "template": "C6_TOP_DEX",
+      "format": "mc4",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.28750000000000003,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "C6_TOP_DEX",
+      "format": "ab",
+      "decision": "reject",
+      "reason": "difficulty_mismatch",
+      "score": 0.19749999999999998,
+      "target": "medium"
+    },
+    {
+      "slot": "C",
+      "template": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.35303123991145,
+      "target": "medium"
+    },
+    {
+      "slot": "D",
+      "template": "C3_ATH_TIMING",
+      "format": "mc6",
+      "decision": "selected",
+      "score": 0.47750000000000004,
+      "target": "hard"
+    },
+    {
+      "slot": "E",
+      "template": "C6_TOP_DEX",
+      "format": "mc4",
+      "decision": "selected",
+      "score": 0.28750000000000003,
+      "target": "easy"
+    }
+  ]
+}

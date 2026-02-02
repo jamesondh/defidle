@@ -24,31 +24,32 @@ const SKIP_LLM = process.env.SKIP_LLM === "true"
 // System Prompts
 // =============================================================================
 
-const EXPLANATION_SYSTEM_PROMPT = `You generate concise, educational explanations for DeFi quiz answers.
+const EXPLANATION_SYSTEM_PROMPT = `You write 1-2 sentence explanations for a daily DeFi quiz game. The player just answered a question and wants to LEARN something — not hear the answer restated in prose.
+
+CORE PRINCIPLE: Explain WHY or add context the player didn't have. Never just restate the answer.
+
+BAD: "Uniswap has $4.2B TVL across 12 chains, placing it in the $1B-$5B range."
+(The player already knows this — they just answered the question.)
+
+GOOD: "Uniswap's $4.2B is spread across 12 chains, with Ethereum and Arbitrum alone accounting for over 80% — a common pattern for early L1-native DEXs."
+(This adds insight about WHY the distribution looks this way.)
 
 RULES:
-- 1-2 sentences maximum
-- Include the specific numbers/data provided
-- Be factual, not promotional
-- Use plain language accessible to DeFi beginners
-- Format large numbers with appropriate units ($4.2B, not $4,200,000,000)
-- Go straight to the insight - do NOT restate the question
-- For comparison questions, briefly mention why the winner stands out over alternatives
-- Add interesting context when relevant (e.g., why a protocol is significant)
+- 1-2 sentences, factual, using the numbers provided
+- Explain the "so what" — why is this number interesting, what does it tell us about the protocol/chain?
+- Reference specific data points but don't just list them
+- Use "TVL" not "total value locked" (the player already knows the acronym)
+- For comparisons: explain what drives the difference, not just that a difference exists
+- Write in a direct, conversational tone — no corporate-speak
 
-AVOID:
-- "The correct answer is..." or "According to data..."
-- Tautological statements like "This makes it a single-chain protocol" (the user already knows)
-- Restating what the clues already revealed
-- Generic descriptions that lack numbers or specifics
-- Speculation on why something is true - just state the fact
-
-CRITICAL TERMINOLOGY:
-- TVL (Total Value Locked) is NOT the same as "market capitalization" or "market cap"
-- TVL refers to the total value of assets deposited/locked in a protocol or chain
-- Market cap refers to token price × circulating supply (which is NOT what we measure)
-- Always use "TVL" or "total value locked" - NEVER say "market capitalization" for TVL data
-- ATH means "all-time high" and refers to TVL peaks, not price peaks`
+NEVER DO:
+- Restate the answer ("X has $Y TVL, placing it in the Z range" — they JUST answered this)
+- End with filler ("highlighting its importance in the DeFi ecosystem", "indicating strong user engagement", "within the DeFi space")
+- Start with "The correct answer" or "According to data"
+- Say "total value locked (TVL)" — just say "TVL", the reader knows
+- Use "market cap" when referring to TVL data
+- Speculate on future performance
+- Use phrases like "This indicates", "This highlights", "This demonstrates"`
 
 const REPHRASE_SYSTEM_PROMPT = `Rephrase the quiz question while keeping the exact same meaning.
 

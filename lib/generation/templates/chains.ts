@@ -6,6 +6,7 @@
 
 import type { QuestionFormat, TemplateContext } from "@/lib/types/episode"
 import type { ChainPoolEntry } from "@/lib/types/pools"
+import type { ProtocolListEntry } from "@/lib/types/defillama"
 import { isExcludedCategory } from "../constants"
 import {
   type TemplateConfig,
@@ -33,6 +34,26 @@ import {
   percentChangeFromChainHistory,
 } from "../metrics"
 import { deterministicShuffle, createRng } from "../rng"
+
+// =============================================================================
+// Helpers
+// =============================================================================
+
+/**
+ * Get chain-specific TVL for a protocol.
+ * Uses chainTvls map (from DefiLlama /protocols endpoint) which breaks down TVL per chain.
+ * Falls back to 0 if chain-specific data isn't available.
+ */
+function getChainSpecificTvl(protocol: ProtocolListEntry, chainSlug: string): number {
+  if (!protocol.chainTvls) return 0
+  // chainTvls keys can vary in casing, try exact match first then case-insensitive
+  if (protocol.chainTvls[chainSlug] !== undefined) return protocol.chainTvls[chainSlug]
+  const lower = chainSlug.toLowerCase()
+  for (const [key, val] of Object.entries(protocol.chainTvls)) {
+    if (key.toLowerCase() === lower) return val
+  }
+  return 0
+}
 
 // =============================================================================
 // C1: Chain Fingerprint Guess
@@ -546,12 +567,14 @@ const C4_GROWTH_RANKING: TemplateConfig<C4Data> = {
     // Build candidate pool: always include the topic, plus other chains
     // We need to ensure the topic is one of the 4 choices
     const otherChains = withGrowth.filter((c) => c.slug !== topic.slug)
-    
-    // Get 3 other chains to include (prioritize top growers for difficulty)
-    const shuffledOthers = deterministicShuffle(otherChains.slice(0, 10), `${seed}:distractors`)
-    const selectedOthers = shuffledOthers.slice(0, 3).map((c) => ({ 
-      name: c.name, 
-      change30d: c.change30d 
+
+    // Pick from a wider pool (top 15 instead of 10) to get more variety in answers.
+    // The seed changes daily so different chains get selected each episode.
+    const candidatePool = otherChains.slice(0, 15)
+    const shuffledOthers = deterministicShuffle(candidatePool, `${seed}:distractors`)
+    const selectedOthers = shuffledOthers.slice(0, 3).map((c) => ({
+      name: c.name,
+      change30d: c.change30d
     }))
     
     if (selectedOthers.length < 3) return null
@@ -1163,16 +1186,19 @@ const C11_TOP_PROTOCOL_TVL: TemplateConfig<C11Data> = {
   getFormats(ctx) {
     const topic = ctx.topic as ChainPoolEntry
     const list = ctx.data.protocolList!
+    const chainSlugLower = topic.slug.toLowerCase()
 
-    // Get DeFi protocols on this chain sorted by TVL (exclude CEXs)
+    // Get DeFi protocols on this chain sorted by chain-specific TVL (exclude CEXs)
     const onChain = list
-      .filter((p) => p.chains?.some((c) => c.toLowerCase() === topic.slug.toLowerCase()))
+      .filter((p) => p.chains?.some((c) => c.toLowerCase() === chainSlugLower))
       .filter((p) => !isExcludedCategory(p.category))
-      .sort((a, b) => (b.tvl ?? 0) - (a.tvl ?? 0))
+      .map((p) => ({ ...p, chainTvl: getChainSpecificTvl(p, topic.slug) }))
+      .filter((p) => p.chainTvl > 0)
+      .sort((a, b) => b.chainTvl - a.chainTvl)
 
     if (onChain.length < 2) return ["ab"]
 
-    const margin = abMargin(onChain[0].tvl ?? 0, onChain[1].tvl ?? 0)
+    const margin = abMargin(onChain[0].chainTvl, onChain[1].chainTvl)
     if (margin !== null && margin < 0.1) return ["ab"]
     // Add mc6 for harder difficulty when there are enough protocols
     if (onChain.length >= 6) return ["mc6", "mc4", "ab"]
@@ -1182,22 +1208,29 @@ const C11_TOP_PROTOCOL_TVL: TemplateConfig<C11Data> = {
   extract(ctx) {
     const topic = ctx.topic as ChainPoolEntry
     const list = ctx.data.protocolList!
+    const chainSlugLower = topic.slug.toLowerCase()
 
-    // Filter to DeFi protocols only (exclude CEXs) - we want actual DeFi protocols on chain
+    // Filter to DeFi protocols on this chain, using chain-specific TVL (not global)
     const onChain = list
-      .filter((p) => p.chains?.some((c) => c.toLowerCase() === topic.slug.toLowerCase()))
+      .filter((p) => p.chains?.some((c) => c.toLowerCase() === chainSlugLower))
       .filter((p) => !isExcludedCategory(p.category))
-      .sort((a, b) => (b.tvl ?? 0) - (a.tvl ?? 0))
+      .map((p) => {
+        // Use chainTvls for chain-specific TVL, fall back to global if not available
+        const chainTvl = getChainSpecificTvl(p, topic.slug)
+        return { ...p, chainTvl }
+      })
+      .filter((p) => p.chainTvl > 0)
+      .sort((a, b) => b.chainTvl - a.chainTvl)
 
     if (onChain.length < 2) return null
 
     const topProtocol = onChain[0].name
-    const topTvl = onChain[0].tvl ?? 0
-    const top2Margin = abMargin(topTvl, onChain[1].tvl ?? 0) ?? 0
+    const topTvl = onChain[0].chainTvl
+    const top2Margin = abMargin(topTvl, onChain[1].chainTvl) ?? 0
 
     const leaderboard = onChain.slice(0, 6).map((p) => ({
       name: p.name,
-      tvl: p.tvl ?? 0,
+      tvl: p.chainTvl,
     }))
 
     return { topProtocol, topTvl, leaderboard, top2Margin }
@@ -1273,14 +1306,16 @@ const C12_CATEGORY_DOMINANCE: TemplateConfig<C12Data> = {
     const topic = ctx.topic as ChainPoolEntry
     const list = ctx.data.protocolList!
 
-    // Aggregate TVL by category for protocols on this chain
+    // Aggregate chain-specific TVL by category for protocols on this chain
     const categoryMap = new Map<string, number>()
     for (const p of list) {
       if (!p.chains?.some((c) => c.toLowerCase() === topic.slug.toLowerCase())) continue
       if (!p.category) continue
 
+      const chainTvl = getChainSpecificTvl(p, topic.slug)
+      if (chainTvl <= 0) continue
       const current = categoryMap.get(p.category) ?? 0
-      categoryMap.set(p.category, current + (p.tvl ?? 0))
+      categoryMap.set(p.category, current + chainTvl)
     }
 
     const sorted = Array.from(categoryMap.entries())
@@ -1543,16 +1578,19 @@ const C14_TVL_DOMINANCE: TemplateConfig<C14Data> = {
   getFormats(ctx) {
     const topic = ctx.topic as ChainPoolEntry
     const list = ctx.data.protocolList!
+    const chainSlugLower = topic.slug.toLowerCase()
 
-    // Get top DeFi protocol on this chain (exclude CEXs)
+    // Get top DeFi protocol on this chain using chain-specific TVL (exclude CEXs)
     const onChain = list
-      .filter((p) => p.chains?.some((c) => c.toLowerCase() === topic.slug.toLowerCase()))
+      .filter((p) => p.chains?.some((c) => c.toLowerCase() === chainSlugLower))
       .filter((p) => !isExcludedCategory(p.category))
-      .sort((a, b) => (b.tvl ?? 0) - (a.tvl ?? 0))
+      .map((p) => ({ ...p, chainTvl: getChainSpecificTvl(p, topic.slug) }))
+      .filter((p) => p.chainTvl > 0)
+      .sort((a, b) => b.chainTvl - a.chainTvl)
 
     if (onChain.length < 1) return []
 
-    const topTvl = onChain[0].tvl ?? 0
+    const topTvl = onChain[0].chainTvl
     const chainTvl = topic.tvl
     const dominance = chainTvl > 0 ? topTvl / chainTvl : 0
 
@@ -1564,17 +1602,20 @@ const C14_TVL_DOMINANCE: TemplateConfig<C14Data> = {
   extract(ctx) {
     const topic = ctx.topic as ChainPoolEntry
     const list = ctx.data.protocolList!
+    const chainSlugLower = topic.slug.toLowerCase()
 
-    // Filter to DeFi protocols only (exclude CEXs)
+    // Filter to DeFi protocols only, using chain-specific TVL (exclude CEXs)
     const onChain = list
-      .filter((p) => p.chains?.some((c) => c.toLowerCase() === topic.slug.toLowerCase()))
+      .filter((p) => p.chains?.some((c) => c.toLowerCase() === chainSlugLower))
       .filter((p) => !isExcludedCategory(p.category))
-      .sort((a, b) => (b.tvl ?? 0) - (a.tvl ?? 0))
+      .map((p) => ({ ...p, chainTvl: getChainSpecificTvl(p, topic.slug) }))
+      .filter((p) => p.chainTvl > 0)
+      .sort((a, b) => b.chainTvl - a.chainTvl)
 
     if (onChain.length < 1) return null
 
     const topProtocol = onChain[0].name
-    const topProtocolTvl = onChain[0].tvl ?? 0
+    const topProtocolTvl = onChain[0].chainTvl
     const chainTvl = topic.tvl
     const dominancePercent = chainTvl > 0 ? (topProtocolTvl / chainTvl) * 100 : 0
     const bucketIndex = getDominanceBucketIndex(dominancePercent / 100)

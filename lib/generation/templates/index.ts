@@ -246,10 +246,9 @@ export const PROTOCOL_MATRIX: TemplateMatrix = {
     p29CategoryGrowth, // Category TVL growth comparison
   ],
   D: [
-    p31PreciseRank, // Hard: exact TVL rank range (high priority for hard slot)
+    p4ATHTiming,
     p32ExchangeComparison, // Hard: CEX/DEX specific comparison
     p33MultiRanking, // Hard: rank 3 protocols by TVL
-    p4ATHTiming,
     p5FeesVsRevenue,
     p2CrossChainDominance,
     p11FeesTrend,
@@ -260,6 +259,7 @@ export const PROTOCOL_MATRIX: TemplateMatrix = {
     p20AthDistance, // Single-chain friendly
     p27DerivativesRanking, // For derivatives protocols
     p29CategoryGrowth, // Category TVL growth comparison
+    p31PreciseRank, // Moved to low priority — was dominating slot D in every episode
   ],
   E: [
     p6TVLTrend,
