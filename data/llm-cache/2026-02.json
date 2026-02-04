@@ -198,5 +198,30 @@
     "text": "The Lightning Network operates solely on Bitcoin, leveraging its robust security and established user base to facilitate faster and cheaper transactions. This singular focus allows it to optimize performance specifically for Bitcoin's unique characteristics, making it a critical layer for scaling the network.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-02-02T13:33:18.967Z"
+  },
+  "2026-02-04|protocol|sentora|A|P1_FINGERPRINT|explanation|490e96c46fb799f1": {
+    "text": "Sentora has achieved $1.2B in TVL across Solana and Ethereum, positioning itself as a significant player among Risk Curators. Its presence on two major chains allows it to tap into diverse liquidity pools and user bases, enhancing its overall resilience and appeal in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-04T00:28:03.660Z"
+  },
+  "2026-02-04|protocol|sentora|B|P2_CROSSCHAIN|explanation|b85494ad7477eb0f": {
+    "text": "Sentora's $820M TVL on Ethereum dwarfs the $387M on Solana, reflecting Ethereum's stronger ecosystem and user adoption for cross-chain projects. The 53% margin indicates a significant preference for deploying liquidity on Ethereum, likely due to its established DeFi infrastructure and broader range of available protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-04T00:28:06.066Z"
+  },
+  "2026-02-04|protocol|sentora|C|P5_FEES_REVENUE|explanation|98a61f78b55138fe": {
+    "text": "Sentora generated $236K in fees over the past week, but only $15K of that translated into revenue, indicating that its revenue is just 6.5% of total fees. This suggests that while the platform is attracting significant transaction volume, its profitability may be limited by high operational costs or competitive fee structures.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-04T00:28:07.820Z"
+  },
+  "2026-02-04|protocol|sentora|D|P33_MULTI_RANKING|explanation|e722ffcd9f61d4fe": {
+    "text": "Sentora, with a TVL of $1.2B, ranks just behind Gauntlet's $1.5B, showcasing its strong position among risk curators in DeFi. The significant gap to Hyperithm's $175M indicates that Sentora and Gauntlet are leading the way in managing risk, likely due to their established reputations and effective risk management strategies.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-04T00:28:10.357Z"
+  },
+  "2026-02-04|protocol|sentora|E|P3_CONCENTRATION|explanation|e954c9598fc8610a": {
+    "text": "Sentora's TVL of $1.2B is heavily concentrated on Ethereum, which holds 68% of its total TVL at $820M. This significant reliance on a single chain suggests that Sentora's growth and user engagement are closely tied to Ethereum's performance and ecosystem developments.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-04T00:28:11.366Z"
   }
 }
