@@ -1,0 +1,138 @@
+{
+  "episodeId": "2026-02-05:chain:Plasma",
+  "dateUtc": "2026-02-05",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Plasma",
+    "name": "Plasma"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 10",
+        "Native token: XPL",
+        "Protocols: 50-100"
+      ],
+      "choices": [
+        "BSC",
+        "Aptos",
+        "Polygon",
+        "Cronos",
+        "Plasma",
+        "Tron"
+      ],
+      "answerIndex": 4,
+      "explanation": "Plasma ranks 7th in TVL with between $1B and $5B, indicating a solid presence in the DeFi space, particularly with its 58 protocols. This diverse range of protocols suggests that Plasma is effectively attracting various projects, which can enhance its ecosystem's utility and user engagement.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4675
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Plasma or Tron?",
+      "choices": [
+        "Tron",
+        "Plasma"
+      ],
+      "answerIndex": 0,
+      "explanation": "Tron leads with $4.4B TVL, outperforming Plasma's $3.0B by 31%, which reflects its broader adoption and more robust ecosystem of dApps and users. This disparity often arises from Tron's focus on scalability and user-friendly features, attracting more liquidity.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.3104910407684434,
+        "volatility": null
+      },
+      "difficultyScore": 0.19749999999999998
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Plasma?",
+      "choices": [
+        "Uniswap V3",
+        "Curve DEX",
+        "Fluid DEX",
+        "Balancer V3"
+      ],
+      "answerIndex": 2,
+      "explanation": "Fluid DEX leads on Plasma with $9M in volume, outpacing Uniswap V3 at $8M, which is notable given Uniswap's dominance in many other chains. The significant gap between Fluid DEX and Balancer V3 ($919K) and Curve DEX ($173K) highlights Fluid's strong position in a less competitive market.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.16051848760986903,
+        "volatility": null
+      },
+      "difficultyScore": 0.3948778148681572
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Plasma",
+        "Scroll",
+        "Katana",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Scroll's impressive growth of 9.3% contrasts sharply with Plasma's decline of 3.0%, as well as Katana's 4.7% drop and Ethereum's significant 12.4% decrease. This highlights Scroll's strong performance in a challenging environment for other chains, indicating a shift in user preference or activity towards Scroll.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.12369555086946535,
+        "volatility": null
+      },
+      "difficultyScore": 0.49906533895664157
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C7_CHAIN_TVL_BAND",
+      "format": "mc4",
+      "prompt": "Which TVL range fits Plasma?",
+      "choices": [
+        "<$100M",
+        "$100M-$500M",
+        "$500M-$2B",
+        "$2B-$10B",
+        ">$10B"
+      ],
+      "answerIndex": 3,
+      "explanation": "Plasma's $3.0B TVL places it solidly in the $1B-$5B range, reflecting its growing adoption as a Layer 2 scaling solution that enhances transaction throughput and reduces fees on Ethereum. This level of TVL suggests that users are increasingly seeking efficient alternatives to the congestion often seen on the Ethereum mainnet.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.6667436858930591,
+        "volatility": null
+      },
+      "difficultyScore": 0.28750000000000003
+    }
+  ],
+  "generatedAt": "2026-02-05T00:30:47.948Z"
+}

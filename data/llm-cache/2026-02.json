@@ -223,5 +223,20 @@
     "text": "Sentora's TVL of $1.2B is heavily concentrated on Ethereum, which holds 68% of its total TVL at $820M. This significant reliance on a single chain suggests that Sentora's growth and user engagement are closely tied to Ethereum's performance and ecosystem developments.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-02-04T00:28:11.366Z"
+  },
+  "2026-02-05|chain|Plasma|C|C6_TOP_DEX|explanation|5b064fe5d31a04f1": {
+    "text": "Fluid DEX leads on Plasma with $9M in volume, outpacing Uniswap V3 at $8M, which is notable given Uniswap's dominance in many other chains. The significant gap between Fluid DEX and Balancer V3 ($919K) and Curve DEX ($173K) highlights Fluid's strong position in a less competitive market.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-05T00:30:42.645Z"
+  },
+  "2026-02-05|chain|Plasma|D|C4_GROWTH_RANKING|explanation|f0555241867f1070": {
+    "text": "Scroll's impressive growth of 9.3% contrasts sharply with Plasma's decline of 3.0%, as well as Katana's 4.7% drop and Ethereum's significant 12.4% decrease. This highlights Scroll's strong performance in a challenging environment for other chains, indicating a shift in user preference or activity towards Scroll.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-05T00:30:45.277Z"
+  },
+  "2026-02-05|chain|Plasma|E|C7_CHAIN_TVL_BAND|explanation|eee2a00d4e5a5194": {
+    "text": "Plasma's $3.0B TVL places it solidly in the $1B-$5B range, reflecting its growing adoption as a Layer 2 scaling solution that enhances transaction throughput and reduces fees on Ethereum. This level of TVL suggests that users are increasingly seeking efficient alternatives to the congestion often seen on the Ethereum mainnet.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-05T00:30:47.947Z"
   }
 }
