@@ -238,5 +238,20 @@
     "text": "Plasma's $3.0B TVL places it solidly in the $1B-$5B range, reflecting its growing adoption as a Layer 2 scaling solution that enhances transaction throughput and reduces fees on Ethereum. This level of TVL suggests that users are increasingly seeking efficient alternatives to the congestion often seen on the Ethereum mainnet.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-02-05T00:30:47.947Z"
+  },
+  "2026-02-06|protocol|jupiter-perpetual-exchange|A|P1_FINGERPRINT|explanation|107a790e3c48c469": {
+    "text": "Jupiter Perpetual Exchange has a TVL of $927M on Solana, making it a significant player in the derivatives space, especially given that it's operating on a single chain. This concentration can lead to lower liquidity fragmentation compared to multi-chain platforms, allowing for potentially more efficient trading experiences.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-06T00:28:36.764Z"
+  },
+  "2026-02-06|protocol|jupiter-perpetual-exchange|B|P13_TVL_RANK_COMPARISON|explanation|be0064037b50988f": {
+    "text": "Gauntlet's $1.4B TVL significantly outpaces Jupiter Perpetual Exchange's $927M, reflecting a 32.3% margin that suggests stronger liquidity and user trust in Gauntlet's offerings. This disparity often indicates that Gauntlet may have more effective incentives or features attracting users compared to Jupiter.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-06T00:28:38.773Z"
+  },
+  "2026-02-06|protocol|jupiter-perpetual-exchange|C|P5_FEES_REVENUE|explanation|1864da385ae770c8": {
+    "text": "Jupiter Perpetual Exchange generated $18M in fees over the past week, with $4M of that translating into revenue, which means they retain about 25% of their fees as profit. This fee-to-revenue ratio suggests effective cost management and a solid business model in the competitive perpetual trading space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-06T00:28:40.805Z"
   }
 }
