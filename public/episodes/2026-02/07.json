@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-02-07:chain:Sui",
+  "dateUtc": "2026-02-07",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Sui",
+    "name": "Sui"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: SUI",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "Plasma",
+        "Avalanche",
+        "Aptos",
+        "Sui",
+        "Base",
+        "Hyperliquid L1"
+      ],
+      "answerIndex": 3,
+      "explanation": "Sui ranks 13th in TVL with between $500M and $1B, which reflects its growing ecosystem of 106 protocols, placing it firmly in the 100-200 protocol range. This diverse array of projects suggests strong developer interest and potential for innovation on the Sui platform.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Sui or Ink?",
+      "choices": [
+        "Ink",
+        "Sui"
+      ],
+      "answerIndex": 1,
+      "explanation": "Sui's $726M TVL surpasses Ink's $457M by 37%, showcasing its stronger adoption and user confidence in its infrastructure and features. This difference often reflects Sui's ability to attract more liquidity and innovative projects compared to Ink.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.3699976151919089,
+        "volatility": null
+      },
+      "difficultyScore": 0.2095
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Sui?",
+      "choices": [
+        "Cetus CLMM",
+        "DeepBook V3",
+        "Bluefin Spot",
+        "Momentum"
+      ],
+      "answerIndex": 0,
+      "explanation": "Cetus CLMM leads Sui with $71M in volume, significantly outpacing Bluefin Spot at $64M and DeepBook V3 at $44M. This dominance suggests that Cetus CLMM is becoming the go-to platform for traders on Sui, reflecting its appeal and potentially more robust liquidity compared to its competitors.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.10029819301971714,
+        "volatility": null
+      },
+      "difficultyScore": 0.4791421683763395
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Sui hit its all-time high TVL?",
+      "choices": [
+        "Jun 2025",
+        "Jul 2023",
+        "May 2023",
+        "Sep 2025",
+        "Oct 2025",
+        "Nov 2023"
+      ],
+      "answerIndex": 4,
+      "explanation": "Sui reached its all-time high (ATH) of $2.6B in October 2025, which is notable as it came after a period of lower valuations, with May 2023 seeing much less traction. The other months, like September and June 2025, were still building momentum, but October marked a significant breakthrough for Sui in the DeFi landscape.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C7_CHAIN_TVL_BAND",
+      "format": "mc4",
+      "prompt": "Which TVL range fits Sui?",
+      "choices": [
+        "<$100M",
+        "$100M-$500M",
+        "$500M-$2B",
+        "$2B-$10B",
+        ">$10B"
+      ],
+      "answerIndex": 2,
+      "explanation": "Sui's $726M TVL places it in the $500M-$1B band, reflecting its growing adoption as a Layer 1 blockchain that focuses on high throughput and low latency, which are attractive features for DeFi projects looking for scalability. This level of TVL indicates a solid foundation for further development and user engagement in the ecosystem.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.6227953307889144,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-02-07T00:28:46.905Z"
+}

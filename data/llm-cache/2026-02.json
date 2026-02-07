@@ -253,5 +253,10 @@
     "text": "Jupiter Perpetual Exchange generated $18M in fees over the past week, with $4M of that translating into revenue, which means they retain about 25% of their fees as profit. This fee-to-revenue ratio suggests effective cost management and a solid business model in the competitive perpetual trading space.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-02-06T00:28:40.805Z"
+  },
+  "2026-02-07|chain|Sui|C|C6_TOP_DEX|explanation|00d1d69c777db791": {
+    "text": "Cetus CLMM leads Sui with $71M in volume, significantly outpacing Bluefin Spot at $64M and DeepBook V3 at $44M. This dominance suggests that Cetus CLMM is becoming the go-to platform for traders on Sui, reflecting its appeal and potentially more robust liquidity compared to its competitors.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-07T00:28:46.904Z"
   }
 }
