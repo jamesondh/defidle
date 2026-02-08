@@ -258,5 +258,20 @@
     "text": "Cetus CLMM leads Sui with $71M in volume, significantly outpacing Bluefin Spot at $64M and DeepBook V3 at $44M. This dominance suggests that Cetus CLMM is becoming the go-to platform for traders on Sui, reflecting its appeal and potentially more robust liquidity compared to its competitors.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-02-07T00:28:46.904Z"
+  },
+  "2026-02-08|protocol|lightning-network|A|P1_FINGERPRINT|explanation|ebab69a90c0e6c89": {
+    "text": "The Lightning Network, with a TVL of $356M on Bitcoin, is a crucial layer for enabling faster and cheaper transactions, which is essential for scaling Bitcoin's payment capabilities. Its single-chain focus reflects its specialized role in enhancing Bitcoin's utility rather than competing with multi-chain DeFi protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-08T00:38:43.030Z"
+  },
+  "2026-02-08|protocol|lightning-network|C|P20_ATH_DISTANCE|explanation|517995c279a65884": {
+    "text": "The Lightning Network's current TVL of $356M is 34% below its all-time high of $540M, indicating that while it has seen significant adoption, it still has room to grow and recover to previous peaks. This distance from its ATH suggests fluctuations in user engagement and market conditions impacting its utilization for Bitcoin transactions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-08T00:38:43.882Z"
+  },
+  "2026-02-08|protocol|lightning-network|D|P33_MULTI_RANKING|explanation|6626033508d3c364": {
+    "text": "The Lightning Network leads with a TVL of $356M, significantly outpacing Superfluid and Sablier Lockup, which have $8M and $6M respectively. This stark difference underscores the Lightning Network's role as a scalable solution for fast and low-cost Bitcoin transactions, making it a preferred choice for payments in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-08T00:38:45.532Z"
   }
 }

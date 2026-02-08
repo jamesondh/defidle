@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-02-08:protocol:lightning-network",
+  "dateUtc": "2026-02-08",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "lightning-network",
+    "name": "Lightning Network",
+    "category": "Payments"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Payments",
+        "Chains: single-chain",
+        "Active since: 2021",
+        "TVL: $100M-$500M",
+        "7d change: down >10%"
+      ],
+      "choices": [
+        "Veda",
+        "Venus Core Pool",
+        "Lightning Network",
+        "Raydium AMM"
+      ],
+      "answerIndex": 2,
+      "explanation": "The Lightning Network, with a TVL of $356M on Bitcoin, is a crucial layer for enabling faster and cheaper transactions, which is essential for scaling Bitcoin's payment capabilities. Its single-chain focus reflects its specialized role in enhancing Bitcoin's utility rather than competing with multi-chain DeFi protocols.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "long_tail",
+        "margin": null,
+        "volatility": 0.18828054478387068
+      },
+      "difficultyScore": 0.4238280544783871
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Lightning Network?",
+      "choices": [
+        "Payments",
+        "Gaming",
+        "Reserve Currency",
+        "Luck Games"
+      ],
+      "answerIndex": 0,
+      "explanation": "The Lightning Network is a layer-2 solution built on Bitcoin that enables faster and cheaper transactions by allowing users to create off-chain payment channels. This innovation addresses Bitcoin's scalability issues, making it more practical for everyday payments.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "long_tail",
+        "margin": 0.5,
+        "volatility": 0.18828054478387068
+      },
+      "difficultyScore": 0.33382805447838715
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Lightning Network's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 1,
+      "explanation": "The Lightning Network's current TVL of $356M is 34% below its all-time high of $540M, indicating that while it has seen significant adoption, it still has room to grow and recover to previous peaks. This distance from its ATH suggests fluctuations in user engagement and market conditions impacting its utilization for Bitcoin transactions.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "long_tail",
+        "margin": 0.36108989216749676,
+        "volatility": 0.18828054478387068
+      },
+      "difficultyScore": 0.39382805447838715
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Payments protocols from highest to lowest TVL.",
+      "choices": [
+        "Superfluid > Lightning Network > Sablier Lockup",
+        "Sablier Lockup > Superfluid > Lightning Network",
+        "Lightning Network > Superfluid > Sablier Lockup",
+        "Sablier Lockup > Lightning Network > Superfluid"
+      ],
+      "answerIndex": 2,
+      "explanation": "The Lightning Network leads with a TVL of $356M, significantly outpacing Superfluid and Sablier Lockup, which have $8M and $6M respectively. This stark difference underscores the Lightning Network's role as a scalable solution for fast and low-cost Bitcoin transactions, making it a preferred choice for payments in the DeFi space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "long_tail",
+        "margin": 0.3212142822761772,
+        "volatility": 0.18828054478387068
+      },
+      "difficultyScore": 0.4338280544783871
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Lightning Network deployed on?",
+      "choices": [
+        "Solana",
+        "Polygon",
+        "Arbitrum",
+        "Bitcoin"
+      ],
+      "answerIndex": 3,
+      "explanation": "The Lightning Network operates solely on Bitcoin, leveraging its robust security and established user base to facilitate faster and cheaper transactions. This singular focus allows it to optimize performance specifically for Bitcoin's unique characteristics, making it a critical layer for scaling the network.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "long_tail",
+        "margin": 0.4,
+        "volatility": 0.18828054478387068
+      },
+      "difficultyScore": 0.33382805447838715
+    }
+  ],
+  "generatedAt": "2026-02-08T00:38:45.532Z"
+}
