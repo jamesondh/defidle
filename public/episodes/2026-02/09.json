@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-02-09:protocol:base-bridge",
+  "dateUtc": "2026-02-09",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "base-bridge",
+    "name": "Base Bridge",
+    "category": "Canonical Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Canonical Bridge",
+        "Chains: single-chain",
+        "TVL rank: top 25"
+      ],
+      "choices": [
+        "B2 Buzz",
+        "Base Bridge",
+        "Hyperliquid Bridge",
+        "Sky Lending",
+        "Arbitrum Bridge",
+        "Starknet Bridge"
+      ],
+      "answerIndex": 1,
+      "explanation": "Base Bridge, a canonical bridge on Ethereum, has a notable $2.6B in TVL, reflecting its strong role in facilitating asset transfers within a single chain. This concentration on Ethereum allows it to leverage the network's established user base and liquidity, making it a key player in the bridging landscape.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.24951535095528996
+      },
+      "difficultyScore": 0.479451535095529
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Base Bridge?",
+      "choices": [
+        "Canonical Bridge",
+        "Prediction Market",
+        "NFT Marketplace",
+        "Decentralized BTC"
+      ],
+      "answerIndex": 0,
+      "explanation": "Base Bridge is categorized as a Canonical Bridge, meaning it serves as a primary connection point for transferring assets between different blockchains, ensuring that users can move their tokens seamlessly and securely across ecosystems. This functionality is crucial for enhancing liquidity and interoperability within the DeFi space.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.5,
+        "volatility": 0.24951535095528996
+      },
+      "difficultyScore": 0.299451535095529
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Base Bridge's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 2,
+      "explanation": "Base Bridge's current TVL of $2.6B is 64% below its all-time high of $7.0B, indicating a significant drop that could reflect changes in user activity or competition in the bridging space. This distance from ATH suggests that while the protocol has seen substantial growth, it may need to innovate or improve its offerings to regain previous highs.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.4574388066434332,
+        "volatility": 0.24951535095528996
+      },
+      "difficultyScore": 0.359451535095529
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Canonical Bridge protocols from highest to lowest TVL.",
+      "choices": [
+        "Base Bridge > Linea Bridge > Arbitrum Bridge",
+        "Arbitrum Bridge > Linea Bridge > Base Bridge",
+        "Linea Bridge > Arbitrum Bridge > Base Bridge",
+        "Arbitrum Bridge > Base Bridge > Linea Bridge"
+      ],
+      "answerIndex": 3,
+      "explanation": "Base Bridge's $2.6B TVL positions it as a strong contender in the canonical bridge category, significantly outpacing Linea Bridge's $373M. This reflects the growing adoption of Base as a layer-2 solution, attracting users looking for efficient cross-chain transactions.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.26411687800353745,
+        "volatility": 0.24951535095528996
+      },
+      "difficultyScore": 0.399451535095529
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "Base Bridge's TVL increased over the past 30 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "Base Bridge's TVL has decreased by 26.6% to $2.6B, which may reflect shifting user preferences or competitive pressures from other bridging solutions in the DeFi landscape. This decline could suggest that users are exploring alternative options or that market conditions are impacting liquidity across bridges.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.2664827832603905,
+        "volatility": 0.24951535095528996
+      },
+      "difficultyScore": 0.119451535095529
+    }
+  ],
+  "generatedAt": "2026-02-09T00:31:52.473Z"
+}
