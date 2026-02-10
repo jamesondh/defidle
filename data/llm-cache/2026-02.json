@@ -298,5 +298,30 @@
     "text": "Base Bridge's TVL has decreased by 26.6% to $2.6B, which may reflect shifting user preferences or competitive pressures from other bridging solutions in the DeFi landscape. This decline could suggest that users are exploring alternative options or that market conditions are impacting liquidity across bridges.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-02-09T00:31:52.472Z"
+  },
+  "2026-02-10|chain|Aptos|A|C1_FINGERPRINT|explanation|041efc8da5405748": {
+    "text": "Aptos ranks 16th in TVL with between $100M and $500M, which reflects its growing ecosystem of around 90 protocols, positioning it as a competitive player among newer Layer 1 blockchains. This level of protocol diversity suggests a healthy development environment, attracting both developers and users.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-10T00:36:21.597Z"
+  },
+  "2026-02-10|chain|Aptos|B|C2_CHAIN_COMPARISON|explanation|7d507f1591fc4945": {
+    "text": "Sui's $597M TVL surpasses Aptos's $320M by 46.4%, reflecting Sui's stronger adoption and user engagement in the DeFi space. This difference may stem from Sui's unique features or ecosystem partnerships that attract more liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-10T00:36:23.669Z"
+  },
+  "2026-02-10|chain|Aptos|C|C6_TOP_DEX|explanation|0d0ab8d3f99d5fe0": {
+    "text": "Hyperion leads the DEX scene on Aptos with $19M in volume, significantly outpacing its closest competitor, ThalaSwap V3, which has $17M. This gap illustrates Hyperion's strong market position and user preference, especially when compared to smaller players like Tapp Exchange at $4M and ThalaSwap V2 at just $123K.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-10T00:36:26.104Z"
+  },
+  "2026-02-10|chain|Aptos|D|C3_ATH_TIMING|explanation|7f70ac6e5bcc0910": {
+    "text": "Aptos reached its all-time high (ATH) of $1.3B in December 2024, a notable achievement considering that earlier months like May 2023 saw much lower valuations, reflecting the protocol's growth trajectory and market conditions. The other dates, such as March and August 2024, were still building momentum but hadn't yet captured the peak interest and investment that December did.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-10T00:36:28.691Z"
+  },
+  "2026-02-10|chain|Aptos|E|C4_GROWTH_RANKING|explanation|92da34c682cc5a6a": {
+    "text": "Kava's impressive 51.9% growth stands out sharply against other chains like Polygon, which only saw a modest 5.0% increase, while Ethereum and Aptos experienced declines of 20.2% and 28.5%, respectively. This stark contrast highlights Kava's strong performance in a challenging environment for many other platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-10T00:36:30.431Z"
   }
 }
