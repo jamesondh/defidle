@@ -323,5 +323,30 @@
     "text": "Kava's impressive 51.9% growth stands out sharply against other chains like Polygon, which only saw a modest 5.0% increase, while Ethereum and Aptos experienced declines of 20.2% and 28.5%, respectively. This stark contrast highlights Kava's strong performance in a challenging environment for many other platforms.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-02-10T00:36:30.431Z"
+  },
+  "2026-02-11|protocol|fluid-lending|A|P1_FINGERPRINT|explanation|112df94ddb5d5de8": {
+    "text": "Fluid Lending's $1.3B TVL across five chains, including Ethereum and Arbitrum, showcases its ability to attract liquidity in diverse ecosystems, which is crucial for lending protocols to maintain competitive interest rates and attract borrowers. The presence on multiple chains also indicates a strategic approach to tap into varying user bases and liquidity pools.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-11T00:35:40.445Z"
+  },
+  "2026-02-11|protocol|fluid-lending|B|P2_CROSSCHAIN|explanation|565ba6b075327f19": {
+    "text": "Fluid Lending has a significant lead on Ethereum with $719M in TVL compared to Plasma's $367M, reflecting Ethereum's robust ecosystem and user base that drive higher liquidity and lending activity. The 49% margin indicates a strong preference for Ethereum-based lending solutions over those on Plasma, likely due to better integration with other DeFi protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-11T00:35:42.421Z"
+  },
+  "2026-02-11|protocol|fluid-lending|C|P5_FEES_REVENUE|explanation|a3508f524c6420d7": {
+    "text": "Fluid Lending generated $141K in revenue over the past week, which is 20% of its total fees of $719K. This revenue-to-fee ratio suggests that while the platform is successfully attracting users, it may also be investing significantly in incentives or features to enhance user experience.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-11T00:35:42.989Z"
+  },
+  "2026-02-11|protocol|fluid-lending|D|P4_ATH_TIMING|explanation|d8059597e7b16b19": {
+    "text": "Fluid Lending reached its all-time high (ATH) of $2.4B in October 2025, which stands out from other choices like November 2024 and June 2025, where the protocol was still gaining traction but hadn't yet hit its peak. This timing reflects the growing interest and adoption of fluid lending models in the DeFi space, which likely contributed to its significant valuation at that point.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-11T00:35:45.196Z"
+  },
+  "2026-02-11|protocol|fluid-lending|E|P3_CONCENTRATION|explanation|f8ae5b461c175689": {
+    "text": "Fluid Lending's $1.3B TVL shows significant concentration on Ethereum, which holds 56% of the total with $719M. This dominance on a single chain suggests that user trust and liquidity are heavily focused on Ethereum, reflecting its established infrastructure and user base in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-11T00:35:46.344Z"
   }
 }

@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-02-11:protocol:fluid-lending",
+  "dateUtc": "2026-02-11",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "fluid-lending",
+    "name": "Fluid Lending",
+    "category": "Lending"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Lending",
+        "Chains: 2-5 chains",
+        "TVL: $1B-$5B",
+        "7d change: down >10%"
+      ],
+      "choices": [
+        "Kamino Lend",
+        "BlackRock BUIDL",
+        "JustLend",
+        "HyperLend Pooled",
+        "Fluid Lending",
+        "Maple"
+      ],
+      "answerIndex": 4,
+      "explanation": "Fluid Lending's $1.3B TVL across five chains, including Ethereum and Arbitrum, showcases its ability to attract liquidity in diverse ecosystems, which is crucial for lending protocols to maintain competitive interest rates and attract borrowers. The presence on multiple chains also indicates a strategic approach to tap into varying user bases and liquidity pools.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.18428945591829074
+      },
+      "difficultyScore": 0.4909289455918291
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Fluid Lending have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Plasma"
+      ],
+      "answerIndex": 0,
+      "explanation": "Fluid Lending has a significant lead on Ethereum with $719M in TVL compared to Plasma's $367M, reflecting Ethereum's robust ecosystem and user base that drive higher liquidity and lending activity. The 49% margin indicates a strong preference for Ethereum-based lending solutions over those on Plasma, likely due to better integration with other DeFi protocols.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.48964856989658406,
+        "volatility": 0.18428945591829074
+      },
+      "difficultyScore": 0.22092894559182907
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Fluid Lending's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 1,
+      "explanation": "Fluid Lending generated $141K in revenue over the past week, which is 20% of its total fees of $719K. This revenue-to-fee ratio suggests that while the platform is successfully attracting users, it may also be investing significantly in incentives or features to enhance user experience.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.38381769171495417,
+        "volatility": 0.18428945591829074
+      },
+      "difficultyScore": 0.3109289455918291
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Fluid Lending hit its all-time high TVL?",
+      "choices": [
+        "Oct 2024",
+        "Jun 2025",
+        "Nov 2024",
+        "Oct 2025",
+        "May 2025",
+        "Nov 2025"
+      ],
+      "answerIndex": 3,
+      "explanation": "Fluid Lending reached its all-time high (ATH) of $2.4B in October 2025, which stands out from other choices like November 2024 and June 2025, where the protocol was still gaining traction but hadn't yet hit its peak. This timing reflects the growing interest and adoption of fluid lending models in the DeFi space, which likely contributed to its significant valuation at that point.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.18428945591829074
+      },
+      "difficultyScore": 0.5009289455918291
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Fluid Lending's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 2,
+      "explanation": "Fluid Lending's $1.3B TVL shows significant concentration on Ethereum, which holds 56% of the total with $719M. This dominance on a single chain suggests that user trust and liquidity are heavily focused on Ethereum, reflecting its established infrastructure and user base in the DeFi space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.24461966568297333,
+        "volatility": 0.18428945591829074
+      },
+      "difficultyScore": 0.3173853467722611
+    }
+  ],
+  "generatedAt": "2026-02-11T00:35:46.344Z"
+}
