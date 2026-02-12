@@ -348,5 +348,30 @@
     "text": "Fluid Lending's $1.3B TVL shows significant concentration on Ethereum, which holds 56% of the total with $719M. This dominance on a single chain suggests that user trust and liquidity are heavily focused on Ethereum, reflecting its established infrastructure and user base in the DeFi space.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-02-11T00:35:46.344Z"
+  },
+  "2026-02-12|chain|Berachain|A|C1_FINGERPRINT|explanation|a90192dcf7b91412": {
+    "text": "Berachain ranks 35th in TVL with between $50M and $100M, indicating a growing interest in its ecosystem, which hosts 96 protocols. This level of protocol diversity suggests that Berachain is attracting various projects, potentially enhancing its utility and user engagement.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-12T00:30:05.871Z"
+  },
+  "2026-02-12|chain|Berachain|B|C11_TOP_PROTOCOL_TVL|explanation|90b8decae3735028": {
+    "text": "Infrared Finance leads Berachain with a TVL of $112M, significantly outpacing other protocols like Kodiak Islands at $56M and Kodiak V3 at $48M. This concentration of TVL in Infrared suggests it plays a pivotal role in attracting liquidity and user activity on the chain, while the smaller protocols may be developing their unique niches.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-12T00:30:07.875Z"
+  },
+  "2026-02-12|chain|Berachain|C|C6_TOP_DEX|explanation|6bbd8a989a3df62a": {
+    "text": "Kodiak V3 leads Berachain with a strong $31M in volume, significantly outpacing its nearest competitor, BEX, which only managed $2M. This stark difference illustrates Kodiak V3's dominance in the ecosystem, as the other DEXs like Bulla Exchange and Nabla Finance struggle to gain traction, with volumes of just $1M and $427K, respectively.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-12T00:30:10.061Z"
+  },
+  "2026-02-12|chain|Berachain|D|C3_ATH_TIMING|explanation|384e1b694188be6e": {
+    "text": "Berachain reached its all-time high (ATH) of $3.3B in March 2025, a significant milestone that distinguishes it from earlier months like February 2025, which saw lower TVL figures. The timing of this peak suggests that Berachain capitalized on market trends and user adoption leading up to that point, setting it apart from the other distractor months.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-12T00:30:11.658Z"
+  },
+  "2026-02-12|chain|Berachain|E|C13_LAYER_TYPE|explanation|3cb9ba268c5be347": {
+    "text": "Berachain operates as a Layer 1 blockchain, meaning it has its own independent consensus mechanism rather than relying on another chain. This autonomy allows it to optimize for specific use cases and scalability without the limitations of a parent chain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-12T00:30:12.596Z"
   }
 }

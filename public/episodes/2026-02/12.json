@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-02-12:chain:Berachain",
+  "dateUtc": "2026-02-12",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Berachain",
+    "name": "Berachain"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Native token: BERA",
+        "Protocols: 50-100",
+        "TVL: $50M-$100M",
+        "30d trend: down >10%"
+      ],
+      "choices": [
+        "Flare",
+        "Gnosis",
+        "PulseChain",
+        "Berachain"
+      ],
+      "answerIndex": 3,
+      "explanation": "Berachain ranks 35th in TVL with between $50M and $100M, indicating a growing interest in its ecosystem, which hosts 96 protocols. This level of protocol diversity suggests that Berachain is attracting various projects, potentially enhancing its utility and user engagement.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4075000000000001
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C11_TOP_PROTOCOL_TVL",
+      "format": "ab",
+      "prompt": "Which protocol has the most TVL on Berachain?",
+      "choices": [
+        "Infrared Finance",
+        "Concrete",
+        "Kodiak Islands",
+        "Kodiak V3"
+      ],
+      "answerIndex": 0,
+      "explanation": "Infrared Finance leads Berachain with a TVL of $112M, significantly outpacing other protocols like Kodiak Islands at $56M and Kodiak V3 at $48M. This concentration of TVL in Infrared suggests it plays a pivotal role in attracting liquidity and user activity on the chain, while the smaller protocols may be developing their unique niches.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4973161564612606,
+        "volatility": null
+      },
+      "difficultyScore": 0.2275
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Berachain?",
+      "choices": [
+        "Kodiak V3",
+        "BEX",
+        "Nabla Finance",
+        "Bulla Exchange"
+      ],
+      "answerIndex": 0,
+      "explanation": "Kodiak V3 leads Berachain with a strong $31M in volume, significantly outpacing its nearest competitor, BEX, which only managed $2M. This stark difference illustrates Kodiak V3's dominance in the ecosystem, as the other DEXs like Bulla Exchange and Nabla Finance struggle to gain traction, with volumes of just $1M and $427K, respectively.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9421266479549847,
+        "volatility": null
+      },
+      "difficultyScore": 0.31750000000000006
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Berachain hit its all-time high TVL?",
+      "choices": [
+        "Oct 2024",
+        "Mar 2025",
+        "Oct 2025",
+        "Feb 2025",
+        "Dec 2024",
+        "Sep 2025"
+      ],
+      "answerIndex": 1,
+      "explanation": "Berachain reached its all-time high (ATH) of $3.3B in March 2025, a significant milestone that distinguishes it from earlier months like February 2025, which saw lower TVL figures. The timing of this peak suggests that Berachain capitalized on market trends and user adoption leading up to that point, setting it apart from the other distractor months.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.5075000000000001
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C13_LAYER_TYPE",
+      "format": "ab",
+      "prompt": "Is Berachain a Layer 1 or Layer 2 blockchain?",
+      "choices": [
+        "Layer 2",
+        "Layer 1"
+      ],
+      "answerIndex": 1,
+      "explanation": "Berachain operates as a Layer 1 blockchain, meaning it has its own independent consensus mechanism rather than relying on another chain. This autonomy allows it to optimize for specific use cases and scalability without the limitations of a parent chain.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": null
+      },
+      "difficultyScore": 0.2275
+    }
+  ],
+  "generatedAt": "2026-02-12T00:30:12.597Z"
+}
