@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-02-13:protocol:veda",
+  "dateUtc": "2026-02-13",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "veda",
+    "name": "Veda",
+    "category": "Onchain Capital Allocator"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Onchain Capital Allocator",
+        "Chains: 6-10 chains",
+        "TVL: $1B-$5B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Veda",
+        "Curve DEX",
+        "PancakeSwap AMM",
+        "Paxos Gold",
+        "ether.fi Liquid",
+        "Upshift"
+      ],
+      "answerIndex": 0,
+      "explanation": "Veda operates as an onchain capital allocator across 10 chains, with $1.1B in TVL, indicating a strong presence in diverse ecosystems like Binance and Arbitrum. This multi-chain approach allows Veda to tap into various liquidity pools and investment opportunities, enhancing its capital efficiency and user reach.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.22320945733828665
+      },
+      "difficultyScore": 0.4948209457338287
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Veda have higher TVL?",
+      "choices": [
+        "Plasma",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Veda's dominance on Ethereum with $843M TVL compared to just $88M on Plasma illustrates how the majority of DeFi activity is concentrated on more established chains, with Ethereum capturing 90% of the margin in this matchup. This stark contrast highlights the challenges newer or less popular chains face in attracting liquidity and user engagement.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.8951410452724913,
+        "volatility": 0.22320945733828665
+      },
+      "difficultyScore": 0.2248209457338287
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Veda's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Veda generated $284K in fees over the past week, but only $20K of that translated into revenue, reflecting a revenue rate of 6.9%. This suggests that while Veda is successful at attracting users, a significant portion of the fees may be going towards operational costs or incentives rather than directly contributing to profit.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.12477367878055912,
+        "volatility": 0.22320945733828665
+      },
+      "difficultyScore": 0.4650925311971577
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Veda hit its all-time high TVL?",
+      "choices": [
+        "Oct 2025",
+        "Jun 2025",
+        "Nov 2024",
+        "Dec 2025",
+        "Feb 2025",
+        "Sep 2025"
+      ],
+      "answerIndex": 5,
+      "explanation": "Veda reached its all-time high (ATH) of $6.1B in September 2025, a significant milestone compared to earlier months like February and June 2025, where it had not yet gained the same level of traction. This timing reflects a growing adoption or market conditions that favored Veda's rise, distinguishing it from the other options that were either too early or too late.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.22320945733828665
+      },
+      "difficultyScore": 0.5048209457338286
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Veda deployed on?",
+      "choices": [
+        "Solana",
+        "Ethereum",
+        "Avalanche",
+        "Optimism"
+      ],
+      "answerIndex": 1,
+      "explanation": "Veda operates across five chains, including Binance and Arbitrum, but its total of 10 chains suggests a strategy to tap into various ecosystems, potentially increasing its user base and liquidity options. This multi-chain approach allows Veda to leverage different network benefits while enhancing interoperability within the DeFi space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.22320945733828665
+      },
+      "difficultyScore": 0.3148209457338287
+    }
+  ],
+  "generatedAt": "2026-02-13T00:33:05.144Z"
+}

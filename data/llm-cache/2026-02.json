@@ -373,5 +373,30 @@
     "text": "Berachain operates as a Layer 1 blockchain, meaning it has its own independent consensus mechanism rather than relying on another chain. This autonomy allows it to optimize for specific use cases and scalability without the limitations of a parent chain.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-02-12T00:30:12.596Z"
+  },
+  "2026-02-13|protocol|veda|A|P1_FINGERPRINT|explanation|b9e10ca2df344a80": {
+    "text": "Veda operates as an onchain capital allocator across 10 chains, with $1.1B in TVL, indicating a strong presence in diverse ecosystems like Binance and Arbitrum. This multi-chain approach allows Veda to tap into various liquidity pools and investment opportunities, enhancing its capital efficiency and user reach.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-13T00:32:50.823Z"
+  },
+  "2026-02-13|protocol|veda|B|P2_CROSSCHAIN|explanation|a2fc7666d059db01": {
+    "text": "Veda's dominance on Ethereum with $843M TVL compared to just $88M on Plasma illustrates how the majority of DeFi activity is concentrated on more established chains, with Ethereum capturing 90% of the margin in this matchup. This stark contrast highlights the challenges newer or less popular chains face in attracting liquidity and user engagement.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-13T00:32:52.900Z"
+  },
+  "2026-02-13|protocol|veda|C|P5_FEES_REVENUE|explanation|d377a7a97faadbf0": {
+    "text": "Veda generated $284K in fees over the past week, but only $20K of that translated into revenue, reflecting a revenue rate of 6.9%. This suggests that while Veda is successful at attracting users, a significant portion of the fees may be going towards operational costs or incentives rather than directly contributing to profit.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-13T00:32:56.151Z"
+  },
+  "2026-02-13|protocol|veda|D|P4_ATH_TIMING|explanation|54b09b6d6a18e7d8": {
+    "text": "Veda reached its all-time high (ATH) of $6.1B in September 2025, a significant milestone compared to earlier months like February and June 2025, where it had not yet gained the same level of traction. This timing reflects a growing adoption or market conditions that favored Veda's rise, distinguishing it from the other options that were either too early or too late.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-13T00:33:00.678Z"
+  },
+  "2026-02-13|protocol|veda|E|P8_CHAIN_MEMBERSHIP|explanation|382c2c45c90cc816": {
+    "text": "Veda operates across five chains, including Binance and Arbitrum, but its total of 10 chains suggests a strategy to tap into various ecosystems, potentially increasing its user base and liquidity options. This multi-chain approach allows Veda to leverage different network benefits while enhancing interoperability within the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-13T00:33:05.144Z"
   }
 }
