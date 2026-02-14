@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-02-14:chain:Tron",
+  "dateUtc": "2026-02-14",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Tron",
+    "name": "Tron"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 5",
+        "Native token: TRON",
+        "Protocols: 50-100",
+        "Active since: 2020"
+      ],
+      "choices": [
+        "Provenance",
+        "Tron",
+        "Plasma",
+        "Cronos",
+        "BSC",
+        "Solana"
+      ],
+      "answerIndex": 1,
+      "explanation": "Tron's TVL rank of 5, sitting between $1B and $5B, reflects its strong position in the DeFi space, bolstered by a diverse ecosystem of 94 protocols. This variety not only attracts users but also fosters innovation, making Tron a competitive player among other chains.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4675
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Tron or Bitcoin?",
+      "choices": [
+        "Bitcoin",
+        "Tron"
+      ],
+      "answerIndex": 0,
+      "explanation": "Bitcoin's $5.3B TVL surpasses Tron's $4.1B by 22.1%, reflecting Bitcoin's stronger adoption in DeFi despite its primary focus on being a store of value, while Tron continues to attract users with its low transaction fees and high throughput. This difference underscores the varying use cases and user preferences between the two chains.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.22113712828432835,
+        "volatility": null
+      },
+      "difficultyScore": 0.23213544605880596
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Tron",
+        "Mantle",
+        "Starknet",
+        "Ink"
+      ],
+      "answerIndex": 2,
+      "explanation": "Starknet leads with a 6.3% growth, while Tron has seen a decline of 10.6%, which is notable given that other chains like Ink and Mantle are also struggling with even larger drops of 12.8% and 24.8%, respectively. This contrast highlights Starknet's resilience in a challenging environment for many Layer 2 solutions.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.1683208473935331,
+        "volatility": null
+      },
+      "difficultyScore": 0.44551498312776033
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Tron hit its all-time high TVL?",
+      "choices": [
+        "Mar 2023",
+        "Jan 2025",
+        "Jun 2020",
+        "Feb 2024",
+        "Jun 2025",
+        "Dec 2024"
+      ],
+      "answerIndex": 5,
+      "explanation": "Tron's all-time high (ATH) of $14.7B in December 2024 stands out as it came after a period of significant growth in the DeFi space, unlike earlier months like March 2023, which saw much lower TVL levels. This timing reflects a peak in user interest and activity on the Tron network, driven by its expanding ecosystem and adoption.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.47750000000000004
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Tron?",
+      "choices": [
+        "UniFi",
+        "SUNSwap V2",
+        "SUNSwap V1",
+        "SUNSwap V3"
+      ],
+      "answerIndex": 3,
+      "explanation": "SUNSwap V3 dominates Tron’s DEX landscape with $41M in volume, significantly outpacing its predecessors, SUNSwap V2 at $3M and SUNSwap V1 at just $286K. This stark difference illustrates how upgrades in DEX versions can drive user engagement and trading activity, making V3 the clear leader on the chain.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.9309346897039026,
+        "volatility": null
+      },
+      "difficultyScore": 0.28750000000000003
+    }
+  ],
+  "generatedAt": "2026-02-14T00:30:46.786Z"
+}
