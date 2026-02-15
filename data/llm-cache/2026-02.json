@@ -423,5 +423,30 @@
     "text": "SUNSwap V3 dominates Tron’s DEX landscape with $41M in volume, significantly outpacing its predecessors, SUNSwap V2 at $3M and SUNSwap V1 at just $286K. This stark difference illustrates how upgrades in DEX versions can drive user engagement and trading activity, making V3 the clear leader on the chain.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-02-14T00:30:46.785Z"
+  },
+  "2026-02-15|protocol|ethena-usde|A|P1_FINGERPRINT|explanation|dafa5501837732c4": {
+    "text": "Ethena USDe's $6.3B TVL on Ethereum positions it as a significant player in the basis trading category, reflecting strong demand for its unique approach to stablecoin mechanics. With its focus on a single chain, it can optimize liquidity and user experience, which is crucial for maintaining stability in volatile markets.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-15T00:32:23.749Z"
+  },
+  "2026-02-15|protocol|ethena-usde|B|P7_CATEGORY|explanation|66c188372a520642": {
+    "text": "Ethena USDe operates within the Basis Trading category, which focuses on strategies that exploit price discrepancies between different assets or markets. This approach can help traders capitalize on inefficiencies, making it a unique offering in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-15T00:32:25.698Z"
+  },
+  "2026-02-15|protocol|ethena-usde|C|P20_ATH_DISTANCE|explanation|fd69430a76220d7a": {
+    "text": "Ethena USDe's current TVL of $6.3B is 58% below its all-time high of $14.8B, placing it in the 50-75% below ATH range. This significant drop suggests that while the protocol has experienced substantial growth, it may be facing challenges in maintaining momentum or attracting new capital compared to its peak.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-15T00:32:28.330Z"
+  },
+  "2026-02-15|protocol|ethena-usde|D|P33_MULTI_RANKING|explanation|073a62ffbc7e6d18": {
+    "text": "Ethena USDe leads the basis trading category with a substantial $6.3B TVL, significantly outpacing Falcon Finance at $1.6B and Superstate USCC at $257M. This stark difference reflects Ethena's strong market position and user trust in its trading mechanisms compared to its competitors.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-15T00:32:31.855Z"
+  },
+  "2026-02-15|protocol|ethena-usde|E|P6_TVL_TREND|explanation|7756ea1a1f77ae28": {
+    "text": "Ethena USDe's TVL has decreased by 1.9%, reflecting a slight pullback in user interest or liquidity, which can often be influenced by market conditions or competition from other stablecoins. At $6.3B, it remains a significant player, but this decline could signal shifts in user confidence or strategy within the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-15T00:32:34.514Z"
   }
 }

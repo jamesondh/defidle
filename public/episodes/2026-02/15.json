@@ -1,0 +1,138 @@
+{
+  "episodeId": "2026-02-15:protocol:ethena-usde",
+  "dateUtc": "2026-02-15",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "ethena-usde",
+    "name": "Ethena USDe",
+    "category": "Basis Trading"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Basis Trading",
+        "Chains: single-chain",
+        "TVL rank: top 10"
+      ],
+      "choices": [
+        "Ethena USDe",
+        "Aave V3",
+        "Binance staked ETH",
+        "Lido",
+        "BounceBit CeDeFi Yield"
+      ],
+      "answerIndex": 0,
+      "explanation": "Ethena USDe's $6.3B TVL on Ethereum positions it as a significant player in the basis trading category, reflecting strong demand for its unique approach to stablecoin mechanics. With its focus on a single chain, it can optimize liquidity and user experience, which is crucial for maintaining stability in volatile markets.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": 0.01632386202652594
+      },
+      "difficultyScore": 0.4441323862026526
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Ethena USDe?",
+      "choices": [
+        "Liquid Staking",
+        "Basis Trading",
+        "Trading App",
+        "DCA Tools"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ethena USDe operates within the Basis Trading category, which focuses on strategies that exploit price discrepancies between different assets or markets. This approach can help traders capitalize on inefficiencies, making it a unique offering in the DeFi landscape.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.5,
+        "volatility": 0.01632386202652594
+      },
+      "difficultyScore": 0.2641323862026526
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Ethena USDe's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 2,
+      "explanation": "Ethena USDe's current TVL of $6.3B is 58% below its all-time high of $14.8B, placing it in the 50-75% below ATH range. This significant drop suggests that while the protocol has experienced substantial growth, it may be facing challenges in maintaining momentum or attracting new capital compared to its peak.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.30147804627912705,
+        "volatility": 0.01632386202652594
+      },
+      "difficultyScore": 0.3241323862026526
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Basis Trading protocols from highest to lowest TVL.",
+      "choices": [
+        "Ethena USDe > Superstate USCC > Falcon Finance",
+        "Ethena USDe > Falcon Finance > Superstate USCC",
+        "Falcon Finance > Superstate USCC > Ethena USDe",
+        "Falcon Finance > Ethena USDe > Superstate USCC"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ethena USDe leads the basis trading category with a substantial $6.3B TVL, significantly outpacing Falcon Finance at $1.6B and Superstate USCC at $257M. This stark difference reflects Ethena's strong market position and user trust in its trading mechanisms compared to its competitors.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.7400418076127231,
+        "volatility": 0.01632386202652594
+      },
+      "difficultyScore": 0.36413238620265265
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "Ethena USDe's TVL increased over the past 30 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "Ethena USDe's TVL has decreased by 1.9%, reflecting a slight pullback in user interest or liquidity, which can often be influenced by market conditions or competition from other stablecoins. At $6.3B, it remains a significant player, but this decline could signal shifts in user confidence or strategy within the DeFi landscape.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.018658922808897152,
+        "volatility": 0.01632386202652594
+      },
+      "difficultyScore": 0.36174167883197605
+    }
+  ],
+  "generatedAt": "2026-02-15T00:32:34.514Z"
+}
