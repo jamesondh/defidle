@@ -448,5 +448,30 @@
     "text": "Ethena USDe's TVL has decreased by 1.9%, reflecting a slight pullback in user interest or liquidity, which can often be influenced by market conditions or competition from other stablecoins. At $6.3B, it remains a significant player, but this decline could signal shifts in user confidence or strategy within the DeFi landscape.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-02-15T00:32:34.514Z"
+  },
+  "2026-02-16|protocol|venus-core-pool|A|P1_FINGERPRINT|explanation|02702a28112b5e58": {
+    "text": "Venus Core Pool's $1.4B TVL across 8 chains, including Ethereum and Arbitrum, showcases its appeal in the lending space, particularly on Layer 2 solutions like Optimism and zkSync Era, which are gaining traction for their lower fees and faster transactions. This distribution indicates a strategic focus on enhancing accessibility and liquidity across diverse ecosystems.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-16T00:31:15.175Z"
+  },
+  "2026-02-16|protocol|venus-core-pool|B|P2_CROSSCHAIN|explanation|19b8fd3480f9c2f9": {
+    "text": "Venus Core Pool has a significant TVL of $1.4B on Binance, overshadowing the mere $2M on Arbitrum, which reflects Binance's dominance in attracting liquidity compared to other chains. The 100% margin percentage indicates that Venus is effectively utilizing its assets on Binance, maximizing its lending capabilities while struggling to gain traction on Arbitrum.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-16T00:31:19.101Z"
+  },
+  "2026-02-16|protocol|venus-core-pool|C|P5_FEES_REVENUE|explanation|734c446d7b127600": {
+    "text": "Venus Core Pool generated $39K in revenue from $254K in fees over the past week, indicating that 15% of the fees are being converted into revenue. This ratio suggests a healthy fee structure and operational efficiency, as a significant portion of fees is retained as revenue.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-16T00:31:21.333Z"
+  },
+  "2026-02-16|protocol|venus-core-pool|D|P4_ATH_TIMING|explanation|310e718455757d7e": {
+    "text": "Venus Core Pool hit its all-time high of $7.0B in May 2021, a peak that coincided with a broader DeFi boom, while the other options, like April 2022 and December 2022, reflect periods of market correction and lower engagement. This timing underscores how significant market trends can influence TVL, with May 2021 representing a peak of investor interest and liquidity in DeFi.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-16T00:31:23.952Z"
+  },
+  "2026-02-16|protocol|venus-core-pool|E|P3_CONCENTRATION|explanation|0c9f515df7fa45c2": {
+    "text": "Venus Core Pool's TVL of $1.4B is entirely concentrated on Binance, which means it relies heavily on this chain for its liquidity and user base. This extreme concentration can lead to vulnerabilities if Binance faces any issues, as the entire pool's value is tied to a single platform.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-16T00:31:25.348Z"
   }
 }
