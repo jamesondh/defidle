@@ -1,0 +1,138 @@
+{
+  "episodeId": "2026-02-17:chain:Base",
+  "dateUtc": "2026-02-17",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Base",
+    "name": "Base"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 10",
+        "Most protocols by count"
+      ],
+      "choices": [
+        "Cronos",
+        "Base",
+        "Hyperliquid L1",
+        "Avalanche",
+        "Ethereum",
+        "Solana"
+      ],
+      "answerIndex": 1,
+      "explanation": "Base ranks 6th in TVL with between $1B and $5B, showcasing its rapid growth and adoption, especially with 706 protocols operating on the chain. This diverse ecosystem of projects contributes to its robust activity and user engagement, reflecting a strong interest in Layer 2 solutions.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4675
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Base or Plasma?",
+      "choices": [
+        "Plasma",
+        "Base"
+      ],
+      "answerIndex": 1,
+      "explanation": "Base's $4.0B TVL outpaces Plasma's $2.6B by 35.1%, reflecting its stronger adoption and user trust, likely driven by its integration with Ethereum and a focus on developer-friendly tools. This difference underscores how ecosystem support can significantly influence a chain's growth in DeFi.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.35069263926095934,
+        "volatility": null
+      },
+      "difficultyScore": 0.19749999999999998
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Base",
+        "Ink",
+        "Hyperliquid L1",
+        "Plasma"
+      ],
+      "answerIndex": 2,
+      "explanation": "Hyperliquid L1 leads the growth ranking with a remarkable 14.5% increase, contrasting sharply with other chains like Base, which saw a decline of 22.7%, and Ink, down 20%. This stark difference underscores Hyperliquid's ability to attract liquidity and user engagement while many other chains are struggling to maintain their TVL.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.3449800879291393,
+        "volatility": null
+      },
+      "difficultyScore": 0.34750000000000003
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Base hit its all-time high TVL?",
+      "choices": [
+        "Mar 2025",
+        "Dec 2025",
+        "Mar 2024",
+        "Feb 2024",
+        "Apr 2025",
+        "Oct 2025"
+      ],
+      "answerIndex": 5,
+      "explanation": "Base reached its all-time high (ATH) of $5.6B in October 2025, a significant milestone that came after earlier peaks were not achieved in months like April and March 2025. This timing suggests that Base's growth trajectory was building momentum, leading to a more substantial ATH later than some might have anticipated.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.47750000000000004
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Base?",
+      "choices": [
+        "PancakeSwap AMM V3",
+        "Aerodrome Slipstream",
+        "Uniswap V3",
+        "Uniswap V4"
+      ],
+      "answerIndex": 1,
+      "explanation": "Aerodrome Slipstream leads Base with $327M in volume, significantly outpacing PancakeSwap AMM V3 at $196M and Uniswap V3 at $164M. This dominance suggests that Aerodrome is effectively capturing user activity on Base, while the lower volumes of Uniswap V4 ($34M) indicate a slower adoption of its latest iteration.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.40149852465825814,
+        "volatility": null
+      },
+      "difficultyScore": 0.28750000000000003
+    }
+  ],
+  "generatedAt": "2026-02-17T00:31:11.083Z"
+}
