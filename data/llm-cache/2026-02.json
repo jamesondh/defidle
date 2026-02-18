@@ -498,5 +498,30 @@
     "text": "Aerodrome Slipstream leads Base with $327M in volume, significantly outpacing PancakeSwap AMM V3 at $196M and Uniswap V3 at $164M. This dominance suggests that Aerodrome is effectively capturing user activity on Base, while the lower volumes of Uniswap V4 ($34M) indicate a slower adoption of its latest iteration.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-02-17T00:31:11.083Z"
+  },
+  "2026-02-18|protocol|unit|A|P1_FINGERPRINT|explanation|20fa6f73f1a53d70": {
+    "text": "Unit's $460M TVL across five chains, including Ethereum and Solana, showcases its versatility as a bridge protocol, allowing users to transfer assets seamlessly across diverse ecosystems. The presence of both Layer 1 and Layer 2 chains in its portfolio reflects a strategic approach to cater to varying user needs and transaction speeds.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-18T00:31:26.268Z"
+  },
+  "2026-02-18|protocol|unit|B|P2_CROSSCHAIN|explanation|7ff64b10128e66ba": {
+    "text": "Unit's $302M TVL on Bitcoin dwarfs Solana's $62M, showcasing Bitcoin's continued dominance in cross-chain DeFi despite Solana's reputation for speed and lower fees. The 80% margin indicates a significant preference for liquidity on Bitcoin, reflecting its established trust and user base in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-18T00:31:28.406Z"
+  },
+  "2026-02-18|protocol|unit|C|P5_FEES_REVENUE|explanation|deeb22cedc6f997b": {
+    "text": "Unit has generated $60K in fees over the past week, with all of that amount translating directly into revenue, indicating a highly efficient fee structure where every dollar earned is retained as profit. This 100% revenue retention suggests strong operational effectiveness and minimal costs associated with generating those fees.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-18T00:31:30.308Z"
+  },
+  "2026-02-18|protocol|unit|D|P4_ATH_TIMING|explanation|39b5472ab2d04d5c": {
+    "text": "Unit reached its all-time high (ATH) of $1.5B in October 2025, a significant milestone that came after several months of growth, unlike the earlier months like July and March 2025, which did not see such peaks. This timing reflects a strategic buildup in user adoption and market conditions that culminated in that record value.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-18T00:31:32.666Z"
+  },
+  "2026-02-18|protocol|unit|E|P3_CONCENTRATION|explanation|d34977516aaf64b3": {
+    "text": "Unit's TVL of $460M shows a significant concentration, with 66% of it, or $302M, coming from Bitcoin. This heavy reliance on a single chain suggests that Unit is capitalizing on Bitcoin's established user base and liquidity, which can lead to both opportunities and vulnerabilities in its ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-18T00:31:33.732Z"
   }
 }
