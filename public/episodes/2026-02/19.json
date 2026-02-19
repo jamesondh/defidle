@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-02-19:chain:Starknet",
+  "dateUtc": "2026-02-19",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Starknet",
+    "name": "Starknet"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: STRK",
+        "Protocols: 50-100"
+      ],
+      "choices": [
+        "Movement",
+        "Polygon",
+        "Starknet",
+        "Arbitrum",
+        "Stellar",
+        "Plasma"
+      ],
+      "answerIndex": 2,
+      "explanation": "Starknet ranks 17th in TVL with between $100M and $500M, reflecting its growing adoption among developers, as evidenced by the 53 protocols built on it. This level of protocol diversity suggests a robust ecosystem that can drive further innovation and user engagement.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Starknet or Ink?",
+      "choices": [
+        "Starknet",
+        "Ink"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ink's $454M TVL surpasses Starknet's $287M by 36.7%, reflecting its stronger adoption and user engagement in the DeFi space. This difference may stem from Ink's unique features or incentives that attract more liquidity compared to Starknet's offerings.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.36744812261942306,
+        "volatility": null
+      },
+      "difficultyScore": 0.2095
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Monad",
+        "Hyperliquid L1",
+        "Starknet",
+        "Mixin"
+      ],
+      "answerIndex": 1,
+      "explanation": "Hyperliquid L1 stands out with a 14.5% growth, especially when compared to Starknet's decline of 9.6% and Mixin's drop of 7.9%. This stark contrast highlights Hyperliquid's strong momentum in attracting users and liquidity, while other chains like Starknet are struggling to maintain their position.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.1936550909178042,
+        "volatility": null
+      },
+      "difficultyScore": 0.427113890898635
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Starknet hit its all-time high TVL?",
+      "choices": [
+        "Jun 2025",
+        "Jan 2026",
+        "Dec 2022",
+        "Mar 2024",
+        "Aug 2024",
+        "Sep 2023"
+      ],
+      "answerIndex": 3,
+      "explanation": "Starknet reached its all-time high (ATH) of $331M in March 2024, a significant milestone that reflects its growing adoption and utility in the DeFi space. In contrast, the other choices like December 2022 and September 2023 represent earlier periods when Starknet was still establishing itself, highlighting how its ecosystem has matured leading up to the ATH.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Starknet?",
+      "choices": [
+        "mySwap CL",
+        "Ready Card",
+        "Ekubo",
+        "Nostra Pools"
+      ],
+      "answerIndex": 2,
+      "explanation": "Ekubo stands out on Starknet with a volume of $6M, significantly outpacing other DEXs like mySwap CL at $945K and Ready Card at $277K. This dominance suggests that Ekubo is capturing the majority of trading activity on Starknet, indicating a strong preference among users for its features or liquidity.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.848131062694388,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-02-19T00:32:11.515Z"
+}

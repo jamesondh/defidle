@@ -523,5 +523,30 @@
     "text": "Unit's TVL of $460M shows a significant concentration, with 66% of it, or $302M, coming from Bitcoin. This heavy reliance on a single chain suggests that Unit is capitalizing on Bitcoin's established user base and liquidity, which can lead to both opportunities and vulnerabilities in its ecosystem.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-02-18T00:31:33.732Z"
+  },
+  "2026-02-19|chain|Starknet|A|C1_FINGERPRINT|explanation|2b11eeb07c714921": {
+    "text": "Starknet ranks 17th in TVL with between $100M and $500M, reflecting its growing adoption among developers, as evidenced by the 53 protocols built on it. This level of protocol diversity suggests a robust ecosystem that can drive further innovation and user engagement.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-19T00:32:02.397Z"
+  },
+  "2026-02-19|chain|Starknet|B|C2_CHAIN_COMPARISON|explanation|f1c5d14ff0061828": {
+    "text": "Ink's $454M TVL surpasses Starknet's $287M by 36.7%, reflecting its stronger adoption and user engagement in the DeFi space. This difference may stem from Ink's unique features or incentives that attract more liquidity compared to Starknet's offerings.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-19T00:32:04.599Z"
+  },
+  "2026-02-19|chain|Starknet|C|C4_GROWTH_RANKING|explanation|b5f9afc0d62ceae0": {
+    "text": "Hyperliquid L1 stands out with a 14.5% growth, especially when compared to Starknet's decline of 9.6% and Mixin's drop of 7.9%. This stark contrast highlights Hyperliquid's strong momentum in attracting users and liquidity, while other chains like Starknet are struggling to maintain their position.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-19T00:32:07.175Z"
+  },
+  "2026-02-19|chain|Starknet|D|C3_ATH_TIMING|explanation|4e7226e1f922413e": {
+    "text": "Starknet reached its all-time high (ATH) of $331M in March 2024, a significant milestone that reflects its growing adoption and utility in the DeFi space. In contrast, the other choices like December 2022 and September 2023 represent earlier periods when Starknet was still establishing itself, highlighting how its ecosystem has matured leading up to the ATH.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-19T00:32:08.858Z"
+  },
+  "2026-02-19|chain|Starknet|E|C6_TOP_DEX|explanation|b8c64214e82fdc7e": {
+    "text": "Ekubo stands out on Starknet with a volume of $6M, significantly outpacing other DEXs like mySwap CL at $945K and Ready Card at $277K. This dominance suggests that Ekubo is capturing the majority of trading activity on Starknet, indicating a strong preference among users for its features or liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-19T00:32:11.514Z"
   }
 }
