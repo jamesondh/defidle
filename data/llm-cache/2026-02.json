@@ -548,5 +548,30 @@
     "text": "Ekubo stands out on Starknet with a volume of $6M, significantly outpacing other DEXs like mySwap CL at $945K and Ready Card at $277K. This dominance suggests that Ekubo is capturing the majority of trading activity on Starknet, indicating a strong preference among users for its features or liquidity.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-02-19T00:32:11.514Z"
+  },
+  "2026-02-20|protocol|curve-dex|A|P1_FINGERPRINT|explanation|d7067fc58768dd9a": {
+    "text": "Curve DEX operates across 30 chains, with its $1.9B TVL primarily driven by its focus on stablecoin swaps, which attracts liquidity from users looking for low slippage and efficient trading. This multi-chain presence allows Curve to tap into diverse user bases and capitalize on varying DeFi ecosystems.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-20T00:28:50.158Z"
+  },
+  "2026-02-20|protocol|curve-dex|B|P2_CROSSCHAIN|explanation|3b96dd5ba75aef0c": {
+    "text": "Curve DEX has a commanding $1.8B TVL on Ethereum, dwarfing the $26M on Base, which reflects Ethereum's established liquidity and user base compared to newer chains. This 99% margin indicates that Curve's dominance on Ethereum is driven by its deep liquidity pools, making it the go-to platform for stablecoin swaps.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-20T00:28:56.647Z"
+  },
+  "2026-02-20|protocol|curve-dex|C|P5_FEES_REVENUE|explanation|4cae55277da508e9": {
+    "text": "Curve DEX generated $54K in revenue from $287K in fees over the past week, meaning it retains about 19% of its fees as revenue. This efficiency in converting fees to revenue is crucial for sustaining operations and incentivizing liquidity providers.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-20T00:29:09.294Z"
+  },
+  "2026-02-20|protocol|curve-dex|D|P4_ATH_TIMING|explanation|a7812725a2d1f740": {
+    "text": "Curve DEX hit its all-time high (ATH) of $24.3B in January 2022, a peak driven by the explosive growth of stablecoin trading and liquidity pools during that period. In contrast, June 2022 saw a decline as the market faced broader downturns, while the other dates listed, like May 2020 and future dates, were far from the peak performance Curve experienced in early 2022.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-20T00:29:12.113Z"
+  },
+  "2026-02-20|protocol|curve-dex|E|P3_CONCENTRATION|explanation|98ce71a2f847d6a9": {
+    "text": "Curve DEX has an impressive 93% of its $1.9B TVL concentrated on Ethereum, with $1.8B locked there. This heavy reliance on Ethereum underscores its dominance in the stablecoin swapping market, as Curve is optimized for low slippage on stable assets, making it a go-to choice for users on that chain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-20T00:29:14.727Z"
   }
 }
