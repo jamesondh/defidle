@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-02-21:chain:Base",
+  "dateUtc": "2026-02-21",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Base",
+    "name": "Base"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 10",
+        "Most protocols by count"
+      ],
+      "choices": [
+        "Bitcoin",
+        "Base",
+        "Tron",
+        "Plasma",
+        "BSC",
+        "Provenance"
+      ],
+      "answerIndex": 1,
+      "explanation": "Base's TVL rank of 6, within the $1B-$5B range, reflects its rapid growth and adoption, supported by a diverse ecosystem of 706 protocols. This extensive protocol count indicates a vibrant community and a wide array of use cases, making Base an attractive platform for developers and users alike.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4675
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "prompt": "Base has higher TVL than Tron.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "Tron leads Base by a slim margin of 3.2% in TVL, with $4.1B compared to Base's $4.0B, showcasing how competitive the DeFi landscape is among newer chains. This close TVL indicates that Base is rapidly gaining traction, suggesting strong user interest and potential for growth in its ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.03180806498654831,
+        "volatility": null
+      },
+      "difficultyScore": 0.3693303220161421
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Stellar",
+        "Cronos",
+        "Plasma",
+        "Base"
+      ],
+      "answerIndex": 0,
+      "explanation": "Stellar's growth of +1.9% stands out significantly against other chains like Base, which saw a decline of -22.7%, and Plasma at -23.4%. This stark contrast highlights Stellar's resilience in a challenging market, while Base and Plasma are struggling to maintain traction.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.1617884155167635,
+        "volatility": null
+      },
+      "difficultyScore": 0.4533539013798838
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Base hit its all-time high TVL?",
+      "choices": [
+        "Feb 2024",
+        "May 2024",
+        "Jul 2023",
+        "Jun 2025",
+        "Jun 2023",
+        "Oct 2025"
+      ],
+      "answerIndex": 5,
+      "explanation": "Base reached its all-time high (ATH) of $5.6B in October 2025, a significant milestone that came after earlier months like February 2024 and June 2025, which did not see the same level of growth. This timing suggests that Base experienced a surge in adoption or usage leading up to its ATH, differentiating it from the earlier months where it didn't achieve similar heights.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.47750000000000004
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Base?",
+      "choices": [
+        "Tristero",
+        "PancakeSwap AMM V3",
+        "Uniswap V3",
+        "Aerodrome Slipstream"
+      ],
+      "answerIndex": 2,
+      "explanation": "Uniswap V3 leads Base with a significant $418M in volume, far surpassing its closest competitor, Aerodrome Slipstream, which has $240M. This stark difference illustrates Uniswap's dominance in liquidity and trading activity on the chain, making it the go-to DEX for users.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.4265109071534062,
+        "volatility": null
+      },
+      "difficultyScore": 0.28750000000000003
+    }
+  ],
+  "generatedAt": "2026-02-21T00:29:23.618Z"
+}
