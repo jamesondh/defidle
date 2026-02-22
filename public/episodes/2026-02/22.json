@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-02-22:protocol:jupiter-lend",
+  "dateUtc": "2026-02-22",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "jupiter-lend",
+    "name": "Jupiter Lend",
+    "category": "Lending"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Lending",
+        "Chains: single-chain",
+        "TVL: $1B-$5B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Figure Markets Exchange",
+        "Venus Core Pool",
+        "Jupiter Lend",
+        "Fluid Lending",
+        "Spark Savings",
+        "Gauntlet"
+      ],
+      "answerIndex": 2,
+      "explanation": "Jupiter Lend's $1.1B TVL on Solana showcases its strong position in the lending sector, particularly as a single-chain platform. This concentration allows it to leverage Solana's high throughput and low fees, attracting users looking for efficient lending solutions.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.2758143475816099
+      },
+      "difficultyScore": 0.500081434758161
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P13_TVL_RANK_COMPARISON",
+      "format": "ab",
+      "prompt": "Which protocol has higher TVL?",
+      "choices": [
+        "Jupiter Lend",
+        "Falcon Finance"
+      ],
+      "answerIndex": 1,
+      "explanation": "Falcon Finance leads with $1.6B TVL, outpacing Jupiter Lend's $1.1B by 32.5%, which reflects Falcon's stronger user adoption and liquidity incentives that attract more capital. This difference in TVL can indicate varying levels of trust and utility perceived by users in each protocol.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.32535124846087105,
+        "volatility": 0.2758143475816099
+      },
+      "difficultyScore": 0.230081434758161
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P22_CATEGORY_MARKET_SHARE",
+      "format": "mc4",
+      "prompt": "What share of Lending TVL does Jupiter Lend hold?",
+      "choices": [
+        "<10%",
+        "10-25%",
+        "25-50%",
+        ">50%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Jupiter Lend holds a 2% market share in the lending category with its $1.1B TVL, indicating it plays a smaller role compared to larger players in the $46.3B market. This suggests that while it has significant liquidity, there’s still considerable room for growth and competition within the lending space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.7617623933678386,
+        "volatility": 0.2758143475816099
+      },
+      "difficultyScore": 0.32008143475816103
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Jupiter Lend hit its all-time high TVL?",
+      "choices": [
+        "Dec 2025",
+        "Sep 2025",
+        "Aug 2025",
+        "Oct 2025",
+        "Nov 2025",
+        "Jan 2026"
+      ],
+      "answerIndex": 5,
+      "explanation": "Jupiter Lend reached its all-time high (ATH) of $1.1B in January 2026, which is notable because it reflects a significant growth period compared to earlier months like August and October 2025, when the platform was still building momentum. This timing suggests that Jupiter Lend capitalized on market conditions or product developments that peaked at the start of 2026, setting it apart from the other months listed.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.2758143475816099
+      },
+      "difficultyScore": 0.510081434758161
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Jupiter Lend deployed on?",
+      "choices": [
+        "Optimism",
+        "Base",
+        "Arbitrum",
+        "Solana"
+      ],
+      "answerIndex": 3,
+      "explanation": "Jupiter Lend operates exclusively on Solana, which allows it to leverage the chain's high throughput and low transaction costs. This single-chain focus can enhance user experience but may limit its reach compared to multi-chain protocols.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.2758143475816099
+      },
+      "difficultyScore": 0.32008143475816103
+    }
+  ],
+  "generatedAt": "2026-02-22T00:31:12.508Z"
+}

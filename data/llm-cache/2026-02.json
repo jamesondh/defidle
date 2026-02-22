@@ -598,5 +598,30 @@
     "text": "Uniswap V3 leads Base with a significant $418M in volume, far surpassing its closest competitor, Aerodrome Slipstream, which has $240M. This stark difference illustrates Uniswap's dominance in liquidity and trading activity on the chain, making it the go-to DEX for users.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-02-21T00:29:23.617Z"
+  },
+  "2026-02-22|protocol|jupiter-lend|A|P1_FINGERPRINT|explanation|9cb4fcfcfed41c3a": {
+    "text": "Jupiter Lend's $1.1B TVL on Solana showcases its strong position in the lending sector, particularly as a single-chain platform. This concentration allows it to leverage Solana's high throughput and low fees, attracting users looking for efficient lending solutions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-22T00:31:01.758Z"
+  },
+  "2026-02-22|protocol|jupiter-lend|B|P13_TVL_RANK_COMPARISON|explanation|72817be6c3855b81": {
+    "text": "Falcon Finance leads with $1.6B TVL, outpacing Jupiter Lend's $1.1B by 32.5%, which reflects Falcon's stronger user adoption and liquidity incentives that attract more capital. This difference in TVL can indicate varying levels of trust and utility perceived by users in each protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-22T00:31:04.327Z"
+  },
+  "2026-02-22|protocol|jupiter-lend|C|P22_CATEGORY_MARKET_SHARE|explanation|c9333dd5f2893782": {
+    "text": "Jupiter Lend holds a 2% market share in the lending category with its $1.1B TVL, indicating it plays a smaller role compared to larger players in the $46.3B market. This suggests that while it has significant liquidity, there’s still considerable room for growth and competition within the lending space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-22T00:31:07.938Z"
+  },
+  "2026-02-22|protocol|jupiter-lend|D|P4_ATH_TIMING|explanation|bb0c12ef66927086": {
+    "text": "Jupiter Lend reached its all-time high (ATH) of $1.1B in January 2026, which is notable because it reflects a significant growth period compared to earlier months like August and October 2025, when the platform was still building momentum. This timing suggests that Jupiter Lend capitalized on market conditions or product developments that peaked at the start of 2026, setting it apart from the other months listed.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-22T00:31:10.552Z"
+  },
+  "2026-02-22|protocol|jupiter-lend|E|P8_CHAIN_MEMBERSHIP|explanation|12d486f19482dffb": {
+    "text": "Jupiter Lend operates exclusively on Solana, which allows it to leverage the chain's high throughput and low transaction costs. This single-chain focus can enhance user experience but may limit its reach compared to multi-chain protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-22T00:31:12.507Z"
   }
 }
