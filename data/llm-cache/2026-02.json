@@ -623,5 +623,30 @@
     "text": "Jupiter Lend operates exclusively on Solana, which allows it to leverage the chain's high throughput and low transaction costs. This single-chain focus can enhance user experience but may limit its reach compared to multi-chain protocols.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-02-22T00:31:12.507Z"
+  },
+  "2026-02-23|protocol|binance-staked-sol|A|P1_FINGERPRINT|explanation|d45a83b0cd59b5db": {
+    "text": "Binance Staked SOL has a TVL of $757M solely on the Solana chain, reflecting the growing interest in liquid staking as users seek flexibility while earning rewards. This substantial amount positions it firmly within the $500M-$1B range, showcasing its significance in the liquid staking landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-23T00:31:11.369Z"
+  },
+  "2026-02-23|protocol|binance-staked-sol|B|P7_CATEGORY|explanation|adb0df9b1ecf48a0": {
+    "text": "Binance Staked SOL falls under the Liquid Staking category, allowing users to earn staking rewards while maintaining liquidity through tokenized representations of their staked assets. This approach enables more flexibility in managing assets compared to traditional staking, which locks up funds for a set period.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-23T00:31:13.262Z"
+  },
+  "2026-02-23|protocol|binance-staked-sol|C|P5_FEES_REVENUE|explanation|60b382955dbb9c00": {
+    "text": "Binance Staked SOL generated $1M in fees over the past week, with $147K of that translating into revenue, which means only 14% of the fees are being retained as profit. This relatively low revenue percentage suggests high operational costs or competitive fee structures in the staking market.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-23T00:31:15.071Z"
+  },
+  "2026-02-23|protocol|binance-staked-sol|D|P4_ATH_TIMING|explanation|89fb63394247e2e0": {
+    "text": "Binance Staked SOL hit its ATH of $3.1B in September 2025, a significant milestone that reflects growing interest in staking as a yield-generating strategy. In contrast, the other options like July 2025 and September 2024 fell short of this peak, indicating that the staking ecosystem was still evolving during those periods.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-23T00:31:17.371Z"
+  },
+  "2026-02-23|protocol|binance-staked-sol|E|P8_CHAIN_MEMBERSHIP|explanation|1df7f5d3ecffc7bf": {
+    "text": "Binance Staked SOL is exclusively on the Solana chain, reflecting the platform's focus on providing staking services for specific high-performance networks. This single-chain approach allows Binance to optimize its staking infrastructure and user experience for Solana's unique features.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-23T00:31:19.245Z"
   }
 }

@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-02-23:protocol:binance-staked-sol",
+  "dateUtc": "2026-02-23",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "binance-staked-sol",
+    "name": "Binance Staked SOL",
+    "category": "Liquid Staking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Liquid Staking",
+        "Chains: single-chain",
+        "TVL: $500M-$1B",
+        "7d change: roughly flat"
+      ],
+      "choices": [
+        "Binance Staked SOL",
+        "DoubleZero Staked SOL",
+        "Binance staked ETH",
+        "Gauntlet"
+      ],
+      "answerIndex": 0,
+      "explanation": "Binance Staked SOL has a TVL of $757M solely on the Solana chain, reflecting the growing interest in liquid staking as users seek flexibility while earning rewards. This substantial amount positions it firmly within the $500M-$1B range, showcasing its significance in the liquid staking landscape.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.3332241332132053
+      },
+      "difficultyScore": 0.4158224133213206
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Binance Staked SOL?",
+      "choices": [
+        "Governance Incentives",
+        "Liquid Staking",
+        "AI Agents",
+        "Onchain Capital Allocator"
+      ],
+      "answerIndex": 1,
+      "explanation": "Binance Staked SOL falls under the Liquid Staking category, allowing users to earn staking rewards while maintaining liquidity through tokenized representations of their staked assets. This approach enables more flexibility in managing assets compared to traditional staking, which locks up funds for a set period.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.3332241332132053
+      },
+      "difficultyScore": 0.32582241332132056
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Binance Staked SOL's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 1,
+      "explanation": "Binance Staked SOL generated $1M in fees over the past week, with $147K of that translating into revenue, which means only 14% of the fees are being retained as profit. This relatively low revenue percentage suggests high operational costs or competitive fee structures in the staking market.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.15277589651392898,
+        "volatility": 0.3332241332132053
+      },
+      "difficultyScore": 0.4424913375046058
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Binance Staked SOL hit its all-time high TVL?",
+      "choices": [
+        "Sep 2025",
+        "Jul 2025",
+        "Mar 2025",
+        "Oct 2024",
+        "Aug 2025",
+        "Sep 2024"
+      ],
+      "answerIndex": 0,
+      "explanation": "Binance Staked SOL hit its ATH of $3.1B in September 2025, a significant milestone that reflects growing interest in staking as a yield-generating strategy. In contrast, the other options like July 2025 and September 2024 fell short of this peak, indicating that the staking ecosystem was still evolving during those periods.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.3332241332132053
+      },
+      "difficultyScore": 0.5158224133213205
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Binance Staked SOL deployed on?",
+      "choices": [
+        "Avalanche",
+        "zkSync Era",
+        "BSC",
+        "Solana"
+      ],
+      "answerIndex": 3,
+      "explanation": "Binance Staked SOL is exclusively on the Solana chain, reflecting the platform's focus on providing staking services for specific high-performance networks. This single-chain approach allows Binance to optimize its staking infrastructure and user experience for Solana's unique features.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.3332241332132053
+      },
+      "difficultyScore": 0.32582241332132056
+    }
+  ],
+  "generatedAt": "2026-02-23T00:31:19.246Z"
+}
