@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-02-26:chain:Mantle",
+  "dateUtc": "2026-02-26",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Mantle",
+    "name": "Mantle"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: MNT",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "Mantle",
+        "Polygon",
+        "Flare",
+        "Bitcoin",
+        "Ink",
+        "Starknet"
+      ],
+      "answerIndex": 0,
+      "explanation": "Mantle's TVL of $100M-$500M and its rank at 14th show it has gained traction among users, while the presence of 136 protocols indicates a diverse ecosystem that can attract various DeFi projects and users. This level of protocol count suggests a growing interest in Mantle as a viable platform for decentralized applications.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "prompt": "Mantle has higher TVL than Ink.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Mantle's $448M TVL edges out Ink's $429M by 4.1%, showcasing its growing appeal among users and developers, likely driven by its unique features or incentives that differentiate it in the competitive DeFi landscape. This slight margin suggests Mantle is gaining traction, but both chains are closely matched in terms of user interest and liquidity.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.04143855260152153,
+        "volatility": null
+      },
+      "difficultyScore": 0.36977373687817416
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "ab",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Starknet",
+        "Mantle",
+        "Kava",
+        "Monad"
+      ],
+      "answerIndex": 2,
+      "explanation": "Kava leads with a remarkable 44.6% growth, but Mantle's 35.7% increase also shows strong momentum, especially when compared to Monad's modest 5.4% and Starknet's decline of 12%. This growth trend for Mantle suggests it's gaining traction in the DeFi space, reflecting increased user interest and activity.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.08977589326608276,
+        "volatility": null
+      },
+      "difficultyScore": 0.4617689280807007
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Mantle hit its all-time high TVL?",
+      "choices": [
+        "Oct 2024",
+        "Sep 2023",
+        "Sep 2025",
+        "Aug 2024",
+        "Nov 2024",
+        "Dec 2024"
+      ],
+      "answerIndex": 4,
+      "explanation": "Mantle reached its all-time high (ATH) of $645M in November 2024, which stands out compared to earlier months like August and October 2024, where it had not yet peaked. This timing suggests that Mantle experienced significant growth and adoption leading up to its ATH, differentiating it from the other options that reflect earlier or later periods of performance.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Mantle?",
+      "choices": [
+        "Uniswap V3",
+        "WOOFi Swap",
+        "Merchant Moe Liquidity Book",
+        "Agni Finance"
+      ],
+      "answerIndex": 2,
+      "explanation": "Merchant Moe Liquidity Book leads Mantle with a solid $10M in volume, significantly outpacing Agni Finance at $4M, which is the second-highest on the chain. This stark difference illustrates Merchant Moe's dominant position in the Mantle ecosystem, especially when compared to the much lower volumes of WOOFi Swap and Uniswap V3, which only managed $100K and $84K, respectively.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.6476589752616251,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-02-26T00:28:41.077Z"
+}

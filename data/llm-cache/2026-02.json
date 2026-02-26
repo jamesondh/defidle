@@ -648,5 +648,30 @@
     "text": "Binance Staked SOL is exclusively on the Solana chain, reflecting the platform's focus on providing staking services for specific high-performance networks. This single-chain approach allows Binance to optimize its staking infrastructure and user experience for Solana's unique features.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-02-23T00:31:19.245Z"
+  },
+  "2026-02-26|chain|Mantle|A|C1_FINGERPRINT|explanation|c164d71ffbbda255": {
+    "text": "Mantle's TVL of $100M-$500M and its rank at 14th show it has gained traction among users, while the presence of 136 protocols indicates a diverse ecosystem that can attract various DeFi projects and users. This level of protocol count suggests a growing interest in Mantle as a viable platform for decentralized applications.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-26T00:28:30.463Z"
+  },
+  "2026-02-26|chain|Mantle|B|C2_CHAIN_COMPARISON|explanation|8c18c5b431e9a282": {
+    "text": "Mantle's $448M TVL edges out Ink's $429M by 4.1%, showcasing its growing appeal among users and developers, likely driven by its unique features or incentives that differentiate it in the competitive DeFi landscape. This slight margin suggests Mantle is gaining traction, but both chains are closely matched in terms of user interest and liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-26T00:28:33.103Z"
+  },
+  "2026-02-26|chain|Mantle|C|C4_GROWTH_RANKING|explanation|861022680619198d": {
+    "text": "Kava leads with a remarkable 44.6% growth, but Mantle's 35.7% increase also shows strong momentum, especially when compared to Monad's modest 5.4% and Starknet's decline of 12%. This growth trend for Mantle suggests it's gaining traction in the DeFi space, reflecting increased user interest and activity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-26T00:28:36.119Z"
+  },
+  "2026-02-26|chain|Mantle|D|C3_ATH_TIMING|explanation|2496fcaabed78b29": {
+    "text": "Mantle reached its all-time high (ATH) of $645M in November 2024, which stands out compared to earlier months like August and October 2024, where it had not yet peaked. This timing suggests that Mantle experienced significant growth and adoption leading up to its ATH, differentiating it from the other options that reflect earlier or later periods of performance.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-26T00:28:38.606Z"
+  },
+  "2026-02-26|chain|Mantle|E|C6_TOP_DEX|explanation|033b4657daa4db39": {
+    "text": "Merchant Moe Liquidity Book leads Mantle with a solid $10M in volume, significantly outpacing Agni Finance at $4M, which is the second-highest on the chain. This stark difference illustrates Merchant Moe's dominant position in the Mantle ecosystem, especially when compared to the much lower volumes of WOOFi Swap and Uniswap V3, which only managed $100K and $84K, respectively.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-26T00:28:41.077Z"
   }
 }
