@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-02-27:protocol:wisdomtree",
+  "dateUtc": "2026-02-27",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "wisdomtree",
+    "name": "WisdomTree",
+    "category": "RWA"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: RWA",
+        "Chains: 2-5 chains",
+        ">90% TVL on single chain",
+        "TVL: $500M-$1B",
+        "7d change: roughly flat"
+      ],
+      "choices": [
+        "WisdomTree",
+        "Jupiter Lend",
+        "Circle USYC"
+      ],
+      "answerIndex": 0,
+      "explanation": "WisdomTree's $740M TVL across Ethereum and Stellar highlights its focus on real-world assets (RWA), which is a growing trend in DeFi as it bridges traditional finance with blockchain technology. Operating on two chains allows it to tap into diverse user bases and liquidity pools, enhancing its overall reach and utility.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.006413197642596596
+      },
+      "difficultyScore": 0.38314131976425975
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does WisdomTree have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Stellar"
+      ],
+      "answerIndex": 0,
+      "explanation": "WisdomTree's $717M TVL on Ethereum dwarfs Stellar's $23M, showcasing Ethereum's dominance in the DeFi space and its ability to attract significantly more liquidity. The 97% margin indicates a stark preference among users for Ethereum's robust ecosystem over Stellar's offerings.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9673458710957578,
+        "volatility": 0.006413197642596596
+      },
+      "difficultyScore": 0.20314131976425967
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of WisdomTree's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 0,
+      "explanation": "WisdomTree generated $523K in fees over the past week, but only $41K of that translated into revenue, indicating a revenue conversion rate of just 7.9%. This suggests that while the platform is attracting significant trading activity, its fee structure may not be as profitable as it could be.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.0828180350571151,
+        "volatility": 0.006413197642596596
+      },
+      "difficultyScore": 0.4937596776957216
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did WisdomTree hit its all-time high TVL?",
+      "choices": [
+        "Nov 2025",
+        "Jan 2026",
+        "Aug 2025",
+        "Dec 2025",
+        "Feb 2026",
+        "Sep 2025"
+      ],
+      "answerIndex": 2,
+      "explanation": "WisdomTree reached its ATH of $942M in August 2025, a significant milestone that reflects its growing adoption and market interest at that time. The other options, like December 2025 and January 2026, came after this peak, indicating that WisdomTree's momentum had already started to shift by then.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.006413197642596596
+      },
+      "difficultyScore": 0.48314131976425967
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of WisdomTree's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "WisdomTree's TVL is heavily concentrated on Ethereum, with 97% of its $740M total locked on the chain, which reflects Ethereum's dominance in the DeFi space and suggests that users are primarily leveraging its established ecosystem for liquidity and trading. This concentration can also indicate potential risks, as a significant downturn on Ethereum could heavily impact WisdomTree's overall performance.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.8735137816612739,
+        "volatility": 0.006413197642596596
+      },
+      "difficultyScore": 0.2931413197642597
+    }
+  ],
+  "generatedAt": "2026-02-27T00:31:10.424Z"
+}

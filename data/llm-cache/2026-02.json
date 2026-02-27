@@ -673,5 +673,30 @@
     "text": "Merchant Moe Liquidity Book leads Mantle with a solid $10M in volume, significantly outpacing Agni Finance at $4M, which is the second-highest on the chain. This stark difference illustrates Merchant Moe's dominant position in the Mantle ecosystem, especially when compared to the much lower volumes of WOOFi Swap and Uniswap V3, which only managed $100K and $84K, respectively.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-02-26T00:28:41.077Z"
+  },
+  "2026-02-27|protocol|wisdomtree|A|P1_FINGERPRINT|explanation|7411b3a2e3d88959": {
+    "text": "WisdomTree's $740M TVL across Ethereum and Stellar highlights its focus on real-world assets (RWA), which is a growing trend in DeFi as it bridges traditional finance with blockchain technology. Operating on two chains allows it to tap into diverse user bases and liquidity pools, enhancing its overall reach and utility.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-27T00:31:03.159Z"
+  },
+  "2026-02-27|protocol|wisdomtree|B|P2_CROSSCHAIN|explanation|9e66b78c619ad888": {
+    "text": "WisdomTree's $717M TVL on Ethereum dwarfs Stellar's $23M, showcasing Ethereum's dominance in the DeFi space and its ability to attract significantly more liquidity. The 97% margin indicates a stark preference among users for Ethereum's robust ecosystem over Stellar's offerings.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-27T00:31:04.277Z"
+  },
+  "2026-02-27|protocol|wisdomtree|C|P5_FEES_REVENUE|explanation|c794b0268baeb90d": {
+    "text": "WisdomTree generated $523K in fees over the past week, but only $41K of that translated into revenue, indicating a revenue conversion rate of just 7.9%. This suggests that while the platform is attracting significant trading activity, its fee structure may not be as profitable as it could be.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-27T00:31:05.454Z"
+  },
+  "2026-02-27|protocol|wisdomtree|D|P4_ATH_TIMING|explanation|1120766e349555fd": {
+    "text": "WisdomTree reached its ATH of $942M in August 2025, a significant milestone that reflects its growing adoption and market interest at that time. The other options, like December 2025 and January 2026, came after this peak, indicating that WisdomTree's momentum had already started to shift by then.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-27T00:31:07.540Z"
+  },
+  "2026-02-27|protocol|wisdomtree|E|P3_CONCENTRATION|explanation|90e9dc24a0a3dc47": {
+    "text": "WisdomTree's TVL is heavily concentrated on Ethereum, with 97% of its $740M total locked on the chain, which reflects Ethereum's dominance in the DeFi space and suggests that users are primarily leveraging its established ecosystem for liquidity and trading. This concentration can also indicate potential risks, as a significant downturn on Ethereum could heavily impact WisdomTree's overall performance.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-02-27T00:31:10.424Z"
   }
 }
