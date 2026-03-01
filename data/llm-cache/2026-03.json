@@ -1,0 +1,27 @@
+{
+  "2026-03-01|protocol|centrifuge-protocol|A|P1_FINGERPRINT|explanation|c96b2f12f0623f32": {
+    "text": "Centrifuge Protocol's $1.4B TVL across 9 chains, including Monad and Ethereum, showcases its strong position in the real-world asset (RWA) space, which is gaining traction as DeFi seeks to bridge traditional finance with blockchain. The diverse chain presence also indicates a strategic approach to tap into various ecosystems and user bases.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-01T00:33:58.368Z"
+  },
+  "2026-03-01|protocol|centrifuge-protocol|B|P2_CROSSCHAIN|explanation|b67825aa46f7c4b4": {
+    "text": "Centrifuge Protocol's $1.1B TVL on Ethereum dwarfs the $257M on Avalanche, reflecting Ethereum's established dominance in DeFi and its ability to attract larger liquidity pools. The 76% margin indicates that users are more inclined to utilize Ethereum's robust ecosystem for asset-backed lending compared to Avalanche.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-01T00:34:00.437Z"
+  },
+  "2026-03-01|protocol|centrifuge-protocol|C|P29_CATEGORY_GROWTH|explanation|27c26929efa4cb94": {
+    "text": "Centrifuge Protocol's staggering 399,632.2% growth in the derivatives category significantly outpaces other categories like RWA at 308.8% and Crypto Card Issuer at 253.7%. This explosive growth suggests a strong market demand for innovative derivative products, positioning Centrifuge as a leader in this rapidly evolving segment.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-01T00:34:03.148Z"
+  },
+  "2026-03-01|protocol|centrifuge-protocol|D|P4_ATH_TIMING|explanation|b3572d2ff29e8a65": {
+    "text": "Centrifuge Protocol hit its all-time high (ATH) of $1.4B in November 2025, a significant milestone that reflects its growth and adoption during that period. Other options like January 2026 and June 2025 missed this peak, indicating that the protocol's momentum was strongest just before the end of 2025, likely due to increased interest in asset-backed lending in DeFi.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-01T00:34:05.778Z"
+  },
+  "2026-03-01|protocol|centrifuge-protocol|E|P8_CHAIN_MEMBERSHIP|explanation|b4edd081aba50b56": {
+    "text": "Centrifuge Protocol operates across 9 chains, including Monad, Ethereum, Binance, Base, and Optimism, which allows it to tap into diverse liquidity sources and user bases. This multi-chain approach enhances its ability to facilitate asset-backed lending by reaching different DeFi ecosystems.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-01T00:34:07.861Z"
+  }
+}
