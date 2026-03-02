@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-03-02:protocol:uniswap-v3",
+  "dateUtc": "2026-03-02",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "uniswap-v3",
+    "name": "Uniswap V3",
+    "category": "Dexs"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Dexs",
+        "Chains: 10+ chains",
+        "Active since: 2021",
+        "TVL: $1B-$5B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Meteora DLMM",
+        "Babylon Protocol",
+        "Falcon Finance",
+        "Uniswap V3",
+        "Ondo Yield Assets"
+      ],
+      "answerIndex": 3,
+      "explanation": "Uniswap V3's $1.5B TVL across 41 chains, including newer platforms like Saga and Polygon zkEVM, showcases its adaptability and appeal in diverse ecosystems, allowing it to capture liquidity from both established and emerging DeFi markets. This broad chain presence indicates a strategic push to tap into various user bases and liquidity sources.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.19452631470758658
+      },
+      "difficultyScore": 0.4919526314707587
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Uniswap V3 have higher TVL?",
+      "choices": [
+        "Base",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Uniswap V3's $953M TVL on Ethereum dwarfs the $194M on Base, reflecting Ethereum's established dominance and liquidity depth in the DeFi space, which often attracts more users and capital compared to newer chains. The 80% margin underscores the challenges for emerging platforms to compete with the robust ecosystem and user base of Ethereum.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.7961882288889044,
+        "volatility": 0.19452631470758658
+      },
+      "difficultyScore": 0.22195263147075867
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Uniswap V3's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Uniswap V3 generated $5M in fees over the past week, but only $155K of that translated into revenue, reflecting a revenue percentage of just 2.9%. This disparity suggests that while the platform is attracting significant trading activity, a large portion of the fees may be going towards liquidity provider incentives rather than directly benefiting the protocol.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.28514684101353016,
+        "volatility": 0.19452631470758658
+      },
+      "difficultyScore": 0.3119526314707587
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Uniswap V3 hit its all-time high TVL?",
+      "choices": [
+        "Aug 2022",
+        "Oct 2022",
+        "Apr 2023",
+        "Nov 2021",
+        "Apr 2025",
+        "Feb 2024"
+      ],
+      "answerIndex": 0,
+      "explanation": "Uniswap V3 hit its all-time high (ATH) of $4.8B in August 2022, a peak that coincided with a surge in DeFi activity during that period. In contrast, while October 2022 saw significant market fluctuations, it was after this ATH, and the other dates listed, like April 2025 and February 2024, are still in the future, making August 2022 the standout moment for Uniswap V3's TVL.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.19452631470758658
+      },
+      "difficultyScore": 0.5019526314707586
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Uniswap V3's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 2,
+      "explanation": "Uniswap V3's TVL of $1.5B is heavily concentrated on Ethereum, which accounts for 62% of its total, translating to $953M. This concentration reflects Ethereum's dominance in DeFi, where liquidity and trading volume are significantly higher compared to other chains.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4656838282822582,
+        "volatility": 0.19452631470758658
+      },
+      "difficultyScore": 0.3119526314707587
+    }
+  ],
+  "generatedAt": "2026-03-02T00:31:24.239Z"
+}

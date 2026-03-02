@@ -23,5 +23,30 @@
     "text": "Centrifuge Protocol operates across 9 chains, including Monad, Ethereum, Binance, Base, and Optimism, which allows it to tap into diverse liquidity sources and user bases. This multi-chain approach enhances its ability to facilitate asset-backed lending by reaching different DeFi ecosystems.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-01T00:34:07.861Z"
+  },
+  "2026-03-02|protocol|uniswap-v3|A|P1_FINGERPRINT|explanation|90486ce0fd836ec1": {
+    "text": "Uniswap V3's $1.5B TVL across 41 chains, including newer platforms like Saga and Polygon zkEVM, showcases its adaptability and appeal in diverse ecosystems, allowing it to capture liquidity from both established and emerging DeFi markets. This broad chain presence indicates a strategic push to tap into various user bases and liquidity sources.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-02T00:31:15.206Z"
+  },
+  "2026-03-02|protocol|uniswap-v3|B|P2_CROSSCHAIN|explanation|79976fcadf4f8158": {
+    "text": "Uniswap V3's $953M TVL on Ethereum dwarfs the $194M on Base, reflecting Ethereum's established dominance and liquidity depth in the DeFi space, which often attracts more users and capital compared to newer chains. The 80% margin underscores the challenges for emerging platforms to compete with the robust ecosystem and user base of Ethereum.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-02T00:31:17.417Z"
+  },
+  "2026-03-02|protocol|uniswap-v3|C|P5_FEES_REVENUE|explanation|c9ef73929bb0e76b": {
+    "text": "Uniswap V3 generated $5M in fees over the past week, but only $155K of that translated into revenue, reflecting a revenue percentage of just 2.9%. This disparity suggests that while the platform is attracting significant trading activity, a large portion of the fees may be going towards liquidity provider incentives rather than directly benefiting the protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-02T00:31:20.014Z"
+  },
+  "2026-03-02|protocol|uniswap-v3|D|P4_ATH_TIMING|explanation|88136fac0c20029e": {
+    "text": "Uniswap V3 hit its all-time high (ATH) of $4.8B in August 2022, a peak that coincided with a surge in DeFi activity during that period. In contrast, while October 2022 saw significant market fluctuations, it was after this ATH, and the other dates listed, like April 2025 and February 2024, are still in the future, making August 2022 the standout moment for Uniswap V3's TVL.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-02T00:31:22.818Z"
+  },
+  "2026-03-02|protocol|uniswap-v3|E|P3_CONCENTRATION|explanation|ceba0a911a6432eb": {
+    "text": "Uniswap V3's TVL of $1.5B is heavily concentrated on Ethereum, which accounts for 62% of its total, translating to $953M. This concentration reflects Ethereum's dominance in DeFi, where liquidity and trading volume are significantly higher compared to other chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-02T00:31:24.239Z"
   }
 }
