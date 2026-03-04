@@ -1,0 +1,137 @@
+{
+  "episodeId": "2026-03-04:protocol:pendle",
+  "dateUtc": "2026-03-04",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "pendle",
+    "name": "Pendle",
+    "category": "Yield"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Yield",
+        "Chains: 10+ chains",
+        "TVL spread across chains (no chain >50%)",
+        "Active since: 2021"
+      ],
+      "choices": [
+        "Binance Bitcoin",
+        "Convex Finance",
+        "Sky Lending",
+        "Babylon Protocol",
+        "Pendle"
+      ],
+      "answerIndex": 4,
+      "explanation": "Pendle's $2.2B TVL across 11 chains showcases its versatility in the yield sector, with Ethereum and Avalanche being key players in its ecosystem. The diverse chain presence allows Pendle to tap into various liquidity pools, enhancing its appeal to users seeking yield optimization across different platforms.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.11085777116467684
+      },
+      "difficultyScore": 0.4655857771164677
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Pendle have higher TVL?",
+      "choices": [
+        "Arbitrum",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Pendle's $1.1B TVL on Ethereum dwarfs its $175M on Arbitrum, with an 83% margin indicating that most of its liquidity and user activity is concentrated on Ethereum, which is typical for protocols that initially launch on a dominant chain before expanding to others. This disparity suggests that while Pendle is gaining traction on Arbitrum, it still relies heavily on Ethereum's established user base and liquidity.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.8339816349954401,
+        "volatility": 0.11085777116467684
+      },
+      "difficultyScore": 0.19558577711646769
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "ab",
+      "prompt": "Over the last 7 days, did Pendle generate more in fees or revenue?",
+      "choices": [
+        "Revenue",
+        "Fees"
+      ],
+      "answerIndex": 1,
+      "explanation": "Pendle generated $71K in revenue over the past week, with fees accounting for 86% of that amount at $83K, indicating a strong fee structure that effectively converts user activity into revenue. This efficiency in revenue generation is crucial for sustaining the protocol's operations and incentivizing liquidity providers.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.14342691702406266,
+        "volatility": 0.11085777116467684
+      },
+      "difficultyScore": 0.32347347668759246
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Pendle hit its all-time high TVL?",
+      "choices": [
+        "Aug 2022",
+        "Feb 2024",
+        "Dec 2024",
+        "Oct 2021",
+        "Mar 2026",
+        "Sep 2025"
+      ],
+      "answerIndex": 5,
+      "explanation": "Pendle reached its all-time high (ATH) of $13.4B in September 2025, a significant leap compared to earlier months like August 2022, when it had not yet gained widespread traction. The other dates, such as February and December 2024, also fell short of this peak, highlighting Pendle's growth trajectory as it matured in the DeFi space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": 0.11085777116467684
+      },
+      "difficultyScore": 0.47558577711646777
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "Pendle's TVL increased over the past 30 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "Pendle's TVL has decreased by 24.3% to $2.2B, reflecting a broader trend of declining interest in yield-bearing assets as market conditions shift. This drop may indicate users are reallocating their capital to other protocols or strategies that currently offer better returns or stability.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.2425428394734764,
+        "volatility": 0.11085777116467684
+      },
+      "difficultyScore": 0.114534369748296
+    }
+  ],
+  "generatedAt": "2026-03-04T00:29:35.202Z"
+}

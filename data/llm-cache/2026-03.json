@@ -73,5 +73,30 @@
     "text": "Kava led the growth ranking with a remarkable 46% increase, while Berachain's 11.1% growth is notable but pales in comparison to Kava's surge. In contrast, Starknet and Tron saw declines of 9.2% and 12.5%, respectively, highlighting Berachain's relative strength in a challenging environment for other chains.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-03T00:31:27.407Z"
+  },
+  "2026-03-04|protocol|pendle|A|P1_FINGERPRINT|explanation|b30843f38d1c1165": {
+    "text": "Pendle's $2.2B TVL across 11 chains showcases its versatility in the yield sector, with Ethereum and Avalanche being key players in its ecosystem. The diverse chain presence allows Pendle to tap into various liquidity pools, enhancing its appeal to users seeking yield optimization across different platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-04T00:29:27.340Z"
+  },
+  "2026-03-04|protocol|pendle|B|P2_CROSSCHAIN|explanation|072c9a0c0f065d28": {
+    "text": "Pendle's $1.1B TVL on Ethereum dwarfs its $175M on Arbitrum, with an 83% margin indicating that most of its liquidity and user activity is concentrated on Ethereum, which is typical for protocols that initially launch on a dominant chain before expanding to others. This disparity suggests that while Pendle is gaining traction on Arbitrum, it still relies heavily on Ethereum's established user base and liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-04T00:29:29.563Z"
+  },
+  "2026-03-04|protocol|pendle|C|P5_FEES_REVENUE|explanation|15b3d28adcee1fef": {
+    "text": "Pendle generated $71K in revenue over the past week, with fees accounting for 86% of that amount at $83K, indicating a strong fee structure that effectively converts user activity into revenue. This efficiency in revenue generation is crucial for sustaining the protocol's operations and incentivizing liquidity providers.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-04T00:29:31.759Z"
+  },
+  "2026-03-04|protocol|pendle|D|P4_ATH_TIMING|explanation|64a3d1cf78653123": {
+    "text": "Pendle reached its all-time high (ATH) of $13.4B in September 2025, a significant leap compared to earlier months like August 2022, when it had not yet gained widespread traction. The other dates, such as February and December 2024, also fell short of this peak, highlighting Pendle's growth trajectory as it matured in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-04T00:29:33.379Z"
+  },
+  "2026-03-04|protocol|pendle|E|P6_TVL_TREND|explanation|a8eabb13fad215d7": {
+    "text": "Pendle's TVL has decreased by 24.3% to $2.2B, reflecting a broader trend of declining interest in yield-bearing assets as market conditions shift. This drop may indicate users are reallocating their capital to other protocols or strategies that currently offer better returns or stability.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-04T00:29:35.202Z"
   }
 }
