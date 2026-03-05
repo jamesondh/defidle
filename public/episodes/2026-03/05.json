@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-03-05:chain:Bitcoin",
+  "dateUtc": "2026-03-05",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Bitcoin",
+    "name": "Bitcoin"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 5",
+        "Native token: BTC",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "Polygon",
+        "Bitcoin",
+        "Hyperliquid L1",
+        "Plasma",
+        "Provenance",
+        "Tron"
+      ],
+      "answerIndex": 1,
+      "explanation": "Bitcoin is ranked #4 by TVL with $1B-$5B locked across 162 protocols.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4675
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Bitcoin or Solana?",
+      "choices": [
+        "Bitcoin",
+        "Solana"
+      ],
+      "answerIndex": 1,
+      "explanation": "Solana has 33.8% more TVL than Bitcoin ($6.6B vs $4.4B).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.3382859216486877,
+        "volatility": null
+      },
+      "difficultyScore": 0.19749999999999998
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Bitcoin",
+        "Kava",
+        "Stellar",
+        "Mixin"
+      ],
+      "answerIndex": 1,
+      "explanation": "Kava had the highest 30-day TVL growth at 46.0%, outpacing Stellar (+1.6%), Mixin (-5.6%), Bitcoin (-29.8%).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.4435104426715825,
+        "volatility": null
+      },
+      "difficultyScore": 0.34750000000000003
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Bitcoin hit its all-time high TVL?",
+      "choices": [
+        "Oct 2025",
+        "Jan 2023",
+        "Jan 2026",
+        "Jul 2023",
+        "Oct 2021",
+        "Aug 2025"
+      ],
+      "answerIndex": 0,
+      "explanation": "Bitcoin's historical TVL peak is based on DefiLlama data as of 2026-03-05.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.47750000000000004
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Bitcoin?",
+      "choices": [
+        "C3 Exchange",
+        "LN Exchange Spot",
+        "Bisq",
+        "Garden"
+      ],
+      "answerIndex": 1,
+      "explanation": "LN Exchange Spot is the top DEX on Bitcoin with $1M in 24h volume, ahead of Bisq ($0), Garden ($0), C3 Exchange ($0).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 1,
+        "volatility": null
+      },
+      "difficultyScore": 0.28750000000000003
+    }
+  ],
+  "generatedAt": "2026-03-05T00:32:12.420Z"
+}
