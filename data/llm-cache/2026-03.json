@@ -98,5 +98,30 @@
     "text": "Pendle's TVL has decreased by 24.3% to $2.2B, reflecting a broader trend of declining interest in yield-bearing assets as market conditions shift. This drop may indicate users are reallocating their capital to other protocols or strategies that currently offer better returns or stability.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-04T00:29:35.202Z"
+  },
+  "2026-03-06|protocol|rocket-pool|A|P1_FINGERPRINT|explanation|c7678e23f260a06b": {
+    "text": "Rocket Pool's $1.2B TVL on Ethereum showcases its significant role in the liquid staking sector, where users can stake ETH while maintaining liquidity. With only one chain, its focus on Ethereum allows for deeper integration and a streamlined user experience within the network.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-06T00:34:02.499Z"
+  },
+  "2026-03-06|protocol|rocket-pool|B|P7_CATEGORY|explanation|05e5143602dbb46f": {
+    "text": "Rocket Pool is a key player in the liquid staking category, allowing users to stake their ETH while still maintaining liquidity through tokenized representations of their staked assets. This model attracts both individual stakers and larger validators looking for flexibility in managing their staked ETH.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-06T00:34:04.079Z"
+  },
+  "2026-03-06|protocol|rocket-pool|C|P11_FEES_TREND|explanation|879aa949cbcad957": {
+    "text": "Rocket Pool's fees increased by 17.8% over the past week, rising from $54K to $63K, which suggests growing user activity or interest in their decentralized staking services. This uptick can indicate a positive trend in the protocol's adoption as Ethereum staking becomes more popular.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-06T00:34:06.074Z"
+  },
+  "2026-03-06|protocol|rocket-pool|D|P4_ATH_TIMING|explanation|4e9c89da1d0d9421": {
+    "text": "Rocket Pool hit its all-time high (ATH) of $3.2B in August 2025, a significant leap compared to earlier months like May 2022, when it was still gaining traction in the market. The timing of this ATH suggests that Rocket Pool's growth aligns with broader trends in Ethereum staking and DeFi adoption, which were still developing during the earlier dates.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-06T00:34:08.758Z"
+  },
+  "2026-03-06|protocol|rocket-pool|E|P8_CHAIN_MEMBERSHIP|explanation|33614d606aa1a7fa": {
+    "text": "Rocket Pool operates solely on Ethereum, which allows it to leverage the network's robust security and established user base, making it a popular choice for decentralized staking. This single-chain focus can lead to deeper integration with Ethereum's ecosystem, but it also means Rocket Pool is more susceptible to Ethereum's network congestion and fees.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-06T00:34:10.582Z"
   }
 }
