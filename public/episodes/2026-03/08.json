@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-03-08:protocol:doublezero-staked-sol",
+  "dateUtc": "2026-03-08",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "doublezero-staked-sol",
+    "name": "DoubleZero Staked SOL",
+    "category": "Liquid Staking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Liquid Staking",
+        "Chains: single-chain",
+        "TVL: $1B-$5B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "DoubleZero Staked SOL",
+        "Portal",
+        "Venus Core Pool",
+        "Figure Markets Exchange",
+        "Binance Staked SOL",
+        "Jito Liquid Staking"
+      ],
+      "answerIndex": 0,
+      "explanation": "DoubleZero Staked SOL has a TVL of $1.1B on Solana, showcasing the growing popularity of liquid staking within a single chain ecosystem. This concentration allows for more efficient capital use and can enhance liquidity for stakers, making it an attractive option for users looking to earn rewards without losing access to their assets.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.2980363146707848
+      },
+      "difficultyScore": 0.5023036314670785
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is DoubleZero Staked SOL?",
+      "choices": [
+        "Bug Bounty",
+        "Liquid Staking",
+        "Privacy",
+        "Indexes"
+      ],
+      "answerIndex": 1,
+      "explanation": "DoubleZero Staked SOL operates within the liquid staking category, allowing users to stake their SOL while still maintaining liquidity through tokenized representations of their staked assets. This model enables users to earn staking rewards without sacrificing the flexibility to trade or use their assets in other DeFi protocols.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.2980363146707848
+      },
+      "difficultyScore": 0.3223036314670785
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is DoubleZero Staked SOL's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 1,
+      "explanation": "DoubleZero Staked SOL has a current TVL of $1.1B, which is 42% below its all-time high of $1.9B. This significant distance suggests that while the protocol has seen strong interest, it may be facing challenges in regaining its previous peak, possibly due to market conditions or competition.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.300467443836765,
+        "volatility": 0.2980363146707848
+      },
+      "difficultyScore": 0.3823036314670785
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Liquid Staking protocols from highest to lowest TVL.",
+      "choices": [
+        "DoubleZero Staked SOL > Lido > Rocket Pool",
+        "Lido > Rocket Pool > DoubleZero Staked SOL",
+        "Lido > DoubleZero Staked SOL > Rocket Pool",
+        "Rocket Pool > Lido > DoubleZero Staked SOL"
+      ],
+      "answerIndex": 1,
+      "explanation": "DoubleZero Staked SOL shares the same $1.1B TVL as Rocket Pool, but Lido's dominance at $18.2B shows the significant lead it has in the liquid staking space. This disparity indicates that while DoubleZero and Rocket Pool are gaining traction, Lido's established infrastructure and user base still set the benchmark for liquid staking solutions.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.013902753941990111,
+        "volatility": 0.2980363146707848
+      },
+      "difficultyScore": 0.7056203267366903
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is DoubleZero Staked SOL deployed on?",
+      "choices": [
+        "Optimism",
+        "Solana",
+        "Base",
+        "Polygon"
+      ],
+      "answerIndex": 1,
+      "explanation": "DoubleZero Staked SOL operates solely on Solana, which allows it to leverage the chain's high throughput and low transaction costs, making it an attractive option for users looking to stake SOL efficiently. This single-chain focus can lead to a more streamlined user experience, as all activities are concentrated within one ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.2980363146707848
+      },
+      "difficultyScore": 0.3223036314670785
+    }
+  ],
+  "generatedAt": "2026-03-08T00:30:52.355Z"
+}

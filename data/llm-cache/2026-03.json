@@ -148,5 +148,30 @@
     "text": "Base's $3.9B TVL places it firmly in the $1B-$5B range, reflecting its rapid adoption as a Layer 2 solution that leverages Ethereum's security while offering lower fees and faster transactions, attracting a diverse user base and various DeFi projects. This growth showcases the increasing demand for scalable solutions in the DeFi landscape.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-07T00:29:31.900Z"
+  },
+  "2026-03-08|protocol|doublezero-staked-sol|A|P1_FINGERPRINT|explanation|b821252122068787": {
+    "text": "DoubleZero Staked SOL has a TVL of $1.1B on Solana, showcasing the growing popularity of liquid staking within a single chain ecosystem. This concentration allows for more efficient capital use and can enhance liquidity for stakers, making it an attractive option for users looking to earn rewards without losing access to their assets.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-08T00:30:45.070Z"
+  },
+  "2026-03-08|protocol|doublezero-staked-sol|B|P7_CATEGORY|explanation|ae0df448a2a0f871": {
+    "text": "DoubleZero Staked SOL operates within the liquid staking category, allowing users to stake their SOL while still maintaining liquidity through tokenized representations of their staked assets. This model enables users to earn staking rewards without sacrificing the flexibility to trade or use their assets in other DeFi protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-08T00:30:47.207Z"
+  },
+  "2026-03-08|protocol|doublezero-staked-sol|C|P20_ATH_DISTANCE|explanation|5109a7ddee4717ab": {
+    "text": "DoubleZero Staked SOL has a current TVL of $1.1B, which is 42% below its all-time high of $1.9B. This significant distance suggests that while the protocol has seen strong interest, it may be facing challenges in regaining its previous peak, possibly due to market conditions or competition.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-08T00:30:48.970Z"
+  },
+  "2026-03-08|protocol|doublezero-staked-sol|D|P33_MULTI_RANKING|explanation|ac1e055ec94bfbde": {
+    "text": "DoubleZero Staked SOL shares the same $1.1B TVL as Rocket Pool, but Lido's dominance at $18.2B shows the significant lead it has in the liquid staking space. This disparity indicates that while DoubleZero and Rocket Pool are gaining traction, Lido's established infrastructure and user base still set the benchmark for liquid staking solutions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-08T00:30:50.398Z"
+  },
+  "2026-03-08|protocol|doublezero-staked-sol|E|P8_CHAIN_MEMBERSHIP|explanation|63fdb074a4805321": {
+    "text": "DoubleZero Staked SOL operates solely on Solana, which allows it to leverage the chain's high throughput and low transaction costs, making it an attractive option for users looking to stake SOL efficiently. This single-chain focus can lead to a more streamlined user experience, as all activities are concentrated within one ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-08T00:30:52.354Z"
   }
 }
