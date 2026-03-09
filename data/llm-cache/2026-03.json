@@ -173,5 +173,30 @@
     "text": "DoubleZero Staked SOL operates solely on Solana, which allows it to leverage the chain's high throughput and low transaction costs, making it an attractive option for users looking to stake SOL efficiently. This single-chain focus can lead to a more streamlined user experience, as all activities are concentrated within one ecosystem.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-08T00:30:52.354Z"
+  },
+  "2026-03-09|protocol|veda|A|P1_FINGERPRINT|explanation|a1cdb5cfa3190e62": {
+    "text": "Veda operates as an onchain capital allocator across 11 chains, with its $1.2B TVL indicating a strong presence in diverse ecosystems like Base and Binance. This broad distribution allows Veda to tap into varying liquidity pools and user bases, enhancing its capital efficiency and adaptability in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-09T00:30:35.849Z"
+  },
+  "2026-03-09|protocol|veda|B|P2_CROSSCHAIN|explanation|fec7595a9390fe1c": {
+    "text": "Veda's TVL on Ethereum at $801M dwarfs the $139M on Scroll, reflecting Ethereum's established dominance and user trust in its ecosystem, while Scroll is still building its presence. The 83% margin indicates a significant preference for liquidity and activity on Ethereum over Scroll, which is common as newer chains often struggle to attract capital initially.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-09T00:30:38.100Z"
+  },
+  "2026-03-09|protocol|veda|C|P5_FEES_REVENUE|explanation|600e58d85101ab90": {
+    "text": "Veda generated $20K in revenue over the past week, which is about 7.8% of its total fees of $264K. This suggests that while Veda is actively collecting fees, a significant portion is likely being reinvested or used for operational costs rather than directly contributing to profit.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-09T00:30:40.465Z"
+  },
+  "2026-03-09|protocol|veda|D|P4_ATH_TIMING|explanation|734b401901501e96": {
+    "text": "Veda reached its all-time high (ATH) of $6.1B in September 2025, a notable peak that came just before the other options like October 2025 and April 2025, which didn't capture the same level of market enthusiasm. This timing suggests that Veda's growth was likely driven by specific events or developments in September that resonated with investors, setting it apart from the subsequent months.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-09T00:30:42.306Z"
+  },
+  "2026-03-09|protocol|veda|E|P3_CONCENTRATION|explanation|13ce9519b9e6aee0": {
+    "text": "Veda's TVL of $801M on Ethereum represents 67% of its total TVL of $1.2B, showing a strong concentration on a single chain, which often leads to higher liquidity and trading volume but can also expose the protocol to risks associated with that chain's performance. This heavy reliance on Ethereum underscores its dominance in the DeFi space, particularly for protocols that prioritize security and user familiarity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-09T00:30:45.236Z"
   }
 }
