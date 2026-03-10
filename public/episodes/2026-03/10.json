@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-03-10:chain:Bitcoin",
+  "dateUtc": "2026-03-10",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Bitcoin",
+    "name": "Bitcoin"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 5",
+        "Native token: BTC",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "Arbitrum",
+        "Solana",
+        "Base",
+        "Polygon",
+        "Bitcoin",
+        "Plasma"
+      ],
+      "answerIndex": 4,
+      "explanation": "Bitcoin ranks 4th in TVL with between $1B and $5B, driven by a diverse ecosystem of 156 protocols, which is significant for a blockchain primarily known for its role as a store of value rather than a DeFi hub. This breadth of protocols indicates growing interest in utilizing Bitcoin's network for various decentralized applications.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4675
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Bitcoin or Ethereum?",
+      "choices": [
+        "Bitcoin",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ethereum's $55.1B TVL dwarfs Bitcoin's $4.4B by 92%, reflecting Ethereum's dominance in DeFi due to its smart contract capabilities, which enable a wider range of decentralized applications compared to Bitcoin's primarily transactional use case. This stark contrast illustrates how the functionality of a blockchain can significantly influence its adoption and value in the DeFi space.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.9201869614449228,
+        "volatility": null
+      },
+      "difficultyScore": 0.19749999999999998
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Bitcoin",
+        "Mantle",
+        "Plume Mainnet",
+        "Kava"
+      ],
+      "answerIndex": 2,
+      "explanation": "Plume Mainnet's impressive growth of 315.8% stands out sharply against Bitcoin's decline of 3.8%, especially when compared to Mantle's 244.1% increase and Kava's modest 9.5% rise. This stark contrast highlights how emerging chains can rapidly gain traction, while Bitcoin, despite its dominance, is facing challenges in maintaining growth.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.7171098438005177,
+        "volatility": null
+      },
+      "difficultyScore": 0.34750000000000003
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Bitcoin hit its all-time high TVL?",
+      "choices": [
+        "Jan 2025",
+        "Sep 2021",
+        "Mar 2023",
+        "Apr 2023",
+        "Jul 2021",
+        "Oct 2025"
+      ],
+      "answerIndex": 5,
+      "explanation": "Bitcoin reached its all-time high (ATH) of $9.1B in October 2025, a significant increase compared to its previous peaks, like $1.2B in September 2021 and $2.5B in July 2021. This timing reflects the market's evolving dynamics and investor sentiment, which can dramatically shift over time, influencing Bitcoin's valuation trajectory.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.47750000000000004
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Bitcoin?",
+      "choices": [
+        "Bisq",
+        "Garden",
+        "C3 Exchange",
+        "LN Exchange Spot"
+      ],
+      "answerIndex": 3,
+      "explanation": "LN Exchange Spot leads Bitcoin DEXs with a volume of $445K, significantly outpacing competitors like Bisq, Garden, and C3 Exchange, which all reported $0 volume. This stark contrast highlights LN Exchange Spot's dominance in facilitating Bitcoin trades, especially given the lack of activity on other platforms.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 1,
+        "volatility": null
+      },
+      "difficultyScore": 0.28750000000000003
+    }
+  ],
+  "generatedAt": "2026-03-10T00:27:39.977Z"
+}
