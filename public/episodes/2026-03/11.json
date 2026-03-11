@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-03-11:protocol:steakhouse-financial",
+  "dateUtc": "2026-03-11",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "steakhouse-financial",
+    "name": "Steakhouse Financial",
+    "category": "Risk Curators"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Risk Curators",
+        "Chains: 6-10 chains",
+        "TVL: $1B-$5B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "MEV Capital",
+        "Paxos Gold",
+        "Steakhouse Financial",
+        "Arbitrum Bridge",
+        "Pendle"
+      ],
+      "answerIndex": 2,
+      "explanation": "Steakhouse Financial's $1.8B TVL across 8 chains, including emerging platforms like Katana and Corn, showcases its strategy of diversifying risk and tapping into various ecosystems. This approach allows it to attract liquidity from different user bases, enhancing its overall resilience in the DeFi landscape.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.11580761536402875
+      },
+      "difficultyScore": 0.4840807615364029
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Steakhouse Financial have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Base"
+      ],
+      "answerIndex": 0,
+      "explanation": "Steakhouse Financial's $973M TVL on Ethereum outpaces the $712M on Base by 27%, reflecting Ethereum's established dominance and liquidity in the DeFi space compared to newer chains like Base, which are still building their user base and ecosystem. This disparity often influences where users prefer to deploy their assets for better returns and security.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.2683915995211086,
+        "volatility": 0.11580761536402875
+      },
+      "difficultyScore": 0.21408076153640287
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Steakhouse Financial's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Steakhouse Financial generated $1M in fees over the past week, but only $51K of that translated into revenue, indicating a revenue conversion rate of just 4.9%. This low percentage suggests that while the platform is attracting significant user activity, it may be facing challenges in monetizing that activity effectively.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.20577974980112057,
+        "volatility": 0.11580761536402875
+      },
+      "difficultyScore": 0.3571450617750582
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Steakhouse Financial hit its all-time high TVL?",
+      "choices": [
+        "Jan 2025",
+        "Oct 2025",
+        "Nov 2025",
+        "Jan 2026",
+        "Feb 2026",
+        "Dec 2024"
+      ],
+      "answerIndex": 3,
+      "explanation": "Steakhouse Financial hit its ATH of $2.1B in January 2026, a significant milestone that came after a period of growth and innovation in the DeFi space. Other months like December 2024 and October 2025 were notable for various projects but didn’t see Steakhouse reach its peak, highlighting the timing of market dynamics and user interest leading up to that January surge.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.11580761536402875
+      },
+      "difficultyScore": 0.4940807615364029
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Steakhouse Financial's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 2,
+      "explanation": "Steakhouse Financial has 55% of its $1.8B TVL concentrated on Ethereum, which is significant given that Ethereum alone accounts for nearly $973M of that total. This concentration suggests that Steakhouse Financial is heavily reliant on Ethereum's ecosystem, reflecting the chain's dominance in DeFi activity and liquidity.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.21404614831731017,
+        "volatility": 0.11580761536402875
+      },
+      "difficultyScore": 0.3472253835556307
+    }
+  ],
+  "generatedAt": "2026-03-11T00:28:20.133Z"
+}

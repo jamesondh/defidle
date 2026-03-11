@@ -223,5 +223,30 @@
     "text": "LN Exchange Spot leads Bitcoin DEXs with a volume of $445K, significantly outpacing competitors like Bisq, Garden, and C3 Exchange, which all reported $0 volume. This stark contrast highlights LN Exchange Spot's dominance in facilitating Bitcoin trades, especially given the lack of activity on other platforms.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-10T00:27:39.977Z"
+  },
+  "2026-03-11|protocol|steakhouse-financial|A|P1_FINGERPRINT|explanation|6c64a2a2663c5ad1": {
+    "text": "Steakhouse Financial's $1.8B TVL across 8 chains, including emerging platforms like Katana and Corn, showcases its strategy of diversifying risk and tapping into various ecosystems. This approach allows it to attract liquidity from different user bases, enhancing its overall resilience in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-11T00:28:04.730Z"
+  },
+  "2026-03-11|protocol|steakhouse-financial|B|P2_CROSSCHAIN|explanation|ef42af5e22f8154f": {
+    "text": "Steakhouse Financial's $973M TVL on Ethereum outpaces the $712M on Base by 27%, reflecting Ethereum's established dominance and liquidity in the DeFi space compared to newer chains like Base, which are still building their user base and ecosystem. This disparity often influences where users prefer to deploy their assets for better returns and security.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-11T00:28:08.347Z"
+  },
+  "2026-03-11|protocol|steakhouse-financial|C|P5_FEES_REVENUE|explanation|9ca38a77c161bb1f": {
+    "text": "Steakhouse Financial generated $1M in fees over the past week, but only $51K of that translated into revenue, indicating a revenue conversion rate of just 4.9%. This low percentage suggests that while the platform is attracting significant user activity, it may be facing challenges in monetizing that activity effectively.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-11T00:28:11.782Z"
+  },
+  "2026-03-11|protocol|steakhouse-financial|D|P4_ATH_TIMING|explanation|157b766f618dd890": {
+    "text": "Steakhouse Financial hit its ATH of $2.1B in January 2026, a significant milestone that came after a period of growth and innovation in the DeFi space. Other months like December 2024 and October 2025 were notable for various projects but didn’t see Steakhouse reach its peak, highlighting the timing of market dynamics and user interest leading up to that January surge.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-11T00:28:18.809Z"
+  },
+  "2026-03-11|protocol|steakhouse-financial|E|P3_CONCENTRATION|explanation|8efa7bfe2ddbcb25": {
+    "text": "Steakhouse Financial has 55% of its $1.8B TVL concentrated on Ethereum, which is significant given that Ethereum alone accounts for nearly $973M of that total. This concentration suggests that Steakhouse Financial is heavily reliant on Ethereum's ecosystem, reflecting the chain's dominance in DeFi activity and liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-11T00:28:20.132Z"
   }
 }
