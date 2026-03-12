@@ -248,5 +248,30 @@
     "text": "Steakhouse Financial has 55% of its $1.8B TVL concentrated on Ethereum, which is significant given that Ethereum alone accounts for nearly $973M of that total. This concentration suggests that Steakhouse Financial is heavily reliant on Ethereum's ecosystem, reflecting the chain's dominance in DeFi activity and liquidity.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-11T00:28:20.132Z"
+  },
+  "2026-03-12|chain|Aptos|A|C1_FINGERPRINT|explanation|539d28b52f99a677": {
+    "text": "Aptos ranks 17th in TVL with between $100M and $500M, which reflects its growing ecosystem of 91 protocols, placing it in the competitive 50-100 range for protocol count. This suggests that while Aptos is still developing, it has attracted a diverse array of projects, indicating potential for future growth and innovation.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-12T00:25:49.119Z"
+  },
+  "2026-03-12|chain|Aptos|B|C2_CHAIN_COMPARISON|explanation|6f430ec91afc055c": {
+    "text": "Ink's $468M TVL surpasses Aptos' $318M by 32.1%, reflecting Ink's stronger traction in attracting liquidity, which could be due to its unique features or more effective user incentives compared to Aptos. This difference in TVL can indicate varying levels of developer engagement and user adoption between the two chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-12T00:25:52.439Z"
+  },
+  "2026-03-12|chain|Aptos|C|C4_GROWTH_RANKING|explanation|e19c83bb521c7caf": {
+    "text": "Mantle's impressive growth of 244.1% far outpaces other chains like Base at +9.8% and Tron at +7.2%, indicating a significant surge in user adoption or activity that sets it apart in the current DeFi landscape. In contrast, Aptos, with a growth of just +4.7%, shows it’s lagging behind these more rapidly expanding ecosystems.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-12T00:25:55.300Z"
+  },
+  "2026-03-12|chain|Aptos|D|C3_ATH_TIMING|explanation|439b814971f78b0b": {
+    "text": "Aptos reached its all-time high (ATH) of $1.3B in December 2024, which stands out compared to the other choices like November 2022 and April 2023, when the TVL was significantly lower, reflecting the protocol's growth and adoption over time. This timing indicates a period of increased interest and investment in Aptos, likely driven by developments in its ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-12T00:25:57.434Z"
+  },
+  "2026-03-12|chain|Aptos|E|C6_TOP_DEX|explanation|aa27dfb89b04246c": {
+    "text": "Hyperion leads Aptos with $15M in volume, significantly outpacing its closest competitor, ThalaSwap V3, which only reached $1M. This stark difference illustrates Hyperion's dominance in the ecosystem, as the other DEXs like Tapp Exchange and ThalaSwap V2 are far behind, with volumes of just $219K and $105K, respectively.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-12T00:25:59.650Z"
   }
 }
