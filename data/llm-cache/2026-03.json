@@ -273,5 +273,30 @@
     "text": "Hyperion leads Aptos with $15M in volume, significantly outpacing its closest competitor, ThalaSwap V3, which only reached $1M. This stark difference illustrates Hyperion's dominance in the ecosystem, as the other DEXs like Tapp Exchange and ThalaSwap V2 are far behind, with volumes of just $219K and $105K, respectively.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-12T00:25:59.650Z"
+  },
+  "2026-03-13|protocol|falcon-finance|A|P1_FINGERPRINT|explanation|2946bd7bc58c9cf7": {
+    "text": "Falcon Finance, operating solely on Ethereum, has achieved a notable $1.6B TVL, reflecting its strong position in the basis trading category. This concentration on a single chain often allows for deeper liquidity and more efficient trading strategies, which can be crucial for its specialized market.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-13T00:30:13.179Z"
+  },
+  "2026-03-13|protocol|falcon-finance|B|P7_CATEGORY|explanation|e54e33bc1d3cb8a6": {
+    "text": "Falcon Finance operates in the Basis Trading category, which focuses on capitalizing on the price differences between spot and futures markets. This strategy can help traders manage risk and enhance returns by leveraging market inefficiencies.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-13T00:30:15.030Z"
+  },
+  "2026-03-13|protocol|falcon-finance|C|P11_FEES_TREND|explanation|126538caa613695d": {
+    "text": "Falcon Finance has seen a 5.1% increase in fees over the past week, rising from $96K to $101K, which suggests growing user activity or increased trading volume on the platform. This upward trend in fees can indicate a healthy demand for its services, reflecting positively on its overall performance.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-13T00:30:17.190Z"
+  },
+  "2026-03-13|protocol|falcon-finance|D|P33_MULTI_RANKING|explanation|b0db6e45136c7d26": {
+    "text": "Falcon Finance's $1.6B TVL places it as a significant player in the basis trading category, though it still trails behind Ethena USDe, which dominates with $5.9B. This disparity illustrates how Ethena's larger liquidity pool can attract more traders, enhancing its market influence compared to Falcon and Superstate USCC.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-13T00:30:19.645Z"
+  },
+  "2026-03-13|protocol|falcon-finance|E|P8_CHAIN_MEMBERSHIP|explanation|2877b5dd2a93c3bd": {
+    "text": "Falcon Finance operates exclusively on Ethereum, which allows it to leverage the network's robust liquidity and established user base. This single-chain focus can lead to deeper integration and potentially lower transaction costs compared to multi-chain protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-13T00:30:21.785Z"
   }
 }

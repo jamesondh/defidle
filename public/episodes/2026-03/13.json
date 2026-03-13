@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-03-13:protocol:falcon-finance",
+  "dateUtc": "2026-03-13",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "falcon-finance",
+    "name": "Falcon Finance",
+    "category": "Basis Trading"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Basis Trading",
+        "Chains: single-chain",
+        "TVL: $1B-$5B",
+        "7d change: roughly flat"
+      ],
+      "choices": [
+        "Kamino Lend",
+        "Falcon Finance",
+        "Ethena USDe",
+        "USDT0",
+        "Babylon Protocol"
+      ],
+      "answerIndex": 1,
+      "explanation": "Falcon Finance, operating solely on Ethereum, has achieved a notable $1.6B TVL, reflecting its strong position in the basis trading category. This concentration on a single chain often allows for deeper liquidity and more efficient trading strategies, which can be crucial for its specialized market.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.004148806145411059
+      },
+      "difficultyScore": 0.4729148806145411
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Falcon Finance?",
+      "choices": [
+        "Basis Trading",
+        "Liquidations",
+        "Launchpad",
+        "Treasury Manager"
+      ],
+      "answerIndex": 0,
+      "explanation": "Falcon Finance operates in the Basis Trading category, which focuses on capitalizing on the price differences between spot and futures markets. This strategy can help traders manage risk and enhance returns by leveraging market inefficiencies.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.004148806145411059
+      },
+      "difficultyScore": 0.29291488061454113
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "tf",
+      "prompt": "Falcon Finance's fees increased over the past week compared to the week before.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Falcon Finance has seen a 5.1% increase in fees over the past week, rising from $96K to $101K, which suggests growing user activity or increased trading volume on the platform. This upward trend in fees can indicate a healthy demand for its services, reflecting positively on its overall performance.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.05123179415536349,
+        "volatility": 0.004148806145411059
+      },
+      "difficultyScore": 0.3514367276281049
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Basis Trading protocols from highest to lowest TVL.",
+      "choices": [
+        "Ethena USDe > Superstate USCC > Falcon Finance",
+        "Ethena USDe > Falcon Finance > Superstate USCC",
+        "Superstate USCC > Falcon Finance > Ethena USDe",
+        "Falcon Finance > Superstate USCC > Ethena USDe"
+      ],
+      "answerIndex": 1,
+      "explanation": "Falcon Finance's $1.6B TVL places it as a significant player in the basis trading category, though it still trails behind Ethena USDe, which dominates with $5.9B. This disparity illustrates how Ethena's larger liquidity pool can attract more traders, enhancing its market influence compared to Falcon and Superstate USCC.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.7237359290680017,
+        "volatility": 0.004148806145411059
+      },
+      "difficultyScore": 0.39291488061454116
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Falcon Finance deployed on?",
+      "choices": [
+        "Fantom",
+        "Avalanche",
+        "Ethereum",
+        "Arbitrum"
+      ],
+      "answerIndex": 2,
+      "explanation": "Falcon Finance operates exclusively on Ethereum, which allows it to leverage the network's robust liquidity and established user base. This single-chain focus can lead to deeper integration and potentially lower transaction costs compared to multi-chain protocols.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.004148806145411059
+      },
+      "difficultyScore": 0.29291488061454113
+    }
+  ],
+  "generatedAt": "2026-03-13T00:30:21.785Z"
+}
