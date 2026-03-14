@@ -298,5 +298,30 @@
     "text": "Falcon Finance operates exclusively on Ethereum, which allows it to leverage the network's robust liquidity and established user base. This single-chain focus can lead to deeper integration and potentially lower transaction costs compared to multi-chain protocols.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-13T00:30:21.785Z"
+  },
+  "2026-03-14|chain|Arbitrum|A|C1_FINGERPRINT|explanation|577e0d583c3b2ce9": {
+    "text": "Arbitrum ranks 7th in TVL with between $1B and $5B, showcasing its significant adoption among users and developers alike. With 954 protocols, it reflects a vibrant ecosystem that attracts diverse projects, indicating strong interest in Layer 2 solutions for Ethereum scalability.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-14T00:28:47.505Z"
+  },
+  "2026-03-14|chain|Arbitrum|B|C2_CHAIN_COMPARISON|explanation|2492ce0baacdf5f0": {
+    "text": "Tron leads Arbitrum with a $4.0B TVL compared to Arbitrum's $2.0B, showcasing a 50.3% margin that reflects Tron’s established user base and diverse DeFi offerings. This disparity highlights how Tron has successfully attracted liquidity through a combination of incentives and a robust ecosystem, while Arbitrum is still growing its presence in the competitive L2 landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-14T00:28:49.269Z"
+  },
+  "2026-03-14|chain|Arbitrum|C|C4_GROWTH_RANKING|explanation|93c58c995e2b94d2": {
+    "text": "Plume Mainnet's impressive growth of 315.8% stands out sharply against other chains like Stacks and Flare, which saw increases of 43.6% and 41.5%, respectively. In contrast, Arbitrum experienced a slight decline of 1.9%, indicating that while some chains are gaining traction, Arbitrum is facing challenges in maintaining its momentum.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-14T00:28:51.870Z"
+  },
+  "2026-03-14|chain|Arbitrum|D|C3_ATH_TIMING|explanation|2d1efcc44871c29e": {
+    "text": "Arbitrum hit its all-time high (ATH) of $4.2B in October 2025, a significant leap compared to earlier months like July 2022, when its TVL was much lower due to the nascent stage of Layer 2 solutions. The other options, including January and June 2026, are future dates that suggest expectations of growth but don't reflect the actual peak achieved in October 2025.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-14T00:28:54.182Z"
+  },
+  "2026-03-14|chain|Arbitrum|E|C6_TOP_DEX|explanation|01b1582318a9f7ed": {
+    "text": "Uniswap V3 leads Arbitrum with a significant $242M in volume, far outpacing Uniswap V4 at $52M and PancakeSwap AMM V3 at $28M. This dominance illustrates Uniswap V3's strong liquidity and user preference on Arbitrum, making it the go-to DEX for traders on this chain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-14T00:28:56.482Z"
   }
 }
