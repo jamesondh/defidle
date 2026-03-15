@@ -323,5 +323,30 @@
     "text": "Uniswap V3 leads Arbitrum with a significant $242M in volume, far outpacing Uniswap V4 at $52M and PancakeSwap AMM V3 at $28M. This dominance illustrates Uniswap V3's strong liquidity and user preference on Arbitrum, making it the go-to DEX for traders on this chain.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-14T00:28:56.482Z"
+  },
+  "2026-03-15|protocol|rocket-pool|A|P1_FINGERPRINT|explanation|c7678e23f260a06b": {
+    "text": "Rocket Pool's $1.2B TVL on Ethereum signifies its strong position in the liquid staking sector, where it allows users to stake ETH while maintaining liquidity. This single-chain focus can lead to a more streamlined user experience but also means it faces competition from multi-chain liquid staking solutions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-15T00:34:49.441Z"
+  },
+  "2026-03-15|protocol|rocket-pool|B|P7_CATEGORY|explanation|05e5143602dbb46f": {
+    "text": "Rocket Pool operates in the liquid staking category, allowing users to stake their ETH while still retaining liquidity through tokenized representations of their staked assets. This model addresses the common challenge of illiquidity in traditional staking, enabling users to participate in both staking rewards and DeFi activities simultaneously.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-15T00:34:51.263Z"
+  },
+  "2026-03-15|protocol|rocket-pool|C|P11_FEES_TREND|explanation|834bd8bb986603ef": {
+    "text": "Rocket Pool's fees increased by 70.7% over the past week, rising from $59K to $101K, which suggests growing interest in its decentralized staking services as more users look to participate in Ethereum's proof-of-stake network. This surge in fees often reflects a higher volume of staked ETH, indicating a stronger community engagement and utilization of the platform.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-15T00:34:53.212Z"
+  },
+  "2026-03-15|protocol|rocket-pool|D|P4_ATH_TIMING|explanation|74c63eb7ca2299c2": {
+    "text": "Rocket Pool reached its all-time high (ATH) of $3.2B in August 2025, a significant milestone that reflects the growing interest in decentralized staking solutions. In contrast, earlier months like January 2022 and June 2022 saw much lower TVL, indicating that the protocol's value surged as the DeFi landscape evolved and more users sought decentralized alternatives to traditional staking.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-15T00:34:54.612Z"
+  },
+  "2026-03-15|protocol|rocket-pool|E|P8_CHAIN_MEMBERSHIP|explanation|33614d606aa1a7fa": {
+    "text": "Rocket Pool operates exclusively on Ethereum, which allows it to leverage the network's robust security and liquidity. This single-chain focus enables deeper integration with Ethereum's ecosystem, attracting users who prefer a streamlined staking experience.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-15T00:34:56.306Z"
   }
 }
