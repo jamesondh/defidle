@@ -348,5 +348,30 @@
     "text": "Rocket Pool operates exclusively on Ethereum, which allows it to leverage the network's robust security and liquidity. This single-chain focus enables deeper integration with Ethereum's ecosystem, attracting users who prefer a streamlined staking experience.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-15T00:34:56.306Z"
+  },
+  "2026-03-16|protocol|optimism-bridge|A|P1_FINGERPRINT|explanation|96af58dfdc728c75": {
+    "text": "Optimism Bridge's $517M TVL across three chains—Base, PGN, and Ethereum—shows its effectiveness in facilitating cross-chain transfers, which is crucial for enhancing liquidity and user accessibility in the DeFi ecosystem. This distribution also reflects the growing adoption of Layer 2 solutions, as users seek faster and cheaper transactions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-16T00:35:14.170Z"
+  },
+  "2026-03-16|protocol|optimism-bridge|B|P7_CATEGORY|explanation|c876ed272205082c": {
+    "text": "The Optimism Bridge is classified as a Canonical Bridge, meaning it serves as a primary connection between Ethereum and Optimism, facilitating seamless asset transfers while maintaining security and efficiency. This categorization is crucial for users looking to leverage Layer 2 solutions without sacrificing the trustlessness of the underlying blockchain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-16T00:35:15.389Z"
+  },
+  "2026-03-16|protocol|optimism-bridge|C|P20_ATH_DISTANCE|explanation|217dd7103356fce2": {
+    "text": "Optimism Bridge's current TVL of $517M is a significant 91% below its all-time high of $5.5B, reflecting the challenges faced by Layer 2 solutions in maintaining user interest and liquidity as market conditions shift. This steep decline suggests that while the bridge had a strong peak, it may need to enhance its value proposition to attract users back.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-16T00:35:17.765Z"
+  },
+  "2026-03-16|protocol|optimism-bridge|D|P33_MULTI_RANKING|explanation|22dd73b61ca411e4": {
+    "text": "The Optimism Bridge has a TVL of $517M, which is significantly lower than the Arbitrum Bridge's $3.5B, reflecting Arbitrum's earlier launch and broader adoption among users for transferring assets. This disparity shows how established bridges tend to dominate TVL as they build trust and liquidity over time.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-16T00:35:18.930Z"
+  },
+  "2026-03-16|protocol|optimism-bridge|E|P8_CHAIN_MEMBERSHIP|explanation|962ec0d348448fd4": {
+    "text": "The Optimism Bridge connects three chains: Base, PGN, and Ethereum, facilitating seamless asset transfers and interoperability among them. This multi-chain approach enhances liquidity and user access, making it easier for users to tap into different ecosystems.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-16T00:35:20.676Z"
   }
 }

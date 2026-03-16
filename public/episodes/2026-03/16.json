@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-03-16:protocol:optimism-bridge",
+  "dateUtc": "2026-03-16",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "optimism-bridge",
+    "name": "Optimism Bridge",
+    "category": "Canonical Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Canonical Bridge",
+        "Chains: 2-5 chains",
+        ">90% TVL on single chain",
+        "TVL: $500M-$1B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Fluid Lending",
+        "xDAI Stake Bridge",
+        "Optimism Bridge",
+        "Arbitrum Bridge"
+      ],
+      "answerIndex": 2,
+      "explanation": "Optimism Bridge's $517M TVL across three chains—Base, PGN, and Ethereum—shows its effectiveness in facilitating cross-chain transfers, which is crucial for enhancing liquidity and user accessibility in the DeFi ecosystem. This distribution also reflects the growing adoption of Layer 2 solutions, as users seek faster and cheaper transactions.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.14605200715633296
+      },
+      "difficultyScore": 0.3971052007156334
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Optimism Bridge?",
+      "choices": [
+        "Canonical Bridge",
+        "AI Agents",
+        "Farm",
+        "RWA"
+      ],
+      "answerIndex": 0,
+      "explanation": "The Optimism Bridge is classified as a Canonical Bridge, meaning it serves as a primary connection between Ethereum and Optimism, facilitating seamless asset transfers while maintaining security and efficiency. This categorization is crucial for users looking to leverage Layer 2 solutions without sacrificing the trustlessness of the underlying blockchain.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.14605200715633296
+      },
+      "difficultyScore": 0.30710520071563335
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Optimism Bridge's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 3,
+      "explanation": "Optimism Bridge's current TVL of $517M is a significant 91% below its all-time high of $5.5B, reflecting the challenges faced by Layer 2 solutions in maintaining user interest and liquidity as market conditions shift. This steep decline suggests that while the bridge had a strong peak, it may need to enhance its value proposition to attract users back.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.6255341916549872,
+        "volatility": 0.14605200715633296
+      },
+      "difficultyScore": 0.36710520071563335
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Canonical Bridge protocols from highest to lowest TVL.",
+      "choices": [
+        "Optimism Bridge > Linea Bridge > Arbitrum Bridge",
+        "Optimism Bridge > Arbitrum Bridge > Linea Bridge",
+        "Arbitrum Bridge > Optimism Bridge > Linea Bridge",
+        "Linea Bridge > Arbitrum Bridge > Optimism Bridge"
+      ],
+      "answerIndex": 2,
+      "explanation": "The Optimism Bridge has a TVL of $517M, which is significantly lower than the Arbitrum Bridge's $3.5B, reflecting Arbitrum's earlier launch and broader adoption among users for transferring assets. This disparity shows how established bridges tend to dominate TVL as they build trust and liquidity over time.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.2538771841846513,
+        "volatility": 0.14605200715633296
+      },
+      "difficultyScore": 0.4071052007156334
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Optimism Bridge deployed on?",
+      "choices": [
+        "Ethereum",
+        "Optimism",
+        "Avalanche",
+        "Arbitrum"
+      ],
+      "answerIndex": 0,
+      "explanation": "The Optimism Bridge connects three chains: Base, PGN, and Ethereum, facilitating seamless asset transfers and interoperability among them. This multi-chain approach enhances liquidity and user access, making it easier for users to tap into different ecosystems.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.14605200715633296
+      },
+      "difficultyScore": 0.30710520071563335
+    }
+  ],
+  "generatedAt": "2026-03-16T00:35:20.677Z"
+}
