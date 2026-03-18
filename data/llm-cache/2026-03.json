@@ -398,5 +398,30 @@
     "text": "Project X leads on Hyperliquid L1 with $116M in volume, significantly outpacing the next closest competitor, Hyperliquid Spot Orderbook, which has $71M. This stark difference illustrates Project X's strong market presence and user preference on the chain, especially compared to smaller players like HyperSwap V3 and Ramses HL, which only manage $23M and $5M, respectively.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-17T00:30:09.608Z"
+  },
+  "2026-03-18|protocol|sparklend|A|P1_FINGERPRINT|explanation|61b75a855115df28": {
+    "text": "SparkLend's $2.2B TVL across Ethereum and xDai shows its strong foothold in the lending sector, particularly as it taps into both a major L1 and a layer-2 solution, which can enhance user experience through lower fees and faster transactions. This dual-chain approach allows it to attract a diverse user base and leverage the strengths of both ecosystems.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-18T00:32:08.832Z"
+  },
+  "2026-03-18|protocol|sparklend|B|P2_CROSSCHAIN|explanation|aa05c05c8f10bbeb": {
+    "text": "SparkLend's $2.2B TVL on Ethereum dwarfs the $797K on XDai, illustrating how liquidity tends to concentrate on more established chains where users have greater confidence and access to a wider range of assets and services. This 100% margin in TVL between the two chains underscores the significant disparity in user engagement and protocol adoption across different ecosystems.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-18T00:32:11.400Z"
+  },
+  "2026-03-18|protocol|sparklend|C|P5_FEES_REVENUE|explanation|12b63346488c1091": {
+    "text": "SparkLend generated $633K in fees over the past week, but only $38K of that translated into revenue, indicating a revenue conversion rate of just 6%. This low percentage suggests that while the platform is attracting significant user activity, its fee structure or operational costs may be limiting profitability.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-18T00:32:13.737Z"
+  },
+  "2026-03-18|protocol|sparklend|D|P4_ATH_TIMING|explanation|91e0c696bbb15314": {
+    "text": "SparkLend reached its all-time high (ATH) of $6.4B in October 2025, a significant milestone that showcases its growth trajectory. In contrast, the other options like February 2024 and October 2023 reflect earlier periods when the protocol had not yet achieved such a valuation, emphasizing the momentum SparkLend gained leading up to its peak.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-18T00:32:16.211Z"
+  },
+  "2026-03-18|protocol|sparklend|E|P3_CONCENTRATION|explanation|478055cd2a98fe0a": {
+    "text": "SparkLend's entire $2.2B TVL is concentrated on Ethereum, showcasing its reliance on the leading blockchain for liquidity and user engagement. This singular focus can lead to greater vulnerability to fluctuations in Ethereum's ecosystem but also allows for streamlined operations and potentially lower costs.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-18T00:32:18.267Z"
   }
 }
