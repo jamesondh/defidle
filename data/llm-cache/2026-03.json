@@ -423,5 +423,30 @@
     "text": "SparkLend's entire $2.2B TVL is concentrated on Ethereum, showcasing its reliance on the leading blockchain for liquidity and user engagement. This singular focus can lead to greater vulnerability to fluctuations in Ethereum's ecosystem but also allows for streamlined operations and potentially lower costs.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-18T00:32:18.267Z"
+  },
+  "2026-03-19|chain|Cardano|A|C1_FINGERPRINT|explanation|83a560870c964bb6": {
+    "text": "Cardano ranks 25th in TVL with between $100M and $500M, reflecting its growing ecosystem of around 80 protocols, which is typical for blockchains in the early stages of DeFi development. This indicates a diverse range of projects, suggesting that developers are increasingly exploring Cardano's capabilities for decentralized applications.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-19T00:32:36.416Z"
+  },
+  "2026-03-19|chain|Cardano|B|C2_CHAIN_COMPARISON|explanation|17541d8de8ba3b84": {
+    "text": "Cardano's $138M TVL surpasses Near's $116M by 15.8%, reflecting Cardano's growing appeal and adoption in the DeFi space, particularly as it continues to enhance its smart contract capabilities. This difference suggests that developers and users may be finding more value and opportunities on Cardano compared to Near at this time.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-19T00:32:38.028Z"
+  },
+  "2026-03-19|chain|Cardano|C|C9_DISTANCE_FROM_ATH|explanation|90d9dd15b05eb96f": {
+    "text": "Cardano's current TVL of $138M is 80.9% below its all-time high of $721M, reflecting challenges in attracting liquidity compared to its peak, which could be influenced by factors like competition and user adoption on the platform. This significant distance from its ATH suggests that Cardano may need to enhance its DeFi offerings to regain investor confidence and liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-19T00:32:39.286Z"
+  },
+  "2026-03-19|chain|Cardano|D|C4_GROWTH_RANKING|explanation|1a25aa7335177ec8": {
+    "text": "Hyperliquid L1 leads with a remarkable 14.4% growth, significantly outpacing other chains like Aptos at +11.9% and Ink at +11.5%. Cardano's growth of +9.9% shows it’s still gaining traction, but it’s clear that Hyperliquid L1 is currently the standout performer in terms of growth rate among these emerging chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-19T00:32:42.752Z"
+  },
+  "2026-03-19|chain|Cardano|E|C6_TOP_DEX|explanation|7250868c853721fe": {
+    "text": "Minswap DEX leads Cardano with a volume of $491K, significantly outpacing its closest competitor, WingRiders, which has $328K. This stark difference highlights Minswap's dominance in the Cardano ecosystem, especially when compared to other DEXs like SundaeSwap V2 at $122K and Splash Protocol at just $9K.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-19T00:32:45.022Z"
   }
 }
