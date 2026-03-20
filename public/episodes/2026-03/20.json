@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-03-20:protocol:tydro",
+  "dateUtc": "2026-03-20",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "tydro",
+    "name": "Tydro",
+    "category": "Lending"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Lending",
+        "Chains: single-chain",
+        "TVL: $100M-$500M",
+        "7d change: roughly flat"
+      ],
+      "choices": [
+        "Tydro",
+        "Jupiter Lend",
+        "Jito Liquid Staking",
+        "Dolomite"
+      ],
+      "answerIndex": 0,
+      "explanation": "Tydro's $401M TVL on the Ink chain showcases its strong position within the lending category, particularly as a single-chain protocol. This concentration can lead to more efficient liquidity management but also makes it more vulnerable to fluctuations in that specific ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.16455074955081958
+      },
+      "difficultyScore": 0.39895507495508203
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Tydro?",
+      "choices": [
+        "Indexes",
+        "NFT Lending",
+        "Lending",
+        "Video Infrastructure"
+      ],
+      "answerIndex": 2,
+      "explanation": "Tydro operates in the lending category, which focuses on enabling users to borrow and lend assets, often providing liquidity and earning interest on their holdings. This category is crucial for enhancing capital efficiency in DeFi, allowing users to maximize their asset utilization.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.16455074955081958
+      },
+      "difficultyScore": 0.308955074955082
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Tydro's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 1,
+      "explanation": "Tydro generated $154K in fees over the past week, with $18K of that translating into revenue, which means it retains about 12% of its fees as profit. This efficiency in converting fees to revenue is crucial for sustaining operations and attracting further investment in the protocol.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.06480919397099644,
+        "volatility": 0.16455074955081958
+      },
+      "difficultyScore": 0.5311840421898862
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Lending protocols from highest to lowest TVL.",
+      "choices": [
+        "Morpho V1 > Compound V3 > Tydro",
+        "Tydro > Morpho V1 > Compound V3",
+        "Compound V3 > Morpho V1 > Tydro",
+        "Compound V3 > Tydro > Morpho V1"
+      ],
+      "answerIndex": 0,
+      "explanation": "Tydro's $401M TVL places it behind Morpho V1 and Compound V3, which have significantly higher TVLs of $6.7B and $1.3B respectively. This difference highlights Tydro's emerging presence in the lending space, as it competes with more established protocols that dominate the market.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.6915245859690715,
+        "volatility": 0.16455074955081958
+      },
+      "difficultyScore": 0.408955074955082
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Tydro deployed on?",
+      "choices": [
+        "Ink",
+        "Solana",
+        "Ethereum",
+        "Base"
+      ],
+      "answerIndex": 0,
+      "explanation": "Tydro operates exclusively on the Ink chain, which is a unique choice that allows it to leverage the specific features and optimizations of that environment. This single-chain focus can lead to more efficient transactions and a streamlined user experience, but it also limits its exposure to liquidity and users from other chains.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.16455074955081958
+      },
+      "difficultyScore": 0.308955074955082
+    }
+  ],
+  "generatedAt": "2026-03-20T00:30:49.216Z"
+}

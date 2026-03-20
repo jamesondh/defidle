@@ -448,5 +448,30 @@
     "text": "Minswap DEX leads Cardano with a volume of $491K, significantly outpacing its closest competitor, WingRiders, which has $328K. This stark difference highlights Minswap's dominance in the Cardano ecosystem, especially when compared to other DEXs like SundaeSwap V2 at $122K and Splash Protocol at just $9K.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-19T00:32:45.022Z"
+  },
+  "2026-03-20|protocol|tydro|A|P1_FINGERPRINT|explanation|d625ee6743fce2f1": {
+    "text": "Tydro's $401M TVL on the Ink chain showcases its strong position within the lending category, particularly as a single-chain protocol. This concentration can lead to more efficient liquidity management but also makes it more vulnerable to fluctuations in that specific ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-20T00:30:41.948Z"
+  },
+  "2026-03-20|protocol|tydro|B|P7_CATEGORY|explanation|a6da60c1e2c201e2": {
+    "text": "Tydro operates in the lending category, which focuses on enabling users to borrow and lend assets, often providing liquidity and earning interest on their holdings. This category is crucial for enhancing capital efficiency in DeFi, allowing users to maximize their asset utilization.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-20T00:30:44.056Z"
+  },
+  "2026-03-20|protocol|tydro|C|P5_FEES_REVENUE|explanation|b34134589664c135": {
+    "text": "Tydro generated $154K in fees over the past week, with $18K of that translating into revenue, which means it retains about 12% of its fees as profit. This efficiency in converting fees to revenue is crucial for sustaining operations and attracting further investment in the protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-20T00:30:45.462Z"
+  },
+  "2026-03-20|protocol|tydro|D|P33_MULTI_RANKING|explanation|359be17ff2208948": {
+    "text": "Tydro's $401M TVL places it behind Morpho V1 and Compound V3, which have significantly higher TVLs of $6.7B and $1.3B respectively. This difference highlights Tydro's emerging presence in the lending space, as it competes with more established protocols that dominate the market.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-20T00:30:47.881Z"
+  },
+  "2026-03-20|protocol|tydro|E|P8_CHAIN_MEMBERSHIP|explanation|608e8bb44e5e790e": {
+    "text": "Tydro operates exclusively on the Ink chain, which is a unique choice that allows it to leverage the specific features and optimizations of that environment. This single-chain focus can lead to more efficient transactions and a streamlined user experience, but it also limits its exposure to liquidity and users from other chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-20T00:30:49.215Z"
   }
 }
