@@ -498,5 +498,30 @@
     "text": "Velodrome V3 leads Ink with a solid $4M in volume, significantly outpacing its closest competitor, Otomate, which has $2M. This stark difference illustrates Velodrome V3's dominance in the market, especially when compared to smaller players like Nado Spot at $844K and SakuraSwap CLMM at just $6K.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-21T00:29:23.719Z"
+  },
+  "2026-03-22|protocol|pancakeswap-amm|A|P1_FINGERPRINT|explanation|5fe2d19abae126ec": {
+    "text": "PancakeSwap AMM's $1.7B TVL across 10 chains, including Binance and emerging platforms like zkSync Era, showcases its adaptability and broad appeal in the DeFi landscape, particularly as it taps into both established and innovative ecosystems. This diverse chain presence helps it attract liquidity from various user bases, enhancing its overall trading volume and utility.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-22T00:32:28.442Z"
+  },
+  "2026-03-22|protocol|pancakeswap-amm|B|P2_CROSSCHAIN|explanation|9acb46eebc06a1b5": {
+    "text": "PancakeSwap AMM on Binance has a TVL of $1.7B, vastly outpacing Ethereum's $2M, which reflects the strong user preference for lower fees and faster transactions on Binance Smart Chain compared to Ethereum's higher costs and congestion. This 100% margin illustrates how cross-chain dynamics can significantly shift liquidity and user engagement towards more efficient platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-22T00:32:30.886Z"
+  },
+  "2026-03-22|protocol|pancakeswap-amm|C|P5_FEES_REVENUE|explanation|4e0ef29275662595": {
+    "text": "PancakeSwap AMM generated $734K in fees over the past week, with $210K of that translating into revenue, which means it retains about 29% of the fees as profit. This efficiency in converting fees to revenue is crucial for sustaining operations and incentivizing liquidity providers.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-22T00:32:32.109Z"
+  },
+  "2026-03-22|protocol|pancakeswap-amm|D|P4_ATH_TIMING|explanation|1dddbe8ac476e539": {
+    "text": "PancakeSwap AMM hit its all-time high of $7.8B in May 2021, a peak driven by the explosive growth of DeFi during that period. In contrast, by December 2021 and May 2022, the market had started to cool, leading to lower TVL figures for many protocols, including PancakeSwap.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-22T00:32:34.457Z"
+  },
+  "2026-03-22|protocol|pancakeswap-amm|E|P3_CONCENTRATION|explanation|2f75451fe842a1a1": {
+    "text": "PancakeSwap AMM has an impressive 99% of its $1.7B TVL concentrated on the Binance chain, showcasing how dominant this single chain is for the protocol. This concentration often reflects the strong user base and liquidity that can be found within a specific ecosystem, making it a key player in Binance's DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-22T00:32:38.165Z"
   }
 }
