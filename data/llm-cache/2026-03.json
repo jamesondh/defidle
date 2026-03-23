@@ -523,5 +523,30 @@
     "text": "PancakeSwap AMM has an impressive 99% of its $1.7B TVL concentrated on the Binance chain, showcasing how dominant this single chain is for the protocol. This concentration often reflects the strong user base and liquidity that can be found within a specific ecosystem, making it a key player in Binance's DeFi landscape.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-22T00:32:38.165Z"
+  },
+  "2026-03-23|protocol|raydium-amm|A|P1_FINGERPRINT|explanation|53c8578fc7e9a1cf": {
+    "text": "Raydium AMM's $1.0B TVL on Solana showcases its significant role as a leading DEX on a chain known for high throughput and low fees, attracting users looking for efficient trading options. With its single-chain focus, Raydium can optimize liquidity and user experience, making it a key player in the Solana ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-23T00:34:27.303Z"
+  },
+  "2026-03-23|protocol|raydium-amm|B|P7_CATEGORY|explanation|3ff24f71becd2d0f": {
+    "text": "Raydium is a unique AMM within the DEX category that leverages the Solana blockchain's high throughput to offer fast and low-cost trades. Its integration with Serum's order book allows for improved liquidity and price discovery, setting it apart from traditional AMMs.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-23T00:34:29.295Z"
+  },
+  "2026-03-23|protocol|raydium-amm|C|P5_FEES_REVENUE|explanation|640eef1e64553b40": {
+    "text": "Raydium AMM generated $2M in fees over the past week, with $308K of that translating into revenue, which is about 16%. This revenue percentage suggests that while Raydium is capturing significant trading volume, its operational costs or incentive structures are taking a notable portion of the fees.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-23T00:34:30.630Z"
+  },
+  "2026-03-23|protocol|raydium-amm|D|P4_ATH_TIMING|explanation|d10289ede5ccf876": {
+    "text": "Raydium AMM hit its all-time high (ATH) of $3.0B in January 2025, which is notable as it came well after earlier peaks in 2021, when many DeFi projects were still gaining traction. Unlike the other choices, such as March 2021 or July 2024, which reflect periods of lower market activity, January 2025 marked a significant resurgence in liquidity and user engagement for Raydium.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-23T00:34:33.441Z"
+  },
+  "2026-03-23|protocol|raydium-amm|E|P8_CHAIN_MEMBERSHIP|explanation|740b64d904849dd3": {
+    "text": "Raydium AMM operates solely on Solana, which allows it to leverage the network's high throughput and low transaction costs, making it an attractive option for users looking for efficient trading on a fast blockchain. This single-chain focus enables Raydium to optimize its liquidity and user experience within the Solana ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-23T00:34:34.966Z"
   }
 }
