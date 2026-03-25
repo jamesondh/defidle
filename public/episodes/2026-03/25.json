@@ -1,0 +1,143 @@
+{
+  "episodeId": "2026-03-25:protocol:curve-dex",
+  "dateUtc": "2026-03-25",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "curve-dex",
+    "name": "Curve DEX",
+    "category": "Dexs"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Dexs",
+        "Chains: 10+ chains",
+        ">90% TVL on single chain",
+        "Active since: 2020",
+        "TVL: $1B-$5B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Hyperliquid Bridge",
+        "JustCryptos",
+        "Curve DEX",
+        "Tether Gold",
+        "Raydium AMM",
+        "Uniswap V3"
+      ],
+      "answerIndex": 2,
+      "explanation": "Curve DEX operates across 30 chains, with its $1.8B TVL primarily concentrated in ecosystems like Ethereum and Harmony, reflecting its strong focus on stablecoin swaps. This multi-chain strategy allows Curve to tap into diverse liquidity pools, enhancing its utility and reach in the DeFi landscape.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.0811622049926838
+      },
+      "difficultyScore": 0.4806162204992684
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Curve DEX have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Base"
+      ],
+      "answerIndex": 0,
+      "explanation": "Curve DEX has a massive $1.7B TVL on Ethereum, dwarfing the $22M on Base, which reflects Ethereum's established user base and liquidity compared to newer chains. This 99% margin underscores how dominant Ethereum remains in the DeFi landscape, especially for stablecoin swaps where Curve excels.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9869180097437069,
+        "volatility": 0.0811622049926838
+      },
+      "difficultyScore": 0.2106162204992684
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Curve DEX's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 1,
+      "explanation": "Curve DEX generated $146K in revenue from $946K in fees over the past week, meaning it retains about 15% of its fees as revenue. This efficiency in converting fees to revenue is crucial for sustaining operations and incentivizing liquidity providers.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.21629327213635763,
+        "volatility": 0.0811622049926838
+      },
+      "difficultyScore": 0.34106429393563925
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Curve DEX hit its all-time high TVL?",
+      "choices": [
+        "Feb 2025",
+        "Dec 2021",
+        "Jan 2022",
+        "Jun 2023",
+        "Feb 2023",
+        "Apr 2021"
+      ],
+      "answerIndex": 2,
+      "explanation": "Curve DEX hit its all-time high of $24.3B in January 2022, a peak driven by the explosive growth of DeFi during that period. In contrast, December 2021 was close but not quite the ATH, while June 2023 saw a significant drop in TVL, reflecting the broader market's cooling off after the DeFi boom.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.0811622049926838
+      },
+      "difficultyScore": 0.49061622049926834
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Curve DEX's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Curve DEX's $1.7B TVL on Ethereum represents a staggering 93% of its total $1.8B TVL, showcasing its dominance on the chain and indicating that users primarily rely on Ethereum for stablecoin swaps, where Curve excels. This concentration also reflects the network's robust liquidity and user base, making it a go-to platform for stable asset trading.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.7351067627484542,
+        "volatility": 0.0811622049926838
+      },
+      "difficultyScore": 0.3006162204992684
+    }
+  ],
+  "generatedAt": "2026-03-25T00:32:59.330Z"
+}

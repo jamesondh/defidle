@@ -573,5 +573,30 @@
     "text": "Polymarket leads on Polygon with $173M in volume, significantly outpacing other DEXs like Quickswap at $54M and Uniswap V4 at $43M. This dominance indicates that Polymarket is effectively capturing user interest, particularly in prediction markets, while other DEXs are still finding their footing in this competitive landscape.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-24T00:28:13.865Z"
+  },
+  "2026-03-25|protocol|curve-dex|A|P1_FINGERPRINT|explanation|bc1e23df2404b1e4": {
+    "text": "Curve DEX operates across 30 chains, with its $1.8B TVL primarily concentrated in ecosystems like Ethereum and Harmony, reflecting its strong focus on stablecoin swaps. This multi-chain strategy allows Curve to tap into diverse liquidity pools, enhancing its utility and reach in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-25T00:32:50.317Z"
+  },
+  "2026-03-25|protocol|curve-dex|B|P2_CROSSCHAIN|explanation|596ef6a60a94454a": {
+    "text": "Curve DEX has a massive $1.7B TVL on Ethereum, dwarfing the $22M on Base, which reflects Ethereum's established user base and liquidity compared to newer chains. This 99% margin underscores how dominant Ethereum remains in the DeFi landscape, especially for stablecoin swaps where Curve excels.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-25T00:32:52.549Z"
+  },
+  "2026-03-25|protocol|curve-dex|C|P5_FEES_REVENUE|explanation|f4637064758c44f7": {
+    "text": "Curve DEX generated $146K in revenue from $946K in fees over the past week, meaning it retains about 15% of its fees as revenue. This efficiency in converting fees to revenue is crucial for sustaining operations and incentivizing liquidity providers.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-25T00:32:53.852Z"
+  },
+  "2026-03-25|protocol|curve-dex|D|P4_ATH_TIMING|explanation|e8b095489678f5d0": {
+    "text": "Curve DEX hit its all-time high of $24.3B in January 2022, a peak driven by the explosive growth of DeFi during that period. In contrast, December 2021 was close but not quite the ATH, while June 2023 saw a significant drop in TVL, reflecting the broader market's cooling off after the DeFi boom.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-25T00:32:56.397Z"
+  },
+  "2026-03-25|protocol|curve-dex|E|P3_CONCENTRATION|explanation|90802063bcc70ed6": {
+    "text": "Curve DEX's $1.7B TVL on Ethereum represents a staggering 93% of its total $1.8B TVL, showcasing its dominance on the chain and indicating that users primarily rely on Ethereum for stablecoin swaps, where Curve excels. This concentration also reflects the network's robust liquidity and user base, making it a go-to platform for stable asset trading.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-25T00:32:59.329Z"
   }
 }
