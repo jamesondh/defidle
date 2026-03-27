@@ -623,5 +623,30 @@
     "text": "Mixin operates as a Layer 1 blockchain, which means it has its own independent consensus mechanism, allowing for greater scalability and flexibility compared to Layer 2 solutions that rely on existing blockchains. This independence can enhance transaction speeds and reduce reliance on other networks.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-26T00:34:35.368Z"
+  },
+  "2026-03-27|protocol|kinetiq-khype|A|P1_FINGERPRINT|explanation|0557e2e3a09b8286": {
+    "text": "Kinetiq kHYPE's $787M TVL on Hyperliquid L1 showcases the growing interest in liquid staking solutions, which allow users to earn rewards on staked assets while maintaining liquidity. This single-chain focus often leads to higher TVL concentrations, as seen here, reflecting the platform's appeal within its specific ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-27T00:34:26.369Z"
+  },
+  "2026-03-27|protocol|kinetiq-khype|B|P7_CATEGORY|explanation|0618edd4a756becb": {
+    "text": "Kinetiq kHYPE operates in the Liquid Staking category, allowing users to stake their assets while still maintaining liquidity. This model is increasingly popular as it enables users to earn staking rewards without locking up their funds, providing flexibility in their investment strategies.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-27T00:34:28.411Z"
+  },
+  "2026-03-27|protocol|kinetiq-khype|C|P5_FEES_REVENUE|explanation|32e5f5c04a64bad0": {
+    "text": "Kinetiq kHYPE generated $52K in revenue from $392K in fees over the past week, meaning it retains about 13% of its fees as revenue. This retention rate is crucial for assessing the platform's profitability and sustainability in the competitive DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-27T00:34:29.496Z"
+  },
+  "2026-03-27|protocol|kinetiq-khype|D|P4_ATH_TIMING|explanation|534966805e675feb": {
+    "text": "Kinetiq kHYPE hit its ATH of $2.3B in September 2025, a notable peak compared to later months like October and January, which saw a decline in value as the market adjusted. This timing suggests that September was a critical moment for kHYPE, likely driven by specific developments or market conditions that weren't replicated in the following months.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-27T00:34:32.108Z"
+  },
+  "2026-03-27|protocol|kinetiq-khype|E|P8_CHAIN_MEMBERSHIP|explanation|1853c7a227ec76c8": {
+    "text": "Kinetiq kHYPE operates exclusively on the Hyperliquid L1, which allows it to leverage the unique features of this layer one blockchain for optimized performance. This single-chain focus can lead to more streamlined operations and lower latency for users compared to multi-chain protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-27T00:34:33.399Z"
   }
 }
