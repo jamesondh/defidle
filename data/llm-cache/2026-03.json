@@ -648,5 +648,30 @@
     "text": "Kinetiq kHYPE operates exclusively on the Hyperliquid L1, which allows it to leverage the unique features of this layer one blockchain for optimized performance. This single-chain focus can lead to more streamlined operations and lower latency for users compared to multi-chain protocols.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-27T00:34:33.399Z"
+  },
+  "2026-03-28|chain|Mantle|A|C1_FINGERPRINT|explanation|c24489003b878de6": {
+    "text": "Mantle's TVL of $500M-$1B and its ranking at 12th place reflect its growing adoption, especially with 140 protocols operating on the platform, which indicates a healthy ecosystem for developers and users alike. This level of protocol diversity often leads to increased innovation and liquidity, making it an attractive option in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-28T00:31:43.074Z"
+  },
+  "2026-03-28|chain|Mantle|B|C2_CHAIN_COMPARISON|explanation|88f6cde94c09a78d": {
+    "text": "Mantle's $760M TVL outpaces Sui's $589M by 22.5%, reflecting its growing appeal and user adoption in the competitive landscape of Layer 2 solutions. This difference suggests that Mantle may be successfully attracting more liquidity and activity, potentially due to its unique features or incentives.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-28T00:31:45.437Z"
+  },
+  "2026-03-28|chain|Mantle|C|C6_TOP_DEX|explanation|c6680f101e89d395": {
+    "text": "Agni Finance leads Mantle with a volume of $1M, matching the volume of Merchant Moe Liquidity Book, but significantly outpacing other DEXs like Fluxion Network at $173K and WOOFi Swap at $45K. This stark difference illustrates Agni's dominance in trading activity on the chain, indicating a strong preference among users for its offerings.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-28T00:31:47.768Z"
+  },
+  "2026-03-28|chain|Mantle|D|C3_ATH_TIMING|explanation|ed26feed13e0db88": {
+    "text": "Mantle reached its ATH of $652M in March 2026, which stands out compared to earlier dates like September 2024 and January 2025, when it had not yet gained significant traction. This timing reflects the protocol's growth phase, as it likely needed more time to establish its user base and liquidity before hitting that peak.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-28T00:31:52.320Z"
+  },
+  "2026-03-28|chain|Mantle|E|C7_CHAIN_TVL_BAND|explanation|388abd3feb353b67": {
+    "text": "Mantle's $760M TVL places it solidly in the $500M-$1B band, reflecting its growing adoption as a Layer 2 solution that leverages Ethereum's security while offering lower fees and faster transactions. This positioning suggests that users are increasingly looking for efficient alternatives to congested Layer 1 networks.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-28T00:31:55.804Z"
   }
 }

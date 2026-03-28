@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-03-28:chain:Mantle",
+  "dateUtc": "2026-03-28",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Mantle",
+    "name": "Mantle"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: MNT",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "Provenance",
+        "Base",
+        "Scroll",
+        "Aptos",
+        "Mantle",
+        "Hyperliquid L1"
+      ],
+      "answerIndex": 4,
+      "explanation": "Mantle's TVL of $500M-$1B and its ranking at 12th place reflect its growing adoption, especially with 140 protocols operating on the platform, which indicates a healthy ecosystem for developers and users alike. This level of protocol diversity often leads to increased innovation and liquidity, making it an attractive option in the DeFi landscape.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Mantle or Sui?",
+      "choices": [
+        "Sui",
+        "Mantle"
+      ],
+      "answerIndex": 1,
+      "explanation": "Mantle's $760M TVL outpaces Sui's $589M by 22.5%, reflecting its growing appeal and user adoption in the competitive landscape of Layer 2 solutions. This difference suggests that Mantle may be successfully attracting more liquidity and activity, potentially due to its unique features or incentives.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.22487555280472307,
+        "volatility": null
+      },
+      "difficultyScore": 0.2396493366343323
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Mantle?",
+      "choices": [
+        "WOOFi Swap",
+        "Fluxion Network",
+        "Agni Finance",
+        "Merchant Moe Liquidity Book"
+      ],
+      "answerIndex": 2,
+      "explanation": "Agni Finance leads Mantle with a volume of $1M, matching the volume of Merchant Moe Liquidity Book, but significantly outpacing other DEXs like Fluxion Network at $173K and WOOFi Swap at $45K. This stark difference illustrates Agni's dominance in trading activity on the chain, indicating a strong preference among users for its offerings.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.1314192814952023,
+        "volatility": null
+      },
+      "difficultyScore": 0.4417968622057573
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Mantle hit its all-time high TVL?",
+      "choices": [
+        "Oct 2024",
+        "Jul 2025",
+        "May 2025",
+        "Jan 2025",
+        "Sep 2024",
+        "Mar 2026"
+      ],
+      "answerIndex": 5,
+      "explanation": "Mantle reached its ATH of $652M in March 2026, which stands out compared to earlier dates like September 2024 and January 2025, when it had not yet gained significant traction. This timing reflects the protocol's growth phase, as it likely needed more time to establish its user base and liquidity before hitting that peak.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C7_CHAIN_TVL_BAND",
+      "format": "mc4",
+      "prompt": "Which TVL range fits Mantle?",
+      "choices": [
+        "<$100M",
+        "$100M-$500M",
+        "$500M-$2B",
+        "$2B-$10B",
+        ">$10B"
+      ],
+      "answerIndex": 2,
+      "explanation": "Mantle's $760M TVL places it solidly in the $500M-$1B band, reflecting its growing adoption as a Layer 2 solution that leverages Ethereum's security while offering lower fees and faster transactions. This positioning suggests that users are increasingly looking for efficient alternatives to congested Layer 1 networks.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.6836046208680119,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-03-28T00:31:55.804Z"
+}
