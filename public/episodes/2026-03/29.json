@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-03-29:protocol:ethena-usdtb",
+  "dateUtc": "2026-03-29",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "ethena-usdtb",
+    "name": "Ethena USDtb",
+    "category": "RWA"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: RWA",
+        "Chains: single-chain",
+        "TVL: $500M-$1B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Superstate USTB",
+        "Ondo Yield Assets",
+        "Venus Core Pool",
+        "Ethena USDtb"
+      ],
+      "answerIndex": 3,
+      "explanation": "Ethena USDtb has a TVL of $878M on Ethereum, positioning it as a significant player in the real-world asset (RWA) category. Its single-chain focus allows for streamlined operations and potentially lower costs, which can be attractive for users looking for efficiency in asset-backed stablecoins.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.006232350677320857
+      },
+      "difficultyScore": 0.38312323506773216
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Ethena USDtb?",
+      "choices": [
+        "Token Locker",
+        "Decentralized BTC",
+        "Private Investment Platform",
+        "RWA"
+      ],
+      "answerIndex": 3,
+      "explanation": "Ethena USDtb falls under the RWA (Real World Assets) category, which focuses on tokenizing physical assets or income-generating real-world assets to enhance liquidity and accessibility in DeFi. This approach aims to bridge traditional finance with blockchain technology, allowing users to leverage real-world value in decentralized finance applications.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.006232350677320857
+      },
+      "difficultyScore": 0.29312323506773214
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Ethena USDtb's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 2,
+      "explanation": "Ethena USDtb's current TVL of $878M is 52% below its all-time high of $1.8B, placing it in the 50-75% below ATH bucket. This significant drop suggests a potential decrease in user confidence or market activity, which could be influenced by broader market trends or competition from other protocols.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.09450998466539233,
+        "volatility": 0.006232350677320857
+      },
+      "difficultyScore": 0.5397112534692614
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these RWA protocols from highest to lowest TVL.",
+      "choices": [
+        "Centrifuge Protocol > Ethena USDtb > BlackRock BUIDL",
+        "BlackRock BUIDL > Ethena USDtb > Centrifuge Protocol",
+        "Centrifuge Protocol > BlackRock BUIDL > Ethena USDtb",
+        "BlackRock BUIDL > Centrifuge Protocol > Ethena USDtb"
+      ],
+      "answerIndex": 3,
+      "explanation": "Ethena USDtb's $878M TVL places it behind BlackRock BUIDL and Centrifuge Protocol, reflecting the competitive landscape in the RWA sector where larger players often dominate due to their established networks and resources. This positioning suggests that Ethena may need to innovate or enhance its offerings to attract more liquidity and users.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.42444728713128477,
+        "volatility": 0.006232350677320857
+      },
+      "difficultyScore": 0.39312323506773217
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Ethena USDtb deployed on?",
+      "choices": [
+        "zkSync Era",
+        "Fantom",
+        "Base",
+        "Ethereum"
+      ],
+      "answerIndex": 3,
+      "explanation": "Ethena USDtb operates solely on Ethereum, which allows it to leverage the network's robust liquidity and established user base. This single-chain focus can enhance transaction speeds and reduce complexity, but it may also limit exposure to the diverse opportunities found on other chains.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.006232350677320857
+      },
+      "difficultyScore": 0.29312323506773214
+    }
+  ],
+  "generatedAt": "2026-03-29T00:36:08.187Z"
+}
