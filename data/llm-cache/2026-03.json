@@ -698,5 +698,30 @@
     "text": "Ethena USDtb operates solely on Ethereum, which allows it to leverage the network's robust liquidity and established user base. This single-chain focus can enhance transaction speeds and reduce complexity, but it may also limit exposure to the diverse opportunities found on other chains.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-29T00:36:08.187Z"
+  },
+  "2026-03-30|protocol|portal|A|P1_FINGERPRINT|explanation|b5914c7a2757fb93": {
+    "text": "Portal's $1.5B TVL across 24 chains showcases its broad reach in the bridging space, with notable integrations on networks like Acala and Celo, which are crucial for connecting diverse DeFi ecosystems. This extensive chain support allows users to seamlessly transfer assets, enhancing liquidity and interoperability across multiple platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-30T00:36:10.750Z"
+  },
+  "2026-03-30|protocol|portal|B|P2_CROSSCHAIN|explanation|b05fe7b74db35f10": {
+    "text": "Portal's $1.3B TVL on Ethereum dwarfs the mere $9M on Binance, showcasing Ethereum's dominance in cross-chain liquidity solutions. The staggering 99% margin indicates that users overwhelmingly prefer Ethereum for their cross-chain transactions, likely due to its established ecosystem and broader DeFi offerings.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-30T00:36:12.792Z"
+  },
+  "2026-03-30|protocol|portal|C|P22_CATEGORY_MARKET_SHARE|explanation|7317907c7ba46832": {
+    "text": "Portal holds a 5% share of the bridge category with its $1.5B TVL, indicating it plays a significant role in a competitive space that totals $31.8B. This positioning suggests that while Portal is a key player, there are several larger bridges dominating the market.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-30T00:36:13.877Z"
+  },
+  "2026-03-30|protocol|portal|D|P4_ATH_TIMING|explanation|d960493e632ec1e6": {
+    "text": "Portal reached its all-time high (ATH) of $5.5B in December 2024, a significant milestone that came after earlier fluctuations, such as the $1.2B in August 2022 and $3B in December 2022. The timing of its ATH reflects a period of growth and increased adoption, distinguishing it from the earlier months when it had not yet gained such traction.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-30T00:36:16.513Z"
+  },
+  "2026-03-30|protocol|portal|E|P3_CONCENTRATION|explanation|829b93f28fbcdd08": {
+    "text": "Portal's TVL is heavily concentrated on Ethereum, which accounts for 92% of its total $1.5B, reflecting how dominant L1 chains often attract the majority of liquidity for DeFi protocols. This concentration can lead to vulnerabilities if the top chain experiences issues, as most of the value is tied to a single ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-30T00:36:18.718Z"
   }
 }

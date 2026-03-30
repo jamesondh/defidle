@@ -1,0 +1,142 @@
+{
+  "episodeId": "2026-03-30:protocol:portal",
+  "dateUtc": "2026-03-30",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "portal",
+    "name": "Portal",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: 10+ chains",
+        ">90% TVL on single chain",
+        "Active since: 2021",
+        "TVL: $1B-$5B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Portal",
+        "Grove Finance",
+        "Pendle",
+        "PancakeSwap AMM",
+        "JustCryptos"
+      ],
+      "answerIndex": 0,
+      "explanation": "Portal's $1.5B TVL across 24 chains showcases its broad reach in the bridging space, with notable integrations on networks like Acala and Celo, which are crucial for connecting diverse DeFi ecosystems. This extensive chain support allows users to seamlessly transfer assets, enhancing liquidity and interoperability across multiple platforms.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.22332905891052732
+      },
+      "difficultyScore": 0.4948329058910528
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Portal have higher TVL?",
+      "choices": [
+        "Binance",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Portal's $1.3B TVL on Ethereum dwarfs the mere $9M on Binance, showcasing Ethereum's dominance in cross-chain liquidity solutions. The staggering 99% margin indicates that users overwhelmingly prefer Ethereum for their cross-chain transactions, likely due to its established ecosystem and broader DeFi offerings.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9936111913164551,
+        "volatility": 0.22332905891052732
+      },
+      "difficultyScore": 0.22483290589105276
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P22_CATEGORY_MARKET_SHARE",
+      "format": "mc4",
+      "prompt": "What share of Bridge TVL does Portal hold?",
+      "choices": [
+        "<10%",
+        "10-25%",
+        "25-50%",
+        ">50%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Portal holds a 5% share of the bridge category with its $1.5B TVL, indicating it plays a significant role in a competitive space that totals $31.8B. This positioning suggests that while Portal is a key player, there are several larger bridges dominating the market.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5405568812864234,
+        "volatility": 0.22332905891052732
+      },
+      "difficultyScore": 0.3148329058910528
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Portal hit its all-time high TVL?",
+      "choices": [
+        "Oct 2024",
+        "Sep 2023",
+        "Feb 2025",
+        "Dec 2022",
+        "Dec 2024",
+        "Aug 2022"
+      ],
+      "answerIndex": 4,
+      "explanation": "Portal reached its all-time high (ATH) of $5.5B in December 2024, a significant milestone that came after earlier fluctuations, such as the $1.2B in August 2022 and $3B in December 2022. The timing of its ATH reflects a period of growth and increased adoption, distinguishing it from the earlier months when it had not yet gained such traction.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.22332905891052732
+      },
+      "difficultyScore": 0.5048329058910528
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Portal's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Portal's TVL is heavily concentrated on Ethereum, which accounts for 92% of its total $1.5B, reflecting how dominant L1 chains often attract the majority of liquidity for DeFi protocols. This concentration can lead to vulnerabilities if the top chain experiences issues, as most of the value is tied to a single ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.6655336054834358,
+        "volatility": 0.22332905891052732
+      },
+      "difficultyScore": 0.3148329058910528
+    }
+  ],
+  "generatedAt": "2026-03-30T00:36:18.718Z"
+}
