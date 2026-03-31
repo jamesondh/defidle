@@ -723,5 +723,30 @@
     "text": "Portal's TVL is heavily concentrated on Ethereum, which accounts for 92% of its total $1.5B, reflecting how dominant L1 chains often attract the majority of liquidity for DeFi protocols. This concentration can lead to vulnerabilities if the top chain experiences issues, as most of the value is tied to a single ecosystem.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-03-30T00:36:18.718Z"
+  },
+  "2026-03-31|chain|Ethereum|A|C1_FINGERPRINT|explanation|ce06fe7c3842590e": {
+    "text": "Ethereum's dominance with over $10B in TVL and 1,712 protocols showcases its role as the foundational layer for DeFi, attracting a diverse range of projects and liquidity. This extensive ecosystem not only fuels innovation but also solidifies Ethereum's position as the go-to platform for developers and users alike.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-31T00:34:31.808Z"
+  },
+  "2026-03-31|chain|Ethereum|B|C2_CHAIN_COMPARISON|explanation|ec27303551ca9b03": {
+    "text": "Ethereum's $52.9B TVL dwarfs Base's $4.0B by a staggering 92.5%, reflecting its established dominance and extensive user base compared to newer chains like Base, which are still building their ecosystems. This vast difference often stems from Ethereum's first-mover advantage and the wide array of DeFi applications available on its network.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-31T00:34:33.086Z"
+  },
+  "2026-03-31|chain|Ethereum|C|C6_TOP_DEX|explanation|a7474f98246a7963": {
+    "text": "Uniswap V4 leads Ethereum's DEX market with $276M in volume, significantly outpacing Uniswap V3 at $219M and Fluid DEX at $150M. This dominance reflects Uniswap's continued innovation and user preference, as it captures a larger share of trading activity compared to its closest competitors.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-31T00:34:35.279Z"
+  },
+  "2026-03-31|chain|Ethereum|D|C3_ATH_TIMING|explanation|7412027a9f668d5b": {
+    "text": "Ethereum reached its all-time high (ATH) of $107.4B in November 2021, a peak that coincided with a broader crypto market surge, unlike December 2021, which saw a decline, or earlier years like 2019 when Ethereum was still recovering from its previous highs. This timing reflects the intense interest in DeFi and NFTs during that period, driving significant capital into the Ethereum ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-31T00:34:38.092Z"
+  },
+  "2026-03-31|chain|Ethereum|E|C7_CHAIN_TVL_BAND|explanation|aab4d78fe8b93a6d": {
+    "text": "Ethereum's $52.9B TVL solidifies its position as the leading platform in DeFi, reflecting its dominance in smart contract capabilities and the extensive ecosystem of projects built on it. This substantial TVL also underscores the network's critical role in facilitating liquidity and innovation across various DeFi applications.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-03-31T00:34:40.498Z"
   }
 }
