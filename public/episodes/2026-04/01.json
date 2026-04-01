@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-04-01:protocol:quickswap-dex",
+  "dateUtc": "2026-04-01",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "quickswap-dex",
+    "name": "Quickswap Dex",
+    "category": "Dexs"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Dexs",
+        "Chains: 2-5 chains",
+        ">90% TVL on single chain",
+        "Active since: 2020",
+        "TVL: $100M-$500M",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Jito Liquid Staking",
+        "Uniswap V2",
+        "Quickswap Dex"
+      ],
+      "answerIndex": 2,
+      "explanation": "Quickswap Dex's $483M TVL across Polygon and Base shows its strong foothold in Layer 2 solutions, which often attract users with lower fees and faster transactions compared to Ethereum. This positioning allows Quickswap to capitalize on the growing demand for efficient trading platforms in the DeFi space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.05194658687412423
+      },
+      "difficultyScore": 0.3876946586874125
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Quickswap Dex have higher TVL?",
+      "choices": [
+        "Polygon",
+        "Base"
+      ],
+      "answerIndex": 0,
+      "explanation": "Quickswap Dex has a significant lead on Polygon with $483M TVL compared to just $118K on Base, showcasing how established networks like Polygon attract much higher liquidity due to their larger user base and ecosystem maturity. This 100% margin underscores the challenges newer chains face in gaining traction against more developed platforms.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.999754961545512,
+        "volatility": 0.05194658687412423
+      },
+      "difficultyScore": 0.20769465868741244
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did Quickswap Dex's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Quickswap Dex has seen a 23.2% decrease in fees over the past week, dropping from $878K to $674K, which could suggest a decline in trading activity or liquidity on the platform. This trend is important as it may reflect changing user preferences or increased competition from other DEXs.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.23174531918845045,
+        "volatility": 0.05194658687412423
+      },
+      "difficultyScore": 0.3196002756612719
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Quickswap Dex hit its all-time high TVL?",
+      "choices": [
+        "Nov 2025",
+        "Dec 2025",
+        "Dec 2021",
+        "Jun 2021",
+        "Jul 2025",
+        "Jun 2024"
+      ],
+      "answerIndex": 3,
+      "explanation": "Quickswap Dex hit its all-time high of $1.5B in June 2021, a peak that coincided with a broader surge in DeFi activity during that period. In contrast, the other options like December 2021 and future dates such as June 2024 and beyond reflect times when the market was either stabilizing or still recovering, making June 2021 a standout moment for Quickswap's growth.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.05194658687412423
+      },
+      "difficultyScore": 0.48769465868741246
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Quickswap Dex's TVL is on its top chain (Polygon)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Quickswap Dex has all of its $483M TVL concentrated on the Polygon chain, which is not uncommon for DEXs that focus on a single layer-2 solution to optimize for lower fees and faster transactions. This concentration can lead to a more robust ecosystem on that chain, as liquidity providers and traders benefit from the efficiency of a dedicated platform.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9990200862985872,
+        "volatility": 0.05194658687412423
+      },
+      "difficultyScore": 0.29769465868741246
+    }
+  ],
+  "generatedAt": "2026-04-01T00:38:34.116Z"
+}

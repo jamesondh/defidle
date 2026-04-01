@@ -1,0 +1,27 @@
+{
+  "2026-04-01|protocol|quickswap-dex|A|P1_FINGERPRINT|explanation|cc8f0b34561a550a": {
+    "text": "Quickswap Dex's $483M TVL across Polygon and Base shows its strong foothold in Layer 2 solutions, which often attract users with lower fees and faster transactions compared to Ethereum. This positioning allows Quickswap to capitalize on the growing demand for efficient trading platforms in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-01T00:38:25.276Z"
+  },
+  "2026-04-01|protocol|quickswap-dex|B|P2_CROSSCHAIN|explanation|a51e2359538e411e": {
+    "text": "Quickswap Dex has a significant lead on Polygon with $483M TVL compared to just $118K on Base, showcasing how established networks like Polygon attract much higher liquidity due to their larger user base and ecosystem maturity. This 100% margin underscores the challenges newer chains face in gaining traction against more developed platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-01T00:38:27.659Z"
+  },
+  "2026-04-01|protocol|quickswap-dex|C|P11_FEES_TREND|explanation|74e7b4e9e14d6c1c": {
+    "text": "Quickswap Dex has seen a 23.2% decrease in fees over the past week, dropping from $878K to $674K, which could suggest a decline in trading activity or liquidity on the platform. This trend is important as it may reflect changing user preferences or increased competition from other DEXs.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-01T00:38:30.438Z"
+  },
+  "2026-04-01|protocol|quickswap-dex|D|P4_ATH_TIMING|explanation|d9dc9b80c811f431": {
+    "text": "Quickswap Dex hit its all-time high of $1.5B in June 2021, a peak that coincided with a broader surge in DeFi activity during that period. In contrast, the other options like December 2021 and future dates such as June 2024 and beyond reflect times when the market was either stabilizing or still recovering, making June 2021 a standout moment for Quickswap's growth.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-01T00:38:32.422Z"
+  },
+  "2026-04-01|protocol|quickswap-dex|E|P3_CONCENTRATION|explanation|dafac68783f7cdce": {
+    "text": "Quickswap Dex has all of its $483M TVL concentrated on the Polygon chain, which is not uncommon for DEXs that focus on a single layer-2 solution to optimize for lower fees and faster transactions. This concentration can lead to a more robust ecosystem on that chain, as liquidity providers and traders benefit from the efficiency of a dedicated platform.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-01T00:38:34.116Z"
+  }
+}
