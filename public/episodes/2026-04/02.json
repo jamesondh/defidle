@@ -1,0 +1,137 @@
+{
+  "episodeId": "2026-04-02:chain:Scroll",
+  "dateUtc": "2026-04-02",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Scroll",
+    "name": "Scroll"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Native token: SCR",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "Mantle",
+        "Katana",
+        "Polygon",
+        "Scroll"
+      ],
+      "answerIndex": 3,
+      "explanation": "Scroll ranks 21st in TVL with between $100M and $500M, reflecting its growing adoption as a layer-2 solution. With 139 protocols built on it, Scroll is attracting a diverse range of projects, which often drives further user engagement and liquidity.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.38950000000000007
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Scroll or Aptos?",
+      "choices": [
+        "Scroll",
+        "Aptos"
+      ],
+      "answerIndex": 1,
+      "explanation": "Aptos leads with $290M in TVL, outperforming Scroll's $222M by 23.4%, likely due to its focus on high throughput and low latency, which appeals to developers and users seeking efficient transaction processing. This difference in TVL reflects Aptos's stronger traction in attracting liquidity and user engagement compared to Scroll.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.2343625029897441,
+        "volatility": null
+      },
+      "difficultyScore": 0.22826499641230708
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Scroll",
+        "Base",
+        "Katana",
+        "Bitcoin"
+      ],
+      "answerIndex": 2,
+      "explanation": "Scroll's growth of +10.8% is impressive, especially when compared to Bitcoin's +2.7% and Base's +1.8%, indicating that Scroll is gaining traction in the DeFi space. This surge suggests that it may be attracting more users and liquidity, positioning it as a notable player among other chains.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.7130217574974873,
+        "volatility": null
+      },
+      "difficultyScore": 0.35950000000000004
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Scroll hit its all-time high TVL?",
+      "choices": [
+        "Dec 2024",
+        "Jun 2024",
+        "Feb 2025",
+        "Mar 2025",
+        "Oct 2024",
+        "May 2025"
+      ],
+      "answerIndex": 4,
+      "explanation": "Scroll reached its all-time high (ATH) of $585M in October 2024, which is notable because the other options, like December 2024 and May 2025, came later and suggest a period of growth that Scroll capitalized on before those dates. This timing indicates that Scroll was able to achieve significant traction early on, positioning itself ahead of competitors in the DeFi space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Scroll?",
+      "choices": [
+        "SushiSwap V3",
+        "EtherFi Cash Liquid",
+        "SyncSwap",
+        "Ambient"
+      ],
+      "answerIndex": 1,
+      "explanation": "EtherFi Cash Liquid leads on Scroll with $3M in volume, significantly outpacing other DEXs like SyncSwap at $136K and Ambient at $84K. This stark difference illustrates EtherFi's dominance in trading activity on Scroll, indicating its appeal to users compared to the smaller volumes of competing platforms.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.9509262841193289,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-04-02T00:32:27.628Z"
+}

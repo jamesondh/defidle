@@ -23,5 +23,30 @@
     "text": "Quickswap Dex has all of its $483M TVL concentrated on the Polygon chain, which is not uncommon for DEXs that focus on a single layer-2 solution to optimize for lower fees and faster transactions. This concentration can lead to a more robust ecosystem on that chain, as liquidity providers and traders benefit from the efficiency of a dedicated platform.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-01T00:38:34.116Z"
+  },
+  "2026-04-02|chain|Scroll|A|C1_FINGERPRINT|explanation|717e7b443e68528c": {
+    "text": "Scroll ranks 21st in TVL with between $100M and $500M, reflecting its growing adoption as a layer-2 solution. With 139 protocols built on it, Scroll is attracting a diverse range of projects, which often drives further user engagement and liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-02T00:32:20.078Z"
+  },
+  "2026-04-02|chain|Scroll|B|C2_CHAIN_COMPARISON|explanation|0523d382932efe43": {
+    "text": "Aptos leads with $290M in TVL, outperforming Scroll's $222M by 23.4%, likely due to its focus on high throughput and low latency, which appeals to developers and users seeking efficient transaction processing. This difference in TVL reflects Aptos's stronger traction in attracting liquidity and user engagement compared to Scroll.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-02T00:32:22.391Z"
+  },
+  "2026-04-02|chain|Scroll|C|C4_GROWTH_RANKING|explanation|90d3bf2e942c59fd": {
+    "text": "Scroll's growth of +10.8% is impressive, especially when compared to Bitcoin's +2.7% and Base's +1.8%, indicating that Scroll is gaining traction in the DeFi space. This surge suggests that it may be attracting more users and liquidity, positioning it as a notable player among other chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-02T00:32:24.354Z"
+  },
+  "2026-04-02|chain|Scroll|D|C3_ATH_TIMING|explanation|b2dbc7f44a815d3a": {
+    "text": "Scroll reached its all-time high (ATH) of $585M in October 2024, which is notable because the other options, like December 2024 and May 2025, came later and suggest a period of growth that Scroll capitalized on before those dates. This timing indicates that Scroll was able to achieve significant traction early on, positioning itself ahead of competitors in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-02T00:32:25.655Z"
+  },
+  "2026-04-02|chain|Scroll|E|C6_TOP_DEX|explanation|1cadec77ed0820f9": {
+    "text": "EtherFi Cash Liquid leads on Scroll with $3M in volume, significantly outpacing other DEXs like SyncSwap at $136K and Ambient at $84K. This stark difference illustrates EtherFi's dominance in trading activity on Scroll, indicating its appeal to users compared to the smaller volumes of competing platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-02T00:32:27.628Z"
   }
 }
