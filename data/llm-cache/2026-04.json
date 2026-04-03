@@ -48,5 +48,30 @@
     "text": "EtherFi Cash Liquid leads on Scroll with $3M in volume, significantly outpacing other DEXs like SyncSwap at $136K and Ambient at $84K. This stark difference illustrates EtherFi's dominance in trading activity on Scroll, indicating its appeal to users compared to the smaller volumes of competing platforms.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-02T00:32:27.628Z"
+  },
+  "2026-04-03|protocol|spark-liquidity-layer|A|P1_FINGERPRINT|explanation|07713947d36d0828": {
+    "text": "Spark Liquidity Layer operates across 6 chains, including Arbitrum and Optimism, which allows it to tap into diverse liquidity pools and user bases. Its $2.1B TVL places it firmly in the $1B-$5B range, reflecting a strong position among onchain capital allocators in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-03T00:34:51.522Z"
+  },
+  "2026-04-03|protocol|spark-liquidity-layer|B|P2_CROSSCHAIN|explanation|a6118c5926486757": {
+    "text": "Spark Liquidity Layer's $2.0B TVL on Ethereum dwarfs the $20M on Base, showcasing Ethereum's dominance in attracting liquidity for cross-chain solutions. This stark 99% margin emphasizes how established networks often capture the majority of user interest and funds, leaving newer chains like Base with significantly less traction.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-03T00:34:53.963Z"
+  },
+  "2026-04-03|protocol|spark-liquidity-layer|C|P20_ATH_DISTANCE|explanation|bbccc0187f3a7a11": {
+    "text": "Spark Liquidity Layer's current TVL of $2.1B is 53% below its all-time high of $4.6B, indicating a significant drop that may reflect changes in user demand or competition in the liquidity provision space. This distance from its ATH places it in the 50-75% range, suggesting that while it still holds substantial value, it has not yet regained its peak performance.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-03T00:34:55.754Z"
+  },
+  "2026-04-03|protocol|spark-liquidity-layer|D|P33_MULTI_RANKING|explanation|a2ee116c8111bf48": {
+    "text": "Grove Finance leads the pack with $2.7B TVL, significantly outpacing Spark Liquidity Layer at $2.1B, which suggests that Grove may have a more established user base or more attractive liquidity incentives. Meanwhile, ether.fi Liquid's $418M TVL indicates it's still growing, likely appealing to a niche audience within the capital allocator category.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-03T00:34:58.381Z"
+  },
+  "2026-04-03|protocol|spark-liquidity-layer|E|P3_CONCENTRATION|explanation|d56e1c204e9291a7": {
+    "text": "Spark Liquidity Layer's TVL is heavily concentrated on Ethereum, with 96% of its $2.1B total locked there, indicating that the protocol is primarily leveraging Ethereum's established user base and liquidity. This concentration can lead to increased vulnerability to changes in Ethereum's ecosystem but also allows for deeper liquidity on the chain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-03T00:35:01.290Z"
   }
 }
