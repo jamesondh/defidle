@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-04-04:chain:Arbitrum",
+  "dateUtc": "2026-04-04",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Arbitrum",
+    "name": "Arbitrum"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 10",
+        "Native token: ARB",
+        "Most protocols by count"
+      ],
+      "choices": [
+        "Arbitrum",
+        "Plasma",
+        "Katana",
+        "Provenance",
+        "Monad",
+        "Tron"
+      ],
+      "answerIndex": 0,
+      "explanation": "Arbitrum ranks 7th in TVL with between $1B and $5B, showcasing its strong position in the DeFi landscape, especially with 957 protocols operating on the network. This extensive protocol count indicates a vibrant ecosystem that attracts developers and users alike, contributing to its significant TVL.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4675
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Arbitrum or Tron?",
+      "choices": [
+        "Tron",
+        "Arbitrum"
+      ],
+      "answerIndex": 0,
+      "explanation": "Tron leads Arbitrum with a $4.1B TVL compared to Arbitrum's $1.9B, reflecting Tron’s established user base and diverse DeFi offerings, which attract more liquidity. The 53.1% margin shows a significant preference for Tron’s ecosystem, likely driven by its lower fees and faster transaction speeds.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.5311337604932449,
+        "volatility": null
+      },
+      "difficultyScore": 0.19749999999999998
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Arbitrum",
+        "Base",
+        "Plasma",
+        "Scroll"
+      ],
+      "answerIndex": 2,
+      "explanation": "Plasma leads with a remarkable 54.1% growth, significantly outpacing other chains like Scroll at +10.8% and Base at +1.8%. In contrast, Arbitrum's decline of 5.4% suggests it may be facing challenges in maintaining user engagement compared to these emerging competitors.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.4328052188873378,
+        "volatility": null
+      },
+      "difficultyScore": 0.34750000000000003
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Arbitrum hit its all-time high TVL?",
+      "choices": [
+        "Oct 2024",
+        "Sep 2022",
+        "Feb 2022",
+        "Oct 2025",
+        "Dec 2023",
+        "Jul 2024"
+      ],
+      "answerIndex": 3,
+      "explanation": "Arbitrum reached its all-time high (ATH) of $4.2B in October 2025, a significant leap compared to earlier months like September 2022, when it was still establishing its presence in the DeFi space. This timing reflects the growing adoption and scaling of Layer 2 solutions, which gained traction as Ethereum's congestion issues persisted.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.47750000000000004
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Arbitrum?",
+      "choices": [
+        "Uniswap V4",
+        "Fluid DEX",
+        "Uniswap V3",
+        "PancakeSwap AMM V3"
+      ],
+      "answerIndex": 2,
+      "explanation": "Uniswap V3 leads on Arbitrum with a significant $233M in volume, far outpacing its closest competitor, PancakeSwap AMM V3, which only managed $29M. This stark difference illustrates Uniswap V3's dominance in the Arbitrum ecosystem, likely due to its established reputation and advanced features that attract more liquidity and trading activity.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.8740605179182935,
+        "volatility": null
+      },
+      "difficultyScore": 0.28750000000000003
+    }
+  ],
+  "generatedAt": "2026-04-04T00:32:10.179Z"
+}
