@@ -98,5 +98,30 @@
     "text": "Uniswap V3 leads on Arbitrum with a significant $233M in volume, far outpacing its closest competitor, PancakeSwap AMM V3, which only managed $29M. This stark difference illustrates Uniswap V3's dominance in the Arbitrum ecosystem, likely due to its established reputation and advanced features that attract more liquidity and trading activity.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-04T00:32:10.179Z"
+  },
+  "2026-04-05|protocol|obol|A|P1_FINGERPRINT|explanation|921c903a19619582": {
+    "text": "Obol's $1.3B TVL on Ethereum positions it as a significant player in the staking pool category, reflecting the growing demand for decentralized staking solutions as users seek to maximize their yield while participating in network security. With its focus on a single chain, Obol can optimize its infrastructure and user experience specifically for Ethereum's ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-05T00:36:41.594Z"
+  },
+  "2026-04-05|protocol|obol|B|P7_CATEGORY|explanation|a187a41bceb3cbc6": {
+    "text": "Obol operates as a staking pool, allowing users to collectively stake their assets to enhance rewards and reduce the risks associated with solo staking. This model is particularly appealing in the DeFi space as it democratizes access to staking benefits, making it easier for smaller holders to participate.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-05T00:36:43.537Z"
+  },
+  "2026-04-05|protocol|obol|C|P5_FEES_REVENUE|explanation|a94885105013a5b9": {
+    "text": "Obol generated $5K in revenue from $11K in fees over the past week, meaning it retains 44% of its fees as revenue. This efficiency in converting fees to revenue is a positive sign for the protocol's sustainability and operational effectiveness.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-05T00:36:45.274Z"
+  },
+  "2026-04-05|protocol|obol|D|P4_ATH_TIMING|explanation|fe51802bc29c2c52": {
+    "text": "Obol reached its all-time high (ATH) of $3.0B in August 2025, a significant milestone that showcases its growth trajectory during that period. In contrast, the other choices like October 2024 and November 2025 reflect times when the protocol had not yet achieved this peak, indicating a period of increasing adoption and market interest leading up to the ATH.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-05T00:36:46.557Z"
+  },
+  "2026-04-05|protocol|obol|E|P8_CHAIN_MEMBERSHIP|explanation|7dfab4a1fcdd8764": {
+    "text": "Obol operates solely on Ethereum, which allows it to leverage the network's robust security and liquidity, but also means it faces the challenges of high gas fees and congestion that can arise on a single-chain platform. This focus on Ethereum can create a more streamlined user experience, but it also limits its reach compared to multi-chain protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-05T00:36:50.010Z"
   }
 }
