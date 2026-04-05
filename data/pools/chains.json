@@ -4,332 +4,332 @@
       "slug": "Ethereum",
       "name": "Ethereum",
       "tvlRank": 1,
-      "tvl": 52902416680.08774,
-      "protocolCount": 1712,
+      "tvl": 52790500954.86638,
+      "protocolCount": 1718,
       "tokenSymbol": "ETH",
-      "historyDays": 3105,
-      "change30d": -0.02927661728353594,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 3112,
+      "change30d": -0.047809832063512504,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Solana",
       "name": "Solana",
       "tvlRank": 2,
-      "tvl": 6357809095.972786,
-      "protocolCount": 373,
+      "tvl": 5460203409.646354,
+      "protocolCount": 374,
       "tokenSymbol": "SOL",
-      "historyDays": 1837,
-      "change30d": -0.03386272525229083,
-      "lastUpdated": "2026-03-29"
-    },
-    {
-      "slug": "Bitcoin",
-      "name": "Bitcoin",
-      "tvlRank": 4,
-      "tvl": 4500773736.805301,
-      "protocolCount": 158,
-      "tokenSymbol": "BTC",
-      "historyDays": 1834,
-      "change30d": 0.027181787841518038,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 1844,
+      "change30d": -0.19253950479587206,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Tron",
       "name": "Tron",
-      "tvlRank": 5,
-      "tvl": 4071593238.3209157,
+      "tvlRank": 4,
+      "tvl": 4799616592.858295,
       "protocolCount": 93,
       "tokenSymbol": "TRON",
-      "historyDays": 2186,
-      "change30d": -0.03238281077587166,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 2193,
+      "change30d": 0.16689552827333343,
+      "lastUpdated": "2026-04-05"
+    },
+    {
+      "slug": "Bitcoin",
+      "name": "Bitcoin",
+      "tvlRank": 5,
+      "tvl": 4541538264.607059,
+      "protocolCount": 158,
+      "tokenSymbol": "BTC",
+      "historyDays": 1841,
+      "change30d": -0.00798436264337008,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Base",
       "name": "Base",
       "tvlRank": 6,
-      "tvl": 3962639196.993848,
-      "protocolCount": 743,
+      "tvl": 4045419904.1115885,
+      "protocolCount": 745,
       "tokenSymbol": null,
-      "historyDays": 1018,
-      "change30d": 0.018299504476875582,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 1025,
+      "change30d": -0.018920540935771262,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Arbitrum",
       "name": "Arbitrum",
       "tvlRank": 7,
-      "tvl": 1909032610.4526594,
-      "protocolCount": 957,
+      "tvl": 1883983198.694663,
+      "protocolCount": 959,
       "tokenSymbol": "ARB",
-      "historyDays": 1759,
-      "change30d": -0.05387035779044738,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 1766,
+      "change30d": -0.10082682741788962,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Hyperliquid L1",
       "name": "Hyperliquid L1",
-      "tvlRank": 8,
-      "tvl": 1725049309.4350111,
+      "tvlRank": 9,
+      "tvl": 1589166347.5861244,
       "protocolCount": 137,
       "tokenSymbol": "HYPE",
-      "historyDays": 535,
-      "change30d": 0.1661407495591576,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 542,
+      "change30d": 0.0036930680203588404,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Plasma",
       "name": "Plasma",
       "tvlRank": 10,
-      "tvl": 1583828181.7347543,
+      "tvl": 1548476899.3455117,
       "protocolCount": 61,
       "tokenSymbol": "XPL",
-      "historyDays": 206,
-      "change30d": 0.5412951113630499,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 213,
+      "change30d": 1.0491636429197104,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Polygon",
       "name": "Polygon",
       "tvlRank": 11,
-      "tvl": 1275298485.010246,
+      "tvl": 1238598118.7104053,
       "protocolCount": 700,
       "tokenSymbol": "POL",
-      "historyDays": 1997,
-      "change30d": 0.10996937859249083,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 2004,
+      "change30d": 0.1038776379130823,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Avalanche",
       "name": "Avalanche",
       "tvlRank": 12,
-      "tvl": 715674690.1048481,
+      "tvl": 716960733.3224788,
       "protocolCount": 544,
       "tokenSymbol": "AVAX",
-      "historyDays": 1880,
-      "change30d": -0.132870056562903,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 1887,
+      "change30d": -0.1220437528495819,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Mantle",
       "name": "Mantle",
       "tvlRank": 13,
-      "tvl": 642197089.1186032,
+      "tvl": 676585430.979,
       "protocolCount": 140,
       "tokenSymbol": "MNT",
-      "historyDays": 986,
-      "change30d": 0.6060586250027388,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 993,
+      "change30d": 0.2957685510197034,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Sui",
       "name": "Sui",
       "tvlRank": 14,
-      "tvl": 563814791.2086906,
-      "protocolCount": 113,
+      "tvl": 548651740.8022509,
+      "protocolCount": 114,
       "tokenSymbol": "SUI",
-      "historyDays": 1058,
-      "change30d": -0.015568342509549275,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 1065,
+      "change30d": -0.05973126418129924,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Ink",
       "name": "Ink",
       "tvlRank": 15,
-      "tvl": 459874660.7209752,
+      "tvl": 456047407.07283074,
       "protocolCount": 25,
       "tokenSymbol": null,
-      "historyDays": 466,
-      "change30d": 0.1103075694281452,
-      "lastUpdated": "2026-03-29"
-    },
-    {
-      "slug": "Katana",
-      "name": "Katana",
-      "tvlRank": 16,
-      "tvl": 373527469.21294415,
-      "protocolCount": 25,
-      "tokenSymbol": null,
-      "historyDays": 311,
-      "change30d": 0.8215116499731994,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 473,
+      "change30d": -0.035841575978071395,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Monad",
       "name": "Monad",
-      "tvlRank": 17,
-      "tvl": 335353959.7630151,
+      "tvlRank": 16,
+      "tvl": 377765595.89173114,
       "protocolCount": 93,
       "tokenSymbol": "MON",
-      "historyDays": 155,
-      "change30d": 0.4677985748097839,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 162,
+      "change30d": 0.5559607902371201,
+      "lastUpdated": "2026-04-05"
+    },
+    {
+      "slug": "Katana",
+      "name": "Katana",
+      "tvlRank": 17,
+      "tvl": 345081008.2402768,
+      "protocolCount": 25,
+      "tokenSymbol": null,
+      "historyDays": 318,
+      "change30d": -0.4822590345455799,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Cronos",
       "name": "Cronos",
       "tvlRank": 18,
-      "tvl": 305836606.6936504,
+      "tvl": 301074460.6703581,
       "protocolCount": 134,
       "tokenSymbol": "CRO",
-      "historyDays": 1599,
-      "change30d": -0.05075568813971149,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 1606,
+      "change30d": -0.06475026552348973,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Aptos",
       "name": "Aptos",
       "tvlRank": 19,
-      "tvl": 290021744.29530925,
+      "tvl": 268379223.95024607,
       "protocolCount": 92,
       "tokenSymbol": "APT",
-      "historyDays": 1255,
-      "change30d": -0.12617282316322162,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 1262,
+      "change30d": -0.17825711645540626,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Starknet",
       "name": "Starknet",
       "tvlRank": 20,
-      "tvl": 246632670.9052506,
+      "tvl": 243169510.84902892,
       "protocolCount": 54,
       "tokenSymbol": "STRK",
-      "historyDays": 1207,
-      "change30d": -0.10404491675745427,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 1214,
+      "change30d": -0.10363934659412086,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Scroll",
       "name": "Scroll",
       "tvlRank": 21,
-      "tvl": 222051522.38080904,
+      "tvl": 230248704.8613328,
       "protocolCount": 139,
       "tokenSymbol": "SCR",
-      "historyDays": 900,
-      "change30d": 0.10848989247571204,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 907,
+      "change30d": 0.09170431862640113,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Stellar",
       "name": "Stellar",
       "tvlRank": 23,
-      "tvl": 172095590.3135355,
+      "tvl": 170917658.76833746,
       "protocolCount": 32,
       "tokenSymbol": "XLM",
-      "historyDays": 1590,
-      "change30d": 0.014065800650356328,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 1597,
+      "change30d": 0.009018161347732352,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Flare",
       "name": "Flare",
       "tvlRank": 24,
-      "tvl": 158154178.277906,
+      "tvl": 157678630.21365455,
       "protocolCount": 40,
       "tokenSymbol": "FLR",
-      "historyDays": 1179,
-      "change30d": -0.09808921135588225,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 1186,
+      "change30d": -0.1202225298382765,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Cardano",
       "name": "Cardano",
       "tvlRank": 26,
-      "tvl": 133070147.92728132,
+      "tvl": 131444676.7103047,
       "protocolCount": 80,
       "tokenSymbol": "ADA",
-      "historyDays": 1547,
-      "change30d": 0.0407599157108452,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 1554,
+      "change30d": -0.0476266460061749,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Stacks",
       "name": "Stacks",
-      "tvlRank": 27,
-      "tvl": 119932432.3606256,
+      "tvlRank": 28,
+      "tvl": 117515172.54501653,
       "protocolCount": 18,
       "tokenSymbol": "STX",
-      "historyDays": 1567,
-      "change30d": 0.3305121530329748,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 1574,
+      "change30d": 0.002426206517529113,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Near",
       "name": "Near",
       "tvlRank": 29,
-      "tvl": 105417460.4441862,
+      "tvl": 112457436.0222558,
       "protocolCount": 43,
       "tokenSymbol": "NEAR",
-      "historyDays": 1681,
-      "change30d": 0.06605582998784289,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 1688,
+      "change30d": 0.4812879469319589,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "MegaETH",
       "name": "MegaETH",
-      "tvlRank": 32,
-      "tvl": 96691616.72937803,
-      "protocolCount": 20,
+      "tvlRank": 30,
+      "tvl": 105599974.54878071,
+      "protocolCount": 21,
       "tokenSymbol": "MEGA",
-      "historyDays": 89,
-      "change30d": 0.159604982694862,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 96,
+      "change30d": 0.1166908478936213,
+      "lastUpdated": "2026-04-05"
+    },
+    {
+      "slug": "Berachain",
+      "name": "Berachain",
+      "tvlRank": 33,
+      "tvl": 92221814.22948968,
+      "protocolCount": 98,
+      "tokenSymbol": "BERA",
+      "historyDays": 545,
+      "change30d": -0.2695660511687034,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Linea",
       "name": "Linea",
       "tvlRank": 34,
-      "tvl": 89870217.81390616,
+      "tvl": 89287562.20002429,
       "protocolCount": 162,
       "tokenSymbol": "LINEA",
-      "historyDays": 984,
-      "change30d": -0.10346906598921941,
-      "lastUpdated": "2026-03-29"
-    },
-    {
-      "slug": "Mixin",
-      "name": "Mixin",
-      "tvlRank": 35,
-      "tvl": 79487384.47258998,
-      "protocolCount": 10,
-      "tokenSymbol": "XIN",
-      "historyDays": 1579,
-      "change30d": -0.005728289211621916,
-      "lastUpdated": "2026-03-29"
-    },
-    {
-      "slug": "Berachain",
-      "name": "Berachain",
-      "tvlRank": 36,
-      "tvl": 75773140.52487235,
-      "protocolCount": 98,
-      "tokenSymbol": "BERA",
-      "historyDays": 538,
-      "change30d": -0.4704987805135752,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 991,
+      "change30d": -0.11651954090691523,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Kava",
       "name": "Kava",
-      "tvlRank": 37,
-      "tvl": 70901416.9823261,
+      "tvlRank": 38,
+      "tvl": 68224423.50214152,
       "protocolCount": 147,
       "tokenSymbol": "KAVA",
-      "historyDays": 1976,
-      "change30d": 0.03636441292387101,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 1983,
+      "change30d": -0.03386725675772545,
+      "lastUpdated": "2026-04-05"
     },
     {
       "slug": "Hedera",
       "name": "Hedera",
       "tvlRank": 39,
-      "tvl": 59936715.07042855,
+      "tvl": 58155295.51003992,
       "protocolCount": 24,
       "tokenSymbol": "HBAR",
-      "historyDays": 1442,
-      "change30d": -0.0189445576068242,
-      "lastUpdated": "2026-03-29"
+      "historyDays": 1449,
+      "change30d": -0.05054893844711771,
+      "lastUpdated": "2026-04-05"
+    },
+    {
+      "slug": "TON",
+      "name": "TON",
+      "tvlRank": 40,
+      "tvl": 56114324.232285276,
+      "protocolCount": 88,
+      "tokenSymbol": "TON",
+      "historyDays": 1216,
+      "change30d": -0.06768252203747725,
+      "lastUpdated": "2026-04-05"
     }
   ],
-  "generatedAt": "2026-03-29T12:09:20.677Z"
+  "generatedAt": "2026-04-05T12:08:28.824Z"
 }
