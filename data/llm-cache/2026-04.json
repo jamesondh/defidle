@@ -123,5 +123,30 @@
     "text": "Obol operates solely on Ethereum, which allows it to leverage the network's robust security and liquidity, but also means it faces the challenges of high gas fees and congestion that can arise on a single-chain platform. This focus on Ethereum can create a more streamlined user experience, but it also limits its reach compared to multi-chain protocols.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-05T00:36:50.010Z"
+  },
+  "2026-04-06|protocol|lista-cdp|A|P1_FINGERPRINT|explanation|5d24cbb941f2bb81": {
+    "text": "Lista CDP's $371M TVL on the Binance chain reflects its strong position within the CDP category, leveraging Binance's user base and liquidity. This concentration on a single chain can lead to both higher efficiency and vulnerability to changes in that ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-06T00:36:24.746Z"
+  },
+  "2026-04-06|protocol|lista-cdp|B|P7_CATEGORY|explanation|1beac2920a4b934f": {
+    "text": "Lista CDP falls under the CDP category, which stands for collateralized debt positions. This mechanism allows users to lock up collateral in exchange for borrowing assets, providing flexibility in managing their crypto portfolios while maintaining exposure to their collateral's value.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-06T00:36:26.742Z"
+  },
+  "2026-04-06|protocol|lista-cdp|C|P5_FEES_REVENUE|explanation|aa48f38dec03d835": {
+    "text": "Lista CDP generated $26K in fees over the past week, with all of that amount translating directly into revenue, reflecting a fully efficient fee structure where every dollar earned is retained as profit. This 100% revenue retention is a strong indicator of the protocol's operational effectiveness and user engagement.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-06T00:36:28.966Z"
+  },
+  "2026-04-06|protocol|lista-cdp|D|P4_ATH_TIMING|explanation|0a8efb1d35ef351e": {
+    "text": "Lista CDP hit its all-time high (ATH) of $1.1B in October 2025, a notable jump compared to earlier months like August 2025 and April 2024, when its TVL was significantly lower. This timing suggests that key developments or market conditions in late 2025 likely drove increased user engagement and capital inflow into the protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-06T00:36:30.526Z"
+  },
+  "2026-04-06|protocol|lista-cdp|E|P8_CHAIN_MEMBERSHIP|explanation|f8d40a618582d98a": {
+    "text": "Lista CDP operates solely on the Binance chain, which reflects a strategic choice to leverage the high throughput and low transaction costs that Binance offers, making it appealing for users looking to manage collateralized debt positions efficiently. This single-chain focus can also lead to a more streamlined user experience, but may limit its exposure to liquidity across multiple ecosystems.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-06T00:36:32.766Z"
   }
 }

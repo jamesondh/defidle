@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-04-06:protocol:lista-cdp",
+  "dateUtc": "2026-04-06",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "lista-cdp",
+    "name": "Lista CDP",
+    "category": "CDP"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: CDP",
+        "Chains: single-chain",
+        "TVL: $100M-$500M",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Lista CDP",
+        "USDD",
+        "Sky Lending",
+        "Concrete"
+      ],
+      "answerIndex": 0,
+      "explanation": "Lista CDP's $371M TVL on the Binance chain reflects its strong position within the CDP category, leveraging Binance's user base and liquidity. This concentration on a single chain can lead to both higher efficiency and vulnerability to changes in that ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.11302187516110825
+      },
+      "difficultyScore": 0.3938021875161109
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Lista CDP?",
+      "choices": [
+        "Dual-Token Stablecoin",
+        "Secondary Debt Markets",
+        "Yield",
+        "CDP"
+      ],
+      "answerIndex": 3,
+      "explanation": "Lista CDP falls under the CDP category, which stands for collateralized debt positions. This mechanism allows users to lock up collateral in exchange for borrowing assets, providing flexibility in managing their crypto portfolios while maintaining exposure to their collateral's value.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.11302187516110825
+      },
+      "difficultyScore": 0.3038021875161109
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Lista CDP's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Lista CDP generated $26K in fees over the past week, with all of that amount translating directly into revenue, reflecting a fully efficient fee structure where every dollar earned is retained as profit. This 100% revenue retention is a strong indicator of the protocol's operational effectiveness and user engagement.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0.11302187516110825
+      },
+      "difficultyScore": 0.3038021875161109
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Lista CDP hit its all-time high TVL?",
+      "choices": [
+        "Oct 2025",
+        "Sep 2022",
+        "Aug 2023",
+        "Apr 2024",
+        "Nov 2025",
+        "Aug 2025"
+      ],
+      "answerIndex": 0,
+      "explanation": "Lista CDP hit its all-time high (ATH) of $1.1B in October 2025, a notable jump compared to earlier months like August 2025 and April 2024, when its TVL was significantly lower. This timing suggests that key developments or market conditions in late 2025 likely drove increased user engagement and capital inflow into the protocol.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.11302187516110825
+      },
+      "difficultyScore": 0.4938021875161108
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Lista CDP deployed on?",
+      "choices": [
+        "BSC",
+        "Binance",
+        "zkSync Era",
+        "Fantom"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lista CDP operates solely on the Binance chain, which reflects a strategic choice to leverage the high throughput and low transaction costs that Binance offers, making it appealing for users looking to manage collateralized debt positions efficiently. This single-chain focus can also lead to a more streamlined user experience, but may limit its exposure to liquidity across multiple ecosystems.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.11302187516110825
+      },
+      "difficultyScore": 0.3038021875161109
+    }
+  ],
+  "generatedAt": "2026-04-06T00:36:32.766Z"
+}
