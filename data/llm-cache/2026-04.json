@@ -148,5 +148,30 @@
     "text": "Lista CDP operates solely on the Binance chain, which reflects a strategic choice to leverage the high throughput and low transaction costs that Binance offers, making it appealing for users looking to manage collateralized debt positions efficiently. This single-chain focus can also lead to a more streamlined user experience, but may limit its exposure to liquidity across multiple ecosystems.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-06T00:36:32.766Z"
+  },
+  "2026-04-07|chain|Stacks|A|C1_FINGERPRINT|explanation|b982f50dfd6d70f3": {
+    "text": "Stacks ranks 28th in TVL with between $100M and $500M, which is notable given it supports only 18 protocols, indicating a focused ecosystem that could foster deeper integration and innovation among its projects. This relatively low protocol count suggests that each project may have a more significant impact on the overall TVL compared to chains with a larger number of protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-07T00:36:03.247Z"
+  },
+  "2026-04-07|chain|Stacks|B|C2_CHAIN_COMPARISON|explanation|897d8e9e7e5310b2": {
+    "text": "Stacks outperformed MegaETH with a TVL of $118M compared to $106M, showcasing a 10.1% margin that reflects its growing appeal as a layer for smart contracts on Bitcoin. This difference suggests that Stacks is successfully attracting more liquidity, likely due to its unique positioning in the Bitcoin ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-07T00:36:05.524Z"
+  },
+  "2026-04-07|chain|Stacks|C|C6_TOP_DEX|explanation|a06cc32a1b19063b": {
+    "text": "Bitflow stands out on Stacks with a volume of $371K, significantly outpacing Velar AMM at just $400 and leaving Allbridge Classic and ALEX with no volume at all. This stark contrast highlights Bitflow's dominance in the DEX landscape on Stacks, reflecting its popularity and user trust compared to its competitors.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-07T00:36:07.864Z"
+  },
+  "2026-04-07|chain|Stacks|D|C3_ATH_TIMING|explanation|9c088b22a6cb960b": {
+    "text": "Stacks reached its all-time high (ATH) of $194M in April 2024, a significant milestone compared to earlier peaks like December 2021, which saw much lower values. The timing of this ATH reflects the growing interest in Stacks as it expanded its ecosystem, distinguishing it from the other distractor months that didn't capture this surge in value.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-07T00:36:10.469Z"
+  },
+  "2026-04-07|chain|Stacks|E|C10_PROTOCOL_COUNT|explanation|9d1997a20233fc07": {
+    "text": "Stacks has 16 protocols built on its platform, showcasing its growing ecosystem and appeal for developers looking to leverage Bitcoin's smart contract capabilities. This diverse range of protocols indicates a vibrant community and potential for innovative applications within the Stacks network.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-07T00:36:11.580Z"
   }
 }

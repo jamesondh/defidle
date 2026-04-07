@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-04-07:chain:Stacks",
+  "dateUtc": "2026-04-07",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Stacks",
+    "name": "Stacks"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Native token: STX",
+        "Protocols: <20",
+        "TVL: $100M-$500M",
+        "30d trend: up 1-10%"
+      ],
+      "choices": [
+        "Cronos",
+        "Aptos",
+        "Stacks",
+        "MegaETH"
+      ],
+      "answerIndex": 2,
+      "explanation": "Stacks ranks 28th in TVL with between $100M and $500M, which is notable given it supports only 18 protocols, indicating a focused ecosystem that could foster deeper integration and innovation among its projects. This relatively low protocol count suggests that each project may have a more significant impact on the overall TVL compared to chains with a larger number of protocols.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4075000000000001
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "prompt": "Stacks has higher TVL than MegaETH.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Stacks outperformed MegaETH with a TVL of $118M compared to $106M, showcasing a 10.1% margin that reflects its growing appeal as a layer for smart contracts on Bitcoin. This difference suggests that Stacks is successfully attracting more liquidity, likely due to its unique positioning in the Bitcoin ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.10139284773352533,
+        "volatility": null
+      },
+      "difficultyScore": 0.3158285827197696
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Stacks?",
+      "choices": [
+        "ALEX",
+        "Velar AMM",
+        "Allbridge Classic",
+        "Bitflow"
+      ],
+      "answerIndex": 3,
+      "explanation": "Bitflow stands out on Stacks with a volume of $371K, significantly outpacing Velar AMM at just $400 and leaving Allbridge Classic and ALEX with no volume at all. This stark contrast highlights Bitflow's dominance in the DEX landscape on Stacks, reflecting its popularity and user trust compared to its competitors.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9989229708771326,
+        "volatility": null
+      },
+      "difficultyScore": 0.31750000000000006
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Stacks hit its all-time high TVL?",
+      "choices": [
+        "Feb 2025",
+        "Jul 2025",
+        "Apr 2026",
+        "Dec 2023",
+        "Apr 2024",
+        "Dec 2021"
+      ],
+      "answerIndex": 4,
+      "explanation": "Stacks reached its all-time high (ATH) of $194M in April 2024, a significant milestone compared to earlier peaks like December 2021, which saw much lower values. The timing of this ATH reflects the growing interest in Stacks as it expanded its ecosystem, distinguishing it from the other distractor months that didn't capture this surge in value.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.5075000000000001
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C10_PROTOCOL_COUNT",
+      "format": "mc4",
+      "prompt": "How many DeFi protocols are deployed on Stacks?",
+      "choices": [
+        "<50",
+        "50-100",
+        "100-250",
+        ">250"
+      ],
+      "answerIndex": 0,
+      "explanation": "Stacks has 16 protocols built on its platform, showcasing its growing ecosystem and appeal for developers looking to leverage Bitcoin's smart contract capabilities. This diverse range of protocols indicates a vibrant community and potential for innovative applications within the Stacks network.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": null
+      },
+      "difficultyScore": 0.31750000000000006
+    }
+  ],
+  "generatedAt": "2026-04-07T00:36:11.580Z"
+}
