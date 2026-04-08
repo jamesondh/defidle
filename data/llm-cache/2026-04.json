@@ -173,5 +173,30 @@
     "text": "Stacks has 16 protocols built on its platform, showcasing its growing ecosystem and appeal for developers looking to leverage Bitcoin's smart contract capabilities. This diverse range of protocols indicates a vibrant community and potential for innovative applications within the Stacks network.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-07T00:36:11.580Z"
+  },
+  "2026-04-08|protocol|justlend|A|P1_FINGERPRINT|explanation|adeb90f80bd72ea2": {
+    "text": "JustLend's $3.5B TVL on Tron showcases its dominance within the lending category on a single chain, reflecting Tron’s growing appeal for DeFi applications. This concentration allows JustLend to leverage the network's unique features, such as low fees and fast transactions, to attract users.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-08T00:35:48.098Z"
+  },
+  "2026-04-08|protocol|justlend|B|P13_TVL_RANK_COMPARISON|explanation|a241fdaee102e295": {
+    "text": "Binance staked ETH leads with $8.3B TVL, significantly outpacing JustLend's $3.5B by 58.4%, reflecting the strong demand for staking solutions on Binance compared to the lending market on JustLend. This disparity often stems from user preference for staking rewards and the established reputation of Binance in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-08T00:35:50.379Z"
+  },
+  "2026-04-08|protocol|justlend|C|P5_FEES_REVENUE|explanation|2041d7f10599b80d": {
+    "text": "JustLend generated $139K in fees over the past week, with $10K of that amount translating into revenue, which is a relatively modest 6.9% revenue rate. This suggests that while the platform is successful in attracting users, its fee structure may not be maximizing profitability compared to other lending protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-08T00:35:52.278Z"
+  },
+  "2026-04-08|protocol|justlend|D|P4_ATH_TIMING|explanation|8b8639b6a269f2f0": {
+    "text": "JustLend hit its all-time high (ATH) of $9.3B in December 2024, a significant leap compared to earlier months like January 2022, when it was still establishing itself in the DeFi space. The other months listed, such as March 2022 and April 2024, reflect periods of growth but not the peak that December 2024 represents, showcasing JustLend's later success in attracting liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-08T00:35:54.938Z"
+  },
+  "2026-04-08|protocol|justlend|E|P6_TVL_TREND|explanation|007d25646b6763a1": {
+    "text": "JustLend's TVL has increased by 12.6% to reach $3.5B, reflecting growing confidence among users in its lending and borrowing services. This upward trend suggests that more users are choosing JustLend for their DeFi needs, likely driven by competitive interest rates or improved platform features.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-08T00:35:56.867Z"
   }
 }

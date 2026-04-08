@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-04-08:protocol:justlend",
+  "dateUtc": "2026-04-08",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "justlend",
+    "name": "JustLend",
+    "category": "Lending"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Lending",
+        "Chains: single-chain",
+        "Active since: 2021",
+        "TVL rank: top 25"
+      ],
+      "choices": [
+        "JustLend",
+        "EigenCloud",
+        "Aave V3",
+        "Coinbase Bridge",
+        "Jupiter Lend",
+        "WBTC"
+      ],
+      "answerIndex": 0,
+      "explanation": "JustLend's $3.5B TVL on Tron showcases its dominance within the lending category on a single chain, reflecting Tron’s growing appeal for DeFi applications. This concentration allows JustLend to leverage the network's unique features, such as low fees and fast transactions, to attract users.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.0912730780267523
+      },
+      "difficultyScore": 0.46362730780267525
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P13_TVL_RANK_COMPARISON",
+      "format": "ab",
+      "prompt": "Which protocol has higher TVL?",
+      "choices": [
+        "JustLend",
+        "Binance staked ETH"
+      ],
+      "answerIndex": 1,
+      "explanation": "Binance staked ETH leads with $8.3B TVL, significantly outpacing JustLend's $3.5B by 58.4%, reflecting the strong demand for staking solutions on Binance compared to the lending market on JustLend. This disparity often stems from user preference for staking rewards and the established reputation of Binance in the DeFi space.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.5835467386785823,
+        "volatility": 0.0912730780267523
+      },
+      "difficultyScore": 0.19362730780267523
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of JustLend's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 0,
+      "explanation": "JustLend generated $139K in fees over the past week, with $10K of that amount translating into revenue, which is a relatively modest 6.9% revenue rate. This suggests that while the platform is successful in attracting users, its fee structure may not be maximizing profitability compared to other lending protocols.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.12369320676229068,
+        "volatility": 0.0912730780267523
+      },
+      "difficultyScore": 0.43519545968792644
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did JustLend hit its all-time high TVL?",
+      "choices": [
+        "Feb 2025",
+        "Mar 2022",
+        "Jan 2022",
+        "Dec 2024",
+        "Apr 2024",
+        "May 2025"
+      ],
+      "answerIndex": 3,
+      "explanation": "JustLend hit its all-time high (ATH) of $9.3B in December 2024, a significant leap compared to earlier months like January 2022, when it was still establishing itself in the DeFi space. The other months listed, such as March 2022 and April 2024, reflect periods of growth but not the peak that December 2024 represents, showcasing JustLend's later success in attracting liquidity.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": 0.0912730780267523
+      },
+      "difficultyScore": 0.47362730780267526
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "JustLend's TVL increased over the past 30 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "JustLend's TVL has increased by 12.6% to reach $3.5B, reflecting growing confidence among users in its lending and borrowing services. This upward trend suggests that more users are choosing JustLend for their DeFi needs, likely driven by competitive interest rates or improved platform features.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.1258541225123613,
+        "volatility": 0.0912730780267523
+      },
+      "difficultyScore": 0.25260236078784165
+    }
+  ],
+  "generatedAt": "2026-04-08T00:35:56.867Z"
+}
