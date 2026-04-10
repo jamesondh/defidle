@@ -223,5 +223,30 @@
     "text": "Enosys AMM V3 leads Flare with $4M in volume, significantly outpacing its closest competitor, SparkDEX V3.1, which has $2M. This dominance suggests that Enosys AMM V3 is becoming the go-to platform for traders on Flare, while other DEXs like SparkDEX V4 and Spectra V2 struggle to gain traction.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-09T00:30:06.156Z"
+  },
+  "2026-04-10|protocol|tornado-cash|A|P1_FINGERPRINT|explanation|57a549bf2ab95dfa": {
+    "text": "Tornado Cash operates across 8 chains, including major ones like Ethereum and Arbitrum, which enhances its accessibility and user base. With a TVL of $547M, it sits solidly in the $500M-$1B range, reflecting significant interest in privacy solutions within DeFi.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-10T00:35:27.261Z"
+  },
+  "2026-04-10|protocol|tornado-cash|B|P2_CROSSCHAIN|explanation|4688eda85ad4b04d": {
+    "text": "Tornado Cash has a significant lead in TVL on Ethereum at $501M compared to just $45M on Binance, reflecting Ethereum's dominance in DeFi and the higher demand for privacy solutions on its network. The 91% margin indicates that users prefer the established infrastructure and liquidity of Ethereum for privacy transactions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-10T00:35:29.819Z"
+  },
+  "2026-04-10|protocol|tornado-cash|C|P11_FEES_TREND|explanation|e8d19183e37d3cb1": {
+    "text": "Tornado Cash has seen an 8.8% decline in fees over the past week, dropping from $41K to $37K, which may reflect reduced user activity or shifting preferences towards other privacy solutions in the DeFi space. This trend can indicate how competitive the landscape is, as users often gravitate towards platforms offering better incentives or features.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-10T00:35:32.291Z"
+  },
+  "2026-04-10|protocol|tornado-cash|D|P4_ATH_TIMING|explanation|d6efcf0884b39ab3": {
+    "text": "Tornado Cash reached its all-time high (ATH) of $1.2B in November 2025, a significant milestone compared to earlier months like August 2022, when it was still recovering from regulatory scrutiny. The timing of its ATH reflects a resurgence in privacy-focused protocols, which gained traction as users sought more anonymity in their transactions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-10T00:35:34.290Z"
+  },
+  "2026-04-10|protocol|tornado-cash|E|P3_CONCENTRATION|explanation|78cd0fd11f9116c4": {
+    "text": "Tornado Cash's TVL is heavily concentrated on Ethereum, which accounts for 92% of its total $547M, reflecting the platform's reliance on the network's established user base and liquidity. This dominance on a single chain can lead to vulnerabilities if Ethereum faces significant challenges or shifts in user preference.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-10T00:35:36.341Z"
   }
 }
