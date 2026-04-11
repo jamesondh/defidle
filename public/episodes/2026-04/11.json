@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-04-11:chain:Polygon",
+  "dateUtc": "2026-04-11",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Polygon",
+    "name": "Polygon"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: POL",
+        "Most protocols by count",
+        "Active since: 2020"
+      ],
+      "choices": [
+        "Monad",
+        "Polygon",
+        "Bitcoin",
+        "Aptos",
+        "Sui",
+        "Avalanche"
+      ],
+      "answerIndex": 1,
+      "explanation": "Polygon's TVL rank of 11, sitting between $1B and $5B, reflects its strong position as a Layer 2 solution, bolstered by a diverse ecosystem of over 700 protocols. This extensive protocol count indicates robust developer activity and a wide range of use cases, making it a key player in the DeFi landscape.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Polygon or Avalanche?",
+      "choices": [
+        "Avalanche",
+        "Polygon"
+      ],
+      "answerIndex": 1,
+      "explanation": "Polygon's $1.2B TVL surpasses Avalanche's $717M by 42.1%, reflecting its strong adoption for scaling Ethereum applications, while Avalanche struggles to attract similar liquidity despite its unique consensus mechanism. This difference in TVL showcases how user preference for established ecosystems can significantly impact liquidity distribution across chains.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.4211514433196792,
+        "volatility": null
+      },
+      "difficultyScore": 0.2095
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Bitcoin",
+        "Stellar",
+        "Polygon",
+        "Base"
+      ],
+      "answerIndex": 2,
+      "explanation": "Polygon's impressive 10.4% growth outpaces other chains like Stellar, which only saw a 0.9% increase, and Bitcoin, which declined by 0.8%. This strong performance reflects Polygon's increasing adoption and utility in the DeFi space, especially as it continues to attract projects looking for scalability and lower transaction costs.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.09485947656534995,
+        "volatility": null
+      },
+      "difficultyScore": 0.5456686281215801
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Polygon hit its all-time high TVL?",
+      "choices": [
+        "Oct 2024",
+        "Feb 2024",
+        "Feb 2022",
+        "May 2022",
+        "Mar 2025",
+        "Jun 2021"
+      ],
+      "answerIndex": 5,
+      "explanation": "Polygon reached its all-time high (ATH) of $9.9B in June 2021, a peak driven by the surge in demand for Layer 2 solutions as Ethereum gas fees skyrocketed. In contrast, the other options like February and May 2022 saw significant market fluctuations but did not match the ATH, indicating that the peak was tied to a specific moment of heightened interest in scaling solutions.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Polygon?",
+      "choices": [
+        "Betmoar.fun",
+        "Uniswap V3",
+        "Polymarket",
+        "Uniswap V4"
+      ],
+      "answerIndex": 2,
+      "explanation": "Polymarket leads Polygon's DEX scene with a substantial $157M in volume, vastly outpacing Uniswap V4 at $40M and Betmoar.fun at $13M. This dominance suggests that Polymarket's unique focus on prediction markets resonates strongly with users, setting it apart from more traditional DEX offerings.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.7458448052710777,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-04-11T00:33:41.940Z"
+}
