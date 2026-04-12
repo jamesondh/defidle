@@ -1,0 +1,142 @@
+{
+  "episodeId": "2026-04-12:protocol:kelp",
+  "dateUtc": "2026-04-12",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "kelp",
+    "name": "Kelp",
+    "category": "Liquid Restaking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Liquid Restaking",
+        "Chains: 10+ chains",
+        ">90% TVL on single chain",
+        "TVL: $1B-$5B",
+        "7d change: up >10%"
+      ],
+      "choices": [
+        "Kelp",
+        "JustCryptos",
+        "Sentora",
+        "ether.fi Stake",
+        "Figure Markets Exchange",
+        "Renzo"
+      ],
+      "answerIndex": 0,
+      "explanation": "Kelp's $1.6B TVL across 16 chains, including emerging platforms like zkSync Era and Linea, showcases its role in the growing liquid restaking sector, which allows users to maximize yield by staking their assets while still utilizing them in DeFi. This strategy is becoming increasingly popular as it enhances capital efficiency for users.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.23302378202000754
+      },
+      "difficultyScore": 0.4958023782020008
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Kelp have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Arbitrum"
+      ],
+      "answerIndex": 0,
+      "explanation": "Kelp's TVL on Ethereum at $1.4B dwarfs the $73M on Arbitrum, reflecting Ethereum's dominance in liquidity and user engagement, while the 95% margin suggests that Kelp is significantly more effective at attracting capital on Ethereum compared to Arbitrum. This stark contrast highlights the challenges for newer chains in capturing liquidity from established networks.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9495629446336284,
+        "volatility": 0.23302378202000754
+      },
+      "difficultyScore": 0.22580237820200078
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Kelp's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Kelp generated $31K in revenue over the past week, which is just 4.3% of its $719K in fees, indicating that while the platform is attracting significant trading activity, its revenue model may rely on other factors beyond just fee collection. This discrepancy can suggest opportunities for Kelp to optimize its revenue streams or enhance user incentives.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.2263743717475426,
+        "volatility": 0.23302378202000754
+      },
+      "difficultyScore": 0.3441531321049497
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Kelp hit its all-time high TVL?",
+      "choices": [
+        "Jan 2026",
+        "Jan 2024",
+        "Feb 2026",
+        "Nov 2024",
+        "Sep 2025",
+        "Apr 2025"
+      ],
+      "answerIndex": 4,
+      "explanation": "Kelp reached its all-time high (ATH) of $2.1B in September 2025, a significant milestone that came after earlier peaks in April 2025 and November 2024, which were lower in value. This timing suggests that Kelp experienced substantial growth and market interest leading up to its ATH, distinguishing it from the earlier months when it hadn't yet reached its peak.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.23302378202000754
+      },
+      "difficultyScore": 0.5058023782020008
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Kelp's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Kelp's TVL is heavily concentrated on Ethereum, with 91% of its $1.6B total locked on the chain, indicating that its success is largely tied to the Ethereum ecosystem. This reliance on a single chain can make Kelp vulnerable to changes in Ethereum's network dynamics or user sentiment.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.6525531925593429,
+        "volatility": 0.23302378202000754
+      },
+      "difficultyScore": 0.3158023782020008
+    }
+  ],
+  "generatedAt": "2026-04-12T00:38:54.766Z"
+}

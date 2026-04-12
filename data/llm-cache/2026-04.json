@@ -273,5 +273,30 @@
     "text": "Polymarket leads Polygon's DEX scene with a substantial $157M in volume, vastly outpacing Uniswap V4 at $40M and Betmoar.fun at $13M. This dominance suggests that Polymarket's unique focus on prediction markets resonates strongly with users, setting it apart from more traditional DEX offerings.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-11T00:33:41.940Z"
+  },
+  "2026-04-12|protocol|kelp|A|P1_FINGERPRINT|explanation|775a44bdae8a2a7b": {
+    "text": "Kelp's $1.6B TVL across 16 chains, including emerging platforms like zkSync Era and Linea, showcases its role in the growing liquid restaking sector, which allows users to maximize yield by staking their assets while still utilizing them in DeFi. This strategy is becoming increasingly popular as it enhances capital efficiency for users.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-12T00:38:45.939Z"
+  },
+  "2026-04-12|protocol|kelp|B|P2_CROSSCHAIN|explanation|bb66260f6ba9f41b": {
+    "text": "Kelp's TVL on Ethereum at $1.4B dwarfs the $73M on Arbitrum, reflecting Ethereum's dominance in liquidity and user engagement, while the 95% margin suggests that Kelp is significantly more effective at attracting capital on Ethereum compared to Arbitrum. This stark contrast highlights the challenges for newer chains in capturing liquidity from established networks.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-12T00:38:49.177Z"
+  },
+  "2026-04-12|protocol|kelp|C|P5_FEES_REVENUE|explanation|f061de39c5c72325": {
+    "text": "Kelp generated $31K in revenue over the past week, which is just 4.3% of its $719K in fees, indicating that while the platform is attracting significant trading activity, its revenue model may rely on other factors beyond just fee collection. This discrepancy can suggest opportunities for Kelp to optimize its revenue streams or enhance user incentives.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-12T00:38:50.589Z"
+  },
+  "2026-04-12|protocol|kelp|D|P4_ATH_TIMING|explanation|10b5099be999b98b": {
+    "text": "Kelp reached its all-time high (ATH) of $2.1B in September 2025, a significant milestone that came after earlier peaks in April 2025 and November 2024, which were lower in value. This timing suggests that Kelp experienced substantial growth and market interest leading up to its ATH, distinguishing it from the earlier months when it hadn't yet reached its peak.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-12T00:38:53.251Z"
+  },
+  "2026-04-12|protocol|kelp|E|P3_CONCENTRATION|explanation|7ec71b56ab8f74f9": {
+    "text": "Kelp's TVL is heavily concentrated on Ethereum, with 91% of its $1.6B total locked on the chain, indicating that its success is largely tied to the Ethereum ecosystem. This reliance on a single chain can make Kelp vulnerable to changes in Ethereum's network dynamics or user sentiment.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-12T00:38:54.765Z"
   }
 }
