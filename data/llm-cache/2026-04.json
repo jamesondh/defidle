@@ -298,5 +298,30 @@
     "text": "Kelp's TVL is heavily concentrated on Ethereum, with 91% of its $1.6B total locked on the chain, indicating that its success is largely tied to the Ethereum ecosystem. This reliance on a single chain can make Kelp vulnerable to changes in Ethereum's network dynamics or user sentiment.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-12T00:38:54.765Z"
+  },
+  "2026-04-13|protocol|stakewise-v2|A|P1_FINGERPRINT|explanation|cb23681dab6203b7": {
+    "text": "StakeWise V2 has $894M TVL across two chains, xDai and Ethereum, reflecting its strong position in the liquid staking sector. This distribution shows how it leverages Ethereum's popularity while also tapping into xDai's lower fees, appealing to a diverse user base.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-13T00:39:12.384Z"
+  },
+  "2026-04-13|protocol|stakewise-v2|B|P2_CROSSCHAIN|explanation|51a7004dc3b8ffa6": {
+    "text": "StakeWise V2's $893M TVL on Ethereum dwarfs the mere $1M on xDai, showcasing Ethereum's dominance in the DeFi space and its ability to attract significantly more liquidity. This stark contrast reflects the broader trend of users gravitating towards more established chains with larger ecosystems and user bases.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-13T00:39:14.741Z"
+  },
+  "2026-04-13|protocol|stakewise-v2|C|P5_FEES_REVENUE|explanation|3b2f47fec4d9b1e7": {
+    "text": "StakeWise V2 generated $134K in fees over the past week, but only $7K of that translated into revenue, indicating a low revenue conversion rate of 5%. This suggests that while the platform is attracting significant user activity, its fee structure or operational costs may be limiting profitability.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-13T00:39:16.207Z"
+  },
+  "2026-04-13|protocol|stakewise-v2|D|P4_ATH_TIMING|explanation|7247c1091f4b8c79": {
+    "text": "StakeWise V2 hit its all-time high of $1.6B in October 2025, a significant leap compared to earlier months like March 2022, when it was still establishing its presence in the DeFi space. The other options, such as September 2024 and April 2025, reflect periods of growth but not the peak performance that StakeWise V2 achieved later on.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-13T00:39:18.388Z"
+  },
+  "2026-04-13|protocol|stakewise-v2|E|P3_CONCENTRATION|explanation|7cd7fb18ca3ddccf": {
+    "text": "StakeWise V2's TVL of $894M is almost entirely concentrated on Ethereum, which holds $893M of that total. This extreme concentration indicates that the protocol is heavily reliant on the Ethereum ecosystem, making it particularly sensitive to changes in that network's performance and user activity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-13T00:39:20.934Z"
   }
 }
