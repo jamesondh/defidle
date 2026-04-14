@@ -323,5 +323,30 @@
     "text": "StakeWise V2's TVL of $894M is almost entirely concentrated on Ethereum, which holds $893M of that total. This extreme concentration indicates that the protocol is heavily reliant on the Ethereum ecosystem, making it particularly sensitive to changes in that network's performance and user activity.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-13T00:39:20.934Z"
+  },
+  "2026-04-14|chain|Mantle|A|C1_FINGERPRINT|explanation|0b2a91b01f3991be": {
+    "text": "Mantle's TVL of $500M-$1B and its rank at 13 show it has quickly gained traction among users, with 140 protocols indicating a diverse ecosystem that attracts developers and liquidity. This level of protocol count suggests strong community engagement and a growing interest in the unique features Mantle offers.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-14T00:40:19.143Z"
+  },
+  "2026-04-14|chain|Mantle|B|C2_CHAIN_COMPARISON|explanation|4316ca3b53948efd": {
+    "text": "Mantle's $686M TVL surpasses Ink's $479M by over 30%, reflecting its stronger adoption and user engagement, likely driven by its unique features or incentives that attract liquidity. This significant margin suggests that Mantle is effectively capturing market interest compared to Ink.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-14T00:40:21.816Z"
+  },
+  "2026-04-14|chain|Mantle|C|C6_TOP_DEX|explanation|5c4e3acc8fdff99d": {
+    "text": "Merchant Moe Liquidity Book leads Mantle with a volume of $728K, significantly outpacing Agni Finance at $642K, which is the closest competitor. This stark difference in volume indicates that Merchant Moe is capturing a larger share of trading activity on Mantle, suggesting it may offer features or incentives that attract more users compared to other DEXs like Fluxion Network and WOOFi Swap, which have much lower volumes of $70K and $46K, respectively.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-14T00:40:25.235Z"
+  },
+  "2026-04-14|chain|Mantle|D|C3_ATH_TIMING|explanation|fae10f227bea9a62": {
+    "text": "Mantle reached its all-time high (ATH) of $700M in April 2026, which stands out compared to earlier dates like July 2023 and August 2023, when its TVL was significantly lower as the protocol was still gaining traction. This timing reflects the potential growth and adoption Mantle experienced in the lead-up to its peak.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-14T00:40:27.306Z"
+  },
+  "2026-04-14|chain|Mantle|E|C4_GROWTH_RANKING|explanation|efed00bca7b7be07": {
+    "text": "Bitcoin's impressive 63.7% growth outpaces other chains significantly, with Tron at 26.7% and Mantle at 22.9%. This stark contrast highlights Bitcoin's continued dominance and appeal in the DeFi space, while Mantle's solid performance suggests it's gaining traction but still lags behind the leading chain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-14T00:40:29.318Z"
   }
 }
