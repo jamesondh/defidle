@@ -348,5 +348,30 @@
     "text": "Bitcoin's impressive 63.7% growth outpaces other chains significantly, with Tron at 26.7% and Mantle at 22.9%. This stark contrast highlights Bitcoin's continued dominance and appeal in the DeFi space, while Mantle's solid performance suggests it's gaining traction but still lags behind the leading chain.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-14T00:40:29.318Z"
+  },
+  "2026-04-15|protocol|sparklend|A|P1_FINGERPRINT|explanation|fd1734c7c81544ee": {
+    "text": "SparkLend's $2.0B TVL across Ethereum and xDai shows its appeal in both a major Layer 1 and a Layer 2 environment, which allows it to cater to a diverse user base seeking lending options. This dual-chain presence can enhance liquidity and reduce transaction costs for users on xDai while leveraging Ethereum's robust ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-15T00:41:04.305Z"
+  },
+  "2026-04-15|protocol|sparklend|B|P2_CROSSCHAIN|explanation|48d0eff0a16e009d": {
+    "text": "SparkLend's $2.0B TVL on Ethereum dwarfs the $480K on XDai, illustrating how liquidity often concentrates on more established chains where user activity and trust are higher. This stark difference in TVL reflects the challenges smaller chains face in attracting significant capital, despite potential advantages like lower fees.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-15T00:41:07.469Z"
+  },
+  "2026-04-15|protocol|sparklend|C|P5_FEES_REVENUE|explanation|19fa5a474f395854": {
+    "text": "SparkLend generated $602K in fees over the past week, but only $36K of that translated into revenue, reflecting a revenue percentage of just 6.1%. This low conversion rate suggests that while the platform is attracting significant user activity, its fee structure may not be optimized for profitability.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-15T00:41:08.733Z"
+  },
+  "2026-04-15|protocol|sparklend|D|P4_ATH_TIMING|explanation|754295b89a89c924": {
+    "text": "SparkLend reached its all-time high (ATH) of $6.4B in October 2025, a significant jump compared to earlier months like June 2024 and November 2023, when its TVL was still building momentum. This timing suggests that SparkLend capitalized on market trends and user adoption, leading to a peak that outpaced its earlier performance.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-15T00:41:11.557Z"
+  },
+  "2026-04-15|protocol|sparklend|E|P3_CONCENTRATION|explanation|cd49b1cf864da6d8": {
+    "text": "SparkLend's entire $2.0B TVL is concentrated on Ethereum, which shows its reliance on this leading blockchain for liquidity and user engagement. This level of concentration can limit its exposure to potential growth on other chains but also indicates strong confidence in Ethereum's ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-15T00:41:13.093Z"
   }
 }

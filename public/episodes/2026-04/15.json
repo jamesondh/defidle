@@ -1,0 +1,142 @@
+{
+  "episodeId": "2026-04-15:protocol:sparklend",
+  "dateUtc": "2026-04-15",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "sparklend",
+    "name": "SparkLend",
+    "category": "Lending"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Lending",
+        "Chains: 2-5 chains",
+        ">90% TVL on single chain",
+        "TVL: $1B-$5B",
+        "7d change: roughly flat"
+      ],
+      "choices": [
+        "Grove Finance",
+        "Morpho V1",
+        "Jupiter Lend",
+        "JustCryptos",
+        "SparkLend",
+        "ether.fi Stake"
+      ],
+      "answerIndex": 4,
+      "explanation": "SparkLend's $2.0B TVL across Ethereum and xDai shows its appeal in both a major Layer 1 and a Layer 2 environment, which allows it to cater to a diverse user base seeking lending options. This dual-chain presence can enhance liquidity and reduce transaction costs for users on xDai while leveraging Ethereum's robust ecosystem.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.20973171102549829
+      },
+      "difficultyScore": 0.49347317110254985
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does SparkLend have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "XDai"
+      ],
+      "answerIndex": 0,
+      "explanation": "SparkLend's $2.0B TVL on Ethereum dwarfs the $480K on XDai, illustrating how liquidity often concentrates on more established chains where user activity and trust are higher. This stark difference in TVL reflects the challenges smaller chains face in attracting significant capital, despite potential advantages like lower fees.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9997595395246036,
+        "volatility": 0.20973171102549829
+      },
+      "difficultyScore": 0.22347317110254983
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of SparkLend's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 0,
+      "explanation": "SparkLend generated $602K in fees over the past week, but only $36K of that translated into revenue, reflecting a revenue percentage of just 6.1%. This low conversion rate suggests that while the platform is attracting significant user activity, its fee structure may not be optimized for profitability.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.1575737445735752,
+        "volatility": 0.20973171102549829
+      },
+      "difficultyScore": 0.4243846776142596
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did SparkLend hit its all-time high TVL?",
+      "choices": [
+        "Jun 2024",
+        "Nov 2023",
+        "Jun 2025",
+        "Aug 2024",
+        "Oct 2025",
+        "Jun 2023"
+      ],
+      "answerIndex": 4,
+      "explanation": "SparkLend reached its all-time high (ATH) of $6.4B in October 2025, a significant jump compared to earlier months like June 2024 and November 2023, when its TVL was still building momentum. This timing suggests that SparkLend capitalized on market trends and user adoption, leading to a peak that outpaced its earlier performance.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.20973171102549829
+      },
+      "difficultyScore": 0.5034731711025499
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of SparkLend's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "SparkLend's entire $2.0B TVL is concentrated on Ethereum, which shows its reliance on this leading blockchain for liquidity and user engagement. This level of concentration can limit its exposure to potential growth on other chains but also indicates strong confidence in Ethereum's ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9990383893277737,
+        "volatility": 0.20973171102549829
+      },
+      "difficultyScore": 0.31347317110254985
+    }
+  ],
+  "generatedAt": "2026-04-15T00:41:13.094Z"
+}
