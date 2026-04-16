@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-04-16:chain:Hyperliquid L1",
+  "dateUtc": "2026-04-16",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Hyperliquid L1",
+    "name": "Hyperliquid L1"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 10",
+        "Native token: HYPE",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "Ethereum",
+        "Polygon",
+        "Cronos",
+        "Hyperliquid L1",
+        "Sui",
+        "OP Mainnet"
+      ],
+      "answerIndex": 3,
+      "explanation": "Hyperliquid L1 ranks 9th in TVL with between $1B and $5B, which is impressive given it supports 137 protocols, indicating a robust ecosystem for developers and users alike. This level of protocol diversity often attracts more liquidity and user engagement, helping to solidify its position in the DeFi landscape.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4675
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Hyperliquid L1 or Base?",
+      "choices": [
+        "Hyperliquid L1",
+        "Base"
+      ],
+      "answerIndex": 1,
+      "explanation": "Base's $4.3B TVL dwarfs Hyperliquid L1's $1.7B, reflecting a significant 61.7% margin that suggests Base has successfully attracted more liquidity and user engagement, likely due to its established ecosystem and partnerships. This disparity highlights the competitive landscape in DeFi, where early traction can lead to a self-reinforcing cycle of growth.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.6165022766650319,
+        "volatility": null
+      },
+      "difficultyScore": 0.19749999999999998
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Stellar",
+        "Plasma",
+        "Hyperliquid L1",
+        "Base"
+      ],
+      "answerIndex": 1,
+      "explanation": "Plasma's impressive 90.4% growth starkly contrasts with Hyperliquid L1's decline of 5.9%, highlighting a significant shift in user interest and activity. While Stellar and Base also saw positive changes at 4.7% and 3.6% respectively, Plasma's surge suggests it is capturing a larger share of the market's attention, leaving Hyperliquid L1 struggling to maintain its position.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.8575327929267528,
+        "volatility": null
+      },
+      "difficultyScore": 0.34750000000000003
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Hyperliquid L1 hit its all-time high TVL?",
+      "choices": [
+        "Feb 2026",
+        "Apr 2026",
+        "Nov 2025",
+        "Sep 2025",
+        "Mar 2025",
+        "Nov 2024"
+      ],
+      "answerIndex": 3,
+      "explanation": "Hyperliquid L1 reached its all-time high (ATH) of $2.8B in September 2025, which is notable because it outpaced other contenders like November 2025 and March 2025, suggesting a strong market response to its features or innovations during that period. The timing of its ATH indicates a peak in user interest or adoption that wasn't replicated in the months immediately following.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.47750000000000004
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Hyperliquid L1?",
+      "choices": [
+        "Ramses HL",
+        "Project X",
+        "Hyperliquid Spot Orderbook",
+        "HyperSwap V3"
+      ],
+      "answerIndex": 2,
+      "explanation": "Hyperliquid Spot Orderbook leads on Hyperliquid L1 with $163M in volume, significantly outpacing its closest competitor, Project X, which has $73M. This stark difference suggests that Hyperliquid's orderbook model is attracting more trading activity compared to the other DEXs on the chain, like Ramses HL and HyperSwap V3, which only manage $7M and $5M, respectively.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.5500783236847653,
+        "volatility": null
+      },
+      "difficultyScore": 0.28750000000000003
+    }
+  ],
+  "generatedAt": "2026-04-16T00:42:14.439Z"
+}
