@@ -398,5 +398,30 @@
     "text": "Hyperliquid Spot Orderbook leads on Hyperliquid L1 with $163M in volume, significantly outpacing its closest competitor, Project X, which has $73M. This stark difference suggests that Hyperliquid's orderbook model is attracting more trading activity compared to the other DEXs on the chain, like Ramses HL and HyperSwap V3, which only manage $7M and $5M, respectively.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-16T00:42:14.438Z"
+  },
+  "2026-04-18|chain|Katana|A|C1_FINGERPRINT|explanation|e6d300704fe8abcb": {
+    "text": "Katana ranks 17th in TVL with between $100M and $500M, which is notable for a protocol with 26 different projects integrated, suggesting a diverse ecosystem that can attract various liquidity sources and user engagement. This level of protocol variety often indicates a healthy competitive environment, allowing for innovation and cross-platform collaboration.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-18T00:35:50.028Z"
+  },
+  "2026-04-18|chain|Katana|B|C2_CHAIN_COMPARISON|explanation|1b44d1e8e3c0ca57": {
+    "text": "Katana's $374M TVL surpasses Cronos' $301M by 19.4%, reflecting its stronger user adoption and liquidity in the DeFi space. This difference often stems from Katana's unique offerings or incentives that attract more capital compared to Cronos.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-18T00:35:51.711Z"
+  },
+  "2026-04-18|chain|Katana|C|C4_GROWTH_RANKING|explanation|a2eb1103a029d2a3": {
+    "text": "Bitcoin leads with a remarkable 63.7% growth, while other chains like Base and TON have seen modest increases of 3.6% and 0.6%, respectively. In stark contrast, Katana's TVL has plummeted by 45.7%, indicating significant challenges in attracting liquidity compared to the stronger performance of the top chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-18T00:35:54.458Z"
+  },
+  "2026-04-18|chain|Katana|D|C3_ATH_TIMING|explanation|ef70f11406bb2d52": {
+    "text": "Katana reached its all-time high (ATH) of $711M in March 2026, a significant milestone that came after a period of growth, unlike the earlier months of January and February 2026, which saw lower TVL. This timing suggests that Katana's momentum built up over time, culminating in a peak that reflects increased user adoption and market interest.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-18T00:35:56.512Z"
+  },
+  "2026-04-18|chain|Katana|E|C6_TOP_DEX|explanation|3e0da8a3a332b808": {
+    "text": "SushiSwap V3 leads Katana with a significant $7M in volume, far outpacing other DEXs like Spectra V2 at just $869 and SushiSwap and Kensei, which recorded no volume at all. This stark contrast highlights SushiSwap V3's dominance and user preference on the Katana chain, suggesting it effectively meets trading needs compared to its competitors.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-18T00:35:58.941Z"
   }
 }
