@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-04-19:protocol:uniswap-v2",
+  "dateUtc": "2026-04-19",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "uniswap-v2",
+    "name": "Uniswap V2",
+    "category": "Dexs"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Dexs",
+        "Chains: 10+ chains",
+        "Active since: 2020",
+        "TVL: $500M-$1B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "PancakeSwap AMM",
+        "Uniswap V4",
+        "Uniswap V2",
+        "Uniswap V3"
+      ],
+      "answerIndex": 2,
+      "explanation": "Uniswap V2's $940M TVL across 13 chains reflects its strong adoption beyond Ethereum, with newer chains like Tempo and Celo contributing to its liquidity. This multi-chain strategy allows Uniswap V2 to tap into diverse user bases and trading opportunities, enhancing its overall market presence.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.19311974335021517
+      },
+      "difficultyScore": 0.4018119743350216
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Uniswap V2 have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Base"
+      ],
+      "answerIndex": 0,
+      "explanation": "Uniswap V2's $809M TVL on Ethereum dwarfs the $104M on Base, reflecting Ethereum's established dominance and liquidity in the DeFi space, which is crucial for attracting traders and maintaining efficient markets. The 87% margin shows how much more capital users are willing to commit to Ethereum-based liquidity pools compared to those on newer or less popular chains like Base.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.8717527799935567,
+        "volatility": 0.19311974335021517
+      },
+      "difficultyScore": 0.22181197433502153
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Uniswap V2's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 1,
+      "explanation": "Uniswap V2 generated $441K in fees over the past week, with $69K of that translating into revenue, which is a 16% revenue rate. This revenue model is crucial for incentivizing liquidity providers, as it directly impacts their earnings from trading activity on the platform.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.2232219649354945,
+        "volatility": 0.19311974335021517
+      },
+      "difficultyScore": 0.34394561641242816
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Uniswap V2 hit its all-time high TVL?",
+      "choices": [
+        "Sep 2020",
+        "Jan 2025",
+        "Apr 2021",
+        "Mar 2025",
+        "Oct 2022",
+        "Oct 2024"
+      ],
+      "answerIndex": 2,
+      "explanation": "Uniswap V2 hit its all-time high (ATH) of $10.0B in April 2021, a peak driven by the explosive growth of DeFi during that period. In contrast, the other dates like September 2020 and October 2022 saw significant activity but did not match the peak liquidity levels achieved in April 2021, highlighting a unique moment in the DeFi landscape.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.19311974335021517
+      },
+      "difficultyScore": 0.5018119743350216
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Uniswap V2's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Uniswap V2's TVL is heavily concentrated on Ethereum, with 86% of its $940M coming from this chain, which underscores Ethereum's dominance in the DeFi space and the reliance of many protocols on its robust infrastructure. The $809M on Ethereum reflects the liquidity and trading activity that drives user engagement on the platform.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4432122843591002,
+        "volatility": 0.19311974335021517
+      },
+      "difficultyScore": 0.31181197433502156
+    }
+  ],
+  "generatedAt": "2026-04-19T00:39:47.203Z"
+}

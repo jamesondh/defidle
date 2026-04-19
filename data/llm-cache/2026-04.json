@@ -423,5 +423,30 @@
     "text": "SushiSwap V3 leads Katana with a significant $7M in volume, far outpacing other DEXs like Spectra V2 at just $869 and SushiSwap and Kensei, which recorded no volume at all. This stark contrast highlights SushiSwap V3's dominance and user preference on the Katana chain, suggesting it effectively meets trading needs compared to its competitors.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-18T00:35:58.941Z"
+  },
+  "2026-04-19|protocol|uniswap-v2|A|P1_FINGERPRINT|explanation|629a9d89a6b831b7": {
+    "text": "Uniswap V2's $940M TVL across 13 chains reflects its strong adoption beyond Ethereum, with newer chains like Tempo and Celo contributing to its liquidity. This multi-chain strategy allows Uniswap V2 to tap into diverse user bases and trading opportunities, enhancing its overall market presence.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-19T00:39:40.466Z"
+  },
+  "2026-04-19|protocol|uniswap-v2|B|P2_CROSSCHAIN|explanation|f7d768a33cfa5dc2": {
+    "text": "Uniswap V2's $809M TVL on Ethereum dwarfs the $104M on Base, reflecting Ethereum's established dominance and liquidity in the DeFi space, which is crucial for attracting traders and maintaining efficient markets. The 87% margin shows how much more capital users are willing to commit to Ethereum-based liquidity pools compared to those on newer or less popular chains like Base.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-19T00:39:42.332Z"
+  },
+  "2026-04-19|protocol|uniswap-v2|C|P5_FEES_REVENUE|explanation|0e51d548ddfc33ac": {
+    "text": "Uniswap V2 generated $441K in fees over the past week, with $69K of that translating into revenue, which is a 16% revenue rate. This revenue model is crucial for incentivizing liquidity providers, as it directly impacts their earnings from trading activity on the platform.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-19T00:39:43.608Z"
+  },
+  "2026-04-19|protocol|uniswap-v2|D|P4_ATH_TIMING|explanation|4350c6827e33009e": {
+    "text": "Uniswap V2 hit its all-time high (ATH) of $10.0B in April 2021, a peak driven by the explosive growth of DeFi during that period. In contrast, the other dates like September 2020 and October 2022 saw significant activity but did not match the peak liquidity levels achieved in April 2021, highlighting a unique moment in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-19T00:39:45.814Z"
+  },
+  "2026-04-19|protocol|uniswap-v2|E|P3_CONCENTRATION|explanation|ef0eec5947030a08": {
+    "text": "Uniswap V2's TVL is heavily concentrated on Ethereum, with 86% of its $940M coming from this chain, which underscores Ethereum's dominance in the DeFi space and the reliance of many protocols on its robust infrastructure. The $809M on Ethereum reflects the liquidity and trading activity that drives user engagement on the platform.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-19T00:39:47.203Z"
   }
 }
