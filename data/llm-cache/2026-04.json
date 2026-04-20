@@ -448,5 +448,30 @@
     "text": "Uniswap V2's TVL is heavily concentrated on Ethereum, with 86% of its $940M coming from this chain, which underscores Ethereum's dominance in the DeFi space and the reliance of many protocols on its robust infrastructure. The $809M on Ethereum reflects the liquidity and trading activity that drives user engagement on the platform.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-19T00:39:47.203Z"
+  },
+  "2026-04-20|protocol|sentora|A|P1_FINGERPRINT|explanation|9591bf25521fa17d": {
+    "text": "Sentora's $1.3B TVL across Solana and Ethereum reflects its role as a Risk Curator, which is crucial for assessing and managing risks in DeFi protocols. The presence on two major chains indicates a strategic approach to leverage diverse liquidity sources and user bases.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-20T00:39:25.211Z"
+  },
+  "2026-04-20|protocol|sentora|B|P2_CROSSCHAIN|explanation|ad375591fdea6cbd": {
+    "text": "Sentora's $1.1B TVL on Ethereum dwarfs the $224M on Solana, reflecting Ethereum's established dominance in DeFi and its ability to attract more liquidity and user engagement. The 80% margin shows a significant preference for Ethereum-based protocols, likely due to its robust ecosystem and network effects.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-20T00:39:26.989Z"
+  },
+  "2026-04-20|protocol|sentora|C|P5_FEES_REVENUE|explanation|d94f825956efac9f": {
+    "text": "Sentora generated $519K in fees over the past week, but only $16K in revenue, which means just 3.1% of the fees are being converted into actual revenue. This disparity suggests that while the platform is attracting significant trading activity, its monetization strategy may need refinement to improve profitability.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-20T00:39:28.496Z"
+  },
+  "2026-04-20|protocol|sentora|D|P4_ATH_TIMING|explanation|cb63c0613c82867e": {
+    "text": "Sentora reached its ATH of $2.0B in April 2026, which is notable because earlier months like September and October 2025 saw significant growth but didn't capture the peak. This timing suggests that while there was momentum building in late 2025, it wasn't until April 2026 that Sentora truly maximized its value.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-20T00:39:31.020Z"
+  },
+  "2026-04-20|protocol|sentora|E|P3_CONCENTRATION|explanation|ad5b45378cc53a93": {
+    "text": "Sentora's TVL is heavily concentrated on Ethereum, with 83% of its $1.3B total TVL, which reflects the dominance of Ethereum as a preferred platform for DeFi projects due to its established infrastructure and user base. This concentration can lead to increased vulnerability to Ethereum's network performance and changes in user sentiment.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-20T00:39:32.378Z"
   }
 }

@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-04-20:protocol:sentora",
+  "dateUtc": "2026-04-20",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "sentora",
+    "name": "Sentora",
+    "category": "Risk Curators"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Risk Curators",
+        "Chains: 2-5 chains",
+        "TVL: $1B-$5B",
+        "7d change: down >10%"
+      ],
+      "choices": [
+        "SparkLend",
+        "Sentora",
+        "Gauntlet",
+        "JustCryptos",
+        "Steakhouse Financial",
+        "Hyperliquid Bridge"
+      ],
+      "answerIndex": 1,
+      "explanation": "Sentora's $1.3B TVL across Solana and Ethereum reflects its role as a Risk Curator, which is crucial for assessing and managing risks in DeFi protocols. The presence on two major chains indicates a strategic approach to leverage diverse liquidity sources and user bases.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.15205948101500294
+      },
+      "difficultyScore": 0.4877059481015003
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Sentora have higher TVL?",
+      "choices": [
+        "Solana",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Sentora's $1.1B TVL on Ethereum dwarfs the $224M on Solana, reflecting Ethereum's established dominance in DeFi and its ability to attract more liquidity and user engagement. The 80% margin shows a significant preference for Ethereum-based protocols, likely due to its robust ecosystem and network effects.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.7975515457469491,
+        "volatility": 0.15205948101500294
+      },
+      "difficultyScore": 0.21770594810150032
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Sentora's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Sentora generated $519K in fees over the past week, but only $16K in revenue, which means just 3.1% of the fees are being converted into actual revenue. This disparity suggests that while the platform is attracting significant trading activity, its monetization strategy may need refinement to improve profitability.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.2768316137838624,
+        "volatility": 0.15205948101500294
+      },
+      "difficultyScore": 0.3077059481015003
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Sentora hit its all-time high TVL?",
+      "choices": [
+        "Jan 2026",
+        "Dec 2025",
+        "Feb 2026",
+        "Oct 2025",
+        "Sep 2025",
+        "Apr 2026"
+      ],
+      "answerIndex": 5,
+      "explanation": "Sentora reached its ATH of $2.0B in April 2026, which is notable because earlier months like September and October 2025 saw significant growth but didn't capture the peak. This timing suggests that while there was momentum building in late 2025, it wasn't until April 2026 that Sentora truly maximized its value.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.15205948101500294
+      },
+      "difficultyScore": 0.49770594810150026
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Sentora's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Sentora's TVL is heavily concentrated on Ethereum, with 83% of its $1.3B total TVL, which reflects the dominance of Ethereum as a preferred platform for DeFi projects due to its established infrastructure and user base. This concentration can lead to increased vulnerability to Ethereum's network performance and changes in user sentiment.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.3265459204110006,
+        "volatility": 0.15205948101500294
+      },
+      "difficultyScore": 0.3077059481015003
+    }
+  ],
+  "generatedAt": "2026-04-20T00:39:32.379Z"
+}
