@@ -498,5 +498,30 @@
     "text": "Uniswap V4 leads on Monad with $39M in volume, significantly outpacing Kuru CLOB at $12M and PancakeSwap AMM V3 at $6M. This dominance suggests that Uniswap V4 is not only the preferred choice for traders on Monad but also highlights its robust liquidity and user engagement compared to its competitors.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-21T00:40:20.207Z"
+  },
+  "2026-04-22|protocol|spiko|A|P1_FINGERPRINT|explanation|449487673aa17e24": {
+    "text": "Spiko's $1.2B TVL across seven chains, including Ethereum and Arbitrum, reflects its strong positioning in the real-world asset (RWA) sector, which is gaining traction as DeFi seeks to bridge traditional finance with blockchain. The diversity of chains also suggests a strategy to tap into different user bases and liquidity pools.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-22T00:37:30.306Z"
+  },
+  "2026-04-22|protocol|spiko|B|P2_CROSSCHAIN|explanation|d68893a62f18b4da": {
+    "text": "Spiko's $560M TVL on Stellar significantly outpaces the $121M on Polygon, reflecting Stellar's stronger adoption or user engagement in this context. The 78% margin suggests that users are more confident in Stellar's capabilities for cross-chain transactions compared to Polygon.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-22T00:37:32.268Z"
+  },
+  "2026-04-22|protocol|spiko|C|P5_FEES_REVENUE|explanation|86e2cc8843cf9a83": {
+    "text": "Spiko has generated $5K in revenue over the past week, which is 37% of its total fees of $13K, indicating a relatively healthy conversion rate from fees to revenue. This suggests that Spiko is effectively monetizing its user activity, which can be crucial for its sustainability and growth.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-22T00:37:33.512Z"
+  },
+  "2026-04-22|protocol|spiko|D|P4_ATH_TIMING|explanation|fa1fe7d9aa9f968e": {
+    "text": "Spiko reached its all-time high (ATH) of $1.3B in March 2026, a notable timing as it came just before the other options like April 2026 and the earlier dates in 2025, which suggests that the market momentum was particularly strong leading into that month. This timing indicates a peak period of interest and investment in Spiko, setting it apart from the other choices that either followed closely or were too early to capture the same level of enthusiasm.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-22T00:37:34.929Z"
+  },
+  "2026-04-22|protocol|spiko|E|P3_CONCENTRATION|explanation|ec3df2831c39d817": {
+    "text": "Spiko's TVL of $1.2B shows a significant concentration in Stellar, which accounts for 45% of its total TVL at $560M. This reliance on a single chain suggests that Spiko's liquidity is heavily tied to Stellar's ecosystem, impacting its ability to diversify and attract users from other chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-22T00:37:37.080Z"
   }
 }
