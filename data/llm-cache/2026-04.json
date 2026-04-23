@@ -523,5 +523,30 @@
     "text": "Spiko's TVL of $1.2B shows a significant concentration in Stellar, which accounts for 45% of its total TVL at $560M. This reliance on a single chain suggests that Spiko's liquidity is heavily tied to Stellar's ecosystem, impacting its ability to diversify and attract users from other chains.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-22T00:37:37.080Z"
+  },
+  "2026-04-23|chain|Sei|A|C1_FINGERPRINT|explanation|b0f181bb56b7adc7": {
+    "text": "Sei ranks 40th in TVL with between $50M and $100M, which reflects its growing ecosystem of 76 protocols—placing it in the 50-100 range for protocol count. This suggests that Sei is attracting a diverse array of projects, indicating a healthy level of developer interest and potential for future growth.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-23T00:42:00.434Z"
+  },
+  "2026-04-23|chain|Sei|B|C10_PROTOCOL_COUNT|explanation|17eabe94e4c155f0": {
+    "text": "Sei has 71 protocols built on its platform, showcasing its growing ecosystem and appeal to developers looking to leverage its unique features for trading and liquidity. This diverse range of protocols indicates a vibrant community and potential for innovation within the Sei network.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-23T00:42:01.394Z"
+  },
+  "2026-04-23|chain|Sei|C|C6_TOP_DEX|explanation|2d29792d9f504b22": {
+    "text": "Saphyre V3 leads Sei with $6M in volume, significantly outpacing its closest competitors like Uniswap V3 at just $16K and Saphyre V2 at $15K. This stark difference illustrates Saphyre V3's dominance in the Sei ecosystem, indicating strong user preference for its features over other DEX options.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-23T00:42:02.538Z"
+  },
+  "2026-04-23|chain|Sei|D|C3_ATH_TIMING|explanation|25052d6453b7d4d7": {
+    "text": "Sei reached its all-time high (ATH) of $628M in July 2025, a notable achievement compared to the other options like November 2023 and October 2024, which were too early and did not capture the protocol's peak performance. This timing suggests that Sei's growth trajectory gained significant momentum in the latter half of 2025, reflecting increased user adoption or market conditions that favored its unique offerings.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-23T00:42:05.311Z"
+  },
+  "2026-04-23|chain|Sei|E|C4_GROWTH_RANKING|explanation|cb2d304e35d8c02c": {
+    "text": "Tron leads with a remarkable 26.8% growth, while Kava also shows positive momentum at +7.7%. In contrast, Sei's -1.0% change indicates a decline, which is notable as it reflects challenges in maintaining user engagement compared to its peers.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-23T00:42:06.741Z"
   }
 }
