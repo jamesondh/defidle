@@ -548,5 +548,30 @@
     "text": "Tron leads with a remarkable 26.8% growth, while Kava also shows positive momentum at +7.7%. In contrast, Sei's -1.0% change indicates a decline, which is notable as it reflects challenges in maintaining user engagement compared to its peers.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-23T00:42:06.741Z"
+  },
+  "2026-04-24|protocol|quickswap-dex|A|P1_FINGERPRINT|explanation|89358b0f7c27613a": {
+    "text": "Quickswap Dex, with $448M TVL across Polygon and Base, showcases the growing trend of DEXs leveraging Layer 2 solutions for lower fees and faster transactions, making it an attractive option for users seeking efficient trading. Its presence on two chains also highlights a strategic approach to tap into diverse liquidity pools.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-24T00:42:19.904Z"
+  },
+  "2026-04-24|protocol|quickswap-dex|B|P2_CROSSCHAIN|explanation|7a7181f2ae77a1f0": {
+    "text": "Quickswap Dex has a significant TVL of $448M on Polygon, showcasing its strong user base and liquidity compared to just $101K on Base, which reflects the challenges new chains face in attracting liquidity and users. This 100% margin in TVL between the two chains highlights Polygon's established ecosystem versus Base's nascent stage in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-24T00:42:22.424Z"
+  },
+  "2026-04-24|protocol|quickswap-dex|C|P5_FEES_REVENUE|explanation|9698a663e8dfd078": {
+    "text": "Quickswap Dex generated $152K in fees over the past week, with $25K of that translating into revenue, which means 17% of the fees are being retained as profit. This revenue retention is crucial for the sustainability of the platform, allowing it to reinvest in development and marketing.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-24T00:42:23.637Z"
+  },
+  "2026-04-24|protocol|quickswap-dex|D|P4_ATH_TIMING|explanation|76451af44c779f1c": {
+    "text": "Quickswap Dex hit its ATH of $1.5B in June 2021, a peak that coincided with a broader surge in DeFi activity during that period, while the other dates like January and June 2022 saw significant market fluctuations but did not match that level of TVL. This timing reflects how Quickswap capitalized on the early excitement of Layer 2 solutions, which was less pronounced in the months that followed.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-24T00:42:26.230Z"
+  },
+  "2026-04-24|protocol|quickswap-dex|E|P3_CONCENTRATION|explanation|e466f8ff6a075627": {
+    "text": "Quickswap Dex operates exclusively on Polygon, with its entire $448M TVL concentrated on this chain. This full reliance on a single network allows Quickswap to optimize its liquidity and user experience, but it also exposes the protocol to risks associated with Polygon's performance and ecosystem changes.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-24T00:42:27.536Z"
   }
 }
