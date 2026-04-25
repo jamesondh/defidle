@@ -573,5 +573,30 @@
     "text": "Quickswap Dex operates exclusively on Polygon, with its entire $448M TVL concentrated on this chain. This full reliance on a single network allows Quickswap to optimize its liquidity and user experience, but it also exposes the protocol to risks associated with Polygon's performance and ecosystem changes.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-24T00:42:27.536Z"
+  },
+  "2026-04-25|chain|Cardano|A|C1_FINGERPRINT|explanation|b5171734dac5d85c": {
+    "text": "Cardano's TVL of $100M-$500M places it at rank 25, reflecting its growing ecosystem with 81 protocols, which is a solid number for a blockchain still expanding its DeFi offerings. This indicates that while Cardano is not yet a top-tier player in TVL, it has a diverse range of projects that could drive future growth.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-25T00:38:08.226Z"
+  },
+  "2026-04-25|chain|Cardano|B|C2_CHAIN_COMPARISON|explanation|6bf1231f133330bc": {
+    "text": "Cardano's $134M TVL outpaces MegaETH's $89M by 33.8%, showcasing Cardano's growing appeal in the DeFi space, likely driven by its strong community and recent upgrades that enhance scalability and smart contract functionality. This contrast highlights how different ecosystems can attract varying levels of liquidity based on their technological advancements and user engagement.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-25T00:38:11.055Z"
+  },
+  "2026-04-25|chain|Cardano|C|C6_TOP_DEX|explanation|dafa1e5574c709f8": {
+    "text": "Minswap DEX leads Cardano with a volume of $307K, significantly outpacing its closest competitor, WingRiders, which recorded $276K. This difference illustrates Minswap's stronger market presence and user adoption compared to other DEXs like Dano Finance and SundaeSwap V2, which saw volumes of just $86K and $74K, respectively.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-25T00:38:13.202Z"
+  },
+  "2026-04-25|chain|Cardano|D|C3_ATH_TIMING|explanation|5e6c2151472b53cd": {
+    "text": "Cardano reached its ATH of $721M in December 2024, a significant milestone that reflects its growth during a bullish market phase. In contrast, the other months listed, like January and April 2023, were earlier in its development and did not capture the same level of interest or investment that led to the peak in late 2024.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-25T00:38:15.147Z"
+  },
+  "2026-04-25|chain|Cardano|E|C7_CHAIN_TVL_BAND|explanation|6bb32b3d1dc26251": {
+    "text": "Cardano's $134M TVL places it in the $100M-$500M band, reflecting its gradual growth as a DeFi ecosystem, especially as it continues to roll out smart contract capabilities. This level of TVL indicates that while it's still developing, there's a growing interest in building on Cardano's platform.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-25T00:38:17.283Z"
   }
 }
