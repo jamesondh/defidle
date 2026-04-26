@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-04-26:protocol:mev-capital",
+  "dateUtc": "2026-04-26",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "mev-capital",
+    "name": "MEV Capital",
+    "category": "Risk Curators"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Risk Curators",
+        "Chains: 10+ chains",
+        "TVL spread across chains (no chain >50%)",
+        "TVL: $50M-$100M",
+        "7d change: down >10%"
+      ],
+      "choices": [
+        "MEV Capital",
+        "Gauntlet",
+        "Steakhouse Financial",
+        "Sentora"
+      ],
+      "answerIndex": 0,
+      "explanation": "MEV Capital operates as a risk curator across 11 chains, with its $70M TVL reflecting its strategic positioning in emerging ecosystems like Base and Sui, which are gaining traction in the DeFi space. This diverse chain presence allows MEV Capital to tap into various liquidity pools and optimize for different market conditions.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.19624465424769275
+      },
+      "difficultyScore": 0.4021244654247693
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does MEV Capital have higher TVL?",
+      "choices": [
+        "Hyperliquid L1",
+        "Ethereum"
+      ],
+      "answerIndex": 0,
+      "explanation": "MEV Capital's success on Hyperliquid L1, with $32M TVL compared to Ethereum's $27M, showcases how emerging chains can attract significant liquidity by offering more favorable conditions for traders, such as lower fees or faster transaction speeds. The 16% margin indicates that users are finding better opportunities on Hyperliquid, which could signal a shift in where liquidity is concentrated.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.16066676864780774,
+        "volatility": 0.19624465424769275
+      },
+      "difficultyScore": 0.3293243430474
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did MEV Capital's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 4,
+      "explanation": "MEV Capital's fees increased by 42.4% over the past week, rising from $50K to $71K, which suggests growing activity and interest in their services, likely driven by the ongoing demand for maximizing transaction efficiency in DeFi. This trend reflects how protocols focused on maximizing miner extractable value can capitalize on market conditions.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4239036628198695,
+        "volatility": 0.19624465424769275
+      },
+      "difficultyScore": 0.3121244654247693
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did MEV Capital hit its all-time high TVL?",
+      "choices": [
+        "Jun 2025",
+        "Aug 2025",
+        "Oct 2025",
+        "Apr 2025",
+        "Mar 2025",
+        "Apr 2026"
+      ],
+      "answerIndex": 2,
+      "explanation": "MEV Capital reached its all-time high (ATH) of $1.5B in October 2025, a notable peak compared to earlier months like April and August 2025, which did not see similar surges. This timing suggests that significant developments or market conditions in late 2025 played a crucial role in driving investor interest and capital inflow.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.19624465424769275
+      },
+      "difficultyScore": 0.5021244654247693
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is MEV Capital deployed on?",
+      "choices": [
+        "Hyperliquid L1",
+        "zkSync Era",
+        "BSC",
+        "Fantom"
+      ],
+      "answerIndex": 0,
+      "explanation": "MEV Capital operates across 11 chains, with a presence on Base, Avalanche, Sonic, Unichain, and Sui, showcasing its strategy to tap into diverse ecosystems for maximizing miner extractable value (MEV). This multi-chain approach allows MEV Capital to leverage varying transaction dynamics and liquidity across different platforms.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.19624465424769275
+      },
+      "difficultyScore": 0.3121244654247693
+    }
+  ],
+  "generatedAt": "2026-04-26T00:41:49.212Z"
+}

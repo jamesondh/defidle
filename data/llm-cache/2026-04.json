@@ -598,5 +598,30 @@
     "text": "Cardano's $134M TVL places it in the $100M-$500M band, reflecting its gradual growth as a DeFi ecosystem, especially as it continues to roll out smart contract capabilities. This level of TVL indicates that while it's still developing, there's a growing interest in building on Cardano's platform.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-25T00:38:17.283Z"
+  },
+  "2026-04-26|protocol|mev-capital|A|P1_FINGERPRINT|explanation|3eb6326b9affb2f5": {
+    "text": "MEV Capital operates as a risk curator across 11 chains, with its $70M TVL reflecting its strategic positioning in emerging ecosystems like Base and Sui, which are gaining traction in the DeFi space. This diverse chain presence allows MEV Capital to tap into various liquidity pools and optimize for different market conditions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-26T00:41:40.818Z"
+  },
+  "2026-04-26|protocol|mev-capital|B|P2_CROSSCHAIN|explanation|27824251babda1a2": {
+    "text": "MEV Capital's success on Hyperliquid L1, with $32M TVL compared to Ethereum's $27M, showcases how emerging chains can attract significant liquidity by offering more favorable conditions for traders, such as lower fees or faster transaction speeds. The 16% margin indicates that users are finding better opportunities on Hyperliquid, which could signal a shift in where liquidity is concentrated.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-26T00:41:43.686Z"
+  },
+  "2026-04-26|protocol|mev-capital|C|P11_FEES_TREND|explanation|6429113bb1d45cd5": {
+    "text": "MEV Capital's fees increased by 42.4% over the past week, rising from $50K to $71K, which suggests growing activity and interest in their services, likely driven by the ongoing demand for maximizing transaction efficiency in DeFi. This trend reflects how protocols focused on maximizing miner extractable value can capitalize on market conditions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-26T00:41:45.528Z"
+  },
+  "2026-04-26|protocol|mev-capital|D|P4_ATH_TIMING|explanation|420a1f0693cf867d": {
+    "text": "MEV Capital reached its all-time high (ATH) of $1.5B in October 2025, a notable peak compared to earlier months like April and August 2025, which did not see similar surges. This timing suggests that significant developments or market conditions in late 2025 played a crucial role in driving investor interest and capital inflow.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-26T00:41:47.507Z"
+  },
+  "2026-04-26|protocol|mev-capital|E|P8_CHAIN_MEMBERSHIP|explanation|8f782247aa26eb45": {
+    "text": "MEV Capital operates across 11 chains, with a presence on Base, Avalanche, Sonic, Unichain, and Sui, showcasing its strategy to tap into diverse ecosystems for maximizing miner extractable value (MEV). This multi-chain approach allows MEV Capital to leverage varying transaction dynamics and liquidity across different platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-26T00:41:49.211Z"
   }
 }
