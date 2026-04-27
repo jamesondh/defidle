@@ -623,5 +623,30 @@
     "text": "MEV Capital operates across 11 chains, with a presence on Base, Avalanche, Sonic, Unichain, and Sui, showcasing its strategy to tap into diverse ecosystems for maximizing miner extractable value (MEV). This multi-chain approach allows MEV Capital to leverage varying transaction dynamics and liquidity across different platforms.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-26T00:41:49.211Z"
+  },
+  "2026-04-27|protocol|polymarket-international|A|P1_FINGERPRINT|explanation|f7eb6eaaf1556240": {
+    "text": "Polymarket International operates solely on Polygon, which allows it to leverage lower transaction fees and faster confirmation times compared to Ethereum, making it an attractive platform for users engaging in prediction markets. Its $489M TVL positions it as a significant player in the prediction market space, reflecting strong interest in decentralized forecasting.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-27T00:42:11.330Z"
+  },
+  "2026-04-27|protocol|polymarket-international|B|P7_CATEGORY|explanation|9093b4555eae2c0a": {
+    "text": "Polymarket International operates as a prediction market, allowing users to bet on the outcomes of future events, which can provide valuable insights into public sentiment and expectations. This category of DeFi platform leverages decentralized technology to facilitate transparent and trustless betting without the need for traditional intermediaries.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-27T00:42:12.879Z"
+  },
+  "2026-04-27|protocol|polymarket-international|C|P5_FEES_REVENUE|explanation|6f6c709dad6dc069": {
+    "text": "Polymarket International generated $5M in revenue from $8M in fees over the past week, indicating a 66% revenue retention rate. This suggests that the platform effectively converts a significant portion of its fee income into revenue, reflecting strong user engagement and demand for its prediction market services.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-27T00:42:14.099Z"
+  },
+  "2026-04-27|protocol|polymarket-international|D|P4_ATH_TIMING|explanation|b91d06a1fe01da8a": {
+    "text": "Polymarket International hit its ATH of $512M in November 2024, a significant milestone that reflects its growth in the prediction market space. In contrast, other dates like November 2021 and March 2023 saw much lower engagement, indicating that the platform gained traction and user interest over time, culminating in its peak in late 2024.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-27T00:42:16.464Z"
+  },
+  "2026-04-27|protocol|polymarket-international|E|P8_CHAIN_MEMBERSHIP|explanation|b2dc767d7ba39033": {
+    "text": "Polymarket International operates solely on the Polygon chain, which allows it to leverage lower transaction fees and faster confirmation times compared to Ethereum. This single-chain focus can help streamline user experience and enhance liquidity within its market.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-27T00:42:17.531Z"
   }
 }

@@ -1,0 +1,142 @@
+{
+  "episodeId": "2026-04-27:protocol:polymarket-international",
+  "dateUtc": "2026-04-27",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "polymarket-international",
+    "name": "Polymarket International",
+    "category": "Prediction Market"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Prediction Market",
+        "Chains: single-chain",
+        "Active since: 2021",
+        "TVL: $100M-$500M",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Pendle",
+        "Polymarket International",
+        "Binance Staked SOL",
+        "Gauntlet"
+      ],
+      "answerIndex": 1,
+      "explanation": "Polymarket International operates solely on Polygon, which allows it to leverage lower transaction fees and faster confirmation times compared to Ethereum, making it an attractive platform for users engaging in prediction markets. Its $489M TVL positions it as a significant player in the prediction market space, reflecting strong interest in decentralized forecasting.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.3282916364948568
+      },
+      "difficultyScore": 0.41532916364948574
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Polymarket International?",
+      "choices": [
+        "Risk Curators",
+        "Prediction Market",
+        "Liquidity Manager",
+        "Foundation"
+      ],
+      "answerIndex": 1,
+      "explanation": "Polymarket International operates as a prediction market, allowing users to bet on the outcomes of future events, which can provide valuable insights into public sentiment and expectations. This category of DeFi platform leverages decentralized technology to facilitate transparent and trustless betting without the need for traditional intermediaries.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.3282916364948568
+      },
+      "difficultyScore": 0.3253291636494857
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Polymarket International's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Polymarket International generated $5M in revenue from $8M in fees over the past week, indicating a 66% revenue retention rate. This suggests that the platform effectively converts a significant portion of its fee income into revenue, reflecting strong user engagement and demand for its prediction market services.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.22204941928575828,
+        "volatility": 0.3282916364948568
+      },
+      "difficultyScore": 0.35886986050657577
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Polymarket International hit its all-time high TVL?",
+      "choices": [
+        "Dec 2023",
+        "Nov 2024",
+        "Nov 2021",
+        "Mar 2023",
+        "Oct 2025",
+        "Jan 2023"
+      ],
+      "answerIndex": 1,
+      "explanation": "Polymarket International hit its ATH of $512M in November 2024, a significant milestone that reflects its growth in the prediction market space. In contrast, other dates like November 2021 and March 2023 saw much lower engagement, indicating that the platform gained traction and user interest over time, culminating in its peak in late 2024.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.3282916364948568
+      },
+      "difficultyScore": 0.5153291636494857
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Polymarket International deployed on?",
+      "choices": [
+        "zkSync Era",
+        "Optimism",
+        "Ethereum",
+        "Polygon"
+      ],
+      "answerIndex": 3,
+      "explanation": "Polymarket International operates solely on the Polygon chain, which allows it to leverage lower transaction fees and faster confirmation times compared to Ethereum. This single-chain focus can help streamline user experience and enhance liquidity within its market.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.3282916364948568
+      },
+      "difficultyScore": 0.3253291636494857
+    }
+  ],
+  "generatedAt": "2026-04-27T00:42:17.531Z"
+}
