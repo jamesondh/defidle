@@ -1,0 +1,137 @@
+{
+  "episodeId": "2026-04-28:chain:MegaETH",
+  "dateUtc": "2026-04-28",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "MegaETH",
+    "name": "MegaETH"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Native token: MEGA",
+        "Protocols: 20-50",
+        "TVL: $50M-$100M",
+        "30d trend: up 1-10%"
+      ],
+      "choices": [
+        "MegaETH",
+        "dYdX",
+        "Mantle",
+        "Stellar"
+      ],
+      "answerIndex": 0,
+      "explanation": "MegaETH ranks 30th in TVL with between $50M and $100M, indicating it's a growing player among DeFi protocols. With 26 protocols under its umbrella, it falls into the 20-50 range, suggesting a diverse ecosystem that can attract users through various offerings.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4075000000000001
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: MegaETH or Sei?",
+      "choices": [
+        "MegaETH",
+        "Sei"
+      ],
+      "answerIndex": 0,
+      "explanation": "MegaETH's $99M TVL outpaces Sei's $62M by 37.8%, reflecting its stronger appeal among users, likely due to its established ecosystem and liquidity options compared to Sei's emerging platform. This disparity often indicates where users find more confidence and utility in their DeFi activities.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.378209404104284,
+        "volatility": null
+      },
+      "difficultyScore": 0.2275
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on MegaETH?",
+      "choices": [
+        "Prism DEX",
+        "Kumbaya",
+        "Canonic",
+        "World Markets Spot"
+      ],
+      "answerIndex": 1,
+      "explanation": "Kumbaya stands out on MegaETH with a $2M volume, significantly outpacing other DEXs like Prism DEX at $106K and Canonic at $48K. This stark difference indicates Kumbaya's dominant position in the market, attracting a much larger share of trading activity compared to its competitors.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9527790793084026,
+        "volatility": null
+      },
+      "difficultyScore": 0.31750000000000006
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Base",
+        "Near",
+        "Sei",
+        "MegaETH"
+      ],
+      "answerIndex": 2,
+      "explanation": "Sei leads with a remarkable 25.2% growth, significantly outpacing other chains like Base at +9.3% and Near at +5.4%. MegaETH's +4.6% growth, while positive, shows it lagging behind these competitors, indicating a more modest expansion in user engagement or liquidity compared to the top performers.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.1586932191815288,
+        "volatility": null
+      },
+      "difficultyScore": 0.4870681369821655
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C10_PROTOCOL_COUNT",
+      "format": "mc4",
+      "prompt": "How many DeFi protocols are deployed on MegaETH?",
+      "choices": [
+        "<50",
+        "50-100",
+        "100-250",
+        ">250"
+      ],
+      "answerIndex": 0,
+      "explanation": "MegaETH supports 26 protocols, showcasing its versatility and appeal within the DeFi space as a hub for various decentralized applications. This diverse ecosystem allows users to access multiple services and liquidity options, enhancing the overall user experience.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.96,
+        "volatility": null
+      },
+      "difficultyScore": 0.31750000000000006
+    }
+  ],
+  "generatedAt": "2026-04-28T00:44:43.650Z"
+}
