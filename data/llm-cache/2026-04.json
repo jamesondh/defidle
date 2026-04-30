@@ -698,5 +698,30 @@
     "text": "USDT0's $3.7B TVL places it solidly in the $1B-$5B range, reflecting its significant role in providing liquidity for stablecoin transactions within decentralized finance. This level of TVL suggests strong user trust and adoption, particularly in environments where stablecoins are crucial for trading and lending activities.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-04-29T00:46:14.239Z"
+  },
+  "2026-04-30|chain|Bitcoin|A|C1_FINGERPRINT|explanation|063109400041aec6": {
+    "text": "Bitcoin's $5B-$10B TVL, ranking it 4th, reflects its foundational role in DeFi, with 158 protocols leveraging its network. This significant number of protocols indicates a growing interest in utilizing Bitcoin's security and liquidity for various decentralized applications.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-30T00:45:38.308Z"
+  },
+  "2026-04-30|chain|Bitcoin|B|C2_CHAIN_COMPARISON|explanation|196ce6b3e6b6c130": {
+    "text": "Bitcoin's $5.2B TVL dwarfs Hyperliquid L1's $1.4B by 72.4%, reflecting Bitcoin's established dominance and trust as a foundational asset in the crypto space, while newer chains like Hyperliquid are still building their user base and liquidity. This stark contrast illustrates the challenges new protocols face in attracting capital compared to well-known leaders.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-30T00:45:40.998Z"
+  },
+  "2026-04-30|chain|Bitcoin|C|C4_GROWTH_RANKING|explanation|0e611b0e075b46d7": {
+    "text": "Bitcoin's impressive 15.7% growth far outpaces other chains like Kava and Near, which saw increases of 5.5% and 5.4%, respectively. This significant lead underscores Bitcoin's continued dominance and resilience in the DeFi landscape, especially as it attracts renewed interest and investment.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-30T00:45:43.068Z"
+  },
+  "2026-04-30|chain|Bitcoin|D|C3_ATH_TIMING|explanation|6797b4667b09e9ab": {
+    "text": "Bitcoin's ATH of $9.1B in October 2025 stands out as it follows a series of peaks, including the $1.1B mark in March 2021 and the $3.5B in March 2022, showcasing the volatility and growth potential of Bitcoin over time. The other months listed, like September 2023 and May 2024, reflect significant moments but not the all-time high, emphasizing how ATHs can shift dramatically based on market conditions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-30T00:45:46.812Z"
+  },
+  "2026-04-30|chain|Bitcoin|E|C6_TOP_DEX|explanation|f8ddecc38c714e8d": {
+    "text": "LN Exchange Spot leads Bitcoin DEXs with $382K in volume, significantly outpacing competitors like Bisq, Garden, and C3 Exchange, which all recorded $0. This stark contrast highlights LN Exchange Spot's unique position in facilitating trades on the Bitcoin network, especially given the limited activity from other platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-04-30T00:45:48.043Z"
   }
 }
