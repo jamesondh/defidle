@@ -1,0 +1,27 @@
+{
+  "2026-05-01|protocol|pendle|A|P1_FINGERPRINT|explanation|8b9179f5e9b23676": {
+    "text": "Pendle's $1.5B TVL across 11 chains showcases its versatility in the yield sector, with Ethereum and Avalanche being key contributors. This multi-chain approach allows Pendle to tap into diverse liquidity pools and user bases, enhancing its overall market presence.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-01T00:48:32.608Z"
+  },
+  "2026-05-01|protocol|pendle|B|P2_CROSSCHAIN|explanation|94d4a699dd146836": {
+    "text": "Pendle's $934M TVL on Ethereum dwarfs the $277M on Plasma, reflecting Ethereum's dominance in DeFi and its ability to attract more liquidity and user engagement. The 70% margin indicates that Pendle's protocol benefits significantly from the robust infrastructure and ecosystem available on Ethereum compared to the less popular Plasma chain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-01T00:48:34.050Z"
+  },
+  "2026-05-01|protocol|pendle|C|P5_FEES_REVENUE|explanation|4ae18c1b57f1e331": {
+    "text": "Pendle generated $75K in revenue from $89K in fees over the past week, meaning it retains a solid 84% of its fees as revenue. This efficiency suggests effective cost management and a strong value proposition for users engaging with its tokenized yield products.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-01T00:48:35.269Z"
+  },
+  "2026-05-01|protocol|pendle|D|P4_ATH_TIMING|explanation|b4654b243bb1b714": {
+    "text": "Pendle reached its all-time high (ATH) of $13.4B in September 2025, a significant leap compared to earlier months like December 2022, when it was still establishing its presence in the DeFi space. This timing reflects Pendle's growth trajectory as it gained traction and adoption, distinguishing it from the other options that were either too early or too late in the timeline.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-01T00:48:37.387Z"
+  },
+  "2026-05-01|protocol|pendle|E|P3_CONCENTRATION|explanation|0e1f33412a712911": {
+    "text": "Pendle's TVL of $1.5B is heavily concentrated on Ethereum, which accounts for 63% of its total, reflecting the chain's dominance in DeFi and the protocol's reliance on Ethereum's liquidity and user base. This concentration can lead to vulnerabilities if Ethereum experiences significant fluctuations or shifts in user activity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-01T00:48:39.745Z"
+  }
+}
