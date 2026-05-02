@@ -23,5 +23,30 @@
     "text": "Pendle's TVL of $1.5B is heavily concentrated on Ethereum, which accounts for 63% of its total, reflecting the chain's dominance in DeFi and the protocol's reliance on Ethereum's liquidity and user base. This concentration can lead to vulnerabilities if Ethereum experiences significant fluctuations or shifts in user activity.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-01T00:48:39.745Z"
+  },
+  "2026-05-02|chain|Solana|A|C1_FINGERPRINT|explanation|76b1df68be1c87dc": {
+    "text": "Solana's TVL of $5B-$10B ranks it second among all chains, reflecting its robust ecosystem of 382 protocols, which is a significant factor in attracting developers and users alike. This high protocol count indicates a diverse range of applications, contributing to Solana's strong position in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-02T00:44:13.071Z"
+  },
+  "2026-05-02|chain|Solana|B|C2_CHAIN_COMPARISON|explanation|b72a5b8a69fa8009": {
+    "text": "Solana's $5.6B TVL significantly outpaces Arbitrum's $1.7B, showcasing a 69.4% lead that reflects Solana's strong performance in attracting liquidity, likely due to its high throughput and low transaction costs compared to Arbitrum. This disparity highlights how different chain capabilities can influence user preference and capital allocation in DeFi.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-02T00:44:16.602Z"
+  },
+  "2026-05-02|chain|Solana|C|C6_TOP_DEX|explanation|0f950d4ccecdc30f": {
+    "text": "BisonFi leads Solana's DEX landscape with $168M in volume, outpacing competitors like Orca DEX at $137M and GoonFi at $122M. This significant volume difference suggests BisonFi's unique offerings or user incentives are resonating more with traders compared to other platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-02T00:44:18.950Z"
+  },
+  "2026-05-02|chain|Solana|D|C3_ATH_TIMING|explanation|474ad7eb611f84be": {
+    "text": "Solana reached its ATH of $13.2B in September 2025, a significant jump compared to its previous peak in October 2021, when it was around $78 billion. The other dates, like July 2024 and March 2025, reflect periods of volatility but not the all-time high, highlighting Solana's recovery and growth trajectory leading up to that peak.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-02T00:44:21.410Z"
+  },
+  "2026-05-02|chain|Solana|E|C7_CHAIN_TVL_BAND|explanation|e50fc96a5d240bba": {
+    "text": "Solana's $5.6B TVL places it firmly in the $5B-$10B range, reflecting its strong position as a high-performance blockchain that attracts significant liquidity, particularly for DeFi projects leveraging its fast transaction speeds and low fees. This level of TVL indicates robust user interest and activity on the network, especially compared to other chains in the same band.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-02T00:44:24.167Z"
   }
 }
