@@ -1,0 +1,144 @@
+{
+  "episodeId": "2026-05-03:protocol:kelp",
+  "dateUtc": "2026-05-03",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "kelp",
+    "name": "Kelp",
+    "category": "Liquid Restaking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Liquid Restaking",
+        "Chains: 10+ chains",
+        ">90% TVL on single chain",
+        "TVL: $1B-$5B",
+        "7d change: roughly flat"
+      ],
+      "choices": [
+        "Centrifuge Protocol",
+        "ether.fi Stake",
+        "Paxos Gold",
+        "Spark Liquidity Layer",
+        "Kelp"
+      ],
+      "answerIndex": 4,
+      "explanation": "Kelp, with $1.6B TVL across 16 chains, is a notable player in the liquid restaking category, allowing users to maximize their staking rewards while maintaining liquidity. Its presence on chains like Arbitrum and Optimism reflects a strategic focus on Layer 2 solutions, which are gaining traction for their scalability and lower fees.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.19258735389494772
+      },
+      "difficultyScore": 0.4917587353894948
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Kelp?",
+      "choices": [
+        "Decentralized BTC",
+        "Liquid Restaking",
+        "CeDeFi",
+        "Basis Trading"
+      ],
+      "answerIndex": 1,
+      "explanation": "Kelp operates in the Liquid Restaking category, allowing users to earn additional rewards on staked assets while maintaining liquidity. This approach enhances capital efficiency, enabling users to maximize their returns without sacrificing access to their staked tokens.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.19258735389494772
+      },
+      "difficultyScore": 0.31175873538949483
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did Kelp's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 4,
+      "explanation": "Kelp's fees have surged by 60.2% over the past week, increasing from $766 to $1,000, which suggests growing user activity or increased trading volume on the platform. This uptick in fees can indicate heightened interest in Kelp's services or successful marketing efforts attracting more traders.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.6018276762402088,
+        "volatility": 0.19258735389494772
+      },
+      "difficultyScore": 0.31175873538949483
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Kelp hit its all-time high TVL?",
+      "choices": [
+        "Sep 2025",
+        "Jan 2024",
+        "Jun 2024",
+        "Jan 2025",
+        "Oct 2024",
+        "Jul 2024"
+      ],
+      "answerIndex": 0,
+      "explanation": "Kelp reached its all-time high (ATH) of $2.1B in September 2025, which stands out against earlier months like January 2024 and June 2024, when it had not yet gained significant traction. This timing suggests that Kelp's growth was likely driven by developments or market conditions that matured later, allowing it to capture more value at that point.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.19258735389494772
+      },
+      "difficultyScore": 0.5017587353894948
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Kelp deployed on?",
+      "choices": [
+        "Fantom",
+        "BSC",
+        "Polygon",
+        "Ethereum"
+      ],
+      "answerIndex": 3,
+      "explanation": "Kelp operates across five chains, including Arbitrum and Optimism, but its total of 16 chains suggests a strategy to tap into diverse ecosystems, potentially enhancing liquidity and user engagement across multiple platforms. This multi-chain approach allows Kelp to leverage unique features and user bases of each chain, increasing its overall utility in the DeFi landscape.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.19258735389494772
+      },
+      "difficultyScore": 0.31175873538949483
+    }
+  ],
+  "generatedAt": "2026-05-03T00:46:51.293Z"
+}
