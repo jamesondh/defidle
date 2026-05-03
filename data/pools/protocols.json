@@ -5,7 +5,7 @@
       "name": "Lido",
       "category": "Liquid Staking",
       "tvlRank": 1,
-      "tvl": 21841390424.73624,
+      "tvl": 20986901110.290665,
       "chains": [
         "Ethereum",
         "Solana",
@@ -16,95 +16,80 @@
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 1953,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 1960,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "ssv-network",
       "name": "SSV Network",
       "category": "Staking Pool",
       "tvlRank": 2,
-      "tvl": 17178705306.354435,
+      "tvl": 17029345744.44624,
       "chains": [
         "Ethereum"
       ],
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 83,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 90,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "aave-v3",
       "name": "Aave V3",
       "category": "Lending",
       "tvlRank": 3,
-      "tvl": 13837409342.642727,
+      "tvl": 14482941430.627922,
       "chains": [
         "Ethereum",
         "Arbitrum",
-        "Plasma",
+        "MegaETH",
         "Base",
+        "Plasma",
         "Avalanche",
         "Binance",
         "Polygon",
         "Mantle",
         "xDai",
         "Optimism",
+        "X Layer",
         "Linea",
-        "MegaETH",
         "Sonic",
-        "Scroll",
         "Celo",
+        "Scroll",
         "zkSync Era",
         "Metis",
         "Soneium",
-        "X Layer",
         "Fantom",
         "Harmony"
       ],
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 1504,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "eigencloud",
-      "name": "EigenCloud",
-      "category": "Restaking",
-      "tvlRank": 4,
-      "tvl": 9295997859.943304,
-      "chains": [
-        "Ethereum"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 1047,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 1511,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "wbtc",
       "name": "WBTC",
       "category": "Bridge",
-      "tvlRank": 5,
-      "tvl": 9056951125.52637,
+      "tvlRank": 4,
+      "tvl": 9069690034.051552,
       "chains": [
         "Bitcoin"
       ],
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 2642,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 2649,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "binance-staked-eth",
       "name": "Binance staked ETH",
       "category": "Liquid Staking",
-      "tvlRank": 6,
-      "tvl": 8617771945.274355,
+      "tvlRank": 5,
+      "tvl": 8536262993.846572,
       "chains": [
         "Ethereum",
         "Binance"
@@ -112,15 +97,30 @@
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 1093,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 1100,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "eigencloud",
+      "name": "EigenCloud",
+      "category": "Restaking",
+      "tvlRank": 6,
+      "tvl": 8329228800.044428,
+      "chains": [
+        "Ethereum"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 1054,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "morpho-blue",
       "name": "Morpho Blue",
       "category": "Lending",
       "tvlRank": 7,
-      "tvl": 6752823921.214394,
+      "tvl": 7346008716.127388,
       "chains": [
         "Ethereum",
         "Base",
@@ -149,27 +149,27 @@
         "Fraxtal",
         "Sonic",
         "Binance",
-        "Ink",
         "Botanix",
+        "Ink",
+        "Tempo",
         "Zircuit",
         "xDai",
-        "Bitlayer",
         "Linea",
-        "Mode",
-        "Tempo"
+        "Bitlayer",
+        "Mode"
       ],
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 833,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 840,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "coinbase-bridge",
       "name": "Coinbase Bridge",
       "category": "Bridge",
       "tvlRank": 8,
-      "tvl": 5720381608.650831,
+      "tvl": 5751438674.934598,
       "chains": [
         "Bitcoin",
         "Ripple",
@@ -180,45 +180,45 @@
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 479,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 486,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "sky-lending",
       "name": "Sky Lending",
       "category": "CDP",
       "tvlRank": 9,
-      "tvl": 5333812354.991904,
+      "tvl": 5635988538.963671,
       "chains": [
         "Ethereum"
       ],
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 2669,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 2676,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "binance-bitcoin",
       "name": "Binance Bitcoin",
       "category": "Bridge",
       "tvlRank": 10,
-      "tvl": 5318100569.149841,
+      "tvl": 5348046064.440327,
       "chains": [
         "Bitcoin"
       ],
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 612,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 619,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "ether.fi-stake",
       "name": "ether.fi Stake",
       "category": "Liquid Restaking",
       "tvlRank": 11,
-      "tvl": 5243202624.111527,
+      "tvl": 5187356609.431372,
       "chains": [
         "Ethereum",
         "Base",
@@ -227,15 +227,15 @@
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 1151,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 1158,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "hyperliquid-bridge",
       "name": "Hyperliquid Bridge",
       "category": "Bridge",
       "tvlRank": 12,
-      "tvl": 4563826409.431866,
+      "tvl": 4647056668.149752,
       "chains": [
         "Arbitrum",
         "Hyperliquid L1"
@@ -243,60 +243,75 @@
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 1052,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 1059,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "babylon-protocol",
       "name": "Babylon Protocol",
       "category": "Restaking",
       "tvlRank": 13,
-      "tvl": 4037056486.4838057,
+      "tvl": 4062467518.1728625,
       "chains": [
         "Bitcoin"
       ],
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 551,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 558,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "ethena-usde",
       "name": "Ethena USDe",
       "category": "Basis Trading",
       "tvlRank": 14,
-      "tvl": 3796145554.0530486,
+      "tvl": 3909661509.114824,
       "chains": [
         "Ethereum"
       ],
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 864,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 871,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "usdt0",
       "name": "USDT0",
       "category": "Bridge",
       "tvlRank": 15,
-      "tvl": 3771759835.623834,
+      "tvl": 3704488983.295148,
       "chains": [
         "Ethereum"
       ],
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 409,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 416,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "justlend",
+      "name": "JustLend",
+      "category": "Lending",
+      "tvlRank": 16,
+      "tvl": 3564418379.8757343,
+      "chains": [
+        "Tron"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 1644,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "sparklend",
       "name": "SparkLend",
       "category": "Lending",
-      "tvlRank": 16,
-      "tvl": 3637676277.2341757,
+      "tvlRank": 17,
+      "tvl": 3487316700.473758,
       "chains": [
         "Ethereum",
         "xDai"
@@ -304,45 +319,30 @@
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 1091,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "justlend",
-      "name": "JustLend",
-      "category": "Lending",
-      "tvlRank": 17,
-      "tvl": 3580024033.9472475,
-      "chains": [
-        "Tron"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 1637,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 1098,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "arbitrum-bridge",
       "name": "Arbitrum Bridge",
       "category": "Canonical Bridge",
       "tvlRank": 18,
-      "tvl": 3498255049.920929,
+      "tvl": 3468627108.3817267,
       "chains": [
         "Ethereum"
       ],
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 894,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 901,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "tether-gold",
       "name": "Tether Gold",
       "category": "RWA",
       "tvlRank": 19,
-      "tvl": 3348201187.2494087,
+      "tvl": 3287270567.791722,
       "chains": [
         "Ethereum",
         "Monad",
@@ -356,179 +356,15 @@
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 656,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "circle-usyc",
-      "name": "Circle USYC",
-      "category": "RWA",
-      "tvlRank": 20,
-      "tvl": 2903370561.9040804,
-      "chains": [
-        "Binance",
-        "Ethereum",
-        "Near",
-        "Noble"
-      ],
-      "hasFeesData": false,
-      "hasRevenueData": false,
-      "hasVolumeData": false,
-      "historyDays": 1024,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "grove-finance",
-      "name": "Grove Finance",
-      "category": "Onchain Capital Allocator",
-      "tvlRank": 21,
-      "tvl": 2870091560.8931413,
-      "chains": [
-        "Ethereum",
-        "Base",
-        "Avalanche",
-        "Plume Mainnet"
-      ],
-      "hasFeesData": false,
-      "hasRevenueData": false,
-      "hasVolumeData": false,
-      "historyDays": 93,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "blackrock-buidl",
-      "name": "BlackRock BUIDL",
-      "category": "RWA",
-      "tvlRank": 22,
-      "tvl": 2803635946.060449,
-      "chains": [
-        "Ethereum",
-        "Aptos",
-        "Binance",
-        "Solana",
-        "Avalanche",
-        "Optimism",
-        "Arbitrum",
-        "Polygon"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 659,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "base-bridge",
-      "name": "Base Bridge",
-      "category": "Canonical Bridge",
-      "tvlRank": 23,
-      "tvl": 2789979721.822214,
-      "chains": [
-        "Ethereum"
-      ],
-      "hasFeesData": false,
-      "hasRevenueData": false,
-      "hasVolumeData": false,
-      "historyDays": 894,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "ondo-yield-assets",
-      "name": "Ondo Yield Assets",
-      "category": "RWA",
-      "tvlRank": 24,
-      "tvl": 2738012411.542339,
-      "chains": [
-        "Ethereum",
-        "Ripple",
-        "Plume Mainnet",
-        "Solana",
-        "Stellar",
-        "Sei",
-        "Aptos",
-        "Mantle",
-        "Sui",
-        "Noble",
-        "Arbitrum",
-        "Polygon"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 1185,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "polygon-bridge",
-      "name": "Polygon Bridge",
-      "category": "Chain",
-      "tvlRank": 25,
-      "tvl": 2567620713.74501,
-      "chains": [
-        "Polygon"
-      ],
-      "hasFeesData": false,
-      "hasRevenueData": false,
-      "hasVolumeData": false,
-      "historyDays": 1857,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "justcryptos",
-      "name": "JustCryptos",
-      "category": "Bridge",
-      "tvlRank": 26,
-      "tvl": 2514491442.85,
-      "chains": [
-        "Tron"
-      ],
-      "hasFeesData": false,
-      "hasRevenueData": false,
-      "hasVolumeData": false,
-      "historyDays": 1648,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "spark-liquidity-layer",
-      "name": "Spark Liquidity Layer",
-      "category": "Onchain Capital Allocator",
-      "tvlRank": 27,
-      "tvl": 2438850891.4207973,
-      "chains": [
-        "Ethereum",
-        "Base",
-        "Optimism",
-        "Unichain",
-        "Arbitrum",
-        "Avalanche"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 388,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "paxos-gold",
-      "name": "Paxos Gold",
-      "category": "RWA",
-      "tvlRank": 28,
-      "tvl": 2260601974.3542557,
-      "chains": [
-        "Ethereum"
-      ],
-      "hasFeesData": false,
-      "hasRevenueData": false,
-      "hasVolumeData": false,
-      "historyDays": 656,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 663,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "spark-savings",
       "name": "Spark Savings",
       "category": "Yield",
-      "tvlRank": 29,
-      "tvl": 1976181593.6446772,
+      "tvlRank": 20,
+      "tvl": 2997101019.0876093,
       "chains": [
         "Ethereum",
         "Arbitrum",
@@ -540,27 +376,207 @@
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 227,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 234,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "circle-usyc",
+      "name": "Circle USYC",
+      "category": "RWA",
+      "tvlRank": 21,
+      "tvl": 2906101493.349166,
+      "chains": [
+        "Binance",
+        "Ethereum",
+        "Near",
+        "Noble"
+      ],
+      "hasFeesData": false,
+      "hasRevenueData": false,
+      "hasVolumeData": false,
+      "historyDays": 1031,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "blackrock-buidl",
+      "name": "BlackRock BUIDL",
+      "category": "RWA",
+      "tvlRank": 22,
+      "tvl": 2822608252.7504487,
+      "chains": [
+        "Ethereum",
+        "Aptos",
+        "Binance",
+        "Solana",
+        "Avalanche",
+        "Optimism",
+        "Arbitrum",
+        "Polygon"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 666,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "base-bridge",
+      "name": "Base Bridge",
+      "category": "Canonical Bridge",
+      "tvlRank": 23,
+      "tvl": 2808770695.9638577,
+      "chains": [
+        "Ethereum"
+      ],
+      "hasFeesData": false,
+      "hasRevenueData": false,
+      "hasVolumeData": false,
+      "historyDays": 901,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "spark-liquidity-layer",
+      "name": "Spark Liquidity Layer",
+      "category": "Onchain Capital Allocator",
+      "tvlRank": 24,
+      "tvl": 2773857256.7098346,
+      "chains": [
+        "Ethereum",
+        "Base",
+        "Unichain",
+        "Arbitrum",
+        "Optimism",
+        "Avalanche"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 395,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "ondo-yield-assets",
+      "name": "Ondo Yield Assets",
+      "category": "RWA",
+      "tvlRank": 25,
+      "tvl": 2745751335.630117,
+      "chains": [
+        "Ethereum",
+        "Ripple",
+        "Sei",
+        "Plume Mainnet",
+        "Solana",
+        "Stellar",
+        "Mantle",
+        "Sui",
+        "Noble",
+        "Aptos",
+        "Arbitrum",
+        "Polygon"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 1192,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "grove-finance",
+      "name": "Grove Finance",
+      "category": "Onchain Capital Allocator",
+      "tvlRank": 26,
+      "tvl": 2634970991.2600636,
+      "chains": [
+        "Ethereum",
+        "Base",
+        "Avalanche",
+        "Plume Mainnet"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 100,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "polygon-bridge",
+      "name": "Polygon Bridge",
+      "category": "Chain",
+      "tvlRank": 27,
+      "tvl": 2564154293.184601,
+      "chains": [
+        "Polygon"
+      ],
+      "hasFeesData": false,
+      "hasRevenueData": false,
+      "hasVolumeData": false,
+      "historyDays": 1864,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "justcryptos",
+      "name": "JustCryptos",
+      "category": "Bridge",
+      "tvlRank": 28,
+      "tvl": 2511040822.89,
+      "chains": [
+        "Tron"
+      ],
+      "hasFeesData": false,
+      "hasRevenueData": false,
+      "hasVolumeData": false,
+      "historyDays": 1655,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "paxos-gold",
+      "name": "Paxos Gold",
+      "category": "RWA",
+      "tvlRank": 29,
+      "tvl": 2207930796.4306197,
+      "chains": [
+        "Ethereum"
+      ],
+      "hasFeesData": false,
+      "hasRevenueData": false,
+      "hasVolumeData": false,
+      "historyDays": 663,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "maple",
+      "name": "Maple",
+      "category": "Lending",
+      "tvlRank": 30,
+      "tvl": 2087573695.4931085,
+      "chains": [
+        "Ethereum",
+        "Solana"
+      ],
+      "hasFeesData": false,
+      "hasRevenueData": false,
+      "hasVolumeData": false,
+      "historyDays": 1809,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "portal",
       "name": "Portal",
       "category": "Bridge",
-      "tvlRank": 30,
-      "tvl": 1956879260.1493654,
+      "tvlRank": 31,
+      "tvl": 1817064517.0448468,
       "chains": [
         "Ethereum",
-        "Solana",
         "Binance",
         "Algorand",
+        "Solana",
         "Polygon",
         "Base",
         "Avalanche",
         "Near",
         "Arbitrum",
-        "Moonbeam",
         "Optimism",
+        "Moonbeam",
         "Celo",
         "Klaytn",
         "Terra",
@@ -578,62 +594,15 @@
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 1686,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "centrifuge-protocol",
-      "name": "Centrifuge Protocol",
-      "category": "RWA",
-      "tvlRank": 31,
-      "tvl": 1891070481.586003,
-      "chains": [
-        "Ethereum",
-        "Avalanche",
-        "Plume Mainnet",
-        "Base",
-        "Binance",
-        "Optimism",
-        "Arbitrum",
-        "Monad",
-        "Hyperliquid L1"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 398,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "pancakeswap-amm",
-      "name": "PancakeSwap AMM",
-      "category": "Dexs",
-      "tvlRank": 32,
-      "tvl": 1734942358.3452077,
-      "chains": [
-        "Binance",
-        "Ethereum",
-        "Base",
-        "Aptos",
-        "zkSync Era",
-        "Op_Bnb",
-        "Arbitrum",
-        "Linea",
-        "Polygon zkEVM",
-        "Monad"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": true,
-      "historyDays": 1830,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 1693,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "uniswap-v3",
       "name": "Uniswap V3",
       "category": "Dexs",
-      "tvlRank": 33,
-      "tvl": 1733615628.623198,
+      "tvlRank": 32,
+      "tvl": 1807546314.1343484,
       "chains": [
         "Ethereum",
         "Base",
@@ -646,10 +615,10 @@
         "Plasma",
         "Celo",
         "Avalanche",
-        "RSK",
         "Nibiru",
-        "Etherlink",
+        "RSK",
         "Monad",
+        "Etherlink",
         "0G",
         "World Chain",
         "XDC",
@@ -668,9 +637,9 @@
         "LightLink",
         "Hemi",
         "Scroll",
+        "Sei",
         "Linea",
         "Blast",
-        "Sei",
         "Taiko",
         "Lisk",
         "Polygon zkEVM",
@@ -682,20 +651,44 @@
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": true,
-      "historyDays": 1816,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 1823,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "pancakeswap-amm",
+      "name": "PancakeSwap AMM",
+      "category": "Dexs",
+      "tvlRank": 33,
+      "tvl": 1744268824.019528,
+      "chains": [
+        "Binance",
+        "Ethereum",
+        "Base",
+        "Aptos",
+        "zkSync Era",
+        "Op_Bnb",
+        "Arbitrum",
+        "Linea",
+        "Polygon zkEVM",
+        "Monad"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": true,
+      "historyDays": 1837,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "curve-dex",
       "name": "Curve DEX",
       "category": "Dexs",
       "tvlRank": 34,
-      "tvl": 1729797890.7085636,
+      "tvl": 1731501012.6057515,
       "chains": [
         "Ethereum",
-        "Arbitrum",
-        "Base",
         "Monad",
+        "Base",
+        "Arbitrum",
         "Fraxtal",
         "Etherlink",
         "Polygon",
@@ -706,18 +699,18 @@
         "TAC",
         "Optimism",
         "XDC",
-        "Binance",
         "Hyperliquid L1",
         "Kava",
+        "Binance",
         "Unichain",
         "Ink",
         "Taiko",
         "Celo",
         "Plume Mainnet",
         "Sonic",
-        "Fantom",
         "Aurora",
         "Moonbeam",
+        "Fantom",
         "Corn",
         "Stable",
         "Mantle",
@@ -726,76 +719,94 @@
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": true,
-      "historyDays": 2268,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 2275,
+      "lastUpdated": "2026-05-03"
     },
     {
-      "slug": "maple",
-      "name": "Maple",
-      "category": "Lending",
+      "slug": "centrifuge-protocol",
+      "name": "Centrifuge Protocol",
+      "category": "RWA",
       "tvlRank": 35,
-      "tvl": 1700738321.4052138,
+      "tvl": 1709332298.2813475,
       "chains": [
         "Ethereum",
-        "Solana"
-      ],
-      "hasFeesData": false,
-      "hasRevenueData": false,
-      "hasVolumeData": false,
-      "historyDays": 1802,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "figure-markets-exchange",
-      "name": "Figure Markets Exchange",
-      "category": "OTC Marketplace",
-      "tvlRank": 36,
-      "tvl": 1634009479.1306863,
-      "chains": [
-        "Provenance"
+        "Avalanche",
+        "Plume Mainnet",
+        "Base",
+        "Binance",
+        "Optimism",
+        "Arbitrum",
+        "Hyperliquid L1",
+        "Monad"
       ],
       "hasFeesData": true,
       "hasRevenueData": true,
-      "hasVolumeData": true,
-      "historyDays": 271,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "obol",
-      "name": "Obol",
-      "category": "Staking Pool",
-      "tvlRank": 37,
-      "tvl": 1625096863.4109159,
-      "chains": [
-        "Ethereum"
-      ],
-      "hasFeesData": false,
-      "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 655,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 405,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "falcon-finance",
       "name": "Falcon Finance",
       "category": "Basis Trading",
-      "tvlRank": 38,
-      "tvl": 1621056072.5130286,
+      "tvlRank": 36,
+      "tvl": 1619838774.0626564,
       "chains": [
         "Ethereum"
       ],
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 208,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 215,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "sentora",
+      "name": "Sentora",
+      "category": "Risk Curators",
+      "tvlRank": 37,
+      "tvl": 1608025760.8799438,
+      "chains": [
+        "Ethereum",
+        "Solana"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 219,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "pendle",
+      "name": "Pendle",
+      "category": "Yield",
+      "tvlRank": 38,
+      "tvl": 1559104005.8827643,
+      "chains": [
+        "Ethereum",
+        "Plasma",
+        "Arbitrum",
+        "Sonic",
+        "Hyperliquid L1",
+        "Binance",
+        "Base",
+        "Mantle",
+        "Avalanche",
+        "Optimism",
+        "Berachain"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": true,
+      "historyDays": 1781,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "kelp",
       "name": "Kelp",
       "category": "Liquid Restaking",
       "tvlRank": 39,
-      "tvl": 1570797207.4793448,
+      "tvl": 1558242702.9422646,
       "chains": [
         "Ethereum",
         "Arbitrum",
@@ -817,15 +828,15 @@
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 857,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 864,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "steakhouse-financial",
       "name": "Steakhouse Financial",
       "category": "Risk Curators",
       "tvlRank": 40,
-      "tvl": 1556321778.715023,
+      "tvl": 1486199293.2089913,
       "chains": [
         "Base",
         "Ethereum",
@@ -839,88 +850,54 @@
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 516,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 523,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "gauntlet",
+      "name": "Gauntlet",
+      "category": "Risk Curators",
+      "tvlRank": 41,
+      "tvl": 1482983957.7851822,
+      "chains": [
+        "Binance",
+        "Ethereum",
+        "Base",
+        "Katana",
+        "Solana",
+        "Optimism",
+        "Polygon",
+        "Arbitrum",
+        "Hyperliquid L1",
+        "Unichain"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 950,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "kamino-lend",
       "name": "Kamino Lend",
       "category": "Lending",
-      "tvlRank": 41,
-      "tvl": 1501738162.1857882,
-      "chains": [
-        "Solana"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 927,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "sentora",
-      "name": "Sentora",
-      "category": "Risk Curators",
       "tvlRank": 42,
-      "tvl": 1493448721.5772753,
+      "tvl": 1426032251.2020898,
       "chains": [
-        "Ethereum",
         "Solana"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 212,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "anemoy-capital",
-      "name": "Anemoy Capital",
-      "category": "RWA",
-      "tvlRank": 43,
-      "tvl": 1418542325.6667309,
-      "chains": [
-        "Ethereum",
-        "Celo",
-        "Base"
       ],
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 503,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "pendle",
-      "name": "Pendle",
-      "category": "Yield",
-      "tvlRank": 44,
-      "tvl": 1416654740.2113872,
-      "chains": [
-        "Ethereum",
-        "Plasma",
-        "Arbitrum",
-        "Sonic",
-        "Hyperliquid L1",
-        "Binance",
-        "Base",
-        "Mantle",
-        "Avalanche",
-        "Optimism",
-        "Berachain"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": true,
-      "historyDays": 1774,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 934,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "usdd",
       "name": "USDD",
       "category": "CDP",
-      "tvlRank": 45,
-      "tvl": 1399917589.7443507,
+      "tvlRank": 43,
+      "tvl": 1374710918.9155333,
       "chains": [
         "Tron",
         "Ethereum",
@@ -929,15 +906,30 @@
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 409,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 416,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "obol",
+      "name": "Obol",
+      "category": "Staking Pool",
+      "tvlRank": 44,
+      "tvl": 1326542298.8700387,
+      "chains": [
+        "Ethereum"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 662,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "compound-v3",
       "name": "Compound V3",
       "category": "Lending",
-      "tvlRank": 46,
-      "tvl": 1347659861.5275533,
+      "tvlRank": 45,
+      "tvl": 1321540265.5552769,
       "chains": [
         "Ethereum",
         "Arbitrum",
@@ -952,30 +944,69 @@
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 1338,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 1345,
+      "lastUpdated": "2026-05-03"
     },
     {
-      "slug": "rocket-pool",
-      "name": "Rocket Pool",
-      "category": "Liquid Staking",
-      "tvlRank": 47,
-      "tvl": 1310168619.9361851,
+      "slug": "figure-markets-exchange",
+      "name": "Figure Markets Exchange",
+      "category": "OTC Marketplace",
+      "tvlRank": 46,
+      "tvl": 1284399568.4404752,
       "chains": [
-        "Ethereum"
+        "Provenance"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": true,
+      "historyDays": 278,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "anemoy-capital",
+      "name": "Anemoy Capital",
+      "category": "RWA",
+      "tvlRank": 47,
+      "tvl": 1234563892.4115372,
+      "chains": [
+        "Ethereum",
+        "Celo",
+        "Base"
+      ],
+      "hasFeesData": false,
+      "hasRevenueData": false,
+      "hasVolumeData": false,
+      "historyDays": 510,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "venus-core-pool",
+      "name": "Venus Core Pool",
+      "category": "Lending",
+      "tvlRank": 48,
+      "tvl": 1205518229.7354035,
+      "chains": [
+        "Binance",
+        "Ethereum",
+        "Arbitrum",
+        "zkSync Era",
+        "Unichain",
+        "Base",
+        "Op_Bnb",
+        "Optimism"
       ],
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 1667,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 1986,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "spiko",
       "name": "Spiko",
       "category": "RWA",
-      "tvlRank": 48,
-      "tvl": 1232998823.1205578,
+      "tvlRank": 49,
+      "tvl": 1179603353.5143356,
       "chains": [
         "Stellar",
         "Arbitrum",
@@ -988,52 +1019,71 @@
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 621,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 628,
+      "lastUpdated": "2026-05-03"
     },
     {
-      "slug": "venus-core-pool",
-      "name": "Venus Core Pool",
-      "category": "Lending",
-      "tvlRank": 49,
-      "tvl": 1216469495.201344,
+      "slug": "rocket-pool",
+      "name": "Rocket Pool",
+      "category": "Liquid Staking",
+      "tvlRank": 50,
+      "tvl": 1162518918.348612,
       "chains": [
-        "Binance",
-        "Ethereum",
-        "Arbitrum",
-        "zkSync Era",
-        "Unichain",
-        "Base",
-        "Optimism",
-        "Op_Bnb"
+        "Ethereum"
       ],
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 1979,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 1674,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "veda",
+      "name": "Veda",
+      "category": "Onchain Capital Allocator",
+      "tvlRank": 51,
+      "tvl": 1153962602.492272,
+      "chains": [
+        "Ethereum",
+        "Ink",
+        "Optimism",
+        "Hyperliquid L1",
+        "Plasma",
+        "Base",
+        "Arbitrum",
+        "Berachain",
+        "Sonic",
+        "Binance",
+        "BOB",
+        "Scroll"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 573,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "sanctum-validator-lsts",
       "name": "Sanctum Validator LSTs",
       "category": "Liquid Staking",
-      "tvlRank": 50,
-      "tvl": 1156699825.0326984,
+      "tvlRank": 52,
+      "tvl": 1136308646.4966433,
       "chains": [
         "Solana"
       ],
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 761,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 768,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "concrete",
       "name": "Concrete",
       "category": "Onchain Capital Allocator",
-      "tvlRank": 51,
-      "tvl": 1046105334.5884013,
+      "tvlRank": 53,
+      "tvl": 1038473392.363535,
       "chains": [
         "Ethereum",
         "Stable",
@@ -1044,55 +1094,61 @@
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 443,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "veda",
-      "name": "Veda",
-      "category": "Onchain Capital Allocator",
-      "tvlRank": 52,
-      "tvl": 1016583721.2268543,
-      "chains": [
-        "Ethereum",
-        "Ink",
-        "Hyperliquid L1",
-        "Plasma",
-        "Base",
-        "Sonic",
-        "Arbitrum",
-        "Berachain",
-        "Binance",
-        "BOB",
-        "Scroll"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 566,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 450,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "raydium-amm",
       "name": "Raydium AMM",
       "category": "Dexs",
-      "tvlRank": 53,
-      "tvl": 1013493885.1263903,
+      "tvlRank": 54,
+      "tvl": 995113308.2384291,
       "chains": [
         "Solana"
       ],
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": true,
-      "historyDays": 1865,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 1872,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "wisdomtree",
+      "name": "WisdomTree",
+      "category": "RWA",
+      "tvlRank": 55,
+      "tvl": 989144721.7443153,
+      "chains": [
+        "Ethereum",
+        "Stellar"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 273,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "blockchain-capital",
+      "name": "Blockchain Capital",
+      "category": "RWA",
+      "tvlRank": 56,
+      "tvl": 963605738.25,
+      "chains": [
+        "zkSync Era"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 236,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "uniswap-v2",
       "name": "Uniswap V2",
       "category": "Dexs",
-      "tvlRank": 54,
-      "tvl": 992596008.0065883,
+      "tvlRank": 57,
+      "tvl": 947190082.3134316,
       "chains": [
         "Ethereum",
         "Base",
@@ -1111,85 +1167,75 @@
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": true,
-      "historyDays": 2181,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 2188,
+      "lastUpdated": "2026-05-03"
     },
     {
-      "slug": "gauntlet",
-      "name": "Gauntlet",
-      "category": "Risk Curators",
-      "tvlRank": 55,
-      "tvl": 939479437.4045409,
+      "slug": "jupiter-lend",
+      "name": "Jupiter Lend",
+      "category": "Lending",
+      "tvlRank": 58,
+      "tvl": 901561489.6651163,
       "chains": [
-        "Ethereum",
-        "Base",
-        "Katana",
-        "Optimism",
-        "Arbitrum",
-        "Polygon",
-        "Hyperliquid L1",
-        "Unichain",
         "Solana"
       ],
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 943,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 257,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "binance-staked-sol",
       "name": "Binance Staked SOL",
       "category": "Liquid Staking",
-      "tvlRank": 56,
-      "tvl": 912917218.3713956,
+      "tvlRank": 59,
+      "tvl": 890224271.6184295,
       "chains": [
         "Solana"
       ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
+      "hasFeesData": false,
+      "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 591,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 598,
+      "lastUpdated": "2026-05-03"
     },
     {
-      "slug": "superstate-ustb",
-      "name": "Superstate USTB",
-      "category": "RWA",
-      "tvlRank": 57,
-      "tvl": 906727193.8143495,
+      "slug": "function-fbtc",
+      "name": "Function FBTC",
+      "category": "Bridge",
+      "tvlRank": 60,
+      "tvl": 860445565.4403391,
       "chains": [
-        "Ethereum",
-        "Plume Mainnet",
-        "Solana"
+        "Bitcoin"
       ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
+      "hasFeesData": false,
+      "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 779,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 636,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "jito-liquid-staking",
       "name": "Jito Liquid Staking",
       "category": "Liquid Staking",
-      "tvlRank": 58,
-      "tvl": 901197312.7914736,
+      "tvlRank": 61,
+      "tvl": 850713650.3652468,
       "chains": [
         "Solana"
       ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
+      "hasFeesData": false,
+      "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 1249,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 1256,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "stakewise-v2",
       "name": "StakeWise V2",
       "category": "Liquid Staking",
-      "tvlRank": 59,
-      "tvl": 899396588.8189538,
+      "tvlRank": 62,
+      "tvl": 831661862.2113874,
       "chains": [
         "Ethereum",
         "xDai"
@@ -1197,76 +1243,15 @@
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 1915,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "doublezero-staked-sol",
-      "name": "DoubleZero Staked SOL",
-      "category": "Liquid Staking",
-      "tvlRank": 60,
-      "tvl": 885373263.6485637,
-      "chains": [
-        "Solana"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 164,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "jupiter-lend",
-      "name": "Jupiter Lend",
-      "category": "Lending",
-      "tvlRank": 61,
-      "tvl": 879242051.7464274,
-      "chains": [
-        "Solana"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 250,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "wisdomtree",
-      "name": "WisdomTree",
-      "category": "RWA",
-      "tvlRank": 62,
-      "tvl": 868678196.775981,
-      "chains": [
-        "Ethereum",
-        "Stellar"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 266,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "function-fbtc",
-      "name": "Function FBTC",
-      "category": "Bridge",
-      "tvlRank": 63,
-      "tvl": 856725304.9936726,
-      "chains": [
-        "Bitcoin"
-      ],
-      "hasFeesData": false,
-      "hasRevenueData": false,
-      "hasVolumeData": false,
-      "historyDays": 629,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 1922,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "ondo-global-markets",
       "name": "Ondo Global Markets",
       "category": "RWA",
-      "tvlRank": 64,
-      "tvl": 824651762.8306847,
+      "tvlRank": 63,
+      "tvl": 827375319.3797032,
       "chains": [
         "Ethereum",
         "Binance",
@@ -1275,45 +1260,62 @@
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 235,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 242,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "superstate-ustb",
+      "name": "Superstate USTB",
+      "category": "RWA",
+      "tvlRank": 64,
+      "tvl": 819086402.9107107,
+      "chains": [
+        "Ethereum",
+        "Plume Mainnet",
+        "Solana"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 786,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "liquid-collective",
+      "name": "Liquid Collective",
+      "category": "Liquid Staking",
+      "tvlRank": 65,
+      "tvl": 812392633.7277257,
+      "chains": [
+        "Ethereum"
+      ],
+      "hasFeesData": false,
+      "hasRevenueData": false,
+      "hasVolumeData": false,
+      "historyDays": 1067,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "jupiter-staked-sol",
       "name": "Jupiter Staked SOL",
       "category": "Liquid Staking",
-      "tvlRank": 65,
-      "tvl": 820714228.318952,
+      "tvlRank": 66,
+      "tvl": 800347458.6575754,
       "chains": [
         "Solana"
       ],
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 618,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "liquid-collective",
-      "name": "Liquid Collective",
-      "category": "Liquid Staking",
-      "tvlRank": 66,
-      "tvl": 820267585.584495,
-      "chains": [
-        "Ethereum"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 1060,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 625,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "lombard-lbtc",
       "name": "Lombard LBTC",
       "category": "Restaked BTC",
       "tvlRank": 67,
-      "tvl": 778396693.2206701,
+      "tvl": 788048706.0430797,
       "chains": [
         "Bitcoin",
         "Ethereum"
@@ -1321,45 +1323,15 @@
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 599,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "kinetiq-khype",
-      "name": "Kinetiq kHYPE",
-      "category": "Liquid Staking",
-      "tvlRank": 68,
-      "tvl": 761415685.0798199,
-      "chains": [
-        "Hyperliquid L1"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 283,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "blockchain-capital",
-      "name": "Blockchain Capital",
-      "category": "RWA",
-      "tvlRank": 69,
-      "tvl": 754118306.36,
-      "chains": [
-        "zkSync Era"
-      ],
-      "hasFeesData": false,
-      "hasRevenueData": false,
-      "hasVolumeData": false,
-      "historyDays": 229,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 606,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "fluid-lending",
       "name": "Fluid Lending",
       "category": "Lending",
-      "tvlRank": 70,
-      "tvl": 738991505.0161338,
+      "tvlRank": 68,
+      "tvl": 778703860.2024091,
       "chains": [
         "Ethereum",
         "Arbitrum",
@@ -1370,23 +1342,53 @@
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 796,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 803,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "kinetiq-khype",
+      "name": "Kinetiq kHYPE",
+      "category": "Liquid Staking",
+      "tvlRank": 69,
+      "tvl": 763123909.2254137,
+      "chains": [
+        "Hyperliquid L1"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 290,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "doublezero-staked-sol",
+      "name": "DoubleZero Staked SOL",
+      "category": "Liquid Staking",
+      "tvlRank": 70,
+      "tvl": 746058703.119272,
+      "chains": [
+        "Solana"
+      ],
+      "hasFeesData": false,
+      "hasRevenueData": false,
+      "hasVolumeData": false,
+      "historyDays": 171,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "uniswap-v4",
       "name": "Uniswap V4",
       "category": "Dexs",
       "tvlRank": 71,
-      "tvl": 721528003.3286548,
+      "tvl": 715249990.4809704,
       "chains": [
         "Ethereum",
-        "Arbitrum",
         "Base",
+        "Arbitrum",
         "Polygon",
+        "Binance",
         "Unichain",
         "Monad",
-        "Binance",
         "Soneium",
         "Optimism",
         "Avalanche",
@@ -1400,131 +1402,30 @@
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": true,
-      "historyDays": 452,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 459,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "jupiter-perpetual-exchange",
       "name": "Jupiter Perpetual Exchange",
       "category": "Derivatives",
       "tvlRank": 72,
-      "tvl": 693758424.7654972,
+      "tvl": 693358457.9754416,
       "chains": [
         "Solana"
       ],
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 818,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "meth-protocol",
-      "name": "mETH Protocol",
-      "category": "Liquid Staking",
-      "tvlRank": 73,
-      "tvl": 668227413.5181932,
-      "chains": [
-        "Ethereum"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 874,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "convex-finance",
-      "name": "Convex Finance",
-      "category": "Yield",
-      "tvlRank": 74,
-      "tvl": 606909982.3721433,
-      "chains": [
-        "Ethereum",
-        "Fraxtal",
-        "Arbitrum",
-        "Polygon"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 1805,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "lista-liquid-staking",
-      "name": "Lista Liquid Staking",
-      "category": "Liquid Staking",
-      "tvlRank": 75,
-      "tvl": 603666014.9165189,
-      "chains": [
-        "Binance"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 993,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "ethena-usdtb",
-      "name": "Ethena USDtb",
-      "category": "RWA",
-      "tvlRank": 76,
-      "tvl": 588946807.562422,
-      "chains": [
-        "Ethereum"
-      ],
-      "hasFeesData": false,
-      "hasRevenueData": false,
-      "hasVolumeData": false,
-      "historyDays": 496,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "lista-lending",
-      "name": "Lista Lending",
-      "category": "Lending",
-      "tvlRank": 77,
-      "tvl": 580345740.052415,
-      "chains": [
-        "Binance",
-        "Ethereum"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 375,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "tornado-cash",
-      "name": "Tornado Cash",
-      "category": "Privacy",
-      "tvlRank": 78,
-      "tvl": 558869394.8257802,
-      "chains": [
-        "Ethereum",
-        "Binance",
-        "Arbitrum",
-        "Avalanche",
-        "xDai",
-        "Polygon",
-        "EthereumClassic",
-        "Optimism"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 2322,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 825,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "aster-bridge",
       "name": "Aster Bridge",
       "category": "Bridge",
-      "tvlRank": 79,
-      "tvl": 538345154.8079435,
+      "tvlRank": 73,
+      "tvl": 610395278.4254993,
       "chains": [
         "Binance",
         "Ethereum",
@@ -1535,15 +1436,116 @@
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 660,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 667,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "convex-finance",
+      "name": "Convex Finance",
+      "category": "Yield",
+      "tvlRank": 74,
+      "tvl": 610221497.8529233,
+      "chains": [
+        "Ethereum",
+        "Fraxtal",
+        "Arbitrum",
+        "Polygon"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 1812,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "lista-lending",
+      "name": "Lista Lending",
+      "category": "Lending",
+      "tvlRank": 75,
+      "tvl": 594035713.8305243,
+      "chains": [
+        "Binance",
+        "Ethereum"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 382,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "lista-liquid-staking",
+      "name": "Lista Liquid Staking",
+      "category": "Liquid Staking",
+      "tvlRank": 76,
+      "tvl": 585108616.0640898,
+      "chains": [
+        "Binance"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 1000,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "ethena-usdtb",
+      "name": "Ethena USDtb",
+      "category": "RWA",
+      "tvlRank": 77,
+      "tvl": 581063124.4953029,
+      "chains": [
+        "Ethereum"
+      ],
+      "hasFeesData": false,
+      "hasRevenueData": false,
+      "hasVolumeData": false,
+      "historyDays": 503,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "tornado-cash",
+      "name": "Tornado Cash",
+      "category": "Privacy",
+      "tvlRank": 78,
+      "tvl": 572726252.6938972,
+      "chains": [
+        "Ethereum",
+        "Binance",
+        "Arbitrum",
+        "xDai",
+        "Avalanche",
+        "Polygon",
+        "EthereumClassic",
+        "Optimism"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 2329,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "meth-protocol",
+      "name": "mETH Protocol",
+      "category": "Liquid Staking",
+      "tvlRank": 79,
+      "tvl": 555985468.1105851,
+      "chains": [
+        "Ethereum"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 881,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "optimism-bridge",
       "name": "Optimism Bridge",
       "category": "Canonical Bridge",
       "tvlRank": 80,
-      "tvl": 530863033.78981626,
+      "tvl": 524432630.57866937,
       "chains": [
         "Ethereum",
         "Base",
@@ -1552,20 +1554,35 @@
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 894,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 901,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "symbiotic",
+      "name": "Symbiotic",
+      "category": "Restaking",
+      "tvlRank": 81,
+      "tvl": 499672728.8971627,
+      "chains": [
+        "Ethereum"
+      ],
+      "hasFeesData": false,
+      "hasRevenueData": false,
+      "hasVolumeData": false,
+      "historyDays": 691,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "solvbtc",
       "name": "SolvBTC",
       "category": "Bridge",
-      "tvlRank": 81,
-      "tvl": 494048052.9157095,
+      "tvlRank": 82,
+      "tvl": 495358943.91168267,
       "chains": [
         "Bitcoin",
         "Ethereum",
-        "Binance",
         "Solana",
+        "Binance",
         "Base",
         "Arbitrum",
         "X Layer",
@@ -1578,15 +1595,15 @@
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 709,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 716,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "lighter-bridge",
       "name": "Lighter Bridge",
       "category": "Bridge",
-      "tvlRank": 82,
-      "tvl": 494021762.52952254,
+      "tvlRank": 83,
+      "tvl": 482767057.50840116,
       "chains": [
         "Ethereum",
         "Arbitrum"
@@ -1594,60 +1611,30 @@
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 377,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "polymarket-international",
-      "name": "Polymarket International",
-      "category": "Prediction Market",
-      "tvlRank": 83,
-      "tvl": 476308688.3447623,
-      "chains": [
-        "Polygon"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": true,
-      "historyDays": 1643,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "symbiotic",
-      "name": "Symbiotic",
-      "category": "Restaking",
-      "tvlRank": 84,
-      "tvl": 471369378.76437354,
-      "chains": [
-        "Ethereum"
-      ],
-      "hasFeesData": false,
-      "hasRevenueData": false,
-      "hasVolumeData": false,
-      "historyDays": 684,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 384,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "lorenzo-enzobtc",
       "name": "Lorenzo enzoBTC",
       "category": "Bridge",
-      "tvlRank": 85,
-      "tvl": 469197528.7552834,
+      "tvlRank": 84,
+      "tvl": 471262309.9865274,
       "chains": [
         "Bitcoin"
       ],
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 544,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 551,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "merlins-seal",
       "name": "Merlins Seal",
       "category": "Bridge",
-      "tvlRank": 86,
-      "tvl": 464318255.4700799,
+      "tvlRank": 85,
+      "tvl": 467108837.5702038,
       "chains": [
         "Bitcoin",
         "Ethereum",
@@ -1657,15 +1644,15 @@
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 807,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 814,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "quickswap-dex",
       "name": "Quickswap Dex",
       "category": "Dexs",
-      "tvlRank": 87,
-      "tvl": 449748673.61263585,
+      "tvlRank": 86,
+      "tvl": 458758866.670922,
       "chains": [
         "Polygon",
         "Base"
@@ -1673,15 +1660,30 @@
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": true,
-      "historyDays": 2025,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 2032,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "polymarket-international",
+      "name": "Polymarket International",
+      "category": "Prediction Market",
+      "tvlRank": 87,
+      "tvl": 445682148.1202632,
+      "chains": [
+        "Polygon"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": true,
+      "historyDays": 1650,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "unit",
       "name": "Unit",
       "category": "Bridge",
       "tvlRank": 88,
-      "tvl": 444014964.32853454,
+      "tvl": 436236032.7214075,
       "chains": [
         "Bitcoin",
         "Ethereum",
@@ -1692,31 +1694,15 @@
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 436,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "tbtc",
-      "name": "tBTC",
-      "category": "Decentralized BTC",
-      "tvlRank": 89,
-      "tvl": 427956548.8471774,
-      "chains": [
-        "Bitcoin",
-        "Ethereum"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 1711,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 443,
+      "lastUpdated": "2026-05-03"
     },
     {
       "slug": "avalon-usda",
       "name": "Avalon USDa",
       "category": "CDP",
-      "tvlRank": 90,
-      "tvl": 424910339.21868527,
+      "tvlRank": 89,
+      "tvl": 424532680.87361896,
       "chains": [
         "Binance",
         "Ethereum",
@@ -1728,202 +1714,201 @@
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 541,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 548,
+      "lastUpdated": "2026-05-03"
     },
     {
-      "slug": "linea-bridge",
-      "name": "Linea Bridge",
-      "category": "Canonical Bridge",
-      "tvlRank": 91,
-      "tvl": 394356589.6146337,
+      "slug": "tbtc",
+      "name": "tBTC",
+      "category": "Decentralized BTC",
+      "tvlRank": 90,
+      "tvl": 424253611.840105,
       "chains": [
+        "Bitcoin",
         "Ethereum"
       ],
-      "hasFeesData": false,
-      "hasRevenueData": false,
-      "hasVolumeData": false,
-      "historyDays": 894,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "lista-cdp",
-      "name": "Lista CDP",
-      "category": "CDP",
-      "tvlRank": 92,
-      "tvl": 392081067.36668295,
-      "chains": [
-        "Binance"
-      ],
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 1335,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 1718,
+      "lastUpdated": "2026-05-03"
     },
     {
-      "slug": "renzo",
-      "name": "Renzo",
-      "category": "Liquid Restaking",
-      "tvlRank": 93,
-      "tvl": 390119215.1856201,
-      "chains": [
-        "Ethereum",
-        "Arbitrum",
-        "Linea",
-        "Solana",
-        "Zircuit",
-        "Monad",
-        "Mode",
-        "Base",
-        "Optimism",
-        "Blast",
-        "Fraxtal",
-        "Binance",
-        "Sei"
-      ],
-      "hasFeesData": false,
-      "hasRevenueData": false,
-      "hasVolumeData": false,
-      "historyDays": 859,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "solstice-usx",
-      "name": "Solstice USX",
-      "category": "Basis Trading",
-      "tvlRank": 94,
-      "tvl": 378619054.51278156,
-      "chains": [
-        "Solana"
-      ],
-      "hasFeesData": false,
-      "hasRevenueData": false,
-      "hasVolumeData": false,
-      "historyDays": 208,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "lightning-network",
-      "name": "Lightning Network",
-      "category": "Payments",
-      "tvlRank": 95,
-      "tvl": 378144211.9411654,
-      "chains": [
-        "Bitcoin"
-      ],
-      "hasFeesData": false,
-      "hasRevenueData": false,
-      "hasVolumeData": false,
-      "historyDays": 1862,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "stader",
-      "name": "Stader",
-      "category": "Liquid Staking",
-      "tvlRank": 96,
-      "tvl": 376151892.538355,
-      "chains": [
-        "Ethereum",
-        "Hedera",
-        "Binance",
-        "Fantom",
-        "Terra2",
-        "Near"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 1590,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "bouncebit-cedefi-yield",
-      "name": "BounceBit CeDeFi Yield",
-      "category": "Basis Trading",
-      "tvlRank": 97,
-      "tvl": 368416023.5617484,
-      "chains": [
-        "BounceBit",
-        "Binance",
-        "Ethereum",
-        "Solana",
-        "Base"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 511,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "multipli.fi",
-      "name": "Multipli.fi",
-      "category": "Yield",
-      "tvlRank": 98,
-      "tvl": 366637338.9246155,
-      "chains": [
-        "Ethereum",
-        "Base",
-        "Monad",
-        "Arbitrum",
-        "Binance",
-        "Avalanche"
-      ],
-      "hasFeesData": true,
-      "hasRevenueData": true,
-      "hasVolumeData": false,
-      "historyDays": 408,
-      "lastUpdated": "2026-04-26"
-    },
-    {
-      "slug": "hyperlend-pooled",
-      "name": "HyperLend Pooled",
-      "category": "Lending",
-      "tvlRank": 99,
-      "tvl": 365158494.11607724,
+      "slug": "hyperliquid-hlp",
+      "name": "Hyperliquid HLP",
+      "category": "Derivatives",
+      "tvlRank": 91,
+      "tvl": 397102714.10656136,
       "chains": [
         "Hyperliquid L1"
       ],
       "hasFeesData": true,
       "hasRevenueData": true,
       "hasVolumeData": false,
-      "historyDays": 400,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 518,
+      "lastUpdated": "2026-05-03"
     },
     {
-      "slug": "bedrock-unibtc",
-      "name": "Bedrock uniBTC",
-      "category": "Anchor BTC",
-      "tvlRank": 100,
-      "tvl": 361453035.8613583,
+      "slug": "linea-bridge",
+      "name": "Linea Bridge",
+      "category": "Canonical Bridge",
+      "tvlRank": 92,
+      "tvl": 397026492.05694664,
       "chains": [
-        "Bitcoin",
-        "Ethereum",
-        "Merlin",
-        "BOB",
-        "Binance",
-        "Mantle",
-        "Arbitrum",
-        "Base",
-        "Bitlayer",
-        "BSquared",
-        "Optimism",
-        "Mode",
-        "Hemi",
-        "RSK",
-        "TAC",
-        "Taiko",
-        "ZetaChain",
-        "Berachain"
+        "Ethereum"
       ],
       "hasFeesData": false,
       "hasRevenueData": false,
       "hasVolumeData": false,
-      "historyDays": 544,
-      "lastUpdated": "2026-04-26"
+      "historyDays": 901,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "lista-cdp",
+      "name": "Lista CDP",
+      "category": "CDP",
+      "tvlRank": 93,
+      "tvl": 383218542.7284441,
+      "chains": [
+        "Binance"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 1342,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "lightning-network",
+      "name": "Lightning Network",
+      "category": "Payments",
+      "tvlRank": 94,
+      "tvl": 381770981.47125,
+      "chains": [
+        "Bitcoin"
+      ],
+      "hasFeesData": false,
+      "hasRevenueData": false,
+      "hasVolumeData": false,
+      "historyDays": 1869,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "hyperlend-pooled",
+      "name": "HyperLend Pooled",
+      "category": "Lending",
+      "tvlRank": 95,
+      "tvl": 380397475.35360605,
+      "chains": [
+        "Hyperliquid L1"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 407,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "solstice-usx",
+      "name": "Solstice USX",
+      "category": "Basis Trading",
+      "tvlRank": 96,
+      "tvl": 378684405.83758944,
+      "chains": [
+        "Solana"
+      ],
+      "hasFeesData": false,
+      "hasRevenueData": false,
+      "hasVolumeData": false,
+      "historyDays": 215,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "euler-v2",
+      "name": "Euler V2",
+      "category": "Lending",
+      "tvlRank": 97,
+      "tvl": 374687785.9408222,
+      "chains": [
+        "Ethereum",
+        "Plasma",
+        "Avalanche",
+        "BOB",
+        "Hyperliquid L1",
+        "Base",
+        "Unichain",
+        "Arbitrum",
+        "Monad",
+        "Berachain",
+        "Binance",
+        "Linea",
+        "TAC",
+        "Sonic",
+        "Swellchain",
+        "Mantle"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 615,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "bouncebit-cedefi-yield",
+      "name": "BounceBit CeDeFi Yield",
+      "category": "Basis Trading",
+      "tvlRank": 98,
+      "tvl": 369848140.82514375,
+      "chains": [
+        "BounceBit",
+        "Binance",
+        "Ethereum",
+        "Base",
+        "Solana"
+      ],
+      "hasFeesData": true,
+      "hasRevenueData": true,
+      "hasVolumeData": false,
+      "historyDays": 518,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "cian-yield-layer",
+      "name": "CIAN Yield Layer",
+      "category": "Yield Aggregator",
+      "tvlRank": 99,
+      "tvl": 367192444.03612024,
+      "chains": [
+        "Ethereum",
+        "Mantle",
+        "Arbitrum",
+        "Optimism",
+        "Base",
+        "Binance",
+        "Scroll"
+      ],
+      "hasFeesData": false,
+      "hasRevenueData": false,
+      "hasVolumeData": false,
+      "historyDays": 714,
+      "lastUpdated": "2026-05-03"
+    },
+    {
+      "slug": "xstocks",
+      "name": "xStocks",
+      "category": "RWA",
+      "tvlRank": 100,
+      "tvl": 366882080.9974417,
+      "chains": [
+        "Solana",
+        "Arbitrum"
+      ],
+      "hasFeesData": false,
+      "hasRevenueData": false,
+      "hasVolumeData": false,
+      "historyDays": 306,
+      "lastUpdated": "2026-05-03"
     }
   ],
-  "generatedAt": "2026-04-26T12:15:10.861Z"
+  "generatedAt": "2026-05-03T12:14:36.725Z"
 }
