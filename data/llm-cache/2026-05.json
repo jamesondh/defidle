@@ -73,5 +73,30 @@
     "text": "Kelp operates across five chains, including Arbitrum and Optimism, but its total of 16 chains suggests a strategy to tap into diverse ecosystems, potentially enhancing liquidity and user engagement across multiple platforms. This multi-chain approach allows Kelp to leverage unique features and user bases of each chain, increasing its overall utility in the DeFi landscape.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-03T00:46:51.293Z"
+  },
+  "2026-05-04|protocol|lido|A|P1_FINGERPRINT|explanation|4dbc3eef9629636e": {
+    "text": "Lido's $21.1B TVL across five chains, including major players like Ethereum and Solana, showcases its dominance in the liquid staking sector, allowing users to earn rewards while maintaining liquidity. This high TVL reflects strong demand for staking solutions that offer flexibility without locking up assets.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-04T00:45:43.934Z"
+  },
+  "2026-05-04|protocol|lido|B|P2_CROSSCHAIN|explanation|4891b5157ad2f326": {
+    "text": "Lido's dominance on Ethereum, with a staggering $21.1B in TVL, starkly contrasts with Moonbeam's mere $34K, showcasing how established networks attract significantly more liquidity and user engagement for staking solutions. This 100% margin emphasizes the challenges newer chains face in building comparable ecosystems.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-04T00:45:45.689Z"
+  },
+  "2026-05-04|protocol|lido|C|P11_FEES_TREND|explanation|ad5715fabfe6247e": {
+    "text": "Lido's fees have decreased by 8.8% over the past week, dropping from $12M to $11M, which could suggest a shift in user activity or competition among liquid staking protocols. This trend is important as it may impact Lido's revenue and its ability to incentivize stakers.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-04T00:45:48.211Z"
+  },
+  "2026-05-04|protocol|lido|D|P4_ATH_TIMING|explanation|60dddb220cecce59": {
+    "text": "Lido reached its all-time high (ATH) of $42.5B in August 2025, a significant jump compared to earlier months like March 2023, when it was still building momentum. This timing reflects Lido's growth as a leading liquid staking solution, capitalizing on the increasing demand for staking services as Ethereum's ecosystem matured.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-04T00:45:49.717Z"
+  },
+  "2026-05-04|protocol|lido|E|P6_TVL_TREND|explanation|7cc2913735e8648f": {
+    "text": "Lido's TVL has increased by 10.6% to reach $21.1B, reflecting growing confidence in liquid staking solutions as more users seek to maximize their yield while maintaining liquidity. This trend underscores the rising demand for decentralized staking options in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-04T00:45:52.831Z"
   }
 }

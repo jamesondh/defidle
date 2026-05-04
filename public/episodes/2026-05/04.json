@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-05-04:protocol:lido",
+  "dateUtc": "2026-05-04",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "lido",
+    "name": "Lido",
+    "category": "Liquid Staking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Liquid Staking",
+        "Chains: 2-5 chains",
+        ">90% TVL on single chain",
+        "Active since: 2020"
+      ],
+      "choices": [
+        "Aave V3",
+        "EigenCloud",
+        "Binance Staked SOL",
+        "Lido",
+        "Jupiter Staked SOL"
+      ],
+      "answerIndex": 3,
+      "explanation": "Lido's $21.1B TVL across five chains, including major players like Ethereum and Solana, showcases its dominance in the liquid staking sector, allowing users to earn rewards while maintaining liquidity. This high TVL reflects strong demand for staking solutions that offer flexibility without locking up assets.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": 0.16227864474835793
+      },
+      "difficultyScore": 0.4587278644748358
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Lido have higher TVL?",
+      "choices": [
+        "Moonbeam",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lido's dominance on Ethereum, with a staggering $21.1B in TVL, starkly contrasts with Moonbeam's mere $34K, showcasing how established networks attract significantly more liquidity and user engagement for staking solutions. This 100% margin emphasizes the challenges newer chains face in building comparable ecosystems.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.9999983695016259,
+        "volatility": 0.16227864474835793
+      },
+      "difficultyScore": 0.18872786447483578
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did Lido's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lido's fees have decreased by 8.8% over the past week, dropping from $12M to $11M, which could suggest a shift in user activity or competition among liquid staking protocols. This trend is important as it may impact Lido's revenue and its ability to incentivize stakers.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.08841509141386482,
+        "volatility": 0.16227864474835793
+      },
+      "difficultyScore": 0.472629754778198
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Lido hit its all-time high TVL?",
+      "choices": [
+        "Apr 2026",
+        "Dec 2023",
+        "Mar 2023",
+        "Aug 2022",
+        "Sep 2025",
+        "Aug 2025"
+      ],
+      "answerIndex": 5,
+      "explanation": "Lido reached its all-time high (ATH) of $42.5B in August 2025, a significant jump compared to earlier months like March 2023, when it was still building momentum. This timing reflects Lido's growth as a leading liquid staking solution, capitalizing on the increasing demand for staking services as Ethereum's ecosystem matured.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": 0.16227864474835793
+      },
+      "difficultyScore": 0.46872786447483583
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "Lido's TVL increased over the past 30 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Lido's TVL has increased by 10.6% to reach $21.1B, reflecting growing confidence in liquid staking solutions as more users seek to maximize their yield while maintaining liquidity. This trend underscores the rising demand for decentralized staking options in the DeFi landscape.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.10629910870742437,
+        "volatility": 0.16227864474835793
+      },
+      "difficultyScore": 0.27116893402592657
+    }
+  ],
+  "generatedAt": "2026-05-04T00:45:52.831Z"
+}
