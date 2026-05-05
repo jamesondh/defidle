@@ -98,5 +98,30 @@
     "text": "Lido's TVL has increased by 10.6% to reach $21.1B, reflecting growing confidence in liquid staking solutions as more users seek to maximize their yield while maintaining liquidity. This trend underscores the rising demand for decentralized staking options in the DeFi landscape.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-04T00:45:52.831Z"
+  },
+  "2026-05-05|chain|Sui|A|C1_FINGERPRINT|explanation|cc80a225d54927c0": {
+    "text": "Sui's TVL of $500M-$1B ranks it 13th, reflecting a growing interest in its ecosystem, which boasts 117 protocols. This diverse range of projects suggests that Sui is attracting developers and users, positioning it as a competitive player in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-05T00:42:42.989Z"
+  },
+  "2026-05-05|chain|Sui|B|C2_CHAIN_COMPARISON|explanation|31f33f30e716b93e": {
+    "text": "Sui's $546M TVL outpaces Monad's $321M by 41.3%, reflecting its stronger adoption and user engagement in the DeFi space. This difference may be driven by Sui's unique features or ecosystem partnerships that attract more liquidity compared to Monad.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-05T00:42:45.181Z"
+  },
+  "2026-05-05|chain|Sui|C|C6_TOP_DEX|explanation|03d53ff6d1102f8e": {
+    "text": "Cetus CLMM leads Sui with $14M in volume, outpacing DeepBook V3 at $13M and Turbos and Bluefin Spot, both at $10M. This dominance suggests that Cetus CLMM is attracting more trading activity, which could indicate a stronger user preference or better liquidity compared to its competitors.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-05T00:42:46.709Z"
+  },
+  "2026-05-05|chain|Sui|D|C3_ATH_TIMING|explanation|66af572fa6fa429e": {
+    "text": "Sui reached its ATH of $2.6B in October 2025, which is notable as it came after several earlier dates like February and May 2025, when the protocol was still gaining traction. The other months, including September 2023 and June 2023, reflect periods of lower TVL, indicating that Sui's growth accelerated significantly leading up to its peak.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-05T00:42:48.441Z"
+  },
+  "2026-05-05|chain|Sui|E|C8_30D_DIRECTION|explanation|8cbe3c16d7efffff": {
+    "text": "Sui's TVL increased by 3.9% recently, suggesting growing confidence among users in its platform and possibly reflecting successful upgrades or new features that attract more liquidity. This uptick can indicate a positive trend in user engagement and protocol adoption.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-05T00:42:50.845Z"
   }
 }
