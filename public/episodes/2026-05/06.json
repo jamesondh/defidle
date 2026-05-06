@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-05-06:protocol:jupiter-staked-sol",
+  "dateUtc": "2026-05-06",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "jupiter-staked-sol",
+    "name": "Jupiter Staked SOL",
+    "category": "Liquid Staking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Liquid Staking",
+        "Chains: single-chain",
+        "TVL: $500M-$1B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Marinade Liquid Staking",
+        "Rocket Pool",
+        "Spiko",
+        "Jupiter Staked SOL"
+      ],
+      "answerIndex": 3,
+      "explanation": "Jupiter Staked SOL has $825M in TVL on Solana, showcasing the growing popularity of liquid staking solutions in the ecosystem. This significant amount indicates that users are increasingly looking to maximize their yield while maintaining liquidity, a trend that reflects broader DeFi preferences.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.1902940414480543
+      },
+      "difficultyScore": 0.4015294041448055
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Jupiter Staked SOL?",
+      "choices": [
+        "ve-Incentive Automator",
+        "Stablecoin Wrapper",
+        "Liquid Staking",
+        "Video Infrastructure"
+      ],
+      "answerIndex": 2,
+      "explanation": "Jupiter Staked SOL is part of the liquid staking category, allowing users to stake their SOL while still maintaining liquidity through tokenized representations. This enables participants to earn staking rewards without locking up their assets, a key feature that enhances capital efficiency in DeFi.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.1902940414480543
+      },
+      "difficultyScore": 0.31152940414480546
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Jupiter Staked SOL's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Jupiter Staked SOL generated $413K in fees over the past week, but only $22K in revenue, which means that just 5.4% of the fees are translating into actual revenue. This disparity suggests that while the platform is attracting significant user activity, its revenue model may need optimization to capture more value from those fees.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.18262595360724937,
+        "volatility": 0.1902940414480543
+      },
+      "difficultyScore": 0.3923782598161062
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Jupiter Staked SOL hit its all-time high TVL?",
+      "choices": [
+        "Mar 2026",
+        "Dec 2024",
+        "Apr 2026",
+        "Feb 2026",
+        "Sep 2025",
+        "Jan 2026"
+      ],
+      "answerIndex": 4,
+      "explanation": "Jupiter Staked SOL reached its ATH of $2.3B in September 2025, a peak that stands out against the other choices like December 2024 and January 2026, which were both before the significant growth that led to its record value. This timing reflects a broader trend in DeFi where staking protocols often see surges in TVL as market conditions improve or new incentives are introduced.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.1902940414480543
+      },
+      "difficultyScore": 0.5015294041448054
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Jupiter Staked SOL deployed on?",
+      "choices": [
+        "Solana",
+        "Polygon",
+        "BSC",
+        "Ethereum"
+      ],
+      "answerIndex": 0,
+      "explanation": "Jupiter Staked SOL operates solely on the Solana chain, which allows it to leverage Solana's high throughput and low transaction costs, making it an attractive option for users looking to stake SOL efficiently. This single-chain focus can lead to deeper liquidity and more streamlined operations compared to multi-chain protocols.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.1902940414480543
+      },
+      "difficultyScore": 0.31152940414480546
+    }
+  ],
+  "generatedAt": "2026-05-06T00:41:58.701Z"
+}

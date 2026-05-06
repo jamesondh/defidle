@@ -123,5 +123,30 @@
     "text": "Sui's TVL increased by 3.9% recently, suggesting growing confidence among users in its platform and possibly reflecting successful upgrades or new features that attract more liquidity. This uptick can indicate a positive trend in user engagement and protocol adoption.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-05T00:42:50.845Z"
+  },
+  "2026-05-06|protocol|jupiter-staked-sol|A|P1_FINGERPRINT|explanation|5148265d85e7c468": {
+    "text": "Jupiter Staked SOL has $825M in TVL on Solana, showcasing the growing popularity of liquid staking solutions in the ecosystem. This significant amount indicates that users are increasingly looking to maximize their yield while maintaining liquidity, a trend that reflects broader DeFi preferences.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-06T00:41:51.207Z"
+  },
+  "2026-05-06|protocol|jupiter-staked-sol|B|P7_CATEGORY|explanation|60166f69138b70b3": {
+    "text": "Jupiter Staked SOL is part of the liquid staking category, allowing users to stake their SOL while still maintaining liquidity through tokenized representations. This enables participants to earn staking rewards without locking up their assets, a key feature that enhances capital efficiency in DeFi.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-06T00:41:53.355Z"
+  },
+  "2026-05-06|protocol|jupiter-staked-sol|C|P5_FEES_REVENUE|explanation|e905b62624f34468": {
+    "text": "Jupiter Staked SOL generated $413K in fees over the past week, but only $22K in revenue, which means that just 5.4% of the fees are translating into actual revenue. This disparity suggests that while the platform is attracting significant user activity, its revenue model may need optimization to capture more value from those fees.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-06T00:41:54.823Z"
+  },
+  "2026-05-06|protocol|jupiter-staked-sol|D|P4_ATH_TIMING|explanation|39c6ad3a17616c45": {
+    "text": "Jupiter Staked SOL reached its ATH of $2.3B in September 2025, a peak that stands out against the other choices like December 2024 and January 2026, which were both before the significant growth that led to its record value. This timing reflects a broader trend in DeFi where staking protocols often see surges in TVL as market conditions improve or new incentives are introduced.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-06T00:41:56.314Z"
+  },
+  "2026-05-06|protocol|jupiter-staked-sol|E|P8_CHAIN_MEMBERSHIP|explanation|e9f125855ab6dc5e": {
+    "text": "Jupiter Staked SOL operates solely on the Solana chain, which allows it to leverage Solana's high throughput and low transaction costs, making it an attractive option for users looking to stake SOL efficiently. This single-chain focus can lead to deeper liquidity and more streamlined operations compared to multi-chain protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-06T00:41:58.701Z"
   }
 }
