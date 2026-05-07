@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-05-07:chain:Ethereum",
+  "dateUtc": "2026-05-07",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Ethereum",
+    "name": "Ethereum"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 5",
+        "Native token: ETH",
+        "Most protocols by count",
+        "Active since: 2017"
+      ],
+      "choices": [
+        "Bitcoin",
+        "Base",
+        "Polygon",
+        "Ethereum",
+        "Provenance",
+        "Hyperliquid L1"
+      ],
+      "answerIndex": 3,
+      "explanation": "Ethereum's $10B+ TVL solidifies its position as the leading DeFi platform, supported by a vast ecosystem of 1,742 protocols that drive innovation and liquidity. This extensive protocol count not only reflects Ethereum's dominance but also its ability to cater to diverse use cases within the DeFi space.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4675
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Ethereum or Bitcoin?",
+      "choices": [
+        "Ethereum",
+        "Bitcoin"
+      ],
+      "answerIndex": 0,
+      "explanation": "Ethereum's $45.8B TVL dwarfs Bitcoin's $5.2B, reflecting its dominance in DeFi applications and smart contracts, which attract significantly more liquidity and user engagement compared to Bitcoin's primarily transactional use case. This 88.6% margin underscores Ethereum's role as the leading platform for decentralized finance innovations.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.8857479139438202,
+        "volatility": null
+      },
+      "difficultyScore": 0.19749999999999998
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Ethereum",
+        "Stacks",
+        "Base",
+        "Flare"
+      ],
+      "answerIndex": 2,
+      "explanation": "Base leads the growth ranking with a remarkable 12.4% increase, contrasting sharply with Ethereum's decline of 13.4%. While Flare managed a slight uptick of 0.7% and Stacks fell by 0.9%, Base's growth signals a strong shift in user interest and liquidity towards newer platforms, highlighting the competitive dynamics in the DeFi landscape.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.11760718552793226,
+        "volatility": null
+      },
+      "difficultyScore": 0.5063713773664813
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Ethereum hit its all-time high TVL?",
+      "choices": [
+        "Apr 2021",
+        "Jul 2022",
+        "Aug 2019",
+        "Nov 2021",
+        "Jan 2023",
+        "Aug 2023"
+      ],
+      "answerIndex": 3,
+      "explanation": "Ethereum reached its all-time high (ATH) of $107.4B in November 2021, a period marked by significant interest in DeFi and NFTs. In contrast, while April 2021 saw a surge in activity and prices, it didn't match the peak of November, highlighting how market dynamics can shift dramatically within just a few months.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.47750000000000004
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Ethereum?",
+      "choices": [
+        "Curve DEX",
+        "Uniswap V3",
+        "Fluid DEX",
+        "Uniswap V4"
+      ],
+      "answerIndex": 3,
+      "explanation": "Uniswap V4 leads Ethereum's DEX landscape with $513M in volume, significantly outpacing its closest competitor, Fluid DEX, which recorded $204M. This dominance reflects Uniswap's established user base and liquidity, making it the go-to platform for traders compared to others like Uniswap V3 and Curve DEX, which saw volumes of $185M and $115M, respectively.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.6024980117267196,
+        "volatility": null
+      },
+      "difficultyScore": 0.28750000000000003
+    }
+  ],
+  "generatedAt": "2026-05-07T00:45:10.328Z"
+}
