@@ -173,5 +173,30 @@
     "text": "Uniswap V4 leads Ethereum's DEX landscape with $513M in volume, significantly outpacing its closest competitor, Fluid DEX, which recorded $204M. This dominance reflects Uniswap's established user base and liquidity, making it the go-to platform for traders compared to others like Uniswap V3 and Curve DEX, which saw volumes of $185M and $115M, respectively.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-07T00:45:10.328Z"
+  },
+  "2026-05-08|protocol|convex-finance|A|P1_FINGERPRINT|explanation|e3b1c371d22a9254": {
+    "text": "Convex Finance's $617M TVL across four chains, including Ethereum and Arbitrum, showcases its ability to attract liquidity by optimizing yield farming strategies for users on multiple platforms. This multi-chain presence allows it to tap into diverse user bases and capitalize on varying incentives across ecosystems.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-08T00:45:08.647Z"
+  },
+  "2026-05-08|protocol|convex-finance|B|P2_CROSSCHAIN|explanation|86c5b03465a99000": {
+    "text": "Convex Finance's $607M TVL on Ethereum dwarfs the mere $8M on Fraxtal, illustrating how dominant established chains can attract significantly more liquidity due to their larger user bases and ecosystem integrations. This 99% margin emphasizes the challenges newer or less popular chains face in gaining traction within the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-08T00:45:11.694Z"
+  },
+  "2026-05-08|protocol|convex-finance|C|P5_FEES_REVENUE|explanation|01ccaf5a919514ae": {
+    "text": "Convex Finance generated $309K in fees over the past week, but only $20K of that translated into revenue, indicating that just 6.5% of the fees are retained after covering operational costs. This low revenue percentage suggests high expenses or competitive pressure in the DeFi space, impacting profitability.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-08T00:45:14.462Z"
+  },
+  "2026-05-08|protocol|convex-finance|D|P4_ATH_TIMING|explanation|1c19b97f8ce135c8": {
+    "text": "Convex Finance hit its all-time high (ATH) of $21.2B in January 2022, driven by the explosive growth of liquidity incentives on Curve Finance. The other months, like December 2022 and beyond, saw a decline in TVL as the DeFi market faced increased competition and regulatory scrutiny, making January 2022 a standout moment for Convex.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-08T00:45:16.894Z"
+  },
+  "2026-05-08|protocol|convex-finance|E|P3_CONCENTRATION|explanation|814fe5279f65f173": {
+    "text": "Convex Finance's $607M TVL on Ethereum represents a staggering 98% of its total $617M TVL, showcasing its heavy reliance on Ethereum for liquidity and user engagement. This concentration often indicates that the protocol is optimized for a specific chain, which can enhance efficiency but also raises concerns about vulnerability if that chain faces issues.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-08T00:45:18.847Z"
   }
 }
