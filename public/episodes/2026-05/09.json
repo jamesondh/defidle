@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-05-09:chain:X Layer",
+  "dateUtc": "2026-05-09",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "X Layer",
+    "name": "X Layer"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Protocols: 50-100",
+        "TVL: $50M-$100M",
+        "30d trend: up >10%"
+      ],
+      "choices": [
+        "Flare",
+        "X Layer",
+        "Stacks",
+        "Cardano"
+      ],
+      "answerIndex": 1,
+      "explanation": "X Layer ranks 35th in TVL with between $50M and $100M, which reflects a growing interest in its ecosystem, supported by a diverse array of 51 protocols. This variety can attract different user segments and use cases, potentially enhancing the network's overall utility and adoption.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4075000000000001
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C11_TOP_PROTOCOL_TVL",
+      "format": "ab",
+      "prompt": "Which protocol has the most TVL on X Layer?",
+      "choices": [
+        "Aave V3",
+        "Uniswap V3",
+        "PotatoSwap V2",
+        "Curve DEX"
+      ],
+      "answerIndex": 0,
+      "explanation": "Aave V3 leads X Layer with a TVL of $56M, significantly outpacing other protocols like Uniswap V3 at $13M and PotatoSwap V2 at $5M. This dominance suggests that Aave V3 is the preferred choice for lending and borrowing on X Layer, while the lower TVLs of the other protocols indicate a less competitive environment for DeFi activities on this chain.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.7742295307387902,
+        "volatility": null
+      },
+      "difficultyScore": 0.2275
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on X Layer?",
+      "choices": [
+        "Uniswap V2",
+        "Uniswap V4",
+        "OkieSwap V3",
+        "Uniswap V3"
+      ],
+      "answerIndex": 3,
+      "explanation": "Uniswap V3 leads on X Layer with a significant volume of $967K, vastly outpacing its closest competitor, Uniswap V4, which only managed $98K. This dominance suggests that users prefer the advanced features of V3, such as concentrated liquidity, over the newer and older versions and other DEXs like OkieSwap V3, which only saw $13K in volume.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.8989517550756905,
+        "volatility": null
+      },
+      "difficultyScore": 0.31750000000000006
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did X Layer hit its all-time high TVL?",
+      "choices": [
+        "Dec 2024",
+        "Oct 2024",
+        "Apr 2026",
+        "May 2026",
+        "May 2025",
+        "Sep 2024"
+      ],
+      "answerIndex": 3,
+      "explanation": "X Layer reached its all-time high (ATH) of $81M in May 2026, which stands out compared to earlier dates like October 2024 and May 2025, when it had not yet achieved such significant growth. This timing suggests that X Layer experienced a notable surge in adoption or market conditions leading up to its peak in 2026.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.5075000000000001
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Near",
+        "Stacks",
+        "MegaETH",
+        "X Layer"
+      ],
+      "answerIndex": 2,
+      "explanation": "MegaETH's impressive growth of 524.8% far outpaces X Layer's 205.3%, which itself is notable compared to Near's modest 9.7% and Stacks' slight decline of 0.9%. This stark difference in growth rates suggests that MegaETH is rapidly gaining traction, possibly due to innovative features or increased user adoption that set it apart from the other chains.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": null
+      },
+      "difficultyScore": 0.37750000000000006
+    }
+  ],
+  "generatedAt": "2026-05-09T00:46:00.490Z"
+}
