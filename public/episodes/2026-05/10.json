@@ -1,0 +1,142 @@
+{
+  "episodeId": "2026-05-10:protocol:venus-core-pool",
+  "dateUtc": "2026-05-10",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "venus-core-pool",
+    "name": "Venus Core Pool",
+    "category": "Lending"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Lending",
+        "Chains: 6-10 chains",
+        ">90% TVL on single chain",
+        "Active since: 2020",
+        "TVL: $1B-$5B",
+        "7d change: roughly flat"
+      ],
+      "choices": [
+        "Venus Core Pool",
+        "Sentora",
+        "JustCryptos",
+        "SparkLend",
+        "Falcon Finance"
+      ],
+      "answerIndex": 0,
+      "explanation": "Venus Core Pool's $1.2B TVL across 8 chains, including Optimism and zkSync Era, showcases its appeal in the lending space, particularly as it taps into both established and emerging Layer 2 solutions. This diverse chain presence allows it to attract a wider user base and leverage the unique benefits of each network, enhancing its overall liquidity and lending capabilities.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.0820240347914538
+      },
+      "difficultyScore": 0.4807024034791454
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Venus Core Pool have higher TVL?",
+      "choices": [
+        "Arbitrum",
+        "Binance"
+      ],
+      "answerIndex": 1,
+      "explanation": "Venus Core Pool has a significant $1.2B TVL on Binance, showcasing its dominance on that chain, while Arbitrum's mere $2M TVL highlights the challenges of attracting liquidity in a more competitive environment. The 100% margin percent indicates that Venus is effectively leveraging its position on Binance to maximize returns compared to its performance on Arbitrum.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9983098287615226,
+        "volatility": 0.0820240347914538
+      },
+      "difficultyScore": 0.2107024034791454
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Venus Core Pool's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 1,
+      "explanation": "The Venus Core Pool generated $33K in revenue over the past week, which is about 16% of the total fees collected at $208K. This revenue-to-fee ratio suggests that while the pool is actively generating income, a significant portion of the fees is likely being used for operational costs or liquidity incentives.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.22892694700604843,
+        "volatility": 0.0820240347914538
+      },
+      "difficultyScore": 0.32599006707188727
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Venus Core Pool hit its all-time high TVL?",
+      "choices": [
+        "Nov 2024",
+        "Jul 2024",
+        "May 2021",
+        "Jul 2021",
+        "Mar 2021",
+        "May 2024"
+      ],
+      "answerIndex": 2,
+      "explanation": "Venus Core Pool hit its all-time high of $7.0B in May 2021, a peak that coincided with a broader DeFi boom, while other months like March 2021 and July 2021 saw significantly lower TVL, indicating that the market was still ramping up. The choices of May 2024 and later are speculative and reflect the uncertainty in future performance, making May 2021 a standout moment in the pool's history.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.0820240347914538
+      },
+      "difficultyScore": 0.4907024034791454
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Venus Core Pool's TVL is on its top chain (Binance)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "The Venus Core Pool is entirely concentrated on the Binance chain, with 99% of its $1.2B TVL coming from this single source. This level of concentration often indicates a strong reliance on one ecosystem, which can lead to both opportunities and risks depending on the chain's performance.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9775136721208422,
+        "volatility": 0.0820240347914538
+      },
+      "difficultyScore": 0.3007024034791454
+    }
+  ],
+  "generatedAt": "2026-05-10T00:49:12.253Z"
+}

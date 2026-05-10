@@ -223,5 +223,30 @@
     "text": "MegaETH's impressive growth of 524.8% far outpaces X Layer's 205.3%, which itself is notable compared to Near's modest 9.7% and Stacks' slight decline of 0.9%. This stark difference in growth rates suggests that MegaETH is rapidly gaining traction, possibly due to innovative features or increased user adoption that set it apart from the other chains.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-09T00:46:00.490Z"
+  },
+  "2026-05-10|protocol|venus-core-pool|A|P1_FINGERPRINT|explanation|4ec110bd7684eb6a": {
+    "text": "Venus Core Pool's $1.2B TVL across 8 chains, including Optimism and zkSync Era, showcases its appeal in the lending space, particularly as it taps into both established and emerging Layer 2 solutions. This diverse chain presence allows it to attract a wider user base and leverage the unique benefits of each network, enhancing its overall liquidity and lending capabilities.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-10T00:49:00.916Z"
+  },
+  "2026-05-10|protocol|venus-core-pool|B|P2_CROSSCHAIN|explanation|1a9652aa4b9e9c12": {
+    "text": "Venus Core Pool has a significant $1.2B TVL on Binance, showcasing its dominance on that chain, while Arbitrum's mere $2M TVL highlights the challenges of attracting liquidity in a more competitive environment. The 100% margin percent indicates that Venus is effectively leveraging its position on Binance to maximize returns compared to its performance on Arbitrum.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-10T00:49:04.824Z"
+  },
+  "2026-05-10|protocol|venus-core-pool|C|P5_FEES_REVENUE|explanation|293c2efac43436e0": {
+    "text": "The Venus Core Pool generated $33K in revenue over the past week, which is about 16% of the total fees collected at $208K. This revenue-to-fee ratio suggests that while the pool is actively generating income, a significant portion of the fees is likely being used for operational costs or liquidity incentives.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-10T00:49:06.908Z"
+  },
+  "2026-05-10|protocol|venus-core-pool|D|P4_ATH_TIMING|explanation|923a6ea89915a13b": {
+    "text": "Venus Core Pool hit its all-time high of $7.0B in May 2021, a peak that coincided with a broader DeFi boom, while other months like March 2021 and July 2021 saw significantly lower TVL, indicating that the market was still ramping up. The choices of May 2024 and later are speculative and reflect the uncertainty in future performance, making May 2021 a standout moment in the pool's history.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-10T00:49:09.348Z"
+  },
+  "2026-05-10|protocol|venus-core-pool|E|P3_CONCENTRATION|explanation|e3126c7930dc84b3": {
+    "text": "The Venus Core Pool is entirely concentrated on the Binance chain, with 99% of its $1.2B TVL coming from this single source. This level of concentration often indicates a strong reliance on one ecosystem, which can lead to both opportunities and risks depending on the chain's performance.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-10T00:49:12.253Z"
   }
 }
