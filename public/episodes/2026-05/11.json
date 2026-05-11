@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-05-11:protocol:compound-v3",
+  "dateUtc": "2026-05-11",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "compound-v3",
+    "name": "Compound V3",
+    "category": "Lending"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Lending",
+        "Chains: 6-10 chains",
+        "TVL: $1B-$5B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Compound V3",
+        "Sentora",
+        "SparkLend",
+        "cap",
+        "Spark Liquidity Layer",
+        "Centrifuge Protocol"
+      ],
+      "answerIndex": 0,
+      "explanation": "Compound V3's $1.3B TVL across 9 chains reflects its strategic expansion into various ecosystems like Optimism and Base, which allows it to tap into diverse user bases and liquidity sources. This multi-chain approach enhances its resilience and adaptability in the competitive lending landscape.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.131917363890854
+      },
+      "difficultyScore": 0.4856917363890854
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Compound V3 have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Arbitrum"
+      ],
+      "answerIndex": 0,
+      "explanation": "Compound V3 has a significant TVL of $1.2B on Ethereum, which dwarfs the $82M on Arbitrum, reflecting Ethereum's dominance in DeFi and the challenges for Layer 2 solutions in attracting liquidity. The 93% margin between the two chains suggests that users still prefer the established security and user base of Ethereum over newer platforms like Arbitrum.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9303928033786243,
+        "volatility": 0.131917363890854
+      },
+      "difficultyScore": 0.21569173638908543
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "tf",
+      "prompt": "Compound V3's fees increased over the past week compared to the week before.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "Compound V3 saw a 9.1% decrease in fees over the past week, dropping from $436K to $396K, which could suggest a decline in user activity or borrowing demand on the platform. This trend is important as it may reflect changing market conditions or user preferences in the DeFi lending space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.09106109885270493,
+        "volatility": 0.131917363890854
+      },
+      "difficultyScore": 0.3164184177658395
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Compound V3 hit its all-time high TVL?",
+      "choices": [
+        "Apr 2025",
+        "Oct 2022",
+        "Feb 2024",
+        "Aug 2025",
+        "Dec 2023",
+        "Jul 2023"
+      ],
+      "answerIndex": 3,
+      "explanation": "Compound V3 reached its all-time high (ATH) of $2.6B in August 2025, a significant milestone that reflects its growth trajectory following the launch of new features. In contrast, earlier dates like October 2022 and July 2023 saw much lower TVL, as the protocol was still gaining traction and adapting to market conditions.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.131917363890854
+      },
+      "difficultyScore": 0.49569173638908537
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Compound V3's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Compound V3's TVL is heavily concentrated on Ethereum, with 89% of its $1.3B total locked on the chain, reflecting the dominance of Ethereum in DeFi and the protocol's reliance on its established user base. This concentration can lead to greater liquidity but also makes Compound more vulnerable to fluctuations in Ethereum's ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5773236193201976,
+        "volatility": 0.131917363890854
+      },
+      "difficultyScore": 0.3056917363890854
+    }
+  ],
+  "generatedAt": "2026-05-11T00:48:53.469Z"
+}

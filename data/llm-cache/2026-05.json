@@ -248,5 +248,30 @@
     "text": "The Venus Core Pool is entirely concentrated on the Binance chain, with 99% of its $1.2B TVL coming from this single source. This level of concentration often indicates a strong reliance on one ecosystem, which can lead to both opportunities and risks depending on the chain's performance.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-10T00:49:12.253Z"
+  },
+  "2026-05-11|protocol|compound-v3|A|P1_FINGERPRINT|explanation|fe35f6b36df58214": {
+    "text": "Compound V3's $1.3B TVL across 9 chains reflects its strategic expansion into various ecosystems like Optimism and Base, which allows it to tap into diverse user bases and liquidity sources. This multi-chain approach enhances its resilience and adaptability in the competitive lending landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-11T00:48:45.450Z"
+  },
+  "2026-05-11|protocol|compound-v3|B|P2_CROSSCHAIN|explanation|f3af221352b681e9": {
+    "text": "Compound V3 has a significant TVL of $1.2B on Ethereum, which dwarfs the $82M on Arbitrum, reflecting Ethereum's dominance in DeFi and the challenges for Layer 2 solutions in attracting liquidity. The 93% margin between the two chains suggests that users still prefer the established security and user base of Ethereum over newer platforms like Arbitrum.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-11T00:48:47.728Z"
+  },
+  "2026-05-11|protocol|compound-v3|C|P11_FEES_TREND|explanation|fe44dbe5fe934eaf": {
+    "text": "Compound V3 saw a 9.1% decrease in fees over the past week, dropping from $436K to $396K, which could suggest a decline in user activity or borrowing demand on the platform. This trend is important as it may reflect changing market conditions or user preferences in the DeFi lending space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-11T00:48:49.750Z"
+  },
+  "2026-05-11|protocol|compound-v3|D|P4_ATH_TIMING|explanation|790bf2d661d33e20": {
+    "text": "Compound V3 reached its all-time high (ATH) of $2.6B in August 2025, a significant milestone that reflects its growth trajectory following the launch of new features. In contrast, earlier dates like October 2022 and July 2023 saw much lower TVL, as the protocol was still gaining traction and adapting to market conditions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-11T00:48:51.190Z"
+  },
+  "2026-05-11|protocol|compound-v3|E|P3_CONCENTRATION|explanation|ca2075b9f41222d7": {
+    "text": "Compound V3's TVL is heavily concentrated on Ethereum, with 89% of its $1.3B total locked on the chain, reflecting the dominance of Ethereum in DeFi and the protocol's reliance on its established user base. This concentration can lead to greater liquidity but also makes Compound more vulnerable to fluctuations in Ethereum's ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-11T00:48:53.469Z"
   }
 }
