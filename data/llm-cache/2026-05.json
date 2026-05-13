@@ -298,5 +298,30 @@
     "text": "MegaETH's impressive growth of +620.3% dwarfs other chains like TON at +65.1% and Sei at +10.4%, highlighting its rapid adoption and potential as a leading player in the DeFi space. In contrast, Sei's more modest growth suggests it may still be in the early stages of development compared to the explosive momentum seen with MegaETH.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-12T00:44:21.947Z"
+  },
+  "2026-05-13|protocol|kinetiq-khype|A|P1_FINGERPRINT|explanation|a8db12ac16422c67": {
+    "text": "Kinetiq kHYPE's $745M TVL on Hyperliquid L1 showcases the growing interest in liquid staking solutions, which allow users to earn rewards while maintaining liquidity. This single-chain focus highlights the potential for specialized ecosystems to attract significant capital in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-13T00:48:48.282Z"
+  },
+  "2026-05-13|protocol|kinetiq-khype|B|P7_CATEGORY|explanation|0618edd4a756becb": {
+    "text": "Kinetiq kHYPE operates in the Liquid Staking category, allowing users to stake their assets while still retaining liquidity, which is crucial for maximizing capital efficiency in DeFi. This approach enables users to earn staking rewards without locking up their tokens, making it an attractive option for those looking to balance yield and flexibility.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-13T00:48:51.002Z"
+  },
+  "2026-05-13|protocol|kinetiq-khype|C|P11_FEES_TREND|explanation|f016886d75ad64d6": {
+    "text": "Kinetiq kHYPE has seen a decline in fees over the past week, dropping from $316K to $278K, which reflects a -11.8% trend. This decrease could suggest reduced trading activity or lower user engagement on the platform, impacting its revenue generation.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-13T00:48:52.726Z"
+  },
+  "2026-05-13|protocol|kinetiq-khype|D|P4_ATH_TIMING|explanation|897a97caaefeb779": {
+    "text": "Kinetiq kHYPE reached its all-time high (ATH) of $2.3B in September 2025, a notable milestone that preceded the other options like January and October 2026, which reflect a period of market adjustment rather than peak performance. This timing suggests that Kinetiq's growth trajectory was particularly strong just before the market faced broader challenges.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-13T00:48:55.343Z"
+  },
+  "2026-05-13|protocol|kinetiq-khype|E|P8_CHAIN_MEMBERSHIP|explanation|1853c7a227ec76c8": {
+    "text": "Kinetiq kHYPE operates solely on the Hyperliquid L1, which allows it to optimize performance and user experience by leveraging the unique features of that specific chain. This focused approach can lead to more efficient transactions and lower fees compared to multi-chain protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-13T00:48:56.397Z"
   }
 }
