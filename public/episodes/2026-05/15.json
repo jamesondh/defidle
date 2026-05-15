@@ -1,0 +1,138 @@
+{
+  "episodeId": "2026-05-15:protocol:avalon-usda",
+  "dateUtc": "2026-05-15",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "avalon-usda",
+    "name": "Avalon USDa",
+    "category": "CDP"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: CDP",
+        "Chains: 6-10 chains",
+        "TVL spread across chains (no chain >50%)",
+        "TVL: $100M-$500M",
+        "7d change: roughly flat"
+      ],
+      "choices": [
+        "Venus Core Pool",
+        "Lista CDP",
+        "Avalon USDa",
+        "USDD"
+      ],
+      "answerIndex": 2,
+      "explanation": "Avalon USDa operates as a collateralized debt position (CDP) across six chains, with its $442M TVL indicating a strong presence in both established and emerging ecosystems like Ethereum and Klaytn. This diverse chain strategy allows it to tap into different user bases and liquidity pools, enhancing its overall stability and adoption.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.11985049249019815
+      },
+      "difficultyScore": 0.3944850492490199
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Avalon USDa have higher TVL?",
+      "choices": [
+        "Binance",
+        "Move"
+      ],
+      "answerIndex": 0,
+      "explanation": "Avalon USDa's $197M TVL on Binance outpaces the $157M on Move, reflecting Binance's stronger user adoption and liquidity compared to Move, which is still establishing its presence in the DeFi space. The 20% margin indicates that while both chains are competitive, Binance is currently the preferred choice for users seeking stablecoin options.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.2009431286824698,
+        "volatility": 0.11985049249019815
+      },
+      "difficultyScore": 0.27335329483005605
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Avalon USDa's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 1,
+      "explanation": "Avalon USDa's current TVL of $442M is 35% below its all-time high of $683M, indicating that while it has seen significant growth, it still has room to recover to its peak levels. This distance suggests potential volatility in user engagement or market conditions affecting its liquidity.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.40791900118397817,
+        "volatility": 0.11985049249019815
+      },
+      "difficultyScore": 0.36448504924901987
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these CDP protocols from highest to lowest TVL.",
+      "choices": [
+        "Liquity V2 > USDD > Avalon USDa",
+        "Avalon USDa > USDD > Liquity V2",
+        "USDD > Avalon USDa > Liquity V2",
+        "Liquity V2 > Avalon USDa > USDD"
+      ],
+      "answerIndex": 2,
+      "explanation": "Avalon USDa's $442M TVL positions it as a strong player in the CDP category, but it still lags behind USDD, which boasts $1.4B, indicating a significant lead in user adoption and liquidity. This difference suggests that USDD has established a more robust ecosystem or user trust compared to Avalon USDa and Liquity V2, which has only $110M in TVL.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.6905027640534556,
+        "volatility": 0.11985049249019815
+      },
+      "difficultyScore": 0.40448504924901985
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Avalon USDa's TVL is on its top chain (Binance)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 1,
+      "explanation": "Avalon USDa's TVL is heavily concentrated on Binance, which accounts for 44% of its total $442M TVL, reflecting the platform's reliance on this chain for liquidity and user engagement. This concentration can indicate both a strong community on Binance and potential vulnerability if users shift to other chains.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.22230558213481566,
+        "volatility": 0.11985049249019815
+      },
+      "difficultyScore": 0.3377183506872411
+    }
+  ],
+  "generatedAt": "2026-05-15T00:48:07.489Z"
+}

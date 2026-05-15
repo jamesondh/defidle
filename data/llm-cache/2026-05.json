@@ -323,5 +323,30 @@
     "text": "Kinetiq kHYPE operates solely on the Hyperliquid L1, which allows it to optimize performance and user experience by leveraging the unique features of that specific chain. This focused approach can lead to more efficient transactions and lower fees compared to multi-chain protocols.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-13T00:48:56.397Z"
+  },
+  "2026-05-15|protocol|avalon-usda|A|P1_FINGERPRINT|explanation|64350da5dc77f28a": {
+    "text": "Avalon USDa operates as a collateralized debt position (CDP) across six chains, with its $442M TVL indicating a strong presence in both established and emerging ecosystems like Ethereum and Klaytn. This diverse chain strategy allows it to tap into different user bases and liquidity pools, enhancing its overall stability and adoption.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-15T00:47:59.033Z"
+  },
+  "2026-05-15|protocol|avalon-usda|B|P2_CROSSCHAIN|explanation|a87d991ff097cd6f": {
+    "text": "Avalon USDa's $197M TVL on Binance outpaces the $157M on Move, reflecting Binance's stronger user adoption and liquidity compared to Move, which is still establishing its presence in the DeFi space. The 20% margin indicates that while both chains are competitive, Binance is currently the preferred choice for users seeking stablecoin options.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-15T00:48:01.349Z"
+  },
+  "2026-05-15|protocol|avalon-usda|C|P20_ATH_DISTANCE|explanation|1f1d4e97454137e6": {
+    "text": "Avalon USDa's current TVL of $442M is 35% below its all-time high of $683M, indicating that while it has seen significant growth, it still has room to recover to its peak levels. This distance suggests potential volatility in user engagement or market conditions affecting its liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-15T00:48:03.753Z"
+  },
+  "2026-05-15|protocol|avalon-usda|D|P33_MULTI_RANKING|explanation|5fa676a2aff66d83": {
+    "text": "Avalon USDa's $442M TVL positions it as a strong player in the CDP category, but it still lags behind USDD, which boasts $1.4B, indicating a significant lead in user adoption and liquidity. This difference suggests that USDD has established a more robust ecosystem or user trust compared to Avalon USDa and Liquity V2, which has only $110M in TVL.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-15T00:48:05.746Z"
+  },
+  "2026-05-15|protocol|avalon-usda|E|P3_CONCENTRATION|explanation|5b31e3cb882f51a3": {
+    "text": "Avalon USDa's TVL is heavily concentrated on Binance, which accounts for 44% of its total $442M TVL, reflecting the platform's reliance on this chain for liquidity and user engagement. This concentration can indicate both a strong community on Binance and potential vulnerability if users shift to other chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-15T00:48:07.488Z"
   }
 }
