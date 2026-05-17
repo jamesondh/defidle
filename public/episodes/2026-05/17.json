@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-05-17:protocol:euler-v2",
+  "dateUtc": "2026-05-17",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "euler-v2",
+    "name": "Euler V2",
+    "category": "Lending"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Lending",
+        "Chains: 10+ chains",
+        "TVL: $100M-$500M",
+        "7d change: down >10%"
+      ],
+      "choices": [
+        "Morpho Blue",
+        "cap",
+        "Euler V2",
+        "Veda"
+      ],
+      "answerIndex": 2,
+      "explanation": "Euler V2's $327M TVL across 16 chains, including Mantle and Ethereum, showcases its ability to attract liquidity in a competitive lending market, particularly as it expands into newer ecosystems like Base and Berachain. This diverse chain presence helps mitigate risk and enhances user accessibility, which is crucial for growth in DeFi lending.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.37113556261701386
+      },
+      "difficultyScore": 0.41961355626170144
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Euler V2 have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Monad"
+      ],
+      "answerIndex": 0,
+      "explanation": "Euler V2 has a significant edge on Ethereum with $207M TVL compared to Monad's $72M, reflecting Ethereum's established user base and liquidity. The 65% margin indicates a strong preference for Ethereum, likely due to its robust DeFi ecosystem and network effects that attract more capital.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.6535018301668322,
+        "volatility": 0.37113556261701386
+      },
+      "difficultyScore": 0.2396135562617014
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Euler V2's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Euler V2 generated $491K in fees over the past week, but only $22K of that translated into revenue, reflecting a revenue conversion rate of just 4.6%. This low percentage suggests that while the protocol is attracting significant trading activity, its fee structure or operational costs may be limiting profitability.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.21702502794342501,
+        "volatility": 0.37113556261701386
+      },
+      "difficultyScore": 0.3691835227295914
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Euler V2 hit its all-time high TVL?",
+      "choices": [
+        "Oct 2024",
+        "Oct 2025",
+        "Jun 2025",
+        "Sep 2024",
+        "Nov 2025",
+        "Aug 2024"
+      ],
+      "answerIndex": 1,
+      "explanation": "Euler V2 hit its all-time high (ATH) of $2.2B in October 2025, a notable achievement that came after a period of growth and innovation in the DeFi space. In contrast, the other options like August 2024 and June 2025 were earlier dates that did not capture the peak momentum Euler V2 experienced, highlighting the timing of market conditions and user adoption leading up to that ATH.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.37113556261701386
+      },
+      "difficultyScore": 0.5196135562617014
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Euler V2's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 2,
+      "explanation": "Euler V2's TVL shows a significant concentration, with 63% of its $327M locked on Ethereum, where it has $207M. This heavy reliance on Ethereum suggests that the protocol benefits from the network's liquidity and user base, but it also exposes Euler to risks associated with Ethereum's performance and scalability challenges.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4673613125240603,
+        "volatility": 0.37113556261701386
+      },
+      "difficultyScore": 0.3296135562617014
+    }
+  ],
+  "generatedAt": "2026-05-17T00:49:50.029Z"
+}

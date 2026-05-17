@@ -373,5 +373,30 @@
     "text": "SUNSwap V3 leads Tron with a significant $35M in volume, far surpassing its predecessors, SUNSwap V2 at $2M and SUNSwap V1 at just $215K. This stark difference highlights how V3 has likely improved features or liquidity, making it the go-to DEX on Tron.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-16T00:44:56.909Z"
+  },
+  "2026-05-17|protocol|euler-v2|A|P1_FINGERPRINT|explanation|1f1fe377552e8c6a": {
+    "text": "Euler V2's $327M TVL across 16 chains, including Mantle and Ethereum, showcases its ability to attract liquidity in a competitive lending market, particularly as it expands into newer ecosystems like Base and Berachain. This diverse chain presence helps mitigate risk and enhances user accessibility, which is crucial for growth in DeFi lending.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-17T00:49:43.301Z"
+  },
+  "2026-05-17|protocol|euler-v2|B|P2_CROSSCHAIN|explanation|cae548b4c918f6ab": {
+    "text": "Euler V2 has a significant edge on Ethereum with $207M TVL compared to Monad's $72M, reflecting Ethereum's established user base and liquidity. The 65% margin indicates a strong preference for Ethereum, likely due to its robust DeFi ecosystem and network effects that attract more capital.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-17T00:49:45.452Z"
+  },
+  "2026-05-17|protocol|euler-v2|C|P5_FEES_REVENUE|explanation|c1b169ba5a1db4f2": {
+    "text": "Euler V2 generated $491K in fees over the past week, but only $22K of that translated into revenue, reflecting a revenue conversion rate of just 4.6%. This low percentage suggests that while the protocol is attracting significant trading activity, its fee structure or operational costs may be limiting profitability.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-17T00:49:46.963Z"
+  },
+  "2026-05-17|protocol|euler-v2|D|P4_ATH_TIMING|explanation|304a625d71996958": {
+    "text": "Euler V2 hit its all-time high (ATH) of $2.2B in October 2025, a notable achievement that came after a period of growth and innovation in the DeFi space. In contrast, the other options like August 2024 and June 2025 were earlier dates that did not capture the peak momentum Euler V2 experienced, highlighting the timing of market conditions and user adoption leading up to that ATH.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-17T00:49:48.480Z"
+  },
+  "2026-05-17|protocol|euler-v2|E|P3_CONCENTRATION|explanation|d1d652f55b92c9de": {
+    "text": "Euler V2's TVL shows a significant concentration, with 63% of its $327M locked on Ethereum, where it has $207M. This heavy reliance on Ethereum suggests that the protocol benefits from the network's liquidity and user base, but it also exposes Euler to risks associated with Ethereum's performance and scalability challenges.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-17T00:49:50.029Z"
   }
 }
