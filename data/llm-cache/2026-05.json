@@ -398,5 +398,30 @@
     "text": "Euler V2's TVL shows a significant concentration, with 63% of its $327M locked on Ethereum, where it has $207M. This heavy reliance on Ethereum suggests that the protocol benefits from the network's liquidity and user base, but it also exposes Euler to risks associated with Ethereum's performance and scalability challenges.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-17T00:49:50.029Z"
+  },
+  "2026-05-18|protocol|liquid-collective|A|P1_FINGERPRINT|explanation|5136a25e23833533": {
+    "text": "Liquid Collective's $765M TVL on Ethereum reflects its strong position in the liquid staking category, where users can earn rewards on staked assets while maintaining liquidity. This single-chain focus allows for streamlined operations and potentially lower complexity compared to multi-chain protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-18T00:50:30.052Z"
+  },
+  "2026-05-18|protocol|liquid-collective|B|P7_CATEGORY|explanation|5989b6c0e7442191": {
+    "text": "Liquid Collective operates in the liquid staking category, allowing users to stake their assets while still maintaining liquidity. This model is increasingly popular as it enables stakers to earn rewards without locking up their tokens, providing flexibility in managing their investments.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-18T00:50:32.532Z"
+  },
+  "2026-05-18|protocol|liquid-collective|C|P20_ATH_DISTANCE|explanation|73dce9e79f9b3019": {
+    "text": "Liquid Collective's current TVL of $765M is 57% below its all-time high of $1.8B, indicating a significant drop that may reflect shifts in user interest or market conditions affecting liquid staking protocols. This distance from ATH places it in the 50-75% range, suggesting it has room for recovery if market sentiment improves.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-18T00:50:33.928Z"
+  },
+  "2026-05-18|protocol|liquid-collective|D|P33_MULTI_RANKING|explanation|08507f91725e1123": {
+    "text": "Liquid Collective's $765M TVL positions it as a significant player in the liquid staking category, but it still trails behind Binance staked ETH's $8.0B and Jito Liquid Staking's $845M. This distribution reflects how established platforms like Binance dominate the market, while newer entrants like Liquid Collective are still building their user base and liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-18T00:50:35.817Z"
+  },
+  "2026-05-18|protocol|liquid-collective|E|P8_CHAIN_MEMBERSHIP|explanation|e4f832f1f1d62ff8": {
+    "text": "Liquid Collective operates solely on Ethereum, which allows it to leverage the network's robust infrastructure and liquidity. This single-chain focus can enhance efficiency but may limit its exposure to the diverse user bases found on multiple chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-18T00:50:37.361Z"
   }
 }
