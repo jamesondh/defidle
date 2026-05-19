@@ -423,5 +423,30 @@
     "text": "Liquid Collective operates solely on Ethereum, which allows it to leverage the network's robust infrastructure and liquidity. This single-chain focus can enhance efficiency but may limit its exposure to the diverse user bases found on multiple chains.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-18T00:50:37.361Z"
+  },
+  "2026-05-19|chain|Aptos|A|C1_FINGERPRINT|explanation|4ed98c038f6014ee": {
+    "text": "Aptos ranks 19th in TVL with between $100M and $500M, reflecting its growing ecosystem of 93 protocols, which is typical for newer chains as they attract developers and projects. This level of protocol diversity suggests a healthy foundation for future growth and innovation on the platform.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-19T00:51:46.403Z"
+  },
+  "2026-05-19|chain|Aptos|B|C2_CHAIN_COMPARISON|explanation|8395d4f15e171005": {
+    "text": "Aptos leads Starknet with $245M in TVL, reflecting an 18.6% margin that suggests stronger user adoption or liquidity incentives on Aptos compared to Starknet. This difference may be influenced by Aptos's focus on scalability and developer-friendly features, attracting more projects and users.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-19T00:51:48.225Z"
+  },
+  "2026-05-19|chain|Aptos|C|C4_GROWTH_RANKING|explanation|e1f0eeb8935075a9": {
+    "text": "Aptos saw a significant decline of -16.2%, contrasting sharply with TON's impressive growth of +25.9%. While Tron managed a slight increase of +1.0% and Stacks fell by -3.1%, Aptos's drop highlights challenges it faces in attracting users compared to the stronger performance of TON.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-19T00:51:49.695Z"
+  },
+  "2026-05-19|chain|Aptos|D|C3_ATH_TIMING|explanation|af75017057859195": {
+    "text": "Aptos reached its all-time high (ATH) of $1.3B in December 2024, a notable spike compared to the later dates like August 2025 and February 2026, which reflect a period of market consolidation rather than explosive growth. This timing suggests that Aptos capitalized on a unique market opportunity, distinguishing itself from other projects that struggled to achieve similar momentum in the following months.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-19T00:51:51.691Z"
+  },
+  "2026-05-19|chain|Aptos|E|C6_TOP_DEX|explanation|2d735a6d406470a9": {
+    "text": "ThalaSwap V3 leads Aptos with a substantial $22M in volume, significantly outpacing its nearest competitor, Hyperion, which only managed $6M. This stark difference highlights ThalaSwap's dominance in the ecosystem, as the other DEXs like Tapp Exchange and Caliber are far behind with volumes of just $126K and $64K, respectively.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-19T00:51:54.177Z"
   }
 }

@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-05-19:chain:Aptos",
+  "dateUtc": "2026-05-19",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Aptos",
+    "name": "Aptos"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: APT",
+        "Protocols: 50-100"
+      ],
+      "choices": [
+        "Starknet",
+        "ENI",
+        "Monad",
+        "OP Mainnet",
+        "Aptos",
+        "Cardano"
+      ],
+      "answerIndex": 4,
+      "explanation": "Aptos ranks 19th in TVL with between $100M and $500M, reflecting its growing ecosystem of 93 protocols, which is typical for newer chains as they attract developers and projects. This level of protocol diversity suggests a healthy foundation for future growth and innovation on the platform.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Aptos or Starknet?",
+      "choices": [
+        "Starknet",
+        "Aptos"
+      ],
+      "answerIndex": 1,
+      "explanation": "Aptos leads Starknet with $245M in TVL, reflecting an 18.6% margin that suggests stronger user adoption or liquidity incentives on Aptos compared to Starknet. This difference may be influenced by Aptos's focus on scalability and developer-friendly features, attracting more projects and users.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.18619418439280488,
+        "volatility": null
+      },
+      "difficultyScore": 0.2860669787286342
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "TON",
+        "Aptos",
+        "Tron",
+        "Stacks"
+      ],
+      "answerIndex": 0,
+      "explanation": "Aptos saw a significant decline of -16.2%, contrasting sharply with TON's impressive growth of +25.9%. While Tron managed a slight increase of +1.0% and Stacks fell by -3.1%, Aptos's drop highlights challenges it faces in attracting users compared to the stronger performance of TON.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.24875156470928914,
+        "volatility": null
+      },
+      "difficultyScore": 0.3609981223488531
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Aptos hit its all-time high TVL?",
+      "choices": [
+        "Aug 2025",
+        "Jun 2024",
+        "Oct 2024",
+        "Apr 2026",
+        "Dec 2024",
+        "Feb 2026"
+      ],
+      "answerIndex": 4,
+      "explanation": "Aptos reached its all-time high (ATH) of $1.3B in December 2024, a notable spike compared to the later dates like August 2025 and February 2026, which reflect a period of market consolidation rather than explosive growth. This timing suggests that Aptos capitalized on a unique market opportunity, distinguishing itself from other projects that struggled to achieve similar momentum in the following months.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Aptos?",
+      "choices": [
+        "ThalaSwap V3",
+        "Tapp Exchange",
+        "Hyperion",
+        "Caliber"
+      ],
+      "answerIndex": 0,
+      "explanation": "ThalaSwap V3 leads Aptos with a substantial $22M in volume, significantly outpacing its nearest competitor, Hyperion, which only managed $6M. This stark difference highlights ThalaSwap's dominance in the ecosystem, as the other DEXs like Tapp Exchange and Caliber are far behind with volumes of just $126K and $64K, respectively.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.7212884054992937,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-05-19T00:51:54.177Z"
+}
