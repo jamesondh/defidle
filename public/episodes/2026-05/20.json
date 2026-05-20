@@ -1,0 +1,142 @@
+{
+  "episodeId": "2026-05-20:protocol:pendle",
+  "dateUtc": "2026-05-20",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "pendle",
+    "name": "Pendle",
+    "category": "Yield"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Yield",
+        "Chains: 10+ chains",
+        "Active since: 2021",
+        "TVL: $1B-$5B",
+        "7d change: up >10%"
+      ],
+      "choices": [
+        "Convex Finance",
+        "Multipli.fi",
+        "Grove Finance",
+        "Pendle",
+        "Paxos Gold",
+        "Base Bridge"
+      ],
+      "answerIndex": 3,
+      "explanation": "Pendle's $1.6B TVL across 11 chains showcases its versatility in yield generation, with significant contributions from Ethereum and newer chains like Berachain and Sonic, reflecting a growing interest in innovative yield strategies across diverse ecosystems. This distribution suggests that Pendle is effectively tapping into both established and emerging markets within DeFi.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.19966539702781966
+      },
+      "difficultyScore": 0.492466539702782
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Pendle have higher TVL?",
+      "choices": [
+        "Arbitrum",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Pendle's TVL on Ethereum at $1.1B dwarfs its $147M on Arbitrum, showcasing a significant 87% margin that reflects Ethereum's dominance in DeFi and the challenges of attracting liquidity to Layer 2 solutions. This disparity often stems from Ethereum's established user base and broader ecosystem support compared to newer chains.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.8699690376858357,
+        "volatility": 0.19966539702781966
+      },
+      "difficultyScore": 0.222466539702782
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Pendle's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Pendle generated $182K in fees over the past week, with an impressive 98% of that translating into revenue, indicating strong operational efficiency and a healthy demand for its yield tokenization services. This close alignment between fees and revenue suggests that Pendle is effectively monetizing its user activity.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0.19966539702781966
+      },
+      "difficultyScore": 0.312466539702782
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Pendle hit its all-time high TVL?",
+      "choices": [
+        "Oct 2022",
+        "Jul 2024",
+        "Dec 2021",
+        "Sep 2025",
+        "Nov 2022",
+        "Jun 2024"
+      ],
+      "answerIndex": 3,
+      "explanation": "Pendle reached its all-time high (ATH) of $13.4B in September 2025, significantly later than the other options like December 2021 and October 2022, which were periods of broader market volatility and uncertainty. This timing suggests Pendle's growth was driven by unique developments or market conditions that differentiated it from the earlier months when many DeFi projects faced challenges.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.19966539702781966
+      },
+      "difficultyScore": 0.502466539702782
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Pendle deployed on?",
+      "choices": [
+        "Polygon",
+        "Ethereum",
+        "Solana",
+        "BSC"
+      ],
+      "answerIndex": 1,
+      "explanation": "Pendle operates across 11 chains, including Ethereum, Avalanche, and Optimism, which allows it to tap into diverse liquidity pools and user bases. This multi-chain approach enhances its utility and accessibility, making it easier for users to tokenize and trade yield-bearing assets across different ecosystems.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.19966539702781966
+      },
+      "difficultyScore": 0.312466539702782
+    }
+  ],
+  "generatedAt": "2026-05-20T00:53:40.061Z"
+}

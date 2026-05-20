@@ -448,5 +448,30 @@
     "text": "ThalaSwap V3 leads Aptos with a substantial $22M in volume, significantly outpacing its nearest competitor, Hyperion, which only managed $6M. This stark difference highlights ThalaSwap's dominance in the ecosystem, as the other DEXs like Tapp Exchange and Caliber are far behind with volumes of just $126K and $64K, respectively.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-19T00:51:54.177Z"
+  },
+  "2026-05-20|protocol|pendle|A|P1_FINGERPRINT|explanation|78d4774aeca78af8": {
+    "text": "Pendle's $1.6B TVL across 11 chains showcases its versatility in yield generation, with significant contributions from Ethereum and newer chains like Berachain and Sonic, reflecting a growing interest in innovative yield strategies across diverse ecosystems. This distribution suggests that Pendle is effectively tapping into both established and emerging markets within DeFi.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-20T00:53:31.231Z"
+  },
+  "2026-05-20|protocol|pendle|B|P2_CROSSCHAIN|explanation|ca0c12b371928022": {
+    "text": "Pendle's TVL on Ethereum at $1.1B dwarfs its $147M on Arbitrum, showcasing a significant 87% margin that reflects Ethereum's dominance in DeFi and the challenges of attracting liquidity to Layer 2 solutions. This disparity often stems from Ethereum's established user base and broader ecosystem support compared to newer chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-20T00:53:33.791Z"
+  },
+  "2026-05-20|protocol|pendle|C|P5_FEES_REVENUE|explanation|24c69ce21770ff56": {
+    "text": "Pendle generated $182K in fees over the past week, with an impressive 98% of that translating into revenue, indicating strong operational efficiency and a healthy demand for its yield tokenization services. This close alignment between fees and revenue suggests that Pendle is effectively monetizing its user activity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-20T00:53:35.663Z"
+  },
+  "2026-05-20|protocol|pendle|D|P4_ATH_TIMING|explanation|7dabbb9d24fd0568": {
+    "text": "Pendle reached its all-time high (ATH) of $13.4B in September 2025, significantly later than the other options like December 2021 and October 2022, which were periods of broader market volatility and uncertainty. This timing suggests Pendle's growth was driven by unique developments or market conditions that differentiated it from the earlier months when many DeFi projects faced challenges.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-20T00:53:38.478Z"
+  },
+  "2026-05-20|protocol|pendle|E|P8_CHAIN_MEMBERSHIP|explanation|5c9ac1238c7d900b": {
+    "text": "Pendle operates across 11 chains, including Ethereum, Avalanche, and Optimism, which allows it to tap into diverse liquidity pools and user bases. This multi-chain approach enhances its utility and accessibility, making it easier for users to tokenize and trade yield-bearing assets across different ecosystems.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-20T00:53:40.060Z"
   }
 }
