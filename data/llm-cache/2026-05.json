@@ -498,5 +498,30 @@
     "text": "SUNSwap V3 leads Tron with $33M in volume, significantly outpacing SUNSwap V2 at $11M and SUNSwap V1, which only managed $172K. This stark contrast highlights SUNSwap V3's dominance in the Tron ecosystem, as other options like UniFi are struggling to generate any trading activity at all.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-21T00:53:11.640Z"
+  },
+  "2026-05-22|protocol|blackrock-buidl|A|P1_FINGERPRINT|explanation|e6b2bc19742d66f0": {
+    "text": "BlackRock BUIDL's $3.1B TVL across 8 chains, including major players like Ethereum and Solana, showcases its strong foothold in the RWA (real-world assets) sector, which is increasingly attracting institutional interest. This diverse chain presence indicates a strategic approach to leverage different ecosystems for liquidity and user engagement.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-22T00:51:07.284Z"
+  },
+  "2026-05-22|protocol|blackrock-buidl|B|P2_CROSSCHAIN|explanation|c1bd3e0492920c49": {
+    "text": "BlackRock BUIDL saw Ethereum outperform Solana with a TVL of $1.1B compared to Solana's $603M, reflecting Ethereum's continued dominance in the DeFi space and its ability to attract more liquidity. The 45% margin indicates a significant preference for Ethereum's ecosystem, likely driven by its established infrastructure and broader developer support.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-22T00:51:09.632Z"
+  },
+  "2026-05-22|protocol|blackrock-buidl|C|P5_FEES_REVENUE|explanation|0f18c27a2923a8e5": {
+    "text": "BlackRock BUIDL generated $700K in fees over the past week, with $96K of that amount translating into revenue, which means they retain about 14% of the fees as profit. This ratio suggests a relatively efficient fee structure, allowing them to maintain a healthy revenue stream while still attracting significant user activity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-22T00:51:10.915Z"
+  },
+  "2026-05-22|protocol|blackrock-buidl|D|P4_ATH_TIMING|explanation|6040d760f20e14ff": {
+    "text": "BlackRock BUIDL reached its ATH of $3.2B in May 2026, which is notable as it came after several earlier dates like July 2024 and March 2025, when the platform had not yet achieved such significant growth. This timing suggests that the project gained momentum and user interest leading up to its peak, reflecting broader market trends and adoption in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-22T00:51:12.281Z"
+  },
+  "2026-05-22|protocol|blackrock-buidl|E|P3_CONCENTRATION|explanation|f994cd81261e125c": {
+    "text": "BlackRock BUIDL's $3.1B TVL shows a strong concentration in Ethereum, which accounts for 35% of its total TVL at $1.1B. This focus on Ethereum reflects the chain's dominance in DeFi, attracting significant institutional interest and investment.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-22T00:51:13.213Z"
   }
 }

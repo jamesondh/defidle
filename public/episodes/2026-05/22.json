@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-05-22:protocol:blackrock-buidl",
+  "dateUtc": "2026-05-22",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "blackrock-buidl",
+    "name": "BlackRock BUIDL",
+    "category": "RWA"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: RWA",
+        "Chains: 6-10 chains",
+        "TVL spread across chains (no chain >50%)",
+        "TVL rank: top 25"
+      ],
+      "choices": [
+        "EigenCloud",
+        "Hastra",
+        "BlackRock BUIDL",
+        "USDT0",
+        "Ethena USDe",
+        "WisdomTree"
+      ],
+      "answerIndex": 2,
+      "explanation": "BlackRock BUIDL's $3.1B TVL across 8 chains, including major players like Ethereum and Solana, showcases its strong foothold in the RWA (real-world assets) sector, which is increasingly attracting institutional interest. This diverse chain presence indicates a strategic approach to leverage different ecosystems for liquidity and user engagement.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.12350380828762113
+      },
+      "difficultyScore": 0.4668503808287621
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does BlackRock BUIDL have higher TVL?",
+      "choices": [
+        "Solana",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "BlackRock BUIDL saw Ethereum outperform Solana with a TVL of $1.1B compared to Solana's $603M, reflecting Ethereum's continued dominance in the DeFi space and its ability to attract more liquidity. The 45% margin indicates a significant preference for Ethereum's ecosystem, likely driven by its established infrastructure and broader developer support.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.4474674742799581,
+        "volatility": 0.12350380828762113
+      },
+      "difficultyScore": 0.1968503808287621
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of BlackRock BUIDL's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 1,
+      "explanation": "BlackRock BUIDL generated $700K in fees over the past week, with $96K of that amount translating into revenue, which means they retain about 14% of the fees as profit. This ratio suggests a relatively efficient fee structure, allowing them to maintain a healthy revenue stream while still attracting significant user activity.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.1486853692288338,
+        "volatility": 0.12350380828762113
+      },
+      "difficultyScore": 0.4084279377541616
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did BlackRock BUIDL hit its all-time high TVL?",
+      "choices": [
+        "Oct 2025",
+        "Jul 2024",
+        "Jan 2025",
+        "Mar 2025",
+        "Jun 2025",
+        "May 2026"
+      ],
+      "answerIndex": 5,
+      "explanation": "BlackRock BUIDL reached its ATH of $3.2B in May 2026, which is notable as it came after several earlier dates like July 2024 and March 2025, when the platform had not yet achieved such significant growth. This timing suggests that the project gained momentum and user interest leading up to its peak, reflecting broader market trends and adoption in the DeFi space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": 0.12350380828762113
+      },
+      "difficultyScore": 0.4768503808287622
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of BlackRock BUIDL's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 1,
+      "explanation": "BlackRock BUIDL's $3.1B TVL shows a strong concentration in Ethereum, which accounts for 35% of its total TVL at $1.1B. This focus on Ethereum reflects the chain's dominance in DeFi, attracting significant institutional interest and investment.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.4189290538707302,
+        "volatility": 0.12350380828762113
+      },
+      "difficultyScore": 0.28685038082876213
+    }
+  ],
+  "generatedAt": "2026-05-22T00:51:13.213Z"
+}
