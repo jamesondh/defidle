@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-05-23:chain:TON",
+  "dateUtc": "2026-05-23",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "TON",
+    "name": "TON"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Native token: TON",
+        "Protocols: 50-100",
+        "TVL: $50M-$100M",
+        "30d trend: up >10%"
+      ],
+      "choices": [
+        "Cardano",
+        "Flare",
+        "Katana",
+        "TON"
+      ],
+      "answerIndex": 3,
+      "explanation": "TON's TVL of $50M-$100M and its rank of 34 suggest it's still in the early stages of adoption compared to larger DeFi ecosystems, but with 90 protocols, it shows a growing interest and potential for innovation within its network. This diverse range of protocols can drive user engagement and liquidity as developers explore various use cases.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4075000000000001
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: TON or Hedera?",
+      "choices": [
+        "Hedera",
+        "TON"
+      ],
+      "answerIndex": 1,
+      "explanation": "TON's $77M TVL surpasses Hedera's $59M by 22.3%, reflecting stronger user adoption and liquidity in its DeFi ecosystem. This difference may stem from TON's unique features and community engagement that attract more developers and users compared to Hedera.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.22306698879447345,
+        "volatility": null
+      },
+      "difficultyScore": 0.2598196134466319
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on TON?",
+      "choices": [
+        "TONCO",
+        "GasPump",
+        "STON.fi",
+        "DeDust"
+      ],
+      "answerIndex": 2,
+      "explanation": "STON.fi leads the TON ecosystem with a solid $5M in volume, significantly outpacing its nearest competitor, DeDust, which only managed $1M. This stark difference illustrates STON.fi's dominant position in the market, as the other DEXs like TONCO and GasPump barely register with volumes of $151K and $4K, respectively.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.7387133269524084,
+        "volatility": null
+      },
+      "difficultyScore": 0.31750000000000006
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did TON hit its all-time high TVL?",
+      "choices": [
+        "May 2024",
+        "Mar 2024",
+        "Nov 2023",
+        "Jul 2024",
+        "Feb 2024",
+        "Aug 2024"
+      ],
+      "answerIndex": 3,
+      "explanation": "TON reached its all-time high (ATH) of $778M in July 2024, a significant jump compared to earlier months like November 2023 and March 2024, when its TVL was considerably lower. This timing suggests that TON experienced a surge in user activity or adoption leading up to its peak, distinguishing it from the earlier months when interest was still building.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.5075000000000001
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "ab",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Base",
+        "Cardano",
+        "Sui",
+        "TON"
+      ],
+      "answerIndex": 3,
+      "explanation": "TON's impressive 25.9% growth outpaces other chains like Base, which saw a modest 6.5% increase, and Sui and Cardano, both experiencing declines. This significant surge suggests strong momentum and adoption for TON, making it a standout performer in the current DeFi landscape.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.19378530509987257,
+        "volatility": null
+      },
+      "difficultyScore": 0.35495763388015295
+    }
+  ],
+  "generatedAt": "2026-05-23T00:49:36.985Z"
+}

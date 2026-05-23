@@ -523,5 +523,30 @@
     "text": "BlackRock BUIDL's $3.1B TVL shows a strong concentration in Ethereum, which accounts for 35% of its total TVL at $1.1B. This focus on Ethereum reflects the chain's dominance in DeFi, attracting significant institutional interest and investment.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-22T00:51:13.213Z"
+  },
+  "2026-05-23|chain|TON|A|C1_FINGERPRINT|explanation|76d78645b5fcc153": {
+    "text": "TON's TVL of $50M-$100M and its rank of 34 suggest it's still in the early stages of adoption compared to larger DeFi ecosystems, but with 90 protocols, it shows a growing interest and potential for innovation within its network. This diverse range of protocols can drive user engagement and liquidity as developers explore various use cases.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-23T00:49:29.425Z"
+  },
+  "2026-05-23|chain|TON|B|C2_CHAIN_COMPARISON|explanation|42177dfc6729e15f": {
+    "text": "TON's $77M TVL surpasses Hedera's $59M by 22.3%, reflecting stronger user adoption and liquidity in its DeFi ecosystem. This difference may stem from TON's unique features and community engagement that attract more developers and users compared to Hedera.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-23T00:49:30.884Z"
+  },
+  "2026-05-23|chain|TON|C|C6_TOP_DEX|explanation|cbfd25617ff2d236": {
+    "text": "STON.fi leads the TON ecosystem with a solid $5M in volume, significantly outpacing its nearest competitor, DeDust, which only managed $1M. This stark difference illustrates STON.fi's dominant position in the market, as the other DEXs like TONCO and GasPump barely register with volumes of $151K and $4K, respectively.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-23T00:49:32.576Z"
+  },
+  "2026-05-23|chain|TON|D|C3_ATH_TIMING|explanation|7244fb05a722808e": {
+    "text": "TON reached its all-time high (ATH) of $778M in July 2024, a significant jump compared to earlier months like November 2023 and March 2024, when its TVL was considerably lower. This timing suggests that TON experienced a surge in user activity or adoption leading up to its peak, distinguishing it from the earlier months when interest was still building.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-23T00:49:34.716Z"
+  },
+  "2026-05-23|chain|TON|E|C4_GROWTH_RANKING|explanation|a0445458f7b722a9": {
+    "text": "TON's impressive 25.9% growth outpaces other chains like Base, which saw a modest 6.5% increase, and Sui and Cardano, both experiencing declines. This significant surge suggests strong momentum and adoption for TON, making it a standout performer in the current DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-23T00:49:36.984Z"
   }
 }
