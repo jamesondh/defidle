@@ -573,5 +573,30 @@
     "text": "SSV Network's TVL decreased by 10.8% to $15.6B, reflecting a potential shift in user confidence or competition from other staking solutions. This decline could indicate challenges in attracting new stakers or retaining existing ones amidst a rapidly evolving DeFi landscape.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-24T00:51:59.832Z"
+  },
+  "2026-05-25|protocol|kamino-lend|A|P1_FINGERPRINT|explanation|be888b0c52e4a7e7": {
+    "text": "Kamino Lend's $1.4B TVL on Solana showcases its strong position in the lending sector, particularly as a single-chain protocol. This concentration allows it to leverage Solana's high throughput and low fees, making it an attractive option for users looking for efficient lending solutions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-25T00:53:03.680Z"
+  },
+  "2026-05-25|protocol|kamino-lend|B|P13_TVL_RANK_COMPARISON|explanation|2bc977ec8314dbf0": {
+    "text": "Spark Savings leads with $2.2B in TVL, significantly outpacing Kamino Lend's $1.4B by 37.2%, which suggests that users are currently favoring Spark's offerings for yield generation over Kamino's lending services. This disparity may reflect differences in user incentives, product features, or overall market perception of the two platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-25T00:53:05.027Z"
+  },
+  "2026-05-25|protocol|kamino-lend|C|P20_ATH_DISTANCE|explanation|99b43c5d16e99e6b": {
+    "text": "Kamino Lend's current TVL of $1.4B is 60% below its all-time high of $3.4B, placing it in the 50-75% range below ATH. This significant drop suggests challenges in attracting liquidity, which could be influenced by market conditions or competition from other lending protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-25T00:53:06.218Z"
+  },
+  "2026-05-25|protocol|kamino-lend|D|P33_MULTI_RANKING|explanation|363a272e41d943d0": {
+    "text": "Kamino Lend's $1.4B TVL positions it behind JustLend and Maple, reflecting its relatively newer entry into the lending space and the competitive nature of DeFi lending markets. The significant gap in TVL between these protocols suggests that established players like JustLend have built stronger user trust and liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-25T00:53:07.274Z"
+  },
+  "2026-05-25|protocol|kamino-lend|E|P8_CHAIN_MEMBERSHIP|explanation|7ae7956a2bfc949f": {
+    "text": "Kamino Lend operates solely on Solana, which allows it to leverage the network's high throughput and low transaction costs, making it an attractive option for users looking for efficient lending solutions. This single-chain focus can lead to deeper liquidity and a more streamlined user experience compared to multi-chain protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-25T00:53:08.650Z"
   }
 }

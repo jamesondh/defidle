@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-05-25:protocol:kamino-lend",
+  "dateUtc": "2026-05-25",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "kamino-lend",
+    "name": "Kamino Lend",
+    "category": "Lending"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Lending",
+        "Chains: single-chain",
+        "TVL: $1B-$5B",
+        "7d change: roughly flat"
+      ],
+      "choices": [
+        "Ondo Yield Assets",
+        "Kamino Lend",
+        "SparkLend",
+        "Aave V3",
+        "Pendle",
+        "Polygon Bridge"
+      ],
+      "answerIndex": 1,
+      "explanation": "Kamino Lend's $1.4B TVL on Solana showcases its strong position in the lending sector, particularly as a single-chain protocol. This concentration allows it to leverage Solana's high throughput and low fees, making it an attractive option for users looking for efficient lending solutions.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.10873805729804481
+      },
+      "difficultyScore": 0.4833738057298045
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P13_TVL_RANK_COMPARISON",
+      "format": "ab",
+      "prompt": "Which protocol has higher TVL?",
+      "choices": [
+        "Spark Savings",
+        "Kamino Lend"
+      ],
+      "answerIndex": 0,
+      "explanation": "Spark Savings leads with $2.2B in TVL, significantly outpacing Kamino Lend's $1.4B by 37.2%, which suggests that users are currently favoring Spark's offerings for yield generation over Kamino's lending services. This disparity may reflect differences in user incentives, product features, or overall market perception of the two platforms.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.37234874983599636,
+        "volatility": 0.10873805729804481
+      },
+      "difficultyScore": 0.2133738057298045
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Kamino Lend's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 2,
+      "explanation": "Kamino Lend's current TVL of $1.4B is 60% below its all-time high of $3.4B, placing it in the 50-75% range below ATH. This significant drop suggests challenges in attracting liquidity, which could be influenced by market conditions or competition from other lending protocols.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.3940590807374673,
+        "volatility": 0.10873805729804481
+      },
+      "difficultyScore": 0.36337380572980454
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Lending protocols from highest to lowest TVL.",
+      "choices": [
+        "JustLend > Maple > Kamino Lend",
+        "Kamino Lend > JustLend > Maple",
+        "Kamino Lend > Maple > JustLend",
+        "Maple > Kamino Lend > JustLend"
+      ],
+      "answerIndex": 0,
+      "explanation": "Kamino Lend's $1.4B TVL positions it behind JustLend and Maple, reflecting its relatively newer entry into the lending space and the competitive nature of DeFi lending markets. The significant gap in TVL between these protocols suggests that established players like JustLend have built stronger user trust and liquidity.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.2993015591366334,
+        "volatility": 0.10873805729804481
+      },
+      "difficultyScore": 0.4033738057298045
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Kamino Lend deployed on?",
+      "choices": [
+        "Ethereum",
+        "Polygon",
+        "Solana",
+        "Arbitrum"
+      ],
+      "answerIndex": 2,
+      "explanation": "Kamino Lend operates solely on Solana, which allows it to leverage the network's high throughput and low transaction costs, making it an attractive option for users looking for efficient lending solutions. This single-chain focus can lead to deeper liquidity and a more streamlined user experience compared to multi-chain protocols.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.10873805729804481
+      },
+      "difficultyScore": 0.30337380572980455
+    }
+  ],
+  "generatedAt": "2026-05-25T00:53:08.650Z"
+}
