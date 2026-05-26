@@ -598,5 +598,30 @@
     "text": "Kamino Lend operates solely on Solana, which allows it to leverage the network's high throughput and low transaction costs, making it an attractive option for users looking for efficient lending solutions. This single-chain focus can lead to deeper liquidity and a more streamlined user experience compared to multi-chain protocols.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-25T00:53:08.650Z"
+  },
+  "2026-05-26|chain|Ink|A|C1_FINGERPRINT|explanation|3ea8eaf90027e1b7": {
+    "text": "Ink ranks 17th in TVL with between $100M and $500M, reflecting its growing influence among DeFi protocols. With 29 protocols under its umbrella, it sits in the 20-50 range, indicating a diverse ecosystem that can attract various users and liquidity sources.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-26T00:50:28.244Z"
+  },
+  "2026-05-26|chain|Ink|B|C2_CHAIN_COMPARISON|explanation|01b98bf8ae26b86f": {
+    "text": "Ink's $276M TVL surpasses Aptos by 11.7%, showcasing its growing appeal and user adoption in the DeFi space, likely driven by unique features or incentives that resonate with users compared to Aptos. This difference in TVL can indicate stronger liquidity and more robust trading activity on Ink.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-26T00:50:30.845Z"
+  },
+  "2026-05-26|chain|Ink|C|C4_GROWTH_RANKING|explanation|a37df9723e02ef58": {
+    "text": "Ink's TVL has decreased by 3.8%, contrasting sharply with TON's impressive growth of 22.0%. This decline suggests that while some chains are attracting new capital and users, Ink may be struggling to maintain its position in a competitive landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-26T00:50:31.825Z"
+  },
+  "2026-05-26|chain|Ink|D|C3_ATH_TIMING|explanation|c5ff61dae7c1059d": {
+    "text": "Ink reached its all-time high (ATH) of $573M in January 2026, a notable peak compared to later dates like May 2026, which suggests that its momentum was strongest just before that time. The other months listed, such as February and April 2025, were too early to capture the growth that led to Ink's peak valuation.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-26T00:50:33.048Z"
+  },
+  "2026-05-26|chain|Ink|E|C6_TOP_DEX|explanation|386bd7610111c0e7": {
+    "text": "Velodrome V3 leads Ink with a solid $1M in volume, significantly outpacing its competitors like Nado Spot at $73K and Otomate at $67K. This stark difference illustrates Velodrome V3's dominance in the market, suggesting it has successfully captured user interest and liquidity compared to the other DEXs on the chain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-26T00:50:34.538Z"
   }
 }

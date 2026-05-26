@@ -1,0 +1,138 @@
+{
+  "episodeId": "2026-05-26:chain:Ink",
+  "dateUtc": "2026-05-26",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Ink",
+    "name": "Ink"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Protocols: 20-50"
+      ],
+      "choices": [
+        "Provenance",
+        "Ink",
+        "MegaETH",
+        "Plasma",
+        "Starknet",
+        "Movement"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ink ranks 17th in TVL with between $100M and $500M, reflecting its growing influence among DeFi protocols. With 29 protocols under its umbrella, it sits in the 20-50 range, indicating a diverse ecosystem that can attract various users and liquidity sources.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Ink or Aptos?",
+      "choices": [
+        "Aptos",
+        "Ink"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ink's $276M TVL surpasses Aptos by 11.7%, showcasing its growing appeal and user adoption in the DeFi space, likely driven by unique features or incentives that resonate with users compared to Aptos. This difference in TVL can indicate stronger liquidity and more robust trading activity on Ink.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.1165858881608654,
+        "volatility": null
+      },
+      "difficultyScore": 0.3695969342069615
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "TON",
+        "Hedera",
+        "X Layer",
+        "Ink"
+      ],
+      "answerIndex": 2,
+      "explanation": "Ink's TVL has decreased by 3.8%, contrasting sharply with TON's impressive growth of 22.0%. This decline suggests that while some chains are attracting new capital and users, Ink may be struggling to maintain its position in a competitive landscape.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 1,
+        "volatility": null
+      },
+      "difficultyScore": 0.35950000000000004
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Ink hit its all-time high TVL?",
+      "choices": [
+        "Nov 2025",
+        "May 2025",
+        "Apr 2025",
+        "May 2026",
+        "Feb 2025",
+        "Jan 2026"
+      ],
+      "answerIndex": 5,
+      "explanation": "Ink reached its all-time high (ATH) of $573M in January 2026, a notable peak compared to later dates like May 2026, which suggests that its momentum was strongest just before that time. The other months listed, such as February and April 2025, were too early to capture the growth that led to Ink's peak valuation.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Ink?",
+      "choices": [
+        "SakuraSwap CLMM",
+        "Velodrome V3",
+        "Otomate",
+        "Nado Spot"
+      ],
+      "answerIndex": 1,
+      "explanation": "Velodrome V3 leads Ink with a solid $1M in volume, significantly outpacing its competitors like Nado Spot at $73K and Otomate at $67K. This stark difference illustrates Velodrome V3's dominance in the market, suggesting it has successfully captured user interest and liquidity compared to the other DEXs on the chain.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.9464198869949922,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-05-26T00:50:34.539Z"
+}
