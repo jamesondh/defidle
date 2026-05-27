@@ -623,5 +623,30 @@
     "text": "Velodrome V3 leads Ink with a solid $1M in volume, significantly outpacing its competitors like Nado Spot at $73K and Otomate at $67K. This stark difference illustrates Velodrome V3's dominance in the market, suggesting it has successfully captured user interest and liquidity compared to the other DEXs on the chain.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-26T00:50:34.538Z"
+  },
+  "2026-05-27|protocol|sanctum-validator-lsts|A|P1_FINGERPRINT|explanation|6259cbff83d9d645": {
+    "text": "Sanctum Validator LSTs, with $1.2B TVL on Solana, showcases the growing interest in liquid staking solutions that allow users to earn rewards while maintaining liquidity. This focus on a single chain reflects Solana's unique ecosystem and the demand for efficient staking options within it.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-27T00:52:27.849Z"
+  },
+  "2026-05-27|protocol|sanctum-validator-lsts|B|P7_CATEGORY|explanation|df6709e733c864c4": {
+    "text": "Sanctum Validator LSTs are part of the liquid staking category, allowing users to stake their assets while still retaining liquidity. This approach enables participants to earn staking rewards without locking up their tokens, which can be particularly appealing in volatile markets.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-27T00:52:33.376Z"
+  },
+  "2026-05-27|protocol|sanctum-validator-lsts|C|P5_FEES_REVENUE|explanation|65a527bdb4ab2afd": {
+    "text": "Sanctum Validator LSTs generated $1M in fees over the past week, but only $38K of that translated into revenue, indicating that the protocol retains just 3% of its fee income. This low revenue percentage suggests high operational costs or competitive pressures that may impact profitability.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-27T00:52:39.346Z"
+  },
+  "2026-05-27|protocol|sanctum-validator-lsts|D|P4_ATH_TIMING|explanation|a3f1f238e5d02bdd": {
+    "text": "Sanctum Validator LSTs hit their all-time high (ATH) of $2.9B in September 2025, which is significant as it reflects a peak in user interest and investment at that time. In contrast, the other months like September 2024 and February 2025 did not see similar levels of TVL, indicating that the market dynamics and user engagement were notably different leading up to that peak.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-27T00:52:44.948Z"
+  },
+  "2026-05-27|protocol|sanctum-validator-lsts|E|P8_CHAIN_MEMBERSHIP|explanation|4d2d0b4948d9030f": {
+    "text": "Sanctum Validator LSTs operate solely on Solana, which allows them to leverage the network's high throughput and low transaction costs, making them particularly appealing for users looking to stake efficiently. This focus on a single chain can lead to deeper integration with Solana's ecosystem, enhancing user experience and performance.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-27T00:52:49.558Z"
   }
 }
