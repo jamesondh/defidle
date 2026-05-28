@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-05-28:chain:Mantle",
+  "dateUtc": "2026-05-28",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Mantle",
+    "name": "Mantle"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: MNT",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "Flare",
+        "Mantle",
+        "Katana",
+        "Stacks",
+        "Monad",
+        "OP Mainnet"
+      ],
+      "answerIndex": 1,
+      "explanation": "Mantle ranks 20th in TVL with between $100M and $500M, which reflects its growing ecosystem of 140 protocols, positioning it as a competitive player among emerging layer-2 solutions. This diverse range of protocols suggests a healthy developer interest and potential for innovation on the platform.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "prompt": "Mantle has higher TVL than Aptos.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "Aptos leads Mantle by 5.9% in TVL, with $244M compared to Mantle's $229M, reflecting Aptos's stronger traction in attracting liquidity and user engagement. This slight edge suggests that while both chains are competitive, Aptos may have more appealing features or incentives that draw in DeFi users.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.059265744817986875,
+        "volatility": null
+      },
+      "difficultyScore": 0.3483811062184158
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Plasma",
+        "TON",
+        "Base",
+        "Mantle"
+      ],
+      "answerIndex": 0,
+      "explanation": "Plasma leads with an impressive 45.6% growth, significantly outpacing other chains like TON at 22.0% and Mantle at 14.0%. This stark difference highlights Plasma's strong momentum in the DeFi space, while Mantle's growth, although positive, shows it's still gaining traction compared to the top performers.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.23579059424375584,
+        "volatility": null
+      },
+      "difficultyScore": 0.376551286907493
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Mantle hit its all-time high TVL?",
+      "choices": [
+        "Nov 2023",
+        "Apr 2024",
+        "Oct 2024",
+        "Dec 2024",
+        "Apr 2026",
+        "Aug 2024"
+      ],
+      "answerIndex": 4,
+      "explanation": "Mantle reached its all-time high (ATH) of $705M in April 2026, which is notable as it significantly surpasses the values seen in earlier months like November 2023 and April 2024, indicating a strong growth trajectory that wasn't evident in those earlier periods. This timing suggests that Mantle experienced a surge in adoption or market conditions that favored its growth well after those earlier dates.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Mantle?",
+      "choices": [
+        "Agni Finance",
+        "Merchant Moe Liquidity Book",
+        "Merchant Moe DEX",
+        "Fluxion Network"
+      ],
+      "answerIndex": 1,
+      "explanation": "Merchant Moe Liquidity Book leads on Mantle with $804K in volume, significantly outpacing its closest competitor, Fluxion Network, which has $546K. This stark difference illustrates Merchant Moe's strong market presence, especially when compared to Agni Finance at $417K and the much smaller Merchant Moe DEX at just $5K.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.3210511197245362,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-05-28T00:48:08.263Z"
+}

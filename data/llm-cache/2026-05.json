@@ -648,5 +648,30 @@
     "text": "Sanctum Validator LSTs operate solely on Solana, which allows them to leverage the network's high throughput and low transaction costs, making them particularly appealing for users looking to stake efficiently. This focus on a single chain can lead to deeper integration with Solana's ecosystem, enhancing user experience and performance.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-27T00:52:49.558Z"
+  },
+  "2026-05-28|chain|Mantle|A|C1_FINGERPRINT|explanation|d1d802264f26f218": {
+    "text": "Mantle ranks 20th in TVL with between $100M and $500M, which reflects its growing ecosystem of 140 protocols, positioning it as a competitive player among emerging layer-2 solutions. This diverse range of protocols suggests a healthy developer interest and potential for innovation on the platform.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-28T00:47:49.735Z"
+  },
+  "2026-05-28|chain|Mantle|B|C2_CHAIN_COMPARISON|explanation|93fcb26a380dccfb": {
+    "text": "Aptos leads Mantle by 5.9% in TVL, with $244M compared to Mantle's $229M, reflecting Aptos's stronger traction in attracting liquidity and user engagement. This slight edge suggests that while both chains are competitive, Aptos may have more appealing features or incentives that draw in DeFi users.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-28T00:47:54.705Z"
+  },
+  "2026-05-28|chain|Mantle|C|C4_GROWTH_RANKING|explanation|21014460fba96fa0": {
+    "text": "Plasma leads with an impressive 45.6% growth, significantly outpacing other chains like TON at 22.0% and Mantle at 14.0%. This stark difference highlights Plasma's strong momentum in the DeFi space, while Mantle's growth, although positive, shows it's still gaining traction compared to the top performers.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-28T00:47:59.257Z"
+  },
+  "2026-05-28|chain|Mantle|D|C3_ATH_TIMING|explanation|fbfac8d26dcf2b19": {
+    "text": "Mantle reached its all-time high (ATH) of $705M in April 2026, which is notable as it significantly surpasses the values seen in earlier months like November 2023 and April 2024, indicating a strong growth trajectory that wasn't evident in those earlier periods. This timing suggests that Mantle experienced a surge in adoption or market conditions that favored its growth well after those earlier dates.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-28T00:48:03.923Z"
+  },
+  "2026-05-28|chain|Mantle|E|C6_TOP_DEX|explanation|1eb92baf65c3b7dd": {
+    "text": "Merchant Moe Liquidity Book leads on Mantle with $804K in volume, significantly outpacing its closest competitor, Fluxion Network, which has $546K. This stark difference illustrates Merchant Moe's strong market presence, especially when compared to Agni Finance at $417K and the much smaller Merchant Moe DEX at just $5K.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-28T00:48:08.263Z"
   }
 }
