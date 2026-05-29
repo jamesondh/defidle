@@ -1,0 +1,143 @@
+{
+  "episodeId": "2026-05-29:protocol:rocket-pool",
+  "dateUtc": "2026-05-29",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "rocket-pool",
+    "name": "Rocket Pool",
+    "category": "Liquid Staking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Liquid Staking",
+        "Chains: single-chain",
+        "Active since: 2021",
+        "TVL: $500M-$1B",
+        "7d change: up >10%"
+      ],
+      "choices": [
+        "Coinbase Wrapped Staked ETH",
+        "Kamino Lend",
+        "Rocket Pool",
+        "Stader"
+      ],
+      "answerIndex": 2,
+      "explanation": "Rocket Pool's $840M TVL on Ethereum showcases its significant role in the liquid staking sector, allowing users to stake ETH while maintaining liquidity. As the only chain it operates on, this concentration highlights its specialized focus and the growing demand for decentralized staking solutions.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.22785627591112065
+      },
+      "difficultyScore": 0.40528562759111214
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Rocket Pool?",
+      "choices": [
+        "Anchor BTC",
+        "Interest Rate Derivatives",
+        "Developer Tools",
+        "Liquid Staking"
+      ],
+      "answerIndex": 3,
+      "explanation": "Rocket Pool operates in the liquid staking category, allowing users to stake their ETH while still retaining liquidity through tokenized representations of their staked assets. This model attracts both individual stakers and larger entities looking for flexibility in managing their staked assets without locking them up completely.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.22785627591112065
+      },
+      "difficultyScore": 0.3152856275911121
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did Rocket Pool's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 4,
+      "explanation": "Rocket Pool's fees have surged by 50.2% over the past week, increasing from $76K to $114K, which suggests growing user activity and interest in its decentralized staking services. This uptick often reflects a higher demand for Ethereum staking as users seek to earn rewards in a more decentralized manner.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5023598238348781,
+        "volatility": 0.22785627591112065
+      },
+      "difficultyScore": 0.3152856275911121
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Rocket Pool hit its all-time high TVL?",
+      "choices": [
+        "Aug 2025",
+        "Nov 2021",
+        "Nov 2025",
+        "Jul 2022",
+        "Dec 2025",
+        "Sep 2025"
+      ],
+      "answerIndex": 0,
+      "explanation": "Rocket Pool hit its all-time high (ATH) of $3.2B in August 2025, a significant milestone that showcases its growth during a period of increased interest in decentralized staking solutions. In contrast, choices like November 2021 and July 2022 reflect earlier market phases when the protocol was still gaining traction, highlighting how the DeFi landscape evolves over time.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.22785627591112065
+      },
+      "difficultyScore": 0.5052856275911121
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Rocket Pool deployed on?",
+      "choices": [
+        "Base",
+        "Avalanche",
+        "Ethereum",
+        "Solana"
+      ],
+      "answerIndex": 2,
+      "explanation": "Rocket Pool operates exclusively on Ethereum, which allows it to leverage the network's robust security and established user base, making it a popular choice for decentralized staking. This single-chain focus can lead to deeper integration with Ethereum's ecosystem, enhancing its functionality and user experience.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.22785627591112065
+      },
+      "difficultyScore": 0.3152856275911121
+    }
+  ],
+  "generatedAt": "2026-05-29T00:55:27.503Z"
+}

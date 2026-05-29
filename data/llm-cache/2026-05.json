@@ -673,5 +673,30 @@
     "text": "Merchant Moe Liquidity Book leads on Mantle with $804K in volume, significantly outpacing its closest competitor, Fluxion Network, which has $546K. This stark difference illustrates Merchant Moe's strong market presence, especially when compared to Agni Finance at $417K and the much smaller Merchant Moe DEX at just $5K.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-28T00:48:08.263Z"
+  },
+  "2026-05-29|protocol|rocket-pool|A|P1_FINGERPRINT|explanation|0353b84ed523ac59": {
+    "text": "Rocket Pool's $840M TVL on Ethereum showcases its significant role in the liquid staking sector, allowing users to stake ETH while maintaining liquidity. As the only chain it operates on, this concentration highlights its specialized focus and the growing demand for decentralized staking solutions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-29T00:55:08.588Z"
+  },
+  "2026-05-29|protocol|rocket-pool|B|P7_CATEGORY|explanation|05e5143602dbb46f": {
+    "text": "Rocket Pool operates in the liquid staking category, allowing users to stake their ETH while still retaining liquidity through tokenized representations of their staked assets. This model attracts both individual stakers and larger entities looking for flexibility in managing their staked assets without locking them up completely.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-29T00:55:13.179Z"
+  },
+  "2026-05-29|protocol|rocket-pool|C|P11_FEES_TREND|explanation|653a1ff4cb420875": {
+    "text": "Rocket Pool's fees have surged by 50.2% over the past week, increasing from $76K to $114K, which suggests growing user activity and interest in its decentralized staking services. This uptick often reflects a higher demand for Ethereum staking as users seek to earn rewards in a more decentralized manner.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-29T00:55:18.406Z"
+  },
+  "2026-05-29|protocol|rocket-pool|D|P4_ATH_TIMING|explanation|e59543c4aee6d265": {
+    "text": "Rocket Pool hit its all-time high (ATH) of $3.2B in August 2025, a significant milestone that showcases its growth during a period of increased interest in decentralized staking solutions. In contrast, choices like November 2021 and July 2022 reflect earlier market phases when the protocol was still gaining traction, highlighting how the DeFi landscape evolves over time.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-29T00:55:22.960Z"
+  },
+  "2026-05-29|protocol|rocket-pool|E|P8_CHAIN_MEMBERSHIP|explanation|33614d606aa1a7fa": {
+    "text": "Rocket Pool operates exclusively on Ethereum, which allows it to leverage the network's robust security and established user base, making it a popular choice for decentralized staking. This single-chain focus can lead to deeper integration with Ethereum's ecosystem, enhancing its functionality and user experience.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-29T00:55:27.503Z"
   }
 }
