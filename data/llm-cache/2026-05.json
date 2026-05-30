@@ -698,5 +698,30 @@
     "text": "Rocket Pool operates exclusively on Ethereum, which allows it to leverage the network's robust security and established user base, making it a popular choice for decentralized staking. This single-chain focus can lead to deeper integration with Ethereum's ecosystem, enhancing its functionality and user experience.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-29T00:55:27.503Z"
+  },
+  "2026-05-30|chain|Arbitrum|A|C1_FINGERPRINT|explanation|d2aa457524741db8": {
+    "text": "Arbitrum ranks 8th in TVL with between $1B and $5B, showcasing its rapid growth and adoption in the DeFi space, particularly given that it hosts nearly 1,000 protocols. This high protocol count reflects a vibrant ecosystem, attracting developers and users looking for scalability and lower transaction costs compared to Ethereum.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-30T00:50:40.184Z"
+  },
+  "2026-05-30|chain|Arbitrum|B|C2_CHAIN_COMPARISON|explanation|0704ca2cf5570c96": {
+    "text": "Hyperliquid L1's $1.7B TVL outpaces Arbitrum's $1.5B by 12.3%, showcasing its growing appeal as a layer-1 solution that can attract liquidity away from established chains like Arbitrum, which has historically been a popular choice for DeFi projects. This shift may indicate a trend where newer chains are capturing user interest through innovative features or lower fees.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-30T00:50:42.725Z"
+  },
+  "2026-05-30|chain|Arbitrum|C|C4_GROWTH_RANKING|explanation|033f458c8a3da06f": {
+    "text": "Berachain's impressive growth of 13.7% stands out, especially when compared to Arbitrum's decline of 11.1%, which reflects a broader trend of challenges for established chains. In contrast, Base has managed to grow by 3.5%, suggesting that newer or less saturated networks may be capturing more user interest and activity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-30T00:50:44.321Z"
+  },
+  "2026-05-30|chain|Arbitrum|D|C3_ATH_TIMING|explanation|d774ee15a9a2410c": {
+    "text": "Arbitrum hit its all-time high (ATH) of $4.2B in October 2025, a significant leap compared to earlier months like September 2022, when its TVL was much lower due to the nascent stage of Layer 2 adoption. This timing reflects the growing confidence and usage of Layer 2 solutions as Ethereum scaling solutions gained traction.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-30T00:50:45.831Z"
+  },
+  "2026-05-30|chain|Arbitrum|E|C6_TOP_DEX|explanation|bd5cea24d1511fc9": {
+    "text": "Uniswap V3 leads Arbitrum with a substantial $128M in volume, significantly outpacing Uniswap V4 at $26M and PancakeSwap AMM V3 at $12M. This dominance illustrates Uniswap V3's strong liquidity and user preference on Arbitrum, making it the go-to DEX for traders on this layer-2 solution.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-30T00:50:47.277Z"
   }
 }
