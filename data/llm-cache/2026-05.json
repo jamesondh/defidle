@@ -723,5 +723,30 @@
     "text": "Uniswap V3 leads Arbitrum with a substantial $128M in volume, significantly outpacing Uniswap V4 at $26M and PancakeSwap AMM V3 at $12M. This dominance illustrates Uniswap V3's strong liquidity and user preference on Arbitrum, making it the go-to DEX for traders on this layer-2 solution.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-05-30T00:50:47.277Z"
+  },
+  "2026-05-31|protocol|jito-liquid-staking|A|P1_FINGERPRINT|explanation|bc459c6d4b94fcc2": {
+    "text": "Jito Liquid Staking has $805M in TVL on Solana, indicating strong adoption of liquid staking solutions within this ecosystem. This level of TVL suggests that users are increasingly looking for ways to earn yield on their staked assets while maintaining liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-31T00:55:02.456Z"
+  },
+  "2026-05-31|protocol|jito-liquid-staking|B|P7_CATEGORY|explanation|fa2bdb3eba2f4e6b": {
+    "text": "Jito Liquid Staking falls under the Liquid Staking category, which allows users to stake their assets while still maintaining liquidity. This approach enables users to earn staking rewards without locking up their tokens, making it an attractive option for those looking to maximize their yield in DeFi.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-31T00:55:04.030Z"
+  },
+  "2026-05-31|protocol|jito-liquid-staking|C|P11_FEES_TREND|explanation|1d8506b0f395c14c": {
+    "text": "Jito Liquid Staking has seen a 26.7% drop in fees over the past week, falling from $1M to $745K. This decline could suggest reduced user activity or competition from other staking solutions, impacting its revenue generation.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-31T00:55:04.856Z"
+  },
+  "2026-05-31|protocol|jito-liquid-staking|D|P4_ATH_TIMING|explanation|4b45ec78763cc6d5": {
+    "text": "Jito Liquid Staking hit its all-time high (ATH) of $3.9B in January 2025, a significant milestone that reflects its growing adoption in the liquid staking space. In contrast, the other options like August 2024 and March 2026 represent periods when Jito had not yet reached this peak, highlighting the rapid growth leading up to its ATH.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-31T00:55:06.104Z"
+  },
+  "2026-05-31|protocol|jito-liquid-staking|E|P8_CHAIN_MEMBERSHIP|explanation|37ca5fb4c53dad3a": {
+    "text": "Jito Liquid Staking operates solely on Solana, allowing users to stake their SOL while still participating in DeFi activities. This focus on a single chain can lead to deeper integration with Solana's ecosystem, enhancing both liquidity and user experience.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-05-31T00:55:07.070Z"
   }
 }

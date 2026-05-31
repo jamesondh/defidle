@@ -1,0 +1,142 @@
+{
+  "episodeId": "2026-05-31:protocol:jito-liquid-staking",
+  "dateUtc": "2026-05-31",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "jito-liquid-staking",
+    "name": "Jito Liquid Staking",
+    "category": "Liquid Staking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Liquid Staking",
+        "Chains: single-chain",
+        "TVL: $500M-$1B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Jito Liquid Staking",
+        "Binance Staked SOL",
+        "DoubleZero Staked SOL",
+        "Kelp"
+      ],
+      "answerIndex": 0,
+      "explanation": "Jito Liquid Staking has $805M in TVL on Solana, indicating strong adoption of liquid staking solutions within this ecosystem. This level of TVL suggests that users are increasingly looking for ways to earn yield on their staked assets while maintaining liquidity.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.15793757199706973
+      },
+      "difficultyScore": 0.39829375719970705
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Jito Liquid Staking?",
+      "choices": [
+        "DCA Tools",
+        "Liquid Staking",
+        "Charity Fundraising",
+        "Restaking"
+      ],
+      "answerIndex": 1,
+      "explanation": "Jito Liquid Staking falls under the Liquid Staking category, which allows users to stake their assets while still maintaining liquidity. This approach enables users to earn staking rewards without locking up their tokens, making it an attractive option for those looking to maximize their yield in DeFi.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.15793757199706973
+      },
+      "difficultyScore": 0.30829375719970703
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did Jito Liquid Staking's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Jito Liquid Staking has seen a 26.7% drop in fees over the past week, falling from $1M to $745K. This decline could suggest reduced user activity or competition from other staking solutions, impacting its revenue generation.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.266777993188471,
+        "volatility": 0.15793757199706973
+      },
+      "difficultyScore": 0.30829375719970703
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Jito Liquid Staking hit its all-time high TVL?",
+      "choices": [
+        "Jun 2025",
+        "Jan 2025",
+        "Mar 2026",
+        "Jan 2026",
+        "Aug 2024",
+        "Oct 2023"
+      ],
+      "answerIndex": 1,
+      "explanation": "Jito Liquid Staking hit its all-time high (ATH) of $3.9B in January 2025, a significant milestone that reflects its growing adoption in the liquid staking space. In contrast, the other options like August 2024 and March 2026 represent periods when Jito had not yet reached this peak, highlighting the rapid growth leading up to its ATH.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.15793757199706973
+      },
+      "difficultyScore": 0.49829375719970703
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Jito Liquid Staking deployed on?",
+      "choices": [
+        "Fantom",
+        "Polygon",
+        "Base",
+        "Solana"
+      ],
+      "answerIndex": 3,
+      "explanation": "Jito Liquid Staking operates solely on Solana, allowing users to stake their SOL while still participating in DeFi activities. This focus on a single chain can lead to deeper integration with Solana's ecosystem, enhancing both liquidity and user experience.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.15793757199706973
+      },
+      "difficultyScore": 0.30829375719970703
+    }
+  ],
+  "generatedAt": "2026-05-31T00:55:07.070Z"
+}
