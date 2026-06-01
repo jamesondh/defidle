@@ -1,0 +1,144 @@
+{
+  "episodeId": "2026-06-01:protocol:portal",
+  "dateUtc": "2026-06-01",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "portal",
+    "name": "Portal",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: 10+ chains",
+        ">90% TVL on single chain",
+        "Active since: 2021",
+        "TVL: $1B-$5B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Portal",
+        "Tether Gold",
+        "BlackRock BUIDL",
+        "JustCryptos",
+        "Merlins Seal",
+        "Arbitrum Bridge"
+      ],
+      "answerIndex": 0,
+      "explanation": "Portal's $2.1B TVL across 24 chains showcases its broad adoption as a bridge solution, with notable usage on chains like Terra and Fantom, which often have distinct ecosystems and user bases. This diversity in supported chains allows Portal to facilitate cross-chain transactions, enhancing liquidity and accessibility in the DeFi landscape.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.22992947038934716
+      },
+      "difficultyScore": 0.49549294703893476
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Portal have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Solana"
+      ],
+      "answerIndex": 0,
+      "explanation": "Portal's dominance on Ethereum, with a TVL of $1.9B compared to just $60M on Solana, illustrates the stark contrast in liquidity and user adoption between the two chains, with Ethereum attracting significantly more capital for cross-chain activities. The 97% margin indicates that most of Portal's activity is concentrated on Ethereum, reflecting its status as the leading platform for DeFi applications.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9685940905059425,
+        "volatility": 0.22992947038934716
+      },
+      "difficultyScore": 0.22549294703893474
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did Portal's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 1,
+      "explanation": "Portal's fees have decreased by 14.4%, but the total fees collected over the past week remain unchanged at $3K, suggesting that while the fee structure may have shifted, user activity has stabilized. This could indicate a shift in user behavior or market conditions affecting how fees are generated.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.1439102564102564,
+        "volatility": 0.22992947038934716
+      },
+      "difficultyScore": 0.44280063934662706
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Portal hit its all-time high TVL?",
+      "choices": [
+        "Jun 2026",
+        "Mar 2024",
+        "Feb 2023",
+        "Dec 2024",
+        "May 2022",
+        "Apr 2023"
+      ],
+      "answerIndex": 3,
+      "explanation": "Portal reached its all-time high (ATH) of $5.5B in December 2024, a significant leap compared to earlier months like May 2022, when it was still establishing its presence in the DeFi space. The timing of this ATH reflects a period of increased adoption and market interest, distinguishing it from the lower values seen in the earlier distractor months.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.22992947038934716
+      },
+      "difficultyScore": 0.5054929470389348
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Portal's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Portal's TVL is heavily concentrated on Ethereum, with 92% of its $2.1B locked there, reflecting the chain's dominance in DeFi and indicating that most users prefer the established ecosystem for their cross-chain activities. This concentration can lead to increased vulnerability if Ethereum faces significant issues, as the majority of Portal's liquidity is tied to a single chain.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.6996485660947429,
+        "volatility": 0.22992947038934716
+      },
+      "difficultyScore": 0.31549294703893477
+    }
+  ],
+  "generatedAt": "2026-06-01T00:58:14.303Z"
+}

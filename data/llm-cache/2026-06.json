@@ -1,0 +1,27 @@
+{
+  "2026-06-01|protocol|portal|A|P1_FINGERPRINT|explanation|01592f151356aead": {
+    "text": "Portal's $2.1B TVL across 24 chains showcases its broad adoption as a bridge solution, with notable usage on chains like Terra and Fantom, which often have distinct ecosystems and user bases. This diversity in supported chains allows Portal to facilitate cross-chain transactions, enhancing liquidity and accessibility in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-01T00:58:07.835Z"
+  },
+  "2026-06-01|protocol|portal|B|P2_CROSSCHAIN|explanation|4baa3eeeb4e31308": {
+    "text": "Portal's dominance on Ethereum, with a TVL of $1.9B compared to just $60M on Solana, illustrates the stark contrast in liquidity and user adoption between the two chains, with Ethereum attracting significantly more capital for cross-chain activities. The 97% margin indicates that most of Portal's activity is concentrated on Ethereum, reflecting its status as the leading platform for DeFi applications.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-01T00:58:09.078Z"
+  },
+  "2026-06-01|protocol|portal|C|P11_FEES_TREND|explanation|84c05c3feef08082": {
+    "text": "Portal's fees have decreased by 14.4%, but the total fees collected over the past week remain unchanged at $3K, suggesting that while the fee structure may have shifted, user activity has stabilized. This could indicate a shift in user behavior or market conditions affecting how fees are generated.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-01T00:58:11.088Z"
+  },
+  "2026-06-01|protocol|portal|D|P4_ATH_TIMING|explanation|2128bb4f6f82d2f0": {
+    "text": "Portal reached its all-time high (ATH) of $5.5B in December 2024, a significant leap compared to earlier months like May 2022, when it was still establishing its presence in the DeFi space. The timing of this ATH reflects a period of increased adoption and market interest, distinguishing it from the lower values seen in the earlier distractor months.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-01T00:58:12.891Z"
+  },
+  "2026-06-01|protocol|portal|E|P3_CONCENTRATION|explanation|6f79fa8946b802d7": {
+    "text": "Portal's TVL is heavily concentrated on Ethereum, with 92% of its $2.1B locked there, reflecting the chain's dominance in DeFi and indicating that most users prefer the established ecosystem for their cross-chain activities. This concentration can lead to increased vulnerability if Ethereum faces significant issues, as the majority of Portal's liquidity is tied to a single chain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-01T00:58:14.302Z"
+  }
+}
