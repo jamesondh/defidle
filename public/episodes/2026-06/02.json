@@ -1,0 +1,137 @@
+{
+  "episodeId": "2026-06-02:chain:Near",
+  "dateUtc": "2026-06-02",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Near",
+    "name": "Near"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Native token: NEAR",
+        "Protocols: 20-50"
+      ],
+      "choices": [
+        "Near",
+        "Movement",
+        "ENI",
+        "Mantle"
+      ],
+      "answerIndex": 0,
+      "explanation": "Near's TVL of $100M-$500M and its rank at 23rd show it's still growing, especially with 43 protocols operating on the platform, indicating a healthy ecosystem that's attracting developers and users alike. This range suggests that while it's not at the top tier, there's significant potential for expansion as more projects build on Near.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.38950000000000007
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Near or Katana?",
+      "choices": [
+        "Katana",
+        "Near"
+      ],
+      "answerIndex": 1,
+      "explanation": "Near's $165M TVL outpaces Katana's $145M by 11.8%, reflecting its stronger adoption and user engagement in the DeFi space, likely due to its efficient transaction capabilities and developer-friendly environment. This difference shows how a slight edge in TVL can indicate a more vibrant ecosystem, attracting more liquidity and users.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.11779367376220866,
+        "volatility": null
+      },
+      "difficultyScore": 0.3681475914853496
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "ab",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Near",
+        "Stacks",
+        "Stellar",
+        "X Layer"
+      ],
+      "answerIndex": 3,
+      "explanation": "Near's impressive growth of +40.4% places it just behind the top chain, which saw a significant +42.2% increase, showcasing its strong momentum in the DeFi space. In comparison, Stellar's +29.3% growth and Stacks' minimal +0.1% highlight how Near is rapidly gaining traction among users, reflecting its increasing adoption and utility.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.01789146337960107,
+        "volatility": null
+      },
+      "difficultyScore": 0.5480302439444787
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Near hit its all-time high TVL?",
+      "choices": [
+        "Mar 2024",
+        "Aug 2025",
+        "Nov 2024",
+        "Nov 2023",
+        "Sep 2024",
+        "May 2022"
+      ],
+      "answerIndex": 5,
+      "explanation": "Near reached its ATH of $482M in May 2022, a peak that coincided with a broader market rally in the crypto space at that time. In contrast, the other options like Mar 2024 and Nov 2023 are future dates, indicating that Near has yet to regain its previous highs as the market evolves.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Near?",
+      "choices": [
+        "RHEA Cross Chain",
+        "Rhea Dex",
+        "DeltaTrade",
+        "NEAR Intents"
+      ],
+      "answerIndex": 3,
+      "explanation": "NEAR Intents leads the pack on the Near chain with a substantial $134M in volume, significantly outpacing Rhea Dex at $39M and the much smaller DeltaTrade at just $28K. This stark difference underscores NEAR Intents' dominance and suggests it plays a crucial role in driving liquidity and trading activity on the Near ecosystem.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.7107981797891078,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-06-02T00:57:43.665Z"
+}
