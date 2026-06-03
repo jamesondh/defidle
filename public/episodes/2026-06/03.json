@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-06-03:protocol:lorenzo-enzobtc",
+  "dateUtc": "2026-06-03",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "lorenzo-enzobtc",
+    "name": "Lorenzo enzoBTC",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: single-chain",
+        "TVL: $100M-$500M",
+        "7d change: down >10%"
+      ],
+      "choices": [
+        "SolvBTC",
+        "Lorenzo enzoBTC",
+        "Raydium AMM",
+        "Lighter Bridge"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lorenzo enzoBTC has a TVL of $404M on the Bitcoin chain, which is significant for a bridge, as it indicates strong liquidity and user trust in facilitating cross-chain transactions despite operating on a single chain. This level of TVL suggests that it effectively addresses the demand for bridging assets within the Bitcoin ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.11048344924736632
+      },
+      "difficultyScore": 0.39354834492473667
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Lorenzo enzoBTC?",
+      "choices": [
+        "Bridge",
+        "Portfolio Tracker",
+        "Bridge Aggregator",
+        "Liquidity Manager"
+      ],
+      "answerIndex": 0,
+      "explanation": "Lorenzo enzoBTC operates as a bridge, facilitating the transfer of assets between different blockchains. This functionality is crucial for enhancing interoperability in DeFi, allowing users to move their assets seamlessly across various networks.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.11048344924736632
+      },
+      "difficultyScore": 0.30354834492473665
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Lorenzo enzoBTC's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lorenzo enzoBTC's current TVL of $404M is 46% below its all-time high of $747M, placing it in the 25-50% below ATH range. This significant distance suggests that while the protocol has seen substantial growth, it may face challenges in regaining its peak levels, possibly due to market conditions or competition.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.1662144857966601,
+        "volatility": 0.11048344924736632
+      },
+      "difficultyScore": 0.4640909619687445
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Bridge protocols from highest to lowest TVL.",
+      "choices": [
+        "WBTC > Hyperliquid Bridge > Lorenzo enzoBTC",
+        "Hyperliquid Bridge > WBTC > Lorenzo enzoBTC",
+        "Lorenzo enzoBTC > Hyperliquid Bridge > WBTC",
+        "WBTC > Lorenzo enzoBTC > Hyperliquid Bridge"
+      ],
+      "answerIndex": 0,
+      "explanation": "Lorenzo enzoBTC's $404M TVL is significantly lower than WBTC's $7.6B and Hyperliquid Bridge's $5.6B, reflecting its emerging status in the bridge category where established players dominate. This disparity often stems from factors like user adoption, liquidity incentives, and the overall market presence of the protocols involved.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.2563818388673365,
+        "volatility": 0.11048344924736632
+      },
+      "difficultyScore": 0.4035483449247367
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Lorenzo enzoBTC deployed on?",
+      "choices": [
+        "Polygon",
+        "Bitcoin",
+        "Base",
+        "Avalanche"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lorenzo enzoBTC operates exclusively on the Bitcoin chain, which is notable because it leverages Bitcoin's established security and liquidity while catering to users who prefer to engage with DeFi directly on the original blockchain. This single-chain focus can limit its reach compared to multi-chain protocols, but it also allows for a more streamlined user experience.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.11048344924736632
+      },
+      "difficultyScore": 0.30354834492473665
+    }
+  ],
+  "generatedAt": "2026-06-03T01:03:43.718Z"
+}

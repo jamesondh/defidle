@@ -48,5 +48,30 @@
     "text": "NEAR Intents leads the pack on the Near chain with a substantial $134M in volume, significantly outpacing Rhea Dex at $39M and the much smaller DeltaTrade at just $28K. This stark difference underscores NEAR Intents' dominance and suggests it plays a crucial role in driving liquidity and trading activity on the Near ecosystem.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-06-02T00:57:43.664Z"
+  },
+  "2026-06-03|protocol|lorenzo-enzobtc|A|P1_FINGERPRINT|explanation|314c0b4fe3a2305b": {
+    "text": "Lorenzo enzoBTC has a TVL of $404M on the Bitcoin chain, which is significant for a bridge, as it indicates strong liquidity and user trust in facilitating cross-chain transactions despite operating on a single chain. This level of TVL suggests that it effectively addresses the demand for bridging assets within the Bitcoin ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-03T01:03:37.620Z"
+  },
+  "2026-06-03|protocol|lorenzo-enzobtc|B|P7_CATEGORY|explanation|082479255a482583": {
+    "text": "Lorenzo enzoBTC operates as a bridge, facilitating the transfer of assets between different blockchains. This functionality is crucial for enhancing interoperability in DeFi, allowing users to move their assets seamlessly across various networks.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-03T01:03:38.829Z"
+  },
+  "2026-06-03|protocol|lorenzo-enzobtc|C|P20_ATH_DISTANCE|explanation|3e4b5f8f8e19446c": {
+    "text": "Lorenzo enzoBTC's current TVL of $404M is 46% below its all-time high of $747M, placing it in the 25-50% below ATH range. This significant distance suggests that while the protocol has seen substantial growth, it may face challenges in regaining its peak levels, possibly due to market conditions or competition.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-03T01:03:40.439Z"
+  },
+  "2026-06-03|protocol|lorenzo-enzobtc|D|P33_MULTI_RANKING|explanation|48f04aebb8280867": {
+    "text": "Lorenzo enzoBTC's $404M TVL is significantly lower than WBTC's $7.6B and Hyperliquid Bridge's $5.6B, reflecting its emerging status in the bridge category where established players dominate. This disparity often stems from factors like user adoption, liquidity incentives, and the overall market presence of the protocols involved.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-03T01:03:42.192Z"
+  },
+  "2026-06-03|protocol|lorenzo-enzobtc|E|P8_CHAIN_MEMBERSHIP|explanation|0b45b5f83795a118": {
+    "text": "Lorenzo enzoBTC operates exclusively on the Bitcoin chain, which is notable because it leverages Bitcoin's established security and liquidity while catering to users who prefer to engage with DeFi directly on the original blockchain. This single-chain focus can limit its reach compared to multi-chain protocols, but it also allows for a more streamlined user experience.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-03T01:03:43.717Z"
   }
 }
