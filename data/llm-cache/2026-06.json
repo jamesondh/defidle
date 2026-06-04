@@ -73,5 +73,30 @@
     "text": "Lorenzo enzoBTC operates exclusively on the Bitcoin chain, which is notable because it leverages Bitcoin's established security and liquidity while catering to users who prefer to engage with DeFi directly on the original blockchain. This single-chain focus can limit its reach compared to multi-chain protocols, but it also allows for a more streamlined user experience.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-06-03T01:03:43.717Z"
+  },
+  "2026-06-04|chain|Sui|A|C1_FINGERPRINT|explanation|cc80a225d54927c0": {
+    "text": "Sui's TVL of $500M-$1B and its rank of 13 reflect a growing interest in its ecosystem, especially with 117 protocols operating on the chain, indicating a healthy level of developer activity and innovation. This level of protocol diversity is crucial for attracting users and liquidity, as it enhances the overall utility of the platform.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-04T01:03:09.609Z"
+  },
+  "2026-06-04|chain|Sui|B|C2_CHAIN_COMPARISON|explanation|2ce730f5baf30986": {
+    "text": "Polygon's $1.1B TVL is more than double Sui's $526M, showcasing its established user base and ecosystem maturity, which often attract more liquidity and projects. The 54.2% margin indicates a significant gap in adoption and utility between the two chains, reflecting Polygon's stronger position in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-04T01:03:12.304Z"
+  },
+  "2026-06-04|chain|Sui|C|C4_GROWTH_RANKING|explanation|b9bd8d93e89a0911": {
+    "text": "Near's impressive growth of 40.4% stands out sharply against Sui's decline of 2.9%, especially when compared to TON's solid increase of 27.3% and Cardano's modest gain of 0.8%. This stark contrast highlights Near's strong momentum in the DeFi space, while Sui's negative change suggests challenges in attracting new users or liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-04T01:03:15.068Z"
+  },
+  "2026-06-04|chain|Sui|D|C3_ATH_TIMING|explanation|08b7c0f472a14836": {
+    "text": "Sui reached its ATH of $2.6B in October 2025, a significant milestone that came after several earlier dates like August 2023 and May 2024, when it had not yet achieved such a high valuation. This timing indicates that Sui's growth trajectory accelerated considerably after 2025, likely due to increased adoption or technological advancements.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-04T01:03:17.589Z"
+  },
+  "2026-06-04|chain|Sui|E|C6_TOP_DEX|explanation|00769a4df5434b16": {
+    "text": "DeepBook V3 leads Sui with a solid $34M in volume, significantly outpacing its closest competitor, Cetus CLMM, which has $24M. This strong performance suggests that DeepBook V3 is becoming the go-to DEX on Sui, while other platforms like Bluefin Spot and Lotus Finance trail behind with $22M and $8M, respectively, indicating a clear preference among users for DeepBook's offerings.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-04T01:03:20.079Z"
   }
 }

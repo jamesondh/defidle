@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-06-04:chain:Sui",
+  "dateUtc": "2026-06-04",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Sui",
+    "name": "Sui"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: SUI",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "Arbitrum",
+        "Aptos",
+        "Avalanche",
+        "Hyperliquid L1",
+        "Cronos",
+        "Sui"
+      ],
+      "answerIndex": 5,
+      "explanation": "Sui's TVL of $500M-$1B and its rank of 13 reflect a growing interest in its ecosystem, especially with 117 protocols operating on the chain, indicating a healthy level of developer activity and innovation. This level of protocol diversity is crucial for attracting users and liquidity, as it enhances the overall utility of the platform.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Sui or Polygon?",
+      "choices": [
+        "Sui",
+        "Polygon"
+      ],
+      "answerIndex": 1,
+      "explanation": "Polygon's $1.1B TVL is more than double Sui's $526M, showcasing its established user base and ecosystem maturity, which often attract more liquidity and projects. The 54.2% margin indicates a significant gap in adoption and utility between the two chains, reflecting Polygon's stronger position in the DeFi landscape.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.5416378782630594,
+        "volatility": null
+      },
+      "difficultyScore": 0.2095
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Cardano",
+        "Sui",
+        "Near",
+        "TON"
+      ],
+      "answerIndex": 2,
+      "explanation": "Near's impressive growth of 40.4% stands out sharply against Sui's decline of 2.9%, especially when compared to TON's solid increase of 27.3% and Cardano's modest gain of 0.8%. This stark contrast highlights Near's strong momentum in the DeFi space, while Sui's negative change suggests challenges in attracting new users or liquidity.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.13077014841175233,
+        "volatility": null
+      },
+      "difficultyScore": 0.5025758219058973
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Sui hit its all-time high TVL?",
+      "choices": [
+        "May 2024",
+        "Aug 2023",
+        "Nov 2023",
+        "Oct 2025",
+        "Sep 2024",
+        "Aug 2025"
+      ],
+      "answerIndex": 3,
+      "explanation": "Sui reached its ATH of $2.6B in October 2025, a significant milestone that came after several earlier dates like August 2023 and May 2024, when it had not yet achieved such a high valuation. This timing indicates that Sui's growth trajectory accelerated considerably after 2025, likely due to increased adoption or technological advancements.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Sui?",
+      "choices": [
+        "Cetus CLMM",
+        "Bluefin Spot",
+        "DeepBook V3",
+        "Lotus Finance"
+      ],
+      "answerIndex": 2,
+      "explanation": "DeepBook V3 leads Sui with a solid $34M in volume, significantly outpacing its closest competitor, Cetus CLMM, which has $24M. This strong performance suggests that DeepBook V3 is becoming the go-to DEX on Sui, while other platforms like Bluefin Spot and Lotus Finance trail behind with $22M and $8M, respectively, indicating a clear preference among users for DeepBook's offerings.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.3020400041836986,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-06-04T01:03:20.080Z"
+}
