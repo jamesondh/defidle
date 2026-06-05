@@ -98,5 +98,30 @@
     "text": "DeepBook V3 leads Sui with a solid $34M in volume, significantly outpacing its closest competitor, Cetus CLMM, which has $24M. This strong performance suggests that DeepBook V3 is becoming the go-to DEX on Sui, while other platforms like Bluefin Spot and Lotus Finance trail behind with $22M and $8M, respectively, indicating a clear preference among users for DeepBook's offerings.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-06-04T01:03:20.079Z"
+  },
+  "2026-06-05|protocol|symbiotic|A|P1_FINGERPRINT|explanation|88c938e9fd36a456": {
+    "text": "Symbiotic's $347M TVL on Ethereum reflects a growing interest in restaking protocols, which allow users to earn additional rewards by leveraging their staked assets. This trend highlights how DeFi projects are innovating to maximize yield opportunities for users while enhancing network security.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-05T00:55:33.091Z"
+  },
+  "2026-06-05|protocol|symbiotic|B|P7_CATEGORY|explanation|6473f65eff9fccab": {
+    "text": "Symbiotic operates in the restaking category, allowing users to leverage their staked assets for additional yield opportunities. This approach enhances capital efficiency by enabling users to earn rewards from multiple protocols simultaneously.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-05T00:55:33.851Z"
+  },
+  "2026-06-05|protocol|symbiotic|C|P20_ATH_DISTANCE|explanation|d4312094f64100ea": {
+    "text": "Symbiotic's current TVL of $347M is 87% below its all-time high of $2.7B, which suggests significant challenges in attracting liquidity since its peak, possibly due to market conditions or competition. This large distance from its ATH indicates that the protocol may need to innovate or improve its offerings to regain user interest and investment.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-05T00:55:35.478Z"
+  },
+  "2026-06-05|protocol|symbiotic|D|P33_MULTI_RANKING|explanation|a579396c946e883d": {
+    "text": "Symbiotic's $347M TVL is significantly lower than EigenCloud's $4.9B and Babylon Protocol's $3.3B, reflecting its earlier stage in the restaking space and possibly a narrower user base or less liquidity. This disparity often indicates that larger protocols have more established ecosystems and user trust, which can drive higher TVL.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-05T00:55:37.214Z"
+  },
+  "2026-06-05|protocol|symbiotic|E|P8_CHAIN_MEMBERSHIP|explanation|0f4692a6a26c78bd": {
+    "text": "Symbiotic operates solely on Ethereum, which allows it to leverage the network's robust liquidity and established user base. This single-chain focus can lead to deeper integration with Ethereum's DeFi ecosystem, but it also makes the protocol more vulnerable to Ethereum's network congestion and gas fees.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-05T00:55:38.441Z"
   }
 }

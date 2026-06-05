@@ -1,0 +1,138 @@
+{
+  "episodeId": "2026-06-05:protocol:symbiotic",
+  "dateUtc": "2026-06-05",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "symbiotic",
+    "name": "Symbiotic",
+    "category": "Restaking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Restaking",
+        "Chains: single-chain",
+        "TVL: $100M-$500M",
+        "7d change: down >10%"
+      ],
+      "choices": [
+        "Symbiotic",
+        "WisdomTree",
+        "EigenCloud"
+      ],
+      "answerIndex": 0,
+      "explanation": "Symbiotic's $347M TVL on Ethereum reflects a growing interest in restaking protocols, which allow users to earn additional rewards by leveraging their staked assets. This trend highlights how DeFi projects are innovating to maximize yield opportunities for users while enhancing network security.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.31209911060206236
+      },
+      "difficultyScore": 0.41370991106020627
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Symbiotic?",
+      "choices": [
+        "Oracle",
+        "Restaking",
+        "Options",
+        "MEV"
+      ],
+      "answerIndex": 1,
+      "explanation": "Symbiotic operates in the restaking category, allowing users to leverage their staked assets for additional yield opportunities. This approach enhances capital efficiency by enabling users to earn rewards from multiple protocols simultaneously.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.31209911060206236
+      },
+      "difficultyScore": 0.3237099110602063
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Symbiotic's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 3,
+      "explanation": "Symbiotic's current TVL of $347M is 87% below its all-time high of $2.7B, which suggests significant challenges in attracting liquidity since its peak, possibly due to market conditions or competition. This large distance from its ATH indicates that the protocol may need to innovate or improve its offerings to regain user interest and investment.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4866384116992242,
+        "volatility": 0.31209911060206236
+      },
+      "difficultyScore": 0.3837099110602063
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Restaking protocols from highest to lowest TVL.",
+      "choices": [
+        "Babylon Protocol > Symbiotic > EigenCloud",
+        "Symbiotic > EigenCloud > Babylon Protocol",
+        "EigenCloud > Symbiotic > Babylon Protocol",
+        "EigenCloud > Babylon Protocol > Symbiotic"
+      ],
+      "answerIndex": 3,
+      "explanation": "Symbiotic's $347M TVL is significantly lower than EigenCloud's $4.9B and Babylon Protocol's $3.3B, reflecting its earlier stage in the restaking space and possibly a narrower user base or less liquidity. This disparity often indicates that larger protocols have more established ecosystems and user trust, which can drive higher TVL.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.34041028276950036,
+        "volatility": 0.31209911060206236
+      },
+      "difficultyScore": 0.4237099110602063
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Symbiotic deployed on?",
+      "choices": [
+        "Solana",
+        "Ethereum",
+        "Arbitrum",
+        "Fantom"
+      ],
+      "answerIndex": 1,
+      "explanation": "Symbiotic operates solely on Ethereum, which allows it to leverage the network's robust liquidity and established user base. This single-chain focus can lead to deeper integration with Ethereum's DeFi ecosystem, but it also makes the protocol more vulnerable to Ethereum's network congestion and gas fees.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.31209911060206236
+      },
+      "difficultyScore": 0.3237099110602063
+    }
+  ],
+  "generatedAt": "2026-06-05T00:55:38.441Z"
+}
