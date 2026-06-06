@@ -123,5 +123,30 @@
     "text": "Symbiotic operates solely on Ethereum, which allows it to leverage the network's robust liquidity and established user base. This single-chain focus can lead to deeper integration with Ethereum's DeFi ecosystem, but it also makes the protocol more vulnerable to Ethereum's network congestion and gas fees.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-06-05T00:55:38.441Z"
+  },
+  "2026-06-06|chain|Mantle|A|C1_FINGERPRINT|explanation|d1d802264f26f218": {
+    "text": "Mantle ranks 20th in TVL with between $100M and $500M, which is impressive given it supports 140 protocols, indicating a diverse ecosystem that can attract various projects and users. This level of protocol count often correlates with increased activity and innovation within the network.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-06T00:52:23.023Z"
+  },
+  "2026-06-06|chain|Mantle|B|C2_CHAIN_COMPARISON|explanation|18d488573bc1e406": {
+    "text": "Mantle's $230M TVL surpasses MegaETH's $151M by 34.3%, reflecting its stronger user adoption and liquidity, which can be attributed to its efficient scaling solutions and incentives that attract more liquidity providers. This difference in TVL showcases how effective protocols can significantly outpace competitors in attracting capital.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-06T00:52:24.389Z"
+  },
+  "2026-06-06|chain|Mantle|C|C4_GROWTH_RANKING|explanation|064448bac4869675": {
+    "text": "Plasma leads with a remarkable 44.3% growth, while Mantle's 13.1% increase shows solid performance compared to Sei's 8.0% and Stacks' minimal 0.1%. This positions Mantle as a strong contender in the growth rankings, reflecting its increasing adoption and activity in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-06T00:52:25.679Z"
+  },
+  "2026-06-06|chain|Mantle|D|C3_ATH_TIMING|explanation|8b03ef808e44e703": {
+    "text": "Mantle reached its all-time high (ATH) of $705M in April 2026, which is notable as it came after a period of lower valuations, like the $500M mark in August 2023. The other options, such as March 2025 and May 2026, were close but didn't capture the peak, highlighting the rapid growth Mantle experienced leading up to its ATH.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-06T00:52:27.110Z"
+  },
+  "2026-06-06|chain|Mantle|E|C6_TOP_DEX|explanation|f022054f47f2a4fe": {
+    "text": "Merchant Moe Liquidity Book leads Mantle with $5M in volume, significantly outpacing Agni Finance at $3M and the much smaller Fluxion Network at $216K. This stark difference highlights Merchant Moe's strong position as the go-to DEX on Mantle, attracting more trading activity compared to its competitors.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-06T00:52:28.462Z"
   }
 }
