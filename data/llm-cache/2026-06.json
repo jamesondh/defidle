@@ -148,5 +148,30 @@
     "text": "Merchant Moe Liquidity Book leads Mantle with $5M in volume, significantly outpacing Agni Finance at $3M and the much smaller Fluxion Network at $216K. This stark difference highlights Merchant Moe's strong position as the go-to DEX on Mantle, attracting more trading activity compared to its competitors.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-06-06T00:52:28.462Z"
+  },
+  "2026-06-07|protocol|lorenzo-enzobtc|A|P1_FINGERPRINT|explanation|5c0835d42ffcf931": {
+    "text": "Lorenzo enzoBTC operates solely on the Bitcoin chain, which is notable since many bridges support multiple chains to enhance liquidity and user access. With a TVL of $364M, it shows that there's significant interest in bridging assets on Bitcoin, a chain traditionally less focused on DeFi compared to others like Ethereum.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-07T00:57:23.285Z"
+  },
+  "2026-06-07|protocol|lorenzo-enzobtc|B|P7_CATEGORY|explanation|082479255a482583": {
+    "text": "Lorenzo enzoBTC operates in the bridge category, facilitating the transfer of assets between different blockchains. This functionality is crucial for enhancing interoperability in DeFi, allowing users to move their assets seamlessly across various networks.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-07T00:57:24.549Z"
+  },
+  "2026-06-07|protocol|lorenzo-enzobtc|C|P22_CATEGORY_MARKET_SHARE|explanation|6a8c7864265cacea": {
+    "text": "Lorenzo enzoBTC holds a TVL of $364M, capturing about 1% of the $39B bridge category, which shows that while it has a presence in the market, it remains a smaller player compared to larger bridges that dominate the space. This limited market share suggests that there may be significant competition and user preference for more established protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-07T00:57:25.744Z"
+  },
+  "2026-06-07|protocol|lorenzo-enzobtc|D|P4_ATH_TIMING|explanation|d74fb332a26444f9": {
+    "text": "Lorenzo enzoBTC reached its ATH of $747M in October 2025, a peak that stands out compared to the other months like July and September 2025, which saw significantly lower values. This timing suggests that market conditions or developments specific to that month likely contributed to the surge in value.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-07T00:57:26.615Z"
+  },
+  "2026-06-07|protocol|lorenzo-enzobtc|E|P8_CHAIN_MEMBERSHIP|explanation|0b45b5f83795a118": {
+    "text": "Lorenzo enzoBTC operates solely on the Bitcoin chain, which reflects its focus on leveraging Bitcoin's security and established network for its DeFi offerings. This single-chain approach can limit its accessibility compared to multi-chain protocols, but it also allows for deeper integration with Bitcoin's unique features.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-07T00:57:27.636Z"
   }
 }

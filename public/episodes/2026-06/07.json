@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-06-07:protocol:lorenzo-enzobtc",
+  "dateUtc": "2026-06-07",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "lorenzo-enzobtc",
+    "name": "Lorenzo enzoBTC",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: single-chain",
+        "TVL: $100M-$500M",
+        "7d change: down >10%"
+      ],
+      "choices": [
+        "Anemoy Capital",
+        "Hyperliquid Bridge",
+        "Lorenzo enzoBTC",
+        "CCIP"
+      ],
+      "answerIndex": 2,
+      "explanation": "Lorenzo enzoBTC operates solely on the Bitcoin chain, which is notable since many bridges support multiple chains to enhance liquidity and user access. With a TVL of $364M, it shows that there's significant interest in bridging assets on Bitcoin, a chain traditionally less focused on DeFi compared to others like Ethereum.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.12148027485701379
+      },
+      "difficultyScore": 0.39464802748570144
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Lorenzo enzoBTC?",
+      "choices": [
+        "Bridge",
+        "Liquidations",
+        "Uncollateralized Lending",
+        "Yield Aggregator"
+      ],
+      "answerIndex": 0,
+      "explanation": "Lorenzo enzoBTC operates in the bridge category, facilitating the transfer of assets between different blockchains. This functionality is crucial for enhancing interoperability in DeFi, allowing users to move their assets seamlessly across various networks.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.12148027485701379
+      },
+      "difficultyScore": 0.3046480274857014
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P22_CATEGORY_MARKET_SHARE",
+      "format": "mc4",
+      "prompt": "What share of Bridge TVL does Lorenzo enzoBTC hold?",
+      "choices": [
+        "<10%",
+        "10-25%",
+        "25-50%",
+        ">50%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Lorenzo enzoBTC holds a TVL of $364M, capturing about 1% of the $39B bridge category, which shows that while it has a presence in the market, it remains a smaller player compared to larger bridges that dominate the space. This limited market share suggests that there may be significant competition and user preference for more established protocols.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9066085064338354,
+        "volatility": 0.12148027485701379
+      },
+      "difficultyScore": 0.3046480274857014
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Lorenzo enzoBTC hit its all-time high TVL?",
+      "choices": [
+        "Jul 2025",
+        "Oct 2025",
+        "May 2026",
+        "Jan 2026",
+        "Aug 2025",
+        "Sep 2025"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lorenzo enzoBTC reached its ATH of $747M in October 2025, a peak that stands out compared to the other months like July and September 2025, which saw significantly lower values. This timing suggests that market conditions or developments specific to that month likely contributed to the surge in value.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.12148027485701379
+      },
+      "difficultyScore": 0.49464802748570136
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Lorenzo enzoBTC deployed on?",
+      "choices": [
+        "Base",
+        "Fantom",
+        "Bitcoin",
+        "zkSync Era"
+      ],
+      "answerIndex": 2,
+      "explanation": "Lorenzo enzoBTC operates solely on the Bitcoin chain, which reflects its focus on leveraging Bitcoin's security and established network for its DeFi offerings. This single-chain approach can limit its accessibility compared to multi-chain protocols, but it also allows for deeper integration with Bitcoin's unique features.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.12148027485701379
+      },
+      "difficultyScore": 0.3046480274857014
+    }
+  ],
+  "generatedAt": "2026-06-07T00:57:27.636Z"
+}
