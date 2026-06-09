@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-06-09:chain:Plasma",
+  "dateUtc": "2026-06-09",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Plasma",
+    "name": "Plasma"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: XPL",
+        "Protocols: 50-100"
+      ],
+      "choices": [
+        "ENI",
+        "Aptos",
+        "Sui",
+        "Avalanche",
+        "Provenance",
+        "Plasma"
+      ],
+      "answerIndex": 5,
+      "explanation": "Plasma's TVL of $500M-$1B places it at rank 11, reflecting its solid adoption among users across 68 protocols, which is a strong indicator of its versatility and appeal in the DeFi landscape. This level of protocol diversity suggests that Plasma is effectively catering to a wide range of use cases, enhancing its overall ecosystem.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Plasma or Sui?",
+      "choices": [
+        "Sui",
+        "Plasma"
+      ],
+      "answerIndex": 1,
+      "explanation": "Plasma's $785M TVL surpasses Sui's $447M by 43.1%, reflecting its stronger adoption and user trust, likely driven by its established ecosystem and proven scalability solutions compared to Sui's newer platform. This difference in TVL showcases how early traction can significantly impact a chain's growth and user engagement.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.43135388762901594,
+        "volatility": null
+      },
+      "difficultyScore": 0.2095
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Base",
+        "Hedera",
+        "Near",
+        "Plasma"
+      ],
+      "answerIndex": 3,
+      "explanation": "Plasma's impressive 36.6% growth outpaces other chains like Near, which only saw a modest 2.9% increase, while Hedera and Base experienced declines of 9.0% and 14.3%, respectively. This stark contrast highlights Plasma's strong momentum in the DeFi space, suggesting it is gaining traction and user interest compared to its peers.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.3369015798755526,
+        "volatility": null
+      },
+      "difficultyScore": 0.35950000000000004
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Plasma hit its all-time high TVL?",
+      "choices": [
+        "Jan 2026",
+        "Oct 2025",
+        "Dec 2025",
+        "Apr 2026",
+        "Feb 2026",
+        "May 2026"
+      ],
+      "answerIndex": 1,
+      "explanation": "Plasma reached its all-time high (ATH) of $6.4B in October 2025, a notable spike compared to the later months listed, such as December 2025 and January 2026, which saw lower engagement. This timing suggests that Plasma capitalized on a unique market opportunity or trend that peaked just before the end of the year, while subsequent months did not replicate that momentum.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Plasma?",
+      "choices": [
+        "Curve DEX",
+        "Fluid DEX",
+        "Pendle",
+        "Uniswap V3"
+      ],
+      "answerIndex": 2,
+      "explanation": "Pendle leads the Plasma chain with $8M in volume, significantly outpacing Fluid DEX at $5M and Uniswap V3 at $2M. This dominance suggests that Pendle is effectively capturing user interest and trading activity, likely due to its unique features in the DeFi space compared to its competitors.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.407233024364832,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-06-09T00:51:02.258Z"
+}
