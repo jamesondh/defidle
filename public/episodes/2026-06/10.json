@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-06-10:protocol:sanctum-validator-lsts",
+  "dateUtc": "2026-06-10",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "sanctum-validator-lsts",
+    "name": "Sanctum Validator LSTs",
+    "category": "Liquid Staking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Liquid Staking",
+        "Chains: single-chain",
+        "TVL: $500M-$1B",
+        "7d change: down >10%"
+      ],
+      "choices": [
+        "Sanctum Validator LSTs",
+        "Coinbase Wrapped Staked ETH",
+        "Jito Liquid Staking",
+        "Compound V3"
+      ],
+      "answerIndex": 0,
+      "explanation": "Sanctum Validator LSTs have amassed $979M in TVL on Solana, showcasing the growing interest in liquid staking solutions within this ecosystem. With only one chain involved, this concentration highlights Solana's potential as a key player in the liquid staking market.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.16587208311106463
+      },
+      "difficultyScore": 0.3990872083111065
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Sanctum Validator LSTs?",
+      "choices": [
+        "Liquid Staking",
+        "CeDeFi",
+        "Stablecoin Issuer",
+        "Bridge Aggregator"
+      ],
+      "answerIndex": 0,
+      "explanation": "Sanctum Validator LSTs fall under the Liquid Staking category, which allows users to stake their assets while still maintaining liquidity. This model enables participants to earn staking rewards without locking up their tokens, making it an attractive option for those looking to maximize their yield.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.16587208311106463
+      },
+      "difficultyScore": 0.3090872083111065
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Sanctum Validator LSTs's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 1,
+      "explanation": "Sanctum Validator LSTs generated $1M in fees over the past week, but only $117K of that translated into revenue, indicating that 12% of the fees are being retained as profit. This relatively low revenue percentage suggests high operational costs or competitive fee structures that could impact long-term sustainability.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.06087105563337408,
+        "volatility": 0.16587208311106463
+      },
+      "difficultyScore": 0.5360419415510576
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Sanctum Validator LSTs hit its all-time high TVL?",
+      "choices": [
+        "Oct 2025",
+        "Feb 2025",
+        "Jul 2025",
+        "May 2025",
+        "Sep 2025",
+        "Jan 2026"
+      ],
+      "answerIndex": 4,
+      "explanation": "Sanctum Validator LSTs hit their all-time high of $2.9B in September 2025, a significant milestone compared to earlier months like May 2025, when it was still gaining traction. This timing suggests that the protocol experienced a surge in adoption and market interest just before reaching its peak.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.16587208311106463
+      },
+      "difficultyScore": 0.4990872083111064
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Sanctum Validator LSTs deployed on?",
+      "choices": [
+        "Optimism",
+        "Solana",
+        "Base",
+        "zkSync Era"
+      ],
+      "answerIndex": 1,
+      "explanation": "Sanctum Validator LSTs are exclusively available on Solana, reflecting the chain's focus on optimizing validator performance and enhancing staking efficiency. This singular chain membership allows Sanctum to tailor its offerings specifically to Solana's unique ecosystem and user needs.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.16587208311106463
+      },
+      "difficultyScore": 0.3090872083111065
+    }
+  ],
+  "generatedAt": "2026-06-10T00:57:32.050Z"
+}

@@ -223,5 +223,30 @@
     "text": "Pendle leads the Plasma chain with $8M in volume, significantly outpacing Fluid DEX at $5M and Uniswap V3 at $2M. This dominance suggests that Pendle is effectively capturing user interest and trading activity, likely due to its unique features in the DeFi space compared to its competitors.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-06-09T00:51:02.258Z"
+  },
+  "2026-06-10|protocol|sanctum-validator-lsts|A|P1_FINGERPRINT|explanation|d1d374008dd05e9b": {
+    "text": "Sanctum Validator LSTs have amassed $979M in TVL on Solana, showcasing the growing interest in liquid staking solutions within this ecosystem. With only one chain involved, this concentration highlights Solana's potential as a key player in the liquid staking market.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-10T00:57:27.194Z"
+  },
+  "2026-06-10|protocol|sanctum-validator-lsts|B|P7_CATEGORY|explanation|df6709e733c864c4": {
+    "text": "Sanctum Validator LSTs fall under the Liquid Staking category, which allows users to stake their assets while still maintaining liquidity. This model enables participants to earn staking rewards without locking up their tokens, making it an attractive option for those looking to maximize their yield.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-10T00:57:28.335Z"
+  },
+  "2026-06-10|protocol|sanctum-validator-lsts|C|P5_FEES_REVENUE|explanation|509e95a94fe8d8b0": {
+    "text": "Sanctum Validator LSTs generated $1M in fees over the past week, but only $117K of that translated into revenue, indicating that 12% of the fees are being retained as profit. This relatively low revenue percentage suggests high operational costs or competitive fee structures that could impact long-term sustainability.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-10T00:57:29.826Z"
+  },
+  "2026-06-10|protocol|sanctum-validator-lsts|D|P4_ATH_TIMING|explanation|6816f10d98f3b092": {
+    "text": "Sanctum Validator LSTs hit their all-time high of $2.9B in September 2025, a significant milestone compared to earlier months like May 2025, when it was still gaining traction. This timing suggests that the protocol experienced a surge in adoption and market interest just before reaching its peak.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-10T00:57:30.859Z"
+  },
+  "2026-06-10|protocol|sanctum-validator-lsts|E|P8_CHAIN_MEMBERSHIP|explanation|4d2d0b4948d9030f": {
+    "text": "Sanctum Validator LSTs are exclusively available on Solana, reflecting the chain's focus on optimizing validator performance and enhancing staking efficiency. This singular chain membership allows Sanctum to tailor its offerings specifically to Solana's unique ecosystem and user needs.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-10T00:57:32.049Z"
   }
 }
