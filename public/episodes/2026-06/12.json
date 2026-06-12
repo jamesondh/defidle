@@ -1,0 +1,144 @@
+{
+  "episodeId": "2026-06-12:protocol:justcryptos",
+  "dateUtc": "2026-06-12",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "justcryptos",
+    "name": "JustCryptos",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: single-chain",
+        "Active since: 2021",
+        "TVL: $1B-$5B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "JustCryptos",
+        "CCIP",
+        "Lorenzo enzoBTC",
+        "Binance Bitcoin",
+        "USDT0",
+        "Ondo Yield Assets"
+      ],
+      "answerIndex": 0,
+      "explanation": "JustCryptos has a significant $1.9B TVL on the Tron chain, showcasing its strong position as a bridge within a single ecosystem. This concentration on Tron allows it to leverage the network's unique features and user base, making it a key player in cross-chain transactions.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.12536986055922855
+      },
+      "difficultyScore": 0.4850369860559229
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is JustCryptos?",
+      "choices": [
+        "Gaming",
+        "Bridge",
+        "Partially Algorithmic Stablecoin",
+        "Volume Boosting"
+      ],
+      "answerIndex": 1,
+      "explanation": "JustCryptos operates as a bridge, facilitating the transfer of assets between different blockchains. This category is crucial for enhancing interoperability in DeFi, allowing users to move their assets seamlessly across various networks.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.12536986055922855
+      },
+      "difficultyScore": 0.3050369860559229
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P22_CATEGORY_MARKET_SHARE",
+      "format": "mc4",
+      "prompt": "What share of Bridge TVL does JustCryptos hold?",
+      "choices": [
+        "<10%",
+        "10-25%",
+        "25-50%",
+        ">50%"
+      ],
+      "answerIndex": 0,
+      "explanation": "JustCryptos holds a 5% market share in the bridge category with its $1.9B TVL, indicating it plays a significant role in facilitating cross-chain transactions, but still has room to grow within a $40.2B market. This positioning suggests that while it's a key player, many users still rely on other bridges, highlighting the competitive landscape in this space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5198829835480531,
+        "volatility": 0.12536986055922855
+      },
+      "difficultyScore": 0.3050369860559229
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did JustCryptos hit its all-time high TVL?",
+      "choices": [
+        "Mar 2024",
+        "Sep 2022",
+        "Nov 2021",
+        "May 2024",
+        "Sep 2024",
+        "Feb 2026"
+      ],
+      "answerIndex": 0,
+      "explanation": "JustCryptos hit its ATH of $8.3B in March 2024, a significant milestone that reflects the growing interest in DeFi during that period. In contrast, the other options like November 2021 and September 2022 were characterized by market downturns, making March 2024 a standout moment for the protocol's growth.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.12536986055922855
+      },
+      "difficultyScore": 0.49503698605592283
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is JustCryptos deployed on?",
+      "choices": [
+        "zkSync Era",
+        "Base",
+        "Tron",
+        "Optimism"
+      ],
+      "answerIndex": 2,
+      "explanation": "JustCryptos operates solely on the Tron blockchain, which is known for its high throughput and low transaction fees, making it an attractive choice for users seeking efficient DeFi solutions. This single-chain focus allows JustCryptos to optimize its platform for the unique features and capabilities of Tron.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.12536986055922855
+      },
+      "difficultyScore": 0.3050369860559229
+    }
+  ],
+  "generatedAt": "2026-06-12T01:00:02.793Z"
+}

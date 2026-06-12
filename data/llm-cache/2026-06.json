@@ -273,5 +273,30 @@
     "text": "Aerodrome Slipstream leads Base with an impressive $590M in volume, significantly outpacing Uniswap V4 at $268M and Uniswap V3 at $142M. This dominance suggests that Aerodrome has effectively captured user interest and liquidity on Base, showcasing its appeal compared to other established DEXs.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-06-11T00:56:14.457Z"
+  },
+  "2026-06-12|protocol|justcryptos|A|P1_FINGERPRINT|explanation|b2cb15bd047c19fa": {
+    "text": "JustCryptos has a significant $1.9B TVL on the Tron chain, showcasing its strong position as a bridge within a single ecosystem. This concentration on Tron allows it to leverage the network's unique features and user base, making it a key player in cross-chain transactions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-12T00:59:56.579Z"
+  },
+  "2026-06-12|protocol|justcryptos|B|P7_CATEGORY|explanation|1b4ba79c3c462a82": {
+    "text": "JustCryptos operates as a bridge, facilitating the transfer of assets between different blockchains. This category is crucial for enhancing interoperability in DeFi, allowing users to move their assets seamlessly across various networks.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-12T00:59:57.943Z"
+  },
+  "2026-06-12|protocol|justcryptos|C|P22_CATEGORY_MARKET_SHARE|explanation|bdfff67a0a189c1d": {
+    "text": "JustCryptos holds a 5% market share in the bridge category with its $1.9B TVL, indicating it plays a significant role in facilitating cross-chain transactions, but still has room to grow within a $40.2B market. This positioning suggests that while it's a key player, many users still rely on other bridges, highlighting the competitive landscape in this space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-12T00:59:59.780Z"
+  },
+  "2026-06-12|protocol|justcryptos|D|P4_ATH_TIMING|explanation|9fd815acb3ece531": {
+    "text": "JustCryptos hit its ATH of $8.3B in March 2024, a significant milestone that reflects the growing interest in DeFi during that period. In contrast, the other options like November 2021 and September 2022 were characterized by market downturns, making March 2024 a standout moment for the protocol's growth.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-12T01:00:01.569Z"
+  },
+  "2026-06-12|protocol|justcryptos|E|P8_CHAIN_MEMBERSHIP|explanation|c03828101a6a32f1": {
+    "text": "JustCryptos operates solely on the Tron blockchain, which is known for its high throughput and low transaction fees, making it an attractive choice for users seeking efficient DeFi solutions. This single-chain focus allows JustCryptos to optimize its platform for the unique features and capabilities of Tron.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-12T01:00:02.793Z"
   }
 }
