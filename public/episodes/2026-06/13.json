@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-06-13:chain:Katana",
+  "dateUtc": "2026-06-13",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Katana",
+    "name": "Katana"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Native token: KAT",
+        "Protocols: 20-50",
+        "TVL: $50M-$100M",
+        "30d trend: down >10%"
+      ],
+      "choices": [
+        "Katana",
+        "Aptos",
+        "Starknet",
+        "Cardano"
+      ],
+      "answerIndex": 0,
+      "explanation": "Katana ranks 28th with a TVL between $50M and $100M, indicating it has gained traction among users, particularly for its focus on interoperability across multiple protocols. With 28 protocols integrated, it sits comfortably in the 20-50 range, showcasing its appeal to a diverse set of DeFi applications.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4075000000000001
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "prompt": "Katana has higher TVL than Sei.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Katana's $99M TVL outpaces Sei's $58M by 41.7%, reflecting its stronger adoption and liquidity in the DeFi space. This significant difference often stems from factors like user incentives, protocol features, and community engagement that drive capital into Katana compared to Sei.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.41650520730955604,
+        "volatility": null
+      },
+      "difficultyScore": 0.1375
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Katana?",
+      "choices": [
+        "Spectra V2",
+        "SushiSwap",
+        "Kensei",
+        "SushiSwap V3"
+      ],
+      "answerIndex": 3,
+      "explanation": "SushiSwap V3 leads Katana with a solid $2M in volume, significantly outpacing its closest competitor, Spectra V2, which only managed $19K. The stark contrast in volume highlights SushiSwap V3's dominance on the chain, while other DEXs like SushiSwap and Kensei are struggling to attract any trading activity at all.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9893057800031818,
+        "volatility": null
+      },
+      "difficultyScore": 0.31750000000000006
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Katana hit its all-time high TVL?",
+      "choices": [
+        "Mar 2026",
+        "Sep 2025",
+        "May 2026",
+        "Nov 2025",
+        "Feb 2026",
+        "Jul 2025"
+      ],
+      "answerIndex": 0,
+      "explanation": "Katana reached its all-time high (ATH) of $711M in March 2026, a notable spike compared to earlier months like November 2025 and February 2026, which saw lower TVL. This timing reflects a significant growth phase for Katana, likely driven by increased user adoption or new features that attracted liquidity.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.5075000000000001
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C10_PROTOCOL_COUNT",
+      "format": "mc4",
+      "prompt": "How many DeFi protocols are deployed on Katana?",
+      "choices": [
+        "<50",
+        "50-100",
+        "100-250",
+        ">250"
+      ],
+      "answerIndex": 0,
+      "explanation": "Katana supports 28 different protocols, reflecting its versatility and appeal within the DeFi landscape. This diverse ecosystem allows users to access a wide range of financial services, enhancing liquidity and user engagement across the platform.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.88,
+        "volatility": null
+      },
+      "difficultyScore": 0.31750000000000006
+    }
+  ],
+  "generatedAt": "2026-06-13T00:58:55.892Z"
+}
