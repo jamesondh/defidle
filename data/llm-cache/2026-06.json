@@ -323,5 +323,30 @@
     "text": "Katana supports 28 different protocols, reflecting its versatility and appeal within the DeFi landscape. This diverse ecosystem allows users to access a wide range of financial services, enhancing liquidity and user engagement across the platform.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-06-13T00:58:55.891Z"
+  },
+  "2026-06-14|protocol|grove-finance|A|P1_FINGERPRINT|explanation|2c714c35e972b23c": {
+    "text": "Grove Finance's $2.5B TVL across four chains, including Ethereum and Avalanche, showcases its ability to attract significant capital by diversifying its presence in multiple ecosystems, which can help mitigate risks associated with any single chain's performance. This strategy is particularly effective for onchain capital allocators, as it allows them to tap into various liquidity pools and user bases.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-14T00:59:10.421Z"
+  },
+  "2026-06-14|protocol|grove-finance|B|P2_CROSSCHAIN|explanation|2c41637a1ae8e1b9": {
+    "text": "Grove Finance's $2.0B TVL on Ethereum dwarfs the $259M on Avalanche, showcasing a significant preference for Ethereum's robust ecosystem, which often attracts more liquidity and user activity. The 87% margin indicates that users are gravitating towards Ethereum for its established DeFi infrastructure and diverse opportunities.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-14T00:59:11.893Z"
+  },
+  "2026-06-14|protocol|grove-finance|C|P11_FEES_TREND|explanation|5b87d4b28a0ab8d0": {
+    "text": "Grove Finance's fees have decreased by 16.5%, despite remaining steady at $1M over the past week. This drop suggests a shift in user activity or transaction volume, indicating that while total fees are stable, the platform may be experiencing lower trading activity or reduced fee rates.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-14T00:59:13.163Z"
+  },
+  "2026-06-14|protocol|grove-finance|D|P33_MULTI_RANKING|explanation|d632a4f455204bed": {
+    "text": "Grove Finance leads the Onchain Capital Allocator category with a TVL of $2.5B, reflecting its strong position in managing capital efficiently compared to Spark Liquidity Layer's $2.1B and Concrete's $800M. This significant difference suggests that Grove Finance has successfully attracted more liquidity, likely due to its unique features or user incentives that resonate with investors.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-14T00:59:14.856Z"
+  },
+  "2026-06-14|protocol|grove-finance|E|P6_TVL_TREND|explanation|b55fe7c072a4d165": {
+    "text": "Grove Finance's TVL has decreased by 15.7% to $2.5B, which may reflect shifting user preferences or competitive pressures in the DeFi space, as investors often move funds to platforms offering better yields or innovative features. This trend can signal a need for Grove Finance to enhance its offerings to attract and retain liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-14T00:59:16.030Z"
   }
 }

@@ -1,0 +1,137 @@
+{
+  "episodeId": "2026-06-14:protocol:grove-finance",
+  "dateUtc": "2026-06-14",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "grove-finance",
+    "name": "Grove Finance",
+    "category": "Onchain Capital Allocator"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Onchain Capital Allocator",
+        "Chains: 2-5 chains",
+        "TVL rank: top 25"
+      ],
+      "choices": [
+        "Veda",
+        "Coinbase Bridge",
+        "Grove Finance",
+        "EigenCloud",
+        "Hyperliquid Bridge"
+      ],
+      "answerIndex": 2,
+      "explanation": "Grove Finance's $2.5B TVL across four chains, including Ethereum and Avalanche, showcases its ability to attract significant capital by diversifying its presence in multiple ecosystems, which can help mitigate risks associated with any single chain's performance. This strategy is particularly effective for onchain capital allocators, as it allows them to tap into various liquidity pools and user bases.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.06470208327332752
+      },
+      "difficultyScore": 0.46097020832733276
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Grove Finance have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Avalanche"
+      ],
+      "answerIndex": 0,
+      "explanation": "Grove Finance's $2.0B TVL on Ethereum dwarfs the $259M on Avalanche, showcasing a significant preference for Ethereum's robust ecosystem, which often attracts more liquidity and user activity. The 87% margin indicates that users are gravitating towards Ethereum for its established DeFi infrastructure and diverse opportunities.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.8724388465421742,
+        "volatility": 0.06470208327332752
+      },
+      "difficultyScore": 0.19097020832733275
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did Grove Finance's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 1,
+      "explanation": "Grove Finance's fees have decreased by 16.5%, despite remaining steady at $1M over the past week. This drop suggests a shift in user activity or transaction volume, indicating that while total fees are stable, the platform may be experiencing lower trading activity or reduced fee rates.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.16483260174359796,
+        "volatility": 0.06470208327332752
+      },
+      "difficultyScore": 0.3831710862350152
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Onchain Capital Allocator protocols from highest to lowest TVL.",
+      "choices": [
+        "Grove Finance > Spark Liquidity Layer > Concrete",
+        "Concrete > Grove Finance > Spark Liquidity Layer",
+        "Spark Liquidity Layer > Concrete > Grove Finance",
+        "Grove Finance > Concrete > Spark Liquidity Layer"
+      ],
+      "answerIndex": 0,
+      "explanation": "Grove Finance leads the Onchain Capital Allocator category with a TVL of $2.5B, reflecting its strong position in managing capital efficiently compared to Spark Liquidity Layer's $2.1B and Concrete's $800M. This significant difference suggests that Grove Finance has successfully attracted more liquidity, likely due to its unique features or user incentives that resonate with investors.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.13522851906809058,
+        "volatility": 0.06470208327332752
+      },
+      "difficultyScore": 0.5186959854456241
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "Grove Finance's TVL increased over the past 30 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "Grove Finance's TVL has decreased by 15.7% to $2.5B, which may reflect shifting user preferences or competitive pressures in the DeFi space, as investors often move funds to platforms offering better yields or innovative features. This trend can signal a need for Grove Finance to enhance its offerings to attract and retain liquidity.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.15746343801590942,
+        "volatility": 0.06470208327332752
+      },
+      "difficultyScore": 0.21201408270824146
+    }
+  ],
+  "generatedAt": "2026-06-14T00:59:16.031Z"
+}
