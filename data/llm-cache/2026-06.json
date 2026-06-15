@@ -348,5 +348,30 @@
     "text": "Grove Finance's TVL has decreased by 15.7% to $2.5B, which may reflect shifting user preferences or competitive pressures in the DeFi space, as investors often move funds to platforms offering better yields or innovative features. This trend can signal a need for Grove Finance to enhance its offerings to attract and retain liquidity.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-06-14T00:59:16.030Z"
+  },
+  "2026-06-15|protocol|concrete|A|P1_FINGERPRINT|explanation|c6a75797c73e8af2": {
+    "text": "Concrete's $816M TVL across five chains, including Ethereum and Arbitrum, showcases its ability to attract capital in a competitive landscape, particularly as it taps into diverse ecosystems like Berachain and Katana. This multi-chain approach allows Concrete to leverage varying user bases and liquidity pools, enhancing its overall capital efficiency.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-15T01:01:08.778Z"
+  },
+  "2026-06-15|protocol|concrete|B|P2_CROSSCHAIN|explanation|8b3a93b267e55f13": {
+    "text": "Concrete's success on Ethereum, with a TVL of $687M, starkly contrasts with Berachain's $44M, showcasing Ethereum's dominance in attracting liquidity and user engagement in DeFi. The 94% margin indicates that Ethereum's established ecosystem and user base significantly outpace newer chains like Berachain in terms of trust and utilization.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-15T01:01:10.995Z"
+  },
+  "2026-06-15|protocol|concrete|C|P11_FEES_TREND|explanation|4b2e03063ace5f49": {
+    "text": "Concrete's fees have dropped by 64.4% over the past week, falling from $72K to $26K, which suggests a significant decrease in trading activity or user engagement on the platform. This sharp decline could indicate changing market conditions or competition affecting user choices.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-15T01:01:12.474Z"
+  },
+  "2026-06-15|protocol|concrete|D|P4_ATH_TIMING|explanation|2d255ec6833b3e5c": {
+    "text": "Concrete reached its all-time high (ATH) of $1.1B in March 2026, which is notable compared to the earlier dates like April and May 2025, when it had not yet gained the traction needed to hit that peak. This timing suggests that Concrete experienced significant growth and adoption in the months leading up to its ATH, distinguishing it from the other options.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-15T01:01:14.522Z"
+  },
+  "2026-06-15|protocol|concrete|E|P3_CONCENTRATION|explanation|1ba91df2917d0620": {
+    "text": "Concrete's TVL is heavily concentrated on Ethereum, with 84% of its total $816M locked on the chain, reflecting Ethereum's dominance in DeFi and the tendency for projects to build on established networks for liquidity and user engagement. This concentration can also indicate potential risks, as reliance on a single chain may expose the protocol to fluctuations in that ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-15T01:01:15.907Z"
   }
 }

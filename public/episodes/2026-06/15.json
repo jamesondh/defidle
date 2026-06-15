@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-06-15:protocol:concrete",
+  "dateUtc": "2026-06-15",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "concrete",
+    "name": "Concrete",
+    "category": "Onchain Capital Allocator"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Onchain Capital Allocator",
+        "Chains: 2-5 chains",
+        "TVL: $500M-$1B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Grove Finance",
+        "Concrete",
+        "Kamino Lend"
+      ],
+      "answerIndex": 1,
+      "explanation": "Concrete's $816M TVL across five chains, including Ethereum and Arbitrum, showcases its ability to attract capital in a competitive landscape, particularly as it taps into diverse ecosystems like Berachain and Katana. This multi-chain approach allows Concrete to leverage varying user bases and liquidity pools, enhancing its overall capital efficiency.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.12107171770880865
+      },
+      "difficultyScore": 0.39460717177088095
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Concrete have higher TVL?",
+      "choices": [
+        "Berachain",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Concrete's success on Ethereum, with a TVL of $687M, starkly contrasts with Berachain's $44M, showcasing Ethereum's dominance in attracting liquidity and user engagement in DeFi. The 94% margin indicates that Ethereum's established ecosystem and user base significantly outpace newer chains like Berachain in terms of trust and utilization.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.93563874513292,
+        "volatility": 0.12107171770880865
+      },
+      "difficultyScore": 0.21460717177088087
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did Concrete's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Concrete's fees have dropped by 64.4% over the past week, falling from $72K to $26K, which suggests a significant decrease in trading activity or user engagement on the platform. This sharp decline could indicate changing market conditions or competition affecting user choices.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.6435130843057377,
+        "volatility": 0.12107171770880865
+      },
+      "difficultyScore": 0.3046071717708809
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Concrete hit its all-time high TVL?",
+      "choices": [
+        "Jun 2026",
+        "Apr 2025",
+        "May 2025",
+        "Mar 2026",
+        "Sep 2025",
+        "Aug 2025"
+      ],
+      "answerIndex": 3,
+      "explanation": "Concrete reached its all-time high (ATH) of $1.1B in March 2026, which is notable compared to the earlier dates like April and May 2025, when it had not yet gained the traction needed to hit that peak. This timing suggests that Concrete experienced significant growth and adoption in the months leading up to its ATH, distinguishing it from the other options.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.12107171770880865
+      },
+      "difficultyScore": 0.49460717177088087
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Concrete's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Concrete's TVL is heavily concentrated on Ethereum, with 84% of its total $816M locked on the chain, reflecting Ethereum's dominance in DeFi and the tendency for projects to build on established networks for liquidity and user engagement. This concentration can also indicate potential risks, as reliance on a single chain may expose the protocol to fluctuations in that ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.3668561453614503,
+        "volatility": 0.12107171770880865
+      },
+      "difficultyScore": 0.3046071717708809
+    }
+  ],
+  "generatedAt": "2026-06-15T01:01:15.908Z"
+}
