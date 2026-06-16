@@ -373,5 +373,30 @@
     "text": "Concrete's TVL is heavily concentrated on Ethereum, with 84% of its total $816M locked on the chain, reflecting Ethereum's dominance in DeFi and the tendency for projects to build on established networks for liquidity and user engagement. This concentration can also indicate potential risks, as reliance on a single chain may expose the protocol to fluctuations in that ecosystem.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-06-15T01:01:15.907Z"
+  },
+  "2026-06-16|chain|Stellar|A|C1_FINGERPRINT|explanation|db9900527d0cd358": {
+    "text": "Stellar's TVL of $100M-$500M and its rank of 18 suggest it has a solid presence in the DeFi space, especially with 36 protocols contributing to its ecosystem. This range indicates that while it's not among the largest players, it has a diverse set of applications that can drive user engagement and innovation.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-16T01:05:40.989Z"
+  },
+  "2026-06-16|chain|Stellar|B|C2_CHAIN_COMPARISON|explanation|efe909d7293227be": {
+    "text": "Stellar's $212M TVL outpaces Mantle's $147M by over 30%, reflecting its established user base and robust ecosystem, which often attracts more liquidity compared to newer or less proven chains like Mantle. This significant margin suggests that Stellar's infrastructure and use cases resonate more with users, driving higher engagement and investment.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-16T01:05:42.937Z"
+  },
+  "2026-06-16|chain|Stellar|C|C4_GROWTH_RANKING|explanation|2843359e0c66fc7e": {
+    "text": "Stellar's growth of +7.3% is notable, especially when compared to Ethereum's decline of -16.5% and Base's drop of -18.3%. This positive change suggests that Stellar is maintaining momentum in a challenging market, while other major chains are struggling to retain their value.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-16T01:05:44.704Z"
+  },
+  "2026-06-16|chain|Stellar|D|C3_ATH_TIMING|explanation|24b90678b4e38d26": {
+    "text": "Stellar reached its ATH of $243M in May 2026, which stands out compared to the other options like March 2026 and June 2024, where the TVL was significantly lower, indicating that Stellar experienced a notable surge in adoption or usage just after that period. This timing suggests a strategic development or market condition that propelled its growth right after the earlier dates.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-16T01:05:46.545Z"
+  },
+  "2026-06-16|chain|Stellar|E|C6_TOP_DEX|explanation|ef67b8dda8156eeb": {
+    "text": "Aquarius Stellar leads the Stellar ecosystem with a volume of $1M, significantly outpacing its closest competitor, Scopuly, which only managed $49K. This stark difference highlights Aquarius Stellar's dominance in facilitating trades on the network, especially since other DEXs like Allbridge Classic and LumenSwap recorded no volume at all.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-16T01:05:49.447Z"
   }
 }
