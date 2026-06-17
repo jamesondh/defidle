@@ -1,0 +1,142 @@
+{
+  "episodeId": "2026-06-17:protocol:centrifuge-protocol",
+  "dateUtc": "2026-06-17",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "centrifuge-protocol",
+    "name": "Centrifuge Protocol",
+    "category": "RWA"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: RWA",
+        "Chains: 6-10 chains",
+        "TVL: $1B-$5B",
+        "7d change: up >10%"
+      ],
+      "choices": [
+        "Ondo Global Markets",
+        "Centrifuge Protocol",
+        "Base Bridge",
+        "xStocks",
+        "Polygon Bridge",
+        "ether.fi Stake"
+      ],
+      "answerIndex": 1,
+      "explanation": "Centrifuge Protocol's $1.6B TVL across 10 chains, including Ethereum and Optimism, showcases its strong position in the RWA (real-world asset) space, where it enables the tokenization of physical assets for DeFi use. This diverse chain presence helps mitigate risks and attract liquidity from various ecosystems, enhancing its overall utility and reach.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.05951081656741708
+      },
+      "difficultyScore": 0.4784510816567417
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Centrifuge Protocol have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Avalanche"
+      ],
+      "answerIndex": 0,
+      "explanation": "Centrifuge Protocol's $1.3B TVL on Ethereum dwarfs the $259M on Avalanche, reflecting Ethereum's dominance in DeFi and its established user base, which often leads to significantly higher liquidity and activity compared to newer or less popular chains. The 79% margin indicates that users are gravitating towards Ethereum for its robust ecosystem and greater access to liquidity.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.7929376169401015,
+        "volatility": 0.05951081656741708
+      },
+      "difficultyScore": 0.20845108165674173
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did Centrifuge Protocol's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 4,
+      "explanation": "Centrifuge Protocol's fees have increased by 21% over the past week, rising from $943K to $1M, which suggests growing activity and demand for its services, particularly in asset-backed lending. This uptick can indicate a strengthening user base or increased transaction volume as more users engage with the platform.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.2096053563927512,
+        "volatility": 0.05951081656741708
+      },
+      "difficultyScore": 0.34692465398544026
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Centrifuge Protocol hit its all-time high TVL?",
+      "choices": [
+        "Jul 2025",
+        "Apr 2026",
+        "Mar 2025",
+        "Mar 2026",
+        "May 2025",
+        "Jan 2026"
+      ],
+      "answerIndex": 1,
+      "explanation": "Centrifuge Protocol hit its all-time high (ATH) of $2.0B in April 2026, which stands out from earlier dates like March 2025 and January 2026, when it had not yet gained the traction needed to reach that level. This timing reflects the protocol's growth and adoption as it matured in the DeFi landscape, likely driven by increased demand for real-world asset tokenization.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.05951081656741708
+      },
+      "difficultyScore": 0.48845108165674167
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Centrifuge Protocol deployed on?",
+      "choices": [
+        "Ethereum",
+        "BSC",
+        "Polygon",
+        "Solana"
+      ],
+      "answerIndex": 0,
+      "explanation": "Centrifuge Protocol operates across 10 chains, including Ethereum, Base, and Optimism, which allows it to tap into diverse liquidity pools and user bases. This multi-chain approach enhances its ability to facilitate real-world asset financing by connecting various DeFi ecosystems.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.05951081656741708
+      },
+      "difficultyScore": 0.2984510816567417
+    }
+  ],
+  "generatedAt": "2026-06-17T01:00:13.548Z"
+}

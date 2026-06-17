@@ -398,5 +398,30 @@
     "text": "Aquarius Stellar leads the Stellar ecosystem with a volume of $1M, significantly outpacing its closest competitor, Scopuly, which only managed $49K. This stark difference highlights Aquarius Stellar's dominance in facilitating trades on the network, especially since other DEXs like Allbridge Classic and LumenSwap recorded no volume at all.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-06-16T01:05:49.447Z"
+  },
+  "2026-06-17|protocol|centrifuge-protocol|A|P1_FINGERPRINT|explanation|17fb617bd64dee75": {
+    "text": "Centrifuge Protocol's $1.6B TVL across 10 chains, including Ethereum and Optimism, showcases its strong position in the RWA (real-world asset) space, where it enables the tokenization of physical assets for DeFi use. This diverse chain presence helps mitigate risks and attract liquidity from various ecosystems, enhancing its overall utility and reach.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-17T01:00:04.915Z"
+  },
+  "2026-06-17|protocol|centrifuge-protocol|B|P2_CROSSCHAIN|explanation|a1c864ae35a2643d": {
+    "text": "Centrifuge Protocol's $1.3B TVL on Ethereum dwarfs the $259M on Avalanche, reflecting Ethereum's dominance in DeFi and its established user base, which often leads to significantly higher liquidity and activity compared to newer or less popular chains. The 79% margin indicates that users are gravitating towards Ethereum for its robust ecosystem and greater access to liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-17T01:00:07.052Z"
+  },
+  "2026-06-17|protocol|centrifuge-protocol|C|P11_FEES_TREND|explanation|7f9ad13bb689c98e": {
+    "text": "Centrifuge Protocol's fees have increased by 21% over the past week, rising from $943K to $1M, which suggests growing activity and demand for its services, particularly in asset-backed lending. This uptick can indicate a strengthening user base or increased transaction volume as more users engage with the platform.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-17T01:00:09.160Z"
+  },
+  "2026-06-17|protocol|centrifuge-protocol|D|P4_ATH_TIMING|explanation|ccb151a188cf77b9": {
+    "text": "Centrifuge Protocol hit its all-time high (ATH) of $2.0B in April 2026, which stands out from earlier dates like March 2025 and January 2026, when it had not yet gained the traction needed to reach that level. This timing reflects the protocol's growth and adoption as it matured in the DeFi landscape, likely driven by increased demand for real-world asset tokenization.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-17T01:00:12.010Z"
+  },
+  "2026-06-17|protocol|centrifuge-protocol|E|P8_CHAIN_MEMBERSHIP|explanation|263acc4f3e3f8273": {
+    "text": "Centrifuge Protocol operates across 10 chains, including Ethereum, Base, and Optimism, which allows it to tap into diverse liquidity pools and user bases. This multi-chain approach enhances its ability to facilitate real-world asset financing by connecting various DeFi ecosystems.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-17T01:00:13.548Z"
   }
 }
