@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-06-19:protocol:convex-finance",
+  "dateUtc": "2026-06-19",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "convex-finance",
+    "name": "Convex Finance",
+    "category": "Yield"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Yield",
+        "Chains: 2-5 chains",
+        ">90% TVL on single chain",
+        "Active since: 2021",
+        "TVL: $500M-$1B",
+        "7d change: roughly flat"
+      ],
+      "choices": [
+        "Convex Finance",
+        "Ethena USDtb",
+        "Pendle"
+      ],
+      "answerIndex": 0,
+      "explanation": "Convex Finance's $510M TVL across four chains, including Ethereum and Arbitrum, showcases its appeal to users seeking yield optimization through liquidity mining, particularly in the Curve ecosystem. The presence on multiple chains like Fraxtal and Polygon also indicates a strategic move to tap into diverse liquidity sources and user bases.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.11391939994903498
+      },
+      "difficultyScore": 0.3938919399949036
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Convex Finance have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Fraxtal"
+      ],
+      "answerIndex": 0,
+      "explanation": "Convex Finance's $502M TVL on Ethereum dwarfs the mere $6M on Fraxtal, showcasing Ethereum's dominance in the DeFi space and highlighting how liquidity and user adoption are heavily concentrated on established chains. The staggering 99% margin indicates that newer or less popular chains struggle to attract significant capital compared to Ethereum's robust ecosystem.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9881437954202864,
+        "volatility": 0.11391939994903498
+      },
+      "difficultyScore": 0.21389193999490352
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Convex Finance's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Convex Finance generated $82K in revenue over the past week, with fees making up $84K, indicating a very efficient fee structure since nearly all fees translate into revenue at a 98% conversion rate. This high percentage suggests that Convex is effectively monetizing its user activity, which is crucial for sustaining operations and incentivizing liquidity providers.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0.11391939994903498
+      },
+      "difficultyScore": 0.30389193999490355
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Convex Finance hit its all-time high TVL?",
+      "choices": [
+        "Nov 2023",
+        "Sep 2024",
+        "Jan 2022",
+        "Mar 2026",
+        "Oct 2021",
+        "Apr 2023"
+      ],
+      "answerIndex": 2,
+      "explanation": "Convex Finance hit its all-time high (ATH) of $21.2B in January 2022, a peak driven by the booming demand for yield optimization in DeFi. In contrast, the other months listed, like October 2021 and April 2023, reflect earlier stages of growth or subsequent market corrections, highlighting how quickly the DeFi landscape can change.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.11391939994903498
+      },
+      "difficultyScore": 0.49389193999490355
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Convex Finance's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Convex Finance's TVL is heavily concentrated on Ethereum, with 98% of its $510M total locked on the chain, indicating that its success is closely tied to Ethereum's ecosystem and liquidity. This concentration can make Convex more vulnerable to changes in Ethereum's performance or user sentiment.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9373130669181244,
+        "volatility": 0.11391939994903498
+      },
+      "difficultyScore": 0.30389193999490355
+    }
+  ],
+  "generatedAt": "2026-06-19T01:04:51.418Z"
+}
