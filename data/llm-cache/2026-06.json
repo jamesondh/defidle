@@ -498,5 +498,30 @@
     "text": "Polymarket International leads Polygon's DEX scene with a substantial $163M in volume, significantly outpacing competitors like Uniswap V4 at $55M and RamsesX Polygon CL at $26M. This dominance suggests that Polymarket is effectively capturing user interest and trading activity on the network, making it a key player in the Polygon ecosystem.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-06-20T00:55:07.446Z"
+  },
+  "2026-06-21|protocol|ssv-network|A|P1_FINGERPRINT|explanation|54f7cd59b7d04428": {
+    "text": "SSV Network's impressive $12.8B TVL on Ethereum reflects its strong position in the staking pool category, indicating significant user trust and demand for decentralized staking solutions. With only one chain, its focus on Ethereum allows for deeper integration and optimization within that ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-21T01:00:41.575Z"
+  },
+  "2026-06-21|protocol|ssv-network|B|P7_CATEGORY|explanation|d111d962e1298f7d": {
+    "text": "SSV Network operates as a staking pool, allowing users to combine their assets for more efficient and secure Ethereum staking. This model helps to decentralize validator operations, reducing the risk of single points of failure and enhancing overall network security.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-21T01:00:42.915Z"
+  },
+  "2026-06-21|protocol|ssv-network|C|P5_FEES_REVENUE|explanation|1a4cfc2dbf6c0d97": {
+    "text": "SSV Network generated $24K in fees over the past week, with an impressive 97% of that amount translating directly into revenue. This close alignment between fees and revenue suggests a strong operational efficiency and demand for their services in the staking ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-21T01:00:44.578Z"
+  },
+  "2026-06-21|protocol|ssv-network|D|P33_MULTI_RANKING|explanation|36ad5e2d254af399": {
+    "text": "SSV Network leads the staking pool category with a substantial $12.8B TVL, significantly outpacing Obol at $614M and Starknet BTC Staking at $45M. This stark difference reflects SSV's strong adoption and trust within the Ethereum staking ecosystem, driven by its innovative approach to decentralized validator management.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-21T01:00:46.164Z"
+  },
+  "2026-06-21|protocol|ssv-network|E|P6_TVL_TREND|explanation|2300a74f3e0e7ff6": {
+    "text": "SSV Network's TVL has decreased by 18.2%, dropping to $12.8B, which may reflect shifting user interest or competition in the staking sector as protocols adapt to evolving market conditions. This trend is significant as it could indicate challenges in attracting new users or maintaining existing ones amid a dynamic DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-21T01:00:47.904Z"
   }
 }

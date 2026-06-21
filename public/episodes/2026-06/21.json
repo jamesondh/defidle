@@ -1,0 +1,136 @@
+{
+  "episodeId": "2026-06-21:protocol:ssv-network",
+  "dateUtc": "2026-06-21",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "ssv-network",
+    "name": "SSV Network",
+    "category": "Staking Pool"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Staking Pool",
+        "Chains: single-chain",
+        "TVL rank: top 10"
+      ],
+      "choices": [
+        "SSV Network",
+        "Binance staked ETH",
+        "Morpho Blue",
+        "LayerZero V2",
+        "Obol"
+      ],
+      "answerIndex": 0,
+      "explanation": "SSV Network's impressive $12.8B TVL on Ethereum reflects its strong position in the staking pool category, indicating significant user trust and demand for decentralized staking solutions. With only one chain, its focus on Ethereum allows for deeper integration and optimization within that ecosystem.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": 0.15977946890242128
+      },
+      "difficultyScore": 0.4584779468902421
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is SSV Network?",
+      "choices": [
+        "Options Vault",
+        "Portfolio Tracker",
+        "Staking Pool",
+        "CeDeFi"
+      ],
+      "answerIndex": 2,
+      "explanation": "SSV Network operates as a staking pool, allowing users to combine their assets for more efficient and secure Ethereum staking. This model helps to decentralize validator operations, reducing the risk of single points of failure and enhancing overall network security.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.5,
+        "volatility": 0.15977946890242128
+      },
+      "difficultyScore": 0.27847794689024213
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "ab",
+      "prompt": "Over the last 7 days, did SSV Network generate more in fees or revenue?",
+      "choices": [
+        "Revenue",
+        "Fees"
+      ],
+      "answerIndex": 1,
+      "explanation": "SSV Network generated $24K in fees over the past week, with an impressive 97% of that amount translating directly into revenue. This close alignment between fees and revenue suggests a strong operational efficiency and demand for their services in the staking ecosystem.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.03203256712858259,
+        "volatility": 0.15977946890242128
+      },
+      "difficultyScore": 0.450038866335943
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Staking Pool protocols from highest to lowest TVL.",
+      "choices": [
+        "SSV Network > Obol > Starknet BTC Staking",
+        "Starknet BTC Staking > SSV Network > Obol",
+        "Obol > SSV Network > Starknet BTC Staking",
+        "SSV Network > Starknet BTC Staking > Obol"
+      ],
+      "answerIndex": 0,
+      "explanation": "SSV Network leads the staking pool category with a substantial $12.8B TVL, significantly outpacing Obol at $614M and Starknet BTC Staking at $45M. This stark difference reflects SSV's strong adoption and trust within the Ethereum staking ecosystem, driven by its innovative approach to decentralized validator management.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.9272797105320149,
+        "volatility": 0.15977946890242128
+      },
+      "difficultyScore": 0.37847794689024217
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "SSV Network's TVL increased over the past 30 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "SSV Network's TVL has decreased by 18.2%, dropping to $12.8B, which may reflect shifting user interest or competition in the staking sector as protocols adapt to evolving market conditions. This trend is significant as it could indicate challenges in attracting new users or maintaining existing ones amid a dynamic DeFi landscape.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.1823712717584572,
+        "volatility": 0.15977946890242128
+      },
+      "difficultyScore": 0.1796324207800935
+    }
+  ],
+  "generatedAt": "2026-06-21T01:00:47.904Z"
+}
