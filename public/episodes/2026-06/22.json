@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-06-22:protocol:xstocks",
+  "dateUtc": "2026-06-22",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "xstocks",
+    "name": "xStocks",
+    "category": "RWA"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: RWA",
+        "Chains: 2-5 chains",
+        ">90% TVL on single chain",
+        "TVL: $500M-$1B",
+        "7d change: roughly flat"
+      ],
+      "choices": [
+        "Centrifuge Protocol",
+        "Jupiter Lend",
+        "Blockchain Capital",
+        "xStocks"
+      ],
+      "answerIndex": 3,
+      "explanation": "xStocks, with $502M TVL across Arbitrum and Solana, is a notable player in the real-world asset (RWA) category, showcasing how DeFi can bridge traditional assets with blockchain technology. Its presence on two chains reflects a strategic approach to tap into diverse user bases and liquidity sources.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.12249948035591254
+      },
+      "difficultyScore": 0.3947499480355913
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does xStocks have higher TVL?",
+      "choices": [
+        "Solana",
+        "Arbitrum"
+      ],
+      "answerIndex": 0,
+      "explanation": "xStocks has achieved $502M TVL on Solana, significantly outpacing its $213 TVL on Arbitrum, showcasing Solana's growing appeal for innovative DeFi projects. The 100% margin in TVL between the two chains reflects Solana's robust infrastructure and user base, which can drive higher liquidity and engagement for xStocks.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9999995743207666,
+        "volatility": 0.12249948035591254
+      },
+      "difficultyScore": 0.21474994803559128
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P22_CATEGORY_MARKET_SHARE",
+      "format": "mc4",
+      "prompt": "What share of RWA TVL does xStocks hold?",
+      "choices": [
+        "<10%",
+        "10-25%",
+        "25-50%",
+        ">50%"
+      ],
+      "answerIndex": 0,
+      "explanation": "xStocks holds a $502M TVL in the RWA category, capturing about 3% of the total $19.8B market. This relatively small share suggests that while xStocks is a notable player, there's significant room for growth as the RWA sector expands.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.7461725362743101,
+        "volatility": 0.12249948035591254
+      },
+      "difficultyScore": 0.3047499480355913
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did xStocks hit its all-time high TVL?",
+      "choices": [
+        "Jan 2026",
+        "Apr 2026",
+        "Oct 2025",
+        "May 2026",
+        "Nov 2025",
+        "Jun 2026"
+      ],
+      "answerIndex": 5,
+      "explanation": "xStocks reached its all-time high (ATH) of $533M in June 2026, a notable jump compared to earlier months like January 2026 and October 2025, when it had yet to gain significant traction. This timing reflects a period of increased adoption and market interest, distinguishing June as a pivotal moment for the protocol.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.12249948035591254
+      },
+      "difficultyScore": 0.49474994803559125
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of xStocks's TVL is on its top chain (Solana)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "xStocks operates entirely on Solana, with its $502M TVL concentrated solely on this chain, showcasing how some protocols can achieve significant liquidity by focusing their efforts rather than spreading across multiple platforms. This concentration can lead to enhanced efficiency and lower transaction costs for users within that ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9999982972837911,
+        "volatility": 0.12249948035591254
+      },
+      "difficultyScore": 0.3047499480355913
+    }
+  ],
+  "generatedAt": "2026-06-22T01:00:11.915Z"
+}
