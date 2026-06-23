@@ -548,5 +548,30 @@
     "text": "xStocks operates entirely on Solana, with its $502M TVL concentrated solely on this chain, showcasing how some protocols can achieve significant liquidity by focusing their efforts rather than spreading across multiple platforms. This concentration can lead to enhanced efficiency and lower transaction costs for users within that ecosystem.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-06-22T01:00:11.915Z"
+  },
+  "2026-06-23|chain|World Chain|A|C1_FINGERPRINT|explanation|2a2f6b583409c50a": {
+    "text": "World Chain ranks 44th with a TVL of under $50M, which suggests it's still in the early stages of adoption compared to larger platforms. With 24 protocols, it falls into the 20-50 bucket, indicating a growing ecosystem that could attract more users and liquidity as it develops.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-23T00:51:40.663Z"
+  },
+  "2026-06-23|chain|World Chain|B|C10_PROTOCOL_COUNT|explanation|39b51af2b8612749": {
+    "text": "World Chain hosts 24 protocols, showcasing its diverse ecosystem that can cater to various DeFi needs. This variety often attracts users looking for specialized services, enhancing the overall activity and innovation within the chain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-23T00:51:42.073Z"
+  },
+  "2026-06-23|chain|World Chain|C|C6_TOP_DEX|explanation|150cde23388104eb": {
+    "text": "Uniswap V4 dominates World Chain with a volume of $65K, significantly outpacing other DEXs like X3X at $991 and HumanFi at $220, which shows a clear preference for Uniswap's liquidity and trading features on this chain. The stark contrast, especially with Uniswap V3 recording $0 volume, suggests that users are favoring the latest version for its enhancements and efficiency.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-23T00:51:44.183Z"
+  },
+  "2026-06-23|chain|World Chain|D|C3_ATH_TIMING|explanation|e7221cbc30024f80": {
+    "text": "World Chain hit its all-time high (ATH) of $103M in September 2025, which stands out compared to earlier months like June 2025 and March 2025, when the TVL was still building momentum but hadn't peaked yet. This timing reflects a significant growth phase for the protocol, likely driven by increased adoption or new features introduced around that time.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-23T00:51:45.819Z"
+  },
+  "2026-06-23|chain|World Chain|E|C4_GROWTH_RANKING|explanation|bdbfa428ddbd2f09": {
+    "text": "World Chain's impressive growth of 86.4% starkly contrasts with the declines seen in other chains like Cronos (-7.5%) and Polygon (-10.1%), highlighting its rapid adoption and potential as a leading platform in the current DeFi landscape. This surge suggests that World Chain is attracting significant user interest and investment, setting it apart from its peers.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-23T00:51:47.290Z"
   }
 }

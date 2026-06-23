@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-06-23:chain:World Chain",
+  "dateUtc": "2026-06-23",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "World Chain",
+    "name": "World Chain"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Native token: WLD",
+        "Protocols: 20-50",
+        "TVL: <$50M",
+        "30d trend: up >10%"
+      ],
+      "choices": [
+        "MegaETH",
+        "Mantle",
+        "X Layer",
+        "World Chain"
+      ],
+      "answerIndex": 3,
+      "explanation": "World Chain ranks 44th with a TVL of under $50M, which suggests it's still in the early stages of adoption compared to larger platforms. With 24 protocols, it falls into the 20-50 bucket, indicating a growing ecosystem that could attract more users and liquidity as it develops.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4075000000000001
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C10_PROTOCOL_COUNT",
+      "format": "mc4",
+      "prompt": "How many DeFi protocols are deployed on World Chain?",
+      "choices": [
+        "<50",
+        "50-100",
+        "100-250",
+        ">250"
+      ],
+      "answerIndex": 0,
+      "explanation": "World Chain hosts 24 protocols, showcasing its diverse ecosystem that can cater to various DeFi needs. This variety often attracts users looking for specialized services, enhancing the overall activity and innovation within the chain.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": null
+      },
+      "difficultyScore": 0.31750000000000006
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on World Chain?",
+      "choices": [
+        "Uniswap V4",
+        "HumanFi",
+        "X3X",
+        "Uniswap V3"
+      ],
+      "answerIndex": 0,
+      "explanation": "Uniswap V4 dominates World Chain with a volume of $65K, significantly outpacing other DEXs like X3X at $991 and HumanFi at $220, which shows a clear preference for Uniswap's liquidity and trading features on this chain. The stark contrast, especially with Uniswap V3 recording $0 volume, suggests that users are favoring the latest version for its enhancements and efficiency.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9847608795940336,
+        "volatility": null
+      },
+      "difficultyScore": 0.31750000000000006
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did World Chain hit its all-time high TVL?",
+      "choices": [
+        "Jun 2025",
+        "Oct 2024",
+        "Dec 2024",
+        "Aug 2025",
+        "Sep 2025",
+        "Mar 2025"
+      ],
+      "answerIndex": 4,
+      "explanation": "World Chain hit its all-time high (ATH) of $103M in September 2025, which stands out compared to earlier months like June 2025 and March 2025, when the TVL was still building momentum but hadn't peaked yet. This timing reflects a significant growth phase for the protocol, likely driven by increased adoption or new features introduced around that time.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.5075000000000001
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Cronos",
+        "World Chain",
+        "TON",
+        "Polygon"
+      ],
+      "answerIndex": 1,
+      "explanation": "World Chain's impressive growth of 86.4% starkly contrasts with the declines seen in other chains like Cronos (-7.5%) and Polygon (-10.1%), highlighting its rapid adoption and potential as a leading platform in the current DeFi landscape. This surge suggests that World Chain is attracting significant user interest and investment, setting it apart from its peers.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.938564269473774,
+        "volatility": null
+      },
+      "difficultyScore": 0.37750000000000006
+    }
+  ],
+  "generatedAt": "2026-06-23T00:51:47.290Z"
+}
