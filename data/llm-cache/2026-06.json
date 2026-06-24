@@ -573,5 +573,30 @@
     "text": "World Chain's impressive growth of 86.4% starkly contrasts with the declines seen in other chains like Cronos (-7.5%) and Polygon (-10.1%), highlighting its rapid adoption and potential as a leading platform in the current DeFi landscape. This surge suggests that World Chain is attracting significant user interest and investment, setting it apart from its peers.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-06-23T00:51:47.290Z"
+  },
+  "2026-06-24|protocol|hyperliquid-bridge|A|P1_FINGERPRINT|explanation|85dbea4dd6101eca": {
+    "text": "Hyperliquid Bridge, with a TVL of $5.8B across Arbitrum and Hyperliquid L1, showcases the growing importance of cross-chain solutions in DeFi, as users seek to leverage liquidity across multiple ecosystems. Its significant TVL indicates strong adoption and trust in its bridging capabilities, especially between emerging and established chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-24T00:48:39.132Z"
+  },
+  "2026-06-24|protocol|hyperliquid-bridge|B|P2_CROSSCHAIN|explanation|3d386c97ada6f24d": {
+    "text": "Hyperliquid Bridge has a strikingly high TVL of $5.4B on Hyperliquid L1 compared to just $364M on Arbitrum, reflecting a strong preference for the liquidity and efficiency offered by Hyperliquid's infrastructure. The 93% margin indicates that users are significantly favoring the Hyperliquid ecosystem for cross-chain transactions, suggesting it may provide better incentives or lower fees than Arbitrum.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-24T00:48:41.203Z"
+  },
+  "2026-06-24|protocol|hyperliquid-bridge|C|P15_RECENT_TVL_DIRECTION|explanation|84404a7d751e5bd9": {
+    "text": "Hyperliquid Bridge's TVL has increased by 7.4% over the last 30 days, reaching $5.8B, which reflects growing user confidence and activity in cross-chain transactions as more liquidity flows into its platform. This uptick suggests that users are increasingly leveraging the bridge for efficient asset transfers between different blockchain ecosystems.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-24T00:48:43.221Z"
+  },
+  "2026-06-24|protocol|hyperliquid-bridge|D|P4_ATH_TIMING|explanation|c602698e2e627307": {
+    "text": "Hyperliquid Bridge reached its all-time high (ATH) of $6.0B in September 2025, significantly outpacing earlier months like August 2023 and January 2024, which did not see the same level of user engagement or liquidity. This timing suggests that the protocol gained traction and adoption over time, culminating in a peak that reflects its growing significance in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-24T00:48:45.030Z"
+  },
+  "2026-06-24|protocol|hyperliquid-bridge|E|P3_CONCENTRATION|explanation|1d35b0da29caa4eb": {
+    "text": "Hyperliquid Bridge's impressive 94% share of its $5.8B TVL on Hyperliquid L1 indicates a strong concentration of liquidity within its own ecosystem, suggesting that users prefer to transact within its native environment rather than across other chains. This level of concentration can enhance efficiency and reduce slippage for trades, making it an attractive option for liquidity providers.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-24T00:48:46.768Z"
   }
 }

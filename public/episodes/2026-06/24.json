@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-06-24:protocol:hyperliquid-bridge",
+  "dateUtc": "2026-06-24",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "hyperliquid-bridge",
+    "name": "Hyperliquid Bridge",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: 2-5 chains",
+        ">90% TVL on single chain",
+        "TVL rank: top 10"
+      ],
+      "choices": [
+        "LayerZero V2",
+        "Hyperliquid Bridge",
+        "Coinbase Bridge",
+        "Lido",
+        "Binance staked ETH",
+        "Lorenzo enzoBTC"
+      ],
+      "answerIndex": 1,
+      "explanation": "Hyperliquid Bridge, with a TVL of $5.8B across Arbitrum and Hyperliquid L1, showcases the growing importance of cross-chain solutions in DeFi, as users seek to leverage liquidity across multiple ecosystems. Its significant TVL indicates strong adoption and trust in its bridging capabilities, especially between emerging and established chains.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": 0.0469138344089748
+      },
+      "difficultyScore": 0.4471913834408975
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Hyperliquid Bridge have higher TVL?",
+      "choices": [
+        "Hyperliquid L1",
+        "Arbitrum"
+      ],
+      "answerIndex": 0,
+      "explanation": "Hyperliquid Bridge has a strikingly high TVL of $5.4B on Hyperliquid L1 compared to just $364M on Arbitrum, reflecting a strong preference for the liquidity and efficiency offered by Hyperliquid's infrastructure. The 93% margin indicates that users are significantly favoring the Hyperliquid ecosystem for cross-chain transactions, suggesting it may provide better incentives or lower fees than Arbitrum.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.9325715408851727,
+        "volatility": 0.0469138344089748
+      },
+      "difficultyScore": 0.17719138344089747
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P15_RECENT_TVL_DIRECTION",
+      "format": "ab",
+      "prompt": "Over the past 30 days, did Hyperliquid Bridge's TVL increase or decrease?",
+      "choices": [
+        "Increase",
+        "Decrease"
+      ],
+      "answerIndex": 0,
+      "explanation": "Hyperliquid Bridge's TVL has increased by 7.4% over the last 30 days, reaching $5.8B, which reflects growing user confidence and activity in cross-chain transactions as more liquidity flows into its platform. This uptick suggests that users are increasingly leveraging the bridge for efficient asset transfers between different blockchain ecosystems.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.07401146394865751,
+        "volatility": 0.0469138344089748
+      },
+      "difficultyScore": 0.3883776267025084
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Hyperliquid Bridge hit its all-time high TVL?",
+      "choices": [
+        "Feb 2024",
+        "Jul 2024",
+        "Aug 2023",
+        "Jan 2024",
+        "Dec 2023",
+        "Sep 2025"
+      ],
+      "answerIndex": 5,
+      "explanation": "Hyperliquid Bridge reached its all-time high (ATH) of $6.0B in September 2025, significantly outpacing earlier months like August 2023 and January 2024, which did not see the same level of user engagement or liquidity. This timing suggests that the protocol gained traction and adoption over time, culminating in a peak that reflects its growing significance in the DeFi landscape.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": 0.0469138344089748
+      },
+      "difficultyScore": 0.4571913834408975
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Hyperliquid Bridge's TVL is on its top chain (Hyperliquid L1)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Hyperliquid Bridge's impressive 94% share of its $5.8B TVL on Hyperliquid L1 indicates a strong concentration of liquidity within its own ecosystem, suggesting that users prefer to transact within its native environment rather than across other chains. This level of concentration can enhance efficiency and reduce slippage for trades, making it an attractive option for liquidity providers.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.747323734760668,
+        "volatility": 0.0469138344089748
+      },
+      "difficultyScore": 0.2671913834408975
+    }
+  ],
+  "generatedAt": "2026-06-24T00:48:46.768Z"
+}
