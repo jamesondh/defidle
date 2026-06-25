@@ -598,5 +598,30 @@
     "text": "Hyperliquid Bridge's impressive 94% share of its $5.8B TVL on Hyperliquid L1 indicates a strong concentration of liquidity within its own ecosystem, suggesting that users prefer to transact within its native environment rather than across other chains. This level of concentration can enhance efficiency and reduce slippage for trades, making it an attractive option for liquidity providers.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-06-24T00:48:46.768Z"
+  },
+  "2026-06-25|chain|Polygon|A|C1_FINGERPRINT|explanation|de9e89c9b96a5905": {
+    "text": "Polygon ranks 10th in TVL with between $1B and $5B, supported by a robust ecosystem of 717 protocols, which reflects its strong appeal as a Layer 2 solution for Ethereum and its ability to attract diverse DeFi projects. This extensive protocol count is a key factor in driving user activity and liquidity on the network.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-25T00:53:08.026Z"
+  },
+  "2026-06-25|chain|Polygon|B|C2_CHAIN_COMPARISON|explanation|c1d451302d694b0f": {
+    "text": "Polygon's $1.0B TVL significantly outpaces Avalanche's $480M, reflecting a 53% margin that showcases Polygon's stronger adoption and user activity, likely driven by its lower transaction costs and extensive ecosystem of dApps. This disparity highlights how scalability and developer support can influence TVL across competing chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-25T00:53:09.854Z"
+  },
+  "2026-06-25|chain|Polygon|C|C4_GROWTH_RANKING|explanation|ac89c646a7836ed6": {
+    "text": "Stellar's impressive 42.4% growth stands out sharply against other chains like X Layer, which grew by 9.2%, while both Ethereum and Polygon saw declines of 9.7% and 10.1%, respectively. This stark contrast highlights Stellar's unique momentum in the current market, especially as established chains like Polygon struggle to maintain their TVL.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-25T00:53:11.630Z"
+  },
+  "2026-06-25|chain|Polygon|D|C3_ATH_TIMING|explanation|4372e419a7612d4b": {
+    "text": "Polygon reached its all-time high (ATH) of $9.9B in June 2021, a peak driven by the explosive growth of Layer 2 solutions during that period. In contrast, the months following, like February and March 2022, saw a decline as market conditions shifted, highlighting how quickly sentiment can change in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-25T00:53:13.537Z"
+  },
+  "2026-06-25|chain|Polygon|E|C6_TOP_DEX|explanation|7418cd82723c18c5": {
+    "text": "Polymarket International leads on Polygon with $165M in volume, significantly outpacing other DEXs like Uniswap V4 at $45M and Ramses CL V2 at $17M. This dominance suggests that Polymarket's unique offerings, likely in prediction markets, resonate well with users on the Polygon network, while the other DEXs focus more on traditional swaps.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-25T00:53:15.243Z"
   }
 }

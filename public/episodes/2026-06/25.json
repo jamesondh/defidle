@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-06-25:chain:Polygon",
+  "dateUtc": "2026-06-25",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Polygon",
+    "name": "Polygon"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 10",
+        "Native token: POL",
+        "Most protocols by count",
+        "Active since: 2020"
+      ],
+      "choices": [
+        "Bitcoin",
+        "Polygon",
+        "OP Mainnet",
+        "Monad",
+        "Avalanche",
+        "Plasma"
+      ],
+      "answerIndex": 1,
+      "explanation": "Polygon ranks 10th in TVL with between $1B and $5B, supported by a robust ecosystem of 717 protocols, which reflects its strong appeal as a Layer 2 solution for Ethereum and its ability to attract diverse DeFi projects. This extensive protocol count is a key factor in driving user activity and liquidity on the network.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4675
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Polygon or Avalanche?",
+      "choices": [
+        "Avalanche",
+        "Polygon"
+      ],
+      "answerIndex": 1,
+      "explanation": "Polygon's $1.0B TVL significantly outpaces Avalanche's $480M, reflecting a 53% margin that showcases Polygon's stronger adoption and user activity, likely driven by its lower transaction costs and extensive ecosystem of dApps. This disparity highlights how scalability and developer support can influence TVL across competing chains.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.5302778009048381,
+        "volatility": null
+      },
+      "difficultyScore": 0.19749999999999998
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Polygon",
+        "X Layer",
+        "Stellar",
+        "Ethereum"
+      ],
+      "answerIndex": 2,
+      "explanation": "Stellar's impressive 42.4% growth stands out sharply against other chains like X Layer, which grew by 9.2%, while both Ethereum and Polygon saw declines of 9.7% and 10.1%, respectively. This stark contrast highlights Stellar's unique momentum in the current market, especially as established chains like Polygon struggle to maintain their TVL.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.33263567680969186,
+        "volatility": null
+      },
+      "difficultyScore": 0.34750000000000003
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Polygon hit its all-time high TVL?",
+      "choices": [
+        "Feb 2026",
+        "Jun 2021",
+        "Mar 2022",
+        "Jun 2024",
+        "Apr 2022",
+        "Feb 2022"
+      ],
+      "answerIndex": 1,
+      "explanation": "Polygon reached its all-time high (ATH) of $9.9B in June 2021, a peak driven by the explosive growth of Layer 2 solutions during that period. In contrast, the months following, like February and March 2022, saw a decline as market conditions shifted, highlighting how quickly sentiment can change in the DeFi space.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.47750000000000004
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Polygon?",
+      "choices": [
+        "Polymarket International",
+        "Ramses CL V2",
+        "Uniswap V3",
+        "Uniswap V4"
+      ],
+      "answerIndex": 0,
+      "explanation": "Polymarket International leads on Polygon with $165M in volume, significantly outpacing other DEXs like Uniswap V4 at $45M and Ramses CL V2 at $17M. This dominance suggests that Polymarket's unique offerings, likely in prediction markets, resonate well with users on the Polygon network, while the other DEXs focus more on traditional swaps.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.7251408267892827,
+        "volatility": null
+      },
+      "difficultyScore": 0.28750000000000003
+    }
+  ],
+  "generatedAt": "2026-06-25T00:53:15.243Z"
+}
