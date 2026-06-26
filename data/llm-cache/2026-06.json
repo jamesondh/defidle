@@ -623,5 +623,30 @@
     "text": "Polymarket International leads on Polygon with $165M in volume, significantly outpacing other DEXs like Uniswap V4 at $45M and Ramses CL V2 at $17M. This dominance suggests that Polymarket's unique offerings, likely in prediction markets, resonate well with users on the Polygon network, while the other DEXs focus more on traditional swaps.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-06-25T00:53:15.243Z"
+  },
+  "2026-06-26|protocol|morpho-blue|A|P1_FINGERPRINT|explanation|782f7739d9d6b252": {
+    "text": "Morpho Blue's $6.5B TVL across 37 chains showcases its broad adoption and versatility in the lending space, with notable chains like Zircuit and xDai contributing to its liquidity. This extensive chain presence allows users to access diverse lending opportunities and enhances the protocol's resilience against market fluctuations.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-26T00:55:05.424Z"
+  },
+  "2026-06-26|protocol|morpho-blue|B|P2_CROSSCHAIN|explanation|cd73e707c2ab39c4": {
+    "text": "Morpho Blue's $3.3B TVL on Ethereum outpaces Base's $2.7B by 19%, reflecting Ethereum's established dominance and user trust in its DeFi ecosystem compared to newer chains like Base, which are still building liquidity and user engagement. This difference in TVL underscores the challenges emerging platforms face in attracting users away from more mature networks.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-26T00:55:07.036Z"
+  },
+  "2026-06-26|protocol|morpho-blue|C|P11_FEES_TREND|explanation|91b35b9856daddd8": {
+    "text": "Morpho Blue's fees have increased by 20%, reaching $4M over the past week, despite remaining stable at $4M the previous week. This suggests a growing user engagement or increased transaction volume, as the fee uptick indicates more activity on the platform.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-26T00:55:08.178Z"
+  },
+  "2026-06-26|protocol|morpho-blue|D|P4_ATH_TIMING|explanation|3b25569ab061a3b9": {
+    "text": "Morpho Blue reached its ATH of $8.4B in September 2025, a significant milestone that showcases its growth trajectory. In contrast, earlier dates like March 2025 and May 2024 were too soon for the protocol to achieve such a high valuation, indicating that it took time for the platform to gain traction and user adoption.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-26T00:55:09.661Z"
+  },
+  "2026-06-26|protocol|morpho-blue|E|P6_TVL_TREND|explanation|8dfc7b55c2dab506": {
+    "text": "Morpho Blue's TVL has decreased by 13.1% to $6.5B, which may reflect shifting user preferences or increased competition in the lending space, as users often move their assets to platforms offering better yields or features. This trend can signal a need for protocols to innovate or enhance their offerings to retain liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-26T00:55:11.966Z"
   }
 }

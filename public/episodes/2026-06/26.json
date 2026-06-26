@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-06-26:protocol:morpho-blue",
+  "dateUtc": "2026-06-26",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "morpho-blue",
+    "name": "Morpho Blue",
+    "category": "Lending"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Lending",
+        "Chains: 10+ chains",
+        "TVL spread across chains (no chain >50%)",
+        "TVL rank: top 10"
+      ],
+      "choices": [
+        "Fluid Lending",
+        "Aave V3",
+        "JustLend V1",
+        "Binance staked ETH",
+        "Morpho Blue"
+      ],
+      "answerIndex": 4,
+      "explanation": "Morpho Blue's $6.5B TVL across 37 chains showcases its broad adoption and versatility in the lending space, with notable chains like Zircuit and xDai contributing to its liquidity. This extensive chain presence allows users to access diverse lending opportunities and enhances the protocol's resilience against market fluctuations.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": 0.12689781783914925
+      },
+      "difficultyScore": 0.45518978178391495
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Morpho Blue have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Base"
+      ],
+      "answerIndex": 0,
+      "explanation": "Morpho Blue's $3.3B TVL on Ethereum outpaces Base's $2.7B by 19%, reflecting Ethereum's established dominance and user trust in its DeFi ecosystem compared to newer chains like Base, which are still building liquidity and user engagement. This difference in TVL underscores the challenges emerging platforms face in attracting users away from more mature networks.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.18871715455396842,
+        "volatility": 0.12689781783914925
+      },
+      "difficultyScore": 0.2587291963191528
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did Morpho Blue's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Morpho Blue's fees have increased by 20%, reaching $4M over the past week, despite remaining stable at $4M the previous week. This suggests a growing user engagement or increased transaction volume, as the fee uptick indicates more activity on the platform.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.19962063303323707,
+        "volatility": 0.12689781783914925
+      },
+      "difficultyScore": 0.33564502214403047
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Morpho Blue hit its all-time high TVL?",
+      "choices": [
+        "Jul 2025",
+        "Sep 2025",
+        "May 2024",
+        "Mar 2025",
+        "Sep 2024",
+        "Dec 2025"
+      ],
+      "answerIndex": 1,
+      "explanation": "Morpho Blue reached its ATH of $8.4B in September 2025, a significant milestone that showcases its growth trajectory. In contrast, earlier dates like March 2025 and May 2024 were too soon for the protocol to achieve such a high valuation, indicating that it took time for the platform to gain traction and user adoption.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": 0.12689781783914925
+      },
+      "difficultyScore": 0.465189781783915
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "Morpho Blue's TVL increased over the past 30 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "Morpho Blue's TVL has decreased by 13.1% to $6.5B, which may reflect shifting user preferences or increased competition in the lending space, as users often move their assets to platforms offering better yields or features. This trend can signal a need for protocols to innovate or enhance their offerings to retain liquidity.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.1309982020111042,
+        "volatility": 0.12689781783914925
+      },
+      "difficultyScore": 0.23799193937058985
+    }
+  ],
+  "generatedAt": "2026-06-26T00:55:11.966Z"
+}
