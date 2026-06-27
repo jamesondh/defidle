@@ -648,5 +648,30 @@
     "text": "Morpho Blue's TVL has decreased by 13.1% to $6.5B, which may reflect shifting user preferences or increased competition in the lending space, as users often move their assets to platforms offering better yields or features. This trend can signal a need for protocols to innovate or enhance their offerings to retain liquidity.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-06-26T00:55:11.966Z"
+  },
+  "2026-06-27|chain|Katana|A|C1_FINGERPRINT|explanation|5454f6fa469e51fe": {
+    "text": "Katana's TVL of $50M-$100M places it at rank 28, indicating it has carved out a niche among 28 protocols, which is a solid count for a relatively new player in the DeFi space. This suggests that Katana is attracting a diverse range of projects, potentially enhancing its ecosystem and user engagement.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-27T00:51:37.952Z"
+  },
+  "2026-06-27|chain|Katana|B|C2_CHAIN_COMPARISON|explanation|f0bf9eebf7426edc": {
+    "text": "Katana's $94M TVL significantly outpaces Hedera's $49M, showcasing a 48.3% margin that reflects Katana's stronger adoption and user engagement in the DeFi space. This disparity often arises from factors like liquidity incentives and the variety of available protocols, which can attract more users to a particular chain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-27T00:51:39.326Z"
+  },
+  "2026-06-27|chain|Katana|C|C6_TOP_DEX|explanation|86224ab4b12a0b35": {
+    "text": "SushiSwap V3 leads Katana with a solid $2M in volume, significantly outpacing its closest competitor, Spectra V2, which only managed $21K. The stark contrast in volume illustrates SushiSwap V3's dominance on the chain, especially since other DEXs like SushiSwap and Kensei recorded no trading activity at all.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-27T00:51:40.809Z"
+  },
+  "2026-06-27|chain|Katana|D|C3_ATH_TIMING|explanation|a5c9febb243f3c58": {
+    "text": "Katana reached its all-time high (ATH) of $711M in March 2026, which stands out compared to the other months like December 2025 and April 2026, where it had not yet peaked. This timing reflects a significant growth phase for Katana, likely driven by increased user adoption or a surge in liquidity events leading up to that date.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-27T00:51:42.258Z"
+  },
+  "2026-06-27|chain|Katana|E|C10_PROTOCOL_COUNT|explanation|15ab1a478c3cbf6b": {
+    "text": "Katana supports 28 protocols, showcasing its role as a versatile platform that caters to various DeFi applications, which can enhance user engagement and liquidity across its ecosystem. This diverse range of protocols often attracts different user segments, driving overall activity on the platform.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-27T00:51:43.516Z"
   }
 }
