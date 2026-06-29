@@ -698,5 +698,30 @@
     "text": "LayerZero V2's TVL has decreased by 2.6% to $7.4B, which may reflect shifting user preferences or competitive pressures from other cross-chain solutions. This trend highlights the dynamic nature of DeFi, where protocols must continuously innovate to retain user interest and capital.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-06-28T00:54:43.405Z"
+  },
+  "2026-06-29|protocol|kinetiq-khype|A|P1_FINGERPRINT|explanation|3cae01b0ce543fa2": {
+    "text": "Kinetiq kHYPE's $916M TVL on Hyperliquid L1 showcases its strong position in the liquid staking category, which often attracts users looking for yield while maintaining liquidity. Being the sole chain for kHYPE indicates a focused strategy that can help optimize performance and user experience within that ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-29T00:55:55.128Z"
+  },
+  "2026-06-29|protocol|kinetiq-khype|B|P7_CATEGORY|explanation|0618edd4a756becb": {
+    "text": "Kinetiq kHYPE operates in the liquid staking category, allowing users to stake their assets while still retaining liquidity, which is crucial for maximizing capital efficiency in DeFi. This model attracts users who want to earn staking rewards without sacrificing access to their funds.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-29T00:55:56.421Z"
+  },
+  "2026-06-29|protocol|kinetiq-khype|C|P11_FEES_TREND|explanation|dccf9e8b21081f6e": {
+    "text": "Kinetiq kHYPE has seen a 9.2% decline in fees over the past week, dropping from $435K to $395K, which may suggest a decrease in trading activity or user engagement on the platform. This trend could indicate shifting market dynamics or increased competition affecting Kinetiq's fee generation.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-29T00:55:57.530Z"
+  },
+  "2026-06-29|protocol|kinetiq-khype|D|P4_ATH_TIMING|explanation|cd5024fbb0650535": {
+    "text": "Kinetiq kHYPE hit its all-time high of $2.3B in September 2025, a notable spike compared to the other choices like August 2025 and January 2026, which were too early and too late, respectively. This timing reflects a significant market event or development that likely drove investor interest right before the peak.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-29T00:55:59.342Z"
+  },
+  "2026-06-29|protocol|kinetiq-khype|E|P8_CHAIN_MEMBERSHIP|explanation|1853c7a227ec76c8": {
+    "text": "Kinetiq kHYPE operates exclusively on the Hyperliquid L1, which allows it to leverage the unique features of that chain, such as enhanced transaction speeds and lower fees. This single-chain focus can streamline user experience but may limit its exposure to liquidity from other ecosystems.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-06-29T00:56:00.558Z"
   }
 }
