@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-07-01:protocol:ether.fi-stake",
+  "dateUtc": "2026-07-01",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "ether.fi-stake",
+    "name": "ether.fi Stake",
+    "category": "Liquid Restaking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Liquid Restaking",
+        "Chains: 2-5 chains",
+        ">90% TVL on single chain",
+        "TVL rank: top 25"
+      ],
+      "choices": [
+        "Kelp",
+        "Babylon Protocol",
+        "Circle USYC",
+        "ether.fi Stake",
+        "Ethena USDe"
+      ],
+      "answerIndex": 3,
+      "explanation": "ether.fi Stake's $2.6B TVL across Ethereum, Arbitrum, and Base showcases its appeal in the liquid restaking category, allowing users to earn rewards while maintaining liquidity. This multi-chain presence indicates a growing trend where protocols leverage various ecosystems to attract a broader user base and enhance capital efficiency.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.18203457760918992
+      },
+      "difficultyScore": 0.472703457760919
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is ether.fi Stake?",
+      "choices": [
+        "Liquid Restaking",
+        "Governance Incentives",
+        "Decentralized BTC",
+        "Meme"
+      ],
+      "answerIndex": 0,
+      "explanation": "ether.fi Stake operates in the Liquid Restaking category, allowing users to earn additional rewards on their staked assets while maintaining liquidity. This approach enhances capital efficiency, enabling users to participate in multiple DeFi opportunities simultaneously.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.5,
+        "volatility": 0.18203457760918992
+      },
+      "difficultyScore": 0.292703457760919
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is ether.fi Stake's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 3,
+      "explanation": "Ether.fi Stake's current TVL of $2.6B is 79% below its all-time high of $12.4B, indicating a significant drop in user engagement or market conditions since its peak, which is common in the volatile DeFi landscape. This distance from ATH suggests that ether.fi may need to innovate or adapt to regain user confidence and capital inflow.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.16299737605689757,
+        "volatility": 0.18203457760918992
+      },
+      "difficultyScore": 0.4571066064926419
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Liquid Restaking protocols from highest to lowest TVL.",
+      "choices": [
+        "Mantle Restaking > Kelp > ether.fi Stake",
+        "Kelp > ether.fi Stake > Mantle Restaking",
+        "Kelp > Mantle Restaking > ether.fi Stake",
+        "ether.fi Stake > Kelp > Mantle Restaking"
+      ],
+      "answerIndex": 3,
+      "explanation": "ether.fi Stake leads the liquid restaking category with a substantial $2.6B TVL, reflecting its strong adoption and trust among users compared to Kelp's $859M and Mantle Restaking's $34M. This significant difference in TVL suggests that ether.fi has effectively captured a larger share of the market, likely due to its unique offerings or user experience.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.6697877542941097,
+        "volatility": 0.18203457760918992
+      },
+      "difficultyScore": 0.392703457760919
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "ether.fi Stake's TVL increased over the past 30 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "ether.fi Stake's TVL has decreased by 24.2%, reflecting a shift in user confidence or interest, which can often be influenced by market conditions or competition from other staking platforms. With $2.6B still locked, it remains a significant player, but the decline suggests a need for the protocol to adapt or innovate to retain users.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.2420496940906754,
+        "volatility": 0.18203457760918992
+      },
+      "difficultyScore": 0.12224382485210852
+    }
+  ],
+  "generatedAt": "2026-07-01T00:56:24.668Z"
+}
