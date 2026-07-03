@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-07-03:protocol:invesco-ustb",
+  "dateUtc": "2026-07-03",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "invesco-ustb",
+    "name": "Invesco USTB",
+    "category": "RWA"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: RWA",
+        "Chains: 2-5 chains",
+        ">90% TVL on single chain",
+        "TVL: $500M-$1B",
+        "7d change: up >10%"
+      ],
+      "choices": [
+        "BlackRock BUIDL",
+        "Invesco USTB",
+        "Ondo Yield Assets",
+        "Pendle"
+      ],
+      "answerIndex": 1,
+      "explanation": "Invesco USTB's $724M TVL across Ethereum, Solana, and Plume Mainnet reflects its strategy to tap into multiple ecosystems, which can enhance liquidity and user access. This multi-chain approach is increasingly common for real-world asset (RWA) protocols, as it allows them to diversify their user base and mitigate risks associated with relying on a single blockchain.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.2054067724107004
+      },
+      "difficultyScore": 0.4030406772410701
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Invesco USTB have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Solana"
+      ],
+      "answerIndex": 0,
+      "explanation": "Invesco USTB shows a stark contrast in TVL between Ethereum and Solana, with Ethereum leading at $715M compared to Solana's mere $4M. This 99% margin underscores Ethereum's dominance in DeFi, likely due to its established ecosystem and greater liquidity compared to Solana.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9937293505990084,
+        "volatility": 0.2054067724107004
+      },
+      "difficultyScore": 0.22304067724107005
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Invesco USTB's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Invesco USTB generated $460K in fees over the past week, but only $20K of that translated into revenue, reflecting a revenue margin of just 4.2%. This low percentage suggests that while the protocol is attracting significant user activity, its cost structure may be high or its profit model still needs optimization.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.23036560860828645,
+        "volatility": 0.2054067724107004
+      },
+      "difficultyScore": 0.3366019469111264
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Invesco USTB hit its all-time high TVL?",
+      "choices": [
+        "Nov 2025",
+        "Apr 2026",
+        "Jun 2025",
+        "Oct 2024",
+        "Jul 2024",
+        "Mar 2025"
+      ],
+      "answerIndex": 1,
+      "explanation": "Invesco USTB reached its all-time high (ATH) of $924M in April 2026, which stands out compared to earlier months like October 2024 and March 2025, when it had not yet gained significant traction. This timing reflects a period of increased adoption and market interest that likely contributed to its peak performance.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.2054067724107004
+      },
+      "difficultyScore": 0.50304067724107
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Invesco USTB's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Invesco USTB's $724M TVL is heavily concentrated on Ethereum, with 99% of its assets locked on the chain, indicating a strong reliance on Ethereum's infrastructure and user base for liquidity. This concentration can lead to vulnerabilities if Ethereum faces significant issues, as the majority of the protocol's value is tied to a single ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.952814905677895,
+        "volatility": 0.2054067724107004
+      },
+      "difficultyScore": 0.3130406772410701
+    }
+  ],
+  "generatedAt": "2026-07-03T02:56:52.622Z"
+}

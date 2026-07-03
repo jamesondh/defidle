@@ -48,5 +48,30 @@
     "text": "SparkDEX V4 leads Flare with a $3M volume, significantly outpacing its closest competitor, SparkDEX V3.1, which has $2M. This dominance suggests that the latest version of SparkDEX has successfully attracted more trading activity, indicating user preference for its features or improvements over earlier versions and other platforms like Enosys AMM V3, which only managed $1M.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-07-02T00:52:55.128Z"
+  },
+  "2026-07-03|protocol|invesco-ustb|A|P1_FINGERPRINT|explanation|1a1f3246f0704aca": {
+    "text": "Invesco USTB's $724M TVL across Ethereum, Solana, and Plume Mainnet reflects its strategy to tap into multiple ecosystems, which can enhance liquidity and user access. This multi-chain approach is increasingly common for real-world asset (RWA) protocols, as it allows them to diversify their user base and mitigate risks associated with relying on a single blockchain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-03T02:56:46.243Z"
+  },
+  "2026-07-03|protocol|invesco-ustb|B|P2_CROSSCHAIN|explanation|83d1314e8238c23d": {
+    "text": "Invesco USTB shows a stark contrast in TVL between Ethereum and Solana, with Ethereum leading at $715M compared to Solana's mere $4M. This 99% margin underscores Ethereum's dominance in DeFi, likely due to its established ecosystem and greater liquidity compared to Solana.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-03T02:56:47.830Z"
+  },
+  "2026-07-03|protocol|invesco-ustb|C|P5_FEES_REVENUE|explanation|a4c1eb3c33822cba": {
+    "text": "Invesco USTB generated $460K in fees over the past week, but only $20K of that translated into revenue, reflecting a revenue margin of just 4.2%. This low percentage suggests that while the protocol is attracting significant user activity, its cost structure may be high or its profit model still needs optimization.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-03T02:56:49.156Z"
+  },
+  "2026-07-03|protocol|invesco-ustb|D|P4_ATH_TIMING|explanation|87ea5d0fc9f7f8b5": {
+    "text": "Invesco USTB reached its all-time high (ATH) of $924M in April 2026, which stands out compared to earlier months like October 2024 and March 2025, when it had not yet gained significant traction. This timing reflects a period of increased adoption and market interest that likely contributed to its peak performance.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-03T02:56:51.000Z"
+  },
+  "2026-07-03|protocol|invesco-ustb|E|P3_CONCENTRATION|explanation|f6eac29b6926e5e7": {
+    "text": "Invesco USTB's $724M TVL is heavily concentrated on Ethereum, with 99% of its assets locked on the chain, indicating a strong reliance on Ethereum's infrastructure and user base for liquidity. This concentration can lead to vulnerabilities if Ethereum faces significant issues, as the majority of the protocol's value is tied to a single ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-03T02:56:52.621Z"
   }
 }
