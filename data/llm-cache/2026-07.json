@@ -73,5 +73,30 @@
     "text": "Invesco USTB's $724M TVL is heavily concentrated on Ethereum, with 99% of its assets locked on the chain, indicating a strong reliance on Ethereum's infrastructure and user base for liquidity. This concentration can lead to vulnerabilities if Ethereum faces significant issues, as the majority of the protocol's value is tied to a single ecosystem.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-07-03T02:56:52.621Z"
+  },
+  "2026-07-04|chain|Hedera|A|C1_FINGERPRINT|explanation|4ce235334a4f5835": {
+    "text": "Hedera's TVL of under $50M and its rank of 39 reflect its relatively nascent position in the DeFi space, despite hosting 26 protocols. This suggests that while there is some development activity, it hasn't yet translated into significant liquidity or user engagement compared to more established platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-04T02:53:10.849Z"
+  },
+  "2026-07-04|chain|Hedera|B|C10_PROTOCOL_COUNT|explanation|e48347602270c232": {
+    "text": "Hedera supports 23 protocols, showcasing its versatility and appeal as a platform for developers looking to build decentralized applications. This diverse ecosystem indicates a growing interest in leveraging Hedera's unique features like fast transaction speeds and low fees.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-04T02:53:12.099Z"
+  },
+  "2026-07-04|chain|Hedera|C|C6_TOP_DEX|explanation|bc9a29595c6a1fd5": {
+    "text": "SaucerSwap V2 leads Hedera's DEX scene with $3M in volume, significantly outpacing its predecessor, SaucerSwap V1, which only managed $60K. This stark difference underscores the rapid growth and adoption of V2, while other platforms like HbarSuite and HeliSwap struggle to gain traction, with volumes of just $31K and $0, respectively.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-04T02:53:13.963Z"
+  },
+  "2026-07-04|chain|Hedera|D|C3_ATH_TIMING|explanation|eec6e81ed3b06076": {
+    "text": "Hedera reached its all-time high (ATH) of $214M in January 2025, a significant leap compared to earlier months like June 2022, when its TVL was much lower. This timing suggests that Hedera's growth trajectory accelerated in response to increased adoption or new developments in its ecosystem, distinguishing it from the earlier and later distractor months.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-04T02:53:15.406Z"
+  },
+  "2026-07-04|chain|Hedera|E|C13_LAYER_TYPE|explanation|9ba5ff72ec78ac4d": {
+    "text": "Hedera operates as a Layer 1 blockchain, meaning it has its own independent consensus mechanism rather than relying on another chain. This autonomy allows Hedera to optimize for speed and efficiency, catering to enterprise-level applications.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-04T02:53:16.341Z"
   }
 }
