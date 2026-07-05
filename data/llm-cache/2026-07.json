@@ -98,5 +98,30 @@
     "text": "Hedera operates as a Layer 1 blockchain, meaning it has its own independent consensus mechanism rather than relying on another chain. This autonomy allows Hedera to optimize for speed and efficiency, catering to enterprise-level applications.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-07-04T02:53:16.341Z"
+  },
+  "2026-07-05|protocol|figure-markets-exchange|A|P1_FINGERPRINT|explanation|c26d220b6e9da5b2": {
+    "text": "Figure Markets Exchange operates as an OTC marketplace on the Provenance blockchain, with a notable $1.4B in TVL, indicating strong demand for its services in facilitating large trades without the price slippage often seen on traditional exchanges. This focus on a single chain allows it to optimize its infrastructure and user experience specifically for Provenance's unique features.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-05T03:23:14.574Z"
+  },
+  "2026-07-05|protocol|figure-markets-exchange|B|P7_CATEGORY|explanation|d1108c361207f63a": {
+    "text": "Figure Markets Exchange operates as an OTC marketplace, allowing users to trade assets directly between parties without the need for a centralized exchange. This model can lead to greater privacy and potentially lower fees, appealing to traders looking for more control over their transactions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-05T03:23:15.802Z"
+  },
+  "2026-07-05|protocol|figure-markets-exchange|C|P5_FEES_REVENUE|explanation|1f5ac7c0a05fea06": {
+    "text": "Figure Markets Exchange generated $7K in fees over the past week, which directly translates to its revenue, indicating that all fees collected are being converted into revenue without any losses or operational costs. This 100% revenue-to-fee ratio suggests a highly efficient fee structure for the platform.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-05T03:23:17.136Z"
+  },
+  "2026-07-05|protocol|figure-markets-exchange|D|P4_ATH_TIMING|explanation|03fbbbfc8730ebeb": {
+    "text": "Figure Markets Exchange hit its all-time high (ATH) of $1.7B in June 2026, a significant milestone that showcases its rapid growth during that period. In contrast, the other months like July 2026 and April 2026 were just after or before this peak, indicating that the exchange experienced a surge in popularity and liquidity specifically in June, setting it apart from the surrounding months.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-05T03:23:18.947Z"
+  },
+  "2026-07-05|protocol|figure-markets-exchange|E|P8_CHAIN_MEMBERSHIP|explanation|c2b2ab569faeddaa": {
+    "text": "Figure Markets Exchange operates exclusively on the Provenance blockchain, which is designed specifically for financial services and asset management, allowing for streamlined transactions and enhanced compliance. This singular focus on Provenance can lead to deeper integration with its features, catering specifically to users in the financial sector.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-05T03:23:20.187Z"
   }
 }

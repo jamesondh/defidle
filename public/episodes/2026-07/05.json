@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-07-05:protocol:figure-markets-exchange",
+  "dateUtc": "2026-07-05",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "figure-markets-exchange",
+    "name": "Figure Markets Exchange",
+    "category": "OTC Marketplace"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: OTC Marketplace",
+        "Chains: single-chain",
+        "TVL: $1B-$5B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Figure Markets Exchange",
+        "Polygon Bridge",
+        "Maple",
+        "Spark Liquidity Layer",
+        "Spark Savings",
+        "Steakhouse Financial"
+      ],
+      "answerIndex": 0,
+      "explanation": "Figure Markets Exchange operates as an OTC marketplace on the Provenance blockchain, with a notable $1.4B in TVL, indicating strong demand for its services in facilitating large trades without the price slippage often seen on traditional exchanges. This focus on a single chain allows it to optimize its infrastructure and user experience specifically for Provenance's unique features.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.05900792224445837
+      },
+      "difficultyScore": 0.47840079222444587
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Figure Markets Exchange?",
+      "choices": [
+        "Basis Trading",
+        "Private Investment Platform",
+        "Options Vault",
+        "OTC Marketplace"
+      ],
+      "answerIndex": 3,
+      "explanation": "Figure Markets Exchange operates as an OTC marketplace, allowing users to trade assets directly between parties without the need for a centralized exchange. This model can lead to greater privacy and potentially lower fees, appealing to traders looking for more control over their transactions.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.05900792224445837
+      },
+      "difficultyScore": 0.2984007922244459
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "ab",
+      "prompt": "Over the last 7 days, did Figure Markets Exchange generate more in fees or revenue?",
+      "choices": [
+        "Revenue",
+        "Fees"
+      ],
+      "answerIndex": 0,
+      "explanation": "Figure Markets Exchange generated $7K in fees over the past week, which directly translates to its revenue, indicating that all fees collected are being converted into revenue without any losses or operational costs. This 100% revenue-to-fee ratio suggests a highly efficient fee structure for the platform.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0,
+        "volatility": 0.05900792224445837
+      },
+      "difficultyScore": 0.5084007922244458
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Figure Markets Exchange hit its all-time high TVL?",
+      "choices": [
+        "Apr 2026",
+        "Oct 2025",
+        "Jun 2026",
+        "Aug 2025",
+        "Jul 2026",
+        "Sep 2025"
+      ],
+      "answerIndex": 2,
+      "explanation": "Figure Markets Exchange hit its all-time high (ATH) of $1.7B in June 2026, a significant milestone that showcases its rapid growth during that period. In contrast, the other months like July 2026 and April 2026 were just after or before this peak, indicating that the exchange experienced a surge in popularity and liquidity specifically in June, setting it apart from the surrounding months.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.05900792224445837
+      },
+      "difficultyScore": 0.4884007922244459
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Figure Markets Exchange deployed on?",
+      "choices": [
+        "Provenance",
+        "Base",
+        "Polygon",
+        "Arbitrum"
+      ],
+      "answerIndex": 0,
+      "explanation": "Figure Markets Exchange operates exclusively on the Provenance blockchain, which is designed specifically for financial services and asset management, allowing for streamlined transactions and enhanced compliance. This singular focus on Provenance can lead to deeper integration with its features, catering specifically to users in the financial sector.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.05900792224445837
+      },
+      "difficultyScore": 0.2984007922244459
+    }
+  ],
+  "generatedAt": "2026-07-05T03:23:20.188Z"
+}
