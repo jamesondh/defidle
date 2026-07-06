@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-07-06:protocol:merlins-seal",
+  "dateUtc": "2026-07-06",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "merlins-seal",
+    "name": "Merlins Seal",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: 2-5 chains",
+        ">90% TVL on single chain",
+        "TVL: $100M-$500M",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Binance Bitcoin",
+        "Jupiter Lend",
+        "Merlins Seal"
+      ],
+      "answerIndex": 2,
+      "explanation": "Merlins Seal operates as a bridge across four chains, including Ethereum and Bitcoin, which allows it to facilitate cross-chain transactions and liquidity. Its $379M TVL reflects a growing interest in bridging solutions, especially as users seek to move assets seamlessly between different blockchain ecosystems.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.14035746527423856
+      },
+      "difficultyScore": 0.3965357465274239
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Merlins Seal?",
+      "choices": [
+        "Basis Trading",
+        "Secondary Debt Markets",
+        "Developer Tools",
+        "Bridge"
+      ],
+      "answerIndex": 3,
+      "explanation": "Merlins Seal operates as a bridge, facilitating the transfer of assets between different blockchains. This functionality is crucial in DeFi, as it enhances interoperability and allows users to access a wider range of protocols and liquidity across various networks.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.14035746527423856
+      },
+      "difficultyScore": 0.3065357465274239
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Merlins Seal's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 3,
+      "explanation": "Merlins Seal's current TVL of $379M is 86% below its all-time high of $2.6B, indicating significant user withdrawal or reduced activity, which is common in DeFi protocols after initial hype phases. This steep decline suggests challenges in maintaining user engagement or adapting to market trends.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.42782850001803807,
+        "volatility": 0.14035746527423856
+      },
+      "difficultyScore": 0.3665357465274239
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Bridge protocols from highest to lowest TVL.",
+      "choices": [
+        "USDT0 > Merlins Seal > Hyperliquid Bridge",
+        "Hyperliquid Bridge > USDT0 > Merlins Seal",
+        "Hyperliquid Bridge > Merlins Seal > USDT0",
+        "Merlins Seal > USDT0 > Hyperliquid Bridge"
+      ],
+      "answerIndex": 1,
+      "explanation": "Merlins Seal's $379M TVL positions it significantly lower than leaders like Hyperliquid Bridge and USDT0, which have $5.7B and $3.7B respectively. This disparity suggests that while Merlins Seal is a player in the bridge category, it has yet to capture a substantial share of the market compared to its larger counterparts.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.354306150343046,
+        "volatility": 0.14035746527423856
+      },
+      "difficultyScore": 0.40653574652742386
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Merlins Seal deployed on?",
+      "choices": [
+        "Base",
+        "zkSync Era",
+        "Bitcoin",
+        "Avalanche"
+      ],
+      "answerIndex": 2,
+      "explanation": "Merlins Seal operates across four chains, including Ethereum and Arbitrum, which are popular for DeFi due to their robust ecosystems and liquidity. The inclusion of Zkfair and Bitcoin indicates a strategy to tap into both privacy-focused and established networks, potentially broadening its user base and utility.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.14035746527423856
+      },
+      "difficultyScore": 0.3065357465274239
+    }
+  ],
+  "generatedAt": "2026-07-06T03:31:16.455Z"
+}

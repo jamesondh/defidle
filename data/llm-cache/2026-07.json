@@ -123,5 +123,30 @@
     "text": "Figure Markets Exchange operates exclusively on the Provenance blockchain, which is designed specifically for financial services and asset management, allowing for streamlined transactions and enhanced compliance. This singular focus on Provenance can lead to deeper integration with its features, catering specifically to users in the financial sector.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-07-05T03:23:20.187Z"
+  },
+  "2026-07-06|protocol|merlins-seal|A|P1_FINGERPRINT|explanation|268a43ad98e02894": {
+    "text": "Merlins Seal operates as a bridge across four chains, including Ethereum and Bitcoin, which allows it to facilitate cross-chain transactions and liquidity. Its $379M TVL reflects a growing interest in bridging solutions, especially as users seek to move assets seamlessly between different blockchain ecosystems.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-06T03:31:08.537Z"
+  },
+  "2026-07-06|protocol|merlins-seal|B|P7_CATEGORY|explanation|bb81db74f5db0c4d": {
+    "text": "Merlins Seal operates as a bridge, facilitating the transfer of assets between different blockchains. This functionality is crucial in DeFi, as it enhances interoperability and allows users to access a wider range of protocols and liquidity across various networks.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-06T03:31:10.115Z"
+  },
+  "2026-07-06|protocol|merlins-seal|C|P20_ATH_DISTANCE|explanation|470bf33950265573": {
+    "text": "Merlins Seal's current TVL of $379M is 86% below its all-time high of $2.6B, indicating significant user withdrawal or reduced activity, which is common in DeFi protocols after initial hype phases. This steep decline suggests challenges in maintaining user engagement or adapting to market trends.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-06T03:31:12.253Z"
+  },
+  "2026-07-06|protocol|merlins-seal|D|P33_MULTI_RANKING|explanation|43f5759371fa63fd": {
+    "text": "Merlins Seal's $379M TVL positions it significantly lower than leaders like Hyperliquid Bridge and USDT0, which have $5.7B and $3.7B respectively. This disparity suggests that while Merlins Seal is a player in the bridge category, it has yet to capture a substantial share of the market compared to its larger counterparts.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-06T03:31:14.525Z"
+  },
+  "2026-07-06|protocol|merlins-seal|E|P8_CHAIN_MEMBERSHIP|explanation|4cdd432c229546c1": {
+    "text": "Merlins Seal operates across four chains, including Ethereum and Arbitrum, which are popular for DeFi due to their robust ecosystems and liquidity. The inclusion of Zkfair and Bitcoin indicates a strategy to tap into both privacy-focused and established networks, potentially broadening its user base and utility.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-06T03:31:16.454Z"
   }
 }
