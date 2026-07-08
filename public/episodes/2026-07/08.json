@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-07-08:protocol:base-bridge",
+  "dateUtc": "2026-07-08",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "base-bridge",
+    "name": "Base Bridge",
+    "category": "Canonical Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Canonical Bridge",
+        "Chains: single-chain",
+        "TVL: $1B-$5B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "JustLend V1",
+        "Base Bridge",
+        "USDT0",
+        "Linea Bridge",
+        "Babylon Protocol"
+      ],
+      "answerIndex": 1,
+      "explanation": "Base Bridge, operating solely on Ethereum, has a TVL of $2.2B, reflecting its role as a critical conduit for assets within the Ethereum ecosystem. Its status as a canonical bridge means it facilitates seamless transfers, which is essential for maintaining liquidity and user engagement across DeFi applications.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.1775684529567708
+      },
+      "difficultyScore": 0.4902568452956771
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Base Bridge?",
+      "choices": [
+        "Canonical Bridge",
+        "Launchpad",
+        "Yield",
+        "Identity & Reputation"
+      ],
+      "answerIndex": 0,
+      "explanation": "Base Bridge is categorized as a Canonical Bridge, meaning it facilitates seamless asset transfers between different blockchain networks while maintaining a single source of truth for the assets involved. This type of bridge is crucial for enhancing interoperability and liquidity across DeFi ecosystems.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.1775684529567708
+      },
+      "difficultyScore": 0.3102568452956771
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Base Bridge's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 2,
+      "explanation": "Base Bridge's current TVL of $2.2B is 68% below its all-time high of $7.0B, indicating a significant drop that could reflect changing user interest or competition in the bridging space. This level of distance from its ATH places it in the 50-75% below range, suggesting that while it remains a notable player, it faces challenges in regaining its peak performance.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.27229801319637376,
+        "volatility": 0.1775684529567708
+      },
+      "difficultyScore": 0.3702568452956771
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Canonical Bridge protocols from highest to lowest TVL.",
+      "choices": [
+        "Arbitrum Bridge > World Chain > Base Bridge",
+        "Arbitrum Bridge > Base Bridge > World Chain",
+        "World Chain > Arbitrum Bridge > Base Bridge",
+        "World Chain > Base Bridge > Arbitrum Bridge"
+      ],
+      "answerIndex": 1,
+      "explanation": "Base Bridge's $2.2B TVL positions it as a strong contender in the canonical bridge category, trailing only the Arbitrum Bridge at $2.8B. The significant difference in TVL between Base Bridge and World Chain, which has $362M, underscores the growing demand for efficient cross-chain solutions as users increasingly seek to move assets seamlessly across networks.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.19497499219296427,
+        "volatility": 0.1775684529567708
+      },
+      "difficultyScore": 0.47628685466412
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Base Bridge deployed on?",
+      "choices": [
+        "Solana",
+        "Arbitrum",
+        "Ethereum",
+        "Base"
+      ],
+      "answerIndex": 2,
+      "explanation": "Base Bridge operates solely on Ethereum, which allows it to leverage Ethereum's robust security and liquidity but also means it lacks the cross-chain capabilities that many users seek in a multi-chain environment. This single-chain focus can streamline operations but may limit its appeal to users looking for broader interoperability.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.1775684529567708
+      },
+      "difficultyScore": 0.3102568452956771
+    }
+  ],
+  "generatedAt": "2026-07-08T02:39:24.358Z"
+}
