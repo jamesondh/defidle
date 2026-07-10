@@ -223,5 +223,30 @@
     "text": "DeepBook V3 leads Sui with a volume of $9M, significantly outpacing its closest competitor, Cetus CLMM, which has $6M. This dominance suggests that DeepBook V3 is becoming the go-to DEX on Sui, while other platforms like Bluefin Spot and Turbos trail behind with $5M and $3M, respectively, indicating a clear preference among users for DeepBook V3's offerings.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-07-09T02:58:04.410Z"
+  },
+  "2026-07-10|protocol|veda|A|P1_FINGERPRINT|explanation|3a6876855533aacd": {
+    "text": "Veda's $1.1B TVL across 12 chains, including Berachain and Optimism, positions it as a significant player in the onchain capital allocator space, reflecting its ability to attract liquidity across diverse ecosystems. This multi-chain strategy often enhances user accessibility and capital efficiency, making it appealing for investors looking to optimize their portfolios.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-10T03:17:16.750Z"
+  },
+  "2026-07-10|protocol|veda|B|P2_CROSSCHAIN|explanation|5b72ae4440d456b0": {
+    "text": "Veda's $586M TVL on Ink vastly outpaces the $116M on Optimism, showcasing a significant preference for the Ink chain among users, likely due to its unique features or incentives that attract more liquidity. The 80% margin indicates that Ink is not just leading but dominating the cross-chain landscape in this matchup.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-10T03:17:18.393Z"
+  },
+  "2026-07-10|protocol|veda|C|P5_FEES_REVENUE|explanation|ed7017e8fe22143a": {
+    "text": "Veda generated $171K in revenue from $776K in fees over the past week, which means it retains about 22% of its fees as revenue. This efficiency in converting fees to revenue can indicate effective cost management and a strong value proposition for users.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-10T03:17:19.952Z"
+  },
+  "2026-07-10|protocol|veda|D|P4_ATH_TIMING|explanation|cf592c99c9c726cd": {
+    "text": "Veda reached its all-time high (ATH) of $6.1B in September 2025, a significant milestone compared to the other options like November 2024 and March 2025, which were earlier and did not capture the peak growth period for the protocol. This timing reflects Veda's strategic developments and market conditions that likely contributed to its surge in value during that month.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-10T03:17:21.822Z"
+  },
+  "2026-07-10|protocol|veda|E|P8_CHAIN_MEMBERSHIP|explanation|2c56cccfd3af4ed6": {
+    "text": "Veda operates across 12 chains, including Berachain, Sonic, Ink, Base, and Optimism, showcasing its strategy to diversify liquidity and user engagement across multiple ecosystems. This multi-chain approach allows Veda to tap into different user bases and leverage unique features of each chain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-10T03:17:23.007Z"
   }
 }
