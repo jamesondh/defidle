@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-07-12:protocol:layerzero-v2",
+  "dateUtc": "2026-07-12",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "layerzero-v2",
+    "name": "LayerZero V2",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: 10+ chains",
+        ">90% TVL on single chain",
+        "TVL rank: top 10"
+      ],
+      "choices": [
+        "CCIP",
+        "WBTC",
+        "Function FBTC",
+        "LayerZero V2",
+        "Binance staked ETH",
+        "SSV Network"
+      ],
+      "answerIndex": 3,
+      "explanation": "LayerZero V2's impressive $7.1B TVL across 60 chains showcases its versatility and appeal as a bridge solution, particularly with emerging chains like Swellchain and Astar contributing to its growth. This broad adoption indicates that users are increasingly seeking seamless interoperability between diverse blockchain ecosystems.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": 0.028952447722921208
+      },
+      "difficultyScore": 0.44539524477229214
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does LayerZero V2 have higher TVL?",
+      "choices": [
+        "Arbitrum",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "LayerZero V2 shows a stark contrast in TVL between Ethereum at $6.8B and Arbitrum at just $54M, reflecting Ethereum's dominance as a preferred chain for cross-chain applications. The 99% margin indicates that while LayerZero facilitates interoperability, most liquidity is still concentrated on Ethereum, highlighting its established user base and ecosystem.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.9920752288806213,
+        "volatility": 0.028952447722921208
+      },
+      "difficultyScore": 0.1753952447722921
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did LayerZero V2's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 0,
+      "explanation": "LayerZero V2 has seen a 21.2% decrease in fees over the past week, dropping from $29K to $23K, which may suggest reduced transaction activity or competition from other protocols. This trend can impact the protocol's revenue model and user incentives, as lower fees might attract more users or indicate a shift in market dynamics.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.21228249744114636,
+        "volatility": 0.028952447722921208
+      },
+      "difficultyScore": 0.3106562478429165
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Bridge protocols from highest to lowest TVL.",
+      "choices": [
+        "WBTC > LayerZero V2 > Binance Bitcoin",
+        "Binance Bitcoin > LayerZero V2 > WBTC",
+        "Binance Bitcoin > WBTC > LayerZero V2",
+        "WBTC > Binance Bitcoin > LayerZero V2"
+      ],
+      "answerIndex": 0,
+      "explanation": "LayerZero V2's $7.1B TVL positions it just behind WBTC, showcasing its strong adoption as a cross-chain bridge. This close competition indicates that users are increasingly valuing interoperability solutions, which are essential for connecting different blockchain ecosystems.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.03300573879712528,
+        "volatility": 0.028952447722921208
+      },
+      "difficultyScore": 0.6257883582157416
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "LayerZero V2's TVL increased over the past 30 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "LayerZero V2's TVL has decreased by 6.1% to $7.1B, which may reflect shifting user preferences or increased competition from other cross-chain solutions. This trend is important as it can signal the need for LayerZero to innovate or enhance its offerings to retain users.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.060746923406101404,
+        "volatility": 0.028952447722921208
+      },
+      "difficultyScore": 0.3124989366849704
+    }
+  ],
+  "generatedAt": "2026-07-12T02:44:06.932Z"
+}
