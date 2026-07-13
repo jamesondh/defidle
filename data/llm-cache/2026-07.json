@@ -298,5 +298,30 @@
     "text": "LayerZero V2's TVL has decreased by 6.1% to $7.1B, which may reflect shifting user preferences or increased competition from other cross-chain solutions. This trend is important as it can signal the need for LayerZero to innovate or enhance its offerings to retain users.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-07-12T02:44:06.931Z"
+  },
+  "2026-07-13|protocol|grove-finance|A|P1_FINGERPRINT|explanation|c71ccee0e3db572f": {
+    "text": "Grove Finance operates as an onchain capital allocator across four chains, including Ethereum and Avalanche, which allows it to tap into diverse liquidity pools and user bases. Its $2.4B TVL reflects a strong position within the $1B-$5B range, indicating significant trust and adoption among users looking for efficient capital allocation strategies.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-13T02:45:15.739Z"
+  },
+  "2026-07-13|protocol|grove-finance|B|P2_CROSSCHAIN|explanation|ae0270d81532a09f": {
+    "text": "Grove Finance's $1.9B TVL on Ethereum dwarfs the $183M on Base, illustrating how established chains often attract significantly more liquidity due to their larger user bases and ecosystem maturity. The 91% margin indicates a strong preference for Ethereum over Base among users, likely driven by factors like network effects and available DeFi opportunities.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-13T02:45:17.411Z"
+  },
+  "2026-07-13|protocol|grove-finance|C|P20_ATH_DISTANCE|explanation|7bdef68f1356e2c6": {
+    "text": "Grove Finance's current TVL of $2.4B is 29% below its all-time high of $3.4B, placing it in the 25-50% below ATH range. This suggests that while the protocol has seen significant growth, it hasn't yet regained its peak performance, which could indicate challenges in attracting new liquidity or retaining existing users.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-13T02:45:18.696Z"
+  },
+  "2026-07-13|protocol|grove-finance|D|P33_MULTI_RANKING|explanation|ec9bff31ac4c94bf": {
+    "text": "Grove Finance leads the category of onchain capital allocators with a TVL of $2.4B, significantly outpacing Spark Liquidity Layer and Veda, which have $1.6B and $1.2B respectively. This strong TVL suggests that Grove Finance has effectively attracted more capital, likely due to its unique offerings or user incentives that resonate well with investors.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-13T02:45:20.570Z"
+  },
+  "2026-07-13|protocol|grove-finance|E|P3_CONCENTRATION|explanation|3b3bf36b8d38de31": {
+    "text": "Grove Finance has 80% of its $2.4B TVL concentrated on Ethereum, which shows that the protocol is heavily reliant on this chain for liquidity and user activity. This concentration can lead to greater volatility if Ethereum experiences significant fluctuations in its ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-13T02:45:22.241Z"
   }
 }
