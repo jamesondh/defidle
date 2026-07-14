@@ -323,5 +323,30 @@
     "text": "Grove Finance has 80% of its $2.4B TVL concentrated on Ethereum, which shows that the protocol is heavily reliant on this chain for liquidity and user activity. This concentration can lead to greater volatility if Ethereum experiences significant fluctuations in its ecosystem.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-07-13T02:45:22.241Z"
+  },
+  "2026-07-14|chain|Aptos|A|C1_FINGERPRINT|explanation|cb8931e803b23090": {
+    "text": "Aptos ranks 26th in TVL with between $100M and $500M, which reflects its growing ecosystem of 92 protocols, placing it in the competitive range of 50-100 protocols. This suggests that while Aptos is still developing, it has attracted a diverse array of projects, indicating a potential for increased user engagement and innovation.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-14T02:27:54.800Z"
+  },
+  "2026-07-14|chain|Aptos|B|C2_CHAIN_COMPARISON|explanation|f6cf72d463f5a97c": {
+    "text": "Aptos leads Katana with $107M in TVL compared to Katana's $77M, reflecting a 28.3% advantage that suggests stronger user adoption or more effective liquidity incentives on Aptos. This difference may stem from Aptos's robust infrastructure and developer support, which can attract more projects and liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-14T02:27:56.843Z"
+  },
+  "2026-07-14|chain|Aptos|C|C6_TOP_DEX|explanation|6835e312787f7a58": {
+    "text": "ThalaSwap V3 leads Aptos with a significant $36M in volume, dwarfing other DEXs like Hyperion at $1M and Tapp Exchange at just $36K. This stark contrast underscores ThalaSwap's dominance in the Aptos ecosystem, indicating strong user preference for its trading platform over its competitors.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-14T02:27:58.834Z"
+  },
+  "2026-07-14|chain|Aptos|D|C3_ATH_TIMING|explanation|7424832579b194b6": {
+    "text": "Aptos reached its all-time high (ATH) of $1.3B in December 2024, a notable spike compared to earlier months like January 2023 and January 2024, when its TVL was significantly lower. The later options, such as May 2026 and November 2024, were after this peak, illustrating how Aptos experienced rapid growth in late 2024.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-14T02:28:00.930Z"
+  },
+  "2026-07-14|chain|Aptos|E|C10_PROTOCOL_COUNT|explanation|6b163f5f5c1d6f48": {
+    "text": "Aptos has 77 protocols built on its blockchain, showcasing its growing ecosystem and appeal to developers looking for high throughput and scalability. This diverse range of projects indicates a robust interest in leveraging Aptos's unique features for various DeFi applications.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-14T02:28:02.332Z"
   }
 }
