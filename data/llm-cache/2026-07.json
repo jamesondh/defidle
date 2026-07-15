@@ -348,5 +348,30 @@
     "text": "Aptos has 77 protocols built on its blockchain, showcasing its growing ecosystem and appeal to developers looking for high throughput and scalability. This diverse range of projects indicates a robust interest in leveraging Aptos's unique features for various DeFi applications.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-07-14T02:28:02.332Z"
+  },
+  "2026-07-15|protocol|falcon-finance|A|P1_FINGERPRINT|explanation|ca845a040920c8df": {
+    "text": "Falcon Finance, operating solely on Ethereum, has achieved a notable $1.3B TVL, indicating strong adoption in the basis trading category. Its focus on a single chain allows for deeper liquidity and potentially more efficient trading strategies compared to multi-chain platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-15T02:25:46.079Z"
+  },
+  "2026-07-15|protocol|falcon-finance|B|P7_CATEGORY|explanation|e54e33bc1d3cb8a6": {
+    "text": "Falcon Finance operates in the Basis Trading category, which focuses on exploiting price discrepancies between spot and futures markets. This strategy can provide traders with unique opportunities to profit from market inefficiencies.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-15T02:25:47.213Z"
+  },
+  "2026-07-15|protocol|falcon-finance|C|P20_ATH_DISTANCE|explanation|058a5ba0b958f6ef": {
+    "text": "Falcon Finance's current TVL of $1.3B is 41% below its all-time high of $2.1B, placing it in the 25-50% below ATH range. This distance suggests that while the protocol has seen significant growth, it still has room to recover and attract more liquidity compared to its peak performance.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-15T02:25:48.630Z"
+  },
+  "2026-07-15|protocol|falcon-finance|D|P33_MULTI_RANKING|explanation|796e67dac09baaae": {
+    "text": "Falcon Finance's $1.3B TVL positions it as a significant player in the basis trading category, but it still trails behind Ethena USDe, which leads with $4.0B. This gap suggests that while Falcon Finance is gaining traction, Ethena's larger TVL indicates stronger market confidence or more robust user engagement in its trading strategies.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-15T02:25:49.924Z"
+  },
+  "2026-07-15|protocol|falcon-finance|E|P8_CHAIN_MEMBERSHIP|explanation|2877b5dd2a93c3bd": {
+    "text": "Falcon Finance operates solely on Ethereum, which allows it to leverage the network's robust liquidity and established user base. This single-chain focus can lead to deeper integration with Ethereum's ecosystem but may limit its exposure to users on other chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-15T02:25:51.634Z"
   }
 }
