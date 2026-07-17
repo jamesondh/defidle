@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-07-17:protocol:circle-usyc",
+  "dateUtc": "2026-07-17",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "circle-usyc",
+    "name": "Circle USYC",
+    "category": "RWA"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: RWA",
+        "Chains: 2-5 chains",
+        ">90% TVL on single chain",
+        "TVL rank: top 25"
+      ],
+      "choices": [
+        "SSV Network",
+        "Sky Lending",
+        "Anemoy Capital",
+        "Circle USYC",
+        "Paxos Gold",
+        "Binance Bitcoin"
+      ],
+      "answerIndex": 3,
+      "explanation": "Circle USYC's $3.0B TVL across four chains, including Ethereum and Binance, reflects its role in bridging traditional assets with DeFi, making it a key player in the real-world asset (RWA) category. This diverse chain presence helps enhance liquidity and accessibility for users engaging with tokenized real-world assets.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.01102462137247843
+      },
+      "difficultyScore": 0.45560246213724787
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Circle USYC have higher TVL?",
+      "choices": [
+        "Noble",
+        "Binance"
+      ],
+      "answerIndex": 1,
+      "explanation": "Circle USYC's dominance on Binance, with a TVL of $2.9B, shows how liquidity often concentrates on established chains, while Noble's $0 TVL highlights the challenges new or less popular chains face in attracting users and capital. The 100% margin indicates that all of Circle's cross-chain activity is currently happening on Binance, emphasizing its role as a liquidity hub.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.9999999999999553,
+        "volatility": 0.01102462137247843
+      },
+      "difficultyScore": 0.18560246213724785
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P15_RECENT_TVL_DIRECTION",
+      "format": "ab",
+      "prompt": "Over the past 30 days, did Circle USYC's TVL increase or decrease?",
+      "choices": [
+        "Decrease",
+        "Increase"
+      ],
+      "answerIndex": 0,
+      "explanation": "Circle USYC's TVL decreased by 2.3% over the past 30 days, reflecting a slight decline in user engagement or a shift in liquidity preferences among DeFi participants. This change could indicate competitive pressures from other stablecoins or evolving market conditions impacting user confidence.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.0233973051155946,
+        "volatility": 0.01102462137247843
+      },
+      "difficultyScore": 0.4575256959985343
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Circle USYC hit its all-time high TVL?",
+      "choices": [
+        "Jan 2025",
+        "Jul 2026",
+        "Jan 2026",
+        "Jun 2026",
+        "Jul 2025",
+        "Aug 2025"
+      ],
+      "answerIndex": 3,
+      "explanation": "Circle USYC reached its all-time high (ATH) of $3.1B in June 2026, which stands out compared to earlier months like January 2026 and January 2025, when it had not yet gained significant traction. This timing reflects a broader trend in the market, where stablecoins often see increased adoption and value as DeFi protocols mature and user demand rises.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": 0.01102462137247843
+      },
+      "difficultyScore": 0.4656024621372479
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Circle USYC's TVL is on its top chain (Binance)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Circle USYC is heavily concentrated on Binance, with 97% of its $3.0B TVL locked on the chain, which suggests that its liquidity and user base are predominantly tied to Binance's ecosystem. This level of concentration can lead to increased vulnerability to changes in Binance's market conditions or regulatory environment.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.8779518973168936,
+        "volatility": 0.01102462137247843
+      },
+      "difficultyScore": 0.27560246213724787
+    }
+  ],
+  "generatedAt": "2026-07-17T02:35:58.297Z"
+}
