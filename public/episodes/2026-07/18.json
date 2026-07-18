@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-07-18:chain:Berachain",
+  "dateUtc": "2026-07-18",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Berachain",
+    "name": "Berachain"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Native token: BERA",
+        "Protocols: 100-200",
+        "TVL: $50M-$100M",
+        "30d trend: down 1-10%"
+      ],
+      "choices": [
+        "Robinhood Chain",
+        "dYdX",
+        "Mantle",
+        "Berachain"
+      ],
+      "answerIndex": 3,
+      "explanation": "Berachain ranks 39th in TVL with between $50M and $100M, reflecting a growing interest in its ecosystem, which hosts 106 protocols. This diverse range of projects can drive user engagement and liquidity, positioning Berachain as a notable player among emerging DeFi platforms.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4075000000000001
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C11_TOP_PROTOCOL_TVL",
+      "format": "ab",
+      "prompt": "Which protocol has the most TVL on Berachain?",
+      "choices": [
+        "Dolomite",
+        "Infrared Finance",
+        "Concrete",
+        "Kodiak Islands"
+      ],
+      "answerIndex": 2,
+      "explanation": "Concrete leads Berachain with a TVL of $43M, significantly outpacing other protocols like Kodiak Islands and Dolomite, both at $22M. This concentration of TVL in Concrete suggests it has established itself as the go-to platform on Berachain, likely due to unique features or incentives that attract users.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.49467732825256533,
+        "volatility": null
+      },
+      "difficultyScore": 0.2275
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Berachain?",
+      "choices": [
+        "Kodiak V3",
+        "BrownFi V3",
+        "BEX",
+        "Bulla Exchange"
+      ],
+      "answerIndex": 0,
+      "explanation": "Kodiak V3 stands out on Berachain with a volume of $1M, significantly outpacing its competitors like BEX at $19K and Bulla Exchange at $12K. This stark difference in volume indicates Kodiak V3's dominant position in the market, likely driven by better liquidity and user adoption compared to the other DEXs on the chain.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9850125735525677,
+        "volatility": null
+      },
+      "difficultyScore": 0.31750000000000006
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Berachain hit its all-time high TVL?",
+      "choices": [
+        "Mar 2025",
+        "Dec 2024",
+        "Jul 2025",
+        "Oct 2025",
+        "Jul 2026",
+        "May 2026"
+      ],
+      "answerIndex": 0,
+      "explanation": "Berachain reached its ATH of $3.3B in March 2025, which is notable because it occurred before other options like July 2025 and October 2025, indicating a strong early adoption phase. This timing suggests that Berachain capitalized on market trends effectively, setting it apart from later peaks in the other months.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.5075000000000001
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Monad",
+        "Base",
+        "Berachain",
+        "Ethereum"
+      ],
+      "answerIndex": 0,
+      "explanation": "Monad's impressive growth of 46.4% significantly outpaces other chains like Base, which grew by 11.7%, and Ethereum at 7.8%. In contrast, Berachain saw a decline of 4.7%, highlighting Monad's strong momentum in a competitive landscape.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.3470024967905431,
+        "volatility": null
+      },
+      "difficultyScore": 0.37750000000000006
+    }
+  ],
+  "generatedAt": "2026-07-18T02:27:08.835Z"
+}
