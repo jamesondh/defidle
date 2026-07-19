@@ -448,5 +448,30 @@
     "text": "Monad's impressive growth of 46.4% significantly outpaces other chains like Base, which grew by 11.7%, and Ethereum at 7.8%. In contrast, Berachain saw a decline of 4.7%, highlighting Monad's strong momentum in a competitive landscape.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-07-18T02:27:08.835Z"
+  },
+  "2026-07-19|protocol|eigencloud|A|P1_FINGERPRINT|explanation|812334680e874d20": {
+    "text": "EigenCloud's $5.0B TVL on Ethereum positions it as a significant player in the restaking category, illustrating the growing demand for innovative staking solutions that enhance capital efficiency. With a single-chain focus, it showcases how concentrated liquidity can lead to substantial value creation within a specific ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-19T02:40:25.600Z"
+  },
+  "2026-07-19|protocol|eigencloud|B|P7_CATEGORY|explanation|e37047c98b5ba6ff": {
+    "text": "EigenCloud operates in the restaking category, allowing users to leverage their staked assets across multiple protocols, which can enhance capital efficiency and yield opportunities. This innovative approach helps to maximize the utility of staked tokens, making it an attractive option for DeFi participants looking to optimize their returns.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-19T02:40:26.574Z"
+  },
+  "2026-07-19|protocol|eigencloud|C|P15_RECENT_TVL_DIRECTION|explanation|3e58474ed8a6bd2e": {
+    "text": "EigenCloud's TVL has increased by 6.4% over the past 30 days, reaching $5.0B, which reflects growing confidence in its infrastructure and services as users seek decentralized solutions for data storage and processing. This upward trend suggests that more projects may be leveraging EigenCloud's capabilities, potentially enhancing its ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-19T02:40:29.634Z"
+  },
+  "2026-07-19|protocol|eigencloud|D|P4_ATH_TIMING|explanation|052cd91ac28749b4": {
+    "text": "EigenCloud hit its all-time high (ATH) of $22.1B in August 2025, a significant milestone that showcases its growth trajectory compared to earlier months like July 2023, when it was still establishing its presence in the market. The later dates, such as November 2025 and February 2026, suggest a potential for further growth, but they don't reflect the peak that was achieved in August 2025.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-19T02:40:31.098Z"
+  },
+  "2026-07-19|protocol|eigencloud|E|P8_CHAIN_MEMBERSHIP|explanation|1af10eaf0c66b6de": {
+    "text": "EigenCloud operates solely on Ethereum, which allows it to leverage the network's robust security and established user base. This single-chain focus can lead to deeper integration with Ethereum's ecosystem, enhancing its functionality and user experience.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-19T02:40:31.999Z"
   }
 }

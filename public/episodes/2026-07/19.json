@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-07-19:protocol:eigencloud",
+  "dateUtc": "2026-07-19",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "eigencloud",
+    "name": "EigenCloud",
+    "category": "Restaking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Restaking",
+        "Chains: single-chain",
+        "TVL rank: top 25"
+      ],
+      "choices": [
+        "Sky Lending",
+        "Hyperliquid Bridge",
+        "EigenCloud",
+        "Babylon Protocol",
+        "LayerZero V2"
+      ],
+      "answerIndex": 2,
+      "explanation": "EigenCloud's $5.0B TVL on Ethereum positions it as a significant player in the restaking category, illustrating the growing demand for innovative staking solutions that enhance capital efficiency. With a single-chain focus, it showcases how concentrated liquidity can lead to substantial value creation within a specific ecosystem.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.15780099979667994
+      },
+      "difficultyScore": 0.470280099979668
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is EigenCloud?",
+      "choices": [
+        "Crypto Card Issuer",
+        "Restaking",
+        "Interface",
+        "RWA"
+      ],
+      "answerIndex": 1,
+      "explanation": "EigenCloud operates in the restaking category, allowing users to leverage their staked assets across multiple protocols, which can enhance capital efficiency and yield opportunities. This innovative approach helps to maximize the utility of staked tokens, making it an attractive option for DeFi participants looking to optimize their returns.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.5,
+        "volatility": 0.15780099979667994
+      },
+      "difficultyScore": 0.290280099979668
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P15_RECENT_TVL_DIRECTION",
+      "format": "ab",
+      "prompt": "Over the past 30 days, did EigenCloud's TVL increase or decrease?",
+      "choices": [
+        "Increase",
+        "Decrease"
+      ],
+      "answerIndex": 0,
+      "explanation": "EigenCloud's TVL has increased by 6.4% over the past 30 days, reaching $5.0B, which reflects growing confidence in its infrastructure and services as users seek decentralized solutions for data storage and processing. This upward trend suggests that more projects may be leveraging EigenCloud's capabilities, potentially enhancing its ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.0640231544452971,
+        "volatility": 0.15780099979667994
+      },
+      "difficultyScore": 0.42345231464531147
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did EigenCloud hit its all-time high TVL?",
+      "choices": [
+        "Nov 2025",
+        "Sep 2024",
+        "Jul 2023",
+        "Jul 2024",
+        "Aug 2025",
+        "Feb 2026"
+      ],
+      "answerIndex": 4,
+      "explanation": "EigenCloud hit its all-time high (ATH) of $22.1B in August 2025, a significant milestone that showcases its growth trajectory compared to earlier months like July 2023, when it was still establishing its presence in the market. The later dates, such as November 2025 and February 2026, suggest a potential for further growth, but they don't reflect the peak that was achieved in August 2025.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": 0.15780099979667994
+      },
+      "difficultyScore": 0.48028009997966803
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is EigenCloud deployed on?",
+      "choices": [
+        "Solana",
+        "Ethereum",
+        "Polygon",
+        "Base"
+      ],
+      "answerIndex": 1,
+      "explanation": "EigenCloud operates solely on Ethereum, which allows it to leverage the network's robust security and established user base. This single-chain focus can lead to deeper integration with Ethereum's ecosystem, enhancing its functionality and user experience.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.4,
+        "volatility": 0.15780099979667994
+      },
+      "difficultyScore": 0.290280099979668
+    }
+  ],
+  "generatedAt": "2026-07-19T02:40:32.000Z"
+}
