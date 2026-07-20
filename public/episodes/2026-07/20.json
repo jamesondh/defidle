@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-07-20:protocol:m0",
+  "dateUtc": "2026-07-20",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "m0",
+    "name": "M0",
+    "category": "Stablecoin Issuer"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Stablecoin Issuer",
+        "Chains: single-chain",
+        "TVL: $100M-$500M",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Kamino Lend",
+        "Kinetiq kHYPE",
+        "Uniswap V3",
+        "M0"
+      ],
+      "answerIndex": 3,
+      "explanation": "M0's $298M TVL on Ethereum positions it as a notable player in the stablecoin space, particularly as it operates solely on one chain, which can lead to more focused liquidity and user engagement compared to multi-chain issuers. This concentration allows M0 to potentially optimize its services and build a stronger community around its stablecoin offerings.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.0764837965150646
+      },
+      "difficultyScore": 0.3901483796515065
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is M0?",
+      "choices": [
+        "Stablecoin Issuer",
+        "NftFi",
+        "SoFi",
+        "Security Extension"
+      ],
+      "answerIndex": 0,
+      "explanation": "M0 is categorized as a stablecoin issuer, which means it plays a crucial role in providing a stable medium of exchange within the DeFi ecosystem, often pegged to fiat currencies to minimize volatility. This stability is essential for users looking to transact without the risk of price fluctuations common in other cryptocurrencies.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.0764837965150646
+      },
+      "difficultyScore": 0.3001483796515065
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of M0's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 0,
+      "explanation": "M0 has generated $189K in fees over the past week, but its revenue of only $452 indicates that less than 1% of those fees are being converted into actual income, suggesting that the protocol may have high operational costs or a low profit margin. This discrepancy can be a critical factor for users assessing the sustainability and efficiency of the platform.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.39044826584251263,
+        "volatility": 0.0764837965150646
+      },
+      "difficultyScore": 0.3001483796515065
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did M0 hit its all-time high TVL?",
+      "choices": [
+        "Oct 2024",
+        "Mar 2026",
+        "Nov 2025",
+        "Jan 2025",
+        "Sep 2025",
+        "Jul 2025"
+      ],
+      "answerIndex": 2,
+      "explanation": "M0 reached its all-time high (ATH) of $957M in November 2025, a significant milestone compared to earlier months like January and July 2025, which saw much lower TVL. This timing suggests that M0 experienced a notable surge in user interest and liquidity just before the end of 2025, setting it apart from the other options.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.0764837965150646
+      },
+      "difficultyScore": 0.4901483796515065
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is M0 deployed on?",
+      "choices": [
+        "BSC",
+        "Fantom",
+        "Ethereum",
+        "Solana"
+      ],
+      "answerIndex": 2,
+      "explanation": "M0 operates solely on Ethereum, which often allows it to leverage the network's robust liquidity and established user base. This single-chain focus can lead to greater efficiency in transactions but may limit its reach compared to multi-chain protocols.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.0764837965150646
+      },
+      "difficultyScore": 0.3001483796515065
+    }
+  ],
+  "generatedAt": "2026-07-20T03:23:45.794Z"
+}
