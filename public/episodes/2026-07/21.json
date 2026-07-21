@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-07-21:chain:Monad",
+  "dateUtc": "2026-07-21",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Monad",
+    "name": "Monad"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: MON",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "Bitcoin",
+        "Polygon",
+        "Arbitrum",
+        "Monad",
+        "Hyperliquid L1",
+        "Sui"
+      ],
+      "answerIndex": 3,
+      "explanation": "Monad ranks 11th with a TVL between $500M and $1B, which reflects its growing influence in the DeFi space, especially with 124 protocols contributing to its ecosystem. This diverse range of protocols suggests a robust platform that attracts various projects, enhancing its overall utility and appeal.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Monad or Sui?",
+      "choices": [
+        "Sui",
+        "Monad"
+      ],
+      "answerIndex": 1,
+      "explanation": "Monad's $695M TVL surpasses Sui's $443M by 36.2%, reflecting its stronger adoption and user engagement in the DeFi space. This difference may stem from Monad's unique features or incentives that attract more liquidity compared to Sui.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.36191918310684007,
+        "volatility": null
+      },
+      "difficultyScore": 0.2095
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "ab",
+      "prompt": "Which DEX is #1 by 24h volume on Monad?",
+      "choices": [
+        "Kuru CLOB",
+        "Metric",
+        "Uniswap V3",
+        "Uniswap V4"
+      ],
+      "answerIndex": 0,
+      "explanation": "Kuru CLOB leads Monad with $19M in volume, outpacing Uniswap V4 at $17M, which is notable given Uniswap's dominance in the DEX space. This strong performance suggests that Kuru CLOB is effectively capturing trading activity on Monad, especially compared to smaller players like Metric and Uniswap V3, both at just $4M.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.09808934291083195,
+        "volatility": null
+      },
+      "difficultyScore": 0.3917927885070017
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Monad hit its all-time high TVL?",
+      "choices": [
+        "Dec 2025",
+        "Jul 2026",
+        "Jan 2026",
+        "Nov 2025",
+        "Feb 2026",
+        "Jun 2026"
+      ],
+      "answerIndex": 1,
+      "explanation": "Monad reached its all-time high (ATH) of $706M in July 2026, a significant milestone compared to the other options like November 2025 and June 2026, which were earlier periods when the protocol was still gaining traction. This timing suggests that Monad's growth trajectory accelerated leading up to its ATH, reflecting increased user adoption or market interest.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Starknet",
+        "Monad",
+        "Sui",
+        "Solana"
+      ],
+      "answerIndex": 1,
+      "explanation": "Monad's remarkable growth of 99.7% outpaces other chains like Solana and Sui, which saw modest increases of 2.2% and 1.4%, respectively. This stark contrast highlights Monad's rapid adoption or innovation compared to the more stable performance of established networks.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.9757765133656129,
+        "volatility": null
+      },
+      "difficultyScore": 0.35950000000000004
+    }
+  ],
+  "generatedAt": "2026-07-21T02:38:10.933Z"
+}
