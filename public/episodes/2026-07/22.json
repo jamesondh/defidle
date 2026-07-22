@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-07-22:protocol:usdt0",
+  "dateUtc": "2026-07-22",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "usdt0",
+    "name": "USDT0",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: single-chain",
+        "TVL rank: top 25"
+      ],
+      "choices": [
+        "SSV Network",
+        "Sky Lending",
+        "USDT0",
+        "Free Protocol",
+        "WBTC",
+        "Unit"
+      ],
+      "answerIndex": 2,
+      "explanation": "USDT0, operating solely on Ethereum, has a TVL of $3.5B, indicating its significant role as a bridge in the ecosystem. Its focus on one chain allows for streamlined operations and potentially lower fees, making it an attractive option for users looking to transfer assets efficiently.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.02728114494224932
+      },
+      "difficultyScore": 0.45722811449422496
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is USDT0?",
+      "choices": [
+        "Stablecoin Issuer",
+        "Bridge",
+        "Gaming",
+        "Synthetics"
+      ],
+      "answerIndex": 1,
+      "explanation": "USDT0 operates as a bridge, facilitating the transfer of USDT across different blockchain networks. This capability is crucial for enhancing liquidity and interoperability in the DeFi space, allowing users to move assets seamlessly between ecosystems.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.5,
+        "volatility": 0.02728114494224932
+      },
+      "difficultyScore": 0.27722811449422496
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P15_RECENT_TVL_DIRECTION",
+      "format": "ab",
+      "prompt": "Over the past 30 days, did USDT0's TVL increase or decrease?",
+      "choices": [
+        "Increase",
+        "Decrease"
+      ],
+      "answerIndex": 1,
+      "explanation": "USDT0's TVL has decreased by 4.7% over the past 30 days, reflecting a potential shift in user sentiment or liquidity preferences as market conditions evolve. This decline in TVL could suggest that users are reallocating their assets to other stablecoins or DeFi protocols.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.04691073214481253,
+        "volatility": 0.02728114494224932
+      },
+      "difficultyScore": 0.4309352359204499
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did USDT0 hit its all-time high TVL?",
+      "choices": [
+        "Jun 2026",
+        "Feb 2026",
+        "Nov 2025",
+        "Mar 2025",
+        "Oct 2025",
+        "Sep 2025"
+      ],
+      "answerIndex": 4,
+      "explanation": "USDT0 reached its all-time high (ATH) of $7.8B in October 2025, a notable spike compared to the following month, November 2025, when it saw a decline, and March 2025, which was still on the rise but hadn't peaked yet. This timing indicates that USDT0 experienced significant growth leading up to its ATH, making October a pivotal moment for the asset.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": 0.02728114494224932
+      },
+      "difficultyScore": 0.46722811449422497
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P10_TVL_BAND",
+      "format": "mc4",
+      "prompt": "Which TVL range fits USDT0?",
+      "choices": [
+        "<$50M",
+        "$50M-$250M",
+        "$250M-$1B",
+        "$1B-$5B",
+        ">$5B"
+      ],
+      "answerIndex": 3,
+      "explanation": "USDT0's $3.5B TVL places it in a competitive range, reflecting its strong adoption among users looking for stablecoin liquidity. This level of TVL suggests that USDT0 is effectively serving as a trusted medium of exchange within the DeFi ecosystem.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.6050923464,
+        "volatility": 0.02728114494224932
+      },
+      "difficultyScore": 0.27722811449422496
+    }
+  ],
+  "generatedAt": "2026-07-22T02:36:27.600Z"
+}
