@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-07-24:protocol:grove-finance",
+  "dateUtc": "2026-07-24",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "grove-finance",
+    "name": "Grove Finance",
+    "category": "Onchain Capital Allocator"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Onchain Capital Allocator",
+        "Chains: 2-5 chains",
+        "TVL rank: top 25"
+      ],
+      "choices": [
+        "Upshift",
+        "Polygon Bridge",
+        "Veda",
+        "Grove Finance",
+        "Ondo Yield Assets",
+        "Ethena USDe"
+      ],
+      "answerIndex": 3,
+      "explanation": "Grove Finance's $2.4B TVL across four chains, including Ethereum and Avalanche, showcases its ability to attract significant capital across diverse ecosystems, which is crucial for onchain capital allocators looking to optimize asset distribution and yield generation. This multi-chain presence also reflects a strategic approach to mitigate risks and tap into various liquidity pools.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.017752967245626167
+      },
+      "difficultyScore": 0.45627529672456263
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Grove Finance have higher TVL?",
+      "choices": [
+        "Base",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Grove Finance's $1.9B TVL on Ethereum dwarfs the $222M on Base, reflecting Ethereum's established dominance and broader user adoption in the DeFi space. The 88% margin indicates a significant preference for liquidity and services on Ethereum over Base, which is still developing its ecosystem.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.88018828551163,
+        "volatility": 0.017752967245626167
+      },
+      "difficultyScore": 0.1862752967245626
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did Grove Finance's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 1,
+      "explanation": "Grove Finance's fees have decreased by 8.5% despite maintaining a steady $1M in fees over the past week, suggesting that while transaction volume may have remained stable, the average fee per transaction has dropped. This trend could indicate increased competition or adjustments in fee structures to attract more users.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.08548488594725591,
+        "volatility": 0.017752967245626167
+      },
+      "difficultyScore": 0.4736934335878556
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Grove Finance hit its all-time high TVL?",
+      "choices": [
+        "Feb 2026",
+        "May 2026",
+        "Apr 2026",
+        "Jun 2026",
+        "Mar 2026",
+        "Jan 2026"
+      ],
+      "answerIndex": 2,
+      "explanation": "Grove Finance hit its all-time high (ATH) of $3.4B in April 2026, a significant milestone that came after a strong market rally in early 2026, unlike the earlier months like January and February, which saw lower TVL levels. This timing reflects how market sentiment can rapidly shift, leading to substantial growth for protocols like Grove Finance.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": 0.017752967245626167
+      },
+      "difficultyScore": 0.4662752967245627
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "Grove Finance's TVL increased over the past 30 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "Grove Finance's TVL has decreased by 5.4% to $2.4B, which may reflect shifting investor confidence or competition from other DeFi projects. This decline could signal challenges in maintaining user engagement or attracting new liquidity in a rapidly evolving market.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.053837898222358224,
+        "volatility": 0.017752967245626167
+      },
+      "difficultyScore": 0.3316698188577327
+    }
+  ],
+  "generatedAt": "2026-07-24T02:38:04.484Z"
+}

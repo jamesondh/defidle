@@ -573,5 +573,30 @@
     "text": "Uniswap V3 leads on Arbitrum with $90M in volume, significantly outpacing Uniswap V4 at $20M and PancakeSwap AMM V3 at $6M. This dominance suggests that users prefer the established features and liquidity of Uniswap V3 over newer or less popular options on the chain.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-07-23T02:41:53.594Z"
+  },
+  "2026-07-24|protocol|grove-finance|A|P1_FINGERPRINT|explanation|6b64b1b56ef4e1e1": {
+    "text": "Grove Finance's $2.4B TVL across four chains, including Ethereum and Avalanche, showcases its ability to attract significant capital across diverse ecosystems, which is crucial for onchain capital allocators looking to optimize asset distribution and yield generation. This multi-chain presence also reflects a strategic approach to mitigate risks and tap into various liquidity pools.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-24T02:37:59.825Z"
+  },
+  "2026-07-24|protocol|grove-finance|B|P2_CROSSCHAIN|explanation|a3ff9132d6e7e360": {
+    "text": "Grove Finance's $1.9B TVL on Ethereum dwarfs the $222M on Base, reflecting Ethereum's established dominance and broader user adoption in the DeFi space. The 88% margin indicates a significant preference for liquidity and services on Ethereum over Base, which is still developing its ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-24T02:38:01.095Z"
+  },
+  "2026-07-24|protocol|grove-finance|C|P11_FEES_TREND|explanation|ae198ea883cf60f0": {
+    "text": "Grove Finance's fees have decreased by 8.5% despite maintaining a steady $1M in fees over the past week, suggesting that while transaction volume may have remained stable, the average fee per transaction has dropped. This trend could indicate increased competition or adjustments in fee structures to attract more users.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-24T02:38:02.022Z"
+  },
+  "2026-07-24|protocol|grove-finance|D|P4_ATH_TIMING|explanation|704e8eb5a1f01078": {
+    "text": "Grove Finance hit its all-time high (ATH) of $3.4B in April 2026, a significant milestone that came after a strong market rally in early 2026, unlike the earlier months like January and February, which saw lower TVL levels. This timing reflects how market sentiment can rapidly shift, leading to substantial growth for protocols like Grove Finance.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-24T02:38:03.299Z"
+  },
+  "2026-07-24|protocol|grove-finance|E|P6_TVL_TREND|explanation|f055000ea1ebb445": {
+    "text": "Grove Finance's TVL has decreased by 5.4% to $2.4B, which may reflect shifting investor confidence or competition from other DeFi projects. This decline could signal challenges in maintaining user engagement or attracting new liquidity in a rapidly evolving market.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-24T02:38:04.483Z"
   }
 }
