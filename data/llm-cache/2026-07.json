@@ -648,5 +648,30 @@
     "text": "Spark Savings has a significant concentration of its $1.1B TVL on Ethereum, with 81% of it, or $922M, residing on that chain. This heavy reliance on Ethereum suggests that users prefer the established security and liquidity of the network, which is common for protocols in their growth phase.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-07-26T02:44:34.855Z"
+  },
+  "2026-07-27|protocol|jupiter-perpetual-exchange|A|P1_FINGERPRINT|explanation|f6013acff97384e8": {
+    "text": "Jupiter Perpetual Exchange, operating solely on Solana, has a TVL of $722M, which positions it as a significant player in the derivatives market. This concentration on a single chain allows for optimized performance and lower latency, which are crucial for trading derivatives effectively.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-27T02:52:44.671Z"
+  },
+  "2026-07-27|protocol|jupiter-perpetual-exchange|B|P13_TVL_RANK_COMPARISON|explanation|5235b08cfa8967d1": {
+    "text": "Compound V3's $1.2B TVL significantly outpaces Jupiter Perpetual Exchange's $722M, reflecting its established position in the lending market, while Jupiter's 37.7% margin indicates a growing interest in perpetual trading despite its lower TVL. This contrast showcases how lending protocols often attract more capital due to their perceived stability and utility compared to newer trading platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-27T02:52:46.154Z"
+  },
+  "2026-07-27|protocol|jupiter-perpetual-exchange|C|P5_FEES_REVENUE|explanation|ba63c0c84ff4be62": {
+    "text": "Jupiter Perpetual Exchange generated $996K in fees over the past week, with $249K of that amount translating into revenue, which means they retain about 25% of their fees as profit. This efficiency in converting fees to revenue is crucial for the exchange's sustainability and growth in a competitive market.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-27T02:52:47.162Z"
+  },
+  "2026-07-27|protocol|jupiter-perpetual-exchange|D|P4_ATH_TIMING|explanation|77d7979bc4edfaf8": {
+    "text": "Jupiter Perpetual Exchange hit its all-time high (ATH) of $2.7B in September 2025, a notable achievement as it came after a series of market fluctuations, unlike the later dates in November 2025 and January 2025, which saw less momentum. This timing reflects a peak period for trading activity and user engagement on the platform.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-27T02:52:48.409Z"
+  },
+  "2026-07-27|protocol|jupiter-perpetual-exchange|E|P8_CHAIN_MEMBERSHIP|explanation|00d41a9b74e239ce": {
+    "text": "Jupiter Perpetual Exchange operates solely on Solana, which allows it to leverage the chain's high throughput and low transaction costs for efficient trading. This single-chain focus can enhance user experience by reducing complexity and optimizing performance in a fast-paced trading environment.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-27T02:52:49.575Z"
   }
 }
