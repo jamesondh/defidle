@@ -673,5 +673,30 @@
     "text": "Jupiter Perpetual Exchange operates solely on Solana, which allows it to leverage the chain's high throughput and low transaction costs for efficient trading. This single-chain focus can enhance user experience by reducing complexity and optimizing performance in a fast-paced trading environment.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-07-27T02:52:49.575Z"
+  },
+  "2026-07-28|chain|Hyperliquid L1|A|C1_FINGERPRINT|explanation|b5d58bfeb9d9ac0a": {
+    "text": "Hyperliquid L1 ranks 8th in TVL with between $1B and $5B, which reflects a strong adoption of its platform, as evidenced by the 178 protocols built on it. This level of protocol diversity often indicates a healthy ecosystem, attracting more users and liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-28T02:30:13.454Z"
+  },
+  "2026-07-28|chain|Hyperliquid L1|B|C2_CHAIN_COMPARISON|explanation|63a5d2e0a523ecd1": {
+    "text": "Hyperliquid L1's $1.2B TVL surpasses Polygon's $863M by 30.7%, reflecting its growing appeal among liquidity providers, likely due to its innovative features or lower fees that attract more users compared to Polygon. This shift highlights how emerging chains can capture significant market share in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-28T02:30:14.693Z"
+  },
+  "2026-07-28|chain|Hyperliquid L1|C|C4_GROWTH_RANKING|explanation|4c8fc041146c7899": {
+    "text": "Tron leads with a significant growth rate of 9.0%, while both Flare and Stacks show modest increases of 0.3%. In contrast, Hyperliquid L1 is experiencing a notable decline of 14.6%, indicating challenges in attracting liquidity compared to its peers.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-28T02:30:16.098Z"
+  },
+  "2026-07-28|chain|Hyperliquid L1|D|C3_ATH_TIMING|explanation|c20e83cb212132a1": {
+    "text": "Hyperliquid L1 reached its all-time high (ATH) of $2.8B in September 2025, which is notable as it came after several other potential peaks like November 2024 and June 2025, when the market was still adjusting to broader DeFi trends. This timing suggests that Hyperliquid L1 capitalized on market momentum and user adoption during a period of growth in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-28T02:30:17.631Z"
+  },
+  "2026-07-28|chain|Hyperliquid L1|E|C6_TOP_DEX|explanation|db1fa90211180662": {
+    "text": "Hyperliquid Spot Orderbook leads on Hyperliquid L1 with $95M in volume, significantly outpacing its closest competitors, Project X at $43M and Unit at $41M. This dominance suggests that Hyperliquid Spot Orderbook is effectively capturing trading activity on the chain, indicating strong user preference for its features over other options.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-28T02:30:18.738Z"
   }
 }
