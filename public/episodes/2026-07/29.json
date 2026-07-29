@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-07-29:protocol:jupiter-perpetual-exchange",
+  "dateUtc": "2026-07-29",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "jupiter-perpetual-exchange",
+    "name": "Jupiter Perpetual Exchange",
+    "category": "Derivatives"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Derivatives",
+        "Chains: single-chain",
+        "TVL: $500M-$1B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Jupiter Perpetual Exchange",
+        "Venus Core Pool",
+        "Anemoy Capital",
+        "Veda"
+      ],
+      "answerIndex": 0,
+      "explanation": "Jupiter Perpetual Exchange has a TVL of $708M on Solana, making it a significant player in the derivatives market within that ecosystem. Its strong TVL indicates robust user interest and trading activity, particularly as it operates solely on Solana, which can lead to lower fees and faster transactions compared to multi-chain platforms.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.09985486934090125
+      },
+      "difficultyScore": 0.3924854869340902
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P13_TVL_RANK_COMPARISON",
+      "format": "ab",
+      "prompt": "Which protocol has higher TVL?",
+      "choices": [
+        "Sanctum Validator LSTs",
+        "Jupiter Perpetual Exchange"
+      ],
+      "answerIndex": 0,
+      "explanation": "Sanctum Validator LSTs lead with $1.1B TVL, outpacing Jupiter Perpetual Exchange's $708M by 33.7%. This difference highlights the growing preference for liquid staking tokens, which often attract more capital due to their utility and yield potential compared to perpetual exchanges.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.33692601145790263,
+        "volatility": 0.09985486934090125
+      },
+      "difficultyScore": 0.21248548693409014
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Jupiter Perpetual Exchange's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 1,
+      "explanation": "Jupiter Perpetual Exchange generated $1M in fees over the past week, with $272K of that amount translating into revenue, which means they retain about 25% of their fees as profit. This efficiency in converting fees to revenue is crucial for the exchange's sustainability and growth in a competitive market.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.2000027531649925,
+        "volatility": 0.09985486934090125
+      },
+      "difficultyScore": 0.36248218313609915
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Jupiter Perpetual Exchange hit its all-time high TVL?",
+      "choices": [
+        "Dec 2025",
+        "Feb 2026",
+        "Feb 2025",
+        "Sep 2025",
+        "Dec 2024",
+        "Apr 2025"
+      ],
+      "answerIndex": 3,
+      "explanation": "Jupiter Perpetual Exchange hit its ATH of $2.7B in September 2025, a significant milestone that came after a period of growth, unlike the earlier options like December 2024 and February 2025, which were too soon to reflect its peak performance. This timing underscores the exchange's ability to capture market interest and liquidity as it matured in the DeFi landscape.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.09985486934090125
+      },
+      "difficultyScore": 0.4924854869340901
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Jupiter Perpetual Exchange deployed on?",
+      "choices": [
+        "Optimism",
+        "Solana",
+        "Ethereum",
+        "Base"
+      ],
+      "answerIndex": 1,
+      "explanation": "Jupiter Perpetual Exchange operates solely on Solana, which allows it to leverage the chain's high throughput and low transaction costs. This single-chain focus can enhance liquidity and user experience, as all trading activity is concentrated in one ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.09985486934090125
+      },
+      "difficultyScore": 0.30248548693409016
+    }
+  ],
+  "generatedAt": "2026-07-29T02:35:06.100Z"
+}

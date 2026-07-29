@@ -698,5 +698,30 @@
     "text": "Hyperliquid Spot Orderbook leads on Hyperliquid L1 with $95M in volume, significantly outpacing its closest competitors, Project X at $43M and Unit at $41M. This dominance suggests that Hyperliquid Spot Orderbook is effectively capturing trading activity on the chain, indicating strong user preference for its features over other options.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-07-28T02:30:18.738Z"
+  },
+  "2026-07-29|protocol|jupiter-perpetual-exchange|A|P1_FINGERPRINT|explanation|8a61f269cd7b44b6": {
+    "text": "Jupiter Perpetual Exchange has a TVL of $708M on Solana, making it a significant player in the derivatives market within that ecosystem. Its strong TVL indicates robust user interest and trading activity, particularly as it operates solely on Solana, which can lead to lower fees and faster transactions compared to multi-chain platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-29T02:35:01.401Z"
+  },
+  "2026-07-29|protocol|jupiter-perpetual-exchange|B|P13_TVL_RANK_COMPARISON|explanation|4a88c24d0a3a5de9": {
+    "text": "Sanctum Validator LSTs lead with $1.1B TVL, outpacing Jupiter Perpetual Exchange's $708M by 33.7%. This difference highlights the growing preference for liquid staking tokens, which often attract more capital due to their utility and yield potential compared to perpetual exchanges.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-29T02:35:02.428Z"
+  },
+  "2026-07-29|protocol|jupiter-perpetual-exchange|C|P5_FEES_REVENUE|explanation|4666749592ca7d3e": {
+    "text": "Jupiter Perpetual Exchange generated $1M in fees over the past week, with $272K of that amount translating into revenue, which means they retain about 25% of their fees as profit. This efficiency in converting fees to revenue is crucial for the exchange's sustainability and growth in a competitive market.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-29T02:35:03.427Z"
+  },
+  "2026-07-29|protocol|jupiter-perpetual-exchange|D|P4_ATH_TIMING|explanation|ac630730b91075ce": {
+    "text": "Jupiter Perpetual Exchange hit its ATH of $2.7B in September 2025, a significant milestone that came after a period of growth, unlike the earlier options like December 2024 and February 2025, which were too soon to reflect its peak performance. This timing underscores the exchange's ability to capture market interest and liquidity as it matured in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-29T02:35:04.940Z"
+  },
+  "2026-07-29|protocol|jupiter-perpetual-exchange|E|P8_CHAIN_MEMBERSHIP|explanation|00d41a9b74e239ce": {
+    "text": "Jupiter Perpetual Exchange operates solely on Solana, which allows it to leverage the chain's high throughput and low transaction costs. This single-chain focus can enhance liquidity and user experience, as all trading activity is concentrated in one ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-29T02:35:06.099Z"
   }
 }
