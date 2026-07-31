@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-07-31:protocol:pendle",
+  "dateUtc": "2026-07-31",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "pendle",
+    "name": "Pendle",
+    "category": "Yield"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Yield",
+        "Chains: 10+ chains",
+        "Active since: 2021",
+        "TVL: $1B-$5B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Spark Savings",
+        "Centrifuge Protocol",
+        "PancakeSwap AMM",
+        "Ondo Yield Assets",
+        "Pendle"
+      ],
+      "answerIndex": 4,
+      "explanation": "Pendle's $1.2B TVL across 12 chains showcases its versatility in the yield sector, with Ethereum and Avalanche being key contributors. This multi-chain approach allows Pendle to tap into diverse liquidity pools and user bases, enhancing its overall growth potential.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.05525043631865492
+      },
+      "difficultyScore": 0.47802504363186554
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Pendle have higher TVL?",
+      "choices": [
+        "Monad",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Pendle's $686M TVL on Ethereum dwarfs the $144M on Monad, showcasing Ethereum's dominance in the DeFi space and highlighting the challenges newer chains face in attracting liquidity. The 79% margin indicates that established protocols often benefit from network effects, making it harder for smaller chains to compete.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.790468114506201,
+        "volatility": 0.05525043631865492
+      },
+      "difficultyScore": 0.2080250436318655
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "ab",
+      "prompt": "Over the last 7 days, did Pendle generate more in fees or revenue?",
+      "choices": [
+        "Revenue",
+        "Fees"
+      ],
+      "answerIndex": 1,
+      "explanation": "Pendle's fees over the past week reached $230K, closely matching its revenue of $228K, which means the protocol is effectively converting nearly all its fees into revenue at a 99% rate. This high efficiency suggests strong demand for its unique yield tokenization model, allowing users to maximize their returns.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.006842585749684824,
+        "volatility": 0.05525043631865492
+      },
+      "difficultyScore": 0.4998139407322437
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Pendle hit its all-time high TVL?",
+      "choices": [
+        "Nov 2023",
+        "Sep 2025",
+        "May 2025",
+        "Jan 2026",
+        "Aug 2021",
+        "May 2026"
+      ],
+      "answerIndex": 1,
+      "explanation": "Pendle reached its all-time high (ATH) of $13.4B in September 2025, a significant leap compared to earlier months like August 2021, when it was still establishing its presence in the DeFi space. The timing of this ATH reflects the growing adoption of yield-bearing assets and the increasing interest in tokenizing future yield, which likely contributed to Pendle's rapid growth during that period.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.05525043631865492
+      },
+      "difficultyScore": 0.4880250436318655
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Pendle's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 2,
+      "explanation": "Pendle's TVL of $1.2B shows a significant concentration, with 57% of it on Ethereum, which accounts for $686M. This reliance on Ethereum highlights the chain's dominance in DeFi and suggests that Pendle's growth is closely tied to Ethereum's ecosystem and user base.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.26977123853077467,
+        "volatility": 0.05525043631865492
+      },
+      "difficultyScore": 0.29802504363186555
+    }
+  ],
+  "generatedAt": "2026-07-31T02:46:44.578Z"
+}

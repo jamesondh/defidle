@@ -748,5 +748,30 @@
     "text": "SparkDEX V4 leads Flare with $2M in volume, significantly outpacing its closest competitors, SparkDEX V3.1 and Enosys AMM V3, both at $1M. This strong performance suggests that users are gravitating towards the latest version of SparkDEX for its enhanced features or liquidity options.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-07-30T02:22:29.279Z"
+  },
+  "2026-07-31|protocol|pendle|A|P1_FINGERPRINT|explanation|cd8e1c5631e868eb": {
+    "text": "Pendle's $1.2B TVL across 12 chains showcases its versatility in the yield sector, with Ethereum and Avalanche being key contributors. This multi-chain approach allows Pendle to tap into diverse liquidity pools and user bases, enhancing its overall growth potential.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-31T02:46:39.973Z"
+  },
+  "2026-07-31|protocol|pendle|B|P2_CROSSCHAIN|explanation|6dbab352f077c0a8": {
+    "text": "Pendle's $686M TVL on Ethereum dwarfs the $144M on Monad, showcasing Ethereum's dominance in the DeFi space and highlighting the challenges newer chains face in attracting liquidity. The 79% margin indicates that established protocols often benefit from network effects, making it harder for smaller chains to compete.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-31T02:46:41.185Z"
+  },
+  "2026-07-31|protocol|pendle|C|P5_FEES_REVENUE|explanation|03abd2449a8b0f36": {
+    "text": "Pendle's fees over the past week reached $230K, closely matching its revenue of $228K, which means the protocol is effectively converting nearly all its fees into revenue at a 99% rate. This high efficiency suggests strong demand for its unique yield tokenization model, allowing users to maximize their returns.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-31T02:46:42.492Z"
+  },
+  "2026-07-31|protocol|pendle|D|P4_ATH_TIMING|explanation|fc1a53465b4d486d": {
+    "text": "Pendle reached its all-time high (ATH) of $13.4B in September 2025, a significant leap compared to earlier months like August 2021, when it was still establishing its presence in the DeFi space. The timing of this ATH reflects the growing adoption of yield-bearing assets and the increasing interest in tokenizing future yield, which likely contributed to Pendle's rapid growth during that period.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-31T02:46:43.714Z"
+  },
+  "2026-07-31|protocol|pendle|E|P3_CONCENTRATION|explanation|630f001937e531cd": {
+    "text": "Pendle's TVL of $1.2B shows a significant concentration, with 57% of it on Ethereum, which accounts for $686M. This reliance on Ethereum highlights the chain's dominance in DeFi and suggests that Pendle's growth is closely tied to Ethereum's ecosystem and user base.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-07-31T02:46:44.578Z"
   }
 }
