@@ -1,0 +1,138 @@
+{
+  "episodeId": "2026-08-01:chain:Flare",
+  "dateUtc": "2026-08-01",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Flare",
+    "name": "Flare"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Native token: FLR",
+        "Protocols: 20-50"
+      ],
+      "choices": [
+        "OP Mainnet",
+        "Flare",
+        "Sui",
+        "Robinhood Chain"
+      ],
+      "answerIndex": 1,
+      "explanation": "Flare's TVL of $100M-$500M and its rank at 22 suggest it's carving out a niche among emerging chains, especially with 44 protocols operating on it, which indicates a growing ecosystem that could attract more users and liquidity. This relatively high number of protocols for its TVL range shows that Flare is fostering innovation and experimentation, essential for its long-term development.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.38950000000000007
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "prompt": "Flare has higher TVL than Mantle.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Flare's $116M TVL surpasses Mantle's $82M by 29.5%, reflecting its stronger appeal to users and developers, likely due to its unique approach to integrating smart contracts with real-world data. This difference in TVL can indicate varying levels of adoption and utility between the two chains.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.2949070947450522,
+        "volatility": null
+      },
+      "difficultyScore": 0.1195
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Stable",
+        "Flare",
+        "Stacks",
+        "Base"
+      ],
+      "answerIndex": 0,
+      "explanation": "Flare's growth rate of +0.3% is significantly lower than Base's impressive +13.4%, indicating that while Flare is stable, it isn't experiencing the same level of momentum as other chains like Base. This contrast highlights the competitive landscape in DeFi, where chains can vary widely in their growth trajectories.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.17404175542649394,
+        "volatility": null
+      },
+      "difficultyScore": 0.45064989348820733
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Flare hit its all-time high TVL?",
+      "choices": [
+        "Sep 2024",
+        "Apr 2024",
+        "Oct 2023",
+        "Aug 2023",
+        "Jan 2023",
+        "Jan 2026"
+      ],
+      "answerIndex": 5,
+      "explanation": "Flare reached its all-time high (ATH) of $218M in January 2026, a significant milestone that showcases its growth potential compared to earlier months like August 2023 and January 2023, when its TVL was still developing. This timing reflects the protocol's ability to capture user interest and liquidity as it matured in the DeFi landscape.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Flare?",
+      "choices": [
+        "Enosys AMM V3",
+        "SparkDEX V3.1",
+        "SparkDEX V4",
+        "Spectra V2"
+      ],
+      "answerIndex": 2,
+      "explanation": "SparkDEX V4 leads Flare with a volume of $3M, significantly outpacing its nearest competitor, Enosys AMM V3, which only reached $830K. This stark difference highlights SparkDEX V4's dominant position in the market, suggesting strong user preference for its features and liquidity compared to other DEXs on the chain.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.6837699720169962,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-08-01T02:45:10.355Z"
+}
