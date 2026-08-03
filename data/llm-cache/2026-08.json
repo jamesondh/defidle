@@ -48,5 +48,30 @@
     "text": "LayerZero V2's TVL of $6.8B has decreased by 7.5%, reflecting potential shifts in user confidence or competition from other protocols. This decline could suggest that users are exploring alternative options or that recent developments may not have resonated positively with the community.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-08-02T02:44:22.840Z"
+  },
+  "2026-08-03|protocol|function-fbtc|A|P1_FINGERPRINT|explanation|6fc6f140c84fe256": {
+    "text": "Function FBTC has a TVL of $539M solely on the Bitcoin chain, which is significant for a bridge as it shows strong demand for transferring value between Bitcoin and other ecosystems. This focus on a single chain can lead to enhanced security and efficiency, catering specifically to Bitcoin users looking to engage with DeFi.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-03T02:45:04.043Z"
+  },
+  "2026-08-03|protocol|function-fbtc|B|P7_CATEGORY|explanation|ce9fc48394e155ac": {
+    "text": "Function FBTC operates as a bridge, facilitating the transfer of Bitcoin (BTC) across different blockchain networks. This capability is crucial for enhancing interoperability and allowing users to leverage BTC's value in various DeFi applications.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-03T02:45:05.193Z"
+  },
+  "2026-08-03|protocol|function-fbtc|C|P14_CATEGORY_LEADER|explanation|8099f911a37c7b30": {
+    "text": "Function FBTC leads the bridge category with a TVL of $539M, slightly ahead of Unit's $519M, showcasing its strong position in facilitating cross-chain transactions. This competitive edge often stems from better liquidity provision and user incentives, making it a preferred choice for users looking to move assets between chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-03T02:45:06.114Z"
+  },
+  "2026-08-03|protocol|function-fbtc|D|P4_ATH_TIMING|explanation|1a497a2591011b26": {
+    "text": "Function FBTC reached its all-time high (ATH) of $1.6B in May 2025, a significant milestone that set it apart from later dates like June 2026 and May 2026, which reflect a period of declining interest in the protocol. This timing indicates that May 2025 was a peak moment for Function FBTC, likely driven by heightened market activity or innovative developments at that time.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-03T02:45:07.659Z"
+  },
+  "2026-08-03|protocol|function-fbtc|E|P8_CHAIN_MEMBERSHIP|explanation|7d70fa37bb0b7f99": {
+    "text": "Function FBTC operates solely on the Bitcoin chain, reflecting a trend where protocols focus on leveraging Bitcoin's security and liquidity while providing unique functionalities like wrapped assets. This single-chain approach can simplify user experience but may limit cross-chain interoperability compared to multi-chain protocols.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-03T02:45:08.463Z"
   }
 }

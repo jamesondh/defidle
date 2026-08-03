@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-08-03:protocol:function-fbtc",
+  "dateUtc": "2026-08-03",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "function-fbtc",
+    "name": "Function FBTC",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: single-chain",
+        "TVL: $500M-$1B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "CCIP",
+        "Function FBTC",
+        "Unit",
+        "Jupiter Lend"
+      ],
+      "answerIndex": 1,
+      "explanation": "Function FBTC has a TVL of $539M solely on the Bitcoin chain, which is significant for a bridge as it shows strong demand for transferring value between Bitcoin and other ecosystems. This focus on a single chain can lead to enhanced security and efficiency, catering specifically to Bitcoin users looking to engage with DeFi.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.10864379025691787
+      },
+      "difficultyScore": 0.3933643790256918
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Function FBTC?",
+      "choices": [
+        "Bridge",
+        "Charity Fundraising",
+        "Yield",
+        "DCA Tools"
+      ],
+      "answerIndex": 0,
+      "explanation": "Function FBTC operates as a bridge, facilitating the transfer of Bitcoin (BTC) across different blockchain networks. This capability is crucial for enhancing interoperability and allowing users to leverage BTC's value in various DeFi applications.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.10864379025691787
+      },
+      "difficultyScore": 0.3033643790256918
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P14_CATEGORY_LEADER",
+      "format": "ab",
+      "prompt": "Which Bridge protocol has higher TVL?",
+      "choices": [
+        "Unit",
+        "Function FBTC"
+      ],
+      "answerIndex": 1,
+      "explanation": "Function FBTC leads the bridge category with a TVL of $539M, slightly ahead of Unit's $519M, showcasing its strong position in facilitating cross-chain transactions. This competitive edge often stems from better liquidity provision and user incentives, making it a preferred choice for users looking to move assets between chains.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.035857682753071086,
+        "volatility": 0.10864379025691787
+      },
+      "difficultyScore": 0.47033515972200646
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Function FBTC hit its all-time high TVL?",
+      "choices": [
+        "Apr 2025",
+        "May 2026",
+        "Jan 2026",
+        "Jun 2026",
+        "Feb 2025",
+        "May 2025"
+      ],
+      "answerIndex": 5,
+      "explanation": "Function FBTC reached its all-time high (ATH) of $1.6B in May 2025, a significant milestone that set it apart from later dates like June 2026 and May 2026, which reflect a period of declining interest in the protocol. This timing indicates that May 2025 was a peak moment for Function FBTC, likely driven by heightened market activity or innovative developments at that time.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.10864379025691787
+      },
+      "difficultyScore": 0.49336437902569175
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Function FBTC deployed on?",
+      "choices": [
+        "Avalanche",
+        "Bitcoin",
+        "Optimism",
+        "Polygon"
+      ],
+      "answerIndex": 1,
+      "explanation": "Function FBTC operates solely on the Bitcoin chain, reflecting a trend where protocols focus on leveraging Bitcoin's security and liquidity while providing unique functionalities like wrapped assets. This single-chain approach can simplify user experience but may limit cross-chain interoperability compared to multi-chain protocols.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.10864379025691787
+      },
+      "difficultyScore": 0.3033643790256918
+    }
+  ],
+  "generatedAt": "2026-08-03T02:45:08.463Z"
+}
