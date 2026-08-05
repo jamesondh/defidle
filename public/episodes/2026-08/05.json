@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-08-05:protocol:world-chain",
+  "dateUtc": "2026-08-05",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "world-chain",
+    "name": "World Chain",
+    "category": "Canonical Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Canonical Bridge",
+        "Chains: single-chain",
+        "TVL: $100M-$500M",
+        "7d change: roughly flat"
+      ],
+      "choices": [
+        "Robinhood Chain Bridge",
+        "World Chain",
+        "Optimism Bridge",
+        "Concrete"
+      ],
+      "answerIndex": 1,
+      "explanation": "World Chain, operating solely on Ethereum, has a TVL of $305M, which places it in the $100M-$500M range for canonical bridges. This positioning reflects its role in facilitating cross-chain transactions, highlighting the growing need for interoperability within the Ethereum ecosystem.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.2768051498684437
+      },
+      "difficultyScore": 0.41018051498684444
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is World Chain?",
+      "choices": [
+        "DEX Aggregator",
+        "Interest Rate Derivatives",
+        "Canonical Bridge",
+        "Bridge Aggregator"
+      ],
+      "answerIndex": 2,
+      "explanation": "World Chain operates as a canonical bridge, which means it facilitates the transfer of assets and data across different blockchain networks while maintaining a single source of truth. This functionality is crucial for enhancing interoperability in the DeFi space, allowing users to move assets seamlessly between chains.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.2768051498684437
+      },
+      "difficultyScore": 0.3201805149868444
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P22_CATEGORY_MARKET_SHARE",
+      "format": "mc4",
+      "prompt": "What share of Canonical Bridge TVL does World Chain hold?",
+      "choices": [
+        "<10%",
+        "10-25%",
+        "25-50%",
+        ">50%"
+      ],
+      "answerIndex": 0,
+      "explanation": "World Chain holds a 4% share of the canonical bridge category with its $305M TVL, indicating it plays a smaller role compared to the larger players in the $7.1B market. This lower market share suggests that while World Chain is a participant, it may face challenges in scaling or attracting liquidity compared to its competitors.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5725645530605518,
+        "volatility": 0.2768051498684437
+      },
+      "difficultyScore": 0.3201805149868444
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did World Chain hit its all-time high TVL?",
+      "choices": [
+        "Mar 2026",
+        "Jan 2026",
+        "Sep 2025",
+        "Jun 2026",
+        "Mar 2025",
+        "Oct 2025"
+      ],
+      "answerIndex": 2,
+      "explanation": "World Chain reached its ATH of $1.3B in September 2025, a significant milestone that reflects its growth trajectory at that time. The other options, like October 2025 and March 2026, came after this peak, indicating that World Chain experienced its highest value just before these later dates, suggesting a rapid rise in interest or adoption leading up to that moment.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.2768051498684437
+      },
+      "difficultyScore": 0.5101805149868444
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is World Chain deployed on?",
+      "choices": [
+        "zkSync Era",
+        "Base",
+        "Polygon",
+        "Ethereum"
+      ],
+      "answerIndex": 3,
+      "explanation": "World Chain operates solely on Ethereum, which allows it to leverage the network's robust security and liquidity, but also means it may face scalability challenges as demand increases. This singular focus can lead to a more streamlined user experience, but it limits exposure to the diverse ecosystems found on other chains.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.2768051498684437
+      },
+      "difficultyScore": 0.3201805149868444
+    }
+  ],
+  "generatedAt": "2026-08-05T02:28:23.918Z"
+}

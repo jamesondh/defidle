@@ -98,5 +98,30 @@
     "text": "PumpSwap leads Solana's DEX scene with an impressive $731M in volume, significantly outpacing its closest competitors like BisonFi at $135M and Orca DEX at $120M. This stark difference illustrates PumpSwap's dominant position in the market, likely driven by unique features or incentives that attract more trading activity compared to other platforms.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-08-04T02:28:45.689Z"
+  },
+  "2026-08-05|protocol|world-chain|A|P1_FINGERPRINT|explanation|f345e32baee45a10": {
+    "text": "World Chain, operating solely on Ethereum, has a TVL of $305M, which places it in the $100M-$500M range for canonical bridges. This positioning reflects its role in facilitating cross-chain transactions, highlighting the growing need for interoperability within the Ethereum ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-05T02:28:18.561Z"
+  },
+  "2026-08-05|protocol|world-chain|B|P7_CATEGORY|explanation|e0fa14965a54e92d": {
+    "text": "World Chain operates as a canonical bridge, which means it facilitates the transfer of assets and data across different blockchain networks while maintaining a single source of truth. This functionality is crucial for enhancing interoperability in the DeFi space, allowing users to move assets seamlessly between chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-05T02:28:19.578Z"
+  },
+  "2026-08-05|protocol|world-chain|C|P22_CATEGORY_MARKET_SHARE|explanation|b885cd5b0410c295": {
+    "text": "World Chain holds a 4% share of the canonical bridge category with its $305M TVL, indicating it plays a smaller role compared to the larger players in the $7.1B market. This lower market share suggests that while World Chain is a participant, it may face challenges in scaling or attracting liquidity compared to its competitors.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-05T02:28:21.047Z"
+  },
+  "2026-08-05|protocol|world-chain|D|P4_ATH_TIMING|explanation|6b6dd81aa8508f71": {
+    "text": "World Chain reached its ATH of $1.3B in September 2025, a significant milestone that reflects its growth trajectory at that time. The other options, like October 2025 and March 2026, came after this peak, indicating that World Chain experienced its highest value just before these later dates, suggesting a rapid rise in interest or adoption leading up to that moment.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-05T02:28:22.578Z"
+  },
+  "2026-08-05|protocol|world-chain|E|P8_CHAIN_MEMBERSHIP|explanation|84a87763e9c021d2": {
+    "text": "World Chain operates solely on Ethereum, which allows it to leverage the network's robust security and liquidity, but also means it may face scalability challenges as demand increases. This singular focus can lead to a more streamlined user experience, but it limits exposure to the diverse ecosystems found on other chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-05T02:28:23.917Z"
   }
 }
