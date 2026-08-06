@@ -123,5 +123,30 @@
     "text": "World Chain operates solely on Ethereum, which allows it to leverage the network's robust security and liquidity, but also means it may face scalability challenges as demand increases. This singular focus can lead to a more streamlined user experience, but it limits exposure to the diverse ecosystems found on other chains.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-08-05T02:28:23.917Z"
+  },
+  "2026-08-06|chain|Aptos|A|C1_FINGERPRINT|explanation|1cb9b48fdfb35fb9": {
+    "text": "Aptos ranks 33rd in TVL with between $50M and $100M, which is relatively modest compared to larger ecosystems, but it hosts 92 protocols, indicating a growing developer interest and potential for innovation within its network. This active protocol count suggests that while TVL is still building, there's a vibrant ecosystem being established.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-06T02:30:51.340Z"
+  },
+  "2026-08-06|chain|Aptos|B|C2_CHAIN_COMPARISON|explanation|df246568cc29b514": {
+    "text": "Aptos leads MegaETH with a TVL of $62M compared to $43M, reflecting a 30.6% advantage that suggests stronger user confidence and liquidity in Aptos' ecosystem. This difference may stem from Aptos' focus on scalability and developer-friendly features, attracting more projects and users.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-06T02:30:52.811Z"
+  },
+  "2026-08-06|chain|Aptos|C|C6_TOP_DEX|explanation|80af8fe30897dafb": {
+    "text": "ThalaSwap V3 leads the pack on Aptos with $7M in volume, significantly outpacing its closest competitor, Hyperion, which only managed $1M. This stark difference illustrates ThalaSwap's dominance in the ecosystem, especially when compared to smaller players like Tapp Exchange and Kaliber, which recorded just $23K and $13K, respectively.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-06T02:30:55.088Z"
+  },
+  "2026-08-06|chain|Aptos|D|C3_ATH_TIMING|explanation|d0c4b28d9405bbc0": {
+    "text": "Aptos reached its ATH of $1.3B in December 2024, a significant milestone that showcases its growth trajectory compared to earlier months like January 2023 and March 2023, when it had not yet gained substantial traction. The later dates, such as February and July 2026, suggest a longer-term outlook for the protocol, but December 2024 marks a peak that reflects its initial momentum in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-06T02:30:56.581Z"
+  },
+  "2026-08-06|chain|Aptos|E|C10_PROTOCOL_COUNT|explanation|6b163f5f5c1d6f48": {
+    "text": "Aptos has 77 protocols built on its blockchain, showcasing its growing ecosystem and appeal to developers looking for scalability and performance. This diverse range of projects indicates a robust interest in leveraging Aptos's unique features, which can drive innovation and user adoption.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-06T02:30:57.691Z"
   }
 }
