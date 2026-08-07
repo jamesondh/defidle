@@ -148,5 +148,30 @@
     "text": "Aptos has 77 protocols built on its blockchain, showcasing its growing ecosystem and appeal to developers looking for scalability and performance. This diverse range of projects indicates a robust interest in leveraging Aptos's unique features, which can drive innovation and user adoption.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-08-06T02:30:57.691Z"
+  },
+  "2026-08-07|protocol|usdd|A|P1_FINGERPRINT|explanation|5c588bcc524c0b22": {
+    "text": "USDD's $1.3B TVL across three chains—Ethereum, Binance, and Tron—shows its appeal in diverse ecosystems, which helps mitigate risks associated with reliance on a single blockchain. This multi-chain strategy allows USDD to tap into different user bases and liquidity pools, enhancing its stability and utility.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-07T02:37:51.311Z"
+  },
+  "2026-08-07|protocol|usdd|B|P2_CROSSCHAIN|explanation|6450b948e9921f61": {
+    "text": "USDD's $1.2B TVL on Tron dwarfs the $74M on Ethereum, showcasing how cross-chain strategies can lead to significant liquidity concentration on a single chain. The 94% margin indicates that users are favoring Tron for USDD, likely due to lower fees and faster transaction speeds compared to Ethereum.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-07T02:37:52.807Z"
+  },
+  "2026-08-07|protocol|usdd|C|P5_FEES_REVENUE|explanation|335eed4541571cc0": {
+    "text": "USDD generated $124K in fees over the past week, which directly translates to its revenue, indicating that all fees collected are being converted into revenue. This 100% revenue rate suggests efficient operations and strong user engagement with the protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-07T02:37:53.875Z"
+  },
+  "2026-08-07|protocol|usdd|D|P4_ATH_TIMING|explanation|e41f3c6b76889be6": {
+    "text": "USDD hit its all-time high (ATH) of $1.5B in May 2026, a notable spike compared to earlier months like April 2026, which didn't see the same level of growth. This timing suggests that USDD gained significant traction and adoption in the market leading up to that peak, marking a pivotal moment in its trajectory.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-07T02:37:55.205Z"
+  },
+  "2026-08-07|protocol|usdd|E|P3_CONCENTRATION|explanation|11562cd1a532b040": {
+    "text": "USDD's impressive 93% concentration on Tron, where it accounts for $1.1B of the $1.2B TVL, shows how dominant it is within that ecosystem, making it a key player for users seeking stablecoin liquidity on Tron. This heavy reliance on a single chain can also indicate potential risks if the chain faces challenges.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-07T02:37:56.286Z"
   }
 }
