@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-08-08:chain:Sui",
+  "dateUtc": "2026-08-08",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Sui",
+    "name": "Sui"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: SUI",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "Ink",
+        "Hyperliquid L1",
+        "Plasma",
+        "OP Mainnet",
+        "Sui",
+        "Cronos"
+      ],
+      "answerIndex": 4,
+      "explanation": "Sui ranks 14th in TVL with between $100M and $500M, reflecting a growing interest in its ecosystem, which hosts 122 protocols. This diverse range of projects suggests that developers are increasingly exploring Sui's capabilities, contributing to its competitive position in the DeFi landscape.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "prompt": "Sui has higher TVL than Robinhood Chain.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Sui's $416M TVL surpasses Robinhood Chain's $390M by 6.2%, showcasing its growing appeal among developers and users, likely driven by its innovative features and scalability. This slight edge reflects Sui's positioning as a competitive player in the DeFi landscape.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.06223216037206433,
+        "volatility": null
+      },
+      "difficultyScore": 0.3448214075535228
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "ab",
+      "prompt": "Which DEX is #1 by 24h volume on Sui?",
+      "choices": [
+        "Bluefin Spot",
+        "Cetus CLMM",
+        "DeepBook V3",
+        "Lotus Finance"
+      ],
+      "answerIndex": 1,
+      "explanation": "Cetus CLMM leads Sui with $6M in volume, matching DeepBook V3 but significantly outpacing Bluefin Spot and Lotus Finance, both at $3M. This competitive volume suggests that Cetus CLMM is effectively attracting liquidity and trading activity, positioning it as a key player on the Sui chain.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.07335318571007536,
+        "volatility": null
+      },
+      "difficultyScore": 0.4214761771479095
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Sui hit its all-time high TVL?",
+      "choices": [
+        "Sep 2025",
+        "Oct 2025",
+        "Dec 2025",
+        "Jun 2025",
+        "Nov 2024",
+        "Nov 2025"
+      ],
+      "answerIndex": 1,
+      "explanation": "Sui reached its all-time high (ATH) of $2.6B in October 2025, a notable spike compared to the other months like September 2025 and November 2024, which didn't capture the same level of interest or investment. This timing suggests that significant developments or market conditions in late 2025 likely contributed to Sui's peak performance.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "ab",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Plasma",
+        "X Layer",
+        "Tron",
+        "Sui"
+      ],
+      "answerIndex": 1,
+      "explanation": "Sui's TVL decreased by 3.0%, contrasting sharply with Tron, which saw an 8.3% increase, highlighting a significant divergence in user engagement and growth momentum between these chains. While Sui is still establishing its presence, Tron’s positive performance suggests it’s capturing more user interest and liquidity in the current market.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.198427102796698,
+        "volatility": null
+      },
+      "difficultyScore": 0.3313874766439624
+    }
+  ],
+  "generatedAt": "2026-08-08T01:36:19.107Z"
+}

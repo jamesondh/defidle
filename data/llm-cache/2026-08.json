@@ -173,5 +173,30 @@
     "text": "USDD's impressive 93% concentration on Tron, where it accounts for $1.1B of the $1.2B TVL, shows how dominant it is within that ecosystem, making it a key player for users seeking stablecoin liquidity on Tron. This heavy reliance on a single chain can also indicate potential risks if the chain faces challenges.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-08-07T02:37:56.286Z"
+  },
+  "2026-08-08|chain|Sui|A|C1_FINGERPRINT|explanation|84ec714e1e661eb0": {
+    "text": "Sui ranks 14th in TVL with between $100M and $500M, reflecting a growing interest in its ecosystem, which hosts 122 protocols. This diverse range of projects suggests that developers are increasingly exploring Sui's capabilities, contributing to its competitive position in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-08T01:36:13.111Z"
+  },
+  "2026-08-08|chain|Sui|B|C2_CHAIN_COMPARISON|explanation|1574d77d72713155": {
+    "text": "Sui's $416M TVL surpasses Robinhood Chain's $390M by 6.2%, showcasing its growing appeal among developers and users, likely driven by its innovative features and scalability. This slight edge reflects Sui's positioning as a competitive player in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-08T01:36:14.331Z"
+  },
+  "2026-08-08|chain|Sui|C|C6_TOP_DEX|explanation|ac1b3a33d7ead7a9": {
+    "text": "Cetus CLMM leads Sui with $6M in volume, matching DeepBook V3 but significantly outpacing Bluefin Spot and Lotus Finance, both at $3M. This competitive volume suggests that Cetus CLMM is effectively attracting liquidity and trading activity, positioning it as a key player on the Sui chain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-08T01:36:16.167Z"
+  },
+  "2026-08-08|chain|Sui|D|C3_ATH_TIMING|explanation|c6c9f9b7a3b35f4c": {
+    "text": "Sui reached its all-time high (ATH) of $2.6B in October 2025, a notable spike compared to the other months like September 2025 and November 2024, which didn't capture the same level of interest or investment. This timing suggests that significant developments or market conditions in late 2025 likely contributed to Sui's peak performance.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-08T01:36:17.831Z"
+  },
+  "2026-08-08|chain|Sui|E|C4_GROWTH_RANKING|explanation|0da7c34ba322060f": {
+    "text": "Sui's TVL decreased by 3.0%, contrasting sharply with Tron, which saw an 8.3% increase, highlighting a significant divergence in user engagement and growth momentum between these chains. While Sui is still establishing its presence, Tron’s positive performance suggests it’s capturing more user interest and liquidity in the current market.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-08T01:36:19.106Z"
   }
 }
