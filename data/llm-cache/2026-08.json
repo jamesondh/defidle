@@ -198,5 +198,30 @@
     "text": "Sui's TVL decreased by 3.0%, contrasting sharply with Tron, which saw an 8.3% increase, highlighting a significant divergence in user engagement and growth momentum between these chains. While Sui is still establishing its presence, Tron’s positive performance suggests it’s capturing more user interest and liquidity in the current market.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-08-08T01:36:19.106Z"
+  },
+  "2026-08-09|protocol|eigencloud|A|P1_FINGERPRINT|explanation|4356c889b0bddf43": {
+    "text": "EigenCloud's $5.1B TVL on Ethereum showcases its strong position in the restaking category, indicating significant user trust in its ability to enhance staking rewards. With only one chain, its focus on Ethereum allows for deeper integration and optimization within that ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-09T01:41:56.487Z"
+  },
+  "2026-08-09|protocol|eigencloud|B|P7_CATEGORY|explanation|e37047c98b5ba6ff": {
+    "text": "EigenCloud operates in the restaking category, allowing users to leverage their staked assets across multiple protocols simultaneously. This enhances capital efficiency by enabling users to earn rewards from different platforms without needing to unstake their original assets.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-09T01:41:57.451Z"
+  },
+  "2026-08-09|protocol|eigencloud|C|P15_RECENT_TVL_DIRECTION|explanation|81f4b7f22ec16129": {
+    "text": "EigenCloud's TVL has increased by 8.3% over the past 30 days, reaching $5.1B, which suggests growing confidence in its decentralized cloud services and the potential for more users to leverage its infrastructure. This upward trend may reflect a broader interest in decentralized solutions as alternatives to traditional cloud providers.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-09T01:41:58.622Z"
+  },
+  "2026-08-09|protocol|eigencloud|D|P4_ATH_TIMING|explanation|d9bdb7f72fa96f75": {
+    "text": "EigenCloud reached its all-time high (ATH) of $22.1B in August 2025, which is significant as it reflects a peak period of growth and adoption in the DeFi space. In contrast, the other months like June 2024 and May 2025 were earlier in the timeline, suggesting that EigenCloud was still building momentum before hitting its peak later on.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-09T01:41:59.969Z"
+  },
+  "2026-08-09|protocol|eigencloud|E|P8_CHAIN_MEMBERSHIP|explanation|1af10eaf0c66b6de": {
+    "text": "EigenCloud operates solely on Ethereum, which allows it to leverage Ethereum's robust security and established user base, but also means it may miss out on the lower fees and faster transactions offered by newer chains. This single-chain focus can create both opportunities and limitations in its growth and user adoption.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-09T01:42:00.848Z"
   }
 }
