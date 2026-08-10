@@ -223,5 +223,30 @@
     "text": "EigenCloud operates solely on Ethereum, which allows it to leverage Ethereum's robust security and established user base, but also means it may miss out on the lower fees and faster transactions offered by newer chains. This single-chain focus can create both opportunities and limitations in its growth and user adoption.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-08-09T01:42:00.848Z"
+  },
+  "2026-08-10|protocol|uniswap-v4|A|P1_FINGERPRINT|explanation|4ac40892f991dce5": {
+    "text": "Uniswap V4 operates across 18 chains, including newer platforms like Soneium and X Layer, which reflects its strategy to tap into diverse ecosystems and attract liquidity from various sources. With a TVL of $780M, it sits comfortably in the $500M-$1B range, showcasing its continued relevance in the competitive DEX landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-10T01:44:57.820Z"
+  },
+  "2026-08-10|protocol|uniswap-v4|B|P2_CROSSCHAIN|explanation|b50fb1b05eb9b22e": {
+    "text": "Uniswap V4's $568M TVL on Ethereum dwarfs the $38M on Robinhood Chain, reflecting Ethereum's established dominance and liquidity in the DeFi space, which attracts more users and capital compared to newer or less popular chains. The 93% margin indicates a significant preference for Ethereum-based liquidity pools, showcasing the challenges for emerging chains to compete effectively.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-10T01:44:59.009Z"
+  },
+  "2026-08-10|protocol|uniswap-v4|C|P11_FEES_TREND|explanation|65ae5fa375f51547": {
+    "text": "Uniswap V4 has seen a 30.9% increase in fees over the past week, rising from $7M to $9M, which suggests growing trading activity and possibly increased user confidence in the platform's features. This uptick in fees can also reflect the impact of new liquidity incentives or improved trading conditions that attract more users.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-10T01:45:00.358Z"
+  },
+  "2026-08-10|protocol|uniswap-v4|D|P4_ATH_TIMING|explanation|8123c164345a48b4": {
+    "text": "Uniswap V4 reached its all-time high (ATH) of $1.4B in October 2025, a notable spike compared to earlier months like March 2025, which saw lower TVL, indicating a significant increase in user activity and liquidity at that time. The later dates, such as June 2026, suggest a period of volatility or decline rather than growth, making October 2025 a standout moment for the protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-10T01:45:02.291Z"
+  },
+  "2026-08-10|protocol|uniswap-v4|E|P8_CHAIN_MEMBERSHIP|explanation|d4e2402a2e8e7e79": {
+    "text": "Uniswap V4 operates across 18 chains, with newer additions like Soneium, X Layer, Tempo, Ink, and Blast reflecting its strategy to tap into emerging ecosystems. This multi-chain approach allows Uniswap to reach a broader user base and adapt to various blockchain innovations.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-10T01:45:03.635Z"
   }
 }

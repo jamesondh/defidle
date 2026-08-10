@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-08-10:protocol:uniswap-v4",
+  "dateUtc": "2026-08-10",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "uniswap-v4",
+    "name": "Uniswap V4",
+    "category": "Dexs"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Dexs",
+        "Chains: 10+ chains",
+        "TVL: $500M-$1B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "PancakeSwap AMM V3",
+        "Uniswap V4",
+        "Veda",
+        "Fluid DEX"
+      ],
+      "answerIndex": 1,
+      "explanation": "Uniswap V4 operates across 18 chains, including newer platforms like Soneium and X Layer, which reflects its strategy to tap into diverse ecosystems and attract liquidity from various sources. With a TVL of $780M, it sits comfortably in the $500M-$1B range, showcasing its continued relevance in the competitive DEX landscape.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.11267708199011071
+      },
+      "difficultyScore": 0.39376770819901113
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Uniswap V4 have higher TVL?",
+      "choices": [
+        "Robinhood Chain",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Uniswap V4's $568M TVL on Ethereum dwarfs the $38M on Robinhood Chain, reflecting Ethereum's established dominance and liquidity in the DeFi space, which attracts more users and capital compared to newer or less popular chains. The 93% margin indicates a significant preference for Ethereum-based liquidity pools, showcasing the challenges for emerging chains to compete effectively.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9328111488457538,
+        "volatility": 0.11267708199011071
+      },
+      "difficultyScore": 0.21376770819901109
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did Uniswap V4's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 4,
+      "explanation": "Uniswap V4 has seen a 30.9% increase in fees over the past week, rising from $7M to $9M, which suggests growing trading activity and possibly increased user confidence in the platform's features. This uptick in fees can also reflect the impact of new liquidity incentives or improved trading conditions that attract more users.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.3093975039615758,
+        "volatility": 0.11267708199011071
+      },
+      "difficultyScore": 0.3037677081990111
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Uniswap V4 hit its all-time high TVL?",
+      "choices": [
+        "Dec 2025",
+        "Jan 2026",
+        "Oct 2025",
+        "Jun 2026",
+        "Mar 2025",
+        "May 2026"
+      ],
+      "answerIndex": 2,
+      "explanation": "Uniswap V4 reached its all-time high (ATH) of $1.4B in October 2025, a notable spike compared to earlier months like March 2025, which saw lower TVL, indicating a significant increase in user activity and liquidity at that time. The later dates, such as June 2026, suggest a period of volatility or decline rather than growth, making October 2025 a standout moment for the protocol.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.11267708199011071
+      },
+      "difficultyScore": 0.49376770819901106
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Uniswap V4 deployed on?",
+      "choices": [
+        "zkSync Era",
+        "Fantom",
+        "BSC",
+        "Ethereum"
+      ],
+      "answerIndex": 3,
+      "explanation": "Uniswap V4 operates across 18 chains, with newer additions like Soneium, X Layer, Tempo, Ink, and Blast reflecting its strategy to tap into emerging ecosystems. This multi-chain approach allows Uniswap to reach a broader user base and adapt to various blockchain innovations.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.11267708199011071
+      },
+      "difficultyScore": 0.3037677081990111
+    }
+  ],
+  "generatedAt": "2026-08-10T01:45:03.636Z"
+}
