@@ -248,5 +248,30 @@
     "text": "Uniswap V4 operates across 18 chains, with newer additions like Soneium, X Layer, Tempo, Ink, and Blast reflecting its strategy to tap into emerging ecosystems. This multi-chain approach allows Uniswap to reach a broader user base and adapt to various blockchain innovations.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-08-10T01:45:03.635Z"
+  },
+  "2026-08-11|chain|Aptos|A|C1_FINGERPRINT|explanation|34e83c0f0085ff1f": {
+    "text": "Aptos ranks 35th in TVL with between $50M and $100M, which reflects its growing ecosystem of 92 protocols, placing it in the 50-100 range for protocol count. This suggests that while Aptos is still developing, it has attracted a diverse array of projects that could drive future growth and user engagement.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-11T01:41:38.342Z"
+  },
+  "2026-08-11|chain|Aptos|B|C10_PROTOCOL_COUNT|explanation|6b163f5f5c1d6f48": {
+    "text": "Aptos has 77 protocols built on its platform, showcasing its growing ecosystem and appeal to developers looking for scalability and performance. This diverse range of projects indicates a vibrant community actively exploring various DeFi applications.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-11T01:41:39.498Z"
+  },
+  "2026-08-11|chain|Aptos|C|C6_TOP_DEX|explanation|7b262c6b4599c587": {
+    "text": "ThalaSwap V3 leads Aptos with a significant $19M in volume, dwarfing its closest competitor, Hyperion, which only managed $598K. This stark contrast highlights ThalaSwap's dominance in the ecosystem, as the other DEXes like Tapp Exchange and PancakeSwap AMM barely register with volumes of $14K and $6K, respectively.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-11T01:41:40.875Z"
+  },
+  "2026-08-11|chain|Aptos|D|C3_ATH_TIMING|explanation|cdc0c75e3e80c5d3": {
+    "text": "Aptos reached its all-time high (ATH) of $1.3B in December 2024, a significant milestone that showcases its growth trajectory, especially compared to earlier months like February 2023, when it was still establishing its market presence. The other months, such as November 2024 and June 2024, were close contenders but didn't capture the peak performance that December did.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-11T01:41:42.473Z"
+  },
+  "2026-08-11|chain|Aptos|E|C4_GROWTH_RANKING|explanation|685deb653453af0e": {
+    "text": "Monad's impressive growth of 74.1% starkly contrasts with Aptos, which saw a significant decline of 44.4%. While Arbitrum and Sui also faced downturns at -2.3% and -4.9% respectively, Monad's surge indicates a strong shift in user interest and activity, highlighting its emerging position in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-11T01:41:43.861Z"
   }
 }
