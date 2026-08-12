@@ -1,0 +1,138 @@
+{
+  "episodeId": "2026-08-12:protocol:aave-v3",
+  "dateUtc": "2026-08-12",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "aave-v3",
+    "name": "Aave V3",
+    "category": "Lending"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Lending",
+        "Chains: 10+ chains",
+        "TVL rank: top 10"
+      ],
+      "choices": [
+        "Fluid Lending",
+        "LayerZero V2",
+        "Morpho Blue",
+        "Binance staked ETH",
+        "Aave V3"
+      ],
+      "answerIndex": 4,
+      "explanation": "Aave V3's $13.8B TVL across 22 chains showcases its versatility and appeal, particularly on emerging platforms like Base and Optimism, which are gaining traction in the DeFi space. This broad distribution allows Aave to tap into diverse liquidity pools and user bases, enhancing its lending capabilities.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": 0.09618085066666773
+      },
+      "difficultyScore": 0.4521180850666668
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Aave V3 have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Plasma"
+      ],
+      "answerIndex": 0,
+      "explanation": "Aave V3's $11.4B TVL on Ethereum dwarfs the $530M on Plasma, reflecting Ethereum's dominance in DeFi and its robust ecosystem that attracts more liquidity. The 95% margin between the two chains underscores the challenges smaller chains face in competing for user engagement and capital.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.9536952819825535,
+        "volatility": 0.09618085066666773
+      },
+      "difficultyScore": 0.18211808506666677
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Aave V3's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 1,
+      "explanation": "Aave V3 generated $933K in revenue over the past week, which is about 13% of its $7M in fees, showcasing its effective fee structure and user engagement. This revenue model allows Aave to sustain operations and potentially invest in further development or incentives for users.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.13270425281863296,
+        "volatility": 0.09618085066666773
+      },
+      "difficultyScore": 0.41287298168430725
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Aave V3 hit its all-time high TVL?",
+      "choices": [
+        "Mar 2023",
+        "Jul 2024",
+        "Feb 2024",
+        "Mar 2022",
+        "Oct 2025",
+        "Dec 2025"
+      ],
+      "answerIndex": 4,
+      "explanation": "Aave V3 reached its all-time high (ATH) of $45.4B in October 2025, a significant leap compared to earlier months like March 2022, when it was still gaining traction in the DeFi space. The timing of this ATH suggests that Aave V3 capitalized on broader market trends and innovations that emerged in the DeFi landscape during that period.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": 0.09618085066666773
+      },
+      "difficultyScore": 0.46211808506666685
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "Aave V3's TVL increased over the past 30 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Aave V3's TVL has increased by 4.2% to $13.8B, reflecting growing confidence in its lending and borrowing features, especially as users seek more efficient capital utilization in a competitive DeFi landscape. This upward trend suggests that Aave continues to attract liquidity despite market fluctuations.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.04206513288481219,
+        "volatility": 0.09618085066666773
+      },
+      "difficultyScore": 0.34163992560489215
+    }
+  ],
+  "generatedAt": "2026-08-12T01:53:10.561Z"
+}
