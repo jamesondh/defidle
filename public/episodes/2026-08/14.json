@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-08-14:protocol:ether.fi-stake",
+  "dateUtc": "2026-08-14",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "ether.fi-stake",
+    "name": "ether.fi Stake",
+    "category": "Liquid Restaking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Liquid Restaking",
+        "Chains: 2-5 chains",
+        ">90% TVL on single chain",
+        "TVL rank: top 25"
+      ],
+      "choices": [
+        "Coinbase Bridge",
+        "Morpho Blue",
+        "ether.fi Stake",
+        "WBTC",
+        "Kelp"
+      ],
+      "answerIndex": 2,
+      "explanation": "ether.fi Stake's $3.3B TVL across three chains—Base, Ethereum, and Arbitrum—illustrates its appeal in the liquid restaking niche, allowing users to maximize their staking rewards while maintaining liquidity. This multi-chain strategy is increasingly popular as it diversifies risk and taps into the unique user bases of each network.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.1342237245830831
+      },
+      "difficultyScore": 0.4679223724583083
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is ether.fi Stake?",
+      "choices": [
+        "Liquid Restaking",
+        "Liquidity Automation",
+        "Indexes",
+        "Staking Rental"
+      ],
+      "answerIndex": 0,
+      "explanation": "ether.fi Stake operates in the Liquid Restaking category, allowing users to stake their ETH while simultaneously using the staked assets in other DeFi protocols. This dual functionality enhances capital efficiency, as users can earn staking rewards without locking up their assets completely.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.5,
+        "volatility": 0.1342237245830831
+      },
+      "difficultyScore": 0.2879223724583083
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P15_RECENT_TVL_DIRECTION",
+      "format": "ab",
+      "prompt": "Over the past 30 days, did ether.fi Stake's TVL increase or decrease?",
+      "choices": [
+        "Decrease",
+        "Increase"
+      ],
+      "answerIndex": 1,
+      "explanation": "ether.fi Stake has seen a 6.0% increase in TVL over the past 30 days, reaching $3.3B, which suggests growing confidence among users in its staking model and the overall Ethereum ecosystem. This upward trend may reflect a broader interest in decentralized staking solutions as users seek better yields.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.06013872451385307,
+        "volatility": 0.1342237245830831
+      },
+      "difficultyScore": 0.4257559030416846
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did ether.fi Stake hit its all-time high TVL?",
+      "choices": [
+        "May 2024",
+        "May 2026",
+        "Jul 2024",
+        "Aug 2025",
+        "Apr 2026",
+        "Jan 2026"
+      ],
+      "answerIndex": 3,
+      "explanation": "ether.fi Stake reached its ATH of $12.4B in August 2025, a significant milestone that came after several months of growth, as evidenced by the earlier distractor months like July and May 2024, which were still building momentum. This timing suggests that ether.fi Stake capitalized on market trends and user adoption leading up to that peak.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": 0.1342237245830831
+      },
+      "difficultyScore": 0.4779223724583084
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P10_TVL_BAND",
+      "format": "mc4",
+      "prompt": "Which TVL range fits ether.fi Stake?",
+      "choices": [
+        "<$50M",
+        "$50M-$250M",
+        "$250M-$1B",
+        "$1B-$5B",
+        ">$5B"
+      ],
+      "answerIndex": 3,
+      "explanation": "ether.fi Stake's $3.3B TVL places it firmly in the $1B-$5B range, reflecting its growing popularity as a liquid staking solution that allows users to earn yield on their staked ETH while maintaining liquidity. This dual functionality is increasingly appealing as more users seek to maximize their returns in the DeFi space.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.6720974856,
+        "volatility": 0.1342237245830831
+      },
+      "difficultyScore": 0.2879223724583083
+    }
+  ],
+  "generatedAt": "2026-08-14T01:52:54.171Z"
+}

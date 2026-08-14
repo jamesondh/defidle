@@ -323,5 +323,30 @@
     "text": "Hyperliquid Spot Orderbook leads on Hyperliquid L1 with $68M in volume, significantly outpacing its closest competitor, Project X, which has $39M. This dominance suggests that Hyperliquid is effectively capturing user interest and trading activity on the chain, especially compared to other DEXs like Unit and nest CL, which have volumes of $35M and $8M, respectively.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-08-13T01:55:31.481Z"
+  },
+  "2026-08-14|protocol|ether.fi-stake|A|P1_FINGERPRINT|explanation|cfa27dadec797033": {
+    "text": "ether.fi Stake's $3.3B TVL across three chains—Base, Ethereum, and Arbitrum—illustrates its appeal in the liquid restaking niche, allowing users to maximize their staking rewards while maintaining liquidity. This multi-chain strategy is increasingly popular as it diversifies risk and taps into the unique user bases of each network.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-14T01:52:48.143Z"
+  },
+  "2026-08-14|protocol|ether.fi-stake|B|P7_CATEGORY|explanation|6115b555dee95624": {
+    "text": "ether.fi Stake operates in the Liquid Restaking category, allowing users to stake their ETH while simultaneously using the staked assets in other DeFi protocols. This dual functionality enhances capital efficiency, as users can earn staking rewards without locking up their assets completely.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-14T01:52:49.503Z"
+  },
+  "2026-08-14|protocol|ether.fi-stake|C|P15_RECENT_TVL_DIRECTION|explanation|55a83f5d7a67f0a7": {
+    "text": "ether.fi Stake has seen a 6.0% increase in TVL over the past 30 days, reaching $3.3B, which suggests growing confidence among users in its staking model and the overall Ethereum ecosystem. This upward trend may reflect a broader interest in decentralized staking solutions as users seek better yields.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-14T01:52:50.698Z"
+  },
+  "2026-08-14|protocol|ether.fi-stake|D|P4_ATH_TIMING|explanation|086eeb113a483cff": {
+    "text": "ether.fi Stake reached its ATH of $12.4B in August 2025, a significant milestone that came after several months of growth, as evidenced by the earlier distractor months like July and May 2024, which were still building momentum. This timing suggests that ether.fi Stake capitalized on market trends and user adoption leading up to that peak.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-14T01:52:52.467Z"
+  },
+  "2026-08-14|protocol|ether.fi-stake|E|P10_TVL_BAND|explanation|d2e5cb3f769638ab": {
+    "text": "ether.fi Stake's $3.3B TVL places it firmly in the $1B-$5B range, reflecting its growing popularity as a liquid staking solution that allows users to earn yield on their staked ETH while maintaining liquidity. This dual functionality is increasingly appealing as more users seek to maximize their returns in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-14T01:52:54.170Z"
   }
 }
