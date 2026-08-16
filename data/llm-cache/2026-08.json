@@ -373,5 +373,30 @@
     "text": "SparkDEX V4 leads Flare with $2M in volume, significantly outpacing its closest competitors like Enosys AMM V3 and SparkDEX V3.1, which both hover around $246K. This stark difference illustrates SparkDEX V4's dominance in trading activity on the chain, reflecting its appeal and user adoption compared to other DEXs.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-08-15T01:11:03.590Z"
+  },
+  "2026-08-16|protocol|uniswap-v2|A|P1_FINGERPRINT|explanation|032721b13f3380ac": {
+    "text": "Uniswap V2's $783M TVL across 14 chains showcases its adaptability and appeal, particularly on Ethereum and newer platforms like Base and Zora, which are attracting liquidity as they grow. This diverse chain presence allows Uniswap V2 to tap into various user bases and trading opportunities, enhancing its overall market reach.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-16T01:15:16.554Z"
+  },
+  "2026-08-16|protocol|uniswap-v2|B|P2_CROSSCHAIN|explanation|1e1e7a21f5b070e1": {
+    "text": "Uniswap V2's $657M TVL on Ethereum dwarfs the $76M on Base, reflecting Ethereum's established dominance in the DeFi space and its robust liquidity compared to newer chains. The 88% margin shows that users still prefer the familiarity and security of Ethereum for trading activities.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-16T01:15:17.983Z"
+  },
+  "2026-08-16|protocol|uniswap-v2|C|P11_FEES_TREND|explanation|23ddd7808b729566": {
+    "text": "Uniswap V2 has seen a decline in fees by 8.3% over the past week, dropping from $355K to $325K, which may reflect reduced trading activity or increased competition from newer DEXs. This trend is important as it can impact liquidity incentives and overall protocol sustainability.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-16T01:15:18.903Z"
+  },
+  "2026-08-16|protocol|uniswap-v2|D|P4_ATH_TIMING|explanation|5e3f794d2f33b278": {
+    "text": "Uniswap V2 hit its all-time high (ATH) of $10.0B in April 2021, a peak driven by the explosive growth of DeFi during that period. In contrast, the other options, like December 2021, reflect a time when market conditions were starting to cool, leading to a decline in TVL for many protocols, including Uniswap.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-16T01:15:20.389Z"
+  },
+  "2026-08-16|protocol|uniswap-v2|E|P3_CONCENTRATION|explanation|e642a91c4089b166": {
+    "text": "Uniswap V2's TVL of $783M is heavily concentrated on Ethereum, which alone accounts for 84% of its total with $657M. This concentration reflects Ethereum's dominance in DeFi, where liquidity and trading volume are significantly higher compared to other chains.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-16T01:15:22.120Z"
   }
 }
