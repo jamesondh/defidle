@@ -398,5 +398,30 @@
     "text": "Uniswap V2's TVL of $783M is heavily concentrated on Ethereum, which alone accounts for 84% of its total with $657M. This concentration reflects Ethereum's dominance in DeFi, where liquidity and trading volume are significantly higher compared to other chains.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-08-16T01:15:22.120Z"
+  },
+  "2026-08-17|protocol|wbtc|A|P1_FINGERPRINT|explanation|e600c6007f22a922": {
+    "text": "WBTC's $7.2B TVL on the Bitcoin chain highlights its role as a crucial bridge, allowing Bitcoin holders to access DeFi applications on Ethereum while maintaining the value of their assets. This single-chain focus emphasizes its unique position in connecting two major ecosystems, facilitating liquidity and interoperability.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-17T01:12:32.637Z"
+  },
+  "2026-08-17|protocol|wbtc|B|P7_CATEGORY|explanation|82fa58306afda68d": {
+    "text": "WBTC, or Wrapped Bitcoin, serves as a bridge between Bitcoin and Ethereum, allowing Bitcoin holders to participate in DeFi applications on the Ethereum network. This bridging capability enhances liquidity and expands the use cases for Bitcoin beyond its native blockchain.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-17T01:12:34.127Z"
+  },
+  "2026-08-17|protocol|wbtc|C|P20_ATH_DISTANCE|explanation|0cee123bb7641156": {
+    "text": "WBTC's current TVL of $7.2B is 55% below its all-time high of $15.8B, reflecting a significant drop that may be influenced by market conditions and the overall demand for wrapped Bitcoin in DeFi applications. This distance from ATH suggests that while WBTC remains a key player, it faces challenges in regaining previous levels of user engagement and liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-17T01:12:36.820Z"
+  },
+  "2026-08-17|protocol|wbtc|D|P33_MULTI_RANKING|explanation|7292622aa92f919f": {
+    "text": "WBTC leads the bridge category with a TVL of $7.2B, largely due to its role as a wrapped Bitcoin solution that enhances liquidity on Ethereum, making it a go-to choice for users looking to leverage Bitcoin's value in DeFi. In comparison, LayerZero V2 and Hyperliquid Bridge follow closely with $6.7B and $5.9B TVL, respectively, reflecting the growing demand for cross-chain solutions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-17T01:12:38.590Z"
+  },
+  "2026-08-17|protocol|wbtc|E|P6_TVL_TREND|explanation|ab493be5c0df1515": {
+    "text": "WBTC's TVL decreased by 1.6% to $7.2B, reflecting a potential shift in user preference or market conditions affecting wrapped Bitcoin's utility compared to other assets. This trend could suggest that users are exploring alternative options for yield or liquidity in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-17T01:12:39.658Z"
   }
 }
