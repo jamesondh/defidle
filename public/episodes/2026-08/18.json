@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-08-18:chain:Arbitrum",
+  "dateUtc": "2026-08-18",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Arbitrum",
+    "name": "Arbitrum"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 10",
+        "Native token: ARB",
+        "Most protocols by count"
+      ],
+      "choices": [
+        "Anubis",
+        "Base",
+        "Bitcoin",
+        "Polygon",
+        "Tron",
+        "Arbitrum"
+      ],
+      "answerIndex": 5,
+      "explanation": "Arbitrum ranks 9th in TVL with between $1B and $5B, showcasing its significant adoption among users and developers. With over 1,000 protocols, it reflects a vibrant ecosystem that attracts diverse projects, contributing to its robust DeFi landscape.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4675
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C10_PROTOCOL_COUNT",
+      "format": "mc4",
+      "prompt": "How many DeFi protocols are deployed on Arbitrum?",
+      "choices": [
+        "<50",
+        "50-100",
+        "100-250",
+        ">250"
+      ],
+      "answerIndex": 3,
+      "explanation": "Arbitrum boasts 993 protocols, showcasing its rapid growth and popularity as a Layer 2 solution for Ethereum, which attracts developers looking for scalability and lower transaction costs. This diverse ecosystem indicates a vibrant community actively building and innovating on the platform.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 1,
+        "volatility": null
+      },
+      "difficultyScore": 0.28750000000000003
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Monad",
+        "Tron",
+        "Solana",
+        "Arbitrum"
+      ],
+      "answerIndex": 0,
+      "explanation": "Monad is leading the growth rankings with an impressive 36% increase, significantly outpacing other chains like Tron at +1.7% and Arbitrum at +0.6%. This stark contrast highlights Monad's rapid adoption or innovation compared to more established chains, which are experiencing much slower growth or even declines, like Solana at -1.0%.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.34250083636136847,
+        "volatility": null
+      },
+      "difficultyScore": 0.34750000000000003
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Arbitrum hit its all-time high TVL?",
+      "choices": [
+        "Oct 2025",
+        "Aug 2022",
+        "Jan 2023",
+        "Nov 2022",
+        "Sep 2021",
+        "Oct 2023"
+      ],
+      "answerIndex": 0,
+      "explanation": "Arbitrum reached its all-time high (ATH) of $4.2B in October 2025, a significant milestone that came well after earlier peaks like the $1.5B in January 2023. This timing suggests that Arbitrum's growth trajectory was influenced by broader market trends and developments in Layer 2 scaling solutions, distinguishing it from earlier fluctuations.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.47750000000000004
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Arbitrum?",
+      "choices": [
+        "Metric V2",
+        "Uniswap V4",
+        "PancakeSwap AMM V3",
+        "Uniswap V3"
+      ],
+      "answerIndex": 3,
+      "explanation": "Uniswap V3 leads Arbitrum with a significant $41M in volume, far outpacing Uniswap V4 at $17M and Metric V2 at $10M. This dominance illustrates Uniswap V3's established liquidity and user preference on Arbitrum, showcasing its effectiveness in attracting trading activity compared to newer or less popular DEXs.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.5860569039147071,
+        "volatility": null
+      },
+      "difficultyScore": 0.28750000000000003
+    }
+  ],
+  "generatedAt": "2026-08-18T01:10:32.191Z"
+}
