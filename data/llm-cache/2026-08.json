@@ -448,5 +448,30 @@
     "text": "Uniswap V3 leads Arbitrum with a significant $41M in volume, far outpacing Uniswap V4 at $17M and Metric V2 at $10M. This dominance illustrates Uniswap V3's established liquidity and user preference on Arbitrum, showcasing its effectiveness in attracting trading activity compared to newer or less popular DEXs.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-08-18T01:10:32.191Z"
+  },
+  "2026-08-19|protocol|jupiter-lend|A|P1_FINGERPRINT|explanation|e43d030c8ebe823a": {
+    "text": "Jupiter Lend's $954M TVL on Solana reflects its strong position in the lending sector, especially as it operates on a single chain, which often leads to more concentrated liquidity and user engagement. This focus on Solana allows it to leverage the network's high throughput and low fees, making it attractive for borrowers and lenders alike.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-19T01:11:40.327Z"
+  },
+  "2026-08-19|protocol|jupiter-lend|B|P13_TVL_RANK_COMPARISON|explanation|23ca8894601c9fd7": {
+    "text": "Uniswap V3's $1.4B TVL dwarfs Jupiter Lend's $954M by 32.1%, reflecting Uniswap's established position and liquidity dominance in the DeFi space compared to newer lending protocols like Jupiter Lend, which may still be building user trust and adoption. This disparity often stems from the broader recognition and usage of Uniswap's DEX model versus the more niche lending market.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-19T01:11:41.433Z"
+  },
+  "2026-08-19|protocol|jupiter-lend|C|P5_FEES_REVENUE|explanation|d522a88922fb6665": {
+    "text": "Jupiter Lend generated $660K in fees over the past week, but only $33K of that translated into revenue, indicating a revenue conversion rate of just 5%. This low percentage suggests that while the platform is attracting significant trading activity, its fee structure may not be effectively capturing value for the protocol.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-19T01:11:42.863Z"
+  },
+  "2026-08-19|protocol|jupiter-lend|D|P4_ATH_TIMING|explanation|361fe034df8d9df1": {
+    "text": "Jupiter Lend reached its ATH of $1.2B in March 2026, a significant milestone that came before the other options like June and July 2026, which were too late to capture that peak. This timing suggests that Jupiter Lend experienced rapid growth leading up to its ATH, setting it apart from the later months when it had already stabilized.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-19T01:11:44.121Z"
+  },
+  "2026-08-19|protocol|jupiter-lend|E|P8_CHAIN_MEMBERSHIP|explanation|12d486f19482dffb": {
+    "text": "Jupiter Lend operates solely on Solana, which allows it to leverage the network's high throughput and low transaction costs, making it an attractive option for users looking to lend and borrow assets efficiently. This single-chain focus can also lead to a more streamlined user experience compared to multi-chain platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-19T01:11:45.091Z"
   }
 }
