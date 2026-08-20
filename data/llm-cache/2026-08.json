@@ -473,5 +473,30 @@
     "text": "Jupiter Lend operates solely on Solana, which allows it to leverage the network's high throughput and low transaction costs, making it an attractive option for users looking to lend and borrow assets efficiently. This single-chain focus can also lead to a more streamlined user experience compared to multi-chain platforms.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-08-19T01:11:45.091Z"
+  },
+  "2026-08-20|chain|Sui|A|C1_FINGERPRINT|explanation|22c0c618f939ef98": {
+    "text": "Sui ranks 15th in TVL with between $100M and $500M, which is notable given it supports 122 protocols, indicating a growing ecosystem that attracts diverse projects despite being relatively new in the DeFi space. This level of protocol diversity often suggests a healthy level of developer interest and innovation on the platform.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-20T01:10:39.592Z"
+  },
+  "2026-08-20|chain|Sui|B|C2_CHAIN_COMPARISON|explanation|bb9403aba6997c7f": {
+    "text": "Sui's $403M TVL surpasses Cronos by 39.4%, reflecting its growing appeal and user adoption, likely driven by its focus on high throughput and low latency for decentralized applications. In contrast, Cronos, while still significant, has not captured the same level of developer interest or liquidity.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-20T01:10:41.259Z"
+  },
+  "2026-08-20|chain|Sui|C|C4_GROWTH_RANKING|explanation|eeb37988a25e3cd1": {
+    "text": "Sui's TVL decreased by 7.5%, contrasting sharply with the growth seen in Tron (+1.7%) and Stellar (+1.0%), which indicates that while other chains are experiencing modest gains, Sui is struggling to maintain its position in the competitive DeFi landscape. This decline could suggest challenges in attracting liquidity or user engagement compared to its peers.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-20T01:10:42.388Z"
+  },
+  "2026-08-20|chain|Sui|D|C3_ATH_TIMING|explanation|43b315b8743038e4": {
+    "text": "Sui reached its ATH of $2.6B in October 2025, a significant milestone that reflects its growth trajectory in a competitive market. In contrast, the earlier months like August and November 2023 saw much lower TVL figures, indicating that the protocol was still gaining traction and building its user base before hitting that peak.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-20T01:10:43.784Z"
+  },
+  "2026-08-20|chain|Sui|E|C6_TOP_DEX|explanation|687eb4c4855cb21d": {
+    "text": "DeepBook V3 leads Sui with $13M in volume, significantly outpacing its closest competitor, Cetus CLMM, which has $10M. This dominance suggests that DeepBook V3 is capturing a larger share of trading activity on Sui, while other DEXs like Bluefin Spot and Turbos trail behind with $5M and $4M, respectively, indicating a clear preference among users for DeepBook V3's offerings.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-20T01:10:45.170Z"
   }
 }
