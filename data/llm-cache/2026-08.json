@@ -498,5 +498,30 @@
     "text": "DeepBook V3 leads Sui with $13M in volume, significantly outpacing its closest competitor, Cetus CLMM, which has $10M. This dominance suggests that DeepBook V3 is capturing a larger share of trading activity on Sui, while other DEXs like Bluefin Spot and Turbos trail behind with $5M and $4M, respectively, indicating a clear preference among users for DeepBook V3's offerings.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-08-20T01:10:45.170Z"
+  },
+  "2026-08-21|protocol|maple|A|P1_FINGERPRINT|explanation|fb63bef4a49bf370": {
+    "text": "Maple's $2.6B TVL across Solana and Ethereum shows its strong foothold in the lending space, particularly as it leverages the unique capabilities of both chains to attract diverse liquidity. This dual-chain approach allows it to tap into different user bases and market dynamics, enhancing its overall lending ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-21T01:14:42.144Z"
+  },
+  "2026-08-21|protocol|maple|B|P7_CATEGORY|explanation|62660ceace938720": {
+    "text": "Maple operates in the lending category, focusing on providing undercollateralized loans to institutional borrowers, which distinguishes it from many other DeFi lending platforms that typically require overcollateralization. This approach allows Maple to cater to a different segment of the market, potentially attracting larger capital flows.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-21T01:14:43.585Z"
+  },
+  "2026-08-21|protocol|maple|C|P20_ATH_DISTANCE|explanation|c551e2d35e925938": {
+    "text": "Maple's current TVL of $2.6B is just 19% below its all-time high of $3.2B, indicating that it has maintained strong user interest and liquidity despite market fluctuations. Being in the \"<25% below ATH\" bucket suggests that the protocol is still relatively close to its peak performance, which is a positive sign for its resilience in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-21T01:14:45.276Z"
+  },
+  "2026-08-21|protocol|maple|D|P33_MULTI_RANKING|explanation|7ff498f1cd6922e3": {
+    "text": "Aave V3 leads the lending category with a substantial $16.2B TVL, significantly outpacing Morpho Blue at $8.9B and Maple at $2.6B. This stark difference reflects Aave's established user base and diverse lending options, while Maple's focus on institutional lending may limit its TVL growth compared to more generalized platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-21T01:14:46.299Z"
+  },
+  "2026-08-21|protocol|maple|E|P8_CHAIN_MEMBERSHIP|explanation|c55001770ace1040": {
+    "text": "Maple operates on both Solana and Ethereum, allowing it to tap into the unique strengths of each chain, such as Ethereum's established DeFi ecosystem and Solana's high throughput. This dual-chain strategy can enhance liquidity and user engagement by catering to diverse user preferences and transaction needs.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-21T01:14:47.461Z"
   }
 }
