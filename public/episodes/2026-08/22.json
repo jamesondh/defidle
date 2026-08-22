@@ -1,0 +1,136 @@
+{
+  "episodeId": "2026-08-22:chain:Robinhood Chain",
+  "dateUtc": "2026-08-22",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Robinhood Chain",
+    "name": "Robinhood Chain"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "Arbitrum",
+        "Ink",
+        "Provenance",
+        "Robinhood Chain",
+        "Anubis",
+        "Polygon"
+      ],
+      "answerIndex": 3,
+      "explanation": "Robinhood Chain ranks 13th in TVL with between $500M and $1B, reflecting a robust ecosystem of 110 protocols, which is significant for a chain in the 100-200 protocol range. This level of protocol diversity often indicates a healthy developer interest and potential for innovative applications within the chain.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Robinhood Chain or Monad?",
+      "choices": [
+        "Robinhood Chain",
+        "Monad"
+      ],
+      "answerIndex": 1,
+      "explanation": "Monad's $891M TVL significantly outpaces Robinhood Chain's $545M, with a 38.8% margin, reflecting Monad's stronger adoption and liquidity among users. This disparity often indicates more robust trading activity and a wider range of available assets on Monad compared to Robinhood Chain.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.38818904788450587,
+        "volatility": null
+      },
+      "difficultyScore": 0.2095
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Hyperliquid L1",
+        "Stellar",
+        "Mezo",
+        "Robinhood Chain"
+      ],
+      "answerIndex": 3,
+      "explanation": "Robinhood Chain's impressive growth of 164.5% far outpaces other chains like Stellar, which only saw a 1.0% increase, and Mezo and Hyperliquid L1, both of which experienced declines. This stark contrast highlights Robinhood Chain's rapid adoption or innovative features that are attracting users in a competitive landscape.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 1,
+        "volatility": null
+      },
+      "difficultyScore": 0.35950000000000004
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C11_TOP_PROTOCOL_TVL",
+      "format": "ab",
+      "prompt": "Which protocol has the most TVL on Robinhood Chain?",
+      "choices": [
+        "Uniswap V4",
+        "Uniswap V3",
+        "Steakhouse Financial",
+        "Morpho Blue"
+      ],
+      "answerIndex": 2,
+      "explanation": "Steakhouse Financial leads Robinhood Chain with a TVL of $418M, matching the TVL of Morpho Blue, which suggests a strong competitive landscape between these two protocols. In contrast, Uniswap V4 and V3 have significantly lower TVLs at $40M and $33M, indicating that the Robinhood Chain is still in the early stages of attracting liquidity compared to more established chains.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.0010681551417656319,
+        "volatility": null
+      },
+      "difficultyScore": 0.5082182138298812
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Robinhood Chain?",
+      "choices": [
+        "Uniswap V3",
+        "GMGN",
+        "Uniswap V4",
+        "Uniswap V2"
+      ],
+      "answerIndex": 0,
+      "explanation": "Uniswap V3 leads on Robinhood Chain with $302M in volume, significantly outpacing Uniswap V4 at $206M and Uniswap V2 at $76M. This dominance suggests that V3's features, like concentrated liquidity, are particularly appealing to traders on this chain, driving higher activity compared to its predecessors and other DEXs like GMGN, which only managed $15M.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.31772898346010814,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-08-22T01:10:50.287Z"
+}
