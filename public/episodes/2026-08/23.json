@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-08-23:protocol:coinbase-bridge",
+  "dateUtc": "2026-08-23",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "coinbase-bridge",
+    "name": "Coinbase Bridge",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: 2-5 chains",
+        ">90% TVL on single chain",
+        "TVL rank: top 10"
+      ],
+      "choices": [
+        "WBTC",
+        "Aave V3",
+        "SSV Network",
+        "Aster Bridge",
+        "Coinbase Bridge",
+        "Kraken Bitcoin"
+      ],
+      "answerIndex": 4,
+      "explanation": "Coinbase Bridge operates across 5 chains, including major players like Bitcoin and Doge, which reflects its strategy to connect diverse ecosystems and enhance liquidity. Its $7.5B TVL positions it firmly in the $5B-$10B range, indicating significant user trust and adoption in bridging assets across these networks.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": 0.14877248164314028
+      },
+      "difficultyScore": 0.457377248164314
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Coinbase Bridge have higher TVL?",
+      "choices": [
+        "Bitcoin",
+        "Ripple"
+      ],
+      "answerIndex": 0,
+      "explanation": "Coinbase Bridge shows a stark contrast in TVL between Bitcoin at $7.5B and Ripple at just $3M, indicating that Bitcoin's robust ecosystem and widespread adoption drive significantly higher liquidity compared to Ripple's more niche usage. The 100% margin suggests that users are favoring Bitcoin for cross-chain transactions, reflecting its dominance in the market.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.9995439480250681,
+        "volatility": 0.14877248164314028
+      },
+      "difficultyScore": 0.187377248164314
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P29_CATEGORY_GROWTH",
+      "format": "mc4",
+      "prompt": "Which DeFi category grew the most in TVL over the past 7 days?",
+      "choices": [
+        "Liquid Staking",
+        "Crypto Card Issuer",
+        "Dexs",
+        "CeDeFi"
+      ],
+      "answerIndex": 2,
+      "explanation": "Coinbase Bridge's staggering growth of over 35 trillion percent dwarfs other categories like Crypto Card Issuer at 5,288.2% and CeDeFi at 3,442.2%, indicating a massive surge in demand for decentralized exchange solutions. This explosive growth suggests that users are increasingly favoring on-chain trading mechanisms, likely driven by the need for greater control and transparency in their transactions.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 1,
+        "volatility": 0.14877248164314028
+      },
+      "difficultyScore": 0.337377248164314
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Coinbase Bridge hit its all-time high TVL?",
+      "choices": [
+        "Oct 2025",
+        "Jul 2025",
+        "May 2025",
+        "Jul 2026",
+        "Feb 2025",
+        "Sep 2025"
+      ],
+      "answerIndex": 0,
+      "explanation": "Coinbase Bridge hit its ATH of $14.9B in October 2025, a significant leap compared to earlier months like May and July 2025, which saw much lower TVL. This timing suggests that the bridge gained traction as more users sought seamless cross-chain transactions, likely driven by growing interest in DeFi and interoperability.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": 0.14877248164314028
+      },
+      "difficultyScore": 0.46737724816431403
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "Coinbase Bridge's TVL increased over the past 30 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Coinbase Bridge's TVL has increased by 20.5% to $7.5B, reflecting growing user interest in cross-chain asset transfers, which are crucial for enhancing liquidity and interoperability in the DeFi space. This uptick suggests that more users are leveraging the bridge to access diverse DeFi opportunities across different networks.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.20450662843775363,
+        "volatility": 0.14877248164314028
+      },
+      "difficultyScore": 0.15196929403900966
+    }
+  ],
+  "generatedAt": "2026-08-23T01:16:39.942Z"
+}

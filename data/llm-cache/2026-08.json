@@ -548,5 +548,30 @@
     "text": "Uniswap V3 leads on Robinhood Chain with $302M in volume, significantly outpacing Uniswap V4 at $206M and Uniswap V2 at $76M. This dominance suggests that V3's features, like concentrated liquidity, are particularly appealing to traders on this chain, driving higher activity compared to its predecessors and other DEXs like GMGN, which only managed $15M.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-08-22T01:10:50.287Z"
+  },
+  "2026-08-23|protocol|coinbase-bridge|A|P1_FINGERPRINT|explanation|4465542f53d83d19": {
+    "text": "Coinbase Bridge operates across 5 chains, including major players like Bitcoin and Doge, which reflects its strategy to connect diverse ecosystems and enhance liquidity. Its $7.5B TVL positions it firmly in the $5B-$10B range, indicating significant user trust and adoption in bridging assets across these networks.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-23T01:16:35.354Z"
+  },
+  "2026-08-23|protocol|coinbase-bridge|B|P2_CROSSCHAIN|explanation|aba8ac2271477193": {
+    "text": "Coinbase Bridge shows a stark contrast in TVL between Bitcoin at $7.5B and Ripple at just $3M, indicating that Bitcoin's robust ecosystem and widespread adoption drive significantly higher liquidity compared to Ripple's more niche usage. The 100% margin suggests that users are favoring Bitcoin for cross-chain transactions, reflecting its dominance in the market.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-23T01:16:36.625Z"
+  },
+  "2026-08-23|protocol|coinbase-bridge|C|P29_CATEGORY_GROWTH|explanation|38d1756a1574f824": {
+    "text": "Coinbase Bridge's staggering growth of over 35 trillion percent dwarfs other categories like Crypto Card Issuer at 5,288.2% and CeDeFi at 3,442.2%, indicating a massive surge in demand for decentralized exchange solutions. This explosive growth suggests that users are increasingly favoring on-chain trading mechanisms, likely driven by the need for greater control and transparency in their transactions.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-23T01:16:38.091Z"
+  },
+  "2026-08-23|protocol|coinbase-bridge|D|P4_ATH_TIMING|explanation|05bd546144fb7af8": {
+    "text": "Coinbase Bridge hit its ATH of $14.9B in October 2025, a significant leap compared to earlier months like May and July 2025, which saw much lower TVL. This timing suggests that the bridge gained traction as more users sought seamless cross-chain transactions, likely driven by growing interest in DeFi and interoperability.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-23T01:16:39.081Z"
+  },
+  "2026-08-23|protocol|coinbase-bridge|E|P6_TVL_TREND|explanation|da3dd2c47c0fac5b": {
+    "text": "Coinbase Bridge's TVL has increased by 20.5% to $7.5B, reflecting growing user interest in cross-chain asset transfers, which are crucial for enhancing liquidity and interoperability in the DeFi space. This uptick suggests that more users are leveraging the bridge to access diverse DeFi opportunities across different networks.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-23T01:16:39.942Z"
   }
 }
