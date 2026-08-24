@@ -1,0 +1,142 @@
+{
+  "episodeId": "2026-08-24:protocol:kinetiq-khype",
+  "dateUtc": "2026-08-24",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "kinetiq-khype",
+    "name": "Kinetiq kHYPE",
+    "category": "Liquid Staking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Liquid Staking",
+        "Chains: single-chain",
+        "TVL: $1B-$5B",
+        "7d change: up >10%"
+      ],
+      "choices": [
+        "mETH Protocol",
+        "Compound V3",
+        "Kinetiq kHYPE",
+        "Coinbase Wrapped Staked ETH"
+      ],
+      "answerIndex": 2,
+      "explanation": "Kinetiq kHYPE's $1.2B TVL on Hyperliquid L1 showcases its strong position in the liquid staking category, which often attracts users looking for yield while maintaining liquidity. This concentration on a single chain can lead to enhanced performance and user experience, as protocols can optimize their services for specific network characteristics.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.1929262360969608
+      },
+      "difficultyScore": 0.40179262360969614
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Kinetiq kHYPE?",
+      "choices": [
+        "Liquid Staking",
+        "Privacy",
+        "Options",
+        "Basis Trading"
+      ],
+      "answerIndex": 0,
+      "explanation": "Kinetiq kHYPE is part of the liquid staking category, which allows users to stake their assets while still maintaining liquidity, enabling them to earn staking rewards without locking up their tokens. This flexibility is increasingly appealing as it provides a way to maximize yield in a dynamic DeFi environment.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.1929262360969608
+      },
+      "difficultyScore": 0.3117926236096961
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did Kinetiq kHYPE's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 4,
+      "explanation": "Kinetiq kHYPE has seen a 23.3% increase in fees over the past week, rising from $329K to $406K, which suggests growing user activity or increased trading volume on the platform. This uptick in fees can indicate heightened interest in the protocol's offerings or successful marketing efforts to attract more users.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.23290345300764434,
+        "volatility": 0.1929262360969608
+      },
+      "difficultyScore": 0.33230848000052293
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Kinetiq kHYPE hit its all-time high TVL?",
+      "choices": [
+        "Apr 2026",
+        "Jul 2026",
+        "Mar 2026",
+        "Feb 2026",
+        "Jan 2026",
+        "Sep 2025"
+      ],
+      "answerIndex": 5,
+      "explanation": "Kinetiq kHYPE reached its all-time high (ATH) of $2.3B in September 2025, a notable achievement as the following months, like January and February 2026, saw a decline in TVL due to market corrections. This timing highlights a peak period for Kinetiq, contrasting with the later months when other projects may have dominated the spotlight.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.1929262360969608
+      },
+      "difficultyScore": 0.5017926236096961
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Kinetiq kHYPE deployed on?",
+      "choices": [
+        "Arbitrum",
+        "Avalanche",
+        "Ethereum",
+        "Hyperliquid L1"
+      ],
+      "answerIndex": 3,
+      "explanation": "Kinetiq kHYPE operates solely on the Hyperliquid L1 chain, which allows it to leverage the unique features of that blockchain, such as enhanced transaction speeds and lower fees, to optimize its DeFi offerings. This single-chain focus can streamline user experience but may limit its exposure to liquidity from other ecosystems.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.1929262360969608
+      },
+      "difficultyScore": 0.3117926236096961
+    }
+  ],
+  "generatedAt": "2026-08-24T01:14:25.173Z"
+}
