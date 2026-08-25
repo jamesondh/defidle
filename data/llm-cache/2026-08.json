@@ -598,5 +598,30 @@
     "text": "Kinetiq kHYPE operates solely on the Hyperliquid L1 chain, which allows it to leverage the unique features of that blockchain, such as enhanced transaction speeds and lower fees, to optimize its DeFi offerings. This single-chain focus can streamline user experience but may limit its exposure to liquidity from other ecosystems.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-08-24T01:14:25.172Z"
+  },
+  "2026-08-25|chain|Near|A|C1_FINGERPRINT|explanation|248f810754d770cc": {
+    "text": "Near's TVL of $100M-$500M and its rank of 24 suggest it's still growing, especially with 44 protocols contributing to its ecosystem. This relatively high number of protocols indicates a diverse range of applications, which can help attract more users and liquidity over time.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-25T01:12:35.942Z"
+  },
+  "2026-08-25|chain|Near|B|C2_CHAIN_COMPARISON|explanation|99ee773af7f6d19e": {
+    "text": "Near's $112M TVL outpaces Stacks' $85M by 24.1%, reflecting its stronger developer activity and user adoption, which are crucial for building a vibrant DeFi ecosystem. This difference suggests that Near's infrastructure and community engagement are currently more appealing to DeFi projects compared to Stacks.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-25T01:12:37.773Z"
+  },
+  "2026-08-25|chain|Near|C|C4_GROWTH_RANKING|explanation|0605ca511d03f62e": {
+    "text": "Tempo's impressive 76.6% growth outpaces other chains significantly, with Base and Ethereum at +18.4% and +17.2% respectively, while Near only managed a modest +4.2%. This stark contrast highlights Tempo's rapid adoption and potential as a rising player in the DeFi landscape, while Near's slower growth suggests it may be facing challenges in attracting new users or capital.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-25T01:12:39.852Z"
+  },
+  "2026-08-25|chain|Near|D|C3_ATH_TIMING|explanation|d0a9c03b3c0cf366": {
+    "text": "Near reached its all-time high (ATH) of $482M in May 2022, a peak that coincided with a broader DeFi market surge. In contrast, the other months listed, like April 2024 and November 2025, are future dates, while earlier months like August 2021 and April 2022 saw significantly lower TVL for Near, showcasing the protocol's growth trajectory during that period.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-25T01:12:41.280Z"
+  },
+  "2026-08-25|chain|Near|E|C6_TOP_DEX|explanation|c9b9c73ec68e7bf2": {
+    "text": "NEAR Intents leads the pack on the Near chain with $111M in volume, significantly outpacing Rhea Dex at $29M and THORSwap at just $3M. This stark difference underscores NEAR Intents' dominance in the ecosystem, reflecting its popularity and user trust compared to other platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-25T01:12:42.770Z"
   }
 }
