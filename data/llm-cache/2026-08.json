@@ -623,5 +623,30 @@
     "text": "NEAR Intents leads the pack on the Near chain with $111M in volume, significantly outpacing Rhea Dex at $29M and THORSwap at just $3M. This stark difference underscores NEAR Intents' dominance in the ecosystem, reflecting its popularity and user trust compared to other platforms.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-08-25T01:12:42.770Z"
+  },
+  "2026-08-26|protocol|jupiter-lend|A|P1_FINGERPRINT|explanation|9cb4fcfcfed41c3a": {
+    "text": "Jupiter Lend's $1.1B TVL on Solana illustrates its strong foothold in the lending sector, especially given that it's operating on a single chain. This concentration can lead to higher efficiency and lower transaction costs, making it an attractive option for users within the Solana ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-26T01:14:59.410Z"
+  },
+  "2026-08-26|protocol|jupiter-lend|B|P13_TVL_RANK_COMPARISON|explanation|11e4d4f690ef2cb6": {
+    "text": "HashKey Exchange leads with $1.7B in TVL, outpacing Jupiter Lend's $1.1B by 36.3%, which reflects HashKey's stronger user adoption or liquidity incentives compared to Jupiter Lend's offerings. This difference in TVL can indicate varying levels of trust and engagement within their respective communities.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-26T01:15:01.675Z"
+  },
+  "2026-08-26|protocol|jupiter-lend|C|P5_FEES_REVENUE|explanation|ff3d4b696b04f2b2": {
+    "text": "Jupiter Lend generated $689K in fees over the past week, but only $35K of that translated into revenue, indicating that their revenue model captures just 5% of total fees. This low revenue percentage suggests high operational costs or competitive pricing strategies that may impact profitability.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-26T01:15:02.650Z"
+  },
+  "2026-08-26|protocol|jupiter-lend|D|P4_ATH_TIMING|explanation|3c20e1b306143f49": {
+    "text": "Jupiter Lend reached its ATH of $1.2B in March 2026, which stands out against other choices like September 2025 and February 2026, when it had not yet achieved that level of TVL. This timing suggests that Jupiter Lend experienced significant growth leading up to its peak, likely driven by increased user adoption or new features introduced around that period.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-26T01:15:04.975Z"
+  },
+  "2026-08-26|protocol|jupiter-lend|E|P8_CHAIN_MEMBERSHIP|explanation|12d486f19482dffb": {
+    "text": "Jupiter Lend operates solely on Solana, which allows it to leverage the blockchain's high throughput and low transaction costs, making it attractive for users seeking efficient lending solutions. This single-chain focus can lead to deeper liquidity and a more streamlined user experience compared to multi-chain platforms.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-26T01:15:06.468Z"
   }
 }
