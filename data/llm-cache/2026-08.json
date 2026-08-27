@@ -648,5 +648,30 @@
     "text": "Jupiter Lend operates solely on Solana, which allows it to leverage the blockchain's high throughput and low transaction costs, making it attractive for users seeking efficient lending solutions. This single-chain focus can lead to deeper liquidity and a more streamlined user experience compared to multi-chain platforms.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-08-26T01:15:06.468Z"
+  },
+  "2026-08-27|chain|Tempo|A|C1_FINGERPRINT|explanation|94a1ed51db9f69da": {
+    "text": "Tempo ranks 41st in TVL with less than $50M, which reflects its relatively niche position in the DeFi landscape, especially considering it supports 13 protocols. This lower TVL and protocol count suggest that Tempo may be focusing on specialized services rather than broad market appeal.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-27T07:45:33.961Z"
+  },
+  "2026-08-27|chain|Tempo|B|C10_PROTOCOL_COUNT|explanation|e7adfa5f6318216c": {
+    "text": "Tempo supports 13 protocols, showcasing its versatility and appeal as a platform for developers looking to build diverse DeFi applications. This variety can attract a broader user base and enhance liquidity across its ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-27T07:45:35.426Z"
+  },
+  "2026-08-27|chain|Tempo|C|C6_TOP_DEX|explanation|fc9b688963df3c67": {
+    "text": "Tempo's Stablecoin Dex leads with $14K in volume, significantly outpacing Uniswap V2 at $5K and Uniswap V4 at $2K, showcasing its dominance in the Tempo ecosystem. This high volume suggests strong user preference for Tempo's offerings, especially compared to the lower activity on other Dexes.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-27T07:45:36.504Z"
+  },
+  "2026-08-27|chain|Tempo|D|C4_GROWTH_RANKING|explanation|41c2eb094b57368d": {
+    "text": "Tempo's impressive 76.6% growth outpaces other chains like Flare at 16.1% and Avalanche at 13.7%, indicating a significant surge in user interest or activity. This stark difference suggests that Tempo may be attracting new projects or users more effectively than its competitors, highlighting its potential as a rising player in the DeFi space.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-27T07:45:37.479Z"
+  },
+  "2026-08-27|chain|Tempo|E|C13_LAYER_TYPE|explanation|f543d79f83d702ad": {
+    "text": "Tempo operates as a Layer 1 blockchain, which means it has its own independent consensus mechanism and does not rely on another chain for security or transaction validation. This autonomy allows Tempo to optimize its performance and scalability according to its specific use cases.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-27T07:45:38.163Z"
   }
 }
