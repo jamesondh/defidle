@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-08-28:protocol:wbtc",
+  "dateUtc": "2026-08-28",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "wbtc",
+    "name": "WBTC",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: single-chain",
+        "Active since: 2019",
+        "TVL rank: top 10"
+      ],
+      "choices": [
+        "Aave V3",
+        "WBTC",
+        "Lorenzo enzoBTC",
+        "Binance staked ETH",
+        "SSV Network"
+      ],
+      "answerIndex": 1,
+      "explanation": "WBTC's $9.1B TVL is significant as it represents a bridge between Bitcoin and Ethereum, allowing Bitcoin holders to participate in DeFi while maintaining their exposure to the original asset. With its presence on a single chain, WBTC showcases the strong demand for Bitcoin-backed assets in the DeFi ecosystem.",
+      "difficulty": "hard",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": 0.15102424736894188
+      },
+      "difficultyScore": 0.45760242473689416
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is WBTC?",
+      "choices": [
+        "Lending",
+        "Payments",
+        "Gaming",
+        "Bridge"
+      ],
+      "answerIndex": 3,
+      "explanation": "WBTC serves as a bridge between Bitcoin and Ethereum, allowing Bitcoin holders to access DeFi applications on the Ethereum network. This interoperability is crucial for expanding liquidity and use cases for both assets within the DeFi ecosystem.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.5,
+        "volatility": 0.15102424736894188
+      },
+      "difficultyScore": 0.2776024247368942
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is WBTC's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 1,
+      "explanation": "WBTC's current TVL of $9.1B is 43% below its all-time high of $15.8B, which suggests a significant drop in demand or market activity compared to its peak. This distance indicates that while WBTC remains a major player in the DeFi space, it has not yet regained the momentum it once had.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.2962328871030448,
+        "volatility": 0.15102424736894188
+      },
+      "difficultyScore": 0.3376024247368942
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Bridge protocols from highest to lowest TVL.",
+      "choices": [
+        "WBTC > Coinbase Bridge > JustCryptos",
+        "Coinbase Bridge > WBTC > JustCryptos",
+        "WBTC > JustCryptos > Coinbase Bridge",
+        "Coinbase Bridge > JustCryptos > WBTC"
+      ],
+      "answerIndex": 0,
+      "explanation": "WBTC leads the bridge category with a TVL of $9.1B, significantly outpacing Coinbase Bridge at $7.8B, which reflects WBTC's strong adoption as a wrapped Bitcoin solution for DeFi applications. This dominance indicates that users prefer WBTC for liquidity and interoperability across Ethereum-based platforms.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.14045512434682553,
+        "volatility": 0.15102424736894188
+      },
+      "difficultyScore": 0.5090562755207035
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "WBTC's TVL increased over the past 30 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "WBTC's TVL has increased by 24.8% to reach $9.1B, reflecting growing demand for wrapped Bitcoin as it enables users to leverage Bitcoin's value within the Ethereum ecosystem. This trend suggests that more investors are looking to utilize Bitcoin in DeFi applications, enhancing liquidity and trading opportunities.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.24805514645799928,
+        "volatility": 0.15102424736894188
+      },
+      "difficultyScore": 0.09993624898729506
+    }
+  ],
+  "generatedAt": "2026-08-28T09:50:26.229Z"
+}
