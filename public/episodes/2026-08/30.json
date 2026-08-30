@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-08-30:protocol:lista-lending",
+  "dateUtc": "2026-08-30",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "lista-lending",
+    "name": "Lista Lending",
+    "category": "Lending"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Lending",
+        "Chains: 2-5 chains",
+        ">90% TVL on single chain",
+        "TVL: $500M-$1B",
+        "7d change: roughly flat"
+      ],
+      "choices": [
+        "Compound V3",
+        "SparkLend",
+        "Rocket Pool",
+        "Lista Lending"
+      ],
+      "answerIndex": 3,
+      "explanation": "Lista Lending's $832M TVL across Ethereum and Binance shows its ability to attract liquidity on multiple chains, which is crucial for diversifying risk and enhancing user access to lending services. This dual-chain presence often helps protocols tap into different user bases and liquidity pools, driving overall growth.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.12721889979842607
+      },
+      "difficultyScore": 0.39522188997984264
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Lista Lending have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Binance"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lista Lending's $824M TVL on Binance dwarfs the mere $8M on Ethereum, showcasing a striking 99% margin difference that reflects Binance's growing appeal for lending protocols, likely due to lower fees and faster transaction speeds compared to Ethereum. This disparity suggests that users are increasingly favoring Binance for lending activities, impacting where liquidity is concentrated in the DeFi landscape.",
+      "difficulty": "easy",
+      "llmFallback": false,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9901733461475081,
+        "volatility": 0.12721889979842607
+      },
+      "difficultyScore": 0.21522188997984262
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Lista Lending's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Lista Lending generated $220K in revenue over the past week, with fees accounting for $97K, which means that fees made up about 44% of its revenue. The significant 226% revenue growth suggests strong user demand and effective fee structures, indicating that the platform is successfully attracting borrowers and lenders.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0.12721889979842607
+      },
+      "difficultyScore": 0.3052218899798426
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Lista Lending hit its all-time high TVL?",
+      "choices": [
+        "Dec 2025",
+        "May 2025",
+        "Oct 2025",
+        "Jun 2025",
+        "Aug 2025",
+        "Jul 2026"
+      ],
+      "answerIndex": 2,
+      "explanation": "Lista Lending hit its all-time high (ATH) of $1.2B in October 2025, a significant milestone that came before other options like December 2025 and June 2025, which were too late to capture its peak performance. This timing reflects the protocol's rapid growth and adoption in the lending space during that period.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.12721889979842607
+      },
+      "difficultyScore": 0.4952218899798426
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Lista Lending's TVL is on its top chain (Binance)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Lista Lending's TVL is heavily concentrated on Binance, with 99% of its $832M locked on that chain, which shows how reliant it is on a single ecosystem for its liquidity. This concentration can lead to vulnerabilities if market conditions on Binance change significantly.",
+      "difficulty": "medium",
+      "llmFallback": false,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9610758784589288,
+        "volatility": 0.12721889979842607
+      },
+      "difficultyScore": 0.3052218899798426
+    }
+  ],
+  "generatedAt": "2026-08-30T03:54:02.302Z"
+}

@@ -723,5 +723,30 @@
     "text": "Uniswap V3 leads Arbitrum with a significant $118M in volume, far outpacing Uniswap V4 at $33M and Metric V2 at $18M. This dominance suggests that users prefer the established liquidity and features of V3, which can drive more trading activity compared to newer or less popular DEXs on the chain.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-08-29T05:50:40.098Z"
+  },
+  "2026-08-30|protocol|lista-lending|A|P1_FINGERPRINT|explanation|9d98df6899098882": {
+    "text": "Lista Lending's $832M TVL across Ethereum and Binance shows its ability to attract liquidity on multiple chains, which is crucial for diversifying risk and enhancing user access to lending services. This dual-chain presence often helps protocols tap into different user bases and liquidity pools, driving overall growth.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-30T03:53:57.161Z"
+  },
+  "2026-08-30|protocol|lista-lending|B|P2_CROSSCHAIN|explanation|306e5bbcf46d0d5d": {
+    "text": "Lista Lending's $824M TVL on Binance dwarfs the mere $8M on Ethereum, showcasing a striking 99% margin difference that reflects Binance's growing appeal for lending protocols, likely due to lower fees and faster transaction speeds compared to Ethereum. This disparity suggests that users are increasingly favoring Binance for lending activities, impacting where liquidity is concentrated in the DeFi landscape.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-30T03:53:58.486Z"
+  },
+  "2026-08-30|protocol|lista-lending|C|P5_FEES_REVENUE|explanation|ed73481114ffe470": {
+    "text": "Lista Lending generated $220K in revenue over the past week, with fees accounting for $97K, which means that fees made up about 44% of its revenue. The significant 226% revenue growth suggests strong user demand and effective fee structures, indicating that the platform is successfully attracting borrowers and lenders.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-30T03:53:59.834Z"
+  },
+  "2026-08-30|protocol|lista-lending|D|P4_ATH_TIMING|explanation|0d026b2448c7e90b": {
+    "text": "Lista Lending hit its all-time high (ATH) of $1.2B in October 2025, a significant milestone that came before other options like December 2025 and June 2025, which were too late to capture its peak performance. This timing reflects the protocol's rapid growth and adoption in the lending space during that period.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-30T03:54:01.021Z"
+  },
+  "2026-08-30|protocol|lista-lending|E|P3_CONCENTRATION|explanation|9cc841f497f66b2c": {
+    "text": "Lista Lending's TVL is heavily concentrated on Binance, with 99% of its $832M locked on that chain, which shows how reliant it is on a single ecosystem for its liquidity. This concentration can lead to vulnerabilities if market conditions on Binance change significantly.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-30T03:54:02.302Z"
   }
 }
