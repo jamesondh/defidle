@@ -748,5 +748,30 @@
     "text": "Lista Lending's TVL is heavily concentrated on Binance, with 99% of its $832M locked on that chain, which shows how reliant it is on a single ecosystem for its liquidity. This concentration can lead to vulnerabilities if market conditions on Binance change significantly.",
     "model": "gpt-4o-mini",
     "generatedAt": "2026-08-30T03:54:02.302Z"
+  },
+  "2026-08-31|protocol|xstocks|A|P1_FINGERPRINT|explanation|77d5ec72cc78319b": {
+    "text": "xStocks has achieved $429M in TVL across Arbitrum and Solana, showcasing its appeal in the real-world asset (RWA) category. The dual-chain strategy allows it to tap into diverse user bases and liquidity, which is crucial for RWAs that often require robust infrastructure to manage asset-backed tokens effectively.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-31T03:56:57.177Z"
+  },
+  "2026-08-31|protocol|xstocks|B|P2_CROSSCHAIN|explanation|29559053b1e489b0": {
+    "text": "xStocks has a significant advantage on Solana with $429M in TVL compared to just $9K on Arbitrum, reflecting Solana's stronger ecosystem and user adoption for this protocol. The 100% margin indicates that xStocks is effectively leveraging Solana's capabilities, making it a clear winner in this cross-chain comparison.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-31T03:56:58.493Z"
+  },
+  "2026-08-31|protocol|xstocks|C|P22_CATEGORY_MARKET_SHARE|explanation|29c5e8d8e6ca7339": {
+    "text": "xStocks holds a $429M TVL, capturing about 2% of the $21.4B total in the RWA category, which shows that while it's a notable player, there's significant room for growth as the market for real-world assets continues to expand. This relatively small share suggests that many users are still exploring options in this emerging segment of DeFi.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-31T03:56:59.452Z"
+  },
+  "2026-08-31|protocol|xstocks|D|P4_ATH_TIMING|explanation|a0dda2f722dce329": {
+    "text": "xStocks reached its all-time high (ATH) of $582M in June 2026, a significant milestone that outpaced other contenders like July 2025 and April 2026, which were earlier in the year but did not capture the same level of growth. This timing suggests that xStocks experienced a surge in popularity and adoption leading up to its peak, distinguishing it from the other months listed.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-31T03:57:00.811Z"
+  },
+  "2026-08-31|protocol|xstocks|E|P3_CONCENTRATION|explanation|044eb27224e2310e": {
+    "text": "xStocks operates exclusively on Solana, with its entire $429M TVL concentrated on this single chain. This level of concentration can indicate a strong reliance on Solana's infrastructure and user base, making it particularly sensitive to any changes in that ecosystem.",
+    "model": "gpt-4o-mini",
+    "generatedAt": "2026-08-31T03:57:02.224Z"
   }
 }
