@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-09-01:chain:Cronos",
+  "dateUtc": "2026-09-01",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Cronos",
+    "name": "Cronos"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: CRO",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "Cronos",
+        "Hyperliquid L1",
+        "Ink",
+        "Polygon",
+        "OP Mainnet",
+        "Gnosis"
+      ],
+      "answerIndex": 0,
+      "explanation": "Cronos is ranked #18 by TVL with $100M-$500M locked across 139 protocols.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Cronos or Sui?",
+      "choices": [
+        "Cronos",
+        "Sui"
+      ],
+      "answerIndex": 1,
+      "explanation": "Sui has 53.6% more TVL than Cronos ($449M vs $209M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.5355881341330598,
+        "volatility": null
+      },
+      "difficultyScore": 0.2095
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Cronos",
+        "Monad",
+        "Base",
+        "Morph"
+      ],
+      "answerIndex": 3,
+      "explanation": "Morph had the highest 30-day TVL growth at 799.7%, outpacing Base (+19.4%), Monad (+14.7%), Cronos (-18.3%).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 1,
+        "volatility": null
+      },
+      "difficultyScore": 0.35950000000000004
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Cronos hit its all-time high TVL?",
+      "choices": [
+        "Jul 2022",
+        "Sep 2022",
+        "Apr 2022",
+        "May 2024",
+        "May 2022",
+        "Oct 2023"
+      ],
+      "answerIndex": 2,
+      "explanation": "Cronos's historical TVL peak is based on DefiLlama data as of 2026-09-01.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Cronos?",
+      "choices": [
+        "Ferro",
+        "VVS Standard",
+        "VVS Flawless",
+        "Crodex"
+      ],
+      "answerIndex": 2,
+      "explanation": "VVS Flawless is the top DEX on Cronos with $13M in 24h volume, ahead of Ferro ($4M), VVS Standard ($624K), Crodex ($12K).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.724116074454817,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-09-01T03:48:12.897Z"
+}
