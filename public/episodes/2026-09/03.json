@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-09-03:chain:Plasma",
+  "dateUtc": "2026-09-03",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Plasma",
+    "name": "Plasma"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: XPL",
+        "Protocols: 50-100"
+      ],
+      "choices": [
+        "Base",
+        "Starknet",
+        "Cronos",
+        "Stellar",
+        "Flare",
+        "Plasma"
+      ],
+      "answerIndex": 5,
+      "explanation": "Plasma is ranked #13 by TVL with $500M-$1B locked across 73 protocols.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Plasma or Monad?",
+      "choices": [
+        "Plasma",
+        "Monad"
+      ],
+      "answerIndex": 1,
+      "explanation": "Monad has 38.0% more TVL than Plasma ($956M vs $592M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.38023674881219766,
+        "volatility": null
+      },
+      "difficultyScore": 0.2095
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Mezo",
+        "Monad",
+        "Ink",
+        "Plasma"
+      ],
+      "answerIndex": 2,
+      "explanation": "Ink had the highest 30-day TVL growth at 28.6%, outpacing Mezo (+18.0%), Monad (+14.7%), Plasma (-8.4%).",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.10681023645090315,
+        "volatility": null
+      },
+      "difficultyScore": 0.5313277162589163
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Plasma hit its all-time high TVL?",
+      "choices": [
+        "Dec 2025",
+        "Oct 2025",
+        "Aug 2026",
+        "Mar 2026",
+        "Jul 2026",
+        "Jan 2026"
+      ],
+      "answerIndex": 1,
+      "explanation": "Plasma's historical TVL peak is based on DefiLlama data as of 2026-09-03.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Plasma?",
+      "choices": [
+        "Uniswap V3",
+        "Fluid DEX",
+        "Plasma One",
+        "Curve DEX"
+      ],
+      "answerIndex": 0,
+      "explanation": "Uniswap V3 is the top DEX on Plasma with $3M in 24h volume, ahead of Fluid DEX ($522K), Plasma One ($521K), Curve DEX ($89K).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.7951557899916305,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-09-03T03:10:14.556Z"
+}
