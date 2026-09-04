@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-09-04:protocol:fluid-lending",
+  "dateUtc": "2026-09-04",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "fluid-lending",
+    "name": "Fluid Lending",
+    "category": "Lending"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Lending",
+        "Chains: 2-5 chains",
+        "TVL: $500M-$1B",
+        "7d change: roughly flat"
+      ],
+      "choices": [
+        "Fluid Lending",
+        "Aave V3",
+        "HyperLend Pooled",
+        "Uniswap V4"
+      ],
+      "answerIndex": 0,
+      "explanation": "Fluid Lending is a Lending protocol deployed on 5 chains with $752M TVL.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.0612241656541068
+      },
+      "difficultyScore": 0.38862241656541074
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Fluid Lending have higher TVL?",
+      "choices": [
+        "Plasma",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Fluid Lending has 90% more TVL on Ethereum ($524M) compared to Plasma ($51M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9026008429383423,
+        "volatility": 0.0612241656541068
+      },
+      "difficultyScore": 0.2086224165654107
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did Fluid Lending's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 2,
+      "explanation": "Fluid Lending's fees trend is based on DefiLlama data as of 2026-09-04.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.04383723045734533,
+        "volatility": 0.0612241656541068
+      },
+      "difficultyScore": 0.5460177400165963
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Fluid Lending hit its all-time high TVL?",
+      "choices": [
+        "Nov 2025",
+        "Jan 2026",
+        "Oct 2025",
+        "Apr 2024",
+        "Mar 2026",
+        "May 2024"
+      ],
+      "answerIndex": 2,
+      "explanation": "Fluid Lending reached its all-time high TVL of $2.4B in Oct 2025.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.0612241656541068
+      },
+      "difficultyScore": 0.4886224165654107
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Fluid Lending's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 2,
+      "explanation": "Ethereum holds 70% of Fluid Lending's total TVL ($524M of $752M).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.21165859368356887,
+        "volatility": 0.0612241656541068
+      },
+      "difficultyScore": 0.34463210414512807
+    }
+  ],
+  "generatedAt": "2026-09-04T03:08:18.220Z"
+}
