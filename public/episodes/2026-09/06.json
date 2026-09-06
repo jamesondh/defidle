@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-09-06:protocol:figure-markets-exchange",
+  "dateUtc": "2026-09-06",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "figure-markets-exchange",
+    "name": "Figure Markets Exchange",
+    "category": "OTC Marketplace"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: OTC Marketplace",
+        "Chains: single-chain",
+        "TVL: $100M-$500M",
+        "7d change: up >10%"
+      ],
+      "choices": [
+        "Figure Markets Exchange",
+        "Sentora Curator",
+        "Spark Liquidity Layer",
+        "Maple",
+        "Circle USYC",
+        "JustLend V1"
+      ],
+      "answerIndex": 0,
+      "explanation": "Figure Markets Exchange is a OTC Marketplace protocol deployed on 1 chains with $165M TVL.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.9127004553868433
+      },
+      "difficultyScore": 0.4737700455386844
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P13_TVL_RANK_COMPARISON",
+      "format": "ab",
+      "prompt": "Which protocol has higher TVL?",
+      "choices": [
+        "USDT0",
+        "Figure Markets Exchange"
+      ],
+      "answerIndex": 0,
+      "explanation": "USDT0 has higher TVL than Figure Markets Exchange ($3.2B vs $165M, a 94.8% difference).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9482215222494164,
+        "volatility": 0.9127004553868433
+      },
+      "difficultyScore": 0.29377004553868435
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Figure Markets Exchange's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Figure Markets Exchange generated $2K in fees over the past 7 days, with 100% going to protocol revenue.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0.9127004553868433
+      },
+      "difficultyScore": 0.3837700455386844
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Figure Markets Exchange hit its all-time high TVL?",
+      "choices": [
+        "Jun 2026",
+        "Dec 2025",
+        "Sep 2025",
+        "Nov 2025",
+        "Jul 2026",
+        "Jul 2025"
+      ],
+      "answerIndex": 0,
+      "explanation": "Figure Markets Exchange reached its all-time high TVL of $584M in Jun 2026.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.9127004553868433
+      },
+      "difficultyScore": 0.5737700455386844
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "tf",
+      "prompt": "Figure Markets Exchange is deployed on Ethereum.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "explanation": "Figure Markets Exchange is deployed on 1 chains including Provenance.",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.9127004553868433
+      },
+      "difficultyScore": 0.20377004553868433
+    }
+  ],
+  "generatedAt": "2026-09-06T03:10:31.722Z"
+}
