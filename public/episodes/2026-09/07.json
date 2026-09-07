@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-09-07:protocol:function-fbtc",
+  "dateUtc": "2026-09-07",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "function-fbtc",
+    "name": "Function FBTC",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: single-chain",
+        "TVL: $500M-$1B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Function FBTC",
+        "Spark Savings",
+        "Binance Bitcoin",
+        "Hyperliquid Bridge"
+      ],
+      "answerIndex": 0,
+      "explanation": "Function FBTC is a Bridge protocol deployed on 1 chains with $685M TVL.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.16968372262846293
+      },
+      "difficultyScore": 0.39946837226284637
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Function FBTC?",
+      "choices": [
+        "NftFi",
+        "Services",
+        "Liquidity Automation",
+        "Bridge"
+      ],
+      "answerIndex": 3,
+      "explanation": "Function FBTC's protocol category is based on DefiLlama data as of 2026-09-07.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.16968372262846293
+      },
+      "difficultyScore": 0.30946837226284635
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Function FBTC's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 2,
+      "explanation": "Function FBTC is currently 58% below its all-time high TVL of $1.6B, now at $685M.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.3163170722028022,
+        "volatility": 0.16968372262846293
+      },
+      "difficultyScore": 0.36946837226284635
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Bridge protocols from highest to lowest TVL.",
+      "choices": [
+        "Function FBTC > WBTC > Hyperliquid Bridge",
+        "Hyperliquid Bridge > WBTC > Function FBTC",
+        "WBTC > Function FBTC > Hyperliquid Bridge",
+        "WBTC > Hyperliquid Bridge > Function FBTC"
+      ],
+      "answerIndex": 3,
+      "explanation": "Function FBTC's DeFi metrics is based on DefiLlama data as of 2026-09-07.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.2851472875417682,
+        "volatility": 0.16968372262846293
+      },
+      "difficultyScore": 0.4094683722628464
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Function FBTC deployed on?",
+      "choices": [
+        "BSC",
+        "Fantom",
+        "Optimism",
+        "Bitcoin"
+      ],
+      "answerIndex": 3,
+      "explanation": "Function FBTC is deployed on 1 chains including Bitcoin.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.16968372262846293
+      },
+      "difficultyScore": 0.30946837226284635
+    }
+  ],
+  "generatedAt": "2026-09-07T03:08:46.262Z"
+}
