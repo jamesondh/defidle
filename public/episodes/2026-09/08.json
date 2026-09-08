@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-09-08:chain:Cronos",
+  "dateUtc": "2026-09-08",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Cronos",
+    "name": "Cronos"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: CRO",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "Mantle",
+        "Starknet",
+        "Stellar",
+        "Robinhood Chain",
+        "Arbitrum",
+        "Cronos"
+      ],
+      "answerIndex": 5,
+      "explanation": "Cronos is ranked #16 by TVL with $100M-$500M locked across 139 protocols.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Cronos or Starknet?",
+      "choices": [
+        "Starknet",
+        "Cronos"
+      ],
+      "answerIndex": 1,
+      "explanation": "Cronos has 38.6% more TVL than Starknet ($263M vs $161M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.3857119984636244,
+        "volatility": null
+      },
+      "difficultyScore": 0.2095
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "ab",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Solana",
+        "X Layer",
+        "Flare",
+        "Cronos"
+      ],
+      "answerIndex": 1,
+      "explanation": "X Layer had the highest 30-day TVL growth at 31.5%, outpacing Solana (+25.5%), Flare (+24.3%), Cronos (+4.2%).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.0608337087790794,
+        "volatility": null
+      },
+      "difficultyScore": 0.4964995494651047
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Cronos hit its all-time high TVL?",
+      "choices": [
+        "Dec 2024",
+        "Oct 2022",
+        "Jun 2022",
+        "Jan 2022",
+        "Mar 2022",
+        "Apr 2022"
+      ],
+      "answerIndex": 5,
+      "explanation": "Cronos's historical TVL peak is based on DefiLlama data as of 2026-09-08.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Cronos?",
+      "choices": [
+        "Ferro",
+        "Fulcrom AMM",
+        "VVS Standard",
+        "VVS Flawless"
+      ],
+      "answerIndex": 2,
+      "explanation": "VVS Standard is the top DEX on Cronos with $1M in 24h volume, ahead of VVS Flawless ($723K), Fulcrom AMM ($201K), Ferro ($49K).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.4674748512717535,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-09-08T03:17:09.396Z"
+}
