@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-09-11:protocol:ccip",
+  "dateUtc": "2026-09-11",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "ccip",
+    "name": "CCIP",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: 10+ chains",
+        "TVL: $1B-$5B",
+        "7d change: roughly flat"
+      ],
+      "choices": [
+        "Binance Bitcoin",
+        "Tether Gold",
+        "Polygon Bridge",
+        "JustLend V1",
+        "Function FBTC",
+        "CCIP"
+      ],
+      "answerIndex": 5,
+      "explanation": "CCIP is a Bridge protocol deployed on 21 chains with $1.8B TVL.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.08049365971852299
+      },
+      "difficultyScore": 0.4805493659718523
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does CCIP have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Solana"
+      ],
+      "answerIndex": 0,
+      "explanation": "CCIP has 92% more TVL on Ethereum ($1.5B) compared to Solana ($124M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9153559466026738,
+        "volatility": 0.08049365971852299
+      },
+      "difficultyScore": 0.2105493659718523
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is CCIP's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 0,
+      "explanation": "CCIP is currently 15% below its all-time high TVL of $2.1B, now at $1.8B.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.40502039098953546,
+        "volatility": 0.08049365971852299
+      },
+      "difficultyScore": 0.36054936597185233
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Bridge protocols from highest to lowest TVL.",
+      "choices": [
+        "Coinbase Bridge > Binance Bitcoin > CCIP",
+        "CCIP > Binance Bitcoin > Coinbase Bridge",
+        "Binance Bitcoin > CCIP > Coinbase Bridge",
+        "Coinbase Bridge > CCIP > Binance Bitcoin"
+      ],
+      "answerIndex": 0,
+      "explanation": "CCIP's DeFi metrics is based on DefiLlama data as of 2026-09-11.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.3303091823431543,
+        "volatility": 0.08049365971852299
+      },
+      "difficultyScore": 0.4005493659718523
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of CCIP's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Ethereum holds 83% of CCIP's total TVL ($1.5B of $1.8B).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.33871833781597394,
+        "volatility": 0.08049365971852299
+      },
+      "difficultyScore": 0.30054936597185233
+    }
+  ],
+  "generatedAt": "2026-09-11T03:15:05.839Z"
+}
