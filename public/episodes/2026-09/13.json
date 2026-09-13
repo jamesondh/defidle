@@ -1,0 +1,138 @@
+{
+  "episodeId": "2026-09-13:protocol:babylon-protocol",
+  "dateUtc": "2026-09-13",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "babylon-protocol",
+    "name": "Babylon Protocol",
+    "category": "Restaking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Restaking",
+        "Chains: single-chain",
+        "TVL rank: top 25"
+      ],
+      "choices": [
+        "EigenCloud",
+        "Morpho Blue",
+        "BlackRock BUIDL",
+        "Babylon Protocol",
+        "SparkLend"
+      ],
+      "answerIndex": 3,
+      "explanation": "Babylon Protocol is a Restaking protocol deployed on 1 chains with $3.2B TVL.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.16275526783947794
+      },
+      "difficultyScore": 0.4707755267839478
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Babylon Protocol?",
+      "choices": [
+        "Basis Trading",
+        "Partially Algorithmic Stablecoin",
+        "Restaking",
+        "NFT Lending"
+      ],
+      "answerIndex": 2,
+      "explanation": "Babylon Protocol's protocol category is based on DefiLlama data as of 2026-09-13.",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.5,
+        "volatility": 0.16275526783947794
+      },
+      "difficultyScore": 0.2907755267839478
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Babylon Protocol's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 2,
+      "explanation": "Babylon Protocol is currently 56% below its all-time high TVL of $7.1B, now at $3.2B.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.2218460045674081,
+        "volatility": 0.16275526783947794
+      },
+      "difficultyScore": 0.38456032130305806
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Restaking protocols from highest to lowest TVL.",
+      "choices": [
+        "Solayer Restaking > Babylon Protocol > EigenCloud",
+        "Babylon Protocol > Solayer Restaking > EigenCloud",
+        "EigenCloud > Solayer Restaking > Babylon Protocol",
+        "EigenCloud > Babylon Protocol > Solayer Restaking"
+      ],
+      "answerIndex": 3,
+      "explanation": "Babylon Protocol's DeFi metrics is based on DefiLlama data as of 2026-09-13.",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.5209171198950441,
+        "volatility": 0.16275526783947794
+      },
+      "difficultyScore": 0.3907755267839478
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "Babylon Protocol's TVL increased over the past 30 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Babylon Protocol's TVL trend is based on DefiLlama data as of 2026-09-13.",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.22381841237452102,
+        "volatility": 0.16275526783947794
+      },
+      "difficultyScore": 0.14219343193452255
+    }
+  ],
+  "generatedAt": "2026-09-13T03:26:00.852Z"
+}
