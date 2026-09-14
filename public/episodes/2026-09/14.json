@@ -1,0 +1,138 @@
+{
+  "episodeId": "2026-09-14:protocol:eigencloud",
+  "dateUtc": "2026-09-14",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "eigencloud",
+    "name": "EigenCloud",
+    "category": "Restaking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Restaking",
+        "Chains: single-chain",
+        "TVL rank: top 10"
+      ],
+      "choices": [
+        "EigenCloud",
+        "LayerZero V2",
+        "WBTC",
+        "Babylon Protocol",
+        "SSV Network"
+      ],
+      "answerIndex": 0,
+      "explanation": "EigenCloud is a Restaking protocol deployed on 1 chains with $6.5B TVL.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": 0.17433572115271095
+      },
+      "difficultyScore": 0.4599335721152711
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is EigenCloud?",
+      "choices": [
+        "CDP Manager",
+        "Volume Boosting",
+        "Telegram Bot",
+        "Restaking"
+      ],
+      "answerIndex": 3,
+      "explanation": "EigenCloud's protocol category is based on DefiLlama data as of 2026-09-14.",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.5,
+        "volatility": 0.17433572115271095
+      },
+      "difficultyScore": 0.2799335721152711
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is EigenCloud's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 2,
+      "explanation": "EigenCloud is currently 70% below its all-time high TVL of $22.1B, now at $6.5B.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.18109047391923924,
+        "volatility": 0.17433572115271095
+      },
+      "difficultyScore": 0.422625003412184
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Restaking protocols from highest to lowest TVL.",
+      "choices": [
+        "Babylon Protocol > Solayer Restaking > EigenCloud",
+        "Solayer Restaking > Babylon Protocol > EigenCloud",
+        "EigenCloud > Babylon Protocol > Solayer Restaking",
+        "Babylon Protocol > EigenCloud > Solayer Restaking"
+      ],
+      "answerIndex": 2,
+      "explanation": "EigenCloud's DeFi metrics is based on DefiLlama data as of 2026-09-14.",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.5147497959185008,
+        "volatility": 0.17433572115271095
+      },
+      "difficultyScore": 0.3799335721152711
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "EigenCloud's TVL increased over the past 30 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "EigenCloud's TVL trend is based on DefiLlama data as of 2026-09-14.",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.29965827475999685,
+        "volatility": 0.17433572115271095
+      },
+      "difficultyScore": 0.0999335721152711
+    }
+  ],
+  "generatedAt": "2026-09-14T03:36:49.107Z"
+}
