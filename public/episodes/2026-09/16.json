@@ -1,0 +1,138 @@
+{
+  "episodeId": "2026-09-16:protocol:marinade-native",
+  "dateUtc": "2026-09-16",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "marinade-native",
+    "name": "Marinade Native",
+    "category": "Staking Pool"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Staking Pool",
+        "Chains: single-chain",
+        "TVL: $100M-$500M",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "StakeWise V3",
+        "SSV Network",
+        "Marinade Native"
+      ],
+      "answerIndex": 2,
+      "explanation": "Marinade Native is a Staking Pool protocol deployed on 1 chains with $368M TVL.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.37722657956752825
+      },
+      "difficultyScore": 0.4202226579567529
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Marinade Native?",
+      "choices": [
+        "Treasury Manager",
+        "Gamified Mining",
+        "Staking Pool",
+        "Charity Fundraising"
+      ],
+      "answerIndex": 2,
+      "explanation": "Marinade Native's protocol category is based on DefiLlama data as of 2026-09-16.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.37722657956752825
+      },
+      "difficultyScore": 0.3302226579567529
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Marinade Native's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 2,
+      "explanation": "Marinade Native is currently 70% below its all-time high TVL of $1.2B, now at $368M.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.219933251811114,
+        "volatility": 0.37722657956752825
+      },
+      "difficultyScore": 0.4263027557834161
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Staking Pool protocols from highest to lowest TVL.",
+      "choices": [
+        "Obol > Marinade Native > Marinade Select",
+        "Obol > Marinade Select > Marinade Native",
+        "Marinade Select > Marinade Native > Obol",
+        "Marinade Select > Obol > Marinade Native"
+      ],
+      "answerIndex": 0,
+      "explanation": "Marinade Native's DeFi metrics is based on DefiLlama data as of 2026-09-16.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.400531250962381,
+        "volatility": 0.37722657956752825
+      },
+      "difficultyScore": 0.43022265795675285
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Marinade Native deployed on?",
+      "choices": [
+        "Ethereum",
+        "Avalanche",
+        "Polygon",
+        "Solana"
+      ],
+      "answerIndex": 3,
+      "explanation": "Marinade Native is deployed on 1 chains including Solana.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.37722657956752825
+      },
+      "difficultyScore": 0.3302226579567529
+    }
+  ],
+  "generatedAt": "2026-09-16T03:34:12.163Z"
+}
