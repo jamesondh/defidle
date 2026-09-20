@@ -1,0 +1,132 @@
+{
+  "episodeId": "2026-09-20:protocol:ondo-yield-assets",
+  "dateUtc": "2026-09-20",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "ondo-yield-assets",
+    "name": "Ondo Yield Assets",
+    "category": "RWA"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "FALLBACK_PROTOCOL_TVL_ABOVE_5B",
+      "format": "tf",
+      "prompt": "Ondo Yield Assets has more than $5B in TVL.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "Ondo Yield Assets has $2.6B in TVL, which is below the $5B threshold.",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.48748830860029657,
+        "volatility": 0
+      },
+      "difficultyScore": 0.1125
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Ondo Yield Assets?",
+      "choices": [
+        "Risk Curators",
+        "Liquid Staking",
+        "RWA",
+        "Cross Chain Bridge"
+      ],
+      "answerIndex": 2,
+      "explanation": "Ondo Yield Assets's protocol category is based on DefiLlama data as of 2026-09-20.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": null
+      },
+      "difficultyScore": 0.31750000000000006
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "tf",
+      "prompt": "Ondo Yield Assets's fees increased over the past week compared to the week before.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Ondo Yield Assets's fees trend is based on DefiLlama data as of 2026-09-20.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.11346638513158418,
+        "volatility": null
+      },
+      "difficultyScore": 0.301340337842099
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these RWA protocols from highest to lowest TVL.",
+      "choices": [
+        "Ondo Global Markets > Anemoy Capital > Ondo Yield Assets",
+        "Ondo Yield Assets > Ondo Global Markets > Anemoy Capital",
+        "Ondo Global Markets > Ondo Yield Assets > Anemoy Capital",
+        "Ondo Yield Assets > Anemoy Capital > Ondo Global Markets"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ondo Yield Assets's DeFi metrics is based on DefiLlama data as of 2026-09-20.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.6278351350960428,
+        "volatility": null
+      },
+      "difficultyScore": 0.4175000000000001
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P10_TVL_BAND",
+      "format": "mc4",
+      "prompt": "Which TVL range fits Ondo Yield Assets?",
+      "choices": [
+        "<$50M",
+        "$50M-$250M",
+        "$250M-$1B",
+        "$1B-$5B",
+        ">$5B"
+      ],
+      "answerIndex": 3,
+      "explanation": "Ondo Yield Assets has $2.6B in TVL, placing it in the $1B-$5B range.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9749766172005931,
+        "volatility": null
+      },
+      "difficultyScore": 0.31750000000000006
+    }
+  ],
+  "generatedAt": "2026-09-20T03:39:40.127Z"
+}
