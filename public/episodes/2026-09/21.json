@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-09-21:protocol:merlins-seal",
+  "dateUtc": "2026-09-21",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "merlins-seal",
+    "name": "Merlins Seal",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: 2-5 chains",
+        ">90% TVL on single chain",
+        "TVL: $100M-$500M",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Portal",
+        "Merlins Seal",
+        "Hyperliquid Bridge",
+        "Liquid Collective"
+      ],
+      "answerIndex": 1,
+      "explanation": "Merlins Seal is a Bridge protocol deployed on 4 chains with $435M TVL.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.09571076123278224
+      },
+      "difficultyScore": 0.3920710761232783
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Merlins Seal?",
+      "choices": [
+        "Risk Curators",
+        "Bridge",
+        "Wallets",
+        "Restaking"
+      ],
+      "answerIndex": 1,
+      "explanation": "Merlins Seal's protocol category is based on DefiLlama data as of 2026-09-21.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.09571076123278224
+      },
+      "difficultyScore": 0.30207107612327827
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Merlins Seal's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 3,
+      "explanation": "Merlins Seal is currently 84% below its all-time high TVL of $2.6B, now at $435M.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.3435041694140352,
+        "volatility": 0.09571076123278224
+      },
+      "difficultyScore": 0.36207107612327827
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Bridge protocols from highest to lowest TVL.",
+      "choices": [
+        "LayerZero V2 > Merlins Seal > WBTC",
+        "Merlins Seal > WBTC > LayerZero V2",
+        "LayerZero V2 > WBTC > Merlins Seal",
+        "WBTC > LayerZero V2 > Merlins Seal"
+      ],
+      "answerIndex": 3,
+      "explanation": "Merlins Seal's DeFi metrics is based on DefiLlama data as of 2026-09-21.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.20382864976708842,
+        "volatility": 0.09571076123278224
+      },
+      "difficultyScore": 0.4574766964027722
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Merlins Seal deployed on?",
+      "choices": [
+        "BSC",
+        "zkSync Era",
+        "Optimism",
+        "Bitcoin"
+      ],
+      "answerIndex": 3,
+      "explanation": "Merlins Seal is deployed on 4 chains including Ethereum, Arbitrum, Zkfair, Bitcoin.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.09571076123278224
+      },
+      "difficultyScore": 0.30207107612327827
+    }
+  ],
+  "generatedAt": "2026-09-21T03:33:51.779Z"
+}
