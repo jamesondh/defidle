@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-09-24:chain:Morph",
+  "dateUtc": "2026-09-24",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Morph",
+    "name": "Morph"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Native token: -",
+        "Protocols: 20-50",
+        "TVL: $50M-$100M",
+        "30d trend: up >10%"
+      ],
+      "choices": [
+        "Gnosis",
+        "Morph",
+        "Near",
+        "Ink"
+      ],
+      "answerIndex": 1,
+      "explanation": "Morph is ranked #30 by TVL with $50M-$100M locked across 20 protocols.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4075000000000001
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Morph or Tempo?",
+      "choices": [
+        "Morph",
+        "Tempo"
+      ],
+      "answerIndex": 0,
+      "explanation": "Morph has 29.0% more TVL than Tempo ($87M vs $62M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.2901411136026072,
+        "volatility": null
+      },
+      "difficultyScore": 0.2275
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Morph?",
+      "choices": [
+        "MorFi",
+        "BulbaSwap V3",
+        "Sablier Lockup",
+        "BulbaSwap V2"
+      ],
+      "answerIndex": 1,
+      "explanation": "BulbaSwap V3 is the top DEX on Morph with $672K in 24h volume, ahead of BulbaSwap V2 ($4K), MorFi ($255), Sablier Lockup ($0).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9939027201989685,
+        "volatility": null
+      },
+      "difficultyScore": 0.31750000000000006
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Morph hit its all-time high TVL?",
+      "choices": [
+        "Apr 2026",
+        "Sep 2025",
+        "Dec 2025",
+        "Jul 2026",
+        "Jul 2025",
+        "May 2025"
+      ],
+      "answerIndex": 5,
+      "explanation": "Morph's historical TVL peak is based on DefiLlama data as of 2026-09-24.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.5075000000000001
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Morph",
+        "Solana",
+        "Base",
+        "Ethereum"
+      ],
+      "answerIndex": 0,
+      "explanation": "Morph had the highest 30-day TVL growth at 293.3%, outpacing Solana (+14.5%), Base (+11.8%), Ethereum (+9.8%).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": null
+      },
+      "difficultyScore": 0.37750000000000006
+    }
+  ],
+  "generatedAt": "2026-09-24T03:24:16.344Z"
+}
