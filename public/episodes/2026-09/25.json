@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-09-25:protocol:dolomite",
+  "dateUtc": "2026-09-25",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "dolomite",
+    "name": "Dolomite",
+    "category": "Lending"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Lending",
+        "Chains: 6-10 chains",
+        ">90% TVL on single chain",
+        "TVL: $100M-$500M",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Aave V4",
+        "Jupiter Lend",
+        "Dolomite",
+        "Lista Lending"
+      ],
+      "answerIndex": 2,
+      "explanation": "Dolomite is a Lending protocol deployed on 7 chains with $360M TVL.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.12291569620352773
+      },
+      "difficultyScore": 0.39479156962035283
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Dolomite have higher TVL?",
+      "choices": [
+        "Berachain",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Dolomite has 98% more TVL on Ethereum ($329M) compared to Berachain ($5M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.983692641562618,
+        "volatility": 0.12291569620352773
+      },
+      "difficultyScore": 0.21479156962035278
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Dolomite's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 1,
+      "explanation": "Dolomite generated $297K in fees over the past 7 days, with 20% going to protocol revenue.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.3999056524302923,
+        "volatility": 0.12291569620352773
+      },
+      "difficultyScore": 0.3047915696203528
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Dolomite hit its all-time high TVL?",
+      "choices": [
+        "May 2024",
+        "Mar 2025",
+        "Nov 2023",
+        "Jun 2023",
+        "Oct 2024",
+        "Jun 2025"
+      ],
+      "answerIndex": 1,
+      "explanation": "Dolomite reached its all-time high TVL of $929M in Mar 2025.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.12291569620352773
+      },
+      "difficultyScore": 0.49479156962035276
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Dolomite's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Ethereum holds 91% of Dolomite's total TVL ($329M of $360M).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.651204468898912,
+        "volatility": 0.12291569620352773
+      },
+      "difficultyScore": 0.3047915696203528
+    }
+  ],
+  "generatedAt": "2026-09-25T03:41:09.742Z"
+}
