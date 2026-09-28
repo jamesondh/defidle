@@ -1,0 +1,142 @@
+{
+  "episodeId": "2026-09-28:protocol:tornado-cash",
+  "dateUtc": "2026-09-28",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "tornado-cash",
+    "name": "Tornado Cash",
+    "category": "Privacy"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Privacy",
+        "Chains: 6-10 chains",
+        ">90% TVL on single chain",
+        "Active since: 2019",
+        "TVL: $500M-$1B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Jito Liquid Staking",
+        "Tornado Cash",
+        "Rocket Pool",
+        "USDD"
+      ],
+      "answerIndex": 1,
+      "explanation": "Tornado Cash is a Privacy protocol deployed on 8 chains with $770M TVL.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.135254916825791
+      },
+      "difficultyScore": 0.39602549168257917
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Tornado Cash have higher TVL?",
+      "choices": [
+        "Arbitrum",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Tornado Cash has 100% more TVL on Ethereum ($712M) compared to Arbitrum ($600K).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9991572515114715,
+        "volatility": 0.135254916825791
+      },
+      "difficultyScore": 0.21602549168257912
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did Tornado Cash's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 4,
+      "explanation": "Tornado Cash's fees trend is based on DefiLlama data as of 2026-09-28.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.2915716973469371,
+        "volatility": 0.135254916825791
+      },
+      "difficultyScore": 0.30602549168257914
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Tornado Cash hit its all-time high TVL?",
+      "choices": [
+        "Nov 2025",
+        "Sep 2022",
+        "Mar 2026",
+        "Feb 2021",
+        "May 2020",
+        "Jan 2025"
+      ],
+      "answerIndex": 0,
+      "explanation": "Tornado Cash reached its all-time high TVL of $1.2B in Nov 2025.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.135254916825791
+      },
+      "difficultyScore": 0.49602549168257914
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Tornado Cash's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Ethereum holds 92% of Tornado Cash's total TVL ($712M of $770M).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.6991351492120272,
+        "volatility": 0.135254916825791
+      },
+      "difficultyScore": 0.30602549168257914
+    }
+  ],
+  "generatedAt": "2026-09-28T03:55:49.012Z"
+}
