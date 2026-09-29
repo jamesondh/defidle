@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-09-29:chain:Hyperliquid L1",
+  "dateUtc": "2026-09-29",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Hyperliquid L1",
+    "name": "Hyperliquid L1"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 10",
+        "Native token: HYPE",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "BSC",
+        "Robinhood Chain",
+        "Sui",
+        "Avalanche",
+        "Hyperliquid L1",
+        "Tron"
+      ],
+      "answerIndex": 4,
+      "explanation": "Hyperliquid L1 is ranked #8 by TVL with $1B-$5B locked across 195 protocols.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4675
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Hyperliquid L1 or Tron?",
+      "choices": [
+        "Hyperliquid L1",
+        "Tron"
+      ],
+      "answerIndex": 1,
+      "explanation": "Tron has 78.0% more TVL than Hyperliquid L1 ($5.7B vs $1.2B).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.7801068452012271,
+        "volatility": null
+      },
+      "difficultyScore": 0.19749999999999998
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Pharos",
+        "Robinhood Chain",
+        "Ink",
+        "Hyperliquid L1"
+      ],
+      "answerIndex": 0,
+      "explanation": "Pharos had the highest 30-day TVL growth at 289.7%, outpacing Robinhood Chain (+55.4%), Ink (+37.1%), Hyperliquid L1 (-22.4%).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 1,
+        "volatility": null
+      },
+      "difficultyScore": 0.34750000000000003
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Hyperliquid L1 hit its all-time high TVL?",
+      "choices": [
+        "Jan 2026",
+        "Sep 2025",
+        "Dec 2025",
+        "Jun 2025",
+        "Dec 2024",
+        "Apr 2026"
+      ],
+      "answerIndex": 1,
+      "explanation": "Hyperliquid L1's historical TVL peak is based on DefiLlama data as of 2026-09-29.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.47750000000000004
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Hyperliquid L1?",
+      "choices": [
+        "Project X",
+        "Hyperliquid Spot Orderbook",
+        "Unit",
+        "nest CL"
+      ],
+      "answerIndex": 1,
+      "explanation": "Hyperliquid Spot Orderbook is the top DEX on Hyperliquid L1 with $158M in 24h volume, ahead of Project X ($69M), Unit ($50M), nest CL ($23M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.562548652345544,
+        "volatility": null
+      },
+      "difficultyScore": 0.28750000000000003
+    }
+  ],
+  "generatedAt": "2026-09-29T04:29:56.710Z"
+}
