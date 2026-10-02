@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-10-02:protocol:spark-savings",
+  "dateUtc": "2026-10-02",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "spark-savings",
+    "name": "Spark Savings",
+    "category": "Yield"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Yield",
+        "Chains: 6-10 chains",
+        "TVL: $1B-$5B",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "Steakhouse Financial",
+        "Uniswap V3",
+        "Sanctum Validator LSTs",
+        "Spark Savings",
+        "Convex Finance",
+        "Pendle V2"
+      ],
+      "answerIndex": 3,
+      "explanation": "Spark Savings is a Yield protocol deployed on 8 chains with $1.3B TVL.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.06633625949437677
+      },
+      "difficultyScore": 0.4791336259494377
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Spark Savings have higher TVL?",
+      "choices": [
+        "Robinhood Chain",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Spark Savings has 99% more TVL on Ethereum ($992M) compared to Robinhood Chain ($14M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9858388916985643,
+        "volatility": 0.06633625949437677
+      },
+      "difficultyScore": 0.20913362594943768
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Spark Savings's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 2,
+      "explanation": "Spark Savings is currently 56% below its all-time high TVL of $3.0B, now at $1.3B.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.2281068514888017,
+        "volatility": 0.06633625949437677
+      },
+      "difficultyScore": 0.38540540416287566
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Yield protocols from highest to lowest TVL.",
+      "choices": [
+        "Spark Savings > Pendle V2 > Avalon Superearn",
+        "Spark Savings > Avalon Superearn > Pendle V2",
+        "Pendle V2 > Spark Savings > Avalon Superearn",
+        "Pendle V2 > Avalon Superearn > Spark Savings"
+      ],
+      "answerIndex": 0,
+      "explanation": "Spark Savings's DeFi metrics is based on DefiLlama data as of 2026-10-02.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.053258235830328654,
+        "volatility": 0.06633625949437677
+      },
+      "difficultyScore": 0.6352237429530433
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Spark Savings deployed on?",
+      "choices": [
+        "zkSync Era",
+        "BSC",
+        "Ethereum",
+        "Solana"
+      ],
+      "answerIndex": 2,
+      "explanation": "Spark Savings is deployed on 8 chains including Avalanche, Optimism, Robinhood Chain, Base, Ethereum.",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.06633625949437677
+      },
+      "difficultyScore": 0.2991336259494377
+    }
+  ],
+  "generatedAt": "2026-10-02T04:18:08.064Z"
+}
