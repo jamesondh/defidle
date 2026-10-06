@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-10-06:chain:Stacks",
+  "dateUtc": "2026-10-06",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Stacks",
+    "name": "Stacks"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Native token: STX",
+        "Protocols: 20-50",
+        "TVL: $50M-$100M",
+        "30d trend: up >10%"
+      ],
+      "choices": [
+        "Rootstock",
+        "Near",
+        "Stacks",
+        "Provenance"
+      ],
+      "answerIndex": 2,
+      "explanation": "Stacks is ranked #29 by TVL with $50M-$100M locked across 20 protocols.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4075000000000001
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Stacks or Aptos?",
+      "choices": [
+        "Aptos",
+        "Stacks"
+      ],
+      "answerIndex": 1,
+      "explanation": "Stacks has 39.4% more TVL than Aptos ($91M vs $55M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.3938922264454822,
+        "volatility": null
+      },
+      "difficultyScore": 0.2275
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Stacks?",
+      "choices": [
+        "Allbridge Classic",
+        "ALEX",
+        "Velar AMM",
+        "Bitflow"
+      ],
+      "answerIndex": 3,
+      "explanation": "Bitflow is the top DEX on Stacks with $6M in 24h volume, ahead of ALEX ($76K), Velar AMM ($533), Allbridge Classic ($0).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9873895780403115,
+        "volatility": null
+      },
+      "difficultyScore": 0.31750000000000006
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Stacks hit its all-time high TVL?",
+      "choices": [
+        "Nov 2024",
+        "Aug 2023",
+        "Aug 2022",
+        "Aug 2024",
+        "Sep 2026",
+        "Apr 2024"
+      ],
+      "answerIndex": 5,
+      "explanation": "Stacks's historical TVL peak is based on DefiLlama data as of 2026-10-06.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.5075000000000001
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "ab",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Solana",
+        "Tempo",
+        "Stacks",
+        "Sui"
+      ],
+      "answerIndex": 1,
+      "explanation": "Tempo had the highest 30-day TVL growth at 36.5%, outpacing Sui (+14.2%), Solana (+13.2%), Stacks (+4.4%).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.2236330138435197,
+        "volatility": null
+      },
+      "difficultyScore": 0.3191403833877764
+    }
+  ],
+  "generatedAt": "2026-10-06T05:07:06.977Z"
+}
