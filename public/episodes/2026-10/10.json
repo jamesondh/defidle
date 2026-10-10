@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-10-10:chain:Stellar",
+  "dateUtc": "2026-10-10",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Stellar",
+    "name": "Stellar"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: XLM",
+        "Protocols: 20-50"
+      ],
+      "choices": [
+        "Polygon",
+        "Robinhood Chain",
+        "Avalanche",
+        "OP Mainnet",
+        "Ink",
+        "Stellar"
+      ],
+      "answerIndex": 5,
+      "explanation": "Stellar is ranked #19 by TVL with $100M-$500M locked across 42 protocols.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Stellar or Near?",
+      "choices": [
+        "Stellar",
+        "Near"
+      ],
+      "answerIndex": 0,
+      "explanation": "Stellar has 17.1% more TVL than Near ($272M vs $225M).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.17119927642964858,
+        "volatility": null
+      },
+      "difficultyScore": 0.3040608682844217
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Near",
+        "Robinhood Chain",
+        "Stellar",
+        "Ethereum"
+      ],
+      "answerIndex": 0,
+      "explanation": "Near had the highest 30-day TVL growth at 93.1%, outpacing Robinhood Chain (+25.2%), Stellar (+9.7%), Ethereum (+7.3%).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.6791887852962315,
+        "volatility": null
+      },
+      "difficultyScore": 0.35950000000000004
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Stellar hit its all-time high TVL?",
+      "choices": [
+        "May 2024",
+        "May 2026",
+        "Apr 2026",
+        "Oct 2026",
+        "Feb 2024",
+        "Sep 2026"
+      ],
+      "answerIndex": 3,
+      "explanation": "Stellar's historical TVL peak is based on DefiLlama data as of 2026-10-10.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Stellar?",
+      "choices": [
+        "Aquarius Stellar",
+        "Allbridge Classic",
+        "LumenSwap",
+        "Scopuly"
+      ],
+      "answerIndex": 0,
+      "explanation": "Aquarius Stellar is the top DEX on Stellar with $1M in 24h volume, ahead of Allbridge Classic ($0), LumenSwap ($0), Scopuly ($0).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 1,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-10-10T04:33:19.118Z"
+}
