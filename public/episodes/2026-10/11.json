@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-10-11:protocol:lista-liquid-staking",
+  "dateUtc": "2026-10-11",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "lista-liquid-staking",
+    "name": "Lista Liquid Staking",
+    "category": "Liquid Staking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Liquid Staking",
+        "Chains: single-chain",
+        "TVL: $500M-$1B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Spark Savings",
+        "Lido",
+        "Lista Liquid Staking"
+      ],
+      "answerIndex": 2,
+      "explanation": "Lista Liquid Staking is a Liquid Staking protocol deployed on 1 chains with $775M TVL.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.15108778681219026
+      },
+      "difficultyScore": 0.3976087786812191
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Lista Liquid Staking?",
+      "choices": [
+        "RWA",
+        "Governance Incentives",
+        "Risk Curators",
+        "Liquid Staking"
+      ],
+      "answerIndex": 3,
+      "explanation": "Lista Liquid Staking's protocol category is based on DefiLlama data as of 2026-10-11.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.15108778681219026
+      },
+      "difficultyScore": 0.30760877868121905
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Lista Liquid Staking's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lista Liquid Staking generated $111K in fees over the past 7 days, with 15% going to protocol revenue.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.19998195760036086,
+        "volatility": 0.15108778681219026
+      },
+      "difficultyScore": 0.367630429560786
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Lista Liquid Staking hit its all-time high TVL?",
+      "choices": [
+        "Jan 2024",
+        "Oct 2025",
+        "Sep 2026",
+        "Jul 2026",
+        "Apr 2026",
+        "Mar 2025"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lista Liquid Staking reached its all-time high TVL of $1.5B in Oct 2025.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.15108778681219026
+      },
+      "difficultyScore": 0.497608778681219
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Lista Liquid Staking deployed on?",
+      "choices": [
+        "Binance",
+        "Ethereum",
+        "Avalanche",
+        "Polygon"
+      ],
+      "answerIndex": 0,
+      "explanation": "Lista Liquid Staking is deployed on 1 chains including Binance.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.15108778681219026
+      },
+      "difficultyScore": 0.30760877868121905
+    }
+  ],
+  "generatedAt": "2026-10-11T04:17:31.347Z"
+}
