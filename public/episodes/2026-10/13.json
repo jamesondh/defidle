@@ -1,0 +1,137 @@
+{
+  "episodeId": "2026-10-13:chain:Flare",
+  "dateUtc": "2026-10-13",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Flare",
+    "name": "Flare"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Native token: FLR",
+        "Protocols: 50-100",
+        "TVL: $100M-$500M",
+        "30d trend: down 1-10%"
+      ],
+      "choices": [
+        "Gnosis",
+        "Sui",
+        "Flare",
+        "Anubis"
+      ],
+      "answerIndex": 2,
+      "explanation": "Flare is ranked #26 by TVL with $100M-$500M locked across 50 protocols.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4075000000000001
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Flare or Stacks?",
+      "choices": [
+        "Stacks",
+        "Flare"
+      ],
+      "answerIndex": 1,
+      "explanation": "Flare has 25.5% more TVL than Stacks ($125M vs $93M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.2554711670850385,
+        "volatility": null
+      },
+      "difficultyScore": 0.2275
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Flare?",
+      "choices": [
+        "SparkDEX V3.1",
+        "SparkDEX V4",
+        "MEV-X Homelander",
+        "Enosys AMM V3"
+      ],
+      "answerIndex": 1,
+      "explanation": "SparkDEX V4 is the top DEX on Flare with $2M in 24h volume, ahead of SparkDEX V3.1 ($2M), Enosys AMM V3 ($1M), MEV-X Homelander ($1M).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.3242506763499304,
+        "volatility": null
+      },
+      "difficultyScore": 0.31750000000000006
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Flare hit its all-time high TVL?",
+      "choices": [
+        "Aug 2024",
+        "Feb 2026",
+        "Dec 2023",
+        "May 2026",
+        "Jan 2026",
+        "Feb 2024"
+      ],
+      "answerIndex": 4,
+      "explanation": "Flare's historical TVL peak is based on DefiLlama data as of 2026-10-13.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.5075000000000001
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C13_LAYER_TYPE",
+      "format": "ab",
+      "prompt": "Is Flare a Layer 1 or Layer 2 blockchain?",
+      "choices": [
+        "Layer 1",
+        "Layer 2"
+      ],
+      "answerIndex": 0,
+      "explanation": "Flare's layer 1 vs layer 2 classification is based on DefiLlama data as of 2026-10-13.",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": null
+      },
+      "difficultyScore": 0.2275
+    }
+  ],
+  "generatedAt": "2026-10-13T05:40:35.880Z"
+}
