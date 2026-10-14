@@ -1,0 +1,144 @@
+{
+  "episodeId": "2026-10-14:protocol:jito-liquid-staking",
+  "dateUtc": "2026-10-14",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "jito-liquid-staking",
+    "name": "Jito Liquid Staking",
+    "category": "Liquid Staking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Liquid Staking",
+        "Chains: single-chain",
+        "TVL: $1B-$5B",
+        "7d change: down >10%"
+      ],
+      "choices": [
+        "Spark Savings",
+        "Rocket Pool",
+        "Marinade Liquid Staking",
+        "Jito Liquid Staking",
+        "Jupiter Staked SOL",
+        "Gauntlet"
+      ],
+      "answerIndex": 3,
+      "explanation": "Jito Liquid Staking is a Liquid Staking protocol deployed on 1 chains with $1.1B TVL.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.20436219216884682
+      },
+      "difficultyScore": 0.4929362192168847
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Jito Liquid Staking?",
+      "choices": [
+        "Liquid Restaking",
+        "Services",
+        "Decentralized AI",
+        "Liquid Staking"
+      ],
+      "answerIndex": 3,
+      "explanation": "Jito Liquid Staking's protocol category is based on DefiLlama data as of 2026-10-14.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.20436219216884682
+      },
+      "difficultyScore": 0.31293621921688475
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did Jito Liquid Staking's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Jito Liquid Staking's fees trend is based on DefiLlama data as of 2026-10-14.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.20621248635689576,
+        "volatility": 0.20436219216884682
+      },
+      "difficultyScore": 0.3654812355886098
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Jito Liquid Staking hit its all-time high TVL?",
+      "choices": [
+        "Mar 2023",
+        "Sep 2024",
+        "May 2026",
+        "Dec 2022",
+        "Jan 2025",
+        "Sep 2023"
+      ],
+      "answerIndex": 4,
+      "explanation": "Jito Liquid Staking reached its all-time high TVL of $3.9B in Jan 2025.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.20436219216884682
+      },
+      "difficultyScore": 0.5029362192168847
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Jito Liquid Staking deployed on?",
+      "choices": [
+        "Base",
+        "Avalanche",
+        "BSC",
+        "Solana"
+      ],
+      "answerIndex": 3,
+      "explanation": "Jito Liquid Staking is deployed on 1 chains including Solana.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.20436219216884682
+      },
+      "difficultyScore": 0.31293621921688475
+    }
+  ],
+  "generatedAt": "2026-10-14T03:43:57.811Z"
+}
