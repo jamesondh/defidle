@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-10-20:chain:Plasma",
+  "dateUtc": "2026-10-20",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Plasma",
+    "name": "Plasma"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: XPL",
+        "Protocols: 50-100"
+      ],
+      "choices": [
+        "Monad",
+        "Plasma",
+        "Flare",
+        "X Layer",
+        "Arbitrum",
+        "Anubis"
+      ],
+      "answerIndex": 1,
+      "explanation": "Plasma is ranked #13 by TVL with $500M-$1B locked across 73 protocols.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "prompt": "Plasma has higher TVL than Avalanche.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "Avalanche has 6.0% more TVL than Plasma ($590M vs $554M).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.06004520713236191,
+        "volatility": null
+      },
+      "difficultyScore": 0.34744575144116574
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Stacks",
+        "Plasma",
+        "Near",
+        "Ink"
+      ],
+      "answerIndex": 2,
+      "explanation": "Near had the highest 30-day TVL growth at 34.5%, outpacing Stacks (+15.1%), Ink (+2.5%), Plasma (-3.6%).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.19371673548644824,
+        "volatility": null
+      },
+      "difficultyScore": 0.4270399174162621
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Plasma hit its all-time high TVL?",
+      "choices": [
+        "Jun 2026",
+        "Feb 2026",
+        "Oct 2025",
+        "Sep 2025",
+        "Mar 2026",
+        "Oct 2026"
+      ],
+      "answerIndex": 2,
+      "explanation": "Plasma's historical TVL peak is based on DefiLlama data as of 2026-10-20.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Plasma?",
+      "choices": [
+        "Pendle V2",
+        "Plasma One",
+        "Uniswap V3",
+        "Fluid DEX"
+      ],
+      "answerIndex": 2,
+      "explanation": "Uniswap V3 is the top DEX on Plasma with $2M in 24h volume, ahead of Fluid DEX ($976K), Plasma One ($864K), Pendle V2 ($314K).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.5887291925758908,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-10-20T03:37:29.511Z"
+}
