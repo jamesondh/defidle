@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-10-21:protocol:liquid-collective",
+  "dateUtc": "2026-10-21",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "liquid-collective",
+    "name": "Liquid Collective",
+    "category": "Liquid Staking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Liquid Staking",
+        "Chains: single-chain",
+        "TVL: $500M-$1B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Rocket Pool",
+        "Liquid Collective",
+        "Obol",
+        "Drift Staked SOL"
+      ],
+      "answerIndex": 1,
+      "explanation": "Liquid Collective is a Liquid Staking protocol deployed on 1 chains with $672M TVL.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.14082550594557272
+      },
+      "difficultyScore": 0.3965825505945573
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Liquid Collective?",
+      "choices": [
+        "Bridge Aggregator",
+        "Liquid Staking",
+        "Uncollateralized Lending",
+        "Gaming"
+      ],
+      "answerIndex": 1,
+      "explanation": "Liquid Collective's protocol category is based on DefiLlama data as of 2026-10-21.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.14082550594557272
+      },
+      "difficultyScore": 0.3065825505945573
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Liquid Collective's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 2,
+      "explanation": "Liquid Collective is currently 62% below its all-time high TVL of $1.8B, now at $672M.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4716708162209324,
+        "volatility": 0.14082550594557272
+      },
+      "difficultyScore": 0.3665825505945573
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Liquid Staking protocols from highest to lowest TVL.",
+      "choices": [
+        "Liquid Collective > ether.fi Stake > Lido",
+        "Lido > Liquid Collective > ether.fi Stake",
+        "Lido > ether.fi Stake > Liquid Collective",
+        "Liquid Collective > Lido > ether.fi Stake"
+      ],
+      "answerIndex": 2,
+      "explanation": "Liquid Collective's DeFi metrics is based on DefiLlama data as of 2026-10-21.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.8032725597702008,
+        "volatility": 0.14082550594557272
+      },
+      "difficultyScore": 0.4065825505945573
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Liquid Collective deployed on?",
+      "choices": [
+        "Fantom",
+        "Polygon",
+        "Ethereum",
+        "Optimism"
+      ],
+      "answerIndex": 2,
+      "explanation": "Liquid Collective is deployed on 1 chains including Ethereum.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.14082550594557272
+      },
+      "difficultyScore": 0.3065825505945573
+    }
+  ],
+  "generatedAt": "2026-10-21T03:30:27.016Z"
+}
