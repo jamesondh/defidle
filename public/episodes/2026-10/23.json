@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-10-23:protocol:compound-v3",
+  "dateUtc": "2026-10-23",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "compound-v3",
+    "name": "Compound V3",
+    "category": "Lending"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Lending",
+        "Chains: 6-10 chains",
+        ">90% TVL on single chain",
+        "TVL: $1B-$5B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Babylon Protocol",
+        "Compound V3",
+        "HyperLend Pooled",
+        "Kamino Lend",
+        "JustCryptos",
+        "Polygon Bridge"
+      ],
+      "answerIndex": 1,
+      "explanation": "Compound V3 is a Lending protocol deployed on 10 chains with $1.4B TVL.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.1107846352461916
+      },
+      "difficultyScore": 0.4835784635246192
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Compound V3 have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Arbitrum"
+      ],
+      "answerIndex": 0,
+      "explanation": "Compound V3 has 95% more TVL on Ethereum ($1.3B) compared to Arbitrum ($67M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9481496926756094,
+        "volatility": 0.1107846352461916
+      },
+      "difficultyScore": 0.21357846352461918
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Compound V3's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 1,
+      "explanation": "Compound V3 is currently 46% below its all-time high TVL of $2.6B, now at $1.4B.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.17300777163223102,
+        "volatility": 0.1107846352461916
+      },
+      "difficultyScore": 0.455969137565942
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Lending protocols from highest to lowest TVL.",
+      "choices": [
+        "Hyperliquid Earn > Compound V3 > Maple",
+        "Maple > Hyperliquid Earn > Compound V3",
+        "Maple > Compound V3 > Hyperliquid Earn",
+        "Compound V3 > Hyperliquid Earn > Maple"
+      ],
+      "answerIndex": 1,
+      "explanation": "Compound V3's DeFi metrics is based on DefiLlama data as of 2026-10-23.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.027361743226418073,
+        "volatility": 0.1107846352461916
+      },
+      "difficultyScore": 0.6707443716529176
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Compound V3's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Ethereum holds 92% of Compound V3's total TVL ($1.3B of $1.4B).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.6906591405820404,
+        "volatility": 0.1107846352461916
+      },
+      "difficultyScore": 0.3035784635246192
+    }
+  ],
+  "generatedAt": "2026-10-23T03:35:02.405Z"
+}
