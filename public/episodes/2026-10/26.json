@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-10-26:protocol:ether.fi-stake",
+  "dateUtc": "2026-10-26",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "ether.fi-stake",
+    "name": "ether.fi Stake",
+    "category": "Liquid Staking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Liquid Staking",
+        "Chains: 6-10 chains",
+        ">90% TVL on single chain",
+        "TVL rank: top 25"
+      ],
+      "choices": [
+        "ether.fi Stake",
+        "JustLend sTRX",
+        "Binance Bitcoin",
+        "SparkLend",
+        "Ethena USDe",
+        "Lista Liquid Staking"
+      ],
+      "answerIndex": 0,
+      "explanation": "ether.fi Stake is a Liquid Staking protocol deployed on 6 chains with $4.4B TVL.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": 0.134096262332812
+      },
+      "difficultyScore": 0.4679096262332812
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does ether.fi Stake have higher TVL?",
+      "choices": [
+        "Arbitrum",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "ether.fi Stake has 100% more TVL on Ethereum ($4.4B) compared to Arbitrum ($1M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.9997010147746427,
+        "volatility": 0.134096262332812
+      },
+      "difficultyScore": 0.1979096262332812
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did ether.fi Stake's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 2,
+      "explanation": "ether.fi Stake's fees trend is based on DefiLlama data as of 2026-10-26.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.03478724369846606,
+        "volatility": 0.134096262332812
+      },
+      "difficultyScore": 0.546164933795122
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did ether.fi Stake hit its all-time high TVL?",
+      "choices": [
+        "Aug 2024",
+        "May 2023",
+        "Sep 2025",
+        "Jul 2025",
+        "Aug 2025",
+        "Jul 2026"
+      ],
+      "answerIndex": 4,
+      "explanation": "ether.fi Stake reached its all-time high TVL of $12.4B in Aug 2025.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": 0.134096262332812
+      },
+      "difficultyScore": 0.47790962623328126
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P6_TVL_TREND",
+      "format": "tf",
+      "prompt": "ether.fi Stake's TVL increased over the past 30 days.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 1,
+      "answerValue": false,
+      "explanation": "ether.fi Stake's TVL trend is based on DefiLlama data as of 2026-10-26.",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.1425361785782359,
+        "volatility": 0.134096262332812
+      },
+      "difficultyScore": 0.23686621193939814
+    }
+  ],
+  "generatedAt": "2026-10-26T03:27:07.919Z"
+}
