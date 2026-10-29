@@ -1,0 +1,138 @@
+{
+  "episodeId": "2026-10-29:chain:Ink",
+  "dateUtc": "2026-10-29",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Ink",
+    "name": "Ink"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Protocols: 20-50"
+      ],
+      "choices": [
+        "Tempo",
+        "Cronos",
+        "Provenance",
+        "Ink",
+        "Sui",
+        "Flare"
+      ],
+      "answerIndex": 3,
+      "explanation": "Ink is ranked #20 by TVL with $100M-$500M locked across 33 protocols.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Ink or X Layer?",
+      "choices": [
+        "X Layer",
+        "Ink"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ink has 18.9% more TVL than X Layer ($200M vs $162M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.1886247528970203,
+        "volatility": null
+      },
+      "difficultyScore": 0.28315029652357565
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Ink?",
+      "choices": [
+        "Nado Spot",
+        "Uniswap V4",
+        "Velodrome V3",
+        "Aero Slipstream"
+      ],
+      "answerIndex": 3,
+      "explanation": "Aero Slipstream is the top DEX on Ink with $1M in 24h volume, ahead of Uniswap V4 ($799K), Nado Spot ($501K), Velodrome V3 ($476K).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.2212433026206649,
+        "volatility": null
+      },
+      "difficultyScore": 0.33400803685520214
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Ink hit its all-time high TVL?",
+      "choices": [
+        "Mar 2025",
+        "Jan 2026",
+        "Jan 2025",
+        "Apr 2026",
+        "May 2026",
+        "Dec 2025"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ink's historical TVL peak is based on DefiLlama data as of 2026-10-29.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Tempo",
+        "Near",
+        "Polygon",
+        "Ink"
+      ],
+      "answerIndex": 0,
+      "explanation": "Tempo had the highest 30-day TVL growth at 75.7%, outpacing Ink (-4.3%), Near (-4.8%), Polygon (-7.5%).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.7997058501425971,
+        "volatility": null
+      },
+      "difficultyScore": 0.35950000000000004
+    }
+  ],
+  "generatedAt": "2026-10-29T04:35:59.010Z"
+}
