@@ -1,0 +1,142 @@
+{
+  "episodeId": "2026-10-30:protocol:justcryptos",
+  "dateUtc": "2026-10-30",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "justcryptos",
+    "name": "JustCryptos",
+    "category": "Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Bridge",
+        "Chains: single-chain",
+        "Active since: 2021",
+        "TVL: $1B-$5B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "JustCryptos",
+        "Base Bridge",
+        "Sky Lending",
+        "SparkLend",
+        "Nexus BTC",
+        "Binance Bitcoin"
+      ],
+      "answerIndex": 0,
+      "explanation": "JustCryptos is a Bridge protocol deployed on 1 chains with $2.4B TVL.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.13521429975152235
+      },
+      "difficultyScore": 0.48602142997515224
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is JustCryptos?",
+      "choices": [
+        "CDP Manager",
+        "Portfolio Tracker",
+        "Options",
+        "Bridge"
+      ],
+      "answerIndex": 3,
+      "explanation": "JustCryptos's protocol category is based on DefiLlama data as of 2026-10-30.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.13521429975152235
+      },
+      "difficultyScore": 0.30602142997515225
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is JustCryptos's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 2,
+      "explanation": "JustCryptos is currently 71% below its all-time high TVL of $8.3B, now at $2.4B.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.17742911773450715,
+        "volatility": 0.13521429975152235
+      },
+      "difficultyScore": 0.45310648869374365
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Bridge protocols from highest to lowest TVL.",
+      "choices": [
+        "Hyperliquid Bridge > USDT0 > JustCryptos",
+        "Hyperliquid Bridge > JustCryptos > USDT0",
+        "USDT0 > JustCryptos > Hyperliquid Bridge",
+        "JustCryptos > USDT0 > Hyperliquid Bridge"
+      ],
+      "answerIndex": 0,
+      "explanation": "JustCryptos's DeFi metrics is based on DefiLlama data as of 2026-10-30.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.2151706055410043,
+        "volatility": 0.13521429975152235
+      },
+      "difficultyScore": 0.44781670332594703
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is JustCryptos deployed on?",
+      "choices": [
+        "BSC",
+        "Ethereum",
+        "Tron",
+        "Avalanche"
+      ],
+      "answerIndex": 2,
+      "explanation": "JustCryptos is deployed on 1 chains including Tron.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.13521429975152235
+      },
+      "difficultyScore": 0.30602142997515225
+    }
+  ],
+  "generatedAt": "2026-10-30T04:35:55.550Z"
+}
