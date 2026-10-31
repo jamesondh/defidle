@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-10-31:chain:Stellar",
+  "dateUtc": "2026-10-31",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Stellar",
+    "name": "Stellar"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: XLM",
+        "Protocols: 20-50"
+      ],
+      "choices": [
+        "Stellar",
+        "Cronos",
+        "Anubis",
+        "OP Mainnet",
+        "Gnosis",
+        "Mantle"
+      ],
+      "answerIndex": 0,
+      "explanation": "Stellar is ranked #18 by TVL with $100M-$500M locked across 44 protocols.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "prompt": "Stellar has higher TVL than Near.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Stellar has 9.9% more TVL than Near ($229M vs $207M).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.09932204365961175,
+        "volatility": null
+      },
+      "difficultyScore": 0.3003135476084659
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Tron",
+        "Pharos",
+        "Tempo",
+        "Stellar"
+      ],
+      "answerIndex": 2,
+      "explanation": "Tempo had the highest 30-day TVL growth at 75.7%, outpacing Pharos (-1.5%), Tron (-3.7%), Stellar (-14.9%).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.7717528461190113,
+        "volatility": null
+      },
+      "difficultyScore": 0.35950000000000004
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Stellar hit its all-time high TVL?",
+      "choices": [
+        "Oct 2025",
+        "Oct 2026",
+        "Jul 2024",
+        "May 2025",
+        "Feb 2026",
+        "Jul 2025"
+      ],
+      "answerIndex": 1,
+      "explanation": "Stellar's historical TVL peak is based on DefiLlama data as of 2026-10-31.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Stellar?",
+      "choices": [
+        "Aquarius Stellar",
+        "Allbridge Classic",
+        "Soroswap AMM",
+        "Scopuly"
+      ],
+      "answerIndex": 0,
+      "explanation": "Aquarius Stellar is the top DEX on Stellar with $4M in 24h volume, ahead of Scopuly ($75K), Soroswap AMM ($31K), Allbridge Classic ($0).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.9801417667052912,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-10-31T04:18:59.272Z"
+}
