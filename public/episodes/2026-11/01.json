@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-11-01:protocol:bittensor-dtao",
+  "dateUtc": "2026-11-01",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "bittensor-dtao",
+    "name": "Bittensor dTAO",
+    "category": "Dexs"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Dexs",
+        "Chains: single-chain",
+        "TVL: $100M-$500M",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Uniswap V2",
+        "Bittensor dTAO",
+        "Uniswap V4",
+        "Curve DEX"
+      ],
+      "answerIndex": 1,
+      "explanation": "Bittensor dTAO is a Dexs protocol deployed on 1 chains with $425M TVL.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.26603517453453024
+      },
+      "difficultyScore": 0.4091035174534531
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Bittensor dTAO?",
+      "choices": [
+        "Services",
+        "ve-Incentive Automator",
+        "Payments",
+        "Dexs"
+      ],
+      "answerIndex": 3,
+      "explanation": "Bittensor dTAO's protocol category is based on DefiLlama data as of 2026-11-01.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.26603517453453024
+      },
+      "difficultyScore": 0.31910351745345306
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P22_CATEGORY_MARKET_SHARE",
+      "format": "mc4",
+      "prompt": "What share of Dexs TVL does Bittensor dTAO hold?",
+      "choices": [
+        "<10%",
+        "10-25%",
+        "25-50%",
+        ">50%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Bittensor dTAO holds 5% of Dexs TVL ($425M of $9.3B total).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.544653081295757,
+        "volatility": 0.26603517453453024
+      },
+      "difficultyScore": 0.31910351745345306
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Dexs protocols from highest to lowest TVL.",
+      "choices": [
+        "Bittensor dTAO > Raydium AMM > Uniswap V2",
+        "Uniswap V2 > Bittensor dTAO > Raydium AMM",
+        "Uniswap V2 > Raydium AMM > Bittensor dTAO",
+        "Raydium AMM > Uniswap V2 > Bittensor dTAO"
+      ],
+      "answerIndex": 3,
+      "explanation": "Bittensor dTAO's DeFi metrics is based on DefiLlama data as of 2026-11-01.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.14426688279254446,
+        "volatility": 0.26603517453453024
+      },
+      "difficultyScore": 0.5459832581023997
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Bittensor dTAO deployed on?",
+      "choices": [
+        "Solana",
+        "Bittensor",
+        "Avalanche",
+        "Base"
+      ],
+      "answerIndex": 1,
+      "explanation": "Bittensor dTAO is deployed on 1 chains including Bittensor.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.26603517453453024
+      },
+      "difficultyScore": 0.31910351745345306
+    }
+  ],
+  "generatedAt": "2026-11-01T04:39:02.999Z"
+}
