@@ -1,0 +1,143 @@
+{
+  "episodeId": "2026-11-02:protocol:compound-v3",
+  "dateUtc": "2026-11-02",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "compound-v3",
+    "name": "Compound V3",
+    "category": "Lending"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Lending",
+        "Chains: 6-10 chains",
+        ">90% TVL on single chain",
+        "TVL: $1B-$5B",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Fluid Lending",
+        "Hyperliquid Earn",
+        "USDT0",
+        "JustLend sTRX",
+        "Morpho Blue",
+        "Compound V3"
+      ],
+      "answerIndex": 5,
+      "explanation": "Compound V3 is a Lending protocol deployed on 10 chains with $1.3B TVL.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.12981043698787484
+      },
+      "difficultyScore": 0.48548104369878753
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Compound V3 have higher TVL?",
+      "choices": [
+        "Ethereum",
+        "Arbitrum"
+      ],
+      "answerIndex": 0,
+      "explanation": "Compound V3 has 95% more TVL on Ethereum ($1.2B) compared to Arbitrum ($62M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.948537397283988,
+        "volatility": 0.12981043698787484
+      },
+      "difficultyScore": 0.2154810436987875
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did Compound V3's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Compound V3's fees trend is based on DefiLlama data as of 2026-11-02.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.14757709251101322,
+        "volatility": 0.12981043698787484
+      },
+      "difficultyScore": 0.42838853268557164
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Compound V3 hit its all-time high TVL?",
+      "choices": [
+        "Dec 2023",
+        "Jul 2025",
+        "Apr 2026",
+        "Dec 2022",
+        "Jun 2023",
+        "Aug 2025"
+      ],
+      "answerIndex": 5,
+      "explanation": "Compound V3 reached its all-time high TVL of $2.6B in Aug 2025.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.12981043698787484
+      },
+      "difficultyScore": 0.49548104369878754
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Compound V3's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Ethereum holds 92% of Compound V3's total TVL ($1.2B of $1.3B).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.6921542633472679,
+        "volatility": 0.12981043698787484
+      },
+      "difficultyScore": 0.30548104369878754
+    }
+  ],
+  "generatedAt": "2026-11-02T04:40:50.771Z"
+}
