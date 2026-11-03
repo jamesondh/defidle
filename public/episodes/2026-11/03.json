@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-11-03:chain:Arbitrum",
+  "dateUtc": "2026-11-03",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Arbitrum",
+    "name": "Arbitrum"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 10",
+        "Native token: ARB",
+        "Most protocols by count"
+      ],
+      "choices": [
+        "Monad",
+        "Avalanche",
+        "Arbitrum",
+        "Anubis",
+        "BSC",
+        "Robinhood Chain"
+      ],
+      "answerIndex": 2,
+      "explanation": "Arbitrum is ranked #8 by TVL with $1B-$5B locked across 1045 protocols.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4675
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Arbitrum or Tron?",
+      "choices": [
+        "Tron",
+        "Arbitrum"
+      ],
+      "answerIndex": 0,
+      "explanation": "Tron has 73.2% more TVL than Arbitrum ($5.4B vs $1.4B).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.7320936716601434,
+        "volatility": null
+      },
+      "difficultyScore": 0.19749999999999998
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "ab",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Arbitrum",
+        "Arc",
+        "Pharos",
+        "Mantle"
+      ],
+      "answerIndex": 3,
+      "explanation": "Mantle had the highest 30-day TVL growth at 11.9%, outpacing Arc (+8.0%), Arbitrum (+1.2%), Pharos (-4.9%).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.03964670501867877,
+        "volatility": null
+      },
+      "difficultyScore": 0.5099239539775855
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Arbitrum hit its all-time high TVL?",
+      "choices": [
+        "Oct 2025",
+        "Dec 2023",
+        "Jul 2021",
+        "Sep 2022",
+        "Dec 2024",
+        "Nov 2021"
+      ],
+      "answerIndex": 0,
+      "explanation": "Arbitrum's historical TVL peak is based on DefiLlama data as of 2026-11-03.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.47750000000000004
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Arbitrum?",
+      "choices": [
+        "Uniswap V3",
+        "Fluid DEX",
+        "Aero Slipstream",
+        "Uniswap V4"
+      ],
+      "answerIndex": 0,
+      "explanation": "Uniswap V3 is the top DEX on Arbitrum with $93M in 24h volume, ahead of Aero Slipstream ($27M), Uniswap V4 ($21M), Fluid DEX ($18M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.7141618379458392,
+        "volatility": null
+      },
+      "difficultyScore": 0.28750000000000003
+    }
+  ],
+  "generatedAt": "2026-11-03T05:31:24.463Z"
+}
