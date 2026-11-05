@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-11-05:chain:Ethereum",
+  "dateUtc": "2026-11-05",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Ethereum",
+    "name": "Ethereum"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 5",
+        "Native token: ETH",
+        "Most protocols by count",
+        "Active since: 2017"
+      ],
+      "choices": [
+        "Tron",
+        "BSC",
+        "Hyperliquid L1",
+        "Solana",
+        "Ethereum",
+        "Polygon"
+      ],
+      "answerIndex": 4,
+      "explanation": "Ethereum is ranked #1 by TVL with $10B+ locked across 1895 protocols.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4675
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Ethereum or Hyperliquid L1?",
+      "choices": [
+        "Hyperliquid L1",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ethereum has 94.0% more TVL than Hyperliquid L1 ($44.2B vs $2.6B).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.9403631890800689,
+        "volatility": null
+      },
+      "difficultyScore": 0.19749999999999998
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Ethereum?",
+      "choices": [
+        "Uniswap V3",
+        "Curve DEX",
+        "Fluid DEX",
+        "Uniswap V4"
+      ],
+      "answerIndex": 3,
+      "explanation": "Uniswap V4 is the top DEX on Ethereum with $669M in 24h volume, ahead of Uniswap V3 ($593M), Fluid DEX ($225M), Curve DEX ($209M).",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.11357919054019551,
+        "volatility": null
+      },
+      "difficultyScore": 0.4512049713517654
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Ethereum hit its all-time high TVL?",
+      "choices": [
+        "Nov 2021",
+        "Jan 2024",
+        "May 2021",
+        "Sep 2017",
+        "Sep 2025",
+        "Feb 2022"
+      ],
+      "answerIndex": 0,
+      "explanation": "Ethereum's historical TVL peak is based on DefiLlama data as of 2026-11-05.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.47750000000000004
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C7_CHAIN_TVL_BAND",
+      "format": "mc4",
+      "prompt": "Which TVL range fits Ethereum?",
+      "choices": [
+        "<$100M",
+        "$100M-$500M",
+        "$500M-$2B",
+        "$2B-$10B",
+        ">$10B"
+      ],
+      "answerIndex": 4,
+      "explanation": "Ethereum has $44.2B in TVL, placing it in the $10B+ range among chains.",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 1,
+        "volatility": null
+      },
+      "difficultyScore": 0.28750000000000003
+    }
+  ],
+  "generatedAt": "2026-11-05T05:22:04.716Z"
+}
