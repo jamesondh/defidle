@@ -1,0 +1,137 @@
+{
+  "episodeId": "2026-11-07:chain:Cronos",
+  "dateUtc": "2026-11-07",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Cronos",
+    "name": "Cronos"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Native token: CRO",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "Mantle",
+        "Rootstock",
+        "Near",
+        "Cronos"
+      ],
+      "answerIndex": 3,
+      "explanation": "Cronos is ranked #25 by TVL with $100M-$500M locked across 141 protocols.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.38950000000000007
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "tf",
+      "prompt": "Cronos has higher TVL than Mantle.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "answerValue": true,
+      "explanation": "Cronos has 3.8% more TVL than Mantle ($121M vs $117M).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "tf",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.038086246982654365,
+        "volatility": null
+      },
+      "difficultyScore": 0.37379650362081474
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C9_DISTANCE_FROM_ATH",
+      "format": "mc4",
+      "prompt": "How far is Cronos from its ATH TVL?",
+      "choices": [
+        "At ATH",
+        "Within 10%",
+        "10-30% below",
+        "30-60% below",
+        ">60% below"
+      ],
+      "answerIndex": 4,
+      "explanation": "Cronos's distance from all-time high is based on DefiLlama data as of 2026-11-07.",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.3623456247814535,
+        "volatility": null
+      },
+      "difficultyScore": 0.35950000000000004
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Cronos",
+        "Hyperliquid L1",
+        "X Layer",
+        "World Chain"
+      ],
+      "answerIndex": 1,
+      "explanation": "Hyperliquid L1 had the highest 30-day TVL growth at 0.4%, outpacing X Layer (-7.3%), World Chain (-7.7%), Cronos (-25.7%).",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.07644272097536606,
+        "volatility": null
+      },
+      "difficultyScore": 0.5677687348295608
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Cronos?",
+      "choices": [
+        "VVS Flawless",
+        "cro.trade Spot",
+        "VVS Standard",
+        "Fulcrom AMM"
+      ],
+      "answerIndex": 2,
+      "explanation": "VVS Standard is the top DEX on Cronos with $656K in 24h volume, ahead of Fulcrom AMM ($408K), VVS Flawless ($308K), cro.trade Spot ($29K).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.3787409936572798,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-11-07T04:50:45.843Z"
+}
