@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-11-08:protocol:eigencloud",
+  "dateUtc": "2026-11-08",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "eigencloud",
+    "name": "EigenCloud",
+    "category": "Restaking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Restaking",
+        "Chains: single-chain",
+        "TVL rank: top 10"
+      ],
+      "choices": [
+        "EigenCloud",
+        "Morpho Blue",
+        "Binance staked ETH",
+        "b14g",
+        "Binance Bitcoin"
+      ],
+      "answerIndex": 0,
+      "explanation": "EigenCloud is a Restaking protocol deployed on 1 chains with $5.7B TVL.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": 0.14600176228390693
+      },
+      "difficultyScore": 0.4571001762283907
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is EigenCloud?",
+      "choices": [
+        "Ponzi",
+        "Crypto Card Issuer",
+        "Dual-Token Stablecoin",
+        "Restaking"
+      ],
+      "answerIndex": 3,
+      "explanation": "EigenCloud's protocol category is based on DefiLlama data as of 2026-11-08.",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.5,
+        "volatility": 0.14600176228390693
+      },
+      "difficultyScore": 0.2771001762283907
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P15_RECENT_TVL_DIRECTION",
+      "format": "ab",
+      "prompt": "Over the past 30 days, did EigenCloud's TVL increase or decrease?",
+      "choices": [
+        "Increase",
+        "Decrease"
+      ],
+      "answerIndex": 1,
+      "explanation": "EigenCloud's TVL decreased over the past 30 days (-11.7%), now at $5.7B.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.11671222053156659,
+        "volatility": 0.14600176228390693
+      },
+      "difficultyScore": 0.3470455115905108
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did EigenCloud hit its all-time high TVL?",
+      "choices": [
+        "Oct 2025",
+        "Aug 2025",
+        "Feb 2026",
+        "Jul 2024",
+        "Sep 2024",
+        "Jan 2025"
+      ],
+      "answerIndex": 1,
+      "explanation": "EigenCloud reached its all-time high TVL of $22.1B in Aug 2025.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": 0.14600176228390693
+      },
+      "difficultyScore": 0.46710017622839073
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P10_TVL_BAND",
+      "format": "mc4",
+      "prompt": "Which TVL range fits EigenCloud?",
+      "choices": [
+        "<$50M",
+        "$50M-$250M",
+        "$250M-$1B",
+        "$1B-$5B",
+        ">$5B"
+      ],
+      "answerIndex": 4,
+      "explanation": "EigenCloud has $5.7B in TVL, placing it in the $5B-$10B range.",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.2492364760077007,
+        "volatility": 0.14600176228390693
+      },
+      "difficultyScore": 0.27801640501914987
+    }
+  ],
+  "generatedAt": "2026-11-08T04:42:03.446Z"
+}
