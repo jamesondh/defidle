@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-11-10:chain:Arbitrum",
+  "dateUtc": "2026-11-10",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Arbitrum",
+    "name": "Arbitrum"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 10",
+        "Native token: ARB",
+        "Most protocols by count"
+      ],
+      "choices": [
+        "Ethereum",
+        "Arbitrum",
+        "Solana",
+        "Arc",
+        "BSC",
+        "Plasma"
+      ],
+      "answerIndex": 1,
+      "explanation": "Arbitrum is ranked #8 by TVL with $1B-$5B locked across 1052 protocols.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4675
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Arbitrum or Solana?",
+      "choices": [
+        "Arbitrum",
+        "Solana"
+      ],
+      "answerIndex": 1,
+      "explanation": "Solana has 72.5% more TVL than Arbitrum ($5.2B vs $1.4B).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.7254507706863421,
+        "volatility": null
+      },
+      "difficultyScore": 0.19749999999999998
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "ab",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Aptos",
+        "Robinhood Chain",
+        "Monad",
+        "Arbitrum"
+      ],
+      "answerIndex": 3,
+      "explanation": "Arbitrum had the highest 30-day TVL growth at 5.8%, outpacing Robinhood Chain (+4.6%), Monad (-5.1%), Aptos (-7.9%).",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.011740791733853485,
+        "volatility": null
+      },
+      "difficultyScore": 0.5434110499193758
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Arbitrum hit its all-time high TVL?",
+      "choices": [
+        "Jul 2022",
+        "Mar 2023",
+        "Apr 2022",
+        "Oct 2025",
+        "Apr 2024",
+        "Mar 2024"
+      ],
+      "answerIndex": 3,
+      "explanation": "Arbitrum's historical TVL peak is based on DefiLlama data as of 2026-11-10.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.47750000000000004
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Arbitrum?",
+      "choices": [
+        "Aero Slipstream",
+        "Uniswap V4",
+        "Uniswap V3",
+        "Metric V1"
+      ],
+      "answerIndex": 2,
+      "explanation": "Uniswap V3 is the top DEX on Arbitrum with $95M in 24h volume, ahead of Aero Slipstream ($28M), Uniswap V4 ($25M), Metric V1 ($13M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.7031026982934883,
+        "volatility": null
+      },
+      "difficultyScore": 0.28750000000000003
+    }
+  ],
+  "generatedAt": "2026-11-10T06:06:58.979Z"
+}
