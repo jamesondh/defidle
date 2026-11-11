@@ -1,0 +1,142 @@
+{
+  "episodeId": "2026-11-11:protocol:coinbase-wrapped-staked-eth",
+  "dateUtc": "2026-11-11",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "coinbase-wrapped-staked-eth",
+    "name": "Coinbase Wrapped Staked ETH",
+    "category": "Liquid Staking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Liquid Staking",
+        "Chains: single-chain",
+        "TVL: $100M-$500M",
+        "7d change: down 1-10%"
+      ],
+      "choices": [
+        "Rocket Pool",
+        "Coinbase Wrapped Staked ETH",
+        "Uniswap V2",
+        "Liquid Collective"
+      ],
+      "answerIndex": 1,
+      "explanation": "Coinbase Wrapped Staked ETH is a Liquid Staking protocol deployed on 1 chains with $410M TVL.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.15017416175644438
+      },
+      "difficultyScore": 0.3975174161756445
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Coinbase Wrapped Staked ETH?",
+      "choices": [
+        "Portfolio Tracker",
+        "Liquid Staking",
+        "Transaction Execution",
+        "Mining Pools"
+      ],
+      "answerIndex": 1,
+      "explanation": "Coinbase Wrapped Staked ETH's protocol category is based on DefiLlama data as of 2026-11-11.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.15017416175644438
+      },
+      "difficultyScore": 0.3075174161756445
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P11_FEES_TREND",
+      "format": "mc4",
+      "prompt": "How did Coinbase Wrapped Staked ETH's weekly fees change compared to the previous week?",
+      "choices": [
+        "Down >20%",
+        "Down 5-20%",
+        "Roughly flat",
+        "Up 5-20%",
+        "Up >20%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Coinbase Wrapped Staked ETH's fees trend is based on DefiLlama data as of 2026-11-11.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.508839631367981,
+        "volatility": 0.15017416175644438
+      },
+      "difficultyScore": 0.3075174161756445
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Coinbase Wrapped Staked ETH hit its all-time high TVL?",
+      "choices": [
+        "Feb 2024",
+        "Jan 2025",
+        "Mar 2024",
+        "Jul 2026",
+        "Apr 2025",
+        "Jan 2024"
+      ],
+      "answerIndex": 2,
+      "explanation": "Coinbase Wrapped Staked ETH reached its all-time high TVL of $807M in Mar 2024.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.15017416175644438
+      },
+      "difficultyScore": 0.4975174161756445
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Coinbase Wrapped Staked ETH deployed on?",
+      "choices": [
+        "Arbitrum",
+        "zkSync Era",
+        "Avalanche",
+        "Ethereum"
+      ],
+      "answerIndex": 3,
+      "explanation": "Coinbase Wrapped Staked ETH is deployed on 1 chains including Ethereum.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.15017416175644438
+      },
+      "difficultyScore": 0.3075174161756445
+    }
+  ],
+  "generatedAt": "2026-11-11T04:54:04.383Z"
+}
