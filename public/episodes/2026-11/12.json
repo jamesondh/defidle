@@ -1,0 +1,138 @@
+{
+  "episodeId": "2026-11-12:chain:Avalanche",
+  "dateUtc": "2026-11-12",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Avalanche",
+    "name": "Avalanche"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: AVAX",
+        "Most protocols by count"
+      ],
+      "choices": [
+        "BSC",
+        "Near",
+        "Stellar",
+        "Robinhood Chain",
+        "Avalanche",
+        "Tron"
+      ],
+      "answerIndex": 4,
+      "explanation": "Avalanche is ranked #12 by TVL with $500M-$1B locked across 572 protocols.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Avalanche or Arbitrum?",
+      "choices": [
+        "Avalanche",
+        "Arbitrum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Arbitrum has 57.4% more TVL than Avalanche ($1.4B vs $610M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.5743069477800262,
+        "volatility": null
+      },
+      "difficultyScore": 0.2095
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C9_DISTANCE_FROM_ATH",
+      "format": "mc4",
+      "prompt": "How far is Avalanche from its ATH TVL?",
+      "choices": [
+        "At ATH",
+        "Within 10%",
+        "10-30% below",
+        "30-60% below",
+        ">60% below"
+      ],
+      "answerIndex": 4,
+      "explanation": "Avalanche's distance from all-time high is based on DefiLlama data as of 2026-11-12.",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.3468947336779937,
+        "volatility": null
+      },
+      "difficultyScore": 0.35950000000000004
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Monad",
+        "Avalanche",
+        "Hyperliquid L1",
+        "Bitcoin"
+      ],
+      "answerIndex": 1,
+      "explanation": "Avalanche had the highest 30-day TVL growth at 1.8%, outpacing Hyperliquid L1 (-3.9%), Monad (-5.1%), Bitcoin (-7.2%).",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.05669090571247021,
+        "volatility": null
+      },
+      "difficultyScore": 0.5914709131450357
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Avalanche?",
+      "choices": [
+        "Uniswap V3",
+        "Pharaoh V3",
+        "Pharaoh DLMM",
+        "Blackhole CLMM"
+      ],
+      "answerIndex": 1,
+      "explanation": "Pharaoh V3 is the top DEX on Avalanche with $45M in 24h volume, ahead of Pharaoh DLMM ($21M), Uniswap V3 ($9M), Blackhole CLMM ($5M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.5338474190055484,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-11-12T05:56:08.757Z"
+}
