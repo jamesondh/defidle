@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-11-13:protocol:re",
+  "dateUtc": "2026-11-13",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "re",
+    "name": "Re",
+    "category": "RWA"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: RWA",
+        "Chains: 2-5 chains",
+        ">90% TVL on single chain",
+        "TVL: $100M-$500M",
+        "7d change: roughly flat"
+      ],
+      "choices": [
+        "Lista Lending",
+        "Re",
+        "Ethena USDtb"
+      ],
+      "answerIndex": 1,
+      "explanation": "Re is a RWA protocol deployed on 4 chains with $488M TVL.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.02573965644698628
+      },
+      "difficultyScore": 0.3850739656446987
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does Re have higher TVL?",
+      "choices": [
+        "Arbitrum",
+        "Ethereum"
+      ],
+      "answerIndex": 1,
+      "explanation": "Re has 100% more TVL on Ethereum ($484M) compared to Arbitrum ($7K).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9999861076413945,
+        "volatility": 0.02573965644698628
+      },
+      "difficultyScore": 0.20507396564469865
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P29_CATEGORY_GROWTH",
+      "format": "mc4",
+      "prompt": "Which DeFi category grew the most in TVL over the past 7 days?",
+      "choices": [
+        "Basis Trading",
+        "Stablecoin Wrapper",
+        "Dexs",
+        "Yield Aggregator"
+      ],
+      "answerIndex": 2,
+      "explanation": "Re's DeFi category TVL growth is based on DefiLlama data as of 2026-11-13.",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0.02573965644698628
+      },
+      "difficultyScore": 0.3550739656446987
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Re hit its all-time high TVL?",
+      "choices": [
+        "Jul 2026",
+        "Mar 2026",
+        "Jan 2026",
+        "May 2026",
+        "Nov 2026",
+        "Feb 2026"
+      ],
+      "answerIndex": 4,
+      "explanation": "Re reached its all-time high TVL of $488M in Nov 2026.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.02573965644698628
+      },
+      "difficultyScore": 0.4850739656446986
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of Re's TVL is on its top chain (Ethereum)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Ethereum holds 99% of Re's total TVL ($484M of $488M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.964420998718801,
+        "volatility": 0.02573965644698628
+      },
+      "difficultyScore": 0.2950739656446987
+    }
+  ],
+  "generatedAt": "2026-11-13T05:18:31.899Z"
+}
