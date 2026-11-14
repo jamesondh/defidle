@@ -1,0 +1,136 @@
+{
+  "episodeId": "2026-11-14:chain:X Layer",
+  "dateUtc": "2026-11-14",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "X Layer",
+    "name": "X Layer"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Protocols: 50-100"
+      ],
+      "choices": [
+        "X Layer",
+        "Avalanche",
+        "Arc",
+        "Provenance"
+      ],
+      "answerIndex": 0,
+      "explanation": "X Layer is ranked #21 by TVL with $100M-$500M locked across 65 protocols.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.38950000000000007
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: X Layer or Mantle?",
+      "choices": [
+        "Mantle",
+        "X Layer"
+      ],
+      "answerIndex": 1,
+      "explanation": "X Layer has 36.0% more TVL than Mantle ($168M vs $108M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.3602217618622958,
+        "volatility": null
+      },
+      "difficultyScore": 0.2095
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "ab",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Robinhood Chain",
+        "Polygon",
+        "X Layer",
+        "Hyperliquid L1"
+      ],
+      "answerIndex": 0,
+      "explanation": "Robinhood Chain had the highest 30-day TVL growth at 4.6%, outpacing X Layer (+2.1%), Hyperliquid L1 (-3.9%), Polygon (-5.7%).",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.025022378079555693,
+        "volatility": null
+      },
+      "difficultyScore": 0.5394731463045331
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did X Layer hit its all-time high TVL?",
+      "choices": [
+        "Nov 2026",
+        "Nov 2024",
+        "May 2024",
+        "Jan 2025",
+        "Aug 2025",
+        "Feb 2026"
+      ],
+      "answerIndex": 0,
+      "explanation": "X Layer's historical TVL peak is based on DefiLlama data as of 2026-11-14.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on X Layer?",
+      "choices": [
+        "Uniswap V3",
+        "PotatoSwap V2",
+        "Kaliber",
+        "Uniswap V4"
+      ],
+      "answerIndex": 0,
+      "explanation": "Uniswap V3 is the top DEX on X Layer with $29M in 24h volume, ahead of Uniswap V4 ($7M), Kaliber ($1M), PotatoSwap V2 ($377K).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.7615466824859459,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-11-14T05:08:39.047Z"
+}
