@@ -1,0 +1,141 @@
+{
+  "episodeId": "2026-11-15:protocol:usdd",
+  "dateUtc": "2026-11-15",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "usdd",
+    "name": "USDD",
+    "category": "CDP"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: CDP",
+        "Chains: 2-5 chains",
+        ">90% TVL on single chain",
+        "TVL: $500M-$1B",
+        "7d change: down >10%"
+      ],
+      "choices": [
+        "Grove Finance",
+        "JustCryptos",
+        "USDD",
+        "Sky Lending",
+        "Veda"
+      ],
+      "answerIndex": 2,
+      "explanation": "USDD is a CDP protocol deployed on 3 chains with $962M TVL.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.24769293929584324
+      },
+      "difficultyScore": 0.49726929392958436
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P2_CROSSCHAIN",
+      "format": "ab",
+      "prompt": "Where does USDD have higher TVL?",
+      "choices": [
+        "Binance",
+        "Tron"
+      ],
+      "answerIndex": 1,
+      "explanation": "USDD has 98% more TVL on Tron ($914M) compared to Binance ($18M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.9802863497811634,
+        "volatility": 0.24769293929584324
+      },
+      "difficultyScore": 0.22726929392958434
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of USDD's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 3,
+      "explanation": "USDD generated $38K in fees over the past 7 days, with 100% going to protocol revenue.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 1,
+        "volatility": 0.24769293929584324
+      },
+      "difficultyScore": 0.31726929392958436
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P4_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did USDD hit its all-time high TVL?",
+      "choices": [
+        "Jun 2025",
+        "Apr 2026",
+        "Apr 2025",
+        "Sep 2025",
+        "Sep 2026",
+        "May 2026"
+      ],
+      "answerIndex": 5,
+      "explanation": "USDD reached its all-time high TVL of $1.5B in May 2026.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": 0.24769293929584324
+      },
+      "difficultyScore": 0.5072692939295843
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P3_CONCENTRATION",
+      "format": "mc4",
+      "prompt": "What share of USDD's TVL is on its top chain (Tron)?",
+      "choices": [
+        "<25%",
+        "25-50%",
+        "50-75%",
+        ">75%"
+      ],
+      "answerIndex": 3,
+      "explanation": "Tron holds 95% of USDD's total TVL ($914M of $962M).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.7996382615745135,
+        "volatility": 0.24769293929584324
+      },
+      "difficultyScore": 0.31726929392958436
+    }
+  ],
+  "generatedAt": "2026-11-15T05:00:26.158Z"
+}
