@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-11-16:protocol:rocketswap-anubis-v2",
+  "dateUtc": "2026-11-16",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "rocketswap-anubis-v2",
+    "name": "RocketSwap Anubis V2",
+    "category": "Dexs"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Dexs",
+        "Chains: single-chain",
+        "TVL: $100M-$500M",
+        "7d change: up 1-10%"
+      ],
+      "choices": [
+        "PancakeSwap AMM",
+        "SUNSwap V2",
+        "StakeWise V3",
+        "RocketSwap Anubis V2"
+      ],
+      "answerIndex": 3,
+      "explanation": "RocketSwap Anubis V2 is a Dexs protocol deployed on 1 chains with $375M TVL.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.09755982105316893
+      },
+      "difficultyScore": 0.392255982105317
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is RocketSwap Anubis V2?",
+      "choices": [
+        "Yield",
+        "OTC Marketplace",
+        "Liquidity Manager",
+        "Dexs"
+      ],
+      "answerIndex": 3,
+      "explanation": "RocketSwap Anubis V2's protocol category is based on DefiLlama data as of 2026-11-16.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.09755982105316893
+      },
+      "difficultyScore": 0.30225598210531696
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is RocketSwap Anubis V2's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 0,
+      "explanation": "RocketSwap Anubis V2 is currently 13% below its all-time high TVL of $433M, now at $375M.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.46545130179337835,
+        "volatility": 0.09755982105316893
+      },
+      "difficultyScore": 0.36225598210531695
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Dexs protocols from highest to lowest TVL.",
+      "choices": [
+        "RocketSwap Anubis V2 > PancakeSwap AMM > Uniswap V3",
+        "PancakeSwap AMM > Uniswap V3 > RocketSwap Anubis V2",
+        "Uniswap V3 > RocketSwap Anubis V2 > PancakeSwap AMM",
+        "Uniswap V3 > PancakeSwap AMM > RocketSwap Anubis V2"
+      ],
+      "answerIndex": 3,
+      "explanation": "RocketSwap Anubis V2's DeFi metrics is based on DefiLlama data as of 2026-11-16.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.0039397727513766955,
+        "volatility": 0.09755982105316893
+      },
+      "difficultyScore": 0.6975282548036649
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is RocketSwap Anubis V2 deployed on?",
+      "choices": [
+        "BSC",
+        "Anubis",
+        "Avalanche",
+        "Polygon"
+      ],
+      "answerIndex": 1,
+      "explanation": "RocketSwap Anubis V2 is deployed on 1 chains including Anubis.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.09755982105316893
+      },
+      "difficultyScore": 0.30225598210531696
+    }
+  ],
+  "generatedAt": "2026-11-16T04:58:51.806Z"
+}
