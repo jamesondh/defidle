@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-11-18:protocol:robinhood-chain-bridge",
+  "dateUtc": "2026-11-18",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "robinhood-chain-bridge",
+    "name": "Robinhood Chain Bridge",
+    "category": "Canonical Bridge"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Canonical Bridge",
+        "Chains: single-chain",
+        "TVL: $100M-$500M",
+        "7d change: down >10%"
+      ],
+      "choices": [
+        "Unit",
+        "Robinhood Chain Bridge",
+        "Polygon Bridge",
+        "World Chain Bridge"
+      ],
+      "answerIndex": 1,
+      "explanation": "Robinhood Chain Bridge is a Canonical Bridge protocol deployed on 1 chains with $465M TVL.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.18052738828120557
+      },
+      "difficultyScore": 0.4005527388281206
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Robinhood Chain Bridge?",
+      "choices": [
+        "Treasury Manager",
+        "Uncollateralized Lending",
+        "Farm",
+        "Canonical Bridge"
+      ],
+      "answerIndex": 3,
+      "explanation": "Robinhood Chain Bridge's protocol category is based on DefiLlama data as of 2026-11-18.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.18052738828120557
+      },
+      "difficultyScore": 0.3105527388281206
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P20_ATH_DISTANCE",
+      "format": "mc4",
+      "prompt": "How far is Robinhood Chain Bridge's current TVL from its all-time high?",
+      "choices": [
+        "<25% below ATH",
+        "25-50% below ATH",
+        "50-75% below ATH",
+        ">75% below ATH"
+      ],
+      "answerIndex": 1,
+      "explanation": "Robinhood Chain Bridge is currently 46% below its all-time high TVL of $855M, now at $465M.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.17639981005127225,
+        "volatility": 0.18052738828120557
+      },
+      "difficultyScore": 0.4588729667665939
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Canonical Bridge protocols from highest to lowest TVL.",
+      "choices": [
+        "Robinhood Chain Bridge > Optimism Bridge > Polygon Bridge",
+        "Polygon Bridge > Optimism Bridge > Robinhood Chain Bridge",
+        "Polygon Bridge > Robinhood Chain Bridge > Optimism Bridge",
+        "Optimism Bridge > Robinhood Chain Bridge > Polygon Bridge"
+      ],
+      "answerIndex": 1,
+      "explanation": "Robinhood Chain Bridge's DeFi metrics is based on DefiLlama data as of 2026-11-18.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4020724491431916,
+        "volatility": 0.18052738828120557
+      },
+      "difficultyScore": 0.4105527388281206
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Robinhood Chain Bridge deployed on?",
+      "choices": [
+        "Ethereum",
+        "Fantom",
+        "Solana",
+        "Arbitrum"
+      ],
+      "answerIndex": 0,
+      "explanation": "Robinhood Chain Bridge is deployed on 1 chains including Ethereum.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.18052738828120557
+      },
+      "difficultyScore": 0.3105527388281206
+    }
+  ],
+  "generatedAt": "2026-11-18T06:05:15.285Z"
+}
