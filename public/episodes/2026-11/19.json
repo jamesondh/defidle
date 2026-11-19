@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-11-19:chain:Monad",
+  "dateUtc": "2026-11-19",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Monad",
+    "name": "Monad"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 10",
+        "Native token: MON",
+        "Protocols: 100-200"
+      ],
+      "choices": [
+        "Monad",
+        "Solana",
+        "Base",
+        "Tron",
+        "Bitcoin",
+        "Anubis"
+      ],
+      "answerIndex": 0,
+      "explanation": "Monad is ranked #10 by TVL with $500M-$1B locked across 162 protocols.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4675
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Monad or Bitcoin?",
+      "choices": [
+        "Monad",
+        "Bitcoin"
+      ],
+      "answerIndex": 1,
+      "explanation": "Bitcoin has 73.9% more TVL than Monad ($3.4B vs $891M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.7391527226730499,
+        "volatility": null
+      },
+      "difficultyScore": 0.19749999999999998
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Pharos",
+        "Monad",
+        "TON",
+        "Aptos"
+      ],
+      "answerIndex": 0,
+      "explanation": "Pharos had the highest 30-day TVL growth at 74.6%, outpacing Monad (-10.6%), Aptos (-10.9%), TON (-15.1%).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.8516153812122405,
+        "volatility": null
+      },
+      "difficultyScore": 0.34750000000000003
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Monad hit its all-time high TVL?",
+      "choices": [
+        "Oct 2025",
+        "Oct 2026",
+        "Sep 2026",
+        "Jul 2026",
+        "Nov 2026",
+        "Feb 2026"
+      ],
+      "answerIndex": 1,
+      "explanation": "Monad's historical TVL peak is based on DefiLlama data as of 2026-11-19.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.47750000000000004
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Monad?",
+      "choices": [
+        "Uniswap V4",
+        "Curve DEX",
+        "Uniswap V3",
+        "Kuru CLOB"
+      ],
+      "answerIndex": 0,
+      "explanation": "Uniswap V4 is the top DEX on Monad with $17M in 24h volume, ahead of Kuru CLOB ($10M), Uniswap V3 ($3M), Curve DEX ($1M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_10",
+        "margin": 0.43659947542192334,
+        "volatility": null
+      },
+      "difficultyScore": 0.28750000000000003
+    }
+  ],
+  "generatedAt": "2026-11-19T06:06:28.744Z"
+}
