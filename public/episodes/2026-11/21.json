@@ -1,0 +1,139 @@
+{
+  "episodeId": "2026-11-21:chain:TON",
+  "dateUtc": "2026-11-21",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "TON",
+    "name": "TON"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 50",
+        "Native token: GRAM",
+        "Protocols: 50-100",
+        "TVL: <$50M",
+        "30d trend: down >10%"
+      ],
+      "choices": [
+        "Tempo",
+        "Mantle",
+        "TON",
+        "Gnosis"
+      ],
+      "answerIndex": 2,
+      "explanation": "TON is ranked #36 by TVL with <$50M locked across 97 protocols.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.4075000000000001
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C10_PROTOCOL_COUNT",
+      "format": "mc4",
+      "prompt": "How many DeFi protocols are deployed on TON?",
+      "choices": [
+        "<50",
+        "50-100",
+        "100-250",
+        ">250"
+      ],
+      "answerIndex": 1,
+      "explanation": "TON's protocol deployment count is based on DefiLlama data as of 2026-11-21.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.54,
+        "volatility": null
+      },
+      "difficultyScore": 0.31750000000000006
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on TON?",
+      "choices": [
+        "DeDust",
+        "STON.fi",
+        "DTrade",
+        "TONCO V2"
+      ],
+      "answerIndex": 1,
+      "explanation": "STON.fi is the top DEX on TON with $4M in 24h volume, ahead of DeDust ($681K), TONCO V2 ($177K), DTrade ($47K).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.8217615292762069,
+        "volatility": null
+      },
+      "difficultyScore": 0.31750000000000006
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did TON hit its all-time high TVL?",
+      "choices": [
+        "Apr 2025",
+        "Jul 2024",
+        "May 2024",
+        "Nov 2024",
+        "Feb 2025",
+        "Aug 2024"
+      ],
+      "answerIndex": 1,
+      "explanation": "TON's historical TVL peak is based on DefiLlama data as of 2026-11-21.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.5075000000000001
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C13_LAYER_TYPE",
+      "format": "ab",
+      "prompt": "Is TON a Layer 1 or Layer 2 blockchain?",
+      "choices": [
+        "Layer 1",
+        "Layer 2"
+      ],
+      "answerIndex": 0,
+      "explanation": "TON's layer 1 vs layer 2 classification is based on DefiLlama data as of 2026-11-21.",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": null
+      },
+      "difficultyScore": 0.2275
+    }
+  ],
+  "generatedAt": "2026-11-21T05:48:46.979Z"
+}
