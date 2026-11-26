@@ -1,0 +1,140 @@
+{
+  "episodeId": "2026-11-26:chain:Polygon",
+  "dateUtc": "2026-11-26",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Polygon",
+    "name": "Polygon"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: POL",
+        "Most protocols by count",
+        "Active since: 2020"
+      ],
+      "choices": [
+        "BSC",
+        "Stellar",
+        "Polygon",
+        "Monad",
+        "Robinhood Chain",
+        "Arbitrum"
+      ],
+      "answerIndex": 2,
+      "explanation": "Polygon is ranked #12 by TVL with $500M-$1B locked across 729 protocols.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Polygon or Monad?",
+      "choices": [
+        "Monad",
+        "Polygon"
+      ],
+      "answerIndex": 0,
+      "explanation": "Monad has 23.5% more TVL than Polygon ($786M vs $601M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.23518856416090556,
+        "volatility": null
+      },
+      "difficultyScore": 0.22727372300691331
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C4_GROWTH_RANKING",
+      "format": "mc4",
+      "prompt": "Which of these chains grew the most in TVL over the past 30 days?",
+      "choices": [
+        "Arc",
+        "X Layer",
+        "Pharos",
+        "Polygon"
+      ],
+      "answerIndex": 2,
+      "explanation": "Pharos had the highest 30-day TVL growth at 54.7%, outpacing X Layer (+28.8%), Arc (-3.7%), Polygon (-15.5%).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.2598446981117445,
+        "volatility": null
+      },
+      "difficultyScore": 0.35950000000000004
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Polygon hit its all-time high TVL?",
+      "choices": [
+        "Jul 2021",
+        "May 2026",
+        "Jan 2025",
+        "Sep 2026",
+        "Jun 2021",
+        "May 2021"
+      ],
+      "answerIndex": 4,
+      "explanation": "Polygon's historical TVL peak is based on DefiLlama data as of 2026-11-26.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C6_TOP_DEX",
+      "format": "mc4",
+      "prompt": "Which DEX is #1 by 24h volume on Polygon?",
+      "choices": [
+        "Quickswap Dex",
+        "Polymarket International",
+        "Metric V1",
+        "Uniswap V4"
+      ],
+      "answerIndex": 1,
+      "explanation": "Polymarket International is the top DEX on Polygon with $68M in 24h volume, ahead of Metric V1 ($44M), Uniswap V4 ($36M), Quickswap Dex ($21M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.35640514058680484,
+        "volatility": null
+      },
+      "difficultyScore": 0.29950000000000004
+    }
+  ],
+  "generatedAt": "2026-11-26T07:00:57.104Z"
+}
