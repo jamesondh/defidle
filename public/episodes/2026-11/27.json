@@ -1,0 +1,138 @@
+{
+  "episodeId": "2026-11-27:protocol:forward-industries-sol",
+  "dateUtc": "2026-11-27",
+  "episodeType": "protocol",
+  "topic": {
+    "slug": "forward-industries-sol",
+    "name": "Forward Industries SOL",
+    "category": "Liquid Staking"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "P1_FINGERPRINT",
+      "format": "mc4",
+      "prompt": "Which protocol matches these clues?",
+      "clues": [
+        "Category: Liquid Staking",
+        "Chains: single-chain",
+        "TVL: $100M-$500M",
+        "7d change: roughly flat"
+      ],
+      "choices": [
+        "Forward Industries SOL",
+        "StakeWise V3",
+        "Uniswap V2"
+      ],
+      "answerIndex": 0,
+      "explanation": "Forward Industries SOL is a Liquid Staking protocol deployed on 1 chains with $288M TVL.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": null,
+        "volatility": 0.2726616387094104
+      },
+      "difficultyScore": 0.4097661638709411
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "P7_CATEGORY",
+      "format": "mc4",
+      "prompt": "What category is Forward Industries SOL?",
+      "choices": [
+        "Luck Games",
+        "Collateral Management",
+        "DePIN",
+        "Liquid Staking"
+      ],
+      "answerIndex": 3,
+      "explanation": "Forward Industries SOL's protocol category is based on DefiLlama data as of 2026-11-27.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5,
+        "volatility": 0.2726616387094104
+      },
+      "difficultyScore": 0.3197661638709411
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "P5_FEES_REVENUE",
+      "format": "mc4",
+      "prompt": "What percentage of Forward Industries SOL's fees became protocol revenue over the past 7 days?",
+      "choices": [
+        "<10%",
+        "10-30%",
+        "30-60%",
+        ">60%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Forward Industries SOL generated $291K in fees over the past 7 days, with 1.1% going to protocol revenue.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.3575758744014898,
+        "volatility": 0.2726616387094104
+      },
+      "difficultyScore": 0.3197661638709411
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "P33_MULTI_RANKING",
+      "format": "mc4",
+      "prompt": "Rank these Liquid Staking protocols from highest to lowest TVL.",
+      "choices": [
+        "Lido > Kinetiq kHYPE > Forward Industries SOL",
+        "Forward Industries SOL > Kinetiq kHYPE > Lido",
+        "Lido > Forward Industries SOL > Kinetiq kHYPE",
+        "Forward Industries SOL > Lido > Kinetiq kHYPE"
+      ],
+      "answerIndex": 0,
+      "explanation": "Forward Industries SOL's DeFi metrics is based on DefiLlama data as of 2026-11-27.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.5365016575979652,
+        "volatility": 0.2726616387094104
+      },
+      "difficultyScore": 0.4197661638709411
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "P8_CHAIN_MEMBERSHIP",
+      "format": "mc4",
+      "prompt": "Which of these chains is Forward Industries SOL deployed on?",
+      "choices": [
+        "Polygon",
+        "Solana",
+        "Avalanche",
+        "BSC"
+      ],
+      "answerIndex": 1,
+      "explanation": "Forward Industries SOL is deployed on 1 chains including Solana.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc4",
+        "familiarityRankBucket": "top_100",
+        "margin": 0.4,
+        "volatility": 0.2726616387094104
+      },
+      "difficultyScore": 0.3197661638709411
+    }
+  ],
+  "generatedAt": "2026-11-27T06:56:28.345Z"
+}
