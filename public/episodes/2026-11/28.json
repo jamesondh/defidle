@@ -1,0 +1,138 @@
+{
+  "episodeId": "2026-11-28:chain:Polygon",
+  "dateUtc": "2026-11-28",
+  "episodeType": "chain",
+  "topic": {
+    "slug": "Polygon",
+    "name": "Polygon"
+  },
+  "questions": [
+    {
+      "qid": "q1",
+      "slot": "A",
+      "templateId": "C1_FINGERPRINT",
+      "format": "mc6",
+      "prompt": "Which chain matches these clues?",
+      "clues": [
+        "TVL rank: top 20",
+        "Native token: POL",
+        "Most protocols by count",
+        "Active since: 2020"
+      ],
+      "choices": [
+        "Bitcoin",
+        "Polygon",
+        "Robinhood Chain",
+        "OP Mainnet",
+        "Tron",
+        "Anubis"
+      ],
+      "answerIndex": 1,
+      "explanation": "Polygon is ranked #12 by TVL with $500M-$1B locked across 729 protocols.",
+      "difficulty": "hard",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": null,
+        "volatility": null
+      },
+      "difficultyScore": 0.47950000000000004
+    },
+    {
+      "qid": "q2",
+      "slot": "B",
+      "templateId": "C8_30D_DIRECTION",
+      "format": "ab",
+      "prompt": "Over the last 30 days, did Polygon's TVL increase or decrease?",
+      "choices": [
+        "Decrease",
+        "Increase"
+      ],
+      "answerIndex": 0,
+      "explanation": "Polygon's 30-day TVL direction is based on DefiLlama data as of 2026-11-28.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.17135476503798952,
+        "volatility": null
+      },
+      "difficultyScore": 0.3038742819544126
+    },
+    {
+      "qid": "q3",
+      "slot": "C",
+      "templateId": "C6_TOP_DEX",
+      "format": "ab",
+      "prompt": "Which DEX is #1 by 24h volume on Polygon?",
+      "choices": [
+        "Polymarket International",
+        "Uniswap V4",
+        "Metric V1",
+        "Uniswap V3"
+      ],
+      "answerIndex": 0,
+      "explanation": "Polymarket International is the top DEX on Polygon with $74M in 24h volume, ahead of Metric V1 ($68M), Uniswap V4 ($39M), Uniswap V3 ($10M).",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.0931583911662466,
+        "volatility": null
+      },
+      "difficultyScore": 0.3977099306005041
+    },
+    {
+      "qid": "q4",
+      "slot": "D",
+      "templateId": "C3_ATH_TIMING",
+      "format": "mc6",
+      "prompt": "In what month did Polygon hit its all-time high TVL?",
+      "choices": [
+        "Nov 2026",
+        "Jun 2021",
+        "Mar 2025",
+        "Feb 2023",
+        "May 2021",
+        "Mar 2022"
+      ],
+      "answerIndex": 1,
+      "explanation": "Polygon's historical TVL peak is based on DefiLlama data as of 2026-11-28.",
+      "difficulty": "medium",
+      "llmFallback": true,
+      "signals": {
+        "format": "mc6",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.25,
+        "volatility": null
+      },
+      "difficultyScore": 0.48950000000000005
+    },
+    {
+      "qid": "q5",
+      "slot": "E",
+      "templateId": "C2_CHAIN_COMPARISON",
+      "format": "ab",
+      "prompt": "Which chain has higher TVL: Polygon or Robinhood Chain?",
+      "choices": [
+        "Polygon",
+        "Robinhood Chain"
+      ],
+      "answerIndex": 1,
+      "explanation": "Robinhood Chain has 37.0% more TVL than Polygon ($954M vs $601M).",
+      "difficulty": "easy",
+      "llmFallback": true,
+      "signals": {
+        "format": "ab",
+        "familiarityRankBucket": "top_25",
+        "margin": 0.37019665318090106,
+        "volatility": null
+      },
+      "difficultyScore": 0.2095
+    }
+  ],
+  "generatedAt": "2026-11-28T06:30:51.981Z"
+}
